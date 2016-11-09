@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.16" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  <link rel="stylesheet" href="/css/highlight.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="http://replace-this-with-your-website-url.com/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+  <link rel="feed" href="http://replace-this-with-your-website-url.com/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://replace-this-with-your-website-url.com/post/blog/constexpr/">
+  <style type="text/css" media="all">
+  code.has-jax {font: inherit;
+              font-size: 100%;
+              background: inherit;
+              border: inherit;
+              color: #515151;}     
+  </style>
+
+  
+
+  <title>constexpr: Hằng biểu thức trong C&#43;&#43;11 | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="nav-item"><a href="/#top">Home</a></li>
+        
+        <li class="nav-item"><a href="/post/">Posts</a></li>
+        
+        <li class="nav-item"><a href="/projects">Projects</a></li>
+        
+        <li class="nav-item"><a href="/about">About</a></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+    
+
+    <h1 itemprop="name">constexpr: Hằng biểu thức trong C&#43;&#43;11</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2016-10-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2016-10-23
+    </time>
+  </span>
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2freplace-this-with-your-website-url.com%2fpost%2fblog%2fconstexpr%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=constexpr%3a%20H%e1%ba%b1ng%20bi%e1%bb%83u%20th%e1%bb%a9c%20trong%20C%2b%2b11&amp;url=http%3a%2f%2freplace-this-with-your-website-url.com%2fpost%2fblog%2fconstexpr%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2freplace-this-with-your-website-url.com%2fpost%2fblog%2fconstexpr%2f&amp;title=constexpr%3a%20H%e1%ba%b1ng%20bi%e1%bb%83u%20th%e1%bb%a9c%20trong%20C%2b%2b11"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      <a class="email"
+         href="mailto:?subject=constexpr%3a%20H%e1%ba%b1ng%20bi%e1%bb%83u%20th%e1%bb%a9c%20trong%20C%2b%2b11&amp;body=http%3a%2f%2freplace-this-with-your-website-url.com%2fpost%2fblog%2fconstexpr%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="constexpr">constexpr</h2>
+
+<p>Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là <strong>tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này</strong>. Ta quay một chút về cú pháp <code>define</code> bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm. C++ cũng có tham vọng vậy, và mục tiêu của C++ chính là nếu một biến/hàm có thể tính toán được trong thời gian biên dịch thì tính luôn tại thời điểm đó. Và như vậy trong quá trình chạy chương trình sẽ không mất thêm thời gian tính toán hàm/biến này. Done! Thời gian thực thi chương trình được nhanh hơn.</p>
+
+<div class="panel-body">Nhìn đi nhìn lại mới thấy ngôn ngữ C được thiết kế rất hay, tinh giản nhưng mạnh mẽ. Để giải quyết vấn đề loại bỏ define trong C mà C++ đã chế ra const, inline và tá lả tùng xèn các thứ khác. Tuy nhiên cái gì cũng có hai mặt của vấn đề, với các từ khoá const, inline, ... thì việc người lập trình đỡ nhọc hơn về phần code (hạn chế được các lệnh define) nhưng để sử dụng tốt các tính năng của C++ khiến người lập trình phải hiểu rõ tính năng mà ngôn ngữ đó cung cấp.</div>
+
+<h2 id="tầm-hoạt-động">Tầm hoạt động</h2>
+
+<p>Từ khoá <code>constexpr</code> được sử dụng cho 3 đối tượng như sau:</p>
+
+<ol>
+<li>Hàm.</li>
+<li>Biến.</li>
+<li>Hàm khởi tạo.</li>
+</ol>
+
+<p>Trong đó, nếu từ khoá này được dùng cho khai báo đối tượng hoặc biến thì đối tượng hoặc biến đó được ngầm hiểu là <code>const</code>. Trong trường hợp là hàm, thì hàm đó được ngầm hiểu là 1 hàm <code>inline</code>.</p>
+
+<p>Quay lại câu chuyện vì sao có 3 ẻm này.</p>
+
+<p>Từ khoá <code>constexpr</code> có hàm nghĩa hoàn toàn khác với <code>const</code>:</p>
+
+<ul>
+<li><code>const</code>: không được thay đổi giá trị.</li>
+<li><code>constexpr</code>: thực thi tại thời điểm biên dịch.</li>
+</ul>
+
+<p><code>constexpr</code> là từ khoá yêu cầu trình biên dịch tính toán phép tính hay biểu thức tại thời điểm biên dịch, trong khi đó <code>const</code> là công cụ giúp trình biên dịch nhắc nhở người dùng những biến nào không được thay đổi giá trị (nó chỉ nhắc nhở, có nghĩa là nếu ta muốn đổi cũng ok). <code>constexpr</code> liên quan mật thiết tới khái niệm <em>biểu thức hằng</em> (constant expression). Vậy constant expression là gì?</p>
+
+<p><em>Biểu thức hằng là biểu thức mà trình biên dịch có thể tính toán được</em>. Điều đó có nghĩa biểu thức hằng không thể thực thi nếu các biến/ toán tử trong biểu thức chưa được biết trong thời gian biên dịch, và biểu thức này không gây ra tác dụng phụ (<a href="http://programmers.stackexchange.com/a/40314">side effect</a>). Thêm vào đó, biểu thức hằng phải được cấu thành từ các giá trị nguyên, các số thực và kiểu liệt kê (enumerator), hay các tổ hợp của 3 kiểu dữ liệu này (một trong những cách tổ hợp là tạo ra 1 đối tượng giữ các giá trị này: <code>constexpr constructor</code> ra đời là vì lí do này).</p>
+
+<p>Trong quá trình viết mã, người lập trình sẽ có yêu cầu đặt tên biến cho giá trị của biểu thức hằng (<code>constexpr function</code> ra đời) hoặc các dữ liệu có trong biểu thức, và đây chính là lí do mà <code>constexpr variable</code> ra đời. Ngoài việc đặt tên, biểu thức hằng còn có kha khá công dụng khác nhau như:</p>
+
+<ol>
+<li>Sử dụng trong khai báo kích thước mảng, nhãn trong lệnh switch, tham số trong <code>template</code>.</li>
+<li>Trong các hệ thống nhúng, các giá trị <em>chỉ đọc</em> các chi phí thấp hơn so với giá trị dữ liệu động. Ngoài ra dữ liệu chỉ đọc tránh được các lỗi trong hệ thống.</li>
+<li>Trong các hệ thống đa luồng, biểu thức hằng tránh được hiện tượng <a href="http://docs.oracle.com/cd/E19205-01/820-0619/geojs/index.html">data race</a>.</li>
+<li>Tăng hiệu suất chương trình.</li>
+</ol>
+
+<h2 id="constexpr-variable">constexpr variable</h2>
+
+<p>Khi khai báo constexpr thì biến đó được hiểu là const - tức không thể thay đổi nội dung trong quá trình thực thi chương trình. Nhưng khác với const ở chỗ: constexpr là hằng ở quá trình biên dịch, và còn const thì được qui định trong quá trình thực thi.</p>
+
+<p>Để trở khai báo một biến là <em>constexpr</em>, biến đó phải thoả mãn một số điều kiện sau:</p>
+
+<ol>
+<li>Kiểu của biến phải thuộc <a href="http://en.cppreference.com/w/cpp/concept/LiteralType">kiểu Literal</a>.</li>
+<li>Khi khai báo là biến <em>constexpr</em>, biến đó phải được định nghĩa ngay trong thời điểm đó.</li>
+<li>Tham số của hàm khởi tạo trong kiểu của biến này phải chứa: (1) kiểu literal, (2) biến <em>constexpr</em>, (3) hàm.</li>
+<li>Hàm khởi tạo của biến được khai báo phải thoả các điều kiện của <strong>constexpr constructor</strong> và trong Kiểu/Lớp đó phải có hàm khởi tạo là <strong>constexpr constructor</strong>.</li>
+</ol>
+
+<h2 id="constexpr-function">constexpr function</h2>
+
+<p>Để khai báo là một <strong>constexpr function</strong>, hàm này phải thoả những điều kiện sau:</p>
+
+<ol>
+<li>Không phải là hàm ảo (<a href="http://stackoverflow.com/questions/2391679/why-do-we-need-virtual-methods-in-c">virtual funciton</a>).</li>
+<li>Kiểu trả về phải là LiteralType.</li>
+<li>Mỗi tham số đầu vào của hàm phải thuộc kiểu LiteralType.</li>
+</ol>
+
+<p>Hàm chỉ được chứa các lệnh sau:</p>
+
+<ol>
+<li>state_assert.</li>
+<li>Chỉ có duy nhất 1 lệnh <code>return</code>.</li>
+<li>Lệnh Null, lệnh không thực hiện gì.</li>
+<li>Lệnh khai báo <code>typedef</code>.</li>
+<li>Khai báo sử dụng <code>using</code>.</li>
+</ol>
+
+<h2 id="constexpr-constructor">constexpr constructor</h2>
+
+<p>Hàm khởi tạo <em>constexpr</em> được xây dựng nhằm phục vụ cho các biến <em>constexpr</em>, vì hàm khởi tạo cũng là hàm nên nó có những yêu cầu buộc thoả mãn giống như <em>constexpr function</em>, ngoài ra <em>constexpr constructor</em> còn phải thoả mãn một số điều kiện:</p>
+
+<ol>
+<li>Lớp chứa hàm khởi tạo <em>constexpr</em> có hàm cha không phải là Lớp ảo.</li>
+<li>Không phải hàm khởi tạo function-try-block.</li>
+</ol>
+
+<h2 id="ghi-chú">Ghi chú</h2>
+
+<p>Các thông tin trên được lấy từ chuẩn C++11, tuy nhiên trong C++14 có những thay đổi lớn sẽ được cập nhật sau.</p>
+
+<h2 id="tham-khảo">Tham khảo</h2>
+
+<ol>
+<li><a href="http://en.cppreference.com/w/cpp/language/constexpr">C++ Programm Language</a>.</li>
+<li><a href="http://www.amazon.com/C-Programming-Language-4th/dp/0321563840/ref=sr_1_3?ie=UTF8&amp;qid=1441600777&amp;sr=8-3&amp;keywords=c+programming+language">Book: C++ Programming Language</a>.</li>
+</ol>
+
+    </div>
+
+  </article>
+
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://replace-this-with-your-website-url.com/post/blog/review_cpp_proglang_book/"><span
+      aria-hidden="true">&larr;</span> Review: The C&#43;&#43; Programming Languages</a></li>
+    
+
+    
+    <li class="next"><a href="http://replace-this-with-your-website-url.com/post/blog/protocol-buffers-caffe/">Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+  
+<section id="comments">
+  <div id="disqus_thread">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'httpdangkhoasdcgithubio';
+    var disqus_identifier = 'http:\/\/replace-this-with-your-website-url.com\/post\/blog\/constexpr\/';
+    var disqus_title = 'constexpr: Hằng biểu thức trong C\x2b\x2b11';
+    var disqus_url = 'http:\/\/replace-this-with-your-website-url.com\/post\/blog\/constexpr\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2016 Dang-Khoa &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    
+
+  </body>
+</html>
+

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.16" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  <link rel="stylesheet" href="/css/highlight.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/academicons.min.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700|Merriweather|Roboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  <link rel="alternate" href="http://replace-this-with-your-website-url.com/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+  <link rel="feed" href="http://replace-this-with-your-website-url.com/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://replace-this-with-your-website-url.com/post/blog/intro_randalgs/">
+  <style type="text/css" media="all">
+  code.has-jax {font: inherit;
+              font-size: 100%;
+              background: inherit;
+              border: inherit;
+              color: #515151;}     
+  </style>
+
+  
+
+  <title>Dẫn nhập thuật toán ngẫu nhiên | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="#navbar-collapse-1">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="nav-item"><a href="/#top">Home</a></li>
+        
+        <li class="nav-item"><a href="/post/">Posts</a></li>
+        
+        <li class="nav-item"><a href="/projects">Projects</a></li>
+        
+        <li class="nav-item"><a href="/about">About</a></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+    
+
+    <h1 itemprop="name">Dẫn nhập thuật toán ngẫu nhiên</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    <time datetime="2016-10-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2016-10-23
+    </time>
+  </span>
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2freplace-this-with-your-website-url.com%2fpost%2fblog%2fintro_randalgs%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=D%e1%ba%abn%20nh%e1%ba%adp%20thu%e1%ba%adt%20to%c3%a1n%20ng%e1%ba%abu%20nhi%c3%aan&amp;url=http%3a%2f%2freplace-this-with-your-website-url.com%2fpost%2fblog%2fintro_randalgs%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2freplace-this-with-your-website-url.com%2fpost%2fblog%2fintro_randalgs%2f&amp;title=D%e1%ba%abn%20nh%e1%ba%adp%20thu%e1%ba%adt%20to%c3%a1n%20ng%e1%ba%abu%20nhi%c3%aan"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      <a class="email"
+         href="mailto:?subject=D%e1%ba%abn%20nh%e1%ba%adp%20thu%e1%ba%adt%20to%c3%a1n%20ng%e1%ba%abu%20nhi%c3%aan&amp;body=http%3a%2f%2freplace-this-with-your-website-url.com%2fpost%2fblog%2fintro_randalgs%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>Hôm rồi học course <em>Introduction to Algorithm (2006-MIT)</em> mình được biết qua khái niệm <em>Randomized Algorithms</em>, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.</p>
+
+<h1 id="định-nghĩa">Định nghĩa</h1>
+
+<p><em>Randomized Algorithms</em> (viết gọn là <code>randalgs</code>) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.</p>
+
+<p>Điểm thú vị của <code>randalgs</code> chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến <em>kì vọng trong trường hợp xấu nhất</em>.</p>
+
+<p>Tưởng tượng ta có một hệ thống nghiêm trọng, nếu như hệ thống đó bị crash thì sẽ kích hoạt <a href="https://en.wikipedia.org/wiki/Cheget">Cheget</a> và <a href="https://en.wikipedia.org/wiki/Nuclear_football">Nuclear football</a> cùng một lúc. Hệ thống quá lớn và phức tạp, quan trọng hơn, nó sẽ không hoạt động được khi liên tục phải chạy <code>quicksort</code> trong $\mathcal{O}(n^2)$ - dữ liệu đầu vào là mảng được sắp xếp sẵn.</p>
+
+<p>Hacker, bằng một cách nào đó biết được điều này và tấn công hệ thống bằng cách đưa vào hệ thống những mảng đã sắp xếp sẵn. Và bùm, apocalyptic diễn ra.</p>
+
+<p>Và để ngăn chặn thảm hoạ đó xảy đến, ta tạo ra một phiên bản gọi là <code>randomized quicksort</code>: trước khi được xử lý, mảng đầu vào sẽ được xáo trộn. Và cho dù hacker có cố tình tấn công bằng chuỗi đã sắp xếp thì sau bước tiền xử lý này , mảng được sắp xếp ngẫu nhiên.</p>
+
+<p>Nếu một input có trật tự ngẫu nhiên, sau khi xáo trộn trở thành một chuỗi thứ tự thì sao? <a href="https://en.wikipedia.org/wiki/Murphy%27s_law">Murphy’s law</a></p>
+
+<blockquote>
+<p>Nếu đã xui, thì hẳn phải xui nhất có thể.</p>
+</blockquote>
+
+<h1 id="ví-dụ">Ví dụ</h1>
+
+<p>Một biến thế nổi tiếng của <em>Quick sort</em> chính là <em>Randomized Quicksort</em>, có hai phiên bản chính:</p>
+
+<ol>
+<li>Chọn ngẫu nhiên pivot để xử lý.</li>
+<li>Xáo trộn mảng đầu vào trước khi sắp xếp.</li>
+</ol>
+
+<p><em>Randomized Quicksort</em> được tạo ra nhằm tránh trường hợp xấu nhất của thuật toán <em>quicksort</em> là $\mathcal{O}(n^2)$.</p>
+
+<h1 id="phân-loại">Phân loại</h1>
+
+<blockquote>
+<p>In Las Vegas, the dealer can tell you whether you’ve won or lost, but in Monte Carlo, le croupier ne parle que Français, so you have no idea what he’s saying</p>
+</blockquote>
+
+<h2 id="las-vegas-algorithm">Las Vegas algorithm</h2>
+
+<p>Thuật toán nằm trong họ <em>Las Vegas</em> <em>luôn luôn</em> đảm bảo kết quả trả ra đúng với mong muốn. Quicksort là một ví dụ điển hình.</p>
+
+<p>Nói cách khác, <em>Las Vegas</em> không chơi hên xui ở kết quả trả về, nó chỉ sử dụng yếu tố ngẫu nhiên trong các phép tính toán để cho ra kết quả đúng.</p>
+
+<h2 id="monte-carlo-algorithm">Monte Carlo algorithm</h2>
+
+<p>Khác với <em>Las Vegas</em>, <em>Monte Carlo</em> không đảm bảo kết quả sẽ luôn luôn đúng. Nhưng <em>Monto Carlo</em> có xác suất kết quả sai thấp có thể.</p>
+
+<p>Thay vì sử dụng xác suất như một trong những quá trình tính toán, <em>Monte Carlo</em> hên xui ngay cả kể quả trả về.</p>
+
+<h2 id="phân-biệt">Phân biệt</h2>
+
+<h3 id="bài-toán">Bài toán</h3>
+
+<p>Cho một chuỗi có độ dài <code>2n</code> trong đó có <code>n</code> kí tự <code>a</code> và <code>n</code> kí tự <code>b</code>. Nhiệm vụ là tìm ra một vị trí bất kì trong chuỗi chứa kí tự a</p>
+
+<pre><code class="language-python">    import sys
+    import random
+
+    # Las Vegas version
+    def find_a_lv(string):
+        while True:
+            pos = random.randint(0, len(string)-1)
+            if string[pos] == 'a': return pos
+
+    # Monte Carlo version
+    def find_a_mc(string, k):
+        pos = 0
+        while k and string[pos] != 'a':
+            k = k -1
+            pos = random.randint(0, len(string)-1)
+
+        return pos
+
+    if __name__ == '__main__':
+        string = sys.argv[1]
+        if len(string) % 2 == 1:
+            raise ValueError(&quot;Wrong input&quot;)
+
+        print find_a_lv(string)
+        print find_a_mc(string, len(string)/2)
+</code></pre>
+
+<p>Ta dễ dàng nhận thấy <code>find_a_lv</code> luôn luôn cho ra kết quả, tuy nhiên đôi khi nó lại không thực sự hiệu quả. Ví dụ như nếu ta có chuỗi đầu vào là “ab” và <code>find_a_lv</code> mất 2 triệu vòng lặp mới pick đúng <code>pos=0</code>.Dĩ nhiên xác suất để xảy ra chuyện đó rất thấp, nhưng không có nghĩa là nó không xảy ra.</p>
+
+<p>Còn trong trường hợp <code>find_a_mc</code>, kết quả sẽ sai với xác suất khá dễ tính: $\frac{1}{2^k}$ - khi trong <code>k</code> lần thử để chọn đúng vị trí chứa <code>b</code>.</p>
+
+<h1 id="các-kĩ-thuật-cơ-bản">Các kĩ thuật cơ bản</h1>
+
+<p><img src="http://i.imgur.com/0YSlgjJ.png" alt="Methodologies" /></p>
+
+<ol>
+<li>Avoiding adversarial inputs:
+
+<ul>
+<li>Trong các thuật toán online.</li>
+<li>Hashing.</li>
+<li>Trong các thuật toán sắp xếp.</li>
+</ul></li>
+<li>Verification:
+
+<ul>
+<li>Phát sinh số ngẫu nhiên trong các bài toán kiểm thực.</li>
+</ul></li>
+<li>Random sampling:
+
+<ul>
+<li>Trong các bài toán tìm kiếm (tìm median..)</li>
+<li>Trong các thuật toán geometry.</li>
+</ul></li>
+<li>Load balancing:
+
+<ul>
+<li>Parallel algorithms.</li>
+<li>Hashing problems.</li>
+</ul></li>
+<li>Symmetry breaking:
+
+<ul>
+<li>Dùng trong hệ thống distributed.</li>
+</ul></li>
+<li>Probabilistic existence proofs:
+
+<ul>
+<li>Thông qua các thực nghiệm.</li>
+<li>Đảm bảo trong bài toán tìm kiếm đối tượng cần tìm tồn tại.</li>
+</ul></li>
+</ol>
+
+<h1 id="tài-liệu">Tài liệu</h1>
+
+<h2 id="khoá-học">Khoá học</h2>
+
+<ol>
+<li><a href="https://courses.cs.washington.edu/courses/cse525/13sp/">Randomized Algorithms and Probabilistic Analysis - Washington</a></li>
+<li><a href="http://cs.brown.edu/courses/cs155/slides/slides.html">Probabilistic Methods in Computer Science</a></li>
+</ol>
+
+    </div>
+
+  </article>
+
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://replace-this-with-your-website-url.com/post/blog/install_opencv_vs/"><span
+      aria-hidden="true">&larr;</span> Hướng dẫn cài đặt OpenCV trên Windows</a></li>
+    
+
+    
+    <li class="next"><a href="http://replace-this-with-your-website-url.com/post/blog/diablo3-review/">Cảm nhận diablo 3 <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+  
+<section id="comments">
+  <div id="disqus_thread">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'httpdangkhoasdcgithubio';
+    var disqus_identifier = 'http:\/\/replace-this-with-your-website-url.com\/post\/blog\/intro_randalgs\/';
+    var disqus_title = 'Dẫn nhập thuật toán ngẫu nhiên';
+    var disqus_url = 'http:\/\/replace-this-with-your-website-url.com\/post\/blog\/intro_randalgs\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+</section>
+
+
+
+</div>
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2016 Dang-Khoa &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.4/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"></script>
+    <script src="/js/jquery-1.12.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\[','\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        TeX: { equationNumbers: { autoNumber: "AMS" },
+             extensions: ["AMSmath.js", "AMSsymbols.js"] }
+      }
+    });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        
+        
+        
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i = 0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+    </script>
+    <script type="text/javascript"
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    
+
+  </body>
+</html>
+
