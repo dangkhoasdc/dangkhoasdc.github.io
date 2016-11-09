@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programmings on Dang-Khoa&#39;s blog </title>
-    <link>http://replace-this-with-your-website-url.com/programming/</link>
+    <link>/programming/</link>
     <description>Recent content in Programmings on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Dang-Khoa</copyright>
-    <atom:link href="http://replace-this-with-your-website-url.com/programming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/programming/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
-      <link>http://replace-this-with-your-website-url.com/programming/</link>
+      <link>/programming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/programming/</guid>
+      <guid>/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>http://replace-this-with-your-website-url.com/programming/randomized-algs/</link>
+      <link>/programming/randomized-algs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/programming/randomized-algs/</guid>
+      <guid>/programming/randomized-algs/</guid>
       <description>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -53,8 +53,8 @@
       &lt;script src=&#34;http://html5shiv.googlecode.com/svn/trunk/html5.js&#34;&gt;&lt;/script&gt;
     &lt;![endif]--&gt;
 
-    &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;http://replace-this-with-your-website-url.com/style.css&#34; /&gt;
-    &lt;link rel=&#34;alternate&#34; type=&#34;application/rss+xml&#34; title=&#34;Dang-Khoa - A computer vision and programming blog.&#34; href=&#34;http://replace-this-with-your-website-url.com/feed.xml&#34; /&gt;
+    &lt;link rel=&#34;stylesheet&#34; type=&#34;text/css&#34; href=&#34;/style.css&#34; /&gt;
+    &lt;link rel=&#34;alternate&#34; type=&#34;application/rss+xml&#34; title=&#34;Dang-Khoa - A computer vision and programming blog.&#34; href=&#34;/feed.xml&#34; /&gt;
 
     &lt;!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now --&gt;
     &lt;script type=&#34;text/x-mathjax-config&#34;&gt;
@@ -77,16 +77,16 @@
     &lt;div class=&#34;wrapper-masthead&#34;&gt;
       &lt;div class=&#34;container&#34;&gt;
         &lt;header class=&#34;masthead clearfix&#34;&gt;
-          &lt;a href=&#34;http://replace-this-with-your-website-url.com/&#34; class=&#34;site-avatar&#34;&gt;&lt;img src=&#34;http://replace-this-with-your-website-url.com/images/icon_512.png&#34; /&gt;&lt;/a&gt;
+          &lt;a href=&#34;/&#34; class=&#34;site-avatar&#34;&gt;&lt;img src=&#34;/images/icon_512.png&#34; /&gt;&lt;/a&gt;
 
           &lt;div class=&#34;site-info&#34;&gt;
-            &lt;h1 class=&#34;site-name&#34;&gt;&lt;a href=&#34;http://replace-this-with-your-website-url.com/&#34;&gt;Dang-Khoa&lt;/a&gt;&lt;/h1&gt;
+            &lt;h1 class=&#34;site-name&#34;&gt;&lt;a href=&#34;/&#34;&gt;Dang-Khoa&lt;/a&gt;&lt;/h1&gt;
             &lt;p class=&#34;site-description&#34;&gt;A computer vision and programming blog.&lt;/p&gt;
           &lt;/div&gt;
 
           &lt;nav&gt;
-            &lt;a href=&#34;http://replace-this-with-your-website-url.com/&#34;&gt;Blog&lt;/a&gt;
-            &lt;a href=&#34;http://replace-this-with-your-website-url.com/pages/about/&#34;&gt;About&lt;/a&gt;
+            &lt;a href=&#34;/&#34;&gt;Blog&lt;/a&gt;
+            &lt;a href=&#34;/pages/about/&#34;&gt;About&lt;/a&gt;
           &lt;/nav&gt;
         &lt;/header&gt;
       &lt;/div&gt;
@@ -327,7 +327,7 @@
 
 
 
-&lt;a href=&#34;http://replace-this-with-your-website-url.com/feed.xml&#34;&gt;&lt;i class=&#34;svg-icon rss&#34;&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;a href=&#34;/feed.xml&#34;&gt;&lt;i class=&#34;svg-icon rss&#34;&gt;&lt;/i&gt;&lt;/a&gt;
 &lt;a href=&#34;https://www.twitter.com/dksdc&#34;&gt;&lt;i class=&#34;svg-icon twitter&#34;&gt;&lt;/i&gt;&lt;/a&gt;
 
 
