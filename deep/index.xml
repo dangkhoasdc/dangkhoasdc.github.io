@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Deeps on Dang-Khoa&#39;s blog </title>
-    <link>http://replace-this-with-your-website-url.com/deep/</link>
+    <link>http://dangkhoasdc.github.io/deep/</link>
     <description>Recent content in Deeps on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,10 +11,10 @@
     
     <item>
       <title></title>
-      <link>http://replace-this-with-your-website-url.com/deep/</link>
+      <link>http://dangkhoasdc.github.io/deep/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/deep/</guid>
+      <guid>http://dangkhoasdc.github.io/deep/</guid>
       <description></description>
     </item>
     

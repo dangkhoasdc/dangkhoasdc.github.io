@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Dang-Khoa&#39;s blog </title>
-    <link>http://replace-this-with-your-website-url.com/publication/</link>
+    <link>http://dangkhoasdc.github.io/publication/</link>
     <description>Recent content in Publications on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,37 +12,37 @@
     
     <item>
       <title>Simultaneous Feature Aggregating and Hashing for Large-scale Image Search</title>
-      <link>http://replace-this-with-your-website-url.com/publication/sah/</link>
+      <link>http://dangkhoasdc.github.io/publication/sah/</link>
       <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/publication/sah/</guid>
+      <guid>http://dangkhoasdc.github.io/publication/sah/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Enhance Feature Discrimination for Unsupervised Hashing</title>
-      <link>http://replace-this-with-your-website-url.com/publication/enhance_feature_discrim/</link>
+      <link>http://dangkhoasdc.github.io/publication/enhance_feature_discrim/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/publication/enhance_feature_discrim/</guid>
+      <guid>http://dangkhoasdc.github.io/publication/enhance_feature_discrim/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An automated framework for counting lymphocytes from microscopic images</title>
-      <link>http://replace-this-with-your-website-url.com/publication/lymph_counting/</link>
+      <link>http://dangkhoasdc.github.io/publication/lymph_counting/</link>
       <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/publication/lymph_counting/</guid>
+      <guid>http://dangkhoasdc.github.io/publication/lymph_counting/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Facial expression recognition using statistical subspace</title>
-      <link>http://replace-this-with-your-website-url.com/publication/2dpca/</link>
+      <link>http://dangkhoasdc.github.io/publication/2dpca/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/publication/2dpca/</guid>
+      <guid>http://dangkhoasdc.github.io/publication/2dpca/</guid>
       <description></description>
     </item>
     

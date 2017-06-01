@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Dang-Khoa&#39;s blog </title>
-    <link>http://replace-this-with-your-website-url.com/tags/</link>
+    <link>http://dangkhoasdc.github.io/tags/</link>
     <description>Recent content in Tags on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Computer Vision</title>
-      <link>http://replace-this-with-your-website-url.com/tags/computer-vision/</link>
+      <link>http://dangkhoasdc.github.io/tags/computer-vision/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/tags/computer-vision/</guid>
+      <guid>http://dangkhoasdc.github.io/tags/computer-vision/</guid>
       <description></description>
     </item>
     

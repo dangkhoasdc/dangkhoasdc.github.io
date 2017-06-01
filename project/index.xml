@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Dang-Khoa&#39;s blog </title>
-    <link>http://replace-this-with-your-website-url.com/project/</link>
+    <link>http://dangkhoasdc.github.io/project/</link>
     <description>Recent content in Projects on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Urban-Area Scene-Based Localization</title>
-      <link>http://replace-this-with-your-website-url.com/project/usbl/</link>
+      <link>http://dangkhoasdc.github.io/project/usbl/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://replace-this-with-your-website-url.com/project/usbl/</guid>
+      <guid>http://dangkhoasdc.github.io/project/usbl/</guid>
       <description></description>
     </item>
     
