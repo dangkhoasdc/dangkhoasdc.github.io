@@ -2,32 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Dang-Khoa&#39;s blog </title>
-    <link>https://dangkhoasdc.github.io/publication/</link>
+    <link>http://replace-this-with-your-website-url.com/publication/</link>
     <description>Recent content in Publications on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Dang-Khoa</copyright>
-    <lastBuildDate>Tue, 01 Sep 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dangkhoasdc.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>A Person Re-Identification System For Mobile Devices</title>
-      <link>https://dangkhoasdc.github.io/publication/person-re-identification/</link>
-      <pubDate>Tue, 01 Sep 2015 00:00:00 +0000</pubDate>
+      <title>Simultaneous Feature Aggregating and Hashing for Large-scale Image Search</title>
+      <link>http://replace-this-with-your-website-url.com/publication/sah/</link>
+      <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/publication/person-re-identification/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>http://replace-this-with-your-website-url.com/publication/sah/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Mobile visual clothing search</title>
-      <link>https://dangkhoasdc.github.io/publication/clothing-search/</link>
+      <title>Enhance Feature Discrimination for Unsupervised Hashing</title>
+      <link>http://replace-this-with-your-website-url.com/publication/enhance_feature_discrim/</link>
+      <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-website-url.com/publication/enhance_feature_discrim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An automated framework for counting lymphocytes from microscopic images</title>
+      <link>http://replace-this-with-your-website-url.com/publication/lymph_counting/</link>
+      <pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-website-url.com/publication/lymph_counting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Facial expression recognition using statistical subspace</title>
+      <link>http://replace-this-with-your-website-url.com/publication/2dpca/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/publication/clothing-search/</guid>
-      <description>&lt;p&gt;More detail can easily be written here using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>http://replace-this-with-your-website-url.com/publication/2dpca/</guid>
+      <description></description>
     </item>
     
   </channel>

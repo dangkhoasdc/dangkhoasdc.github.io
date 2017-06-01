@@ -1,120 +1,313 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/publication/sah/</loc>
+      <lastmod>2017-06-20T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/randalgs_ex/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/publication/enhance_feature_discrim/</loc>
+      <lastmod>2017-05-01T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/startwars-VII-review/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/publication/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/diablo3-review/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/randalgs_ex/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/intro_randalgs/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/diablo3-review/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/install_opencv_vs/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/startwars-vii-review/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/cvpr16-stat/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/intro_randalgs/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/it_news/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/install_opencv_vs/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/nafosted_travel_fund/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/cvpr16-stat/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/refactoring-review/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/it_news/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/startwars-series-review/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/nafosted_travel_fund/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/protocol-buffers-caffe/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/refactoring-review/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/constexpr/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/startwars-series-review/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/review_cpp_proglang_book/</loc>
-    <lastmod>2016-10-10T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/protocol-buffers-caffe/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/post/blog/review_algs_princeton_coursera/</loc>
-    <lastmod>2016-08-08T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/constexpr/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/project/deep-learning/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/review_cpp_proglang_book/</loc>
+      <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/project/example-external-project/</loc>
-    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/blog/review_algs_princeton_coursera/</loc>
+      <lastmod>2016-08-08T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/publication/person-re-identification/</loc>
-    <lastmod>2015-09-01T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/project/usbl/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/publication/clothing-search/</loc>
-    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/publication/lymph_counting/</loc>
+      <lastmod>2015-08-01T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/deep/</loc>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/publication/2dpca/</loc>
+      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/programming/</loc>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/deep/</loc>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/programming/randomized-algs/</loc>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/programming/</loc>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/about/</loc>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/programming/randomized-algs/</loc>
+    </url>
+    
   
-  <url>
-    <loc>https://dangkhoasdc.github.io/home/posts/</loc>
-    <lastmod>2016-04-20T00:00:00+00:00</lastmod>
-  </url>
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/publication_types/1/</loc>
+      <lastmod>2017-06-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/about/</loc>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/tags/computer-vision/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/</loc>
+      <lastmod>2016-04-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/deep/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/post/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/programming/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/project/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/publication_types/</loc>
+      <lastmod>2017-06-20T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://replace-this-with-your-website-url.com/tags/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
   
 </urlset>

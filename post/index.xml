@@ -2,23 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Dang-Khoa&#39;s blog </title>
-    <link>https://dangkhoasdc.github.io/post/</link>
+    <link>http://replace-this-with-your-website-url.com/post/</link>
     <description>Recent content in Posts on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Dang-Khoa</copyright>
     <lastBuildDate>Sun, 23 Oct 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://dangkhoasdc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/post/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Các thuật toán ngẫu nhiên</title>
-      <link>https://dangkhoasdc.github.io/post/blog/randalgs_ex/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/randalgs_ex/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/randalgs_ex/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/randalgs_ex/</guid>
       <description>
 
-&lt;p&gt;Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách &lt;a href=&#34;https://www.amazon.com/Randomized-Algorithms-Rajeev-Motwani/dp/0521474655&#34;&gt;Randomized Algorithms&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;các-ví-dụ-về-thuật-toán-ngẫu-nhiên&#34;&gt;Các ví dụ về thuật toán ngẫu nhiên&lt;/h1&gt;
+
+&lt;p&gt;Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách &lt;a href=&#34;https://www.amazon.com/Randomized-Algorithms-Rajeev-Motwani/dp/0521474655&#34; target=&#34;_blank&#34;&gt;Randomized Algorithms&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;randomized-quicksort&#34;&gt;Randomized Quicksort&lt;/h1&gt;
 
@@ -28,42 +30,42 @@
 
 &lt;h2 id=&#34;chứng-minh&#34;&gt;Chứng minh&lt;/h2&gt;
 
-&lt;p&gt;Cho dữ liệu đầu vào gồm $n$ phần tử khác nhau. Gọi &lt;code&gt;$S_i, 1 \leq i \leq n$&lt;/code&gt; là phần tử &lt;em&gt;rank i&lt;/em&gt; (phần tử nhỏ thứ &lt;em&gt;i&lt;/em&gt;) trong mảng, đồng thời ta có &lt;code&gt;$X_{ij}$&lt;/code&gt; biến ngẫu nhiên bằng 1 nếu xuất hiện phép so sánh của 2 phần tử &lt;code&gt;$S_i$&lt;/code&gt; và &lt;code&gt;$S_j$&lt;/code&gt; trong quá trình thực thi, bằng không nếu không xuất hiện phép so sánh nào.&lt;/p&gt;
+&lt;p&gt;Cho dữ liệu đầu vào gồm $n$ phần tử khác nhau. Gọi $S_i, 1 \leq i \leq n$ là phần tử &lt;em&gt;rank i&lt;/em&gt; (phần tử nhỏ thứ &lt;em&gt;i&lt;/em&gt;) trong mảng, đồng thời ta có $X_{ij}$ biến ngẫu nhiên bằng 1 nếu xuất hiện phép so sánh của 2 phần tử $S_i$ và $S_j$ trong quá trình thực thi, bằng không nếu không xuất hiện phép so sánh nào.&lt;/p&gt;
 
 &lt;p&gt;Như vậy, độ phức tạp của &lt;code&gt;randomized-quicksort&lt;/code&gt; được tính thông qua quá trình sắp xếp mảng theo pivot mà chi phí chính nằm ở phép so sánh các phần tử, tổng chi phí chính là&lt;/p&gt;
 
-&lt;div&gt;$$ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} $$&lt;/div&gt;
+&lt;p&gt;$$ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} $$&lt;/p&gt;
 
 &lt;p&gt;Tuy nhiên, điều ta quan tâm hơn ở đây là &lt;em&gt;kì vọng&lt;/em&gt; chi phí trong các lần thực thi:&lt;/p&gt;
 
-&lt;div&gt;$$E \left [ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&gt;i} E[X_{ij}]$$&lt;/div&gt;
+&lt;p&gt;$$E \left [ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&amp;gt;i} E[X_{ij}]$$&lt;/p&gt;
 
-&lt;p&gt;Công thức trên được xây dựng dựa vào một tính chất của kì vọng: &lt;a href=&#34;https://brilliant.org/wiki/linearity-of-expectation/&#34;&gt;tính tuyến tính của kì vọng&lt;/a&gt;. Như vậy kì vọng của tổng các chi phí so sánh chính bằng tổng của từng kì vọng của biến ngẫu nhiên &lt;code&gt;$X_{ij}$&lt;/code&gt;. Gọi &lt;code&gt;$p_{ij}$&lt;/code&gt; là xác suất để &lt;code&gt;$X_{ij}=1$&lt;/code&gt;. Ta có:&lt;/p&gt;
+&lt;p&gt;Công thức trên được xây dựng dựa vào một tính chất của kì vọng: &lt;a href=&#34;https://brilliant.org/wiki/linearity-of-expectation/&#34; target=&#34;_blank&#34;&gt;tính tuyến tính của kì vọng&lt;/a&gt;. Như vậy kì vọng của tổng các chi phí so sánh chính bằng tổng của từng kì vọng của biến ngẫu nhiên $ X_{ij}$. Gọi $p_{ij}$ là xác suất để $X_{ij}=1$. Ta có:&lt;/p&gt;
 
-&lt;div&gt;$$ E[X_{ij}] = p_{ij} * 1 + (1-p) * 0 = p_ij $$&lt;/div&gt;
-&lt;div&gt;$$ E \left [ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&gt;i} p_{ij} $$&lt;/div&gt;
+&lt;p&gt;$$ E[X_{ij}] = p_{ij} * 1 + (1-p) * 0 = p_{ij} $$
+$$ E \left [ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&amp;gt;i} p_{ij} $$&lt;/p&gt;
 
-&lt;p&gt;Bài toán được qui về việc tính xác suất khi nào phép so sánh giữa hai phần tử &lt;code&gt;$S_i$&lt;/code&gt; và &lt;code&gt;$S_j$&lt;/code&gt; xuất hiện.&lt;/p&gt;
+&lt;p&gt;Bài toán được qui về việc tính xác suất khi nào phép so sánh giữa hai phần tử $S_i$ và $S_j$ xuất hiện.&lt;/p&gt;
 
-&lt;p&gt;Nếu ta xem quá trình thực thi của &lt;code&gt;randomized-quicksort&lt;/code&gt; là quá trình xây dựng cây nhị phân: với mỗi node chính là 1 pivot tại thời điểm gọi hàm &lt;code&gt;partition&lt;/code&gt;, kết quả hàm &lt;code&gt;partition&lt;/code&gt; ta có được 2 cây con bên trái và phải của node pivot dùng để so sánh. Nếu &lt;code&gt;$S_i$&lt;/code&gt; và &lt;code&gt;$S_j$&lt;/code&gt; nằm ở hai nhánh con trái-phải thì phép so sánh giữa hai phần tử này chắc chắn không xảy ra. Như vậy &lt;code&gt;$S_i$&lt;/code&gt; và &lt;code&gt;$S_j$&lt;/code&gt; có quan hệ cha con - một trong hai phần tử phải thuộc node cấp lớn hơn của node kia. Một giả thuyết khác cần xem xét đó là xác suất các số được chọn làm pivot phải bằng nhau (uniform distribution) - có được giả thuyết này ta mới tính được độ phức tạp trong thời gian trung bình được.&lt;/p&gt;
+&lt;p&gt;Nếu ta xem quá trình thực thi của &lt;code&gt;randomized-quicksort&lt;/code&gt; là quá trình xây dựng cây nhị phân: với mỗi node chính là 1 pivot tại thời điểm gọi hàm &lt;code&gt;partition&lt;/code&gt;, kết quả hàm &lt;code&gt;partition&lt;/code&gt; ta có được 2 cây con bên trái và phải của node pivot dùng để so sánh. Nếu $S_i$ và $S_j$ nằm ở hai nhánh con trái-phải thì phép so sánh giữa hai phần tử này chắc chắn không xảy ra. Như vậy $S_i$ và $S_j$ có quan hệ cha con - một trong hai phần tử phải thuộc node cấp lớn hơn của node kia. Một giả thuyết khác cần xem xét đó là xác suất các số được chọn làm pivot phải bằng nhau (uniform distribution) - có được giả thuyết này ta mới tính được độ phức tạp trong thời gian trung bình được.&lt;/p&gt;
 
-&lt;p&gt;Như vậy, để &lt;code&gt;$X_{ij}=1$&lt;/code&gt; khi và chỉ khi một trong hay vị trí &lt;code&gt;$S_i$&lt;/code&gt; hoặc &lt;code&gt;$S_j$&lt;/code&gt; được chọn, và đó là &lt;code&gt;$p_{ij} = \frac{2}{j - i + 1} $&lt;/code&gt; (Xác suất này được tính khi loại đi xác suất chọn phải những pivot nằm bên trái của &lt;code&gt;$S_i$&lt;/code&gt; hoặc nằm bên phải của &lt;code&gt;$S_j$&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Như vậy, để $X_{ij}=1$ khi và chỉ khi một trong hay vị trí $S_i$ hoặc $S_j$ được chọn, và đó là $p_{ij} = \frac{2}{j - i + 1} $ (Xác suất này được tính khi loại đi xác suất chọn phải những pivot nằm bên trái của $S_i$ hoặc nằm bên phải của $S_j$)&lt;/p&gt;
 
 &lt;p&gt;Như vậy ta có:&lt;/p&gt;
 
-&lt;div&gt;$$E \left [ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&gt;i} \frac{2}{j - i + 1}$$&lt;/div&gt;
+&lt;p&gt;$$E \left [ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&amp;gt;i} \frac{2}{j - i + 1}$$&lt;/p&gt;
 
-&lt;p&gt;Đặt &lt;code&gt;$k = j - i + 1$&lt;/code&gt;, ta được:&lt;/p&gt;
+&lt;p&gt;Đặt $k = j - i + 1$, ta được:&lt;/p&gt;
 
-&lt;div&gt;$$\sum_{i=1}^n \sum_{j&gt;i} p_{ij} \leq \sum_{i=1}^n \sum_{k=1}^{n-i+1} \frac{1}{k}$$&lt;/div&gt;
+&lt;p&gt;$$\sum_{i=1}^n \sum_{j&amp;gt;i} p_{ij} \leq \sum_{i=1}^n \sum_{k=1}^{n-i+1} \frac{1}{k}$$&lt;/p&gt;
 
-&lt;div&gt;$$\leq 2 \sum_{i=1}^n \sum_{k=1}^{n} \frac{1}{k}$$&lt;/div&gt;
+&lt;p&gt;$$\leq 2 \sum_{i=1}^n \sum_{k=1}^{n} \frac{1}{k}$$&lt;/p&gt;
 
-&lt;div&gt;$$= 2n \sum_{k=1}^{n} \frac{1}{k}$$&lt;/div&gt;
+&lt;p&gt;$$= 2n \sum_{k=1}^{n} \frac{1}{k}$$&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;$\sum_{k=1}^{n} \frac{1}{k}$&lt;/code&gt; chính là &lt;a href=&#34;https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Rate_of_divergence&#34;&gt;chuỗi harmony&lt;/a&gt; và tổng này sẽ hội tụ về xấp xỉ của &lt;code&gt;$ln(n)$&lt;/code&gt;. Và như vậy&lt;/p&gt;
+&lt;p&gt;$\sum_{k=1}^{n} \frac{1}{k}$ chính là &lt;a href=&#34;https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Rate_of_divergence&#34; target=&#34;_blank&#34;&gt;chuỗi harmony&lt;/a&gt; và tổng này sẽ hội tụ về xấp xỉ của $ln(n)$. Và như vậy&lt;/p&gt;
 
-&lt;div&gt;$$E \left [ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} \right ] \leq 2nlogn$$&lt;/div&gt;
+&lt;p&gt;$$E \left [ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} \right ] \leq 2n\log{n}$$&lt;/p&gt;
 
 &lt;h1 id=&#34;random-mincut&#34;&gt;Random Mincut&lt;/h1&gt;
 
@@ -83,15 +85,15 @@
 
 &lt;p&gt;Những bài toán &lt;em&gt;chia cắt&lt;/em&gt; đồ thị gọi là &lt;em&gt;graph cut&lt;/em&gt;, nếu trong bài toán yêu cầu tìm ra đoạn cắt nào có chi phí thấp nhất: cắt ít số cạnh nhất - thì đó chính là bài toán tìm &lt;em&gt;mincut&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Trong ví dụ này ta xét đồ thị là một &lt;a href=&#34;http://mathworld.wolfram.com/Multigraph.html&#34;&gt;multigraph&lt;/a&gt; - tức đồ thị có thể có nhiều cạnh cùng nối chung hai điểm. Một số định nghĩa cho phép &lt;em&gt;multigraph&lt;/em&gt; là đồ thị có các cạnh lặp (self-loop). Để thuận tiện cho việc chứng minh và minh hoạ, các đồ thị được đề cập trong bài là các đồ thị vô hướng.&lt;/p&gt;
+&lt;p&gt;Trong ví dụ này ta xét đồ thị là một &lt;a href=&#34;http://mathworld.wolfram.com/Multigraph.html&#34; target=&#34;_blank&#34;&gt;multigraph&lt;/a&gt; - tức đồ thị có thể có nhiều cạnh cùng nối chung hai điểm. Một số định nghĩa cho phép &lt;em&gt;multigraph&lt;/em&gt; là đồ thị có các cạnh lặp (self-loop). Để thuận tiện cho việc chứng minh và minh hoạ, các đồ thị được đề cập trong bài là các đồ thị vô hướng.&lt;/p&gt;
 
-&lt;h2 id=&#34;karger-mincut-https-en-wikipedia-org-wiki-karger-27s-algorithm&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Karger%27s_algorithm&#34;&gt;Karger Mincut&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;karger-mincut-https-en-wikipedia-org-wiki-karger-27s-algorithm&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Karger%27s_algorithm&#34; target=&#34;_blank&#34;&gt;Karger Mincut&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/e/e7/Single_run_of_Karger%E2%80%99s_Mincut_algorithm.svg&#34; alt=&#34;Minh hoạ thuật toán Karger&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Một quá trình quan trọng trong thuật toán Karger là &lt;em&gt;Edge Contraction&lt;/em&gt; - gộp cạnh. Cho một cạnh &lt;code&gt;$ e = \{u, v\}$&lt;/code&gt;, sau phép gộp cạnh ta sẽ có được một &lt;em&gt;đỉnh&lt;/em&gt; mới là &lt;code&gt;$uv$&lt;/code&gt; trong đó tất cả các cạnh nối từ &lt;code&gt;$u$&lt;/code&gt; đến &lt;code&gt;$v$&lt;/code&gt; hay ngược lại đều bị loại bỏ, đồng thời các cạnh lặp (self-loop) cũng bị xoá bỏ.&lt;/p&gt;
+&lt;p&gt;Một quá trình quan trọng trong thuật toán Karger là &lt;em&gt;Edge Contraction&lt;/em&gt; - gộp cạnh. Cho một cạnh $ e = {u, v}$, sau phép gộp cạnh ta sẽ có được một &lt;em&gt;đỉnh&lt;/em&gt; mới là $uv$ trong đó tất cả các cạnh nối từ $u$ đến $v$ hay ngược lại đều bị loại bỏ, đồng thời các cạnh lặp (self-loop) cũng bị xoá bỏ.&lt;/p&gt;
 
-&lt;p&gt;Với các cạnh khác &lt;code&gt;$ e’ = \{u, w\}$&lt;/code&gt; hay &lt;code&gt;$e’=\{v, w\}$&lt;/code&gt; đều trở thành &lt;code&gt;$e’=\{uv,w\}$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Với các cạnh khác $ e’ = {u, w}$ hay $e’={v, w}$ đều trở thành $e’={uv,w}$.&lt;/p&gt;
 
 &lt;p&gt;Một cách đơn giản: phép gộp cạnh sẽ nhập 2 đỉnh lại với nhau - xoá toàn bộ các cạnh nối 2 cạnh cũ và giữ lại những cạnh nối 2 đỉnh đó với các đỉnh khác trong đồ thị.&lt;/p&gt;
 
@@ -105,44 +107,44 @@
 
 &lt;h2 id=&#34;tính-đúng-đắng-của-giải-thuật&#34;&gt;Tính đúng đắng của giải thuật&lt;/h2&gt;
 
-&lt;p&gt;Để có thể tính được độ phức tạp trong thời gian trung bình, ta cần quay lại một chút về các tính chất của đồ thị. Cho đa đồ thị (multigraph) &lt;code&gt;$G=(V, E)$&lt;/code&gt; gồm các đỉnh &lt;code&gt;$V$&lt;/code&gt; và các cạnh &lt;code&gt;$E$&lt;/code&gt;. Gọi &lt;code&gt;$d(v)$&lt;/code&gt; là bậc của đỉnh &lt;code&gt;$v$&lt;/code&gt; là tổng số các cạnh liên thuộc với &lt;code&gt;$v$&lt;/code&gt;. Ta có tính chất sau:&lt;/p&gt;
+&lt;p&gt;Để có thể tính được độ phức tạp trong thời gian trung bình, ta cần quay lại một chút về các tính chất của đồ thị. Cho đa đồ thị (multigraph) $G=(V, E)$ gồm các đỉnh $V$ và các cạnh $E$. Gọi $d(v)$ là bậc của đỉnh $v$ là tổng số các cạnh liên thuộc với $v$. Ta có tính chất sau:&lt;/p&gt;
 
-&lt;div&gt;$$\sum_{v \in V} d(v) = 2 | E |$$&lt;/div&gt;
+&lt;p&gt;$$\sum_{v \in V} d(v) = 2 | E |$$&lt;/p&gt;
 
-&lt;p&gt;Gọi &lt;code&gt;$C$&lt;/code&gt; là lát cắt có kích thước nhỏ nhất &lt;code&gt;$k$&lt;/code&gt; - tức số lượng các cạnh trong lát cắt đó là &lt;code&gt;$k$&lt;/code&gt;. Do đó, bậc tối thiểu của mỗi cạnh trong đồ thị này là &lt;code&gt;$k$&lt;/code&gt;. Bởi nếu tồn tại một đỉnh có bậc nhỏ hơn &lt;code&gt;$k$&lt;/code&gt; thì lắt cắt &lt;code&gt;$k$&lt;/code&gt; không phải là lát cắt nhỏ nhất.&lt;/p&gt;
+&lt;p&gt;Gọi $C$ là lát cắt có kích thước nhỏ nhất $k$ - tức số lượng các cạnh trong lát cắt đó là $k$. Do đó, bậc tối thiểu của mỗi cạnh trong đồ thị này là $k$. Bởi nếu tồn tại một đỉnh có bậc nhỏ hơn $k$ thì lắt cắt $k$ không phải là lát cắt nhỏ nhất.&lt;/p&gt;
 
 &lt;p&gt;Như vậy ta có:&lt;/p&gt;
 
-&lt;div&gt;$$nk \leq \sum_{v \in V} d(v) = 2 | E |$$&lt;/div&gt;
-&lt;div&gt;$$|E| \geq \frac{nk}{2}$$&lt;/div&gt;
+&lt;p&gt;$$nk \leq \sum_{v \in V} d(v) = 2 | E |$$
+$$|E| \geq \frac{nk}{2}$$&lt;/p&gt;
 
 &lt;p&gt;Ta thấy xác suất để thuật toán gộp cạnh chọn đúng ngay 1 cạnh trong C chính là&lt;/p&gt;
 
-&lt;div&gt;$$\frac{k}{|E|}$$&lt;/div&gt;
+&lt;p&gt;$$\frac{k}{|E|}$$&lt;/p&gt;
 
 &lt;p&gt;kết hợp với bất đẳng thức phía trên, ta được:&lt;/p&gt;
 
-&lt;div&gt;$$\frac{k}{|E|} \leq \frac{2k}{nk} = \frac{2}{n}$$&lt;/div&gt;
+&lt;p&gt;$$\frac{k}{|E|} \leq \frac{2k}{nk} = \frac{2}{n}$$&lt;/p&gt;
 
-&lt;p&gt;Như vậy, xác suất để thuật toán gộp cạnh không chọn phải các cạnh của &lt;code&gt;$C$&lt;/code&gt; là &lt;code&gt;$p_n $&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Như vậy, xác suất để thuật toán gộp cạnh không chọn phải các cạnh của $C$ là $p_n $.&lt;/p&gt;
 
-&lt;p&gt;Ta có &lt;code&gt;$p_n \leq (1-\frac{2}{n})p_{n-1} $&lt;/code&gt; .&lt;/p&gt;
+&lt;p&gt;Ta có $p_n \leq (1-\frac{2}{n})p_{n-1} $ .&lt;/p&gt;
 
-&lt;p&gt;Đồng thời ta cũng có &lt;code&gt;$ p_2 = 1 $&lt;/code&gt; lí do là bởi Karger chỉ chọn cạnh để gộp khi &lt;code&gt;$ \vert V \vert &amp;gt; 2 $&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Đồng thời ta cũng có $ p_2 = 1 $ lí do là bởi Karger chỉ chọn cạnh để gộp khi $ \vert V \vert &amp;gt; 2 $&lt;/p&gt;
 
-&lt;p&gt;Nên khi &lt;code&gt;$ n=2 $&lt;/code&gt; thì biến cố chọn phải cạnh để gộp nằm trong &lt;code&gt;$ C $&lt;/code&gt; chắc chắn không xảy ra.&lt;/p&gt;
+&lt;p&gt;Nên khi $ n=2 $ thì biến cố chọn phải cạnh để gộp nằm trong $ C $ chắc chắn không xảy ra.&lt;/p&gt;
 
-&lt;p&gt;Xác suất &lt;code&gt;$p_n$&lt;/code&gt; có cận như sau:&lt;/p&gt;
+&lt;p&gt;Xác suất $p_n$ có cận như sau:&lt;/p&gt;
 
-&lt;div&gt;$$p_n \geq \prod_{i=0}^{n-3} \left (1 - \frac{2}{n-i} \right ) = \frac{2}{n(n-1)}$$&lt;/div&gt;
+&lt;p&gt;$$p_n \geq \prod_{i=0}^{n-3} \left (1 - \frac{2}{n-i} \right ) = \frac{2}{n(n-1)}$$&lt;/p&gt;
 
-&lt;p&gt;Để dễ tưởng tượng hơn, ta có thể phân tích một chút về trường hợp Karger không tìm ra được mincut, rõ ràng xác suất đó chính là &lt;code&gt;$ 1 - \frac{2}{n(n-1)}$&lt;/code&gt;, để tăng độ chính xác, ta có thể cho Karger chạy &lt;code&gt;$k$&lt;/code&gt; lần. Lúc này, xác suất Karger không tìm ra được mincut là: &lt;code&gt;$ \left (1 - \frac{2}{n(n-1)} \right )^k$&lt;/code&gt;. Có một bất đẳng thức thú vị ở đây:&lt;/p&gt;
+&lt;p&gt;Để dễ tưởng tượng hơn, ta có thể phân tích một chút về trường hợp Karger không tìm ra được mincut, rõ ràng xác suất đó chính là $ 1 - \frac{2}{n(n-1)}$, để tăng độ chính xác, ta có thể cho Karger chạy $k$ lần. Lúc này, xác suất Karger không tìm ra được mincut là: $ \left (1 - \frac{2}{n(n-1)} \right )^k$. Có một bất đẳng thức thú vị ở đây:&lt;/p&gt;
 
-&lt;div&gt;$$\frac{1}{4} \leq \left (1 - \frac{1}{x} \right )^ x \leq \frac{1}{e}$$&lt;/div&gt;
+&lt;p&gt;$$\frac{1}{4} \leq \left (1 - \frac{1}{x} \right )^ x \leq \frac{1}{e}$$&lt;/p&gt;
 
-&lt;p&gt;Giả sử &lt;code&gt;$k = \frac{n(n-1)}{2}\ln n$&lt;/code&gt; ta có được kết quả khá đẹp như sau:&lt;/p&gt;
+&lt;p&gt;Giả sử $k = \frac{n(n-1)}{2}\ln n$ ta có được kết quả khá đẹp như sau:&lt;/p&gt;
 
-&lt;div&gt;$$\left (1 - \frac{2}{n(n-1)} \right )^{\frac{n(n-1)}{2}\ln n} \leq \left (\frac{1}{e} \right )^{\frac{n(n-1)}{2}\ln n} = \left (\frac{1}{e} \right ) ^{\ln n} = \frac{1}{n}$$&lt;/div&gt;
+&lt;p&gt;$$\left (1 - \frac{2}{n(n-1)} \right )^{\frac{n(n-1)}{2}\ln n} \leq \left (\frac{1}{e} \right )^{\frac{n(n-1)}{2}\ln n} = \left (\frac{1}{e} \right ) ^{\ln n} = \frac{1}{n}$$&lt;/p&gt;
 
 &lt;h1 id=&#34;binary-planar-partitions&#34;&gt;Binary Planar Partitions&lt;/h1&gt;
 
@@ -154,67 +156,119 @@
 
 &lt;p&gt;BSP có nhiều ứng dụng, đặc biệt là trong các bài toán về đồ hoạ. Điển hình như trong bài toán dựng hình (xác định đối tượng nào được dựng trong khung hình từ góc một góc nhìn nào đó), trong hệ thống CAD, phát hiện va chạm trong robotics, cũng như trong các bài toán chứa các cấu trúc không gian phức tạp.&lt;/p&gt;
 
-&lt;p&gt;Trong trường hợp tổng quát, cây BSP, từ mỗi node của mình sẽ chia không gian thành hai nửa siêu phẳng, từ mỗi nửa siêu phẳng đó sẽ tiếp tục được chia cắt thành các nửa siêu phẳng nhỏ hơn sao cho những node lá cuối cùng sẽ chứa 1 đối tượng mà thuộc không gian. Có thể thấy cây BSP là trường hợp tổng quát của cây &lt;a href=&#34;https://en.wikipedia.org/wiki/K-d_tree&#34;&gt;k-d&lt;/a&gt;, và &lt;a href=&#34;https://en.wikipedia.org/wiki/Quadtree&#34;&gt;Quadtree&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Trong trường hợp tổng quát, cây BSP, từ mỗi node của mình sẽ chia không gian thành hai nửa siêu phẳng, từ mỗi nửa siêu phẳng đó sẽ tiếp tục được chia cắt thành các nửa siêu phẳng nhỏ hơn sao cho những node lá cuối cùng sẽ chứa 1 đối tượng mà thuộc không gian. Có thể thấy cây BSP là trường hợp tổng quát của cây &lt;a href=&#34;https://en.wikipedia.org/wiki/K-d_tree&#34; target=&#34;_blank&#34;&gt;k-d&lt;/a&gt;, và &lt;a href=&#34;https://en.wikipedia.org/wiki/Quadtree&#34; target=&#34;_blank&#34;&gt;Quadtree&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&#34;ví-dụ-1&#34;&gt;Ví dụ&lt;/h2&gt;
 
-&lt;p&gt;Để đơn giản bài toán ta xét trường hợp mặt phẳng với dữ liệu đầu vào là tập các đoạn thẳng sao cho từng cặp trong tập không giao nhau &lt;code&gt;$S=\{s_1, s_2, \dots, s_n\}$&lt;/code&gt;, output của bài toán là một cây BSP mà mỗi vùng trong mỗi node lá chỉ chứa 1 một đoạn thẳng.&lt;/p&gt;
+&lt;p&gt;Để đơn giản bài toán ta xét trường hợp mặt phẳng với dữ liệu đầu vào là tập các đoạn thẳng sao cho từng cặp trong tập không giao nhau $S={s_1, s_2, \dots, s_n}$, output của bài toán là một cây BSP mà mỗi vùng trong mỗi node lá chỉ chứa 1 một đoạn thẳng.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Chọn ngẫu nhiên (theo phân phối đều) một hoán vị &lt;code&gt;$\pi$&lt;/code&gt; trong tập hoá vị của &lt;code&gt;$\{1, 2, \dots, n \}$&lt;/code&gt; (gồm &lt;code&gt;$n!$&lt;/code&gt; phần tử).&lt;/li&gt;
+&lt;li&gt;Chọn ngẫu nhiên (theo phân phối đều) một hoán vị $\pi$ trong tập hoá vị của ${1, 2, \dots, n }$ (gồm $n!$ phần tử).&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Tồn tại một vùng chứa nhiều hơn 1 đoạn thẳng:&lt;/p&gt;
 
-&lt;p&gt;2.a Cắt vùng này bởi &lt;em&gt;đường thẳng&lt;/em&gt; &lt;code&gt;$l(s_i)$&lt;/code&gt; trong đó &lt;code&gt;$i$&lt;/code&gt; là phần tử đầu tiên trong hoán vị (ở đây đường thẳng $l$ sẽ chứa &lt;code&gt;$s_i$&lt;/code&gt;) &lt;code&gt;$\pi$&lt;/code&gt; sao cho $s_i$ cắt vùng đang xét.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;2.a Cắt vùng này bởi &lt;em&gt;đường thẳng&lt;/em&gt; $l(s_i)$ trong đó $i$ là phần tử đầu tiên trong hoán vị (ở đây đường thẳng $l$ sẽ chứa $s_i$) $\pi$ sao cho $s_i$ cắt vùng đang xét.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;phân-tích&#34;&gt;Phân tích&lt;/h2&gt;
 
-&lt;p&gt;Gọi biến &lt;code&gt;$X_{ij}$&lt;/code&gt; là biến ngẫu nhiên và &lt;code&gt;$X_{ij}=1$&lt;/code&gt; khi đường thẳng chứa &lt;code&gt;$s_i$&lt;/code&gt; cắt &lt;code&gt;$s_j$&lt;/code&gt; trong một vòng gọi đệ quy nào đó, &lt;code&gt;$X_{ij}=0$&lt;/code&gt; trong trường hợp ngược lại.&lt;/p&gt;
+&lt;p&gt;Gọi biến $X_{ij}$ là biến ngẫu nhiên và $X_{ij}=1$ khi đường thẳng chứa $s_i$ cắt $s_j$ trong một vòng gọi đệ quy nào đó, $X_{ij}=0$ trong trường hợp ngược lại.&lt;/p&gt;
 
-&lt;p&gt;Ở đây ta muốn xét xem kì vọng số lần thuật toán này cắt phải một đoạn thẳng trong tập đầu vào &lt;code&gt;$S$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ở đây ta muốn xét xem kì vọng số lần thuật toán này cắt phải một đoạn thẳng trong tập đầu vào $S$.&lt;/p&gt;
 
-&lt;div&gt;$$\mathbf{E} (X) = \mathbf{E} \left [ \sum_{i=1}^{n} \sum_{i=1}^{n} X _ {ij} \right ]$$&lt;/div&gt;
-&lt;div&gt;$$= \sum_{i=1}^{n} \sum_{i=1}^{n} \mathbf{E} [X _ {ij} ]$$&lt;/div&gt;
-&lt;div&gt;$$= \sum_{i=1}^{n} \sum_{i=1}^{n} Pr [X _ {ij} = 1 ]$$&lt;/div&gt;
+&lt;p&gt;$$\mathbf{E} (X) = \mathbf{E} \left [ \sum_{i=1}^{n} \sum_{i=1}^{n} X _ {ij} \right ]$$
+$$= \sum_{i=1}^{n} \sum_{i=1}^{n} \mathbf{E} [X _ {ij} ]$$
+$$= \sum_{i=1}^{n} \sum_{i=1}^{n} Pr [X _ {ij} = 1 ]$$&lt;/p&gt;
 
-&lt;p&gt;Bài toán được quy về việc tính xác suất &lt;code&gt;$Pr[X_{ij}=1]$&lt;/code&gt;. Gọi &lt;code&gt;$t$&lt;/code&gt; là giao điểm của &lt;code&gt;$s_i$&lt;/code&gt; và &lt;code&gt;$s_j$&lt;/code&gt;, &lt;code&gt;$index(i,j)=t$&lt;/code&gt; nếu &lt;code&gt;$s_i$&lt;/code&gt; cắt &lt;code&gt;$t-1$&lt;/code&gt; đoạn thẳng trước khi giao với &lt;code&gt;$s_j$&lt;/code&gt;, như ví dụ bên dưới &lt;code&gt;$s_{ij}=4$&lt;/code&gt;. Trường hợp hai đoạn thẳng không cắt nhau thì &lt;code&gt;$S_{ij}=\infty$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Bài toán được quy về việc tính xác suất $Pr[X_{ij}=1]$. Gọi $t$ là giao điểm của $s_i$ và $s_j$, $index(i,j)=t$ nếu $s_i$ cắt $t-1$ đoạn thẳng trước khi giao với $s_j$, như ví dụ bên dưới $s_{ij}=4$. Trường hợp hai đoạn thẳng không cắt nhau thì $S_{ij}=\infty$.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://i.imgur.com/kyaZ5CL.png&#34; alt=&#34;Ví dụ về giá trị index(i, j)&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Bởi đường thẳng chứa $s_i$ bất kì có thể tiến vô cùng về hai phía nên tồn tại hai đoạn sao cho &lt;code&gt;$index(s_i, s\_j) = index(s_i, s_k)$&lt;/code&gt;. Nếu &lt;code&gt;$index(s_i, s_j)=t$&lt;/code&gt; ta gọi &lt;code&gt;$s_{i1}, s_{i2}, \dots, s_{it}$&lt;/code&gt; là những đoạn thẳng mà &lt;code&gt;$s_i$&lt;/code&gt; sẽ cắt trước khi giao với &lt;code&gt;$s_j$&lt;/code&gt;, xác suất đề sự kiện này xảy ra là &lt;code&gt;$\frac{1}{t+1}$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Bởi đường thẳng chứa $s_i$ bất kì có thể tiến vô cùng về hai phía nên tồn tại hai đoạn sao cho $index(s_i, s_j) = index(s_i, s_k)$. Nếu $index(s_i, s_j)=t$ ta gọi $s_{i1}, s_{i2}, \dots, s_{it}$ là những đoạn thẳng mà $s_i$ sẽ cắt trước khi giao với $s_j$, xác suất đề sự kiện này xảy ra là $\frac{1}{t+1}$&lt;/p&gt;
 
-&lt;p&gt;Cho một đoạn &lt;code&gt;$s_k$&lt;/code&gt; cố định và &lt;code&gt;$m \in \{0, 1, 2, dots, n-2 \}$&lt;/code&gt; tồn tại tối đa hai đoạn thẳng &lt;code&gt;$s_l$&lt;/code&gt; sao cho &lt;code&gt;$index(s_l, s_k)=m$&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Cho một đoạn $s_k$ cố định và $m \in {0, 1, 2, dots, n-2 }$ tồn tại tối đa hai đoạn thẳng $s_l$ sao cho $index(s_l, s_k)=m$&lt;/p&gt;
 
 &lt;p&gt;Cận trên được tính như sau:&lt;/p&gt;
 
-&lt;div&gt;$$\mathbf{E}[X] = \sum_{i=1}^{n} \sum_{j=1}^{n} Pr [X _ {ij} = 1 ]$$&lt;/div&gt;
-&lt;div&gt;$$\leq \sum_{i=1}^{n} \sum_{j=1}^{n} \frac{1}{index(i, j) + 1}$$&lt;/div&gt;
-&lt;div&gt;$$\sum_{i=1}^{n} \sum_{k=2}^{n} \frac{2}{k}$$&lt;/div&gt;
-&lt;div&gt;$$= 2n \ln n$$&lt;/div&gt;
+&lt;p&gt;$$\mathbf{E}[X] = \sum_{i=1}^{n} \sum_{j=1}^{n} Pr [X _ {ij} = 1 ]$$
+$$\leq \sum_{i=1}^{n} \sum_{j=1}^{n} \frac{1}{index(i, j) + 1}$$
+$$\sum_{i=1}^{n} \sum_{k=2}^{n} \frac{2}{k}$$
+$$= 2n \ln n$$&lt;/p&gt;
 
 &lt;h1 id=&#34;tài-liệu-tham-khảo&#34;&gt;Tài liệu tham khảo.&lt;/h1&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.csee.wvu.edu/~ksmani/courses/fa01/random/lecnotes/lecture2.pdf&#34;&gt;Introduction to Randomized Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://cs.au.dk/~gudmund/Documents/randompearlnotes.pdf&#34;&gt;Randomised Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.csee.wvu.edu/~ksmani/courses/fa01/random/lecnotes/lecture2.pdf&#34; target=&#34;_blank&#34;&gt;Introduction to Randomized Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs.au.dk/~gudmund/Documents/randompearlnotes.pdf&#34; target=&#34;_blank&#34;&gt;Randomised Algorithms&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cảm nhận Diablo III</title>
+      <link>http://replace-this-with-your-website-url.com/post/blog/diablo3-review/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://replace-this-with-your-website-url.com/post/blog/diablo3-review/</guid>
+      <description>
+
+&lt;p&gt;Sau gần 4 năm kể từ khi phát hành, mình mới được chơi cái game này. Thực ra do một cách tình cờ mà thấy được cái giá rẻ bất ngờ của em ý, tính ra là 20 USD cho bản Standard. Hoá ra là do đã có bản Expansion nên bản cũ mới rẻ vậy. Thôi thì lượm về chơi vậy.&lt;/p&gt;
+
+&lt;p&gt;Lần đầu tiên chơi game Diablo là bản Diablo 2 Fury Within hồi lớp 6 lớp 7 gì đó. Vậy là cũng gần 10 năm mất rồi. Trước giờ toàn chơi Barbarian và không thèm đếm xỉa đến các nhân vật khác. Phá đảo đánh boss không biết bao nhiêu lần nhưng vẫn không hiểu sao vẫn khoái nó đến vậy.&lt;/p&gt;
+
+&lt;p&gt;Quay trở lại với Diablo 3, với góc nhìn của một đứa chơi game cho vui và không phải là tụi &lt;em&gt;geek&lt;/em&gt; khi chơi game và thuộc lòng các công thức tính demage, defense hay tá lả các thuộc tính khác.&lt;/p&gt;
+
+&lt;p&gt;Nhân tiện về tính &lt;em&gt;Damge per second&lt;/em&gt; (DBP) trong game:&lt;/p&gt;
+
+&lt;script type=&#34;math/tex; mode=display&#34;&gt;\text{dps} = \frac{\text{min} + \text{max}}{2} \times \text{APS} \times \text{Attach Speed} \times ( 1 + \frac{\text{Primary Stat}}{2} ) \times (1 + \text{CritC} \times \text{CritDam}) \times \text{DamMod}&lt;/script&gt;
+
+&lt;p&gt;Sợ rồi chứ. Tuy vẫn chưa kinh dị bằng bọn &lt;a href=&#34;http://bulbapedia.bulbagarden.net/wiki/Experience#Gain_formula&#34; target=&#34;_blank&#34;&gt;pokemon&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Quay trở lại cảm nhận và những kỷ niệm liên quan giữa Diablo III và Diablo II.&lt;/p&gt;
+
+&lt;h2 id=&#34;cốt-truyện&#34;&gt;Cốt truyện&lt;/h2&gt;
+
+&lt;p&gt;Có vẻ gì đó rất ảo lòi ra. Ngày xưa không quan tâm đến cốt truyện vì nhiều lý do. Đa phần là vì dốt tiếng Anh và tốn thời gian đọc thoại, nhưng ngẫm lại thì &lt;a href=&#34;https://www.youtube.com/watch?v=W6pDBXFPa_8&#34; target=&#34;_blank&#34;&gt;không phải là vấn đề của riêng mình&lt;/a&gt;; ngoài ra các bản trên đĩa CD lúc đó bán toàn bị cắt hết những cảnh Cinematic. Nhưng nếu quan tâm thì cốt truyện trông rất là &lt;em&gt;thần thánh&lt;/em&gt;, thuộc thể loại &lt;em&gt;dark fantasy&lt;/em&gt; và rất gần với gothic nên màu sắc đen tối (màu mè hơn ở bản III), liên quan mật thiết tới &lt;a href=&#34;http://www.diablofans.com/forums/diablo-iii-general-forums/diablo-iii-general-discussion/19541-judeo-christian-tradition-in-diablo3&#34; target=&#34;_blank&#34;&gt;ký hiệu Judeo-Christian&lt;/a&gt;. Xét một cách nào đó, cả ba dòng game của Blizzard đều có cái hay trong cốt truyện khá riêng biệt. Nếu Starcraft là câu chuyện của tương lai, hi-tech và các chủng loài ngoài hành tinh cũng như cuộc phiêu lưu ở tít xa các dãy thiên hà, Warcraft là câu chuyện thần thoại mang phong cách Bắc Âu với biên niên sử đồ sộ thì Diablo lại là cuộc đấu tranh của con người với nền là &lt;a href=&#34;http://diablo.wikia.com/wiki/Great_Conflict&#34; target=&#34;_blank&#34;&gt;Cuộc Chiến Bất Tận&lt;/a&gt; giữa &lt;a href=&#34;http://diablo.wikia.com/wiki/High_Heavens&#34; target=&#34;_blank&#34;&gt;thiên đàng&lt;/a&gt; và &lt;a href=&#34;http://diablo.wikia.com/wiki/Burning_Hells&#34; target=&#34;_blank&#34;&gt;địa ngục&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://i.ytimg.com/vi/6rJPzTTLLfI/maxresdefault.jpg&#34; alt=&#34;The Internal Conflict&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cuốn &lt;a href=&#34;http://www.amazon.ca/Diablo-III-Book-Cain-Deckard/dp/1608870634&#34; target=&#34;_blank&#34;&gt;Book of Cain&lt;/a&gt; rất hay, dành cho dân nào mê cốt truyện. Mà thật ra, trước giờ toàn thấy thiên hạ click và click thay vì đọc thoại game. Tới đây mình đã hiểu vì sao những game như Fallout 3 lại có &lt;strong&gt;cốt truyện&lt;/strong&gt; hơn, một phần vì người chơi buộc phải theo những thoại, mạch truyện để hoàn thành nhiệm vụ.&lt;/p&gt;
+
+&lt;h2 id=&#34;một-số-cải-tiến&#34;&gt;Một số cải tiến&lt;/h2&gt;
+
+&lt;p&gt;Dưới góc nhìn của một đứa chơi lâu năm Diablo 2, thì một số vấn đề sau được giải quyết khá tốt trong Diablo 3:&lt;/p&gt;
+
+&lt;h3 id=&#34;rương-đồ&#34;&gt;Rương đồ&lt;/h3&gt;
+
+&lt;p&gt;Nếu chơi bản Diablo cũ thì rương đồ rất là tội nghiệp, chưa kể cái Cube cũng tội nghiệp không kém, trong diablo 3 thì kích thước rương đồ và item có cải thiện rõ rệt. Kích thước tối đa của item là $2 \times 1$ khác hẳn với Diablo II là $ 3 \times 2$, ngoài ra thì rương to hơn, có tăng thêm số lượng rương (thực ra là số tab), có thay đổi icon trong mỗi tab tiện cho công cuộc sắp xếp hàng.&lt;/p&gt;
+
+&lt;h3 id=&#34;bản-đồ&#34;&gt;Bản đồ&lt;/h3&gt;
+
+&lt;p&gt;Bản đồ siêu dễ chơi, một phần vì không đánh đố nhưng trong bản 2. Thêm vào đó có mũi tên chỉ dẫn làm nhiệm vụ nên không khó để tìm đến các đích. Ngoài bản đồ trong địa hình hiện tại còn có bản đồ khái quát của ACT. Có cảm giác nó không bự bằng Diablo II, quái trong bản đồ cũng không đông như bản trước. Không thấy có nhiều cave hay đường hầm gì nhiều, hoặc có thể là do mình chưa mò hết.&lt;/p&gt;
+
+&lt;h3 id=&#34;các-cải-tiến-linh-tinh&#34;&gt;Các cải tiến linh tinh&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Khi đi đến cuối hầm hay cave luôn có 1 portal bằng đá để ra ngoài hang nhanh chóng.&lt;/li&gt;
+&lt;li&gt;Không cần sách xanh nữa, muốn portal về nhà bao giờ cũng được. Và không cần đến chỗ portal point mới &lt;em&gt;thổ địa phù&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Không hiểu sao bản này dễ quá, Normal đánh không mất tí máu, lên Hard hiện giờ chỉ có boss mới làm mình mất máu được.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
     
     <item>
       <title>Cảm nhận Star Wars VII: The Force Awakens</title>
-      <link>https://dangkhoasdc.github.io/post/blog/startwars-VII-review/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/startwars-vii-review/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/startwars-VII-review/</guid>
-      <description>&lt;p&gt;Từ nhỏ, tôi luôn thích những cuộc phiêu lưu và những câu chuyện giả tưởng. Từ cuộc phiêu lưu của Robinson đến con tàu chu du hai mươi ngàn dặm dưới đáy biển của Jules Verne hay cuộc chiến ngoài vũ trụ trong Starcraft. Star Wars cũng không phải là ngoại lệ, dĩ nhiên tôi không phải fan cuồng đến mức đọc từng trang wiki về từng nhân vật, thậm chí đến những nhân vật xuất hiện trong phim có vài giây cũng có hẳn &lt;a href=&#34;https://www.youtube.com/watch?v=bsb9ZTmbSKQ&amp;amp;feature=youtu.be&amp;amp;t=38s&#34;&gt;trang wiki riêng cơ mà&lt;/a&gt;. Và dù biết đến Star Wars khá muộn màng vào những năm đại học, câu chuyện về cuộc chiến trong dải thiên hà xa xôi luôn khiến tôi thích thú.&lt;/p&gt;
+      <guid>http://replace-this-with-your-website-url.com/post/blog/startwars-vii-review/</guid>
+      <description>&lt;p&gt;Từ nhỏ, tôi luôn thích những cuộc phiêu lưu và những câu chuyện giả tưởng. Từ cuộc phiêu lưu của Robinson đến con tàu chu du hai mươi ngàn dặm dưới đáy biển của Jules Verne hay cuộc chiến ngoài vũ trụ trong Starcraft. Star Wars cũng không phải là ngoại lệ, dĩ nhiên tôi không phải fan cuồng đến mức đọc từng trang wiki về từng nhân vật, thậm chí đến những nhân vật xuất hiện trong phim có vài giây cũng có hẳn &lt;a href=&#34;https://www.youtube.com/watch?v=bsb9ZTmbSKQ&amp;amp;feature=youtu.be&amp;amp;t=38s&#34; target=&#34;_blank&#34;&gt;trang wiki riêng cơ mà&lt;/a&gt;. Và dù biết đến Star Wars khá muộn màng vào những năm đại học, câu chuyện về cuộc chiến trong dải thiên hà xa xôi luôn khiến tôi thích thú.&lt;/p&gt;
 
 &lt;p&gt;Hôm nay tôi dành ngày nghỉ lễ để xem &lt;em&gt;Star Wars VII: The Force Awakens&lt;/em&gt;. Cảm nhận của tôi không gì ngoài một từ: &lt;em&gt;xuất sắc&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://i.imgur.com/wiYUg5a.jpg&#34; alt=&#34;Người trong mộng trong các thế hệ fan Star Wars&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Trước khi vào rạp, tôi không mong nhân vật nữ mới sẽ mang đến cảm giác như &lt;a href=&#34;https://www.youtube.com/watch?v=KSYValHWNOs&#34;&gt;công chúa Leia&lt;/a&gt; từng mang đến. Nàng mang một vẻ đẹp nhẹ nhàng với tính cách vừa là của một nàng công chúa kiêu kì vừa là một người tướng của quân Kháng Chiến. Ngoài ra nàng còn rất thông minh và bá đạo, đôi lúc nàng “chơi lầy” khiến thanh niên Han Solo nhiều lúc cứng cả họng. Với việc xây dựng nhân vật nữ mới Rey xuất thân không phải tầng lớp quí tộc, một phần mang hơi hướng hiện đại khiến tôi có cảm giác bất an cho nhân vật này. Tôi cũng không biết cách tiếp cận của đạo diễn sẽ thế nào. Trong khi các tập IV, V và VI là những tượng đài kinh điển của điện ảnh và là biểu tượng của văn hoá Pop, tập I, II, III đã khiến khán giả thất vọng vì kịch bản sơ sài, hiệu ứng hình ảnh sử dụng thừa thãi và nhân vật trẻ trâu Anakin xứng đáng được liệt vào danh sách những đứa trẻ trâu nhất trong lịch sử điện ảnh, áp lực đè lên tập VII không hề nhỏ. Họ phải làm vừa lòng những fan trung thành nhất, khôi phục lại hình ảnh mang tính chất biểu tượng, và hơn thế nữa là tạo nên một thế hệ những khán giả mới.&lt;/p&gt;
+&lt;p&gt;Trước khi vào rạp, tôi không mong nhân vật nữ mới sẽ mang đến cảm giác như &lt;a href=&#34;https://www.youtube.com/watch?v=KSYValHWNOs&#34; target=&#34;_blank&#34;&gt;công chúa Leia&lt;/a&gt; từng mang đến. Nàng mang một vẻ đẹp nhẹ nhàng với tính cách vừa là của một nàng công chúa kiêu kì vừa là một người tướng của quân Kháng Chiến. Ngoài ra nàng còn rất thông minh và bá đạo, đôi lúc nàng “chơi lầy” khiến thanh niên Han Solo nhiều lúc cứng cả họng. Với việc xây dựng nhân vật nữ mới Rey xuất thân không phải tầng lớp quí tộc, một phần mang hơi hướng hiện đại khiến tôi có cảm giác bất an cho nhân vật này. Tôi cũng không biết cách tiếp cận của đạo diễn sẽ thế nào. Trong khi các tập IV, V và VI là những tượng đài kinh điển của điện ảnh và là biểu tượng của văn hoá Pop, tập I, II, III đã khiến khán giả thất vọng vì kịch bản sơ sài, hiệu ứng hình ảnh sử dụng thừa thãi và nhân vật trẻ trâu Anakin xứng đáng được liệt vào danh sách những đứa trẻ trâu nhất trong lịch sử điện ảnh, áp lực đè lên tập VII không hề nhỏ. Họ phải làm vừa lòng những fan trung thành nhất, khôi phục lại hình ảnh mang tính chất biểu tượng, và hơn thế nữa là tạo nên một thế hệ những khán giả mới.&lt;/p&gt;
 
 &lt;p&gt;Theo quan điểm của tôi, Star Wars 7 đã thành công ngoài mong đợi.&lt;/p&gt;
 
@@ -244,70 +298,18 @@
 
 &lt;p&gt;====&lt;/p&gt;
 
-&lt;p&gt;1: &lt;a href=&#34;http://kenh14.vn/mot-phim/star-wars-the-force-awakens-bo-phim-can-moc-1-ty-usd-doanh-thu-nhanh-nhat-moi-thoi-dai-20151228124025985.chn&#34;&gt;http://kenh14.vn/mot-phim/star-wars-the-force-awakens-bo-phim-can-moc-1-ty-usd-doanh-thu-nhanh-nhat-moi-thoi-dai-20151228124025985.chn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1: &lt;a href=&#34;http://kenh14.vn/mot-phim/star-wars-the-force-awakens-bo-phim-can-moc-1-ty-usd-doanh-thu-nhanh-nhat-moi-thoi-dai-20151228124025985.chn&#34; target=&#34;_blank&#34;&gt;http://kenh14.vn/mot-phim/star-wars-the-force-awakens-bo-phim-can-moc-1-ty-usd-doanh-thu-nhanh-nhat-moi-thoi-dai-20151228124025985.chn&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;2: &lt;a href=&#34;http://www.imdb.com/title/tt2488496/?ref_=nv_sr_1&#34;&gt;http://www.imdb.com/title/tt2488496/?ref_=nv_sr_1&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cảm nhận diablo 3</title>
-      <link>https://dangkhoasdc.github.io/post/blog/diablo3-review/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://dangkhoasdc.github.io/post/blog/diablo3-review/</guid>
-      <description>
-
-&lt;p&gt;Sau gần 4 năm kể từ khi phát hành, mình mới được chơi cái game này. Thực ra do một cách tình cờ mà thấy được cái giá rẻ bất ngờ của em ý, tính ra là 20 USD cho bản Standard. Hoá ra là do đã có bản Expansion nên bản cũ mới rẻ vậy. Thôi thì lượm về chơi vậy.&lt;/p&gt;
-
-&lt;p&gt;Lần đầu tiên chơi game Diablo là bản Diablo 2 Fury Within hồi lớp 6 lớp 7 gì đó. Vậy là cũng gần 10 năm mất rồi. Trước giờ toàn chơi Barbarian và không thèm đếm xỉa đến các nhân vật khác. Phá đảo đánh boss không biết bao nhiêu lần nhưng vẫn không hiểu sao vẫn khoái nó đến vậy.&lt;/p&gt;
-
-&lt;p&gt;Quay trở lại với Diablo 3, với góc nhìn của một đứa chơi game cho vui và không phải là tụi &lt;em&gt;geek&lt;/em&gt; khi chơi game và thuộc lòng các công thức tính demage, defense hay tá lả các thuộc tính khác.&lt;/p&gt;
-
-&lt;p&gt;Nhân tiện về tính &lt;em&gt;Damge per second&lt;/em&gt; (DBP) trong game:&lt;/p&gt;
-
-&lt;script type=&#34;math/tex; mode=display&#34;&gt;\text{dps} = \frac{\text{min} + \text{max}}{2} \times \text{APS} \times \text{Attach Speed} \times ( 1 + \frac{\text{Primary Stat}}{2} ) \times (1 + \text{CritC} \times \text{CritDam}) \times \text{DamMod}&lt;/script&gt;
-
-&lt;p&gt;Sợ rồi chứ. Tuy vẫn chưa kinh dị bằng bọn &lt;a href=&#34;http://bulbapedia.bulbagarden.net/wiki/Experience#Gain_formula&#34;&gt;pokemon&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Quay trở lại cảm nhận và những kỷ niệm liên quan giữa Diablo III và Diablo II.&lt;/p&gt;
-
-&lt;h2 id=&#34;cốt-truyện&#34;&gt;Cốt truyện&lt;/h2&gt;
-
-&lt;p&gt;Có vẻ gì đó rất ảo lòi ra. Ngày xưa không quan tâm đến cốt truyện vì nhiều lý do. Đa phần là vì dốt tiếng Anh và tốn thời gian đọc thoại, nhưng ngẫm lại thì &lt;a href=&#34;https://www.youtube.com/watch?v=W6pDBXFPa_8&#34;&gt;không phải là vấn đề của riêng mình&lt;/a&gt;; ngoài ra các bản trên đĩa CD lúc đó bán toàn bị cắt hết những cảnh Cinematic. Nhưng nếu quan tâm thì cốt truyện trông rất là &lt;em&gt;thần thánh&lt;/em&gt;, thuộc thể loại &lt;em&gt;dark fantasy&lt;/em&gt; và rất gần với gothic nên màu sắc đen tối (màu mè hơn ở bản III), liên quan mật thiết tới &lt;a href=&#34;http://www.diablofans.com/forums/diablo-iii-general-forums/diablo-iii-general-discussion/19541-judeo-christian-tradition-in-diablo3&#34;&gt;ký hiệu Judeo-Christian&lt;/a&gt;. Xét một cách nào đó, cả ba dòng game của Blizzard đều có cái hay trong cốt truyện khá riêng biệt. Nếu Starcraft là câu chuyện của tương lai, hi-tech và các chủng loài ngoài hành tinh cũng như cuộc phiêu lưu ở tít xa các dãy thiên hà, Warcraft là câu chuyện thần thoại mang phong cách Bắc Âu với biên niên sử đồ sộ thì Diablo lại là cuộc đấu tranh của con người với nền là &lt;a href=&#34;http://diablo.wikia.com/wiki/Great_Conflict&#34;&gt;Cuộc Chiến Bất Tận&lt;/a&gt; giữa &lt;a href=&#34;http://diablo.wikia.com/wiki/High_Heavens&#34;&gt;thiên đàng&lt;/a&gt; và &lt;a href=&#34;http://diablo.wikia.com/wiki/Burning_Hells&#34;&gt;địa ngục&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.ytimg.com/vi/6rJPzTTLLfI/maxresdefault.jpg&#34; alt=&#34;The Internal Conflict&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cuốn &lt;a href=&#34;http://www.amazon.ca/Diablo-III-Book-Cain-Deckard/dp/1608870634&#34;&gt;Book of Cain&lt;/a&gt; rất hay, dành cho dân nào mê cốt truyện. Mà thật ra, trước giờ toàn thấy thiên hạ click và click thay vì đọc thoại game. Tới đây mình đã hiểu vì sao những game như Fallout 3 lại có &lt;strong&gt;cốt truyện&lt;/strong&gt; hơn, một phần vì người chơi buộc phải theo những thoại, mạch truyện để hoàn thành nhiệm vụ.&lt;/p&gt;
-
-&lt;h2 id=&#34;một-số-cải-tiến&#34;&gt;Một số cải tiến&lt;/h2&gt;
-
-&lt;p&gt;Dưới góc nhìn của một đứa chơi lâu năm Diablo 2, thì một số vấn đề sau được giải quyết khá tốt trong Diablo 3:&lt;/p&gt;
-
-&lt;h3 id=&#34;rương-đồ&#34;&gt;Rương đồ&lt;/h3&gt;
-
-&lt;p&gt;Nếu chơi bản Diablo cũ thì rương đồ rất là tội nghiệp, chưa kể cái Cube cũng tội nghiệp không kém, trong diablo 3 thì kích thước rương đồ và item có cải thiện rõ rệt. Kích thước tối đa của item là $2 \times 1$ khác hẳn với Diablo II là $ 3 \times 2$, ngoài ra thì rương to hơn, có tăng thêm số lượng rương (thực ra là số tab), có thay đổi icon trong mỗi tab tiện cho công cuộc sắp xếp hàng.&lt;/p&gt;
-
-&lt;h3 id=&#34;bản-đồ&#34;&gt;Bản đồ&lt;/h3&gt;
-
-&lt;p&gt;Bản đồ siêu dễ chơi, một phần vì không đánh đố nhưng trong bản 2. Thêm vào đó có mũi tên chỉ dẫn làm nhiệm vụ nên không khó để tìm đến các đích. Ngoài bản đồ trong địa hình hiện tại còn có bản đồ khái quát của ACT. Có cảm giác nó không bự bằng Diablo II, quái trong bản đồ cũng không đông như bản trước. Không thấy có nhiều cave hay đường hầm gì nhiều, hoặc có thể là do mình chưa mò hết.&lt;/p&gt;
-
-&lt;h3 id=&#34;các-cải-tiến-linh-tinh&#34;&gt;Các cải tiến linh tinh&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Khi đi đến cuối hầm hay cave luôn có 1 portal bằng đá để ra ngoài hang nhanh chóng.&lt;/li&gt;
-&lt;li&gt;Không cần sách xanh nữa, muốn portal về nhà bao giờ cũng được. Và không cần đến chỗ portal point mới &lt;em&gt;thổ địa phù&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;Không hiểu sao bản này dễ quá, Normal đánh không mất tí máu, lên Hard hiện giờ chỉ có boss mới làm mình mất máu được.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;2: &lt;a href=&#34;http://www.imdb.com/title/tt2488496/?ref_=nv_sr_1&#34; target=&#34;_blank&#34;&gt;http://www.imdb.com/title/tt2488496/?ref_=nv_sr_1&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Dẫn nhập thuật toán ngẫu nhiên</title>
-      <link>https://dangkhoasdc.github.io/post/blog/intro_randalgs/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/intro_randalgs/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/intro_randalgs/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/intro_randalgs/</guid>
       <description>
 
 &lt;p&gt;Hôm rồi học course &lt;em&gt;Introduction to Algorithm (2006-MIT)&lt;/em&gt; mình được biết qua khái niệm &lt;em&gt;Randomized Algorithms&lt;/em&gt;, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.&lt;/p&gt;
@@ -318,13 +320,13 @@
 
 &lt;p&gt;Điểm thú vị của &lt;code&gt;randalgs&lt;/code&gt; chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến &lt;em&gt;kì vọng trong trường hợp xấu nhất&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Tưởng tượng ta có một hệ thống nghiêm trọng, nếu như hệ thống đó bị crash thì sẽ kích hoạt &lt;a href=&#34;https://en.wikipedia.org/wiki/Cheget&#34;&gt;Cheget&lt;/a&gt; và &lt;a href=&#34;https://en.wikipedia.org/wiki/Nuclear_football&#34;&gt;Nuclear football&lt;/a&gt; cùng một lúc. Hệ thống quá lớn và phức tạp, quan trọng hơn, nó sẽ không hoạt động được khi liên tục phải chạy &lt;code&gt;quicksort&lt;/code&gt; trong $\mathcal{O}(n^2)$ - dữ liệu đầu vào là mảng được sắp xếp sẵn.&lt;/p&gt;
+&lt;p&gt;Tưởng tượng ta có một hệ thống nghiêm trọng, nếu như hệ thống đó bị crash thì sẽ kích hoạt &lt;a href=&#34;https://en.wikipedia.org/wiki/Cheget&#34; target=&#34;_blank&#34;&gt;Cheget&lt;/a&gt; và &lt;a href=&#34;https://en.wikipedia.org/wiki/Nuclear_football&#34; target=&#34;_blank&#34;&gt;Nuclear football&lt;/a&gt; cùng một lúc. Hệ thống quá lớn và phức tạp, quan trọng hơn, nó sẽ không hoạt động được khi liên tục phải chạy &lt;code&gt;quicksort&lt;/code&gt; trong $\mathcal{O}(n^2)$ - dữ liệu đầu vào là mảng được sắp xếp sẵn.&lt;/p&gt;
 
 &lt;p&gt;Hacker, bằng một cách nào đó biết được điều này và tấn công hệ thống bằng cách đưa vào hệ thống những mảng đã sắp xếp sẵn. Và bùm, apocalyptic diễn ra.&lt;/p&gt;
 
 &lt;p&gt;Và để ngăn chặn thảm hoạ đó xảy đến, ta tạo ra một phiên bản gọi là &lt;code&gt;randomized quicksort&lt;/code&gt;: trước khi được xử lý, mảng đầu vào sẽ được xáo trộn. Và cho dù hacker có cố tình tấn công bằng chuỗi đã sắp xếp thì sau bước tiền xử lý này , mảng được sắp xếp ngẫu nhiên.&lt;/p&gt;
 
-&lt;p&gt;Nếu một input có trật tự ngẫu nhiên, sau khi xáo trộn trở thành một chuỗi thứ tự thì sao? &lt;a href=&#34;https://en.wikipedia.org/wiki/Murphy%27s_law&#34;&gt;Murphy’s law&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nếu một input có trật tự ngẫu nhiên, sau khi xáo trộn trở thành một chuỗi thứ tự thì sao? &lt;a href=&#34;https://en.wikipedia.org/wiki/Murphy%27s_law&#34; target=&#34;_blank&#34;&gt;Murphy’s law&lt;/a&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;Nếu đã xui, thì hẳn phải xui nhất có thể.&lt;/p&gt;
@@ -443,18 +445,18 @@
 &lt;h2 id=&#34;khoá-học&#34;&gt;Khoá học&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://courses.cs.washington.edu/courses/cse525/13sp/&#34;&gt;Randomized Algorithms and Probabilistic Analysis - Washington&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://cs.brown.edu/courses/cs155/slides/slides.html&#34;&gt;Probabilistic Methods in Computer Science&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://courses.cs.washington.edu/courses/cse525/13sp/&#34; target=&#34;_blank&#34;&gt;Randomized Algorithms and Probabilistic Analysis - Washington&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cs.brown.edu/courses/cs155/slides/slides.html&#34; target=&#34;_blank&#34;&gt;Probabilistic Methods in Computer Science&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
     
     <item>
       <title>Hướng dẫn cài đặt OpenCV trên Windows</title>
-      <link>https://dangkhoasdc.github.io/post/blog/install_opencv_vs/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/install_opencv_vs/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/install_opencv_vs/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/install_opencv_vs/</guid>
       <description>
 
 &lt;h2 id=&#34;biên-dịch-thư-viện-opencv&#34;&gt;Biên dịch thư viện OpenCV&lt;/h2&gt;
@@ -466,11 +468,11 @@
 &lt;li&gt;Customize được các thư viện khác liên quan như Kinect, OpenCL, Python…&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://downloads.sourceforge.net/project/opencvlibrary/opencv-win/3.0.0/opencv-3.0.0.exe?r=http%3A%2F%2Fopencv.org%2F&amp;amp;ts=1448134045&amp;amp;use_mirror=nchc&#34;&gt;Link Download thư viện OpenCV cho HĐH Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://downloads.sourceforge.net/project/opencvlibrary/opencv-win/3.0.0/opencv-3.0.0.exe?r=http%3A%2F%2Fopencv.org%2F&amp;amp;ts=1448134045&amp;amp;use_mirror=nchc&#34; target=&#34;_blank&#34;&gt;Link Download thư viện OpenCV cho HĐH Windows&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Bước 1: Giải nén thư viện vào thư mục được định sẵn. Giả sử đường dẫn của mã nguồn là &lt;code&gt;C:\opencv&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/rwpgj0b.png&#34; alt=&#34;Giải nén mã nguồn thư viện OpenCV&#34; /&gt; Bước 2: Tải và cài đặt &lt;a href=&#34;https://cmake.org/files/v3.4/cmake-3.4.0-win32-x86.exe&#34;&gt;CMake&lt;/a&gt;. Thư mục &lt;code&gt;build&lt;/code&gt; chứa những tập tin của phần mã nguồn được biên dịch sẵn. Phần &lt;code&gt;sources&lt;/code&gt; được sử dụng cho cài đặt manual.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/rwpgj0b.png&#34; alt=&#34;Giải nén mã nguồn thư viện OpenCV&#34; /&gt; Bước 2: Tải và cài đặt &lt;a href=&#34;https://cmake.org/files/v3.4/cmake-3.4.0-win32-x86.exe&#34; target=&#34;_blank&#34;&gt;CMake&lt;/a&gt;. Thư mục &lt;code&gt;build&lt;/code&gt; chứa những tập tin của phần mã nguồn được biên dịch sẵn. Phần &lt;code&gt;sources&lt;/code&gt; được sử dụng cho cài đặt manual.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://i.imgur.com/iFzMg6J.png&#34; alt=&#34;Danh sách thư mục OpenCV&#34; /&gt;&lt;/p&gt;
 
@@ -658,13 +660,13 @@ architecture trong project.&lt;/p&gt;
     
     <item>
       <title>Một chút thống kê về các bài báo CVPR16</title>
-      <link>https://dangkhoasdc.github.io/post/blog/cvpr16-stat/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/cvpr16-stat/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/cvpr16-stat/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/cvpr16-stat/</guid>
       <description>
 
-&lt;p&gt;Hôm nay tình cờ thấy cái link liệt kê &lt;a href=&#34;http://www.cv-foundation.org/openaccess/CVPR2016.py&#34;&gt;các bài được accept ở CVPR16&lt;/a&gt;, thế là mình ngồi thống kê vài cái cho vui&lt;/p&gt;
+&lt;p&gt;Hôm nay tình cờ thấy cái link liệt kê &lt;a href=&#34;http://www.cv-foundation.org/openaccess/CVPR2016.py&#34; target=&#34;_blank&#34;&gt;các bài được accept ở CVPR16&lt;/a&gt;, thế là mình ngồi thống kê vài cái cho vui&lt;/p&gt;
 
 &lt;p&gt;Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:&lt;/p&gt;
 
@@ -677,11 +679,11 @@ architecture trong project.&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Bài chỉ có 1 tác giả (một mình chống mafia):&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kobayashi_Structured_Feature_Similarity_CVPR_2016_paper.pdf&#34;&gt;Structured Feature Similarity With Explicit Feature Map&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Qi_Hierarchically_Gated_Deep_CVPR_2016_paper.pdf&#34;&gt;Hierarchically Gated Deep Networks for Semantic Segmentation&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Sekii_Robust_Real-Time_3D_CVPR_2016_paper.pdf&#34;&gt;Robust, Real-Time 3D Tracking of Multiple Objects With Similar Appearances&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Semantic_Filtering_CVPR_2016_paper.pdf&#34;&gt;Semantic Filtering&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://arxiv.org/abs/1603.00560&#34;&gt;Learnt Quasi-Transitive Similarity for Retrieval From Large Collections of Faces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kobayashi_Structured_Feature_Similarity_CVPR_2016_paper.pdf&#34; target=&#34;_blank&#34;&gt;Structured Feature Similarity With Explicit Feature Map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Qi_Hierarchically_Gated_Deep_CVPR_2016_paper.pdf&#34; target=&#34;_blank&#34;&gt;Hierarchically Gated Deep Networks for Semantic Segmentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Sekii_Robust_Real-Time_3D_CVPR_2016_paper.pdf&#34; target=&#34;_blank&#34;&gt;Robust, Real-Time 3D Tracking of Multiple Objects With Similar Appearances&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Semantic_Filtering_CVPR_2016_paper.pdf&#34; target=&#34;_blank&#34;&gt;Semantic Filtering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://arxiv.org/abs/1603.00560&#34; target=&#34;_blank&#34;&gt;Learnt Quasi-Transitive Similarity for Retrieval From Large Collections of Faces&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -696,21 +698,21 @@ architecture trong project.&lt;/p&gt;
 &lt;p&gt;Có &lt;em&gt;1843&lt;/em&gt; tác giả có bài trong CVPR16. Ngoài &lt;em&gt;Ming-Hsuan Yang&lt;/em&gt; bá đạo ở trên, trong danh sách tác giả nhiều bài còn có những cái tên nổi bật như: Pascal Fua, Li Fei-Fei. Dưới đây là danh sách các tác giả có nhiều bài nhất trong CVPR16:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Lei Zhang [&lt;a href=&#34;https://scholar.google.com/citations?user=tAK5l1IAAAAJ&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://www4.comp.polyu.edu.hk/~cslzhang/&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
-&lt;li&gt;In So Kweon [&lt;a href=&#34;https://scholar.google.com.sg/citations?user=XA8EOlEAAAAJ&amp;amp;hl=en&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://rcv.kaist.ac.kr/v2/bbs/member_detail.php?mb_id=%20iskweon&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
-&lt;li&gt;Antonio Torralba [&lt;a href=&#34;https://scholar.google.com/citations?user=8cxDHS4AAAAJ&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://web.mit.edu/torralba/www/&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
-&lt;li&gt;Jiashi Feng [&lt;a href=&#34;https://scholar.google.com.sg/citations?hl=en&amp;amp;user=Q8iay0gAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;https://sites.google.com/site/jshfeng/&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
-&lt;li&gt;Wangmeng Zuo [&lt;a href=&#34;https://scholar.google.com/citations?user=rUOpCEYAAAAJ&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://homepage.hit.edu.cn/pages/wangmengzuo&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
-&lt;li&gt;Anton van den Hengel [&lt;a href=&#34;https://scholar.google.com.sg/citations?user=nMGZ2ZQAAAAJ&amp;amp;hl=en&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;https://cs.adelaide.edu.au/~hengel/&#34;&gt;homepage&lt;/a&gt;]: 8 bài.&lt;/li&gt;
-&lt;li&gt;Bernt Schiele [&lt;a href=&#34;https://scholar.google.com/citations?user=z76PBfYAAAAJ&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/people/bernt-schiele/&#34;&gt;homepage&lt;/a&gt;]: 8 bài.&lt;/li&gt;
-&lt;li&gt;Luc Van Gool [&lt;a href=&#34;https://scholar.google.com.hk/citations?user=TwMib_QAAAAJ&amp;amp;hl=zh-CN&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://www.vision.ee.ethz.ch/~vangool/&#34;&gt;homepage&lt;/a&gt;]: 8 bài.&lt;/li&gt;
-&lt;li&gt;Xiaogang Wang [&lt;a href=&#34;https://scholar.google.com.sg/citations?user=-B5JgjsAAAAJ&amp;amp;hl=en&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://www.ee.cuhk.edu.hk/~xgwang/&#34;&gt;homepage&lt;/a&gt;]: 9 bài.&lt;/li&gt;
-&lt;li&gt;Ming-Hsuan Yang [&lt;a href=&#34;https://scholar.google.com/citations?user=p9-ohHsAAAAJ&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://faculty.ucmerced.edu/mhyang/&#34;&gt;homepage&lt;/a&gt;]: 11 bài.&lt;/li&gt;
+&lt;li&gt;Lei Zhang [&lt;a href=&#34;https://scholar.google.com/citations?user=tAK5l1IAAAAJ&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://www4.comp.polyu.edu.hk/~cslzhang/&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
+&lt;li&gt;In So Kweon [&lt;a href=&#34;https://scholar.google.com.sg/citations?user=XA8EOlEAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://rcv.kaist.ac.kr/v2/bbs/member_detail.php?mb_id=%20iskweon&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
+&lt;li&gt;Antonio Torralba [&lt;a href=&#34;https://scholar.google.com/citations?user=8cxDHS4AAAAJ&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://web.mit.edu/torralba/www/&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
+&lt;li&gt;Jiashi Feng [&lt;a href=&#34;https://scholar.google.com.sg/citations?hl=en&amp;amp;user=Q8iay0gAAAAJ&amp;amp;view_op=list_works&amp;amp;sortby=pubdate&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;https://sites.google.com/site/jshfeng/&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
+&lt;li&gt;Wangmeng Zuo [&lt;a href=&#34;https://scholar.google.com/citations?user=rUOpCEYAAAAJ&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://homepage.hit.edu.cn/pages/wangmengzuo&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 7 bài.&lt;/li&gt;
+&lt;li&gt;Anton van den Hengel [&lt;a href=&#34;https://scholar.google.com.sg/citations?user=nMGZ2ZQAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;https://cs.adelaide.edu.au/~hengel/&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 8 bài.&lt;/li&gt;
+&lt;li&gt;Bernt Schiele [&lt;a href=&#34;https://scholar.google.com/citations?user=z76PBfYAAAAJ&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/people/bernt-schiele/&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 8 bài.&lt;/li&gt;
+&lt;li&gt;Luc Van Gool [&lt;a href=&#34;https://scholar.google.com.hk/citations?user=TwMib_QAAAAJ&amp;amp;hl=zh-CN&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://www.vision.ee.ethz.ch/~vangool/&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 8 bài.&lt;/li&gt;
+&lt;li&gt;Xiaogang Wang [&lt;a href=&#34;https://scholar.google.com.sg/citations?user=-B5JgjsAAAAJ&amp;amp;hl=en&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://www.ee.cuhk.edu.hk/~xgwang/&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 9 bài.&lt;/li&gt;
+&lt;li&gt;Ming-Hsuan Yang [&lt;a href=&#34;https://scholar.google.com/citations?user=p9-ohHsAAAAJ&#34; target=&#34;_blank&#34;&gt;scholar&lt;/a&gt;] [&lt;a href=&#34;http://faculty.ucmerced.edu/mhyang/&#34; target=&#34;_blank&#34;&gt;homepage&lt;/a&gt;]: 11 bài.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Một điểm mình quan tâm nữa là mối quan hệ giữa các tác giả với nhau &lt;del&gt;đó là lí do mình viết: một mình chống mafia ở đoạn trên&lt;/del&gt;. Ở đây mình dùng &lt;code&gt;graph-tool&lt;/code&gt; để minh hoạ data đã thu thập được. Cách xây dựng đồ thị khá đơn giản: những tác giả đứng chung bài với nhau sẽ có cạnh nối với nhau.&lt;/p&gt;
 
-&lt;p&gt;Xưa kia nhà toán học Michael Gurevich đã từng thử điều này với các nhà toán học, và hiện nay bài toán &lt;a href=&#34;https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/&#34;&gt;Six degree of Seperation&lt;/a&gt; đã nổi tiếng và quan tâm nhiều.&lt;/p&gt;
+&lt;p&gt;Xưa kia nhà toán học Michael Gurevich đã từng thử điều này với các nhà toán học, và hiện nay bài toán &lt;a href=&#34;https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/&#34; target=&#34;_blank&#34;&gt;Six degree of Seperation&lt;/a&gt; đã nổi tiếng và quan tâm nhiều.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://i.imgur.com/QIiCNur.png&#34; alt=&#34;Vision Gang&#34; /&gt;&lt;/p&gt;
 
@@ -729,7 +731,7 @@ architecture trong project.&lt;/p&gt;
 &lt;li&gt;Dựa vào nội dung. Cách làm tương đối đơn giản nhưng hơi mất thời gian: (1) download đống paper từ &lt;code&gt;cv-foundation&lt;/code&gt;, (2) dùng &lt;code&gt;pdf2text&lt;/code&gt; lưu text, (3) dùng 1 số thuật toán clustering để phân loại.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Cách thứ (2) tương đối dài hơi nên mình ưu tiên dùng cách thứ (1) trước. Một thuật toán để rút trích keywords khá nổi tiếng là &lt;a href=&#34;https://github.com/aneesha/RAKE/blob/master/rake.py&#34;&gt;RAKE&lt;/a&gt;. Dưới đây là kết quả.&lt;/p&gt;
+&lt;p&gt;Cách thứ (2) tương đối dài hơi nên mình ưu tiên dùng cách thứ (1) trước. Một thuật toán để rút trích keywords khá nổi tiếng là &lt;a href=&#34;https://github.com/aneesha/RAKE/blob/master/rake.py&#34; target=&#34;_blank&#34;&gt;RAKE&lt;/a&gt;. Dưới đây là kết quả.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    deep convolutional neural networks
     convolutional neural networks
@@ -764,10 +766,10 @@ architecture trong project.&lt;/p&gt;
     
     <item>
       <title>Những kênh thông tin công nghệ</title>
-      <link>https://dangkhoasdc.github.io/post/blog/it_news/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/it_news/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/it_news/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/it_news/</guid>
       <description>
 
 &lt;h4 id=&#34;đây-là-một-chủ-đề-được-mình-nói-kha-khá-nhiều-lần-tại-open-talk-ở-trường-đh-tự-nhiên-nói-quá-thôi-chứ-đi-có-2-lần-một-trong-những-thiếu-sót-lớn-của-sinh-viên-cntt-đó-là-không-nắm-kịp-tin-tức-công-nghệ-cũng-như-không-biết-thế-giới-đang-chạy-tới-đâu-rồi-chia-sẻ-dưới-đây-của-mình-chỉ-tập-trung-vào-các-mảng-mình-quan-tâm-nên-dĩ-nhiên-còn-rất-nhiều-thiếu-sót-những-lĩnh-vực-khá-tuy-nhiên-có-thể-tìm-các-kênh-thông-tin-thông-qua-một-số-thủ-thuật-mẹo-vặt&#34;&gt;Đây là một chủ đề được mình nói kha khá nhiều lần tại Open Talk ở trường ĐH Tự Nhiên (nói quá thôi chứ đi có 2 lần). Một trong những thiếu sót lớn của sinh viên CNTT đó là không nắm kịp tin tức công nghệ cũng như không biết thế giới đang chạy tới đâu rồi. Chia sẻ dưới đây của mình chỉ tập trung vào các mảng mình quan tâm nên dĩ nhiên còn rất nhiều thiếu sót những lĩnh vực khá. Tuy nhiên, có thể tìm các kênh thông tin thông qua một số thủ thuật, mẹo vặt.&lt;/h4&gt;
@@ -776,64 +778,64 @@ architecture trong project.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://cdn.meme.am/instances/58698551.jpg&#34; alt=&#34;Barcamp: best place for getting gifts and clothes&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Dĩ nhiên là trừ mấy hội thảo Đa Cấp. Theo như kinh nghiệm lặn lội 4 năm ở giảng đường đại học, kinh qua không biết bao nhiêu hội thảo của IBM, M$, Nokia, blah blah. Mình vẫn còn ấn tượng lần đầu tiên hồi năm 1 đi dự buổi training về công nghệ Cloud của IBM, nhờ buổi đó mà đi về mình chả biết thêm gì cả. Nhưng vẫn còn nhớ cái cảnh xuống xe số 6 chỗ đường Sư Vạn Hạnh giao với An Dương Vương và đi bộ mệt nghỉ tới trường Ngoại Ngữ Tin Học . Buổi thứ hai là khi tham dự buổi phát động Imaging Cup. Phải công nhận buổi đó rất ấn tượng và khiến mình có động lực làm đại sứ Microsoft: &lt;a href=&#34;http://www.microsoft.com/vietnam/student/introduction.aspx&#34;&gt;Microsoft Student Partner&lt;/a&gt;. Dù đã có cố gắng tham gia hồi năm 2, năm 3 gì đó nhưng bất thành. Không liên quan nhưng 1 thằng bạn trong lớp sau này thành MSP. Đến năm hai thì đi nhiều hơn, máu hơn, dù đôi lúc ngồi bên trong chả biết thiên hạ nói gì, nhưng quan trọng mình cũng định hình được chuyện gì đang xảy ra với làng công nghệ.&lt;/p&gt;
+&lt;p&gt;Dĩ nhiên là trừ mấy hội thảo Đa Cấp. Theo như kinh nghiệm lặn lội 4 năm ở giảng đường đại học, kinh qua không biết bao nhiêu hội thảo của IBM, M$, Nokia, blah blah. Mình vẫn còn ấn tượng lần đầu tiên hồi năm 1 đi dự buổi training về công nghệ Cloud của IBM, nhờ buổi đó mà đi về mình chả biết thêm gì cả. Nhưng vẫn còn nhớ cái cảnh xuống xe số 6 chỗ đường Sư Vạn Hạnh giao với An Dương Vương và đi bộ mệt nghỉ tới trường Ngoại Ngữ Tin Học . Buổi thứ hai là khi tham dự buổi phát động Imaging Cup. Phải công nhận buổi đó rất ấn tượng và khiến mình có động lực làm đại sứ Microsoft: &lt;a href=&#34;http://www.microsoft.com/vietnam/student/introduction.aspx&#34; target=&#34;_blank&#34;&gt;Microsoft Student Partner&lt;/a&gt;. Dù đã có cố gắng tham gia hồi năm 2, năm 3 gì đó nhưng bất thành. Không liên quan nhưng 1 thằng bạn trong lớp sau này thành MSP. Đến năm hai thì đi nhiều hơn, máu hơn, dù đôi lúc ngồi bên trong chả biết thiên hạ nói gì, nhưng quan trọng mình cũng định hình được chuyện gì đang xảy ra với làng công nghệ.&lt;/p&gt;
 
 &lt;p&gt;Một số hội thảo khá hay ho ở TP.Hồ Chí Minh có thể kể đến như:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/BarCampSaigon&#34;&gt;Barcamp&lt;/a&gt;: Phải đi vì là nơi qui tụ các thánh, ăn buffet được tặng áo. blah blah, đây cũng là event công nghệ khá lớn.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/MicrosoftDeveloper.Vietnam&#34;&gt;Các buổi training của Microsoft&lt;/a&gt;: tập trung vào công nghệ của Microsoft.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/BarCampSaigon&#34; target=&#34;_blank&#34;&gt;Barcamp&lt;/a&gt;: Phải đi vì là nơi qui tụ các thánh, ăn buffet được tặng áo. blah blah, đây cũng là event công nghệ khá lớn.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/MicrosoftDeveloper.Vietnam&#34; target=&#34;_blank&#34;&gt;Các buổi training của Microsoft&lt;/a&gt;: tập trung vào công nghệ của Microsoft.&lt;/li&gt;
 &lt;li&gt;Google Developer Group: buổi ra mắt năm 2013 cực kì hoành tráng. Nhưng rồi có vẻ hơi chìm dần, nhưng nghe đồn đâu vẫn còn hoạt động.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.meetup.com/&#34;&gt;Các nhóm lập trình trên MeetUp&lt;/a&gt;: Có thấy group về Javascript và PHP hoạt động khá dữ dội trên này.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.meetup.com/&#34; target=&#34;_blank&#34;&gt;Các nhóm lập trình trên MeetUp&lt;/a&gt;: Có thấy group về Javascript và PHP hoạt động khá dữ dội trên này.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;reddit&#34;&gt;Reddit&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://wp.streetwise.co/wp-content/uploads//2014/08/Reddit.png&#34; alt=&#34;Reddit&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Thật khó để nói Reddit là mạng xã hội như thế nào. Có thể hiểu đây là một hình thái của &lt;a href=&#34;http://vozforums.com/forumdisplay.php?f=17&#34;&gt;Voz&lt;/a&gt; hay Webtretho phiên bản nước ngoài, tuy nhiên tầm hoạt động cũng như các chủ đề vô cùng rộng lớn. Có rất nhiều diễn đàn con trong này là những chia sẻ về công nghệ rất đáng quan tâm. Chỉ cần tạo một nick và subcribe những chủ đề mình thích, mỗi ngày sẽ có hàng tá thông tin hay ho. Ngoài ra, việc đọc bài trên Reddit còn giúp luyện tiếng Anh (chủ yếu slang và idiom ) cũng như học hỏi được từ các thành viên khác.&lt;/p&gt;
+&lt;p&gt;Thật khó để nói Reddit là mạng xã hội như thế nào. Có thể hiểu đây là một hình thái của &lt;a href=&#34;http://vozforums.com/forumdisplay.php?f=17&#34; target=&#34;_blank&#34;&gt;Voz&lt;/a&gt; hay Webtretho phiên bản nước ngoài, tuy nhiên tầm hoạt động cũng như các chủ đề vô cùng rộng lớn. Có rất nhiều diễn đàn con trong này là những chia sẻ về công nghệ rất đáng quan tâm. Chỉ cần tạo một nick và subcribe những chủ đề mình thích, mỗi ngày sẽ có hàng tá thông tin hay ho. Ngoài ra, việc đọc bài trên Reddit còn giúp luyện tiếng Anh (chủ yếu slang và idiom ) cũng như học hỏi được từ các thành viên khác.&lt;/p&gt;
 
 &lt;p&gt;Một số trang tiêu biểu mình follows:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/programming&#34;&gt;/r/programming&lt;/a&gt;: trang này hầu như cập nhật những tin mới nhất về lập trình. Nhảm hài hay nghiêm túc đều có.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/dailyprogrammer/&#34;&gt;/r/dailyprogramming&lt;/a&gt;: coding mỗi ngày. Trang này rất hay để mỗi ngày tập code một tí.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/coding&#34;&gt;/r/coding&lt;/a&gt;: thuần tuý về coding.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/compsci&#34;&gt;/r/compsci&lt;/a&gt;: tin tức trong lĩnh vực Khoa Học Máy Tính.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/webdev&#34;&gt;/r/webdev&lt;/a&gt;: subreddit dành cho dân phát triển website.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/machinelearning&#34;&gt;/r/machinelearning&lt;/a&gt;: Máy Học và các vấn đề liên quan.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/vim&#34;&gt;/r/vim&lt;/a&gt;: editor ưu thích.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/programmingchallenges&#34;&gt;/r/programmingchallenges&lt;/a&gt;: dành cho những thánh code.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/cpp&#34;&gt;/r/cpp&lt;/a&gt;: ngôn ngữ C++ thần thánh.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/javascript&#34;&gt;/r/javascript&lt;/a&gt;: trang tin về javascript.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/ProgrammerHumor/top/&#34;&gt;/r/ProgrammerHumor&lt;/a&gt;: Hài hước theo cách của tụi lập trình viên.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/programming&#34; target=&#34;_blank&#34;&gt;/r/programming&lt;/a&gt;: trang này hầu như cập nhật những tin mới nhất về lập trình. Nhảm hài hay nghiêm túc đều có.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/dailyprogrammer/&#34; target=&#34;_blank&#34;&gt;/r/dailyprogramming&lt;/a&gt;: coding mỗi ngày. Trang này rất hay để mỗi ngày tập code một tí.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/coding&#34; target=&#34;_blank&#34;&gt;/r/coding&lt;/a&gt;: thuần tuý về coding.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/compsci&#34; target=&#34;_blank&#34;&gt;/r/compsci&lt;/a&gt;: tin tức trong lĩnh vực Khoa Học Máy Tính.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/webdev&#34; target=&#34;_blank&#34;&gt;/r/webdev&lt;/a&gt;: subreddit dành cho dân phát triển website.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/machinelearning&#34; target=&#34;_blank&#34;&gt;/r/machinelearning&lt;/a&gt;: Máy Học và các vấn đề liên quan.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/vim&#34; target=&#34;_blank&#34;&gt;/r/vim&lt;/a&gt;: editor ưu thích.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/programmingchallenges&#34; target=&#34;_blank&#34;&gt;/r/programmingchallenges&lt;/a&gt;: dành cho những thánh code.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/cpp&#34; target=&#34;_blank&#34;&gt;/r/cpp&lt;/a&gt;: ngôn ngữ C++ thần thánh.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/javascript&#34; target=&#34;_blank&#34;&gt;/r/javascript&lt;/a&gt;: trang tin về javascript.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/ProgrammerHumor/top/&#34; target=&#34;_blank&#34;&gt;/r/ProgrammerHumor&lt;/a&gt;: Hài hước theo cách của tụi lập trình viên.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;trang-tin-công-nghệ&#34;&gt;Trang tin công nghệ&lt;/h2&gt;
 
-&lt;p&gt;Hiện nay có rất nhiều trang thông tin công nghệ có thể theo dõi, ở trong Việt Nam thì mình thấy có một số trang khá hay ho đến từ các tổ chức, công ty. Có thể kể đến như của &lt;a href=&#34;http://blog.siliconstraits.vn/&#34;&gt;Silicon Strait Saigon&lt;/a&gt; trang này chuyên tin về iOS, Web và Design, chất lượng bài viết khá tốt. &lt;a href=&#34;https://tinhte.vn/&#34;&gt;TinhTe.vn&lt;/a&gt; cập nhật các tin tức liên quan đến công nghệ, có cả máy ảnh, xe cộ, blah blah. Tuy nhiên điểm mình không hài lòng đó là chất lượng bài viết không quá tốt, không đào sâu, đặc biệt liên quan đến các chủ đề lập trình hay khoa học máy tính, tốt nhất là đọc để biết tin tức thế nào. Một phần nữa users thành phần trẻ trâu nhiều, hàm lượng thông tin chả có bao. &lt;a href=&#34;http://vinacode.net/&#34;&gt;VinaCode&lt;/a&gt; cũng là một trong những trang chăm chỉ cập nhật bài viết, chủ yếu dịch từ nước ngoài, nhưng có gọi là có đầu tư. Một trang khác đó là &lt;a href=&#34;http://blog.itviec.com/&#34;&gt;ITViec&lt;/a&gt;: rất nhiều thông tin bổ ích để xây dựng thương hiệu bản thân, mình cũng thấy chất lượng dịch thuật ở đây khá là chất.&lt;/p&gt;
+&lt;p&gt;Hiện nay có rất nhiều trang thông tin công nghệ có thể theo dõi, ở trong Việt Nam thì mình thấy có một số trang khá hay ho đến từ các tổ chức, công ty. Có thể kể đến như của &lt;a href=&#34;http://blog.siliconstraits.vn/&#34; target=&#34;_blank&#34;&gt;Silicon Strait Saigon&lt;/a&gt; trang này chuyên tin về iOS, Web và Design, chất lượng bài viết khá tốt. &lt;a href=&#34;https://tinhte.vn/&#34; target=&#34;_blank&#34;&gt;TinhTe.vn&lt;/a&gt; cập nhật các tin tức liên quan đến công nghệ, có cả máy ảnh, xe cộ, blah blah. Tuy nhiên điểm mình không hài lòng đó là chất lượng bài viết không quá tốt, không đào sâu, đặc biệt liên quan đến các chủ đề lập trình hay khoa học máy tính, tốt nhất là đọc để biết tin tức thế nào. Một phần nữa users thành phần trẻ trâu nhiều, hàm lượng thông tin chả có bao. &lt;a href=&#34;http://vinacode.net/&#34; target=&#34;_blank&#34;&gt;VinaCode&lt;/a&gt; cũng là một trong những trang chăm chỉ cập nhật bài viết, chủ yếu dịch từ nước ngoài, nhưng có gọi là có đầu tư. Một trang khác đó là &lt;a href=&#34;http://blog.itviec.com/&#34; target=&#34;_blank&#34;&gt;ITViec&lt;/a&gt;: rất nhiều thông tin bổ ích để xây dựng thương hiệu bản thân, mình cũng thấy chất lượng dịch thuật ở đây khá là chất.&lt;/p&gt;
 
-&lt;p&gt;Một trang mới nổi hiện nay là &lt;a href=&#34;http://recode.net/&#34;&gt;Re/Code&lt;/a&gt;: trang này cập nhật các thông tin công nghệ rất hay, bài viết cũng chất lượng.&lt;/p&gt;
+&lt;p&gt;Một trang mới nổi hiện nay là &lt;a href=&#34;http://recode.net/&#34; target=&#34;_blank&#34;&gt;Re/Code&lt;/a&gt;: trang này cập nhật các thông tin công nghệ rất hay, bài viết cũng chất lượng.&lt;/p&gt;
 
 &lt;p&gt;Một số trang cũng hay follow như:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.theverge.com/&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://mashable.com/&#34;&gt;The Mashable&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.quora.com/&#34;&gt;Quora&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.theverge.com/&#34; target=&#34;_blank&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://mashable.com/&#34; target=&#34;_blank&#34;&gt;The Mashable&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.quora.com/&#34; target=&#34;_blank&#34;&gt;Quora&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;đứng-trên-vai-người-khổng-lồ&#34;&gt;Đứng trên vai người khổng lồ&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&#34;https://wallpaperscraft.com/image/titanium_kousen_yasuo_art_mikasa_ackerman_girl_94711_640x1136.jpg&#34; alt=&#34;You know what I mean. btw, I love Mikasa&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Mình rất thích vế này. Những người đầu ngành, nhất là về lĩnh vực Công Nghệ thì thường hay chia sẻ tin tức, quan điểm, sản phẩm của mình ở các trang xã hội như Facebook, G+ (có khá nhiều giáo sư đầu ngành xài mạng này) và Twitter, một số khác còn dùng trang cá nhân (homepage) hay blog để chia sẻ kiến thức nữa. Ở Việt Nam mình thích nhất &lt;a href=&#34;http://www.procul.org/blog/&#34;&gt;trang của các bậc tiền bối&lt;/a&gt;, bài viết rất chất lượng và có tính chuyên sâu. Nếu quan tâm đến máy học và các vấn đề về thị giác máy tính có thể quan tâm, theo dõi trang cá nhân của các nhân vật lừng lẫy sau:&lt;/p&gt;
+&lt;p&gt;Mình rất thích vế này. Những người đầu ngành, nhất là về lĩnh vực Công Nghệ thì thường hay chia sẻ tin tức, quan điểm, sản phẩm của mình ở các trang xã hội như Facebook, G+ (có khá nhiều giáo sư đầu ngành xài mạng này) và Twitter, một số khác còn dùng trang cá nhân (homepage) hay blog để chia sẻ kiến thức nữa. Ở Việt Nam mình thích nhất &lt;a href=&#34;http://www.procul.org/blog/&#34; target=&#34;_blank&#34;&gt;trang của các bậc tiền bối&lt;/a&gt;, bài viết rất chất lượng và có tính chuyên sâu. Nếu quan tâm đến máy học và các vấn đề về thị giác máy tính có thể quan tâm, theo dõi trang cá nhân của các nhân vật lừng lẫy sau:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/andrew.ng.96&#34;&gt;Andrew Ng.&lt;/a&gt;: không cần nói cũng biết là ai.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/yann.lecun&#34;&gt;Yann LeCun&lt;/a&gt;: Trưởng điều hành bộ phận AI Facebook Research.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://plus.google.com/+LinusTorvalds&#34;&gt;Linus Tovalds&lt;/a&gt;: cha để Linux.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://research.facebook.com/&#34;&gt;Facebook Research&lt;/a&gt;: Cập nhật các công trình nghiên cứu của Facebook.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/andrew.ng.96&#34; target=&#34;_blank&#34;&gt;Andrew Ng.&lt;/a&gt;: không cần nói cũng biết là ai.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/yann.lecun&#34; target=&#34;_blank&#34;&gt;Yann LeCun&lt;/a&gt;: Trưởng điều hành bộ phận AI Facebook Research.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://plus.google.com/+LinusTorvalds&#34; target=&#34;_blank&#34;&gt;Linus Tovalds&lt;/a&gt;: cha để Linux.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://research.facebook.com/&#34; target=&#34;_blank&#34;&gt;Facebook Research&lt;/a&gt;: Cập nhật các công trình nghiên cứu của Facebook.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Còn rất nhiều bậc cao nhân khác nữa. Đọc và tìm hiểu quan điểm về công nghệ của họ là một cách tốt nhất nâng cao hiểu biết của mình.&lt;/p&gt;
@@ -842,35 +844,35 @@ architecture trong project.&lt;/p&gt;
 
 &lt;p&gt;Điểm khác biệt của blog là mang nhiều ý kiến chủ quan của người viết hơn, giọng văn và cách hành ngôn cũng cá nhân hoá hơn. Thông thường các bài viết ở đây khá vui và độc đáo, thực sự mình thích đọc bên blog nhiều hơn, phần nào đó thể hiện được quan điểm của tác giả, bài viết thường có đầu tư và chuyên sâu vào một mảng nào đó.&lt;/p&gt;
 
-&lt;p&gt;Về mảng Thị Giác Máy Tính có &lt;a href=&#34;http://www.computervisionblog.com/&#34;&gt;Computervision blog&lt;/a&gt; - bài viết rất chất.&lt;/p&gt;
+&lt;p&gt;Về mảng Thị Giác Máy Tính có &lt;a href=&#34;http://www.computervisionblog.com/&#34; target=&#34;_blank&#34;&gt;Computervision blog&lt;/a&gt; - bài viết rất chất.&lt;/p&gt;
 
-&lt;p&gt;Có khá nhiều trang blog kinh điển của mà hầu như mọi programmer đều biết. Có thể kể đến như (1): &lt;a href=&#34;http://blog.codinghorror.com/&#34;&gt;Coding Horror&lt;/a&gt;: đọc bài trong này level về công nghệ phần nào tăng lên rõ rệt.&lt;/p&gt;
+&lt;p&gt;Có khá nhiều trang blog kinh điển của mà hầu như mọi programmer đều biết. Có thể kể đến như (1): &lt;a href=&#34;http://blog.codinghorror.com/&#34; target=&#34;_blank&#34;&gt;Coding Horror&lt;/a&gt;: đọc bài trong này level về công nghệ phần nào tăng lên rõ rệt.&lt;/p&gt;
 
-&lt;p&gt;Một thánh nữa mà ngày xưa mình rất hay theo dõi khi còn xài Windows và code C# đó là &lt;a href=&#34;http://www.hanselman.com/blog/&#34;&gt;Hanselman&lt;/a&gt;. Ngày xưa biết đến thánh nhờ bài viết &lt;a href=&#34;http://www.hanselman.com/blog/ScottHanselmans2014UltimateDeveloperAndPowerUsersToolListForWindows.aspx&#34;&gt;các công cụ dành cho dev&lt;/a&gt;,&lt;/p&gt;
+&lt;p&gt;Một thánh nữa mà ngày xưa mình rất hay theo dõi khi còn xài Windows và code C# đó là &lt;a href=&#34;http://www.hanselman.com/blog/&#34; target=&#34;_blank&#34;&gt;Hanselman&lt;/a&gt;. Ngày xưa biết đến thánh nhờ bài viết &lt;a href=&#34;http://www.hanselman.com/blog/ScottHanselmans2014UltimateDeveloperAndPowerUsersToolListForWindows.aspx&#34; target=&#34;_blank&#34;&gt;các công cụ dành cho dev&lt;/a&gt;,&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://jeremykun.com/&#34;&gt;Jeremykun&lt;/a&gt;: những bài viết là sự kết hợp tuyệt vời của toán học và lập trình, rất đáng để dành thời gian đọc.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://jeremykun.com/&#34; target=&#34;_blank&#34;&gt;Jeremykun&lt;/a&gt;: những bài viết là sự kết hợp tuyệt vời của toán học và lập trình, rất đáng để dành thời gian đọc.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://thecodelesscode.com/contents&#34;&gt;Codeless code&lt;/a&gt;: trang này viết theo kiểu “khó-hiểu-như-trong-kinh-thánh”, độ giải trí và suy ngẫm rất cao.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://thecodelesscode.com/contents&#34; target=&#34;_blank&#34;&gt;Codeless code&lt;/a&gt;: trang này viết theo kiểu “khó-hiểu-như-trong-kinh-thánh”, độ giải trí và suy ngẫm rất cao.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://lambda-the-ultimate.org/&#34;&gt;Programming Languages weblog&lt;/a&gt;: trang này thì quá nổi tiếng rồi.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://lambda-the-ultimate.org/&#34; target=&#34;_blank&#34;&gt;Programming Languages weblog&lt;/a&gt;: trang này thì quá nổi tiếng rồi.&lt;/p&gt;
 
 &lt;p&gt;Một số chuyên sâu hơn về các kỹ thuật trong lập trình, mình chỉ khoái mỗi C++ và Python, theo mình một số trang sau khá là hay:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.jetbrains.com/clion/&#34;&gt;CLion blog&lt;/a&gt;: Các tin tức liên quan đến C++.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://cpphints.com/&#34;&gt;Cpp Hints&lt;/a&gt;: Phân tích các lỗi trong các dự án mã nguồn mở sử dụng C++.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/MeetingCpp?fref=nf&#34;&gt;Meeting Cpp&lt;/a&gt;: cập nhật các bài viết về C++.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.pycoders.com/&#34;&gt;Pycoder&lt;/a&gt;: cuối thứ 6 nào cũng dành thời gian đọc tin. Mục tiêu là trở thành Full Stack Devloper mà lị.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://javascriptweekly.com/&#34;&gt;Javascript Weekly&lt;/a&gt;: trang này rất giàu thông tin, tuần nào cũng cập nhật về các tin tức liên quan đến Javascript và web dev.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://blog.jetbrains.com/clion/&#34; target=&#34;_blank&#34;&gt;CLion blog&lt;/a&gt;: Các tin tức liên quan đến C++.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://cpphints.com/&#34; target=&#34;_blank&#34;&gt;Cpp Hints&lt;/a&gt;: Phân tích các lỗi trong các dự án mã nguồn mở sử dụng C++.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/MeetingCpp?fref=nf&#34; target=&#34;_blank&#34;&gt;Meeting Cpp&lt;/a&gt;: cập nhật các bài viết về C++.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.pycoders.com/&#34; target=&#34;_blank&#34;&gt;Pycoder&lt;/a&gt;: cuối thứ 6 nào cũng dành thời gian đọc tin. Mục tiêu là trở thành Full Stack Devloper mà lị.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://javascriptweekly.com/&#34; target=&#34;_blank&#34;&gt;Javascript Weekly&lt;/a&gt;: trang này rất giàu thông tin, tuần nào cũng cập nhật về các tin tức liên quan đến Javascript và web dev.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Một số blog của các cao thủ võ lâm ở Việt Nam cũng thường xuyên cập nhật công nghệ và các kỹ thuật mới. Blog của &lt;a href=&#34;http://www.quan404.com/&#34;&gt;Quan 404&lt;/a&gt; là một site điển hình. Tuy trang này khá mới, nhưng những bài viết khá là chất và bám sát các công nghệ hiện là state-of-the-art.&lt;/p&gt;
+&lt;p&gt;Một số blog của các cao thủ võ lâm ở Việt Nam cũng thường xuyên cập nhật công nghệ và các kỹ thuật mới. Blog của &lt;a href=&#34;http://www.quan404.com/&#34; target=&#34;_blank&#34;&gt;Quan 404&lt;/a&gt; là một site điển hình. Tuy trang này khá mới, nhưng những bài viết khá là chất và bám sát các công nghệ hiện là state-of-the-art.&lt;/p&gt;
 
 &lt;p&gt;Một số trang khá là vui mà mình cũng hay follow:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://xkcd.com/&#34;&gt;XKCD&lt;/a&gt;: đơn giản đó là những gì lãng mạn, châm biếm, toán học và ngôn ngữ. Comic có vài hình mà độ hại não cao.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://phdcomics.com/comics.php&#34;&gt;PHD Comics&lt;/a&gt;: ai làm research nhiều sẽ thấu hiểu những gì mà comic này đề cập, rất hài hước.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://xkcd.com/&#34; target=&#34;_blank&#34;&gt;XKCD&lt;/a&gt;: đơn giản đó là những gì lãng mạn, châm biếm, toán học và ngôn ngữ. Comic có vài hình mà độ hại não cao.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://phdcomics.com/comics.php&#34; target=&#34;_blank&#34;&gt;PHD Comics&lt;/a&gt;: ai làm research nhiều sẽ thấu hiểu những gì mà comic này đề cập, rất hài hước.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h2 id=&#34;tổng-kết&#34;&gt;Tổng kết&lt;/h2&gt;
@@ -883,10 +885,10 @@ architecture trong project.&lt;/p&gt;
     
     <item>
       <title>Quy Trình Xin Tài Trợ NAFOSTED</title>
-      <link>https://dangkhoasdc.github.io/post/blog/nafosted_travel_fund/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/nafosted_travel_fund/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/nafosted_travel_fund/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/nafosted_travel_fund/</guid>
       <description>
 
 &lt;p&gt;&lt;div class=&#34;entry&#34;&gt;&lt;/p&gt;
@@ -919,7 +921,7 @@ architecture trong project.&lt;/p&gt;
 
 &lt;p&gt;Tất cả tài liệu này phải được điền đầy đủ, có chữ ký của cá nhân và xác nhận của cơ quan đang làm việc/học tập, sau đó gửi đường bưu chính đến địa chỉ: &lt;strong&gt;Tầng 4, Số 39 Trần Hưng Đạo, P. Hàng Bài, Q. Hoàn Kiếm, Hà Nội.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Các tài liệu (1), (5) và (6) có &lt;a href=&#34;http://www.nafosted.gov.vn/vi/chuong-trinh-tai-tro/Ho-tro-nghien-cuu-khoa-hoc/Chuong-trinh-ho-tro-nghien-cuu-khoa-hoc-1/&#34;&gt;mẫu từ website chính thức của Quỹ&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Các tài liệu (1), (5) và (6) có &lt;a href=&#34;http://www.nafosted.gov.vn/vi/chuong-trinh-tai-tro/Ho-tro-nghien-cuu-khoa-hoc/Chuong-trinh-ho-tro-nghien-cuu-khoa-hoc-1/&#34; target=&#34;_blank&#34;&gt;mẫu từ website chính thức của Quỹ&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Tài liệu (3): trong thư mời phải đề cập rõ ràng đây công trình khoa học được công bố dạng báo cáo, không phải dạng poster. Quỹ còn bắt buộc trong thư mời phải đề cập đến chi tiết &lt;strong&gt;oral presentation&lt;/strong&gt;.&lt;/p&gt;
 
@@ -955,21 +957,21 @@ architecture trong project.&lt;/p&gt;
 &lt;h2 id=&#34;nguồn-tham-khảo&#34;&gt;Nguồn tham khảo&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.nafosted.gov.vn/vi/chuong-trinh-tai-tro/Ho-tro-nghien-cuu-khoa-hoc/Chuong-trinh-ho-tro-nghien-cuu-khoa-hoc-1/&#34;&gt;NAFOSTED&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.moit.gov.vn/vn/pages/VanBanDieuHanh.aspx?TypeVB=1&amp;amp;vID=11930&#34;&gt;Thông tư 102/2012/TT-BTC&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.nafosted.gov.vn/vi/chuong-trinh-tai-tro/Ho-tro-nghien-cuu-khoa-hoc/Chuong-trinh-ho-tro-nghien-cuu-khoa-hoc-1/&#34; target=&#34;_blank&#34;&gt;NAFOSTED&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.moit.gov.vn/vn/pages/VanBanDieuHanh.aspx?TypeVB=1&amp;amp;vID=11930&#34; target=&#34;_blank&#34;&gt;Thông tư 102/2012/TT-BTC&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
     
     <item>
       <title>Review Refactoring</title>
-      <link>https://dangkhoasdc.github.io/post/blog/refactoring-review/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/refactoring-review/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/refactoring-review/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/refactoring-review/</guid>
       <description>
 
-&lt;p&gt;Mình quyết định đọc cuốn &lt;a href=&#34;https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672&#34;&gt;Refactoring: Improving the Design of Existing Code&lt;/a&gt; sau khi đọc xong cuốn &lt;em&gt;Design Pattern&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Mình quyết định đọc cuốn &lt;a href=&#34;https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672&#34; target=&#34;_blank&#34;&gt;Refactoring: Improving the Design of Existing Code&lt;/a&gt; sau khi đọc xong cuốn &lt;em&gt;Design Pattern&lt;/em&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;sơ-lược&#34;&gt;Sơ lược&lt;/h1&gt;
 
@@ -1053,49 +1055,49 @@ architecture trong project.&lt;/p&gt;
     
     <item>
       <title>Review Start Wars series</title>
-      <link>https://dangkhoasdc.github.io/post/blog/startwars-series-review/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/startwars-series-review/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/startwars-series-review/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/startwars-series-review/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://www.blastr.com/sites/blastr/files/star_wars_vii-02.jpg&#34; alt=&#34;Star Wars: Biểu tượng của văn hoá POP&#34; /&gt; Mình đã giành một ngày cuối tuần và dịp nghỉ lễ để ngồi xem 3 phần của Star Wars: 4, 5 và 6. Đánh giá sơ bộ về bộ phim thì nếu đặt bản thân vào thời điểm bộ phim được ra mắt thì đúng là một kiệt tác. Giờ mình xem vẫn còn rất ấn tượng với kĩ xảo được thực hiện trong phim. Theo như mình biết về 3D và các hiệu ứng hình ảnh vào thời điểm đó để dựng nên những mô hình 3D phi thuyền hay các loài ở các hành tinh là điều không thể. Và đúng như vậy, hầu hết các &lt;a href=&#34;https://www.youtube.com/watch?v=mIlYk7KQe-s&#34;&gt;hiệu ứng hình ảnh không đến từ đồ hoạ máy tính&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://www.blastr.com/sites/blastr/files/star_wars_vii-02.jpg&#34; alt=&#34;Star Wars: Biểu tượng của văn hoá POP&#34; /&gt; Mình đã giành một ngày cuối tuần và dịp nghỉ lễ để ngồi xem 3 phần của Star Wars: 4, 5 và 6. Đánh giá sơ bộ về bộ phim thì nếu đặt bản thân vào thời điểm bộ phim được ra mắt thì đúng là một kiệt tác. Giờ mình xem vẫn còn rất ấn tượng với kĩ xảo được thực hiện trong phim. Theo như mình biết về 3D và các hiệu ứng hình ảnh vào thời điểm đó để dựng nên những mô hình 3D phi thuyền hay các loài ở các hành tinh là điều không thể. Và đúng như vậy, hầu hết các &lt;a href=&#34;https://www.youtube.com/watch?v=mIlYk7KQe-s&#34; target=&#34;_blank&#34;&gt;hiệu ứng hình ảnh không đến từ đồ hoạ máy tính&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h1 id=&#34;cốt-truyện&#34;&gt;Cốt truyện&lt;/h1&gt;
 
 &lt;p&gt;Cốt truyện của Star wars thực sự không quá hại não, kết cấu chặt chẽ với tình tiết trong phim luôn diễn ra liên tục khiến người xem hồi hộp theo dõi theo cuộc hành trình của các nhân vật. Tuy nhiên vì series này được sản xuất khá là lâu nên tốc độ phim tương đối chậm, đôi lúc dễ bị mất tập trung, nhưng nhìn chung rất cuốn hút. Mình nghĩ đây cũng là một điểm mạnh khiến cho bộ phim được cuồng đến vậy. Nội dung khó quá phức tạp và dành cho mọi lứa tuổi nên dễ đi vào lòng người. Kết hợp với các yếu tố giả tưởng, khoa học thì Star Wars xứng đáng là một hiện tượng của văn hoá Pop.&lt;/p&gt;
 
-&lt;p&gt;Một điểm mạnh của dòng phim này có lẽ là việc &lt;a href=&#34;https://www.pinterest.com/visualoop/star-wars-infographics/&#34;&gt;xây dựng vũ trụ&lt;/a&gt; với việc xây dựng câu chuyện là cuộc chiến trong toàn cõi thiên hà của bên Kháng Chiến chống lại Đế Quốc, người viết truyện và cả khán giả tha hồ chìm đắm vào trong thế giới sci-fi đầy mê hoặc này. Và như vậy sự phức tạp trong hệ thống hành tinh, thể chế, cuộc sống ở mỗi hệ thiên hà cũng vì thế trở nên đa dạng. Thử so sánh với một dòng &lt;em&gt;chiến tranh vũ trụ&lt;/em&gt; mà mình rất thích là StarCraft thì SC thì mới là câu chuyện xoay quanh &lt;a href=&#34;http://sea.battle.net/sc2/en/game/planet/&#34;&gt;khu vực Koprulu&lt;/a&gt; và ba chủng tộc chính Terran, Zerg và Protoss. Trong khi đó trong 3 bộ phim Star Wars là ta đã thấy bao nhiêu chủng tộc với biết bao điều lý thú.&lt;/p&gt;
+&lt;p&gt;Một điểm mạnh của dòng phim này có lẽ là việc &lt;a href=&#34;https://www.pinterest.com/visualoop/star-wars-infographics/&#34; target=&#34;_blank&#34;&gt;xây dựng vũ trụ&lt;/a&gt; với việc xây dựng câu chuyện là cuộc chiến trong toàn cõi thiên hà của bên Kháng Chiến chống lại Đế Quốc, người viết truyện và cả khán giả tha hồ chìm đắm vào trong thế giới sci-fi đầy mê hoặc này. Và như vậy sự phức tạp trong hệ thống hành tinh, thể chế, cuộc sống ở mỗi hệ thiên hà cũng vì thế trở nên đa dạng. Thử so sánh với một dòng &lt;em&gt;chiến tranh vũ trụ&lt;/em&gt; mà mình rất thích là StarCraft thì SC thì mới là câu chuyện xoay quanh &lt;a href=&#34;http://sea.battle.net/sc2/en/game/planet/&#34; target=&#34;_blank&#34;&gt;khu vực Koprulu&lt;/a&gt; và ba chủng tộc chính Terran, Zerg và Protoss. Trong khi đó trong 3 bộ phim Star Wars là ta đã thấy bao nhiêu chủng tộc với biết bao điều lý thú.&lt;/p&gt;
 
 &lt;h1 id=&#34;nhân-vật&#34;&gt;Nhân Vật&lt;/h1&gt;
 
-&lt;p&gt;Mình không thích đồng chí Luke, hoặc cũng có thể là do mình đã thấy rất nhiều nhân vật có cốt truyện na ná giống giống ở khắp các thế giới tưởng tượng như Frodo trong Chúa Tể Những Chiếc Nhẫn, Harry Potter… trong thần thoại Hy Lạp và của trong Dune (sẵn tiện Star Wars lấy cảm hứng từ Dune) thành thử ra mình không bất ngờ lắm với độ trẻ trâu của nhân vật và được buff niềm tin như vậy. Sẵn bàn về những hero, thực ra những hero này luôn có một &lt;em&gt;công thức&lt;/em&gt; được &lt;a href=&#34;https://www.youtube.com/watch?v=Hhk4N9A0oCA&#34;&gt;xây dựng và một mẫu hình chung&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mình không thích đồng chí Luke, hoặc cũng có thể là do mình đã thấy rất nhiều nhân vật có cốt truyện na ná giống giống ở khắp các thế giới tưởng tượng như Frodo trong Chúa Tể Những Chiếc Nhẫn, Harry Potter… trong thần thoại Hy Lạp và của trong Dune (sẵn tiện Star Wars lấy cảm hứng từ Dune) thành thử ra mình không bất ngờ lắm với độ trẻ trâu của nhân vật và được buff niềm tin như vậy. Sẵn bàn về những hero, thực ra những hero này luôn có một &lt;em&gt;công thức&lt;/em&gt; được &lt;a href=&#34;https://www.youtube.com/watch?v=Hhk4N9A0oCA&#34; target=&#34;_blank&#34;&gt;xây dựng và một mẫu hình chung&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://www.themarysue.com/wp-content/uploads/2015/03/leia.jpg&#34; alt=&#34;Công chúa Leia&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Trong khi đó mình rất thích thích công chúa Leia và Han Solo. Và mình cá là những thánh cuồng scifi, thể loại viễn tưởng phiêu lưu thì Leia là mẫu con gái trong mộng. Một minh chứng rõ ràng còn ảnh hưởng cả đến văn hoá Pop là anh Ross nhà ta còn nói bạn gái mặc bộ &lt;a href=&#34;https://www.youtube.com/watch?v=9hLcsLFgLC8&#34;&gt;bikini của Leia trong Return of The Jedi&lt;/a&gt;. Cả tác giả của Doreamon cũng lấy thỉnh thoảng lấy hình tượng nàng công chúa này nữa. Nàng công chúa trong Star Wars bản lĩnh, lãnh đạo quân Kháng Chiến chống lại Đê Quốc nhưng cũng có những khoảnh khắc rất đáng yêu. Han Solo thì là chàng cao bồi vũ trụ, luôn lạc quan trong những lúc khó khăn nhất. Tình cảm của hai người được xây dựng nhẹ nhàng, đáng yêu và liền mạch với câu chuyện.&lt;/p&gt;
+&lt;p&gt;Trong khi đó mình rất thích thích công chúa Leia và Han Solo. Và mình cá là những thánh cuồng scifi, thể loại viễn tưởng phiêu lưu thì Leia là mẫu con gái trong mộng. Một minh chứng rõ ràng còn ảnh hưởng cả đến văn hoá Pop là anh Ross nhà ta còn nói bạn gái mặc bộ &lt;a href=&#34;https://www.youtube.com/watch?v=9hLcsLFgLC8&#34; target=&#34;_blank&#34;&gt;bikini của Leia trong Return of The Jedi&lt;/a&gt;. Cả tác giả của Doreamon cũng lấy thỉnh thoảng lấy hình tượng nàng công chúa này nữa. Nàng công chúa trong Star Wars bản lĩnh, lãnh đạo quân Kháng Chiến chống lại Đê Quốc nhưng cũng có những khoảnh khắc rất đáng yêu. Han Solo thì là chàng cao bồi vũ trụ, luôn lạc quan trong những lúc khó khăn nhất. Tình cảm của hai người được xây dựng nhẹ nhàng, đáng yêu và liền mạch với câu chuyện.&lt;/p&gt;
 
 &lt;p&gt;Các nhân vật khác đều có chiều sâu trong tính cách cũng như về cuộc đời như thầy Yoda và thầy Kenobi cũng như các nhân vật phản diện khác.&lt;/p&gt;
 
 &lt;h1 id=&#34;tổng-kết&#34;&gt;Tổng kết&lt;/h1&gt;
 
-&lt;p&gt;Đây là một seri rất đáng xem, giới thiệu cho khán giả về thế giới Star Wars vô cùng rộng lớn với những cuộc phiêu lưu đầy thú vị. Xem xong mới chỉ 3 tập nhưng mình đã hiểu vì sao khán giả khắp nơi lại cuồng đến vậy, nhà nhà người người đều &lt;a href=&#34;http://tuoitre.vn/tin/van-hoa-giai-tri/dien-anh/20151220/tong-thong-obama-cac-ban-a-toi-phai-di-xem-star-wars-day/1024117.html&#34;&gt;bàn tán về Star Wars đến vậy&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Đây là một seri rất đáng xem, giới thiệu cho khán giả về thế giới Star Wars vô cùng rộng lớn với những cuộc phiêu lưu đầy thú vị. Xem xong mới chỉ 3 tập nhưng mình đã hiểu vì sao khán giả khắp nơi lại cuồng đến vậy, nhà nhà người người đều &lt;a href=&#34;http://tuoitre.vn/tin/van-hoa-giai-tri/dien-anh/20151220/tong-thong-obama-cac-ban-a-toi-phai-di-xem-star-wars-day/1024117.html&#34; target=&#34;_blank&#34;&gt;bàn tán về Star Wars đến vậy&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe</title>
-      <link>https://dangkhoasdc.github.io/post/blog/protocol-buffers-caffe/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/protocol-buffers-caffe/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/protocol-buffers-caffe/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/protocol-buffers-caffe/</guid>
       <description>
 
-&lt;h5 id=&#34;protocol-buffers-protobuf-hay-pb-là-một-trong-những-thành-phần-quan-trọng-trong-thư-viện-caffe-http-caffe-berkeleyvision-org-bài-viết-dưới-đây-là-một-số-note-và-cách-sử-dụng-protocol-buffers-trong-ngôn-ngữ-c-mục-tiêu-ban-đầu-chủ-yếu-tìm-hiểu-xem-khả-năng-tuỳ-chỉnh-của-caffe-đến-đâu&#34;&gt;Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện &lt;a href=&#34;http://caffe.berkeleyvision.org/&#34;&gt;Caffe&lt;/a&gt;. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C++. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu.&lt;/h5&gt;
+&lt;h5 id=&#34;protocol-buffers-protobuf-hay-pb-là-một-trong-những-thành-phần-quan-trọng-trong-thư-viện-caffe-http-caffe-berkeleyvision-org-bài-viết-dưới-đây-là-một-số-note-và-cách-sử-dụng-protocol-buffers-trong-ngôn-ngữ-c-mục-tiêu-ban-đầu-chủ-yếu-tìm-hiểu-xem-khả-năng-tuỳ-chỉnh-của-caffe-đến-đâu&#34;&gt;Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện &lt;a href=&#34;http://caffe.berkeleyvision.org/&#34; target=&#34;_blank&#34;&gt;Caffe&lt;/a&gt;. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C++. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu.&lt;/h5&gt;
 
 &lt;h1 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/overview&#34;&gt;Protocol Buffers&lt;/a&gt; là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển. Protocol Buffers có thể so sánh giống như XML, tuy nhiên PB có một số ưu điểm (theo quảng cáo của Google): tiện hơn, nhẹ hơn (từ 3 đến 10 lần so với XML), thao tác đọc ghi nhanh hơn (20 đến 100 lần nhanh hơn so với XML) và dễ dàng hơn. Protocol Buffers cho phép người dùng thiết kế dữ liệu và sử dụng code tự động phát sinh để đọc ghi các dữ liệu đó.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/overview&#34; target=&#34;_blank&#34;&gt;Protocol Buffers&lt;/a&gt; là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển. Protocol Buffers có thể so sánh giống như XML, tuy nhiên PB có một số ưu điểm (theo quảng cáo của Google): tiện hơn, nhẹ hơn (từ 3 đến 10 lần so với XML), thao tác đọc ghi nhanh hơn (20 đến 100 lần nhanh hơn so với XML) và dễ dàng hơn. Protocol Buffers cho phép người dùng thiết kế dữ liệu và sử dụng code tự động phát sinh để đọc ghi các dữ liệu đó.&lt;/p&gt;
 
 &lt;h1 id=&#34;cơ-chế&#34;&gt;Cơ chế&lt;/h1&gt;
 
@@ -1103,19 +1105,19 @@ architecture trong project.&lt;/p&gt;
 
 &lt;h1 id=&#34;trong-caffe&#34;&gt;Trong Caffe&lt;/h1&gt;
 
-&lt;p&gt;Protocol Buffers đóng vai trò khá quan trọng trong thư viện &lt;a href=&#34;https://github.com/BVLC/caffe&#34;&gt;Caffe&lt;/a&gt;. Nếu không sử dụng PB thì Caffe trở thành một thư viện rất khó xài bởi nhiều lí do:&lt;/p&gt;
+&lt;p&gt;Protocol Buffers đóng vai trò khá quan trọng trong thư viện &lt;a href=&#34;https://github.com/BVLC/caffe&#34; target=&#34;_blank&#34;&gt;Caffe&lt;/a&gt;. Nếu không sử dụng PB thì Caffe trở thành một thư viện rất khó xài bởi nhiều lí do:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Không có tài liệu cụ thể để tuỳ chỉnh các layer hay tự thiết kế mạng cho riêng hệ thống. Vấn đề này được giải quyết đơn giản nhờ PB. PB cho phép cá c tác giả của Caffe tạo ra các dữ liệu dùng cho hệ thống này (Solver, Layer, Net, …). Những ai dùng Caffe chỉ cần bỏ chút thời gian để đọc lại đoạn thiết kế trong &lt;a href=&#34;https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto&#34;&gt;file &lt;code&gt;proto&lt;/code&gt; này&lt;/a&gt; đã được comment khá đầy đủ và chi tiết. Nhờ việc open source phần này nên các nhóm nghiên cứu khác có khả năng custom bằng cách thêm các Layer hoặc thêm các hàm vàotrong hệ thống Caffe.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Không có tài liệu cụ thể để tuỳ chỉnh các layer hay tự thiết kế mạng cho riêng hệ thống. Vấn đề này được giải quyết đơn giản nhờ PB. PB cho phép cá c tác giả của Caffe tạo ra các dữ liệu dùng cho hệ thống này (Solver, Layer, Net, …). Những ai dùng Caffe chỉ cần bỏ chút thời gian để đọc lại đoạn thiết kế trong &lt;a href=&#34;https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto&#34; target=&#34;_blank&#34;&gt;file &lt;code&gt;proto&lt;/code&gt; này&lt;/a&gt; đã được comment khá đầy đủ và chi tiết. Nhờ việc open source phần này nên các nhóm nghiên cứu khác có khả năng custom bằng cách thêm các Layer hoặc thêm các hàm vàotrong hệ thống Caffe.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Khả năng không custom cao: việc tạo ra một kiến trúc mới khá dễ dàng nhờ vào PB. Việc thiết kế một mạng giờ đây giống như một trò xếp hình với các khối là những kiểu dữ liệu được thiết kế trong ProtoBuf [Hình 1]. Một ví dụ kinh điển là sử dụng Caffe để &lt;a href=&#34;http://caffe.berkeleyvision.org/gathered/examples/mnist.html&#34;&gt;thiết kế mạng LeNet&lt;/a&gt;. Người nghiên cứu không phải quá nặng đầu hay nhũn não để viết code C++ hay Matlab hay Python hay Cuda để thiết kế mạng mà thay vào đó là viết một kiến trúc trong file &lt;code&gt;prototxt&lt;/code&gt; như thiết kế một cấu trúc XML hoặc JSON. Tác giả Caffe cũng không nhũn não khi ngồi parse từ file text sang kiểu dữ liệu của mình.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Khả năng không custom cao: việc tạo ra một kiến trúc mới khá dễ dàng nhờ vào PB. Việc thiết kế một mạng giờ đây giống như một trò xếp hình với các khối là những kiểu dữ liệu được thiết kế trong ProtoBuf [Hình 1]. Một ví dụ kinh điển là sử dụng Caffe để &lt;a href=&#34;http://caffe.berkeleyvision.org/gathered/examples/mnist.html&#34; target=&#34;_blank&#34;&gt;thiết kế mạng LeNet&lt;/a&gt;. Người nghiên cứu không phải quá nặng đầu hay nhũn não để viết code C++ hay Matlab hay Python hay Cuda để thiết kế mạng mà thay vào đó là viết một kiến trúc trong file &lt;code&gt;prototxt&lt;/code&gt; như thiết kế một cấu trúc XML hoặc JSON. Tác giả Caffe cũng không nhũn não khi ngồi parse từ file text sang kiểu dữ liệu của mình.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://i.imgur.com/chfn2ch.png&#34; alt=&#34;Mạng Deep Learning&#34; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;cài-đặt&#34;&gt;Cài đặt&lt;/h1&gt;
 
-&lt;p&gt;Clone mã nguồn của &lt;a href=&#34;https://github.com/google/protobuf&#34;&gt;ProtoBuf tại Github&lt;/a&gt;, sau đó cài theo lệnh&lt;/p&gt;
+&lt;p&gt;Clone mã nguồn của &lt;a href=&#34;https://github.com/google/protobuf&#34; target=&#34;_blank&#34;&gt;ProtoBuf tại Github&lt;/a&gt;, sau đó cài theo lệnh&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;    ./autogen.sh
     ./configure
@@ -1164,7 +1166,7 @@ architecture trong project.&lt;/p&gt;
 
 &lt;h1 id=&#34;cú-pháp&#34;&gt;Cú pháp&lt;/h1&gt;
 
-&lt;p&gt;Trong bài viết mình chỉ giới thiệu rất vắn tắt về các từ khoá sử dụng trong ProtoBuf nhằm có thể tìm hiểu cơ chế thiết kế dữ liệu trong Caffe. Chi tiết hơn về cứ pháp ngôn ngữ này có thể tham khảo ở &lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/proto3&#34;&gt;trang tài liệu của ProtoBuf&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Trong bài viết mình chỉ giới thiệu rất vắn tắt về các từ khoá sử dụng trong ProtoBuf nhằm có thể tìm hiểu cơ chế thiết kế dữ liệu trong Caffe. Chi tiết hơn về cứ pháp ngôn ngữ này có thể tham khảo ở &lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/proto3&#34; target=&#34;_blank&#34;&gt;trang tài liệu của ProtoBuf&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;code&gt;package&lt;/code&gt;: tương đương với namespace trong C++.&lt;/li&gt;
@@ -1181,13 +1183,13 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 
 &lt;h2 id=&#34;trong-caffe-1&#34;&gt;Trong Caffe&lt;/h2&gt;
 
-&lt;p&gt;Bây giờ quay trở lại &lt;a href=&#34;https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto&#34;&gt;file &lt;code&gt;proto&lt;/code&gt; của Caffe&lt;/a&gt; và dường như mọi thứ đã quá rõ ràng. Với mỗi hàm activation, hàm loss, các Layer (convolution, reshape, filter, …) và Blob (chứa dữ liệu) Caffe thiết kế các lớp chính là nơi chứa các tham số cho các hàm, layer và data này.&lt;/p&gt;
+&lt;p&gt;Bây giờ quay trở lại &lt;a href=&#34;https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto&#34; target=&#34;_blank&#34;&gt;file &lt;code&gt;proto&lt;/code&gt; của Caffe&lt;/a&gt; và dường như mọi thứ đã quá rõ ràng. Với mỗi hàm activation, hàm loss, các Layer (convolution, reshape, filter, …) và Blob (chứa dữ liệu) Caffe thiết kế các lớp chính là nơi chứa các tham số cho các hàm, layer và data này.&lt;/p&gt;
 
-&lt;p&gt;Một điều khá thú vị đó là thư viện &lt;a href=&#34;https://www.tensorflow.org/&#34;&gt;TensorFlow&lt;/a&gt; của Google cũng sử dụng ProtoBuf cho project của họ.&lt;/p&gt;
+&lt;p&gt;Một điều khá thú vị đó là thư viện &lt;a href=&#34;https://www.tensorflow.org/&#34; target=&#34;_blank&#34;&gt;TensorFlow&lt;/a&gt; của Google cũng sử dụng ProtoBuf cho project của họ.&lt;/p&gt;
 
-&lt;p&gt;Nếu như chú ý kĩ, trên website của Caffe không liệt kê toàn bộ các tham số có thể cấu hình cho các Layer trong thiết kế mạng. Có thể kể đến ở đây như &lt;a href=&#34;http://caffe.berkeleyvision.org/tutorial/data.html&#34;&gt;Data Layer&lt;/a&gt;, trong tham số transform_data có &lt;code&gt;scale&lt;/code&gt;, &lt;code&gt;mean_file_size&lt;/code&gt;, &lt;code&gt;mirror&lt;/code&gt; và &lt;code&gt;crop_size&lt;/code&gt;; nhưng nếu xem trong phần định nghĩa của protobuf, ta thấy ngoài ra còn có &lt;code&gt;mean_file&lt;/code&gt;, &lt;code&gt;mean_value&lt;/code&gt;, &lt;code&gt;force_color&lt;/code&gt; và &lt;code&gt;force_gray&lt;/code&gt;, qua đó ta thấy được rõ ràng xem protobuf có lợi hơn là xem trong phần documents. Một điểm thuận lợi khác là file &lt;code&gt;caffe.proto&lt;/code&gt; được cập nhật liên tục so với document trên website.&lt;/p&gt;
+&lt;p&gt;Nếu như chú ý kĩ, trên website của Caffe không liệt kê toàn bộ các tham số có thể cấu hình cho các Layer trong thiết kế mạng. Có thể kể đến ở đây như &lt;a href=&#34;http://caffe.berkeleyvision.org/tutorial/data.html&#34; target=&#34;_blank&#34;&gt;Data Layer&lt;/a&gt;, trong tham số transform_data có &lt;code&gt;scale&lt;/code&gt;, &lt;code&gt;mean_file_size&lt;/code&gt;, &lt;code&gt;mirror&lt;/code&gt; và &lt;code&gt;crop_size&lt;/code&gt;; nhưng nếu xem trong phần định nghĩa của protobuf, ta thấy ngoài ra còn có &lt;code&gt;mean_file&lt;/code&gt;, &lt;code&gt;mean_value&lt;/code&gt;, &lt;code&gt;force_color&lt;/code&gt; và &lt;code&gt;force_gray&lt;/code&gt;, qua đó ta thấy được rõ ràng xem protobuf có lợi hơn là xem trong phần documents. Một điểm thuận lợi khác là file &lt;code&gt;caffe.proto&lt;/code&gt; được cập nhật liên tục so với document trên website.&lt;/p&gt;
 
-&lt;p&gt;Lấy một ví dụ minh hoạ trong mạng &lt;a href=&#34;https://github.com/BVLC/caffe/tree/master/models/bvlc_alexnet&#34;&gt;AlexNet&lt;/a&gt;. Có 2 file prototxt rất đáng quan tâm và hầu như ở các model được cung cấp sẵn đều có đó là: &lt;code&gt;train_val.prototxt&lt;/code&gt; và &lt;code&gt;solver.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Lấy một ví dụ minh hoạ trong mạng &lt;a href=&#34;https://github.com/BVLC/caffe/tree/master/models/bvlc_alexnet&#34; target=&#34;_blank&#34;&gt;AlexNet&lt;/a&gt;. Có 2 file prototxt rất đáng quan tâm và hầu như ở các model được cung cấp sẵn đều có đó là: &lt;code&gt;train_val.prototxt&lt;/code&gt; và &lt;code&gt;solver.txt&lt;/code&gt;.&lt;/p&gt;
 
 &lt;h3 id=&#34;train-val-prototxt&#34;&gt;train_val.prototxt&lt;/h3&gt;
 
@@ -1275,10 +1277,10 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
     
     <item>
       <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
-      <link>https://dangkhoasdc.github.io/post/blog/constexpr/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/constexpr/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/constexpr/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/constexpr/</guid>
       <description>
 
 &lt;h2 id=&#34;constexpr&#34;&gt;constexpr&lt;/h2&gt;
@@ -1310,14 +1312,14 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 
 &lt;p&gt;&lt;code&gt;constexpr&lt;/code&gt; là từ khoá yêu cầu trình biên dịch tính toán phép tính hay biểu thức tại thời điểm biên dịch, trong khi đó &lt;code&gt;const&lt;/code&gt; là công cụ giúp trình biên dịch nhắc nhở người dùng những biến nào không được thay đổi giá trị (nó chỉ nhắc nhở, có nghĩa là nếu ta muốn đổi cũng ok). &lt;code&gt;constexpr&lt;/code&gt; liên quan mật thiết tới khái niệm &lt;em&gt;biểu thức hằng&lt;/em&gt; (constant expression). Vậy constant expression là gì?&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Biểu thức hằng là biểu thức mà trình biên dịch có thể tính toán được&lt;/em&gt;. Điều đó có nghĩa biểu thức hằng không thể thực thi nếu các biến/ toán tử trong biểu thức chưa được biết trong thời gian biên dịch, và biểu thức này không gây ra tác dụng phụ (&lt;a href=&#34;http://programmers.stackexchange.com/a/40314&#34;&gt;side effect&lt;/a&gt;). Thêm vào đó, biểu thức hằng phải được cấu thành từ các giá trị nguyên, các số thực và kiểu liệt kê (enumerator), hay các tổ hợp của 3 kiểu dữ liệu này (một trong những cách tổ hợp là tạo ra 1 đối tượng giữ các giá trị này: &lt;code&gt;constexpr constructor&lt;/code&gt; ra đời là vì lí do này).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Biểu thức hằng là biểu thức mà trình biên dịch có thể tính toán được&lt;/em&gt;. Điều đó có nghĩa biểu thức hằng không thể thực thi nếu các biến/ toán tử trong biểu thức chưa được biết trong thời gian biên dịch, và biểu thức này không gây ra tác dụng phụ (&lt;a href=&#34;http://programmers.stackexchange.com/a/40314&#34; target=&#34;_blank&#34;&gt;side effect&lt;/a&gt;). Thêm vào đó, biểu thức hằng phải được cấu thành từ các giá trị nguyên, các số thực và kiểu liệt kê (enumerator), hay các tổ hợp của 3 kiểu dữ liệu này (một trong những cách tổ hợp là tạo ra 1 đối tượng giữ các giá trị này: &lt;code&gt;constexpr constructor&lt;/code&gt; ra đời là vì lí do này).&lt;/p&gt;
 
 &lt;p&gt;Trong quá trình viết mã, người lập trình sẽ có yêu cầu đặt tên biến cho giá trị của biểu thức hằng (&lt;code&gt;constexpr function&lt;/code&gt; ra đời) hoặc các dữ liệu có trong biểu thức, và đây chính là lí do mà &lt;code&gt;constexpr variable&lt;/code&gt; ra đời. Ngoài việc đặt tên, biểu thức hằng còn có kha khá công dụng khác nhau như:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Sử dụng trong khai báo kích thước mảng, nhãn trong lệnh switch, tham số trong &lt;code&gt;template&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Trong các hệ thống nhúng, các giá trị &lt;em&gt;chỉ đọc&lt;/em&gt; các chi phí thấp hơn so với giá trị dữ liệu động. Ngoài ra dữ liệu chỉ đọc tránh được các lỗi trong hệ thống.&lt;/li&gt;
-&lt;li&gt;Trong các hệ thống đa luồng, biểu thức hằng tránh được hiện tượng &lt;a href=&#34;http://docs.oracle.com/cd/E19205-01/820-0619/geojs/index.html&#34;&gt;data race&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Trong các hệ thống đa luồng, biểu thức hằng tránh được hiện tượng &lt;a href=&#34;http://docs.oracle.com/cd/E19205-01/820-0619/geojs/index.html&#34; target=&#34;_blank&#34;&gt;data race&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Tăng hiệu suất chương trình.&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -1328,7 +1330,7 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 &lt;p&gt;Để trở khai báo một biến là &lt;em&gt;constexpr&lt;/em&gt;, biến đó phải thoả mãn một số điều kiện sau:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Kiểu của biến phải thuộc &lt;a href=&#34;http://en.cppreference.com/w/cpp/concept/LiteralType&#34;&gt;kiểu Literal&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Kiểu của biến phải thuộc &lt;a href=&#34;http://en.cppreference.com/w/cpp/concept/LiteralType&#34; target=&#34;_blank&#34;&gt;kiểu Literal&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Khi khai báo là biến &lt;em&gt;constexpr&lt;/em&gt;, biến đó phải được định nghĩa ngay trong thời điểm đó.&lt;/li&gt;
 &lt;li&gt;Tham số của hàm khởi tạo trong kiểu của biến này phải chứa: (1) kiểu literal, (2) biến &lt;em&gt;constexpr&lt;/em&gt;, (3) hàm.&lt;/li&gt;
 &lt;li&gt;Hàm khởi tạo của biến được khai báo phải thoả các điều kiện của &lt;strong&gt;constexpr constructor&lt;/strong&gt; và trong Kiểu/Lớp đó phải có hàm khởi tạo là &lt;strong&gt;constexpr constructor&lt;/strong&gt;.&lt;/li&gt;
@@ -1339,7 +1341,7 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 &lt;p&gt;Để khai báo là một &lt;strong&gt;constexpr function&lt;/strong&gt;, hàm này phải thoả những điều kiện sau:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Không phải là hàm ảo (&lt;a href=&#34;http://stackoverflow.com/questions/2391679/why-do-we-need-virtual-methods-in-c&#34;&gt;virtual funciton&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Không phải là hàm ảo (&lt;a href=&#34;http://stackoverflow.com/questions/2391679/why-do-we-need-virtual-methods-in-c&#34; target=&#34;_blank&#34;&gt;virtual funciton&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;Kiểu trả về phải là LiteralType.&lt;/li&gt;
 &lt;li&gt;Mỗi tham số đầu vào của hàm phải thuộc kiểu LiteralType.&lt;/li&gt;
 &lt;/ol&gt;
@@ -1370,18 +1372,18 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 &lt;h2 id=&#34;tham-khảo&#34;&gt;Tham khảo&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://en.cppreference.com/w/cpp/language/constexpr&#34;&gt;C++ Programm Language&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/C-Programming-Language-4th/dp/0321563840/ref=sr_1_3?ie=UTF8&amp;amp;qid=1441600777&amp;amp;sr=8-3&amp;amp;keywords=c+programming+language&#34;&gt;Book: C++ Programming Language&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://en.cppreference.com/w/cpp/language/constexpr&#34; target=&#34;_blank&#34;&gt;C++ Programm Language&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/C-Programming-Language-4th/dp/0321563840/ref=sr_1_3?ie=UTF8&amp;amp;qid=1441600777&amp;amp;sr=8-3&amp;amp;keywords=c+programming+language&#34; target=&#34;_blank&#34;&gt;Book: C++ Programming Language&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
     
     <item>
       <title>Review: The C&#43;&#43; Programming Languages</title>
-      <link>https://dangkhoasdc.github.io/post/blog/review_cpp_proglang_book/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/review_cpp_proglang_book/</link>
       <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/review_cpp_proglang_book/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/review_cpp_proglang_book/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://www.stroustrup.com/4thEnglish.JPG&#34; alt=&#34;C++ Programming Language&#34; /&gt;&lt;/p&gt;
@@ -1392,7 +1394,7 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 
 &lt;h1 id=&#34;nhìn-chung&#34;&gt;Nhìn chung&lt;/h1&gt;
 
-&lt;p&gt;Điều mình không thích nhất là bản 4 &lt;em&gt;đã bỏ phần câu hỏi và bài tập&lt;/em&gt; ra khỏi cuốn sách - điểm mà ngày xưa mình rất thích. Một điều nữa là cuốn sách khá là dày, một số phần khá hay, một số phần giống sách reference về ngôn ngữ lập trình. Mà điều đó lại không cần thiết lắm vì nếu cần tra cứu thì &lt;a href=&#34;http://en.cppreference.com/w/&#34;&gt;cppreference&lt;/a&gt; hay &lt;a href=&#34;http://www.cplusplus.com/&#34;&gt;cplusplus&lt;/a&gt; lại gần gũi và chi tiết hơn.&lt;/p&gt;
+&lt;p&gt;Điều mình không thích nhất là bản 4 &lt;em&gt;đã bỏ phần câu hỏi và bài tập&lt;/em&gt; ra khỏi cuốn sách - điểm mà ngày xưa mình rất thích. Một điều nữa là cuốn sách khá là dày, một số phần khá hay, một số phần giống sách reference về ngôn ngữ lập trình. Mà điều đó lại không cần thiết lắm vì nếu cần tra cứu thì &lt;a href=&#34;http://en.cppreference.com/w/&#34; target=&#34;_blank&#34;&gt;cppreference&lt;/a&gt; hay &lt;a href=&#34;http://www.cplusplus.com/&#34; target=&#34;_blank&#34;&gt;cplusplus&lt;/a&gt; lại gần gũi và chi tiết hơn.&lt;/p&gt;
 
 &lt;h1 id=&#34;part-i-introductory-material&#34;&gt;Part I: Introductory Material&lt;/h1&gt;
 
@@ -1439,7 +1441,7 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 
 &lt;h1 id=&#34;tổng-kết&#34;&gt;Tổng kết&lt;/h1&gt;
 
-&lt;p&gt;Đây là cuốn sách rất đáng đọc cho bạn này đang học/làm việc hay quan tâm về ngôn ngữ C++. Như chính Bjarne Stroustrup từng nói: “Lập trình C đau thương như thể bắn vào bàn chân mình; nhưng C++ còn khó hơn; đó là lúc bạn bắn bay cả đôi chân của mình” &lt;a href=&#34;https://en.wikiquote.org/wiki/Bjarne_Stroustrup&#34;&gt;Nguồn&lt;/a&gt;, để tránh bản thân “đau thương” đến vậy thì C++ Programming Language chính là cuốn sách hướng dẫn sử dụng súng. Ngoài ra, một số chương còn đề cập đến phương pháp cũng như quá trình hình thành ngôn ngữ và các tính năng trong ngôn ngữ, đó cũng là những kiến thức rất hay trong viết phần mềm. Nhưng đây không phải là cuốn sách để đọc ngấu nghiến từ trang đầu tới trang cuối cùng. Theo kinh nghiệm của bản thân, có thể đọc một số phần tuỳ thuộc vào việc người đọc đang làm việc với C++ ở mức độ nào:&lt;/p&gt;
+&lt;p&gt;Đây là cuốn sách rất đáng đọc cho bạn này đang học/làm việc hay quan tâm về ngôn ngữ C++. Như chính Bjarne Stroustrup từng nói: “Lập trình C đau thương như thể bắn vào bàn chân mình; nhưng C++ còn khó hơn; đó là lúc bạn bắn bay cả đôi chân của mình” &lt;a href=&#34;https://en.wikiquote.org/wiki/Bjarne_Stroustrup&#34; target=&#34;_blank&#34;&gt;Nguồn&lt;/a&gt;, để tránh bản thân “đau thương” đến vậy thì C++ Programming Language chính là cuốn sách hướng dẫn sử dụng súng. Ngoài ra, một số chương còn đề cập đến phương pháp cũng như quá trình hình thành ngôn ngữ và các tính năng trong ngôn ngữ, đó cũng là những kiến thức rất hay trong viết phần mềm. Nhưng đây không phải là cuốn sách để đọc ngấu nghiến từ trang đầu tới trang cuối cùng. Theo kinh nghiệm của bản thân, có thể đọc một số phần tuỳ thuộc vào việc người đọc đang làm việc với C++ ở mức độ nào:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Đang học lập trình: Part 1 và Part 2 rất quan trọng, đọc xong 2 part là ở mức khá khi hiểu về C++ rồi.&lt;/li&gt;
@@ -1452,10 +1454,10 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
     
     <item>
       <title>Review Algorithms (Princeton) - Coursera</title>
-      <link>https://dangkhoasdc.github.io/post/blog/review_algs_princeton_coursera/</link>
+      <link>http://replace-this-with-your-website-url.com/post/blog/review_algs_princeton_coursera/</link>
       <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dangkhoasdc.github.io/post/blog/review_algs_princeton_coursera/</guid>
+      <guid>http://replace-this-with-your-website-url.com/post/blog/review_algs_princeton_coursera/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://algs4.cs.princeton.edu/cover.png&#34; alt=&#34;Algorithms, Princeton&#34; /&gt;&lt;/p&gt;
@@ -1477,7 +1479,7 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 
 &lt;h2 id=&#34;stacks-and-queues&#34;&gt;Stacks and Queues&lt;/h2&gt;
 
-&lt;p&gt;Phần bài tập lập trình làm về cấu trúc Deque và RandomizedQueue, khá là thú vị. Phần thuật toán có giới thiệu giải thuật &lt;a href=&#34;https://en.wikipedia.org/wiki/Graham_scan&#34;&gt;Graham scan&lt;/a&gt; - tìm tập bao lồi trong một tập các điểm. Phần này thì cũng không quá khó, thiên về lập trình và API là nhiều. Để được &lt;sup&gt;100&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt; điểm lập trình thì cần tricky một chút cho phần RandomizedQueue.&lt;/p&gt;
+&lt;p&gt;Phần bài tập lập trình làm về cấu trúc Deque và RandomizedQueue, khá là thú vị. Phần thuật toán có giới thiệu giải thuật &lt;a href=&#34;https://en.wikipedia.org/wiki/Graham_scan&#34; target=&#34;_blank&#34;&gt;Graham scan&lt;/a&gt; - tìm tập bao lồi trong một tập các điểm. Phần này thì cũng không quá khó, thiên về lập trình và API là nhiều. Để được &lt;sup&gt;100&lt;/sup&gt;&amp;frasl;&lt;sub&gt;100&lt;/sub&gt; điểm lập trình thì cần tricky một chút cho phần RandomizedQueue.&lt;/p&gt;
 
 &lt;h2 id=&#34;merge-sort-và-quicksort&#34;&gt;Merge sort và Quicksort&lt;/h2&gt;
 
@@ -1487,17 +1489,17 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 
 &lt;h2 id=&#34;priority-queue-và-symbol-table&#34;&gt;Priority Queue và Symbol Table&lt;/h2&gt;
 
-&lt;p&gt;Học về heap sort và các vấn đề liên quan. Bài tập lập trình &lt;a href=&#34;https://en.wikipedia.org/wiki/15_puzzle&#34;&gt;8-puzzle&lt;/a&gt;, một bài rất hay.&lt;/p&gt;
+&lt;p&gt;Học về heap sort và các vấn đề liên quan. Bài tập lập trình &lt;a href=&#34;https://en.wikipedia.org/wiki/15_puzzle&#34; target=&#34;_blank&#34;&gt;8-puzzle&lt;/a&gt;, một bài rất hay.&lt;/p&gt;
 
 &lt;h2 id=&#34;balanced-search-trees&#34;&gt;Balanced Search Trees&lt;/h2&gt;
 
-&lt;p&gt;Cây và các vấn đề liên quan đây cây cân bằng, điểm mình thấy hay nhất đó là được học về 2-3 tree, cây đỏ đen, B-tree. Đặc biệt là B-tree sử dụng trong cơ sở dữ liệu và hệ điều hành. Một phần khá hay khác là thuật toán sử dụng trong không gian, điển hình là &lt;a href=&#34;https://en.wikipedia.org/wiki/K-d_tree&#34;&gt;kdtree&lt;/a&gt;. Bài tập lập trình là kdtree, quá là phê luôn.&lt;/p&gt;
+&lt;p&gt;Cây và các vấn đề liên quan đây cây cân bằng, điểm mình thấy hay nhất đó là được học về 2-3 tree, cây đỏ đen, B-tree. Đặc biệt là B-tree sử dụng trong cơ sở dữ liệu và hệ điều hành. Một phần khá hay khác là thuật toán sử dụng trong không gian, điển hình là &lt;a href=&#34;https://en.wikipedia.org/wiki/K-d_tree&#34; target=&#34;_blank&#34;&gt;kdtree&lt;/a&gt;. Bài tập lập trình là kdtree, quá là phê luôn.&lt;/p&gt;
 
 &lt;p&gt;Bài tập trắc nghiệm trong phần này bao khó, vì phải chạy bằng tay cây đỏ đen.&lt;/p&gt;
 
 &lt;h2 id=&#34;hash-tables&#34;&gt;Hash Tables&lt;/h2&gt;
 
-&lt;p&gt;Học về hashing function, các cấu trúc dữ liệu trong hashing, birthday problem … blah blah. Một trong những ứng dụng của nó chính là cấu trúc dành cho véc tơ, ma trận thưa (&lt;a href=&#34;https://en.wikipedia.org/wiki/Sparse_array&#34;&gt;sparce vector&lt;/a&gt;), nhờ khoá này mà khi dự một buổi meeting có liên quan đến Hashing thì mình không bị bỡ ngỡ bởi các khái niệm.&lt;/p&gt;
+&lt;p&gt;Học về hashing function, các cấu trúc dữ liệu trong hashing, birthday problem … blah blah. Một trong những ứng dụng của nó chính là cấu trúc dành cho véc tơ, ma trận thưa (&lt;a href=&#34;https://en.wikipedia.org/wiki/Sparse_array&#34; target=&#34;_blank&#34;&gt;sparce vector&lt;/a&gt;), nhờ khoá này mà khi dự một buổi meeting có liên quan đến Hashing thì mình không bị bỡ ngỡ bởi các khái niệm.&lt;/p&gt;
 
 &lt;p&gt;Khoá học còn một phần nữa là Part 2, đề cập đến các chủ đề như:&lt;/p&gt;
 
