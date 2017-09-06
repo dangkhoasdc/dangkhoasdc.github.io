@@ -7,8 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2016 Dang-Khoa</copyright>
-    <lastBuildDate>Sun, 23 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>rand() is harmful</title>
+      <link>http://dangkhoasdc.github.io/post/blog/rand/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/blog/rand/</guid>
+      <description>
+
+&lt;h1 id=&#34;rand&#34;&gt;rand()&lt;/h1&gt;
+
+&lt;p&gt;Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &amp;ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&amp;rdquo;
+Bài talk duy chỉ nói về việc dùng hàm &lt;code&gt;rand()&lt;/code&gt; và đặc biệt sử dụng chung với &lt;code&gt;%&lt;/code&gt; (mod) hay floating point scale là thực sự &lt;em&gt;sai lầm&lt;/em&gt;  và &lt;em&gt;nghiêm trọng&lt;/em&gt; . Đặc biệt, nó không hề tạo ra uniform distribution như ta thường nghĩ, thậm chí nó khiến cho 1 số giá trị đặc biệt hiếm khi xảy ra 😄&lt;/p&gt;
+
+&lt;p&gt;Bản chất hàm &lt;code&gt;rand&lt;/code&gt; được implement khá đơn giản &lt;a href=&#34;https://en.wikipedia.org/wiki/Linear_congruential_generator&#34; target=&#34;_blank&#34;&gt; linear congruential &lt;/a&gt; nhờ tận dụng tính chất của số căn nguyên thủy (xem &lt;a href=&#34;https://en.wikipedia.org/wiki/Lehmer_random_number_generator&#34; target=&#34;_blank&#34;&gt;Lehmer random generator&lt;/a&gt;). Điều thú vị nằm ở chỗ 1 tính chất không liên quan mấy bên lý thuyết số lại hỗ trợ cho việc sinh số ngẫu nhiên.
+Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để check xem empirical results có đúng với probabilities không (uniform distribution với biến ngẫu nhiên rời rạc), đó là dùng Chi squared test.&lt;/p&gt;
+
+&lt;p&gt;Link:
+&lt;a href=&#34;https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful&#34; target=&#34;_blank&#34;&gt;https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Các thuật toán ngẫu nhiên</title>
