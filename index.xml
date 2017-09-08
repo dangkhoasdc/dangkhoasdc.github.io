@@ -6,7 +6,7 @@
     <description>Recent content in Dang-Khoa&#39;s blog  on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2016 Dang-Khoa</copyright>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
@@ -29,6 +29,15 @@ Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để c
 &lt;p&gt;Link:
 &lt;a href=&#34;https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful&#34; target=&#34;_blank&#34;&gt;https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful&lt;/a&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Selective Deep Convolutional Features for Image Retrieval</title>
+      <link>http://dangkhoasdc.github.io/publication/selective_deep_conv/</link>
+      <pubDate>Tue, 04 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/publication/selective_deep_conv/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -1310,109 +1319,6 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 &lt;li&gt;Khi đi đến cuối hầm hay cave luôn có 1 portal bằng đá để ra ngoài hang nhanh chóng.&lt;/li&gt;
 &lt;li&gt;Không cần sách xanh nữa, muốn portal về nhà bao giờ cũng được. Và không cần đến chỗ portal point mới &lt;em&gt;thổ địa phù&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;Không hiểu sao bản này dễ quá, Normal đánh không mất tí máu, lên Hard hiện giờ chỉ có boss mới làm mình mất máu được.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
-      <link>http://dangkhoasdc.github.io/post/blog/constexpr/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/blog/constexpr/</guid>
-      <description>
-
-&lt;h2 id=&#34;constexpr&#34;&gt;constexpr&lt;/h2&gt;
-
-&lt;p&gt;Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là &lt;strong&gt;tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này&lt;/strong&gt;. Ta quay một chút về cú pháp &lt;code&gt;define&lt;/code&gt; bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm. C++ cũng có tham vọng vậy, và mục tiêu của C++ chính là nếu một biến/hàm có thể tính toán được trong thời gian biên dịch thì tính luôn tại thời điểm đó. Và như vậy trong quá trình chạy chương trình sẽ không mất thêm thời gian tính toán hàm/biến này. Done! Thời gian thực thi chương trình được nhanh hơn.&lt;/p&gt;
-
-&lt;div class=&#34;panel-body&#34;&gt;Nhìn đi nhìn lại mới thấy ngôn ngữ C được thiết kế rất hay, tinh giản nhưng mạnh mẽ. Để giải quyết vấn đề loại bỏ define trong C mà C++ đã chế ra const, inline và tá lả tùng xèn các thứ khác. Tuy nhiên cái gì cũng có hai mặt của vấn đề, với các từ khoá const, inline, ... thì việc người lập trình đỡ nhọc hơn về phần code (hạn chế được các lệnh define) nhưng để sử dụng tốt các tính năng của C++ khiến người lập trình phải hiểu rõ tính năng mà ngôn ngữ đó cung cấp.&lt;/div&gt;
-
-&lt;h2 id=&#34;tầm-hoạt-động&#34;&gt;Tầm hoạt động&lt;/h2&gt;
-
-&lt;p&gt;Từ khoá &lt;code&gt;constexpr&lt;/code&gt; được sử dụng cho 3 đối tượng như sau:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Hàm.&lt;/li&gt;
-&lt;li&gt;Biến.&lt;/li&gt;
-&lt;li&gt;Hàm khởi tạo.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Trong đó, nếu từ khoá này được dùng cho khai báo đối tượng hoặc biến thì đối tượng hoặc biến đó được ngầm hiểu là &lt;code&gt;const&lt;/code&gt;. Trong trường hợp là hàm, thì hàm đó được ngầm hiểu là 1 hàm &lt;code&gt;inline&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Quay lại câu chuyện vì sao có 3 ẻm này.&lt;/p&gt;
-
-&lt;p&gt;Từ khoá &lt;code&gt;constexpr&lt;/code&gt; có hàm nghĩa hoàn toàn khác với &lt;code&gt;const&lt;/code&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;const&lt;/code&gt;: không được thay đổi giá trị.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;constexpr&lt;/code&gt;: thực thi tại thời điểm biên dịch.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;code&gt;constexpr&lt;/code&gt; là từ khoá yêu cầu trình biên dịch tính toán phép tính hay biểu thức tại thời điểm biên dịch, trong khi đó &lt;code&gt;const&lt;/code&gt; là công cụ giúp trình biên dịch nhắc nhở người dùng những biến nào không được thay đổi giá trị (nó chỉ nhắc nhở, có nghĩa là nếu ta muốn đổi cũng ok). &lt;code&gt;constexpr&lt;/code&gt; liên quan mật thiết tới khái niệm &lt;em&gt;biểu thức hằng&lt;/em&gt; (constant expression). Vậy constant expression là gì?&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Biểu thức hằng là biểu thức mà trình biên dịch có thể tính toán được&lt;/em&gt;. Điều đó có nghĩa biểu thức hằng không thể thực thi nếu các biến/ toán tử trong biểu thức chưa được biết trong thời gian biên dịch, và biểu thức này không gây ra tác dụng phụ (&lt;a href=&#34;http://programmers.stackexchange.com/a/40314&#34; target=&#34;_blank&#34;&gt;side effect&lt;/a&gt;). Thêm vào đó, biểu thức hằng phải được cấu thành từ các giá trị nguyên, các số thực và kiểu liệt kê (enumerator), hay các tổ hợp của 3 kiểu dữ liệu này (một trong những cách tổ hợp là tạo ra 1 đối tượng giữ các giá trị này: &lt;code&gt;constexpr constructor&lt;/code&gt; ra đời là vì lí do này).&lt;/p&gt;
-
-&lt;p&gt;Trong quá trình viết mã, người lập trình sẽ có yêu cầu đặt tên biến cho giá trị của biểu thức hằng (&lt;code&gt;constexpr function&lt;/code&gt; ra đời) hoặc các dữ liệu có trong biểu thức, và đây chính là lí do mà &lt;code&gt;constexpr variable&lt;/code&gt; ra đời. Ngoài việc đặt tên, biểu thức hằng còn có kha khá công dụng khác nhau như:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Sử dụng trong khai báo kích thước mảng, nhãn trong lệnh switch, tham số trong &lt;code&gt;template&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Trong các hệ thống nhúng, các giá trị &lt;em&gt;chỉ đọc&lt;/em&gt; các chi phí thấp hơn so với giá trị dữ liệu động. Ngoài ra dữ liệu chỉ đọc tránh được các lỗi trong hệ thống.&lt;/li&gt;
-&lt;li&gt;Trong các hệ thống đa luồng, biểu thức hằng tránh được hiện tượng &lt;a href=&#34;http://docs.oracle.com/cd/E19205-01/820-0619/geojs/index.html&#34; target=&#34;_blank&#34;&gt;data race&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Tăng hiệu suất chương trình.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;constexpr-variable&#34;&gt;constexpr variable&lt;/h2&gt;
-
-&lt;p&gt;Khi khai báo constexpr thì biến đó được hiểu là const - tức không thể thay đổi nội dung trong quá trình thực thi chương trình. Nhưng khác với const ở chỗ: constexpr là hằng ở quá trình biên dịch, và còn const thì được qui định trong quá trình thực thi.&lt;/p&gt;
-
-&lt;p&gt;Để trở khai báo một biến là &lt;em&gt;constexpr&lt;/em&gt;, biến đó phải thoả mãn một số điều kiện sau:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Kiểu của biến phải thuộc &lt;a href=&#34;http://en.cppreference.com/w/cpp/concept/LiteralType&#34; target=&#34;_blank&#34;&gt;kiểu Literal&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Khi khai báo là biến &lt;em&gt;constexpr&lt;/em&gt;, biến đó phải được định nghĩa ngay trong thời điểm đó.&lt;/li&gt;
-&lt;li&gt;Tham số của hàm khởi tạo trong kiểu của biến này phải chứa: (1) kiểu literal, (2) biến &lt;em&gt;constexpr&lt;/em&gt;, (3) hàm.&lt;/li&gt;
-&lt;li&gt;Hàm khởi tạo của biến được khai báo phải thoả các điều kiện của &lt;strong&gt;constexpr constructor&lt;/strong&gt; và trong Kiểu/Lớp đó phải có hàm khởi tạo là &lt;strong&gt;constexpr constructor&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;constexpr-function&#34;&gt;constexpr function&lt;/h2&gt;
-
-&lt;p&gt;Để khai báo là một &lt;strong&gt;constexpr function&lt;/strong&gt;, hàm này phải thoả những điều kiện sau:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Không phải là hàm ảo (&lt;a href=&#34;http://stackoverflow.com/questions/2391679/why-do-we-need-virtual-methods-in-c&#34; target=&#34;_blank&#34;&gt;virtual funciton&lt;/a&gt;).&lt;/li&gt;
-&lt;li&gt;Kiểu trả về phải là LiteralType.&lt;/li&gt;
-&lt;li&gt;Mỗi tham số đầu vào của hàm phải thuộc kiểu LiteralType.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Hàm chỉ được chứa các lệnh sau:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;state_assert.&lt;/li&gt;
-&lt;li&gt;Chỉ có duy nhất 1 lệnh &lt;code&gt;return&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Lệnh Null, lệnh không thực hiện gì.&lt;/li&gt;
-&lt;li&gt;Lệnh khai báo &lt;code&gt;typedef&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Khai báo sử dụng &lt;code&gt;using&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;constexpr-constructor&#34;&gt;constexpr constructor&lt;/h2&gt;
-
-&lt;p&gt;Hàm khởi tạo &lt;em&gt;constexpr&lt;/em&gt; được xây dựng nhằm phục vụ cho các biến &lt;em&gt;constexpr&lt;/em&gt;, vì hàm khởi tạo cũng là hàm nên nó có những yêu cầu buộc thoả mãn giống như &lt;em&gt;constexpr function&lt;/em&gt;, ngoài ra &lt;em&gt;constexpr constructor&lt;/em&gt; còn phải thoả mãn một số điều kiện:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Lớp chứa hàm khởi tạo &lt;em&gt;constexpr&lt;/em&gt; có hàm cha không phải là Lớp ảo.&lt;/li&gt;
-&lt;li&gt;Không phải hàm khởi tạo function-try-block.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;ghi-chú&#34;&gt;Ghi chú&lt;/h2&gt;
-
-&lt;p&gt;Các thông tin trên được lấy từ chuẩn C++11, tuy nhiên trong C++14 có những thay đổi lớn sẽ được cập nhật sau.&lt;/p&gt;
-
-&lt;h2 id=&#34;tham-khảo&#34;&gt;Tham khảo&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://en.cppreference.com/w/cpp/language/constexpr&#34; target=&#34;_blank&#34;&gt;C++ Programm Language&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.amazon.com/C-Programming-Language-4th/dp/0321563840/ref=sr_1_3?ie=UTF8&amp;amp;qid=1441600777&amp;amp;sr=8-3&amp;amp;keywords=c+programming+language&#34; target=&#34;_blank&#34;&gt;Book: C++ Programming Language&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
