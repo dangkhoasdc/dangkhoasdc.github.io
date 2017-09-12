@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/deep-learning/</link>
+    <description>Recent content in Deep Learning on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Tue, 12 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/deep-learning/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hashing in content-based image retrieval</title>
+      <link>http://dangkhoasdc.github.io/project/deep_hashing/</link>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/project/deep_hashing/</guid>
+      <description>&lt;p&gt;Since I worked at SUTD, I have been working on the content-based image retrieval. It is very active in academia and industry. Actually, there are some works I have accomplished:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Image hasing: a joint optimization for image embedding and hashing (CVPR17 paper).&lt;/li&gt;
+&lt;li&gt;Deep Image Retrieval: a scheme for unified deep learning and image retrieval (ACM MM17 paper).&lt;/li&gt;
+&lt;li&gt;Mobile version of Triangulation Embedding.&lt;/li&gt;
+&lt;li&gt;Deep Hashing Image (In progress).&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

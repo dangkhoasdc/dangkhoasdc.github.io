@@ -7,9 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    
-	<atom:link href="http://dangkhoasdc.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="/categories/" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
