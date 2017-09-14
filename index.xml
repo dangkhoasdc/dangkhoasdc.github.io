@@ -11,6 +11,29 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>C&#43;&#43;</title>
+      <link>http://dangkhoasdc.github.io/post/cpp/</link>
+      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/cpp/</guid>
+      <description>
+
+&lt;h4 id=&#34;there-are-some-notes-about-cool-stuff-in-c-and-also-some-crazy-things&#34;&gt;There are some notes about cool stuff in C++, and also some crazy things.&lt;/h4&gt;
+
+&lt;h1 id=&#34;object-oriented-programming&#34;&gt;Object Oriented Programming&lt;/h1&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;/* (1) */
+T object(arg);
+
+/* (2) */
+T object{arg};
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(1) can be used by all types of class and non-class. In contrast, (2) is only used to initialize non-class type.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Hashing in content-based image retrieval</title>
       <link>http://dangkhoasdc.github.io/project/deep_hashing/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
@@ -170,10 +193,10 @@ Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để c
     
     <item>
       <title>Enhance Feature Discrimination for Unsupervised Hashing</title>
-      <link>http://dangkhoasdc.github.io/publication/enhance_feature_discrim/</link>
+      <link>http://dangkhoasdc.github.io/publication/pemb/</link>
       <pubDate>Mon, 01 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/publication/enhance_feature_discrim/</guid>
+      <guid>http://dangkhoasdc.github.io/publication/pemb/</guid>
       <description></description>
     </item>
     
@@ -1075,96 +1098,6 @@ architecture trong project.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.nafosted.gov.vn/vi/chuong-trinh-tai-tro/Ho-tro-nghien-cuu-khoa-hoc/Chuong-trinh-ho-tro-nghien-cuu-khoa-hoc-1/&#34; target=&#34;_blank&#34;&gt;NAFOSTED&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.moit.gov.vn/vn/pages/VanBanDieuHanh.aspx?TypeVB=1&amp;amp;vID=11930&#34; target=&#34;_blank&#34;&gt;Thông tư 102/2012/TT-BTC&lt;/a&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Review Refactoring</title>
-      <link>http://dangkhoasdc.github.io/post/refactoring-review/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/refactoring-review/</guid>
-      <description>
-
-&lt;p&gt;Mình quyết định đọc cuốn &lt;a href=&#34;https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672&#34; target=&#34;_blank&#34;&gt;Refactoring: Improving the Design of Existing Code&lt;/a&gt; sau khi đọc xong cuốn &lt;em&gt;Design Pattern&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;sơ-lược&#34;&gt;Sơ lược&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://d.gr-assets.com/books/1386925632l/44936.jpg&#34; alt=&#34;Refactoring: Improving the Design of Existing Code&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mặc dù đã được nghe đến khái niệm này rất nhiều lần, tuy nhiên sau khi đọc xong cuốn sách, đối chiếu với những trải nghiệm của bản thân về các project trước đây. Mình hiểu:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Refactor là quá trình thao tác trên mã nguồn có sẵn nhằm gia tăng chất lượng mã nguồn nhưng vẫn giữ lại được các ràng buộc của hệ thống.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Như vậy, &lt;em&gt;refactor&lt;/em&gt; không phải quá trình tạo mới hoàn toàn một dự án hay một hệ thống nào cả, mà nhằm làm tăng &lt;em&gt;chất lượng&lt;/em&gt; của mã nguồn đó. &lt;em&gt;Chất lượng&lt;/em&gt; ở đây được đánh giá trên các độ đo khác nhau:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Khả năng mở rộng của mã nguồn.&lt;/li&gt;
-&lt;li&gt;Khả năng dễ đọc và tìm lỗi.&lt;/li&gt;
-&lt;li&gt;Khả năng thích ứng với lỗi (tính robustness)&lt;/li&gt;
-&lt;li&gt;Hiệu suất của hệ thống.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Ngoài việc làm gia tăng chất lượng của hệ thống, bên cạnh đó &lt;em&gt;refactor&lt;/em&gt; phải đảm bảo giữ lại được các ràng buộc mà trước đó hệ thống đã có. Ví dụ như:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Những APIs đã được phát hành của hệ thống, ta không nên &lt;em&gt;refactor&lt;/em&gt; và thay đổi luôn các APIs đó.&lt;/li&gt;
-&lt;li&gt;Những &lt;em&gt;class&lt;/em&gt;, &lt;em&gt;functions&lt;/em&gt; liên hệ trực tiếp đến các modules khác trong hệ thống lớn hơn.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;những-kĩ-thuật-trong-refactor&#34;&gt;Những kĩ thuật trong refactor&lt;/h1&gt;
-
-&lt;p&gt;Một phần quan trọng của cuốn sách không chỉ nói về định nghĩa của &lt;em&gt;refactor&lt;/em&gt; mà còn đề cập đến lí do vì sao cần &lt;em&gt;refactor&lt;/em&gt;, khi nào nên &lt;em&gt;refactor&lt;/em&gt;, những tác động nào ảnh hưởng đến quá trình &lt;em&gt;refactor&lt;/em&gt;, và đặc biệt là &lt;em&gt;xây dựng bộ test cho hệ thống&lt;/em&gt;. Trước giờ mình chủ yếu làm các hệ thống trong academic, việc xây dựng các bộ test không được chú trọng quá nhiều. Nhưng thực sự đọc xong cuốn sách mình nghĩ mình nên tập các viết các bộ test trước khi viết một function nào đó. Việc &lt;em&gt;tự tay&lt;/em&gt; viết các bộ test mang lại khá nhiều thuận lợi:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Giúp người thiết kế biết được giao diện tương tác API mà function mình đảm nhiệm.&lt;/li&gt;
-&lt;li&gt;Hiểu được các ràng buộc về Input/Output và tham số.&lt;/li&gt;
-&lt;li&gt;Thuận lợi cho việc refactor, các bộ test sẽ giúp ta kiểm tra xem việc vừa refactor xong có ảnh hưởng gì đến hệ thống hiện có không.&lt;/li&gt;
-&lt;li&gt;Hình thành được outline của hệ thống trong quá trình xây dựng bộ test.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Cuốn sách được bố cục phần nào giống với bên &lt;em&gt;Design Pattern&lt;/em&gt;, cung cấp một lượng lớn &lt;em&gt;từ vựng&lt;/em&gt; về các kĩ thuật refactor. Với mỗi kĩ thuật được đề cập, tác giả nêu lên: động lực sử dụng, ví dụ minh họa, các lưu ý. Các kĩ thuật refactor được chia thành các category&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Thao tác trên các method trong 1 class.&lt;/li&gt;
-&lt;li&gt;Thao tác trên các method giữa các class với nhau.&lt;/li&gt;
-&lt;li&gt;Tổ chức dữ liệu.&lt;/li&gt;
-&lt;li&gt;Đơn giản hóa các câu lệnh điều kiện.&lt;/li&gt;
-&lt;li&gt;Đơn giản hóa các hàm.&lt;/li&gt;
-&lt;li&gt;Tái tổ chức hệ thống class.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Cuối cùng là những thao tác refactor ảnh hưởng đến các ràng buộc của hệ thống, đây là những thao tác sẽ ảnh hưởng lên đến việc tương tác giữa các hệ thống với nhau nên cần suy nghĩ cẩn trọng trước khi thực hiện.&lt;/p&gt;
-
-&lt;p&gt;Phần cuối cùng là các công cụ refactor, mình nghĩ phần nào không cần nói nhiều vì trên các IDE nổi tiếng như &lt;em&gt;Visual Studio&lt;/em&gt;, &lt;em&gt;Eclipse&lt;/em&gt;, &lt;em&gt;IntelIJ&lt;/em&gt; thì các kĩ thuật refactor đã trở thành những tính năng khá quen thuộc. Việc refactor tự động giúp tránh xảy ra lỗi và giảm thời gian cho công việc này khá nhiều.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Nếu có hành động nào đó lặp đi lặp lại trên 5 lần. Tốt hơn là ta nên làm cách khiến nó thành tự động.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;bình-luận&#34;&gt;Bình luận&lt;/h1&gt;
-
-&lt;p&gt;Đây là cuốn sách cuối cùng mình đọc liên quan đến công nghệ phần mềm trước khi đến với phần thử thách với mình nhiều hơn: Machine Learning và Computer Vision.&lt;/p&gt;
-
-&lt;p&gt;Cuốn sách đặc biệt phù hợp với các bạn sinh viên năm 3, 4 sau khi đã học về lập trình hướng đối tượng cũng như đã trải qua một thời gian tiếp xúc với những mã nguồn, dự án có sẵn. Thời gian đọc có lẽ mất từ 5-7 ngày.&lt;/p&gt;
-
-&lt;p&gt;Điều thú vị khi mình đọc đó là cảm giác:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;wtf?? đổi tên biến cũng được gọi là refactor wtf?? đổi tên hàm cũng vậy …&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Mình nghiệm ra, refactor không phải là cái gì đó quá cao siêu, có lẽ bạn nào lập trình cũng đã từng thực hiện một lần. Nhưng refactor như thế nào hiệu quả, tốn ít thời gian và công sức và hơn hết là biết cách refactor là một chuyện khác.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Refactoring&lt;/em&gt; là cuốn sách sẽ giải đáp những điều đó.&lt;/p&gt;
-
-&lt;h1 id=&#34;future-works&#34;&gt;Future Works&lt;/h1&gt;
-
-&lt;p&gt;Mình đã đọc xong cuốn &lt;em&gt;Design Patterns&lt;/em&gt; nhưng chưa biết review thế nào. Có lẽ cần nhiều thời gian hơn để có thể viết về các mẫu. Nhưng có lẽ mình không tập trung nhiều thời gian.&lt;/p&gt;
-
-&lt;p&gt;Kế hoạch sắp đến: &lt;em&gt;Pattern Recognition and Machine Learning&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     
