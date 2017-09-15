@@ -16,7 +16,9 @@
       <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/post/sakamoto_method/</guid>
-      <description>&lt;p&gt;Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo;
+      <description>
+
+&lt;p&gt;Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo;
 Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&amp;gt; Chủ Nhật, 1 -&amp;gt; Thứ Hai &amp;hellip;
 Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;amp;R C).&lt;/p&gt;
 
@@ -40,6 +42,13 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 &lt;p&gt;Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.&lt;/p&gt;
 
 &lt;p&gt;Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week&#34; target=&#34;_blank&#34;&gt;Wiki: Determination of the day of the week&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
