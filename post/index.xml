@@ -7,8 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Wed, 13 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bài toán chuyển ngày sang thứ</title>
+      <link>http://dangkhoasdc.github.io/post/sakamoto_method/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/sakamoto_method/</guid>
+      <description>&lt;p&gt;Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo;
+Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&amp;gt; Chủ Nhật, 1 -&amp;gt; Thứ Hai &amp;hellip;
+Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;amp;R C).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;dayofweek(y, m, d) {
+    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
+    y -= m &amp;lt; 3;
+    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &amp;ldquo;ranh&amp;rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; (Nếu ngày &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; là thứ Hai thì &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; sẽ là thứ 5). t[] chính là offset cho ngày đầu tiên của tháng so với ngày &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt;, như vậy ta có &lt;code&gt;t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}&lt;/code&gt; (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d) , xong module cho 7 là ra được.&lt;/p&gt;
+
+&lt;p&gt;Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm &lt;code&gt;y&lt;/code&gt;, ta phải cộng thêm &lt;code&gt;y&lt;/code&gt; ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.&lt;/p&gt;
+
+&lt;p&gt;Những năm nhuận, ta lại phải thêm cái ngày &lt;sup&gt;29&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; vào trong, tức là nó sẽ thêm 1 ngày nữa, trong &lt;code&gt;y&lt;/code&gt; năm? nếu có &lt;code&gt;y&lt;/code&gt; năm nhuận thì sẽ có thêm &lt;code&gt;x&lt;/code&gt; ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.&lt;/p&gt;
+
+&lt;p&gt;Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày &lt;sup&gt;29&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : &lt;code&gt;y -= m &amp;lt; 3&lt;/code&gt;. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.&lt;/p&gt;
+
+&lt;p&gt;Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Để khắc phục điều đó, tác giả giảm 1 đơn vị trong offset kể từ tháng 3 trở đi, và như vậy sẽ thống nhất tháng 1 và tháng 2. Ta sẽ được mảng t[] như trong code gốc. Vấn đề là khi ta đồng loạt giảm offset như vậy, cũng như giảm tháng 1, 2 đi 1 năm thì phải có hằng số &lt;code&gt;c&lt;/code&gt; nào đó cân bằng lại cho đúng với lịch. Nhưng bằng kiểm chứng, người ta phát hiện ra c = 0. Wow. 😲&lt;/p&gt;
+
+&lt;p&gt;Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.&lt;/p&gt;
+
+&lt;p&gt;Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>C&#43;&#43;</title>
@@ -1366,58 +1399,6 @@ c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không
 &lt;h2 id=&#34;tổng-kết&#34;&gt;Tổng kết&lt;/h2&gt;
 
 &lt;p&gt;Protobuf đóng vai trò quan trọng trong công cụ Caffe, giúp các nhà nghiên cứu có thể dễ dàng xây dựng, chỉnh sửa, cũng như chia sẻ kiến trúc mạng của mình với cộng đồng. Ngoài ra protobuf còn giúp nhà lập trình dễ dàng trong quá trình xây dựng hệ thống phần mềm cũng như mã nguồn. Đối với người dùng, việc xem xét, hiệu chỉnh trên file prototxt thuận lợi và tốn ít công sức hơn so với đọc từ code C++ hay kể cả matlab, cũng như có một “ngôn ngữ chung” cho thiết kế mạng deep.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>[review] Diablo III</title>
-      <link>http://dangkhoasdc.github.io/post/diablo3-review/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/diablo3-review/</guid>
-      <description>
-
-&lt;p&gt;Sau gần 4 năm kể từ khi phát hành, mình mới được chơi cái game này. Thực ra do một cách tình cờ mà thấy được cái giá rẻ bất ngờ của em ý, tính ra là 20 USD cho bản Standard. Hoá ra là do đã có bản Expansion nên bản cũ mới rẻ vậy. Thôi thì lượm về chơi vậy.&lt;/p&gt;
-
-&lt;p&gt;Lần đầu tiên chơi game Diablo là bản Diablo 2 Fury Within hồi lớp 6 lớp 7 gì đó. Vậy là cũng gần 10 năm mất rồi. Trước giờ toàn chơi Barbarian và không thèm đếm xỉa đến các nhân vật khác. Phá đảo đánh boss không biết bao nhiêu lần nhưng vẫn không hiểu sao vẫn khoái nó đến vậy.&lt;/p&gt;
-
-&lt;p&gt;Quay trở lại với Diablo 3, với góc nhìn của một đứa chơi game cho vui và không phải là tụi &lt;em&gt;geek&lt;/em&gt; khi chơi game và thuộc lòng các công thức tính demage, defense hay tá lả các thuộc tính khác.&lt;/p&gt;
-
-&lt;p&gt;Nhân tiện về tính &lt;em&gt;Damge per second&lt;/em&gt; (DBP) trong game:&lt;/p&gt;
-
-&lt;script type=&#34;math/tex; mode=display&#34;&gt;\text{dps} = \frac{\text{min} + \text{max}}{2} \times \text{APS} \times \text{Attach Speed} \times ( 1 + \frac{\text{Primary Stat}}{2} ) \times (1 + \text{CritC} \times \text{CritDam}) \times \text{DamMod}&lt;/script&gt;
-
-&lt;p&gt;Sợ rồi chứ. Tuy vẫn chưa kinh dị bằng bọn &lt;a href=&#34;http://bulbapedia.bulbagarden.net/wiki/Experience#Gain_formula&#34; target=&#34;_blank&#34;&gt;pokemon&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Quay trở lại cảm nhận và những kỷ niệm liên quan giữa Diablo III và Diablo II.&lt;/p&gt;
-
-&lt;h2 id=&#34;cốt-truyện&#34;&gt;Cốt truyện&lt;/h2&gt;
-
-&lt;p&gt;Có vẻ gì đó rất ảo lòi ra. Ngày xưa không quan tâm đến cốt truyện vì nhiều lý do. Đa phần là vì dốt tiếng Anh và tốn thời gian đọc thoại, nhưng ngẫm lại thì &lt;a href=&#34;https://www.youtube.com/watch?v=W6pDBXFPa_8&#34; target=&#34;_blank&#34;&gt;không phải là vấn đề của riêng mình&lt;/a&gt;; ngoài ra các bản trên đĩa CD lúc đó bán toàn bị cắt hết những cảnh Cinematic. Nhưng nếu quan tâm thì cốt truyện trông rất là &lt;em&gt;thần thánh&lt;/em&gt;, thuộc thể loại &lt;em&gt;dark fantasy&lt;/em&gt; và rất gần với gothic nên màu sắc đen tối (màu mè hơn ở bản III), liên quan mật thiết tới &lt;a href=&#34;http://www.diablofans.com/forums/diablo-iii-general-forums/diablo-iii-general-discussion/19541-judeo-christian-tradition-in-diablo3&#34; target=&#34;_blank&#34;&gt;ký hiệu Judeo-Christian&lt;/a&gt;. Xét một cách nào đó, cả ba dòng game của Blizzard đều có cái hay trong cốt truyện khá riêng biệt. Nếu Starcraft là câu chuyện của tương lai, hi-tech và các chủng loài ngoài hành tinh cũng như cuộc phiêu lưu ở tít xa các dãy thiên hà, Warcraft là câu chuyện thần thoại mang phong cách Bắc Âu với biên niên sử đồ sộ thì Diablo lại là cuộc đấu tranh của con người với nền là &lt;a href=&#34;http://diablo.wikia.com/wiki/Great_Conflict&#34; target=&#34;_blank&#34;&gt;Cuộc Chiến Bất Tận&lt;/a&gt; giữa &lt;a href=&#34;http://diablo.wikia.com/wiki/High_Heavens&#34; target=&#34;_blank&#34;&gt;thiên đàng&lt;/a&gt; và &lt;a href=&#34;http://diablo.wikia.com/wiki/Burning_Hells&#34; target=&#34;_blank&#34;&gt;địa ngục&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.ytimg.com/vi/6rJPzTTLLfI/maxresdefault.jpg&#34; alt=&#34;The Internal Conflict&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cuốn &lt;a href=&#34;http://www.amazon.ca/Diablo-III-Book-Cain-Deckard/dp/1608870634&#34; target=&#34;_blank&#34;&gt;Book of Cain&lt;/a&gt; rất hay, dành cho dân nào mê cốt truyện. Mà thật ra, trước giờ toàn thấy thiên hạ click và click thay vì đọc thoại game. Tới đây mình đã hiểu vì sao những game như Fallout 3 lại có &lt;strong&gt;cốt truyện&lt;/strong&gt; hơn, một phần vì người chơi buộc phải theo những thoại, mạch truyện để hoàn thành nhiệm vụ.&lt;/p&gt;
-
-&lt;h2 id=&#34;một-số-cải-tiến&#34;&gt;Một số cải tiến&lt;/h2&gt;
-
-&lt;p&gt;Dưới góc nhìn của một đứa chơi lâu năm Diablo 2, thì một số vấn đề sau được giải quyết khá tốt trong Diablo 3:&lt;/p&gt;
-
-&lt;h3 id=&#34;rương-đồ&#34;&gt;Rương đồ&lt;/h3&gt;
-
-&lt;p&gt;Nếu chơi bản Diablo cũ thì rương đồ rất là tội nghiệp, chưa kể cái Cube cũng tội nghiệp không kém, trong diablo 3 thì kích thước rương đồ và item có cải thiện rõ rệt. Kích thước tối đa của item là $2 \times 1$ khác hẳn với Diablo II là $ 3 \times 2$, ngoài ra thì rương to hơn, có tăng thêm số lượng rương (thực ra là số tab), có thay đổi icon trong mỗi tab tiện cho công cuộc sắp xếp hàng.&lt;/p&gt;
-
-&lt;h3 id=&#34;bản-đồ&#34;&gt;Bản đồ&lt;/h3&gt;
-
-&lt;p&gt;Bản đồ siêu dễ chơi, một phần vì không đánh đố nhưng trong bản 2. Thêm vào đó có mũi tên chỉ dẫn làm nhiệm vụ nên không khó để tìm đến các đích. Ngoài bản đồ trong địa hình hiện tại còn có bản đồ khái quát của ACT. Có cảm giác nó không bự bằng Diablo II, quái trong bản đồ cũng không đông như bản trước. Không thấy có nhiều cave hay đường hầm gì nhiều, hoặc có thể là do mình chưa mò hết.&lt;/p&gt;
-
-&lt;h3 id=&#34;các-cải-tiến-linh-tinh&#34;&gt;Các cải tiến linh tinh&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Khi đi đến cuối hầm hay cave luôn có 1 portal bằng đá để ra ngoài hang nhanh chóng.&lt;/li&gt;
-&lt;li&gt;Không cần sách xanh nữa, muốn portal về nhà bao giờ cũng được. Và không cần đến chỗ portal point mới &lt;em&gt;thổ địa phù&lt;/em&gt;.&lt;/li&gt;
-&lt;li&gt;Không hiểu sao bản này dễ quá, Normal đánh không mất tí máu, lên Hard hiện giờ chỉ có boss mới làm mình mất máu được.&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

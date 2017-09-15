@@ -11,6 +11,39 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Bài toán chuyển ngày sang thứ</title>
+      <link>http://dangkhoasdc.github.io/post/sakamoto_method/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/sakamoto_method/</guid>
+      <description>&lt;p&gt;Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo;
+Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&amp;gt; Chủ Nhật, 1 -&amp;gt; Thứ Hai &amp;hellip;
+Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;amp;R C).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;dayofweek(y, m, d) {
+    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
+    y -= m &amp;lt; 3;
+    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &amp;ldquo;ranh&amp;rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; (Nếu ngày &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; là thứ Hai thì &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; sẽ là thứ 5). t[] chính là offset cho ngày đầu tiên của tháng so với ngày &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt;, như vậy ta có &lt;code&gt;t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}&lt;/code&gt; (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d) , xong module cho 7 là ra được.&lt;/p&gt;
+
+&lt;p&gt;Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm &lt;code&gt;y&lt;/code&gt;, ta phải cộng thêm &lt;code&gt;y&lt;/code&gt; ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.&lt;/p&gt;
+
+&lt;p&gt;Những năm nhuận, ta lại phải thêm cái ngày &lt;sup&gt;29&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; vào trong, tức là nó sẽ thêm 1 ngày nữa, trong &lt;code&gt;y&lt;/code&gt; năm? nếu có &lt;code&gt;y&lt;/code&gt; năm nhuận thì sẽ có thêm &lt;code&gt;x&lt;/code&gt; ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.&lt;/p&gt;
+
+&lt;p&gt;Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày &lt;sup&gt;29&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : &lt;code&gt;y -= m &amp;lt; 3&lt;/code&gt;. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.&lt;/p&gt;
+
+&lt;p&gt;Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Để khắc phục điều đó, tác giả giảm 1 đơn vị trong offset kể từ tháng 3 trở đi, và như vậy sẽ thống nhất tháng 1 và tháng 2. Ta sẽ được mảng t[] như trong code gốc. Vấn đề là khi ta đồng loạt giảm offset như vậy, cũng như giảm tháng 1, 2 đi 1 năm thì phải có hằng số &lt;code&gt;c&lt;/code&gt; nào đó cân bằng lại cho đúng với lịch. Nhưng bằng kiểm chứng, người ta phát hiện ra c = 0. Wow. 😲&lt;/p&gt;
+
+&lt;p&gt;Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.&lt;/p&gt;
+
+&lt;p&gt;Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43;</title>
       <link>http://dangkhoasdc.github.io/post/cpp/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
@@ -1018,86 +1051,6 @@ architecture trong project.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;http://www.makemark.co.uk/wp-content/uploads/2011/05/infooverload_full.jpg&#34; alt=&#34;Information Overload&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Internet mở ra cho mọi người một cổng thông tin tuyệt vời. Nhưng đó cũng chính là vấn đề, đôi khi chúng ta bị “ngập ngụa” trong mớ thông tin mà không biết cái nào đáng dành thời gian để đọc. Điều cần thiết khi truy cập thông tin đó là xác định bản thân mình đang muốn tập trung vào mảng nào, tìm kiếm các nguồn kênh đáng tin cậy, đọc một cách đào sâu và nghiên cứu kỹ, đồng thời trao đổi, chia sẻ và đánh giá các bài viết. Điều đó giúp ta có thể không follow nhiều trang tin tức, nhưng kiến thức và thông tin của bản thân được trao dồi. Tập trung vào chất lượng hơn số lượng là một bước đi khôn ngoan trong kỷ nguyên số này.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Quy Trình Xin Tài Trợ NAFOSTED</title>
-      <link>http://dangkhoasdc.github.io/post/nafosted_travel_fund/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/nafosted_travel_fund/</guid>
-      <description>
-
-&lt;p&gt;&lt;div class=&#34;entry&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://phdcomics.com/comics/archive/phd102698s.gif&#34; alt=&#34;comics&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;tiêu-chí&#34;&gt;Tiêu chí&lt;/h2&gt;
-
-&lt;p&gt;Để đảm bảo hồ sơ được duyệt, bài báo và hội nghị tham dự phải đạt một số tiêu chí mà Quỹ đưa ra:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Nhà khoa học đang thực hiện đề tài do Quỹ hỗ trợ, hoặc Nhà khoa học là người dưới 35 tuổi.&lt;/li&gt;
-&lt;li&gt;Quỹ đánh giá hội nghị dựa trên lịch sử của hội nghị, uy tín của đơn vị tài trợ hội nghị, uy tính của các nhà khoa học khách mời hay uy tính của ban tổ chức.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ưu tiên&lt;/strong&gt;: Hội nghị được liệt kê trong danh sách của Thomson Reuters hoặc bảng xếp hạng của ERA.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ưu tiên&lt;/strong&gt;: Người xin tài trợ là keynote speaker, track chair/co-chair, hoặc được giải thưởng bài báo xuất sắc.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;quy-trình&#34;&gt;Quy trình&lt;/h2&gt;
-
-&lt;p&gt;Tổng thời gian NAFOSTED duyệt, chấp nhận và xử lý hồ sơ trung bình mất từ 1-2 tháng. Hồ sơ xin tài trợ của NAFOSTED bao gồm:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Đơn đề nghị tài trợ có xác nhận của cơ quan, tổ chức nơi công tác.&lt;/li&gt;
-&lt;li&gt;Thông báo của Ban tổ chức kèm theo địa chỉ trang web giới thiệu về hội nghị, hội thảo;&lt;/li&gt;
-&lt;li&gt;Thư mời tham dự và trình bày báo cáo khoa học tại hội nghị, hội thảo;&lt;/li&gt;
-&lt;li&gt;Báo cáo khoa học sẽ trình bày tại hội nghị, hội thảo;&lt;/li&gt;
-&lt;li&gt;Lý lịch khoa học của người nộp đơn đề nghị tài trợ;&lt;/li&gt;
-&lt;li&gt;Dự toán kinh phí đề nghị Quỹ tài trợ, trong đó nêu rõ các khoản chi phí được ban tổ chức hội nghị, hội thảo hoặc các tổ chức khác cam kết tài trợ - nếu có.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Tất cả tài liệu này phải được điền đầy đủ, có chữ ký của cá nhân và xác nhận của cơ quan đang làm việc/học tập, sau đó gửi đường bưu chính đến địa chỉ: &lt;strong&gt;Tầng 4, Số 39 Trần Hưng Đạo, P. Hàng Bài, Q. Hoàn Kiếm, Hà Nội.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Các tài liệu (1), (5) và (6) có &lt;a href=&#34;http://www.nafosted.gov.vn/vi/chuong-trinh-tai-tro/Ho-tro-nghien-cuu-khoa-hoc/Chuong-trinh-ho-tro-nghien-cuu-khoa-hoc-1/&#34; target=&#34;_blank&#34;&gt;mẫu từ website chính thức của Quỹ&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tài liệu (3): trong thư mời phải đề cập rõ ràng đây công trình khoa học được công bố dạng báo cáo, không phải dạng poster. Quỹ còn bắt buộc trong thư mời phải đề cập đến chi tiết &lt;strong&gt;oral presentation&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Tài liệu (4): Gửi kèm email thông báo và các đánh giá của hội nghị.&lt;/p&gt;
-
-&lt;p&gt;Khoảng một tuần sau khi gửi hồ sơ thì bên Quỹ sẽ liên lạc và yêu cầu cập nhật hoặc chỉnh sửa một số hồ sơ. Trong đó chủ yếu liên qua đến Dự Toán Kinh Phí (Tài liệu 6). Bên Quỹ sẽ thanh toán tiền vé máy bay, tuy nhiên người xin tài trợ có thể nhờ thay đổi chuyến bay hoặc thay đổi hãng bay để phù hợp hoặc cân đối các khoản chi phí. Người xin tài trợ có thể được Quỹ hỗ trợ tối đa trong 5 ngày, tuy nhiên nếu người xin tài trợ ở lại lâu hơn, thì những ngày còn lại sẽ không nằm trong phần hỗ trợ của Quỹ. Thông tin chi tiết về các khoản trong tài liệu này được trình bày cụ thể trong thông tư &lt;strong&gt;102/2012/TT-BTC&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Điểm lưu ý là toàn bộ tiền hỗ trợ được tính bằng đơn vị USD và sau đó khi quyết toán được quy đổi theo tỉ giá VND và USD. Kể cả khi tham dự hội nghị ở các nước không dùng đồng USD thì các khoản chi phí trong dự trù bắt buộc phải đổi sang USD.&lt;/p&gt;
-
-&lt;p&gt;Trong trường hợp được hỗ trợ, NAFOSTED sẽ thanh toán trước tiền vé máy bay. Tất cả các khoản tiền còn lại sẽ được NAFOSTED quyết toán sau. Trong quá trình tham dự hội nghị, người báo cáo phải xin hoá đơn có con dấu (xanh hoặc đỏ) hoặc có chữ ký xác nhận của thư kí hội nghị.&lt;/p&gt;
-
-&lt;p&gt;Khi hoàn tất chuyến báo cáo hội nghị, người báo cáo phải nộp lại hồ sơ (gửi đường bưu điện) các hồ sơ sau:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Vé lên máy bay (boarding pass).&lt;/li&gt;
-&lt;li&gt;Hoá đơn của hội nghị.&lt;/li&gt;
-&lt;li&gt;Chứng nhận tham dự hội nghị.&lt;/li&gt;
-&lt;li&gt;Hợp đồng bảo hiểm.&lt;/li&gt;
-&lt;li&gt;Bản photo Passport.&lt;/li&gt;
-&lt;li&gt;Dự toán kinh phí được hiệu chính lại. Thông thường sẽ không khác so với bản trước đó nhưng có thể thay đổi liên quan đến tỉ giá hiện tại hoặc các chi phí phát sinh.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Sau khi gửi toàn bộ hồ sơ này đến Quỹ, Quỹ sẽ giải quyết và sẽ có thông báo danh sách được quyết toán của Quỹ. Trong khoảng 1 tuần kể từ sau khi có thông báo, tiền hỗ trợ sẽ được gửi vào tài khoản ngân hàng.&lt;/p&gt;
-
-&lt;h2 id=&#34;kinh-nghiệm-cá-nhân&#34;&gt;Kinh nghiệm cá nhân&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Thương lượng về vé máy bay để có thể có vé rẻ hơn, thay đổi thời gian bay để có thể ở lại hội nghị lâu hơn.&lt;/li&gt;
-&lt;li&gt;Khi xin giấy chứng nhận tham dự hội nghị và hoá đơn thì xin con dấu và &lt;strong&gt;kèm cả chữ ký của thư ký hội nghị&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Nộp đơn hội nghị trước 2 tháng để đảm bảo cập nhật kịp hồ sơ.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;nguồn-tham-khảo&#34;&gt;Nguồn tham khảo&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.nafosted.gov.vn/vi/chuong-trinh-tai-tro/Ho-tro-nghien-cuu-khoa-hoc/Chuong-trinh-ho-tro-nghien-cuu-khoa-hoc-1/&#34; target=&#34;_blank&#34;&gt;NAFOSTED&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.moit.gov.vn/vn/pages/VanBanDieuHanh.aspx?TypeVB=1&amp;amp;vID=11930&#34; target=&#34;_blank&#34;&gt;Thông tư 102/2012/TT-BTC&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     
