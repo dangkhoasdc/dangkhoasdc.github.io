@@ -53,6 +53,32 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
     </item>
     
     <item>
+      <title>Hậu Tây Du Kí</title>
+      <link>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</guid>
+      <description>&lt;p&gt;Ngày xưa mình mê coi phim này cực kì. Cứ mỗi lần đài lên sóng là rống họng lên hát: &amp;ldquo;quoài oa xinh xiên&amp;rdquo;. Đoạn nhạc phim mở đầu phải nói rất ấn tượng và mình nhớ mãi đến bây giờ. Hôm nay tình cờ được nghe bản lời Việt của 1 bài trong Hậu Tây Du Kí từ chế Bích Phương, tuổi thơ bỗng nhiên trào về.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/bkrhB-KyC6s&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;Mới nghe là mình đã biết ngay rằng đây là bài nhạc phim bất hủ hôm nào. Thế là hứng chí lên tìm bản mở đầu, cái bản &amp;ldquo;quoài oa xinh xiên&amp;rdquo; đó&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/WujVQocNprY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;Lúc nhỏ coi phim này khá là vui. Chuyện đầu tiên là mấy viên xá lợi, mình thì cứ nghĩ là &amp;ldquo;xí lị&amp;rdquo;, hoặc &amp;ldquo;xá xị&amp;rdquo; gì đó. Phim này thì đánh đấm quá ảo, chưa kể là câu chuyện tam giới phức tạp hơn trong Tây Du Kí bản gốc. Mình vẫn còn nhớ có những chi tiết liên kết với phần trước như vụ &amp;ldquo;Tôn Hành Giả - Giả Hành Tôn&amp;rdquo;, &amp;ldquo;Vô Thiên&amp;rdquo;, rồi cả chuyện hồi sinh của Phật Tổ, các yếu tố thần thoại và fantasy được đề cập nhiều hơn. Mặc dù tạo hình không thân quen như trước nhưng cũng rất đáng xem nếu xét những phim ra sau bộ kinh điển 1986.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43;</title>
       <link>http://dangkhoasdc.github.io/post/cpp/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
@@ -941,125 +967,6 @@ architecture trong project.&lt;/p&gt;
 &lt;h1 id=&#34;future-works&#34;&gt;Future Works&lt;/h1&gt;
 
 &lt;p&gt;Hiện giờ minh đang tìm cách download toàn bộ pdf của bài năm nay để làm clustering và phân tích nội dung, đồng thời làm 1 tool search nho nhỏ. Ngoài ra hiện giờ mình đang tìm kiếm danh sách các bài các năm trước để có thêm 1 số phân tích hay ho hơn nữa (về trending, các bài được cite nhiều,).&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Những kênh thông tin công nghệ</title>
-      <link>http://dangkhoasdc.github.io/post/it_news/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/it_news/</guid>
-      <description>
-
-&lt;h4 id=&#34;đây-là-một-chủ-đề-được-mình-nói-kha-khá-nhiều-lần-tại-open-talk-ở-trường-đh-tự-nhiên-nói-quá-thôi-chứ-đi-có-2-lần-một-trong-những-thiếu-sót-lớn-của-sinh-viên-cntt-đó-là-không-nắm-kịp-tin-tức-công-nghệ-cũng-như-không-biết-thế-giới-đang-chạy-tới-đâu-rồi-chia-sẻ-dưới-đây-của-mình-chỉ-tập-trung-vào-các-mảng-mình-quan-tâm-nên-dĩ-nhiên-còn-rất-nhiều-thiếu-sót-những-lĩnh-vực-khá-tuy-nhiên-có-thể-tìm-các-kênh-thông-tin-thông-qua-một-số-thủ-thuật-mẹo-vặt&#34;&gt;Đây là một chủ đề được mình nói kha khá nhiều lần tại Open Talk ở trường ĐH Tự Nhiên (nói quá thôi chứ đi có 2 lần). Một trong những thiếu sót lớn của sinh viên CNTT đó là không nắm kịp tin tức công nghệ cũng như không biết thế giới đang chạy tới đâu rồi. Chia sẻ dưới đây của mình chỉ tập trung vào các mảng mình quan tâm nên dĩ nhiên còn rất nhiều thiếu sót những lĩnh vực khá. Tuy nhiên, có thể tìm các kênh thông tin thông qua một số thủ thuật, mẹo vặt.&lt;/h4&gt;
-
-&lt;h2 id=&#34;chăm-đi-hội-thảo&#34;&gt;Chăm đi hội thảo&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://cdn.meme.am/instances/58698551.jpg&#34; alt=&#34;Barcamp: best place for getting gifts and clothes&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Dĩ nhiên là trừ mấy hội thảo Đa Cấp. Theo như kinh nghiệm lặn lội 4 năm ở giảng đường đại học, kinh qua không biết bao nhiêu hội thảo của IBM, M$, Nokia, blah blah. Mình vẫn còn ấn tượng lần đầu tiên hồi năm 1 đi dự buổi training về công nghệ Cloud của IBM, nhờ buổi đó mà đi về mình chả biết thêm gì cả. Nhưng vẫn còn nhớ cái cảnh xuống xe số 6 chỗ đường Sư Vạn Hạnh giao với An Dương Vương và đi bộ mệt nghỉ tới trường Ngoại Ngữ Tin Học . Buổi thứ hai là khi tham dự buổi phát động Imaging Cup. Phải công nhận buổi đó rất ấn tượng và khiến mình có động lực làm đại sứ Microsoft: &lt;a href=&#34;http://www.microsoft.com/vietnam/student/introduction.aspx&#34; target=&#34;_blank&#34;&gt;Microsoft Student Partner&lt;/a&gt;. Dù đã có cố gắng tham gia hồi năm 2, năm 3 gì đó nhưng bất thành. Không liên quan nhưng 1 thằng bạn trong lớp sau này thành MSP. Đến năm hai thì đi nhiều hơn, máu hơn, dù đôi lúc ngồi bên trong chả biết thiên hạ nói gì, nhưng quan trọng mình cũng định hình được chuyện gì đang xảy ra với làng công nghệ.&lt;/p&gt;
-
-&lt;p&gt;Một số hội thảo khá hay ho ở TP.Hồ Chí Minh có thể kể đến như:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/BarCampSaigon&#34; target=&#34;_blank&#34;&gt;Barcamp&lt;/a&gt;: Phải đi vì là nơi qui tụ các thánh, ăn buffet được tặng áo. blah blah, đây cũng là event công nghệ khá lớn.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/MicrosoftDeveloper.Vietnam&#34; target=&#34;_blank&#34;&gt;Các buổi training của Microsoft&lt;/a&gt;: tập trung vào công nghệ của Microsoft.&lt;/li&gt;
-&lt;li&gt;Google Developer Group: buổi ra mắt năm 2013 cực kì hoành tráng. Nhưng rồi có vẻ hơi chìm dần, nhưng nghe đồn đâu vẫn còn hoạt động.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.meetup.com/&#34; target=&#34;_blank&#34;&gt;Các nhóm lập trình trên MeetUp&lt;/a&gt;: Có thấy group về Javascript và PHP hoạt động khá dữ dội trên này.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;reddit&#34;&gt;Reddit&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://wp.streetwise.co/wp-content/uploads//2014/08/Reddit.png&#34; alt=&#34;Reddit&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Thật khó để nói Reddit là mạng xã hội như thế nào. Có thể hiểu đây là một hình thái của &lt;a href=&#34;http://vozforums.com/forumdisplay.php?f=17&#34; target=&#34;_blank&#34;&gt;Voz&lt;/a&gt; hay Webtretho phiên bản nước ngoài, tuy nhiên tầm hoạt động cũng như các chủ đề vô cùng rộng lớn. Có rất nhiều diễn đàn con trong này là những chia sẻ về công nghệ rất đáng quan tâm. Chỉ cần tạo một nick và subcribe những chủ đề mình thích, mỗi ngày sẽ có hàng tá thông tin hay ho. Ngoài ra, việc đọc bài trên Reddit còn giúp luyện tiếng Anh (chủ yếu slang và idiom ) cũng như học hỏi được từ các thành viên khác.&lt;/p&gt;
-
-&lt;p&gt;Một số trang tiêu biểu mình follows:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/programming&#34; target=&#34;_blank&#34;&gt;/r/programming&lt;/a&gt;: trang này hầu như cập nhật những tin mới nhất về lập trình. Nhảm hài hay nghiêm túc đều có.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/dailyprogrammer/&#34; target=&#34;_blank&#34;&gt;/r/dailyprogramming&lt;/a&gt;: coding mỗi ngày. Trang này rất hay để mỗi ngày tập code một tí.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/coding&#34; target=&#34;_blank&#34;&gt;/r/coding&lt;/a&gt;: thuần tuý về coding.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/compsci&#34; target=&#34;_blank&#34;&gt;/r/compsci&lt;/a&gt;: tin tức trong lĩnh vực Khoa Học Máy Tính.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/webdev&#34; target=&#34;_blank&#34;&gt;/r/webdev&lt;/a&gt;: subreddit dành cho dân phát triển website.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/machinelearning&#34; target=&#34;_blank&#34;&gt;/r/machinelearning&lt;/a&gt;: Máy Học và các vấn đề liên quan.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/vim&#34; target=&#34;_blank&#34;&gt;/r/vim&lt;/a&gt;: editor ưu thích.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/programmingchallenges&#34; target=&#34;_blank&#34;&gt;/r/programmingchallenges&lt;/a&gt;: dành cho những thánh code.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/cpp&#34; target=&#34;_blank&#34;&gt;/r/cpp&lt;/a&gt;: ngôn ngữ C++ thần thánh.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/javascript&#34; target=&#34;_blank&#34;&gt;/r/javascript&lt;/a&gt;: trang tin về javascript.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.reddit.com/r/ProgrammerHumor/top/&#34; target=&#34;_blank&#34;&gt;/r/ProgrammerHumor&lt;/a&gt;: Hài hước theo cách của tụi lập trình viên.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;trang-tin-công-nghệ&#34;&gt;Trang tin công nghệ&lt;/h2&gt;
-
-&lt;p&gt;Hiện nay có rất nhiều trang thông tin công nghệ có thể theo dõi, ở trong Việt Nam thì mình thấy có một số trang khá hay ho đến từ các tổ chức, công ty. Có thể kể đến như của &lt;a href=&#34;http://blog.siliconstraits.vn/&#34; target=&#34;_blank&#34;&gt;Silicon Strait Saigon&lt;/a&gt; trang này chuyên tin về iOS, Web và Design, chất lượng bài viết khá tốt. &lt;a href=&#34;https://tinhte.vn/&#34; target=&#34;_blank&#34;&gt;TinhTe.vn&lt;/a&gt; cập nhật các tin tức liên quan đến công nghệ, có cả máy ảnh, xe cộ, blah blah. Tuy nhiên điểm mình không hài lòng đó là chất lượng bài viết không quá tốt, không đào sâu, đặc biệt liên quan đến các chủ đề lập trình hay khoa học máy tính, tốt nhất là đọc để biết tin tức thế nào. Một phần nữa users thành phần trẻ trâu nhiều, hàm lượng thông tin chả có bao. &lt;a href=&#34;http://vinacode.net/&#34; target=&#34;_blank&#34;&gt;VinaCode&lt;/a&gt; cũng là một trong những trang chăm chỉ cập nhật bài viết, chủ yếu dịch từ nước ngoài, nhưng có gọi là có đầu tư. Một trang khác đó là &lt;a href=&#34;http://blog.itviec.com/&#34; target=&#34;_blank&#34;&gt;ITViec&lt;/a&gt;: rất nhiều thông tin bổ ích để xây dựng thương hiệu bản thân, mình cũng thấy chất lượng dịch thuật ở đây khá là chất.&lt;/p&gt;
-
-&lt;p&gt;Một trang mới nổi hiện nay là &lt;a href=&#34;http://recode.net/&#34; target=&#34;_blank&#34;&gt;Re/Code&lt;/a&gt;: trang này cập nhật các thông tin công nghệ rất hay, bài viết cũng chất lượng.&lt;/p&gt;
-
-&lt;p&gt;Một số trang cũng hay follow như:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.theverge.com/&#34; target=&#34;_blank&#34;&gt;The Verge&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://mashable.com/&#34; target=&#34;_blank&#34;&gt;The Mashable&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.quora.com/&#34; target=&#34;_blank&#34;&gt;Quora&lt;/a&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;đứng-trên-vai-người-khổng-lồ&#34;&gt;Đứng trên vai người khổng lồ&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://wallpaperscraft.com/image/titanium_kousen_yasuo_art_mikasa_ackerman_girl_94711_640x1136.jpg&#34; alt=&#34;You know what I mean. btw, I love Mikasa&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Mình rất thích vế này. Những người đầu ngành, nhất là về lĩnh vực Công Nghệ thì thường hay chia sẻ tin tức, quan điểm, sản phẩm của mình ở các trang xã hội như Facebook, G+ (có khá nhiều giáo sư đầu ngành xài mạng này) và Twitter, một số khác còn dùng trang cá nhân (homepage) hay blog để chia sẻ kiến thức nữa. Ở Việt Nam mình thích nhất &lt;a href=&#34;http://www.procul.org/blog/&#34; target=&#34;_blank&#34;&gt;trang của các bậc tiền bối&lt;/a&gt;, bài viết rất chất lượng và có tính chuyên sâu. Nếu quan tâm đến máy học và các vấn đề về thị giác máy tính có thể quan tâm, theo dõi trang cá nhân của các nhân vật lừng lẫy sau:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/andrew.ng.96&#34; target=&#34;_blank&#34;&gt;Andrew Ng.&lt;/a&gt;: không cần nói cũng biết là ai.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/yann.lecun&#34; target=&#34;_blank&#34;&gt;Yann LeCun&lt;/a&gt;: Trưởng điều hành bộ phận AI Facebook Research.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://plus.google.com/+LinusTorvalds&#34; target=&#34;_blank&#34;&gt;Linus Tovalds&lt;/a&gt;: cha để Linux.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://research.facebook.com/&#34; target=&#34;_blank&#34;&gt;Facebook Research&lt;/a&gt;: Cập nhật các công trình nghiên cứu của Facebook.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Còn rất nhiều bậc cao nhân khác nữa. Đọc và tìm hiểu quan điểm về công nghệ của họ là một cách tốt nhất nâng cao hiểu biết của mình.&lt;/p&gt;
-
-&lt;h2 id=&#34;blogs&#34;&gt;Blogs&lt;/h2&gt;
-
-&lt;p&gt;Điểm khác biệt của blog là mang nhiều ý kiến chủ quan của người viết hơn, giọng văn và cách hành ngôn cũng cá nhân hoá hơn. Thông thường các bài viết ở đây khá vui và độc đáo, thực sự mình thích đọc bên blog nhiều hơn, phần nào đó thể hiện được quan điểm của tác giả, bài viết thường có đầu tư và chuyên sâu vào một mảng nào đó.&lt;/p&gt;
-
-&lt;p&gt;Về mảng Thị Giác Máy Tính có &lt;a href=&#34;http://www.computervisionblog.com/&#34; target=&#34;_blank&#34;&gt;Computervision blog&lt;/a&gt; - bài viết rất chất.&lt;/p&gt;
-
-&lt;p&gt;Có khá nhiều trang blog kinh điển của mà hầu như mọi programmer đều biết. Có thể kể đến như (1): &lt;a href=&#34;http://blog.codinghorror.com/&#34; target=&#34;_blank&#34;&gt;Coding Horror&lt;/a&gt;: đọc bài trong này level về công nghệ phần nào tăng lên rõ rệt.&lt;/p&gt;
-
-&lt;p&gt;Một thánh nữa mà ngày xưa mình rất hay theo dõi khi còn xài Windows và code C# đó là &lt;a href=&#34;http://www.hanselman.com/blog/&#34; target=&#34;_blank&#34;&gt;Hanselman&lt;/a&gt;. Ngày xưa biết đến thánh nhờ bài viết &lt;a href=&#34;http://www.hanselman.com/blog/ScottHanselmans2014UltimateDeveloperAndPowerUsersToolListForWindows.aspx&#34; target=&#34;_blank&#34;&gt;các công cụ dành cho dev&lt;/a&gt;,&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://jeremykun.com/&#34; target=&#34;_blank&#34;&gt;Jeremykun&lt;/a&gt;: những bài viết là sự kết hợp tuyệt vời của toán học và lập trình, rất đáng để dành thời gian đọc.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://thecodelesscode.com/contents&#34; target=&#34;_blank&#34;&gt;Codeless code&lt;/a&gt;: trang này viết theo kiểu “khó-hiểu-như-trong-kinh-thánh”, độ giải trí và suy ngẫm rất cao.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://lambda-the-ultimate.org/&#34; target=&#34;_blank&#34;&gt;Programming Languages weblog&lt;/a&gt;: trang này thì quá nổi tiếng rồi.&lt;/p&gt;
-
-&lt;p&gt;Một số chuyên sâu hơn về các kỹ thuật trong lập trình, mình chỉ khoái mỗi C++ và Python, theo mình một số trang sau khá là hay:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://blog.jetbrains.com/clion/&#34; target=&#34;_blank&#34;&gt;CLion blog&lt;/a&gt;: Các tin tức liên quan đến C++.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://cpphints.com/&#34; target=&#34;_blank&#34;&gt;Cpp Hints&lt;/a&gt;: Phân tích các lỗi trong các dự án mã nguồn mở sử dụng C++.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.facebook.com/MeetingCpp?fref=nf&#34; target=&#34;_blank&#34;&gt;Meeting Cpp&lt;/a&gt;: cập nhật các bài viết về C++.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.pycoders.com/&#34; target=&#34;_blank&#34;&gt;Pycoder&lt;/a&gt;: cuối thứ 6 nào cũng dành thời gian đọc tin. Mục tiêu là trở thành Full Stack Devloper mà lị.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://javascriptweekly.com/&#34; target=&#34;_blank&#34;&gt;Javascript Weekly&lt;/a&gt;: trang này rất giàu thông tin, tuần nào cũng cập nhật về các tin tức liên quan đến Javascript và web dev.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Một số blog của các cao thủ võ lâm ở Việt Nam cũng thường xuyên cập nhật công nghệ và các kỹ thuật mới. Blog của &lt;a href=&#34;http://www.quan404.com/&#34; target=&#34;_blank&#34;&gt;Quan 404&lt;/a&gt; là một site điển hình. Tuy trang này khá mới, nhưng những bài viết khá là chất và bám sát các công nghệ hiện là state-of-the-art.&lt;/p&gt;
-
-&lt;p&gt;Một số trang khá là vui mà mình cũng hay follow:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://xkcd.com/&#34; target=&#34;_blank&#34;&gt;XKCD&lt;/a&gt;: đơn giản đó là những gì lãng mạn, châm biếm, toán học và ngôn ngữ. Comic có vài hình mà độ hại não cao.&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://phdcomics.com/comics.php&#34; target=&#34;_blank&#34;&gt;PHD Comics&lt;/a&gt;: ai làm research nhiều sẽ thấu hiểu những gì mà comic này đề cập, rất hài hước.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;tổng-kết&#34;&gt;Tổng kết&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.makemark.co.uk/wp-content/uploads/2011/05/infooverload_full.jpg&#34; alt=&#34;Information Overload&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Internet mở ra cho mọi người một cổng thông tin tuyệt vời. Nhưng đó cũng chính là vấn đề, đôi khi chúng ta bị “ngập ngụa” trong mớ thông tin mà không biết cái nào đáng dành thời gian để đọc. Điều cần thiết khi truy cập thông tin đó là xác định bản thân mình đang muốn tập trung vào mảng nào, tìm kiếm các nguồn kênh đáng tin cậy, đọc một cách đào sâu và nghiên cứu kỹ, đồng thời trao đổi, chia sẻ và đánh giá các bài viết. Điều đó giúp ta có thể không follow nhiều trang tin tức, nhưng kiến thức và thông tin của bản thân được trao dồi. Tập trung vào chất lượng hơn số lượng là một bước đi khôn ngoan trong kỷ nguyên số này.&lt;/p&gt;
 </description>
     </item>
     

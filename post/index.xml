@@ -53,6 +53,32 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
     </item>
     
     <item>
+      <title>Hậu Tây Du Kí</title>
+      <link>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</guid>
+      <description>&lt;p&gt;Ngày xưa mình mê coi phim này cực kì. Cứ mỗi lần đài lên sóng là rống họng lên hát: &amp;ldquo;quoài oa xinh xiên&amp;rdquo;. Đoạn nhạc phim mở đầu phải nói rất ấn tượng và mình nhớ mãi đến bây giờ. Hôm nay tình cờ được nghe bản lời Việt của 1 bài trong Hậu Tây Du Kí từ chế Bích Phương, tuổi thơ bỗng nhiên trào về.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/bkrhB-KyC6s&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;Mới nghe là mình đã biết ngay rằng đây là bài nhạc phim bất hủ hôm nào. Thế là hứng chí lên tìm bản mở đầu, cái bản &amp;ldquo;quoài oa xinh xiên&amp;rdquo; đó&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/WujVQocNprY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+
+&lt;p&gt;Lúc nhỏ coi phim này khá là vui. Chuyện đầu tiên là mấy viên xá lợi, mình thì cứ nghĩ là &amp;ldquo;xí lị&amp;rdquo;, hoặc &amp;ldquo;xá xị&amp;rdquo; gì đó. Phim này thì đánh đấm quá ảo, chưa kể là câu chuyện tam giới phức tạp hơn trong Tây Du Kí bản gốc. Mình vẫn còn nhớ có những chi tiết liên kết với phần trước như vụ &amp;ldquo;Tôn Hành Giả - Giả Hành Tôn&amp;rdquo;, &amp;ldquo;Vô Thiên&amp;rdquo;, rồi cả chuyện hồi sinh của Phật Tổ, các yếu tố thần thoại và fantasy được đề cập nhiều hơn. Mặc dù tạo hình không thân quen như trước nhưng cũng rất đáng xem nếu xét những phim ra sau bộ kinh điển 1986.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>C&#43;&#43;</title>
       <link>http://dangkhoasdc.github.io/post/cpp/</link>
       <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
@@ -1218,196 +1244,6 @@ architecture trong project.&lt;/p&gt;
 &lt;h1 id=&#34;tổng-kết&#34;&gt;Tổng kết&lt;/h1&gt;
 
 &lt;p&gt;Đây là một seri rất đáng xem, giới thiệu cho khán giả về thế giới Star Wars vô cùng rộng lớn với những cuộc phiêu lưu đầy thú vị. Xem xong mới chỉ 3 tập nhưng mình đã hiểu vì sao khán giả khắp nơi lại cuồng đến vậy, nhà nhà người người đều &lt;a href=&#34;http://tuoitre.vn/tin/van-hoa-giai-tri/dien-anh/20151220/tong-thong-obama-cac-ban-a-toi-phai-di-xem-star-wars-day/1024117.html&#34; target=&#34;_blank&#34;&gt;bàn tán về Star Wars đến vậy&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe</title>
-      <link>http://dangkhoasdc.github.io/post/protocol-buffers-caffe/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/protocol-buffers-caffe/</guid>
-      <description>
-
-&lt;h5 id=&#34;protocol-buffers-protobuf-hay-pb-là-một-trong-những-thành-phần-quan-trọng-trong-thư-viện-caffe-http-caffe-berkeleyvision-org-bài-viết-dưới-đây-là-một-số-note-và-cách-sử-dụng-protocol-buffers-trong-ngôn-ngữ-c-mục-tiêu-ban-đầu-chủ-yếu-tìm-hiểu-xem-khả-năng-tuỳ-chỉnh-của-caffe-đến-đâu&#34;&gt;Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện &lt;a href=&#34;http://caffe.berkeleyvision.org/&#34; target=&#34;_blank&#34;&gt;Caffe&lt;/a&gt;. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C++. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu.&lt;/h5&gt;
-
-&lt;h1 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/overview&#34; target=&#34;_blank&#34;&gt;Protocol Buffers&lt;/a&gt; là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển. Protocol Buffers có thể so sánh giống như XML, tuy nhiên PB có một số ưu điểm (theo quảng cáo của Google): tiện hơn, nhẹ hơn (từ 3 đến 10 lần so với XML), thao tác đọc ghi nhanh hơn (20 đến 100 lần nhanh hơn so với XML) và dễ dàng hơn. Protocol Buffers cho phép người dùng thiết kế dữ liệu và sử dụng code tự động phát sinh để đọc ghi các dữ liệu đó.&lt;/p&gt;
-
-&lt;h1 id=&#34;cơ-chế&#34;&gt;Cơ chế&lt;/h1&gt;
-
-&lt;p&gt;Người dùng định nghĩa cấu trúc dữ liệu của mình trong file &lt;code&gt;.proto&lt;/code&gt;. Trong đó định nghĩa kiểu dữ liệu, ràng buộc của các thuộc tính cũng như cấu trúc (mảng hay giá trị scalar). Trình biên dịch PB sẽ dịch file &lt;code&gt;.proto&lt;/code&gt; thành một file mà ngôn ngữ lập trình đọc được (trong trường hợp C++ là file &lt;code&gt;.h&lt;/code&gt;) giúp lập trình viên thao tác trên dữ liệu được thiết kế trước đó. Và như vậy, thay vì tự thiết kế 1 dữ liệu bằng chính ngôn ngữ lập trình, và tốn thêm thời gian để viết các cơ chế đọc ghi, chuyển đổi dữ liệu hay chuyển từ định dạng này (text) sang định dạng khác (binary), ProtoBuf sẽ tự động sinh code cho những thao tác này.&lt;/p&gt;
-
-&lt;h1 id=&#34;trong-caffe&#34;&gt;Trong Caffe&lt;/h1&gt;
-
-&lt;p&gt;Protocol Buffers đóng vai trò khá quan trọng trong thư viện &lt;a href=&#34;https://github.com/BVLC/caffe&#34; target=&#34;_blank&#34;&gt;Caffe&lt;/a&gt;. Nếu không sử dụng PB thì Caffe trở thành một thư viện rất khó xài bởi nhiều lí do:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Không có tài liệu cụ thể để tuỳ chỉnh các layer hay tự thiết kế mạng cho riêng hệ thống. Vấn đề này được giải quyết đơn giản nhờ PB. PB cho phép cá c tác giả của Caffe tạo ra các dữ liệu dùng cho hệ thống này (Solver, Layer, Net, …). Những ai dùng Caffe chỉ cần bỏ chút thời gian để đọc lại đoạn thiết kế trong &lt;a href=&#34;https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto&#34; target=&#34;_blank&#34;&gt;file &lt;code&gt;proto&lt;/code&gt; này&lt;/a&gt; đã được comment khá đầy đủ và chi tiết. Nhờ việc open source phần này nên các nhóm nghiên cứu khác có khả năng custom bằng cách thêm các Layer hoặc thêm các hàm vàotrong hệ thống Caffe.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Khả năng không custom cao: việc tạo ra một kiến trúc mới khá dễ dàng nhờ vào PB. Việc thiết kế một mạng giờ đây giống như một trò xếp hình với các khối là những kiểu dữ liệu được thiết kế trong ProtoBuf [Hình 1]. Một ví dụ kinh điển là sử dụng Caffe để &lt;a href=&#34;http://caffe.berkeleyvision.org/gathered/examples/mnist.html&#34; target=&#34;_blank&#34;&gt;thiết kế mạng LeNet&lt;/a&gt;. Người nghiên cứu không phải quá nặng đầu hay nhũn não để viết code C++ hay Matlab hay Python hay Cuda để thiết kế mạng mà thay vào đó là viết một kiến trúc trong file &lt;code&gt;prototxt&lt;/code&gt; như thiết kế một cấu trúc XML hoặc JSON. Tác giả Caffe cũng không nhũn não khi ngồi parse từ file text sang kiểu dữ liệu của mình.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/chfn2ch.png&#34; alt=&#34;Mạng Deep Learning&#34; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;cài-đặt&#34;&gt;Cài đặt&lt;/h1&gt;
-
-&lt;p&gt;Clone mã nguồn của &lt;a href=&#34;https://github.com/google/protobuf&#34; target=&#34;_blank&#34;&gt;ProtoBuf tại Github&lt;/a&gt;, sau đó cài theo lệnh&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    ./autogen.sh
-    ./configure
-    make
-    make install
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h1 id=&#34;thiết-kế-dữ-liệu&#34;&gt;Thiết kế dữ liệu&lt;/h1&gt;
-
-&lt;p&gt;Dữ liệu được thiết kế trong một file &lt;code&gt;proto&lt;/code&gt;. Dưới đây là ví dụ trong website của Google, mục đích để quản lý danh bạ điện thoại.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-protocol-buffers&#34;&gt;    package tutorial;
-
-    message Person {
-      required string name = 1;
-      required int32 id = 2;
-      optional string email = 3;
-
-      enum PhoneType {
-        MOBILE = 0;
-        HOME = 1;
-        WORK = 2;
-      }
-
-      message PhoneNumber {
-        required string number = 1;
-        optional PhoneType type = 2 [default = HOME];
-      }
-
-      repeated PhoneNumber phone = 4;
-    }
-
-    message AddressBook {
-      repeated Person person = 1;
-    }
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Để biên dịch file này, ta gõ lệnh&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Trong đó &lt;code&gt;$SRC_DIR&lt;/code&gt; là thư mục chứa mã nguồn, &lt;code&gt;$DST_DIR&lt;/code&gt; là thư mục chứa các code cpp mà ProtoBuf sẽ phát sinh, &lt;code&gt;addressbook.proto&lt;/code&gt; là file chứa dữ liệu danh bạ. Trước khi xem thử trong ProtoBuf viết cái chi chi, ta xem thử ProtoBuf đã phát sinh ra 2 file &lt;code&gt;addressbook.pb.cc&lt;/code&gt; và &lt;code&gt;addressbook.pb.h&lt;/code&gt;. Trong đó chứa tất cả phần định nghĩa và cài đặt của các Lớp đối tượng Person, PhoneNumber. Chính xác là ProtoBuf đã &lt;em&gt;làm giúp&lt;/em&gt; dev chuyện thiết kế lớp, viết phần truy xuất và chuyển đổi kiểu dữ liệu, thao tác các thuật tính (kiểm tra thuộc tính, getter và setter). Xong, ta quay lại phần thiết kế của ProtoBuf.&lt;/p&gt;
-
-&lt;h1 id=&#34;cú-pháp&#34;&gt;Cú pháp&lt;/h1&gt;
-
-&lt;p&gt;Trong bài viết mình chỉ giới thiệu rất vắn tắt về các từ khoá sử dụng trong ProtoBuf nhằm có thể tìm hiểu cơ chế thiết kế dữ liệu trong Caffe. Chi tiết hơn về cứ pháp ngôn ngữ này có thể tham khảo ở &lt;a href=&#34;https://developers.google.com/protocol-buffers/docs/proto3&#34; target=&#34;_blank&#34;&gt;trang tài liệu của ProtoBuf&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;package&lt;/code&gt;: tương đương với namespace trong C++.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;message&lt;/code&gt;: tương đương với Class trong C++.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;int32&lt;/code&gt; ,&lt;code&gt;string&lt;/code&gt; , &lt;code&gt;enum&lt;/code&gt;: tương đương với các kiểu dữ liệu trong C++. Ngoài ra trong ProtoBuf còn có &lt;code&gt;bool&lt;/code&gt;, &lt;code&gt;float&lt;/code&gt;, &lt;code&gt;double&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Các giá trị 1, 2, … đằng sau các khai báo: các tag phân biệt nhau trong một message.&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Có 3 modifier như sau: &lt;code&gt;required&lt;/code&gt;, &lt;code&gt;optional&lt;/code&gt;, &lt;code&gt;repeated&lt;/code&gt;:&lt;/p&gt;
-
-&lt;p&gt;a. &lt;code&gt;required&lt;/code&gt;: trường bắt buộc phải tồn tại trong 1 lớp.
-b. &lt;code&gt;optional&lt;/code&gt;: trường có thể tồn tại hoặc không trong một lớp.
-c. &lt;code&gt;repeated&lt;/code&gt;: trường là một mảng động (không có phần tử nào hoặc có 1 hay nhiều phần tử).&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;trong-caffe-1&#34;&gt;Trong Caffe&lt;/h2&gt;
-
-&lt;p&gt;Bây giờ quay trở lại &lt;a href=&#34;https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto&#34; target=&#34;_blank&#34;&gt;file &lt;code&gt;proto&lt;/code&gt; của Caffe&lt;/a&gt; và dường như mọi thứ đã quá rõ ràng. Với mỗi hàm activation, hàm loss, các Layer (convolution, reshape, filter, …) và Blob (chứa dữ liệu) Caffe thiết kế các lớp chính là nơi chứa các tham số cho các hàm, layer và data này.&lt;/p&gt;
-
-&lt;p&gt;Một điều khá thú vị đó là thư viện &lt;a href=&#34;https://www.tensorflow.org/&#34; target=&#34;_blank&#34;&gt;TensorFlow&lt;/a&gt; của Google cũng sử dụng ProtoBuf cho project của họ.&lt;/p&gt;
-
-&lt;p&gt;Nếu như chú ý kĩ, trên website của Caffe không liệt kê toàn bộ các tham số có thể cấu hình cho các Layer trong thiết kế mạng. Có thể kể đến ở đây như &lt;a href=&#34;http://caffe.berkeleyvision.org/tutorial/data.html&#34; target=&#34;_blank&#34;&gt;Data Layer&lt;/a&gt;, trong tham số transform_data có &lt;code&gt;scale&lt;/code&gt;, &lt;code&gt;mean_file_size&lt;/code&gt;, &lt;code&gt;mirror&lt;/code&gt; và &lt;code&gt;crop_size&lt;/code&gt;; nhưng nếu xem trong phần định nghĩa của protobuf, ta thấy ngoài ra còn có &lt;code&gt;mean_file&lt;/code&gt;, &lt;code&gt;mean_value&lt;/code&gt;, &lt;code&gt;force_color&lt;/code&gt; và &lt;code&gt;force_gray&lt;/code&gt;, qua đó ta thấy được rõ ràng xem protobuf có lợi hơn là xem trong phần documents. Một điểm thuận lợi khác là file &lt;code&gt;caffe.proto&lt;/code&gt; được cập nhật liên tục so với document trên website.&lt;/p&gt;
-
-&lt;p&gt;Lấy một ví dụ minh hoạ trong mạng &lt;a href=&#34;https://github.com/BVLC/caffe/tree/master/models/bvlc_alexnet&#34; target=&#34;_blank&#34;&gt;AlexNet&lt;/a&gt;. Có 2 file prototxt rất đáng quan tâm và hầu như ở các model được cung cấp sẵn đều có đó là: &lt;code&gt;train_val.prototxt&lt;/code&gt; và &lt;code&gt;solver.txt&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;train-val-prototxt&#34;&gt;train_val.prototxt&lt;/h3&gt;
-
-&lt;p&gt;Đây là file chứa kiến trúc mạng của mô hình được cung cấp. Trong này định nghĩa toàn bộ kiến trúc (các tầng, tham số của mỗi tầng) cũng như định nghĩa dữ liệu đầu vào và output đầu ra cho mạng deep.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-protobuf&#34;&gt;    name: &amp;quot;AlexNet&amp;quot;
-    layer {
-      name: &amp;quot;data&amp;quot;
-      type: &amp;quot;Data&amp;quot;
-      top: &amp;quot;data&amp;quot;
-      top: &amp;quot;label&amp;quot;
-      include {
-        phase: TRAIN
-      }
-      transform_param {
-        mirror: true
-        crop_size: 227
-        mean_file: &amp;quot;data/ilsvrc12/imagenet_mean.binaryproto&amp;quot;
-      }
-      data_param {
-        source: &amp;quot;examples/imagenet/ilsvrc12_train_lmdb&amp;quot;
-        batch_size: 256
-        backend: LMDB
-      }
-    }
-    layer {
-      name: &amp;quot;data&amp;quot;
-      type: &amp;quot;Data&amp;quot;
-      top: &amp;quot;data&amp;quot;
-      top: &amp;quot;label&amp;quot;
-      include {
-        phase: TEST
-      }
-      transform_param {
-        mirror: false
-        crop_size: 227
-        mean_file: &amp;quot;data/ilsvrc12/imagenet_mean.binaryproto&amp;quot;
-      }
-      data_param {
-        source: &amp;quot;examples/imagenet/ilsvrc12_val_lmdb&amp;quot;
-        batch_size: 50
-        backend: LMDB
-      }
-    }
-
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Thành phần đầu tiên là &lt;code&gt;name&lt;/code&gt;, tên của mạng. Các phần tử tiếp theo là các &lt;code&gt;layer&lt;/code&gt;, tất cả các tham số liên quan đến layer đều nằm trong khối ngoặc &lt;code&gt;&amp;lt;span class=&amp;quot;p&amp;quot;&amp;gt;{&amp;lt;/span&amp;gt; &amp;lt;span class=&amp;quot;w&amp;quot;&amp;gt;&amp;lt;/span&amp;gt; &amp;lt;span class=&amp;quot;p&amp;quot;&amp;gt;}&amp;lt;/span&amp;gt;&lt;/code&gt;. Có 3 thành phần chắc chắn có của một layer:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;name&lt;/code&gt;: tên của layer. Caffe dựa vào tên layer để xác định xem layer đó ở đâu trong mạng.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;type&lt;/code&gt;: chắc chắn rồi, Caffe cần biết đây là layer Input hay là layer Convolution hay là ReLu hay là Softmax.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;top/bottom&lt;/code&gt;: xác định xem layer hiện tại sẽ nằm trên layer nào và sẽ nằm dưới layer nào. Vì kiến trúc mạng kiểu xếp tầng thế này rất thuận tiện để thiết kế mạng CNN. Và điểm bất lợi đó là ta khó có thể thiết kế các mạng có cấu trúc phức tạp hơn, kiểu như đồ thì chẳng hạn.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Ngoài 3 thuộc tính kể trên, mỗi layer sẽ có những tham số khác, phụ thuộc vào loại layer và tính chât của layer đó trong mạng.&lt;/p&gt;
-
-&lt;h3 id=&#34;solver-prototxt&#34;&gt;solver.prototxt&lt;/h3&gt;
-
-&lt;p&gt;Đây là tập tin chứa tham số trong quá trình train mạng deep và các tham số trong quá trình forward cũng như lan truyền ngược.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-protobuf&#34;&gt;    net: &amp;quot;models/bvlc_alexnet/train_val.prototxt&amp;quot;
-    test_iter: 1000
-    test_interval: 1000
-    base_lr: 0.01
-    lr_policy: &amp;quot;step&amp;quot;
-    gamma: 0.1
-    stepsize: 100000
-    display: 20
-    max_iter: 450000
-    momentum: 0.9
-    weight_decay: 0.0005
-    snapshot: 10000
-    snapshot_prefix: &amp;quot;models/bvlc_alexnet/caffe_alexnet_train&amp;quot;
-    solver_mode: GPU
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ta dễ dàng thấy ở đây có &lt;code&gt;net&lt;/code&gt;: dẫn đến file chứa kiến trúc mạng. Một số tham số khá quen thuộc như: &lt;code&gt;momentum&lt;/code&gt;, &lt;code&gt;max_iter&lt;/code&gt;, có cả một thuộc tính nhằm set xem mạng sẽ chạy ở GPU hay CPU (&lt;code&gt;solver_mode&lt;/code&gt;). Cũng giống như các tham số ở &lt;code&gt;train_val.prototxt&lt;/code&gt;, tất cả các thông tin về cấu hình được đề cập trong file &lt;code&gt;caffe.proto&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;tổng-kết&#34;&gt;Tổng kết&lt;/h2&gt;
-
-&lt;p&gt;Protobuf đóng vai trò quan trọng trong công cụ Caffe, giúp các nhà nghiên cứu có thể dễ dàng xây dựng, chỉnh sửa, cũng như chia sẻ kiến trúc mạng của mình với cộng đồng. Ngoài ra protobuf còn giúp nhà lập trình dễ dàng trong quá trình xây dựng hệ thống phần mềm cũng như mã nguồn. Đối với người dùng, việc xem xét, hiệu chỉnh trên file prototxt thuận lợi và tốn ít công sức hơn so với đọc từ code C++ hay kể cả matlab, cũng như có một “ngôn ngữ chung” cho thiết kế mạng deep.&lt;/p&gt;
 </description>
     </item>
     
