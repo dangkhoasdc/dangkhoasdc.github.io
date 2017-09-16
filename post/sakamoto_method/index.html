@@ -184,6 +184,20 @@
   
 
   
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/programming">programming</a
+    >, 
+    
+    <a href="/tags/algorithms">algorithms</a
+    >
+    
+  </span>
+  
+  
 
   
   
@@ -245,7 +259,7 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 }
 </code></pre>
 
-<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với <sup>1</sup>&frasl;<sub>1</sub> (Nếu ngày <sup>1</sup>&frasl;<sub>1</sub> là thứ Hai thì <sup>1</sup>&frasl;<sub>2</sub> sẽ là thứ 5). t[] chính là offset cho ngày đầu tiên của tháng so với ngày <sup>1</sup>&frasl;<sub>1</sub>, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d) , xong module cho 7 là ra được.</p>
+<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với <sup>1</sup>&frasl;<sub>1</sub> (Nếu ngày <sup>1</sup>&frasl;<sub>1</sub> là thứ Hai thì <sup>1</sup>&frasl;<sub>2</sub> sẽ là thứ 5). t[] chính là offset cho ngày đầu tiên của tháng so với ngày <sup>1</sup>&frasl;<sub>1</sub>, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
 
 <p>Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm <code>y</code>, ta phải cộng thêm <code>y</code> ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.</p>
 
@@ -253,7 +267,9 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 
 <p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày <sup>29</sup>&frasl;<sub>2</sub>, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
 
-<p>Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Để khắc phục điều đó, tác giả giảm 1 đơn vị trong offset kể từ tháng 3 trở đi, và như vậy sẽ thống nhất tháng 1 và tháng 2. Ta sẽ được mảng t[] như trong code gốc. Vấn đề là khi ta đồng loạt giảm offset như vậy, cũng như giảm tháng 1, 2 đi 1 năm thì phải có hằng số <code>c</code> nào đó cân bằng lại cho đúng với lịch. Nhưng bằng kiểm chứng, người ta phát hiện ra c = 0. Wow. 😲</p>
+<p>Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng t[] lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào t[0] và t[1] và giữ nguyên các t[] còn lại Sau đó chuyển -1 trong <code>d-1</code> vào offset, lúc đó ta sẽ được mảng t[] như trong code gốc.</p>
+
+<p>Ta còn một vấn đề là xác định ngày ban đầu để làm mốc và độ lệch <code>c</code> của ngày gốc đó so với ngày Chủ Nhật với index = 0. Nhưng bằng kiểm chứng, người ta phát hiện ra c = 0. Wow. 😲</p>
 
 <p>Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.</p>
 

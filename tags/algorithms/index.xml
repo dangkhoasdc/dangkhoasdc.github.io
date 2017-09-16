@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Dang-Khoa&#39;s blog </title>
-    <link>http://dangkhoasdc.github.io/tags/programming/</link>
-    <description>Recent content in Programming on Dang-Khoa&#39;s blog </description>
+    <title>Algorithms on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/algorithms/</link>
+    <description>Recent content in Algorithms on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
     <lastBuildDate>Sat, 16 Sep 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/programming/" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/algorithms/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bài toán chuyển ngày sang thứ</title>
@@ -51,29 +51,6 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week&#34; target=&#34;_blank&#34;&gt;Wiki: Determination of the day of the week&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43;</title>
-      <link>http://dangkhoasdc.github.io/post/cpp/</link>
-      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/cpp/</guid>
-      <description>
-
-&lt;h4 id=&#34;there-are-some-notes-about-cool-stuff-in-c-and-also-some-crazy-things&#34;&gt;There are some notes about cool stuff in C++, and also some crazy things.&lt;/h4&gt;
-
-&lt;h1 id=&#34;object-oriented-programming&#34;&gt;Object Oriented Programming&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;/* (1) */
-T object(arg);
-
-/* (2) */
-T object{arg};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(1) can be used by all types of class and non-class. In contrast, (2) is only used to initialize non-class type.&lt;/p&gt;
 </description>
     </item>
     
