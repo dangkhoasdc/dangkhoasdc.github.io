@@ -21,7 +21,7 @@
 }
 
 html {
-  font-family: 'Merriweather', serif;
+  font-family: sans-serif;
   font-size: 16px;
   color: rgba(0,0,0,0.8);
   line-height: 1.65;
@@ -33,7 +33,7 @@ html {
 }
 
 body {
-  font-family: inherit;
+  /* font-family: inherit; */
   font-size: 1rem;
   line-height: inherit;
   color: inherit;
