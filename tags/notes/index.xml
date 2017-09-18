@@ -7,8 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Wed, 13 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/notes/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Matlab</title>
+      <link>http://dangkhoasdc.github.io/post/matlab/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/matlab/</guid>
+      <description>
+
+&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Show the information of a variable. It is very useful when we the code takes so much memory: &lt;code&gt;whos &amp;lt;variable name&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Sum of squared of elements: &lt;code&gt;sumsqr(X)&lt;/code&gt;. Use &lt;code&gt;sum(sum(A.^2, 1))&lt;/code&gt; instead of you want to use less memory.&lt;/li&gt;
+&lt;li&gt;Memory optimizations tips and tricks: &lt;a href=&#34;http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations&#34; target=&#34;_blank&#34;&gt;[Undocumented Matlab]&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;libraries&#34;&gt;Libraries&lt;/h1&gt;
+
+&lt;h2 id=&#34;vlfeat&#34;&gt;VLFeat&lt;/h2&gt;
+
+&lt;h3 id=&#34;use-vl-imreadjpeg-instead-of-imread-it-could-speed-up-reading-image-files&#34;&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/h3&gt;
+</description>
+    </item>
     
     <item>
       <title>C&#43;&#43;</title>
@@ -30,30 +54,6 @@ T object{arg};
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(1) can be used by all types of class and non-class. In contrast, (2) is only used to initialize non-class type.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Matlab</title>
-      <link>http://dangkhoasdc.github.io/post/matlab/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/matlab/</guid>
-      <description>
-
-&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Show the information of a variable. It is very useful when we the code takes so much memory: &lt;code&gt;whos &amp;lt;variable name&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Sum of squared of elements: &lt;code&gt;sumsqr(X)&lt;/code&gt;. Use &lt;code&gt;sum(sum(A.^2, 1))&lt;/code&gt; instead of you want to use less memory.&lt;/li&gt;
-&lt;li&gt;Memory optimizations tips and tricks: &lt;a href=&#34;http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations&#34; target=&#34;_blank&#34;&gt;[Undocumented Matlab]&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;libraries&#34;&gt;Libraries&lt;/h1&gt;
-
-&lt;h2 id=&#34;vlfeat&#34;&gt;VLFeat&lt;/h2&gt;
-
-&lt;h3 id=&#34;use-vl-imreadjpeg-instead-of-imread-it-could-speed-up-reading-image-files&#34;&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/h3&gt;
 </description>
     </item>
     
