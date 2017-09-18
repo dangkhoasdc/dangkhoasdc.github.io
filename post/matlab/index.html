@@ -48,17 +48,17 @@
     
   
 
-  <link rel="alternate" href="http://dangkhoasdc.github.io/tags/review/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
-  <link rel="feed" href="http://dangkhoasdc.github.io/tags/review/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+  <link rel="alternate" href="http://dangkhoasdc.github.io/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+  <link rel="feed" href="http://dangkhoasdc.github.io/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://dangkhoasdc.github.io/tags/review/">
+  <link rel="canonical" href="http://dangkhoasdc.github.io/post/matlab/">
 
   
 
-  <title>Review | Dang-Khoa&#39;s blog </title>
+  <title>Matlab | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -165,61 +165,169 @@
 </nav>
 
 
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
 
 
+  <div class="article-container">
+    <h1 itemprop="name">Matlab</h1>
+    
 
-<div class="universal-wrapper">
+<div class="article-metadata">
 
-  <h1>Review</h1>
+  <span class="article-date">
+    
+    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      0001-01-01
+    </time>
+  </span>
 
   
 
   
   
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/vietnam_war-dejavu/">The Vietnam War - Dejavu</a></h2>
-    <div class="article-style">
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/tags/notes">notes</a
+    >, 
+    
+    <a href="/tags/programming">programming</a
+    >, 
+    
+    <a href="/tags/matlab">matlab</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fmatlab%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Matlab&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fmatlab%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fmatlab%2f&amp;title=Matlab"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      <a class="email"
+         href="mailto:?subject=Matlab&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fmatlab%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
       
-      [Link from PBS]
-Một bộ phim tài liệu lịch sử xuất sắc về chiến Tranh Việt Nam. Với sự tham gia phỏng vấn của nhà văn Bảo Ninh, nhà báo Huy Đức. Điều làm nên bộ phim chính là tính chân thực và nhìn nhận đa chiều ở tất cả các bên tham gia vào cuộc chiến. Khác với &ldquo;cuộc chiến 10k ngày&rdquo;, bộ phim tài liệu trước đó &ldquo;tránh&rdquo; nói nhiều đến nội bộ việt nam cũng như quan hệ với Pháp.
-      
+
+<h1 id="general">General</h1>
+
+<ul>
+<li>Show the information of a variable. It is very useful when we the code takes so much memory: <code>whos &lt;variable name&gt;</code>.</li>
+<li>Sum of squared of elements: <code>sumsqr(X)</code>. Use <code>sum(sum(A.^2, 1))</code> instead of you want to use less memory.</li>
+<li>Memory optimizations tips and tricks: <a href="http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations" target="_blank">[Undocumented Matlab]</a></li>
+</ul>
+
+<h1 id="libraries">Libraries</h1>
+
+<h2 id="vlfeat">VLFeat</h2>
+
+<h3 id="use-vl-imreadjpeg-instead-of-imread-it-could-speed-up-reading-image-files">Use <code>vl_imreadjpeg</code> instead of <code>imread</code>. It could speed up reading image files.</h3>
+
     </div>
   </div>
-  
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/hau_tay_du_ky/">Hậu Tây Du Kí</a></h2>
-    <div class="article-style">
-      
-      Ngày xưa mình mê coi phim này cực kì. Cứ mỗi lần đài lên sóng là rống họng lên hát: &ldquo;quoài oa xinh xiên&rdquo;. Đoạn nhạc phim mở đầu phải nói rất ấn tượng và mình nhớ mãi đến bây giờ. Hôm nay tình cờ được nghe bản lời Việt của 1 bài trong Hậu Tây Du Kí từ chế Bích Phương, tuổi thơ bỗng nhiên trào về.
-  Mới nghe là mình đã biết ngay rằng đây là bài nhạc phim bất hủ hôm nào.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/review_good_will_hunting/">Good Will Hunting và những bài toán đồ thị </a></h2>
-    <div class="article-style">
-      
-      Lâu lắm rồi tôi mới được xem một bộ phim hay đến vậy, có lẽ từ khi xem La La Land, đó là những bộ phim buộc bạn phải ngẩn ngơ một lồi lâu và không ngừng suy nghĩ về nhân vật và những lời thoại. Không có những kĩ xảo tráng lệ hay cốt truyện hại não, bộ phim đơn giản chỉ là câu chuyện của một thanh niên với bộ óc thiên tài trải nghiệm những thay đổi trong cuộc đời.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/la_la_land/">La La Land</a></h2>
-    <div class="article-style">
-      
-      Tuổi trẻ, tình yêu và khát vọng. Đó là La La Land. Một tựa phim đầy mơ hồ. Nhưng không phải, có lẽ âm &ldquo;La La Land&rdquo; vang lên như một thứ âm nhạc của tuổi trẻ, vượt qua những rào cản của ngôn ngữ, đó là chốn thiên đường mà những kẻ khao khát từng chìm đắm và mơ mộng.
-Xem La La Land tôi nhớ đến Black Swan và Whiplash, cũng là câu chuyện về những người trẻ với khát vọng và niềm đam mê của mình.
-      
-    </div>
-  </div>
-  
 
+</article>
+
+
+
+<div class="article-container">
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/cpp/">C&#43;&#43;</a></li>
+    
+    <li><a href="/post/sakamoto_method/">Bài toán chuyển ngày sang thứ</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+
+    
+    <li class="next"><a href="http://dangkhoasdc.github.io/post/review_algs_princeton_coursera/">Review Algorithms (Princeton) - Coursera <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
   
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
 
 
 </div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
