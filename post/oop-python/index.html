@@ -54,11 +54,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://dangkhoasdc.github.io/post/sakamoto_method/">
+  <link rel="canonical" href="http://dangkhoasdc.github.io/post/oop-python/">
 
   
 
-  <title>Bài toán chuyển ngày sang thứ | Dang-Khoa&#39;s blog </title>
+  <title>Lập Trình Hướng Đối Tượng Trong Python | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -171,15 +171,15 @@
 
 
   <div class="article-container">
-    <h1 itemprop="name">Bài toán chuyển ngày sang thứ</h1>
+    <h1 itemprop="name">Lập Trình Hướng Đối Tượng Trong Python</h1>
     
 
 <div class="article-metadata">
 
   <span class="article-date">
     
-    <time datetime="2017-09-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2017-09-16
+    <time datetime="2015-07-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2015-07-20
     </time>
   </span>
 
@@ -194,7 +194,7 @@
     <a href="/tags/programming">programming</a
     >, 
     
-    <a href="/tags/algorithms">algorithms</a
+    <a href="/tags/python">python</a
     >
     
   </span>
@@ -207,21 +207,21 @@
   <ul class="share">
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fsakamoto_method%2f"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2foop-python%2f"
          target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fsakamoto_method%2f"
+         href="https://twitter.com/intent/tweet?text=L%e1%ba%adp%20Tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20Trong%20Python&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2foop-python%2f"
          target="_blank">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fsakamoto_method%2f&amp;title=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2foop-python%2f&amp;title=L%e1%ba%adp%20Tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20Trong%20Python"
          target="_blank">
         <i class="fa fa-linkedin"></i>
       </a>
@@ -235,7 +235,7 @@
     
     <li>
       <a class="email"
-         href="mailto:?subject=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fsakamoto_method%2f">
+         href="mailto:?subject=L%e1%ba%adp%20Tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20Trong%20Python&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2foop-python%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -250,39 +250,84 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<p>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo;
-Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip;
-Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).</p>
+<p>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.</p>
 
-<pre><code class="language-c">dayofweek(y, m, d) {
-    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
-    y -= m &lt; 3;
-    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
-}
+<h2 id="không-multiple-constructors">Không multiple constructors</h2>
+
+<p>Nhưng ta có thể sử dụng <code>optical argument</code> như một thế mạnh và thay thế cho multiple constructor.</p>
+
+<h2 id="không-access-modifier">Không access modifier</h2>
+
+<p>Đồng nghĩa với việc không có <code>public</code>, <code>private</code> hay là <code>protected</code> gì cả. Ngay cả việc thêm <code>__</code> vào trước properties hay method cũng không giải quyết được vấn đề. Với mỗi thuộc tính <code>__p</code> của lớp <code>A</code> đơn giản là được đổi tên thành <code>_A__p</code>.</p>
+
+<h2 id="tạo-property">Tạo property</h2>
+
+<p>Nếu được, tạo thành method thay thế. Còn không có thể sử dụng decorator <code>@property</code> trước method để đổi thành property.</p>
+
+<h2 id="đa-kế-thừa">Đa kế thừa</h2>
+
+<p>Tránh vấn đề này càng tốt. Tham khảo <a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem" target="_blank">tại đây</a>.</p>
+
+<h2 id="các-thuộc-tính-và-method-static">Các thuộc tính và method static</h2>
+
+<p>Mình không nghĩ là cần thuộc tính hay method static cho lắm. Nếu có thể cài thuộc tính/method static thì thay vào đó có thể đặt bên ngoài class và xếp trong cùng module. Nhưng vậy có thể truy cập các thuộc tính, hàm thông qua module thay vì class, và mình thấy hầu như không khác nhau là mấy.</p>
+
+<h2 id="gọi-constructor-từ-lớp-cha">Gọi constructor từ lớp cha</h2>
+
+<p>Đây là một vấn đề khá nan giải trong trường hợp đa kế thừa. Giả sử ta có lớp A, lớp B và C. Trong đó lớp C kế thừa vừa lớp A và lớp B. Vấn đề là làm thế nào để gọi A, B trong hàm khởi tạo, và làm thế nào để biết lớp cha nào được gọi trước.</p>
+
+<pre><code class="language-python">class A(object):
+    def __init__(self):
+        super(A, self).__init__()
+        print &quot;entering A&quot;
+        print &quot;leaving A&quot;
+
+class B(object):
+    def __init__(self):
+        super(B, self).__init__()
+        print &quot;entering B&quot;
+        print &quot;leaving B&quot;
+
+class C(A,B):
+    def __init__(self):
+        print &quot;entering c&quot;
+        super(C, self).__init__()
+        print &quot;leaving c&quot;
+
+
+if __name__ == '__main__':
+    c = C()
+
 </code></pre>
 
-<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với <sup>1</sup>&frasl;<sub>1</sub> (Nếu ngày <sup>1</sup>&frasl;<sub>1</sub> là thứ Hai thì <sup>1</sup>&frasl;<sub>2</sub> sẽ là thứ 5). <code>t[]</code> chính là offset cho ngày đầu tiên của tháng so với ngày <sup>1</sup>&frasl;<sub>1</sub>, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
-
-<p>Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm <code>y</code>, ta phải cộng thêm <code>y</code> ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.</p>
-
-<p>Những năm nhuận, ta lại phải thêm cái ngày <sup>29</sup>&frasl;<sub>2</sub> vào trong, tức là nó sẽ thêm 1 ngày nữa, trong <code>y</code> năm? nếu có <code>y</code> năm nhuận thì sẽ có thêm <code>x</code> ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.</p>
-
-<p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày <sup>29</sup>&frasl;<sub>2</sub>, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
-
-<p>Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng <code>t[]</code> lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào <code>t[0]</code> và <code>t[1]</code> và giữ nguyên các <code>t[]</code> còn lại Sau đó chuyển -1 trong <code>d-1</code> vào offset, lúc đó ta sẽ được mảng <code>t[]</code> như trong code gốc.</p>
-
-<p>Ta còn một vấn đề là xác định ngày ban đầu để làm mốc và độ lệch <code>c</code> của ngày gốc đó so với ngày Chủ Nhật với <code>index = 0</code>. Nhưng bằng kiểm chứng, người ta phát hiện ra <code>c = 0</code>. Wow. 😲</p>
-
-<p>Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.</p>
-
-<p>Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.</p>
-
-<h3 id="references">References</h3>
+<p>Có một số điều khá thú vị xoay quanh điều này sau khi ta thử nghiệm hoán vị trình tự kế thừa, trình tự định nghĩa lớp:</p>
 
 <ol>
-<li><a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week" target="_blank">Wiki: Determination of the day of the week</a></li>
-<li><a href="https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ" target="_blank">Source</a></li>
+<li>Trong mỗi hàm phải khai báo <code>super(ClassName, self).__init__()</code> thì việc gọi các hàm khởi tạo từ các lớp cha mới thực hiện được.</li>
+<li>Không phụ thuộc vào trình tự kế thừa.</li>
+<li>Trình tự hàm khởi tạo được gọi dựa them alphabet.</li>
 </ol>
+
+<h2 id="practices">Practices</h2>
+
+<ol>
+<li>Để kiểm tra một biến có phải là 1 thể hiện của lớp không, sử dụng hàm <code>isinstance</code>, tuy nhiên khuyến khích không xài. Vì Python là Duck Type mà.</li>
+<li>Khai báo một thứ na ná struct trong C/C++:
+{% highlight python %}
+class ClassName:
+pass
+{% endhighlight%}</li>
+</ol>
+
+<p>Sau đó thì có thể tha hồ thêm thuộc tính nào vào cũng được.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+<li><a href="https://docs.python.org/2/tutorial/classes.html" target="_blank">https://docs.python.org/2/tutorial/classes.html</a></li>
+</ol>
+
+<p>P.s: Các chủ đề hại não và nâng cao có thể được đề cập là Iterators, Generators, &hellip;</p>
 
     </div>
   </div>
@@ -294,10 +339,6 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 <div class="article-container">
   <h3>Related</h3>
   <ul>
-    
-    <li><a href="/post/cpp/">C&#43;&#43;</a></li>
-    
-    <li><a href="/post/oop-python/">Lập Trình Hướng Đối Tượng Trong Python</a></li>
     
     <li><a href="/post/viet-luan-van/">Kinh Nghiệm Viết Tài Liệu Khoa Học</a></li>
     
@@ -313,12 +354,12 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
   <nav>
   <ul class="pager">
     
-    <li class="previous"><a href="http://dangkhoasdc.github.io/post/hau_tay_du_ky/"><span
-      aria-hidden="true">&larr;</span> Hậu Tây Du Kí</a></li>
+    <li class="previous"><a href="http://dangkhoasdc.github.io/post/em-laptop-yeu-dau/"><span
+      aria-hidden="true">&larr;</span> Thôi đành chia tay </a></li>
     
 
     
-    <li class="next"><a href="http://dangkhoasdc.github.io/post/henderson_waves-haw_par_villa/">Một vòng Henderson Waves và Haw Par Villa <span
+    <li class="next"><a href="http://dangkhoasdc.github.io/post/review_algs_princeton_coursera/">Review Algorithms (Princeton) - Coursera <span
       aria-hidden="true">&rarr;</span></a></li>
     
   </ul>

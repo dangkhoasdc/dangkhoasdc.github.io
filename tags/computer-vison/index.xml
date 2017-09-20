@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer Vison on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/computer-vison/</link>
+    <description>Recent content in Computer Vison on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/computer-vison/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ghi chú hướng dẫn cài đặt OpenCV</title>
+      <link>http://dangkhoasdc.github.io/post/opencv-tips/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/opencv-tips/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;I don&amp;rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C++, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.&lt;/p&gt;
+
+&lt;p&gt;Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style &lt;em&gt;step by step&lt;/em&gt; nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn. Và lần này là hướng dẫn cài cho cross-platform. Để sure rằng đụng trên OS nào mình sẽ không còn bị ngán. (Yeah!!)&lt;/p&gt;
+
+&lt;h1 id=&#34;ghi-chú&#34;&gt;Ghi chú&lt;/h1&gt;
+
+&lt;p&gt;Một số ghi chú mà mình đã rút được một cách đầy xương máu, đầy kinh dị. Theo mình nhớ, cách đây 4 năm lần đầu cài OpenCV mình cũng đã mất gần 2 ngày, giờ cài trên MAC OSX mất tầm 1 ngày. Hú hồn.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Best pratice: Tập sử dụng CMAKE hoặc Makefile. Cả 2 đều rất được việc khi config lúc build opencv hay lúc chạy chương trình. Dù muốn hay không, thì CMake vẫn là interface trên cả 3 nền tảng. Chính vì điều đó nên phải biết &amp;hellip; tập mà xài. Ưu điểm có thể kể đến như sau:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Config được cấu hình của OpenCV. Điều này những bản build sẵn không làm được.&lt;/li&gt;
+&lt;li&gt;Cấu hình phù hợp với máy. CMake sẽ tự động tìm các package và cố gắng config khi có thể.&lt;/li&gt;
+&lt;li&gt;Dễ sử dụng, nếu dùng CMake GUI thì rất dễ dùng.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sau mỗi lẫn thay đổi cấu hình trên CMake thì nhấn Configure lại để CMake cập nhật.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Với bản MAC OSX, nên chọn compiler là Unix Makefile, mọi lựa chọn khác tớ đều không chịu trách nhiệm.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Chuyện kinh dị đêm khuya, chọn compiler là XCode. Khi build các source khác ( 1 tool rút trích đặc trưng chẳng hạn), thế là nó
+dính ngay lỗi &lt;code&gt;undefined symbols for architecture x86_64&lt;/code&gt;, lỗi này khắc phục bằng cách thêm flags &lt;em&gt;-lstdc++&lt;/em&gt; vô trình biên dịch,
+nhưng đắng lòng tiếp theo là sau khi compile thì hàng mớ lỗi xảy đến vì sự khác nhau trong hệ thống standard library của XCode và
+GNU. Lúc đó, chắc chắn chả ai còn hứng thú để mà sửa lỗi tiếp.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nên có 1 sổ ghi chú, hoặc note ghi lại quá trình cài đặt, không là fail dài dài. Mà thậm chí là cứ làm lặp đi lặp lại mọi thứ.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;cài-đặt&#34;&gt;Cài đặt&lt;/h1&gt;
+
+&lt;p&gt;Trong phần này gồm các bước cài đặt OpenCV sử dụng CMake. Dùng mà thấy mình cứ như là &lt;em&gt;hacker&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Tải source OpenCV về.
+a. Tải từ website.
+b. Tải từ github.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Giải nén và tạo thư mục &lt;code&gt;build&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir build
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mở CMake, chọn đường dẫn đến.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nhấn Configure và chọn compiler tương ứng.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bên Linux, theo mình nhớ là GNU.&lt;/li&gt;
+&lt;li&gt;Bên Windows, khuyến khích chọn Visual Studio. Tuy nhiên, số phiên bản của VS khác với số năm của Visual Studio (Tức là Visual Studio 2013 thì không phải có v13).&lt;/li&gt;
+&lt;li&gt;Sau bao đau thương, MAC OS X thì chọn Unix Makefile.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Trong lúc nó run, thì tranh thủ đọc về sự khác nhau của &lt;a href=&#34;http://stackoverflow.com/questions/2649334/difference-between-static-and-shared-libraries&#34; target=&#34;_blank&#34;&gt;static lib và shared lib&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Config các tham số cấu hình, mình thì quan tâm đến vài thứ sau: Qt, Python, Cuda. &lt;em&gt;Vì hôm nữa chắc sẽ có 1 tut khác liên quan đến mấy cái này&lt;/em&gt;. Để ý output coi có báo lõi gì không.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nhấn &lt;code&gt;Configure&lt;/code&gt; đến bao giờ trên phần tham số không còn đỏ nữa thì thôi. Lúc đó nhấn &lt;code&gt;build&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build OpenCV thôi.
+a. Với các bé họ nhà Unix (Mac OSX, Linux &amp;hellip;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd path/to/build/dir
+make -j4 # jk với k là số thread để chạy
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;b. Với các bé nhà Windows:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dangkhoahome.blogspot.sg/2012/03/huong-dan-cai-at-opencv-23-231-trong.html&#34; target=&#34;_blank&#34;&gt;Chịu khó xem lại bài post cũ của mình, mình sẽ update bản mới trong thời gian đến&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;UPDATE 1&lt;/em&gt;: Vẫn chưa cài được Opencv 3 lên trên python sau bao nhiêu nỗ lực thực hiện với MAC OS X. Mình sẽ cài đặt nó lên trên Linux để test xem sao.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;UPDATE 2&lt;/em&gt;: Chắc hôm nào sẽ viết tutorial trên cả 3 nền tảng step-by-step.&lt;/p&gt;
+
+&lt;p&gt;P/S: Bạn nào muốn share bài của mình thì vô tư, nhưng nhớ ghi rõ nguồn.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

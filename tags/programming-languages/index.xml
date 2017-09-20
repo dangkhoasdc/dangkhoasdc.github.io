@@ -20,6 +20,12 @@
 
 &lt;h4 id=&#34;there-are-some-notes-about-cool-stuff-in-c-and-also-some-crazy-things&#34;&gt;There are some notes about cool stuff in C++, and also some crazy things.&lt;/h4&gt;
 
+&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;size()&lt;/code&gt; of containers always have type of &lt;code&gt;unsigned int&lt;/code&gt;, cast to &lt;code&gt;int&lt;/code&gt; if there are any chances we have to compare to an integer.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h1 id=&#34;object-oriented-programming&#34;&gt;Object Oriented Programming&lt;/h1&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;/* (1) */

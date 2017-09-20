@@ -64,6 +64,12 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 
 &lt;h4 id=&#34;there-are-some-notes-about-cool-stuff-in-c-and-also-some-crazy-things&#34;&gt;There are some notes about cool stuff in C++, and also some crazy things.&lt;/h4&gt;
 
+&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;size()&lt;/code&gt; of containers always have type of &lt;code&gt;unsigned int&lt;/code&gt;, cast to &lt;code&gt;int&lt;/code&gt; if there are any chances we have to compare to an integer.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;h1 id=&#34;object-oriented-programming&#34;&gt;Object Oriented Programming&lt;/h1&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;/* (1) */
@@ -74,6 +80,281 @@ T object{arg};
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;(1) can be used by all types of class and non-class. In contrast, (2) is only used to initialize non-class type.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lập Trình Hướng Đối Tượng Trong Python</title>
+      <link>http://dangkhoasdc.github.io/post/oop-python/</link>
+      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/oop-python/</guid>
+      <description>
+
+&lt;p&gt;Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &amp;hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.&lt;/p&gt;
+
+&lt;h2 id=&#34;không-multiple-constructors&#34;&gt;Không multiple constructors&lt;/h2&gt;
+
+&lt;p&gt;Nhưng ta có thể sử dụng &lt;code&gt;optical argument&lt;/code&gt; như một thế mạnh và thay thế cho multiple constructor.&lt;/p&gt;
+
+&lt;h2 id=&#34;không-access-modifier&#34;&gt;Không access modifier&lt;/h2&gt;
+
+&lt;p&gt;Đồng nghĩa với việc không có &lt;code&gt;public&lt;/code&gt;, &lt;code&gt;private&lt;/code&gt; hay là &lt;code&gt;protected&lt;/code&gt; gì cả. Ngay cả việc thêm &lt;code&gt;__&lt;/code&gt; vào trước properties hay method cũng không giải quyết được vấn đề. Với mỗi thuộc tính &lt;code&gt;__p&lt;/code&gt; của lớp &lt;code&gt;A&lt;/code&gt; đơn giản là được đổi tên thành &lt;code&gt;_A__p&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;tạo-property&#34;&gt;Tạo property&lt;/h2&gt;
+
+&lt;p&gt;Nếu được, tạo thành method thay thế. Còn không có thể sử dụng decorator &lt;code&gt;@property&lt;/code&gt; trước method để đổi thành property.&lt;/p&gt;
+
+&lt;h2 id=&#34;đa-kế-thừa&#34;&gt;Đa kế thừa&lt;/h2&gt;
+
+&lt;p&gt;Tránh vấn đề này càng tốt. Tham khảo &lt;a href=&#34;https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem&#34; target=&#34;_blank&#34;&gt;tại đây&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;các-thuộc-tính-và-method-static&#34;&gt;Các thuộc tính và method static&lt;/h2&gt;
+
+&lt;p&gt;Mình không nghĩ là cần thuộc tính hay method static cho lắm. Nếu có thể cài thuộc tính/method static thì thay vào đó có thể đặt bên ngoài class và xếp trong cùng module. Nhưng vậy có thể truy cập các thuộc tính, hàm thông qua module thay vì class, và mình thấy hầu như không khác nhau là mấy.&lt;/p&gt;
+
+&lt;h2 id=&#34;gọi-constructor-từ-lớp-cha&#34;&gt;Gọi constructor từ lớp cha&lt;/h2&gt;
+
+&lt;p&gt;Đây là một vấn đề khá nan giải trong trường hợp đa kế thừa. Giả sử ta có lớp A, lớp B và C. Trong đó lớp C kế thừa vừa lớp A và lớp B. Vấn đề là làm thế nào để gọi A, B trong hàm khởi tạo, và làm thế nào để biết lớp cha nào được gọi trước.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;class A(object):
+    def __init__(self):
+        super(A, self).__init__()
+        print &amp;quot;entering A&amp;quot;
+        print &amp;quot;leaving A&amp;quot;
+
+class B(object):
+    def __init__(self):
+        super(B, self).__init__()
+        print &amp;quot;entering B&amp;quot;
+        print &amp;quot;leaving B&amp;quot;
+
+class C(A,B):
+    def __init__(self):
+        print &amp;quot;entering c&amp;quot;
+        super(C, self).__init__()
+        print &amp;quot;leaving c&amp;quot;
+
+
+if __name__ == &#39;__main__&#39;:
+    c = C()
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Có một số điều khá thú vị xoay quanh điều này sau khi ta thử nghiệm hoán vị trình tự kế thừa, trình tự định nghĩa lớp:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Trong mỗi hàm phải khai báo &lt;code&gt;super(ClassName, self).__init__()&lt;/code&gt; thì việc gọi các hàm khởi tạo từ các lớp cha mới thực hiện được.&lt;/li&gt;
+&lt;li&gt;Không phụ thuộc vào trình tự kế thừa.&lt;/li&gt;
+&lt;li&gt;Trình tự hàm khởi tạo được gọi dựa them alphabet.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;practices&#34;&gt;Practices&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Để kiểm tra một biến có phải là 1 thể hiện của lớp không, sử dụng hàm &lt;code&gt;isinstance&lt;/code&gt;, tuy nhiên khuyến khích không xài. Vì Python là Duck Type mà.&lt;/li&gt;
+&lt;li&gt;Khai báo một thứ na ná struct trong C/C++:
+{% highlight python %}
+class ClassName:
+pass
+{% endhighlight%}&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Sau đó thì có thể tha hồ thêm thuộc tính nào vào cũng được.&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.python.org/2/tutorial/classes.html&#34; target=&#34;_blank&#34;&gt;https://docs.python.org/2/tutorial/classes.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;P.s: Các chủ đề hại não và nâng cao có thể được đề cập là Iterators, Generators, &amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kinh Nghiệm Viết Tài Liệu Khoa Học</title>
+      <link>http://dangkhoasdc.github.io/post/viet-luan-van/</link>
+      <pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/viet-luan-van/</guid>
+      <description>
+
+&lt;p&gt;Sau thời gian đắng lòng vì cái luận văn và phải lên bờ xuống ruộng với nhiều tình huống éo le cây me. Cũng thêm vào đó, sau cái sự vụ này rút ra được nhiều kinh nghiệm xương máu hơn bao giờ hết. Hiện giờ công việc dù vấn đang ngập mặt, nhưng có vẻ thư thả hơn, kèm theo đó kết quả thực nghiệm khá tốt, công việc trên lab cũng dần ổn định khiến tinh thần phấn chấn và có nhiều kế hoạch loạn xị ngầu hơn trong thời gian tới. Nhưng vẫn muốn viết tí tí cho vui.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://dangkhoasdc.github.io/img/thankyou.jpg&#34; alt=&#34;Thank you&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;dùng-phần-mềm-phiên-bản-ổn-định&#34;&gt;Dùng phần mềm phiên bản ổn định&lt;/h2&gt;
+
+&lt;p&gt;Mình đã phải lên bờ xuống ruộng với Mac Office 2016 Preview. Dù giao diện rất đẹp, UI&amp;amp;UX tốt hơn so với bản trước đó. Nhưng điều đắng lòng là mình không thể chèn công thức toán sử dụng MathType vô được. Chưa kể là một phần mềm khác để quản lý tài liệu tham khảo cũng không thể cài trên WORD 2016. Nên dù sao đi nữa, trong những công việc quan trọng và các phần mềm cần thiết không phải lúc nào cũng update lên hàng xịn là tốt.&lt;/p&gt;
+
+&lt;h2 id=&#34;tự-động-hoá-các-công-việc-đánh-số&#34;&gt;Tự động hoá các công việc đánh số&lt;/h2&gt;
+
+&lt;p&gt;Trong này bao gồm cả: đánh số trang, đánh chỉ mục hình ảnh, chỉ mục bảng biểu và chương. Điểm thuận lợi có thể kể đến như:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Không phải nhức não khi phải cập nhật lại chỉ mục khi thay đổi nội dung. Với những thành phần có sẵn trong Word, chỉ cần Ctrl+A và F9 hay F11 là nó đã tự động cập nhật lại rồi.&lt;/li&gt;
+&lt;li&gt;Dễ dàng trỏ đến các phần tử này mà không mất thời gian. Nếu tự chèn thì không làm được trò này rồi.&lt;/li&gt;
+&lt;li&gt;Quản lý các thành phần (công thức, tài liệu tham khảo, hình ảnh) khá là dễ dàng. Định nghĩa style của nó cũng dễ hơn nữa.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dĩ nhiên, lúc đầu xài thì cảm thấy khá là nhọc, vì không quen là chính. Nhưng đó là điều rất nên làm.&lt;/p&gt;
+
+&lt;p&gt;Mình có một số kinh nghiệm có thể kể đến như&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Với công thức, luôn dùng hệ thống đánh số của MathType. Và như vậy, mỗi khi kết chương hay kết mục, phải chèn kí tự ngắt chương hoặc mục của MathType vô. Khi muốn tham chiếu đến 1 công thức nào đó cũng phải chèn bằng lệnh của MathType.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Với trích dẫn khoa học, một công cụ hay ho mà mình tìm được đó là Mendeley Desktop ( &lt;a href=&#34;https://www.mendeley.com/download-mendeley-desktop/&#34; target=&#34;_blank&#34;&gt;Download&lt;/a&gt; ). Nó có thể tìm kiếm tài liệu, lưu lại thông tin và cho phép chèn tham khảo, chèn danh mục tham khảo với nhiều định dạng khác nhau. Nó còn hỗ trợ Refman nên việc lấy citation từ Google Scholar về và chén vô cũng rất dễ, công cụ này hoạt động khá là thông minh nên xài khá thoải mái. Hầu như mình không cần phải lo lắng về chuyện trích dẫn nữa. Một tính năng bá đạo của nó là có thể lấy được thông tin bài báo bằng cách import vào file pdf. &lt;em&gt;so cool&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;nếu-được-sử-dụng-latex&#34;&gt;Nếu được, sử dụng Latex&lt;/h2&gt;
+
+&lt;p&gt;Latex có lẽ là công cụ tốt nhất để biên tập các tài liệu khoa học.  Hệ thống biên soạn công thức phong phú, khả năng quản lý các thành phần, đánh số, &amp;hellip; nhất quán và dễ dùng. Tuy nhiên  công cụ này khá là đồ sộ, hiểu nó là một ngôn ngữ cũng được nữa. Nên chính điều đó khiến cho giai đoạn đầu của việc dùng Latex khá là khó khăn. Tuy nhiên với một số text editor có  snippet  thì việc nhớ các cú pháp chèn hình hay công thức không còn quá khó khăn nữa. Mình chỉ ngại mỗi Latex là khi phải debug những lỗi khi viết, mất rất nhiều thời gian và không phải lúc nào cũng theo ý mình được. Vì lẽ đó mà mình xài Word 2011 cho an toàn.&lt;/p&gt;
+
+&lt;h2 id=&#34;định-nghĩa-tất-cả-style-trước-khi-viết&#34;&gt;Định nghĩa tất cả style trước khi viết&lt;/h2&gt;
+
+&lt;p&gt;Khi buộc phải viết theo một định dạng nào đó, chuyện đầu tiên khi mở một văn bản mới là định nghĩa hết tất cả stule dùng trong đó, từ Heading 1, Heading 2,  TOC, đánh số,&amp;hellip; Điều này tạo sự nhất quán trong quá trình viết, không phải đợi tới lúc viết xong mới làm chuyện này sẽ mất thời gian và xuất hiện một số lỗi ngoài ý muốn.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ghi chú hướng dẫn cài đặt OpenCV</title>
+      <link>http://dangkhoasdc.github.io/post/opencv-tips/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/opencv-tips/</guid>
+      <description>
+
+&lt;blockquote&gt;
+&lt;p&gt;I don&amp;rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C++, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.&lt;/p&gt;
+
+&lt;p&gt;Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style &lt;em&gt;step by step&lt;/em&gt; nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn. Và lần này là hướng dẫn cài cho cross-platform. Để sure rằng đụng trên OS nào mình sẽ không còn bị ngán. (Yeah!!)&lt;/p&gt;
+
+&lt;h1 id=&#34;ghi-chú&#34;&gt;Ghi chú&lt;/h1&gt;
+
+&lt;p&gt;Một số ghi chú mà mình đã rút được một cách đầy xương máu, đầy kinh dị. Theo mình nhớ, cách đây 4 năm lần đầu cài OpenCV mình cũng đã mất gần 2 ngày, giờ cài trên MAC OSX mất tầm 1 ngày. Hú hồn.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Best pratice: Tập sử dụng CMAKE hoặc Makefile. Cả 2 đều rất được việc khi config lúc build opencv hay lúc chạy chương trình. Dù muốn hay không, thì CMake vẫn là interface trên cả 3 nền tảng. Chính vì điều đó nên phải biết &amp;hellip; tập mà xài. Ưu điểm có thể kể đến như sau:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Config được cấu hình của OpenCV. Điều này những bản build sẵn không làm được.&lt;/li&gt;
+&lt;li&gt;Cấu hình phù hợp với máy. CMake sẽ tự động tìm các package và cố gắng config khi có thể.&lt;/li&gt;
+&lt;li&gt;Dễ sử dụng, nếu dùng CMake GUI thì rất dễ dùng.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sau mỗi lẫn thay đổi cấu hình trên CMake thì nhấn Configure lại để CMake cập nhật.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Với bản MAC OSX, nên chọn compiler là Unix Makefile, mọi lựa chọn khác tớ đều không chịu trách nhiệm.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Chuyện kinh dị đêm khuya, chọn compiler là XCode. Khi build các source khác ( 1 tool rút trích đặc trưng chẳng hạn), thế là nó
+dính ngay lỗi &lt;code&gt;undefined symbols for architecture x86_64&lt;/code&gt;, lỗi này khắc phục bằng cách thêm flags &lt;em&gt;-lstdc++&lt;/em&gt; vô trình biên dịch,
+nhưng đắng lòng tiếp theo là sau khi compile thì hàng mớ lỗi xảy đến vì sự khác nhau trong hệ thống standard library của XCode và
+GNU. Lúc đó, chắc chắn chả ai còn hứng thú để mà sửa lỗi tiếp.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nên có 1 sổ ghi chú, hoặc note ghi lại quá trình cài đặt, không là fail dài dài. Mà thậm chí là cứ làm lặp đi lặp lại mọi thứ.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;cài-đặt&#34;&gt;Cài đặt&lt;/h1&gt;
+
+&lt;p&gt;Trong phần này gồm các bước cài đặt OpenCV sử dụng CMake. Dùng mà thấy mình cứ như là &lt;em&gt;hacker&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Tải source OpenCV về.
+a. Tải từ website.
+b. Tải từ github.&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Giải nén và tạo thư mục &lt;code&gt;build&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir build
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mở CMake, chọn đường dẫn đến.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nhấn Configure và chọn compiler tương ứng.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bên Linux, theo mình nhớ là GNU.&lt;/li&gt;
+&lt;li&gt;Bên Windows, khuyến khích chọn Visual Studio. Tuy nhiên, số phiên bản của VS khác với số năm của Visual Studio (Tức là Visual Studio 2013 thì không phải có v13).&lt;/li&gt;
+&lt;li&gt;Sau bao đau thương, MAC OS X thì chọn Unix Makefile.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Trong lúc nó run, thì tranh thủ đọc về sự khác nhau của &lt;a href=&#34;http://stackoverflow.com/questions/2649334/difference-between-static-and-shared-libraries&#34; target=&#34;_blank&#34;&gt;static lib và shared lib&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Config các tham số cấu hình, mình thì quan tâm đến vài thứ sau: Qt, Python, Cuda. &lt;em&gt;Vì hôm nữa chắc sẽ có 1 tut khác liên quan đến mấy cái này&lt;/em&gt;. Để ý output coi có báo lõi gì không.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nhấn &lt;code&gt;Configure&lt;/code&gt; đến bao giờ trên phần tham số không còn đỏ nữa thì thôi. Lúc đó nhấn &lt;code&gt;build&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Build OpenCV thôi.
+a. Với các bé họ nhà Unix (Mac OSX, Linux &amp;hellip;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cd path/to/build/dir
+make -j4 # jk với k là số thread để chạy
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;b. Với các bé nhà Windows:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dangkhoahome.blogspot.sg/2012/03/huong-dan-cai-at-opencv-23-231-trong.html&#34; target=&#34;_blank&#34;&gt;Chịu khó xem lại bài post cũ của mình, mình sẽ update bản mới trong thời gian đến&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;em&gt;UPDATE 1&lt;/em&gt;: Vẫn chưa cài được Opencv 3 lên trên python sau bao nhiêu nỗ lực thực hiện với MAC OS X. Mình sẽ cài đặt nó lên trên Linux để test xem sao.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;UPDATE 2&lt;/em&gt;: Chắc hôm nào sẽ viết tutorial trên cả 3 nền tảng step-by-step.&lt;/p&gt;
+
+&lt;p&gt;P/S: Bạn nào muốn share bài của mình thì vô tư, nhưng nhớ ghi rõ nguồn.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Spams Lib và Những Tâm Sự</title>
+      <link>http://dangkhoasdc.github.io/post/spams-lib/</link>
+      <pubDate>Wed, 25 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/spams-lib/</guid>
+      <description>&lt;p&gt;Không còn gì sung sướng hơn sau 2 ngày ngồi cài cái khỉ gió &lt;em&gt;sparse coding lib cho python&lt;/em&gt;, link cái thằng khỉ gió nó ở đây: &lt;a href=&#34;http://spams-devel.gforge.inria.fr/downloads.html&#34; target=&#34;_blank&#34;&gt;Spams lib&lt;/a&gt;. Mặc dù đã cố gắng nhưng phải mất mấy tiếng đồng hồ mình mới xong được cu cậu này.&lt;/p&gt;
+
+&lt;p&gt;Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như sau:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Không giống như cu Linux hay các bản distro của nó. Trên Mac có 2 cái package manager: MacPorts và HomeBrew. Mà 2 cái này nó lại đẻ ra một số chuyện linh ta linh tinh:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Chúng cài đặt các phần mềm ở những chỗ khác nhau, như cu MacPorts nhét trong &lt;em&gt;/opt/local/bin/&lt;/em&gt;, cu kia thì kinh dị hơn, nhét trong &lt;em&gt;/usr/local/Cellar/&lt;/em&gt; làm mình chả biết đường nào mà lần.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tất cả các đồng chí trên đều đưa đường dẫn đến $PATH, và rồi hầm bà lằng các conflict xuất hiện khiến mình muốn điên đầu.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Bài học tổng kết: chỉ nên xài 1 trong 2 cu&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Không nên tin tưởng hàng của Apple cho lắm, cu cậu chế ra các thứ quá là điên:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Trình biên dịch của Apple chế ra một số options mà ta phải kể đến như cái &lt;code&gt;-arch&lt;/code&gt; chết dịch, ngoài ra còn có cu warning &lt;code&gt;-Wshorten64-to-32&lt;/code&gt;. Python tự generate ra những option dựa trên hệ điều hành đang dùng, khổ một cái, cái compiler mình dùng lại không support cho mấy cái chuyện đó.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Ngoài ra, clang của Apple còn không hỗ trợ cả OpenMP, mà cái này bắt buộc phải có trong cái sparse coding lib này. Đại khái nó cứ luẩn quẩn.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Chưa hết, trong &lt;code&gt;setup.py&lt;/code&gt; cu này để option mặc định là &lt;code&gt;-m32&lt;/code&gt;, tức là sử dụng kiến trúc 32bit. Máy mình lại là 64bit. Sửa lại thì được nhưng lại phải chọn kiến trúc trong file thực thi của python.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Đại khái là xoắn. Giờ thì mình đã biết cách giải quyết:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Cài &lt;strong&gt;python&lt;/strong&gt; từ trang chủ.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Xác định đường dẫn chính thức của nó, mò xem nó ở đâu và add vô trong $PATH.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sử dụng &lt;strong&gt;Superpack&lt;/strong&gt; để cài các gói liên quan trong scipy. &lt;a href=&#34;https://github.com/fonnesbeck/ScipySuperpack&#34; target=&#34;_blank&#34;&gt;link nó đây&lt;/a&gt;. Trong này thì lưu ý cái biên $PIP, sửa lại cho phù hợp với cái máy của mình.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Đối với cu numpy và scipy thì cài đặt thông qua pip.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
