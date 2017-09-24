@@ -39,5 +39,25 @@ T object{arg};
 </description>
     </item>
     
+    <item>
+      <title>LaTex</title>
+      <link>http://dangkhoasdc.github.io/post/latex/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/latex/</guid>
+      <description>
+
+&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+
+&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;
+
+&lt;h3 id=&#34;margin-notes&#34;&gt;Margin Notes&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;marginpar[left text]{right text}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
