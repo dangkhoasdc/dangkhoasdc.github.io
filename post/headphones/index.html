@@ -274,9 +274,9 @@
 <li>Thời gian bỏ ra shopping tỉ lệ thuận với số tiền ước tính. Có thể mua 1 món hàng 800-1000 usd thì mình cần 1 ngày để tìm hiểu cái mình cần mua chẳng hạn. Với những món 10-15 usd có thể chỉ cần 30 phút quyết định.</li>
 <li>Bắt đầu tìm hiểu, nhất thiết phải ghi note lại, ghi chú các ưu nhược điểm mà những món hàng mình có dự định mua (potential items). Việc này giúp mình không phải đắn đo lại 1 món hàng hay xem đi xem lại. Theo mình thấy, nhiều link cùng đề cập đến 1 món và hầu như lúc nào mình cũng mở link để xem lại đúng mô tả của món hàng đó.</li>
 <li>Liệt kê đầy đủ các nhu cầu, ràng buộc, Liên tục cập nhật vào ghi chép.</li>
-<li>Nên cài đặt một &ldquo;hàng đợi ưu tiên&rdquo; (priority queue) theo tiêu chí của riêng mình và chỉ giữ top K phần tử tốt nhất (vd: top 3, top 5). Nếu nhưng list đó full và cần thêm 1 item nữa, thì chắc chắn mình sẽ càn bỏ đi 1 item. Nhờ vây ta sẽ luôn phân tích ưu nhược điểm các item đó, để cuối cùng có quyết định chuẩn hơn.</li>
+<li>Nên cài đặt một &ldquo;hàng đợi ưu tiên&rdquo; (priority queue) theo tiêu chí của riêng mình và chỉ giữ top K phần tử tốt nhất (vd: top 3, top 5). Nếu nhưng list đó full và cần thêm 1 item nữa, thì chắc chắn mình sẽ cần bỏ đi 1 item. Nhờ vậy ta sẽ luôn phân tích ưu nhược điểm các item đó, để cuối cùng có quyết định chuẩn hơn.</li>
 <li>Mua hàng: đơn giản là chọn <code>top()</code> ra khỏi và mua thôi. List <code>k-1</code> item còn lại có thể dùng để &hellip; mua sau đó hoặc có thể giữ làm Wish List chẳng hạn. Tuy nhiên mình nghĩ trước đó nên re-ranking trở lại.</li>
-<li>Nếu có nhiều items có cùng trọng số thì sao? Chuyện này có thể diễn ra, và likely diễn ra khá cao, ta có thể apply một số hypothesis sao:
+<li>Nếu có nhiều items có cùng trọng số thì sao? Chuyện này có thể diễn ra, và likely diễn ra khá cao, ta có thể apply một số hypothesis sau:
 
 <ul>
 <li>Hỏi ý kiến người thân/bạn bè.</li>
