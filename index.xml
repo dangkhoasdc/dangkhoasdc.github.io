@@ -11,6 +11,196 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
+      <link>http://dangkhoasdc.github.io/post/taocp/howto/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/taocp/howto/</guid>
+      <description>
+
+&lt;p&gt;Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có
+tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ
+nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua.
+Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và
+&amp;ldquo;cuồng&amp;rdquo; như Donald Knuth. Và mong ước của mình từ khi bước chân vào giảng đường
+đại học, theo đuổi đam mê với Khoa Học Máy Tính, rằng mình sẽ chinh phục cuốn
+&amp;ldquo;Kinh Thánh&amp;rdquo; này. Đó là một cuộc hành trình, và còn thử thách hơn cả tất cả
+những hành trình mình từng trải nghiệm.&lt;/p&gt;
+
+&lt;p&gt;Ngày sinh nhật vào năm đầu tiên đi làm, mình đã tự thưởng cho bản thân bản &lt;a href=&#34;https://www.amazon.com/Computer-Programming-Volumes-1-4A-Boxed/dp/0321751043/ref=sr_1_1?ie=UTF8&amp;amp;qid=1506337149&amp;amp;sr=8-1&amp;amp;keywords=the+art+of+computer+programming&#34; target=&#34;_blank&#34;&gt;full
+set của bộ
+sách&lt;/a&gt;
+.  Trước giờ mình chỉ dùng với mục đích tham khảo là chính. Nhưng vừa sau đợt
+sinh nhật 24 của mình, mình quyết định phải &amp;ldquo;chinh phục&amp;rdquo; bằng được cuốn sách.
+Mà theo plan của mình Volume 1 sẽ tốn tầm &amp;hellip; 1-2 năm. Và có lẽ, mình sẽ mất
+chừng chục năm để chinh phục Volume 4A 😆. Chưa kể, phần 4B cực kì khó nhằn
+vì có cả Satistiability trong đó. Có lẽ riêng Volume 4 không thôi thì đã trở
+thành tượng đài mất rồi.&lt;/p&gt;
+
+&lt;h1 id=&#34;taocp-liệu-có-khó-đọc&#34;&gt;TAoCP liệu có khó đọc?&lt;/h1&gt;
+
+&lt;p&gt;Theo mình thì không. Nhiều người khi nhìn vào cuốn sách với hàng đống công thức
+toán và những bài tập khó nhằng cũng như code mã máy MIX khiến họ nghĩ đây là
+một cuốn sách rất khó đọc. Nhưng ngay từ đoạn giới thiệu, Don Knuth đã hướng dẫn
+cách đọc và ông đã chỉ rõ những vấn đề mà người đọc thắc mắc.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Với MIX - mình đồng ý quan điểm của Don Knuth, nếu ông viết chương trình theo
+C/C++ hay Java hay Python, một thời gian sau chắc chắn nó sẽ có vấn đề. Kể cả
+những ngôn ngữ bậc cao càng khiến ta khó phân tích chính xác số lượng tính
+toán trong thuật toán đó. Mà theo phân tích của Knuth, đó phải là những phân
+tích chính xác. Ngôn ngữ của MIX cũng rất dễ đọc, không đến nối rắc rối như
+mọi người tưởng. Đồng thời, việc đọc code bằng mã máy khuyến khích người đọc
+&amp;ldquo;vọc&amp;rdquo; với thuật toán được ghi. Thêm nữa, &amp;ldquo;ngôn ngữ bậc cao&amp;rdquo; mà Knuth dùng
+chính là tiếng Anh.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Trong biểu đồ sử dụng sách của mình, Knuth có nói rằng nếu các công thức toán
+&amp;ldquo;is all Greek to you&amp;rdquo; ta chỉ cần xem qua và nắm được kết quả cơ bản mà
+phần đó đề cập, và hầu như các kết quả đó được nói ở đầu mục hoặc cuối mục.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Với bài tập của TAoCP, Knuth đề xuất hệ thống phân loại. Hơn hết, hệ thống
+này nhằm giúp cho người đọc, với thời lượng cho phép của mình, lựa chọn và
+làm những bài bản thân nghĩ là phù hợp. Bởi thật sự những bài với độ khó lớn
+hơn 45, dù là không dính đến toán, M hay HM đều cần rất nhiều thời gian
+nghiên cứu. Bản thân mình nghĩ nếu giải được những bài đó thì có thể hoàn
+thành được PhD của Computer Science rồi. Nhưng mình vẫn nghĩ người đọc nên
+xem qua các câu hỏi này,  &lt;strong&gt;vì nó chính là biên giới tri thức trong khoa học
+máy tính.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Knuth nêu rõ trong cuốn sách của mình, mục đích của cuốn sách phục vụ: (1) là
+tài liệu tham khảo chính xác và chi tiết về phân tích thuật toán, (2) là một
+sách giáo khoa  &lt;strong&gt;tự học&lt;/strong&gt;  dành cho những người đam mê về thuật toán cũng như Khoa
+Học Máy Tính. Nếu bạn mua TAoCP chỉ với giá trị tham khảo thì đó hoàn toàn là
+mục đích chính xác của bộ sách: mình đặc biệt thích phần tra khảo về lịch sử.
+Đúng ra, Don Knuth rất quan tâm đến lịch sử của Khoa Học Máy Tính, đó là lí
+do vì sao trong sách đề cập các thông tin lịch sử lại chi tiết đến như vậy.
+Nhưng ngoài ra, phần bài tập lẫn lời giải, mà thường chiếm đến &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; cuốn sách,
+nói lên rằng Knuth mong mỏi cuốn sách này sẽ là một tài liệu học tốt dành cho
+mọi người.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kế hoạch của mình rất đơn giản: Chinh phục TAoCP đồng thời giúp mọi người dễ
+dàng tiếp cận với tài liệu quý giá này. Quá nhiều bạn đọc dường như sợ tiếp cận
+cuốn sách bởi những &amp;ldquo;myth&amp;rdquo; vừa nêu, đồng thời, chinh phục TAoCP là một hành
+trình thực sự thú vị. Mình đã học được rất nhiều điều thông qua cuốn sách. Những
+ngày đầu đại học khi lần đầu cầm trong tay Volume 1, mình mới thực sự hiểu
+&amp;ldquo;computer science&amp;rdquo; là một khoa học đầy hấp dẫn, và nó cũng rất &amp;ldquo;art&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Mình đồng ý với quan điểm của Knuth, người làm về phân tích thuật toán hạnh phúc
+gấp đôi những ngành khác: họ chiêm nghiệm được những công thức toán phức tạp để
+tính toán độ phức tạp, phân tích thuật toán, đồng thời họ cảm nhận được tính
+hiệu quả của thuật toán đó trong thực tế. Ta chắc chắn không cần bận tâm đến câu
+&amp;ldquo;học toán để làm gì&amp;rdquo;, bởi khi tiếp cận với phân tích thuật toán, ta cảm nhận
+ngay được ích lợi của toán học, thuật toán cũng như vẻ đẹp của thuật toán khi ta
+cài đặt và sử dụng trong thực tiễn.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;một-chút-về-dự-án-này&#34;&gt;Một chút về dự án này&lt;/h1&gt;
+
+&lt;p&gt;Ngoài những chi tiết ở trên, một phần khiến TAoCP khó đọc ở chỗ thông tin được
+Knuth viết tương đối cô đặc. Chính vì lẽ đó mà đôi khi có những phần tương đối
+khó hiểu đối với những bạn tìm hiểu về khoa học máy tính và chưa có nhiều kiến
+thức trước đó. Mục tiêu của project này nhằm giúp các bạn dễ tiếp cận hơn với
+sách, đồng thời giải thích các phần bài tập, bởi mình thấy Knuth viết phần
+Solutions cực kì gọn, và đôi khi cũng không biết là từ đâu lại có những đáp số
+đó. Ngoài ra, tìm hiểu về TAoCP cũng chính là tìm hiểu các thuật toán kinh điển,
+các bài toán làm trên nền tảng của Khoa Học Máy Tính cũng như đây là nguồn tài
+liệu rất quý giá để mài dũa &amp;ldquo;algorithmic thinking&amp;rdquo;. Một lý do nữa khiến mình có
+hứng thú để làm đó là hiện nay tuy có khá nhiều blog, repo trên Github note lại
+TAoCP nhưng chưa có ai viết đầy đủ, hoặc chi tiết.&lt;/p&gt;
+
+&lt;p&gt;Loạt bài viết cùa mình yêu cầu người đọc đã đọc qua trước chương hoặc phần mình
+đề cập trong bài viết, trong các bài viết mình sẽ chú trọng đến các chi tiết
+sau:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Các chi tiết tương đối khó hiểu.&lt;/li&gt;
+&lt;li&gt;Phần bài tập.&lt;/li&gt;
+&lt;li&gt;Các state-of-the-art hiện nay.&lt;/li&gt;
+&lt;li&gt;Các thông tin lý thú liên quan đến chủ đề đó.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mình có tích hợp plugin Hypothesis giúp các bạn có thể highlight, viết note trên
+blog của mình, đồng thời phần comment để mọi người thuận tiện trao đổi với nhau
+cũng như giúp mình update các lỗi có trong bài viết.&lt;/p&gt;
+
+&lt;h1 id=&#34;kinh-nghiệm-cá-nhân&#34;&gt;Kinh nghiệm cá nhân&lt;/h1&gt;
+
+&lt;p&gt;Một số kinh nghiệm bản thân khi mình đọc TAoCP, thực ra đến tận bây giờ bản thân
+mình mới dành thời gian với cuốn sách, trước đây mình chủ yếu dùng tham khảo là
+chính:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Luôn có giấy và bút bên cạnh để có thể:
+
+&lt;ul&gt;
+&lt;li&gt;Chạy &amp;ldquo;chay&amp;rdquo; các thuật toán.&lt;/li&gt;
+&lt;li&gt;Làm bài tập.&lt;/li&gt;
+&lt;li&gt;Hiểu công thức đang muốn nói điều gì.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Có một sổ tay ghi chú. Một số chỗ Knuth viết rất cô đọng và mình nghĩ chỉ có
+cách ghi note lại mới thực sự nhớ và hiểu được.&lt;/li&gt;
+&lt;li&gt;Thử implement thuật toán bằng một ngôn ngữ ưa thích. Quan điểm của mình thì
+C hoặc C++ là phù hợp nhất. C thì có thể gần với mục đích nhất,
+trong khi đó C++ sẽ tiện hơn.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;một-chút-về-phần-preface-volume-i&#34;&gt;Một chút về phần Preface (Volume I)&lt;/h1&gt;
+
+&lt;p&gt;Tuy chỉ là phần lời nói đầu, nhưng tác giả đã đề cập đến khá nhiều câu chuyện
+hay ho mà mình có thể tóm lượt như sau:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Thuở xa xưa khi Khoa học máy tính mới hình thành, có 3 ngành chính thịnh hành
+lúc bấy giờ: numerical analysis, artificial intelligent và language theory.
+Chính Knuth là người đã khai sinh ra nhánh &amp;ldquo;analysis of algorithms&amp;rdquo;. Trước đó
+đã có các công trình của Alan Turing, Jon von Neumann tuy nhiên đó là những
+nghiên cứu rời rạc và không có một hệ thống hoàn chỉnh.&lt;/li&gt;
+&lt;li&gt;Trong phần preface, Knuth đề cập rằng những phân tích của mình &amp;ldquo;non-numerical&amp;rdquo;
+bởi vì nó quan tâm - đến các đối tượng rời rạc nhiều hơn.
+Nếu chọn &amp;ldquo;nonnumerical analysis&amp;rdquo; thì nó - hơi mang tính tiêu cực
+(có lẽ do tiền tố &amp;ldquo;non&amp;rdquo; trong đó). Trong khi đó &amp;ldquo;programming techniques&amp;rdquo; thì
+lại quá chuyên về 1 phần trong lĩnh vực. Đó là lí do mà ông chọn từ
+&amp;ldquo;analysis of algorithms&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Việc chọn mã máy MIX cũng được ông phân tích khá rõ trong phần này.
+Nó thực sự những lý do đó - hoàn toán thuyết phục. Mình nghĩ một ngôn ngữ gần
+nhất ông có thể dùng đó là &amp;ldquo;C&amp;rdquo;. Nhưng nếu như vậy ông phải định nghĩa số chỉ
+thị cho từng câu lệnh trong &amp;ldquo;C&amp;rdquo;, điều này mình nghĩ không đơn giản lắm.&lt;/li&gt;
+&lt;li&gt;Người đồng hành với ông trong cuốn sách này có &amp;ldquo;Robert W. Floyd&amp;rdquo;,
+ông chính là tác giả thuật toán&amp;rdquo;Floyd-Warshall&amp;rdquo;, thuật toán phát hiện
+vòng trong danh sách liên kết cũng như những đóng góp tiêu biểu của ông
+trong &amp;ldquo;program verificaition&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;ghi-chú&#34;&gt;Ghi chú&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Một bài nói của Don Knuth về mối quan tâm của ông với
+lịch sử khoa học máy tính: [ &lt;a href=&#34;https://youtu.be/gAXdDEQveKw&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; ]&lt;/li&gt;
+&lt;li&gt;Phỏng vấn Don Knuth. Có khá nhiều chi tiết thú vị về suốt cuộc đời làm
+nghiên cứu của ông (Ông mất chỉ 1 - tiếng để hoàn thành luận án
+tiến sĩ của mình). [ &lt;a href=&#34;https://youtu.be/vUJ01nRE7r0&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; ].
+Mình sẽ có một bài tóm tắt về cuộc phỏng vấn đầy hấp dẫn này.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An adventure in The Art of Computer Programming</title>
+      <link>http://dangkhoasdc.github.io/project/taocp/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/project/taocp/</guid>
+      <description>
+
+&lt;h3 id=&#34;list-of-related-notes&#34;&gt;List of related notes:&lt;/h3&gt;
+
+&lt;p&gt;Some notes will be written in English.Stay tuned.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Tai nghe dành programmer</title>
       <link>http://dangkhoasdc.github.io/post/headphones/</link>
       <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
@@ -56,6 +246,53 @@
 &lt;li&gt;Chọn cái nào rẻ hơn.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Matlab</title>
+      <link>http://dangkhoasdc.github.io/post/matlab/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/matlab/</guid>
+      <description>
+
+&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Show the information of a variable. It is very useful when we the code takes
+so much memory: &lt;code&gt;whos &amp;lt;variable name&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Sum of squared of elements: &lt;code&gt;sumsqr(X)&lt;/code&gt;. Use &lt;code&gt;sum(sum(A.^2, 1))&lt;/code&gt; instead
+if you want to use less memory.&lt;/li&gt;
+&lt;li&gt;Memory optimizations tips and tricks:
+[&lt;a href=&#34;http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations&#34; target=&#34;_blank&#34;&gt;Undocumented Matlab&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Use column-based representation instead of the row-based one. For example, to
+represent a list of items from 1 to 5, use &lt;code&gt;[1 2 3 4 5]&lt;/code&gt; (not &lt;code&gt;[1; 2; 3; 4; 5]&lt;/code&gt;).
+It becomes convient because MATLAB supports &lt;code&gt;foreach&lt;/code&gt;-like statement:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;for element = list
+    % &amp;lt;statements&amp;gt;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If &lt;code&gt;list&lt;/code&gt; is a matrix, the above statement will assign each column of &lt;code&gt;list&lt;/code&gt; to
+&lt;code&gt;element&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;code-optimization&#34;&gt;Code Optimization&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replace &lt;code&gt;isempty(find(&amp;lt;expr&amp;gt;))&lt;/code&gt; by &lt;code&gt;isempty(find(&amp;lt;expr&amp;gt;, 1))&lt;/code&gt; to
+improve performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;libraries&#34;&gt;Libraries&lt;/h1&gt;
+
+&lt;h2 id=&#34;vlfeat&#34;&gt;VLFeat&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -181,35 +418,6 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 
 
 &lt;p&gt;Lúc nhỏ coi phim này khá là vui. Chuyện đầu tiên là mấy viên xá lợi, mình thì cứ nghĩ là &amp;ldquo;xí lị&amp;rdquo;, hoặc &amp;ldquo;xá xị&amp;rdquo; gì đó. Phim này thì đánh đấm quá ảo, chưa kể là câu chuyện tam giới phức tạp hơn trong Tây Du Kí bản gốc. Mình vẫn còn nhớ có những chi tiết liên kết với phần trước như vụ &amp;ldquo;Tôn Hành Giả - Giả Hành Tôn&amp;rdquo;, &amp;ldquo;Vô Thiên&amp;rdquo;, rồi cả chuyện hồi sinh của Phật Tổ, các yếu tố thần thoại và fantasy được đề cập nhiều hơn. Mặc dù tạo hình không thân quen như trước nhưng cũng rất đáng xem nếu xét những phim ra sau bộ kinh điển 1986.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43;</title>
-      <link>http://dangkhoasdc.github.io/post/cpp/</link>
-      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/cpp/</guid>
-      <description>
-
-&lt;h4 id=&#34;there-are-some-notes-about-cool-stuff-in-c-and-also-some-crazy-things&#34;&gt;There are some notes about cool stuff in C++, and also some crazy things.&lt;/h4&gt;
-
-&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;size()&lt;/code&gt; of containers always have type of &lt;code&gt;unsigned int&lt;/code&gt;, cast to &lt;code&gt;int&lt;/code&gt; if there are any chances we have to compare to an integer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;object-oriented-programming&#34;&gt;Object Oriented Programming&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;/* (1) */
-T object(arg);
-
-/* (2) */
-T object{arg};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(1) can be used by all types of class and non-class. In contrast, (2) is only used to initialize non-class type.&lt;/p&gt;
 </description>
     </item>
     
@@ -378,248 +586,6 @@ Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để c
       
       <guid>http://dangkhoasdc.github.io/publication/gemb/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Các thuật toán ngẫu nhiên</title>
-      <link>http://dangkhoasdc.github.io/post/randalgs_ex/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/randalgs_ex/</guid>
-      <description>
-
-&lt;h1 id=&#34;các-ví-dụ-về-thuật-toán-ngẫu-nhiên&#34;&gt;Các ví dụ về thuật toán ngẫu nhiên&lt;/h1&gt;
-
-&lt;p&gt;Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách &lt;a href=&#34;https://www.amazon.com/Randomized-Algorithms-Rajeev-Motwani/dp/0521474655&#34; target=&#34;_blank&#34;&gt;Randomized Algorithms&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;randomized-quicksort&#34;&gt;Randomized Quicksort&lt;/h1&gt;
-
-&lt;p&gt;Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên. Thử tưởng tượng ta cho quicksort thông thường chạy 10 lần với dữ liệu đã sắp xếp với randomized-quicksort cũng với cấu hình như vậy, ta sẽ thấy sự khác biệt lớn.&lt;/p&gt;
-
-&lt;h2 id=&#34;thuật-toán&#34;&gt;Thuật toán&lt;/h2&gt;
-
-&lt;h2 id=&#34;chứng-minh&#34;&gt;Chứng minh&lt;/h2&gt;
-
-&lt;p&gt;Cho dữ liệu đầu vào gồm $n$ phần tử khác nhau. Gọi $S_i, 1 \leq i \leq n$ là phần tử &lt;em&gt;rank i&lt;/em&gt; (phần tử nhỏ thứ &lt;em&gt;i&lt;/em&gt;) trong mảng, đồng thời ta có $X_{ij}$ biến ngẫu nhiên bằng 1 nếu xuất hiện phép so sánh của 2 phần tử $S_i$ và $S_j$ trong quá trình thực thi, bằng không nếu không xuất hiện phép so sánh nào.&lt;/p&gt;
-
-&lt;p&gt;Như vậy, độ phức tạp của &lt;code&gt;randomized-quicksort&lt;/code&gt; được tính thông qua quá trình sắp xếp mảng theo pivot mà chi phí chính nằm ở phép so sánh các phần tử, tổng chi phí chính là&lt;/p&gt;
-
-&lt;p&gt;$$ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} $$&lt;/p&gt;
-
-&lt;p&gt;Tuy nhiên, điều ta quan tâm hơn ở đây là &lt;em&gt;kì vọng&lt;/em&gt; chi phí trong các lần thực thi:&lt;/p&gt;
-
-&lt;p&gt;$$E \left [ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&amp;gt;i} E[X_{ij}]$$&lt;/p&gt;
-
-&lt;p&gt;Công thức trên được xây dựng dựa vào một tính chất của kì vọng: &lt;a href=&#34;https://brilliant.org/wiki/linearity-of-expectation/&#34; target=&#34;_blank&#34;&gt;tính tuyến tính của kì vọng&lt;/a&gt;. Như vậy kì vọng của tổng các chi phí so sánh chính bằng tổng của từng kì vọng của biến ngẫu nhiên $ X_{ij}$. Gọi $p_{ij}$ là xác suất để $X_{ij}=1$. Ta có:&lt;/p&gt;
-
-&lt;p&gt;$$ E[X_{ij}] = p_{ij} * 1 + (1-p) * 0 = p_{ij} $$
-$$ E \left [ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&amp;gt;i} p_{ij} $$&lt;/p&gt;
-
-&lt;p&gt;Bài toán được qui về việc tính xác suất khi nào phép so sánh giữa hai phần tử $S_i$ và $S_j$ xuất hiện.&lt;/p&gt;
-
-&lt;p&gt;Nếu ta xem quá trình thực thi của &lt;code&gt;randomized-quicksort&lt;/code&gt; là quá trình xây dựng cây nhị phân: với mỗi node chính là 1 pivot tại thời điểm gọi hàm &lt;code&gt;partition&lt;/code&gt;, kết quả hàm &lt;code&gt;partition&lt;/code&gt; ta có được 2 cây con bên trái và phải của node pivot dùng để so sánh. Nếu $S_i$ và $S_j$ nằm ở hai nhánh con trái-phải thì phép so sánh giữa hai phần tử này chắc chắn không xảy ra. Như vậy $S_i$ và $S_j$ có quan hệ cha con - một trong hai phần tử phải thuộc node cấp lớn hơn của node kia. Một giả thuyết khác cần xem xét đó là xác suất các số được chọn làm pivot phải bằng nhau (uniform distribution) - có được giả thuyết này ta mới tính được độ phức tạp trong thời gian trung bình được.&lt;/p&gt;
-
-&lt;p&gt;Như vậy, để $X_{ij}=1$ khi và chỉ khi một trong hay vị trí $S_i$ hoặc $S_j$ được chọn, và đó là $p_{ij} = \frac{2}{j - i + 1} $ (Xác suất này được tính khi loại đi xác suất chọn phải những pivot nằm bên trái của $S_i$ hoặc nằm bên phải của $S_j$)&lt;/p&gt;
-
-&lt;p&gt;Như vậy ta có:&lt;/p&gt;
-
-&lt;p&gt;$$E \left [ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&amp;gt;i} \frac{2}{j - i + 1}$$&lt;/p&gt;
-
-&lt;p&gt;Đặt $k = j - i + 1$, ta được:&lt;/p&gt;
-
-&lt;p&gt;$$\sum_{i=1}^n \sum_{j&amp;gt;i} p_{ij} \leq \sum_{i=1}^n \sum_{k=1}^{n-i+1} \frac{1}{k}$$&lt;/p&gt;
-
-&lt;p&gt;$$\leq 2 \sum_{i=1}^n \sum_{k=1}^{n} \frac{1}{k}$$&lt;/p&gt;
-
-&lt;p&gt;$$= 2n \sum_{k=1}^{n} \frac{1}{k}$$&lt;/p&gt;
-
-&lt;p&gt;$\sum_{k=1}^{n} \frac{1}{k}$ chính là &lt;a href=&#34;https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Rate_of_divergence&#34; target=&#34;_blank&#34;&gt;chuỗi harmony&lt;/a&gt; và tổng này sẽ hội tụ về xấp xỉ của $ln(n)$. Và như vậy&lt;/p&gt;
-
-&lt;p&gt;$$E \left [ \sum_{i=1}^n \sum_{j&amp;gt;i} X_{ij} \right ] \leq 2n\log{n}$$&lt;/p&gt;
-
-&lt;h1 id=&#34;random-mincut&#34;&gt;Random Mincut&lt;/h1&gt;
-
-&lt;h2 id=&#34;ví-dụ&#34;&gt;Ví dụ&lt;/h2&gt;
-
-&lt;p&gt;Giả sử ta có dữ liệu facebook của đám bạn cấp 3 và đang tò mò xem trong chục năm qua, những đứa bạn đó có lập thành nhóm chơi thân nào không. Dữ liệu đầu vào là danh sách các bạn trong lớp cấp 3 và mỗi quan hệ từng người với nhau (quan hệ bạn cấp 3, bạn đại học, đồng nghiệp, quan hệ nam nữ, vợ chồng).&lt;/p&gt;
-
-&lt;p&gt;Giả sử ta tạo một đồ thị với đỉnh là một người trong lớp, &lt;code&gt;a&lt;/code&gt; có thể nối với &lt;code&gt;b&lt;/code&gt; thông qua các cạnh nối:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Bạn cấp 3 (cái này chắc chắn)&lt;/li&gt;
-&lt;li&gt;Bạn đại học&lt;/li&gt;
-&lt;li&gt;Đồng nghiệp&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Việc tìm ra nhóm bạn &lt;em&gt;thân&lt;/em&gt; - tức gắng bó với nhau sau thời gian cấp 3 chính là việc tìm cách tách đồ thị lớn này thành những đồ thị con.&lt;/p&gt;
-
-&lt;p&gt;Những bài toán &lt;em&gt;chia cắt&lt;/em&gt; đồ thị gọi là &lt;em&gt;graph cut&lt;/em&gt;, nếu trong bài toán yêu cầu tìm ra đoạn cắt nào có chi phí thấp nhất: cắt ít số cạnh nhất - thì đó chính là bài toán tìm &lt;em&gt;mincut&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Trong ví dụ này ta xét đồ thị là một &lt;a href=&#34;http://mathworld.wolfram.com/Multigraph.html&#34; target=&#34;_blank&#34;&gt;multigraph&lt;/a&gt; - tức đồ thị có thể có nhiều cạnh cùng nối chung hai điểm. Một số định nghĩa cho phép &lt;em&gt;multigraph&lt;/em&gt; là đồ thị có các cạnh lặp (self-loop). Để thuận tiện cho việc chứng minh và minh hoạ, các đồ thị được đề cập trong bài là các đồ thị vô hướng.&lt;/p&gt;
-
-&lt;h2 id=&#34;karger-mincut-https-en-wikipedia-org-wiki-karger-27s-algorithm&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Karger%27s_algorithm&#34; target=&#34;_blank&#34;&gt;Karger Mincut&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/e/e7/Single_run_of_Karger%E2%80%99s_Mincut_algorithm.svg&#34; alt=&#34;Minh hoạ thuật toán Karger&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Một quá trình quan trọng trong thuật toán Karger là &lt;em&gt;Edge Contraction&lt;/em&gt; - gộp cạnh. Cho một cạnh $ e = {u, v}$, sau phép gộp cạnh ta sẽ có được một &lt;em&gt;đỉnh&lt;/em&gt; mới là $uv$ trong đó tất cả các cạnh nối từ $u$ đến $v$ hay ngược lại đều bị loại bỏ, đồng thời các cạnh lặp (self-loop) cũng bị xoá bỏ.&lt;/p&gt;
-
-&lt;p&gt;Với các cạnh khác $ e’ = {u, w}$ hay $e’={v, w}$ đều trở thành $e’={uv,w}$.&lt;/p&gt;
-
-&lt;p&gt;Một cách đơn giản: phép gộp cạnh sẽ nhập 2 đỉnh lại với nhau - xoá toàn bộ các cạnh nối 2 cạnh cũ và giữ lại những cạnh nối 2 đỉnh đó với các đỉnh khác trong đồ thị.&lt;/p&gt;
-
-&lt;p&gt;Thuật toán được mô tả như sau:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;1. Chọn ngẫu nhiên (theo phân phối đều) một cạnh trong đồ thị.
-2. Thực hiện phép gộp cạnh vừa chọn.
-3. Lặp lại bước (1) cho đến khi số đỉnh trong đồ thị còn lại 2.
-4. Output: min-cut là các cạnh còn lại trong đồ thị
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h2 id=&#34;tính-đúng-đắng-của-giải-thuật&#34;&gt;Tính đúng đắng của giải thuật&lt;/h2&gt;
-
-&lt;p&gt;Để có thể tính được độ phức tạp trong thời gian trung bình, ta cần quay lại một chút về các tính chất của đồ thị. Cho đa đồ thị (multigraph) $G=(V, E)$ gồm các đỉnh $V$ và các cạnh $E$. Gọi $d(v)$ là bậc của đỉnh $v$ là tổng số các cạnh liên thuộc với $v$. Ta có tính chất sau:&lt;/p&gt;
-
-&lt;p&gt;$$\sum_{v \in V} d(v) = 2 | E |$$&lt;/p&gt;
-
-&lt;p&gt;Gọi $C$ là lát cắt có kích thước nhỏ nhất $k$ - tức số lượng các cạnh trong lát cắt đó là $k$. Do đó, bậc tối thiểu của mỗi cạnh trong đồ thị này là $k$. Bởi nếu tồn tại một đỉnh có bậc nhỏ hơn $k$ thì lắt cắt $k$ không phải là lát cắt nhỏ nhất.&lt;/p&gt;
-
-&lt;p&gt;Như vậy ta có:&lt;/p&gt;
-
-&lt;p&gt;$$nk \leq \sum_{v \in V} d(v) = 2 | E |$$
-$$|E| \geq \frac{nk}{2}$$&lt;/p&gt;
-
-&lt;p&gt;Ta thấy xác suất để thuật toán gộp cạnh chọn đúng ngay 1 cạnh trong C chính là&lt;/p&gt;
-
-&lt;p&gt;$$\frac{k}{|E|}$$&lt;/p&gt;
-
-&lt;p&gt;kết hợp với bất đẳng thức phía trên, ta được:&lt;/p&gt;
-
-&lt;p&gt;$$\frac{k}{|E|} \leq \frac{2k}{nk} = \frac{2}{n}$$&lt;/p&gt;
-
-&lt;p&gt;Như vậy, xác suất để thuật toán gộp cạnh không chọn phải các cạnh của $C$ là $p_n $.&lt;/p&gt;
-
-&lt;p&gt;Ta có $p_n \leq (1-\frac{2}{n})p_{n-1} $ .&lt;/p&gt;
-
-&lt;p&gt;Đồng thời ta cũng có $ p_2 = 1 $ lí do là bởi Karger chỉ chọn cạnh để gộp khi $ \vert V \vert &amp;gt; 2 $&lt;/p&gt;
-
-&lt;p&gt;Nên khi $ n=2 $ thì biến cố chọn phải cạnh để gộp nằm trong $ C $ chắc chắn không xảy ra.&lt;/p&gt;
-
-&lt;p&gt;Xác suất $p_n$ có cận như sau:&lt;/p&gt;
-
-&lt;p&gt;$$p_n \geq \prod_{i=0}^{n-3} \left (1 - \frac{2}{n-i} \right ) = \frac{2}{n(n-1)}$$&lt;/p&gt;
-
-&lt;p&gt;Để dễ tưởng tượng hơn, ta có thể phân tích một chút về trường hợp Karger không tìm ra được mincut, rõ ràng xác suất đó chính là $ 1 - \frac{2}{n(n-1)}$, để tăng độ chính xác, ta có thể cho Karger chạy $k$ lần. Lúc này, xác suất Karger không tìm ra được mincut là: $ \left (1 - \frac{2}{n(n-1)} \right )^k$. Có một bất đẳng thức thú vị ở đây:&lt;/p&gt;
-
-&lt;p&gt;$$\frac{1}{4} \leq \left (1 - \frac{1}{x} \right )^ x \leq \frac{1}{e}$$&lt;/p&gt;
-
-&lt;p&gt;Giả sử $k = \frac{n(n-1)}{2}\ln n$ ta có được kết quả khá đẹp như sau:&lt;/p&gt;
-
-&lt;p&gt;$$\left (1 - \frac{2}{n(n-1)} \right )^{\frac{n(n-1)}{2}\ln n} \leq \left (\frac{1}{e} \right )^{\frac{n(n-1)}{2}\ln n} = \left (\frac{1}{e} \right ) ^{\ln n} = \frac{1}{n}$$&lt;/p&gt;
-
-&lt;h1 id=&#34;binary-planar-partitions&#34;&gt;Binary Planar Partitions&lt;/h1&gt;
-
-&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới thiệu&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/cGwRyxq.png&#34; alt=&#34;Một ví dụ về cây BSP&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Binary Planar Partitions (trong trường hợp tổng quát là &lt;em&gt;Binary Space Partitions&lt;/em&gt;) là một phương pháp phổ biến được sử dụng nhằm chia cắt không gian thành các tập lồi (convex set) chứa các siêu phẳng - hyperplane. Sự chia cắt này tạo nên một cấu trúc dữ liệu được gọi là cây BSP.&lt;/p&gt;
-
-&lt;p&gt;BSP có nhiều ứng dụng, đặc biệt là trong các bài toán về đồ hoạ. Điển hình như trong bài toán dựng hình (xác định đối tượng nào được dựng trong khung hình từ góc một góc nhìn nào đó), trong hệ thống CAD, phát hiện va chạm trong robotics, cũng như trong các bài toán chứa các cấu trúc không gian phức tạp.&lt;/p&gt;
-
-&lt;p&gt;Trong trường hợp tổng quát, cây BSP, từ mỗi node của mình sẽ chia không gian thành hai nửa siêu phẳng, từ mỗi nửa siêu phẳng đó sẽ tiếp tục được chia cắt thành các nửa siêu phẳng nhỏ hơn sao cho những node lá cuối cùng sẽ chứa 1 đối tượng mà thuộc không gian. Có thể thấy cây BSP là trường hợp tổng quát của cây &lt;a href=&#34;https://en.wikipedia.org/wiki/K-d_tree&#34; target=&#34;_blank&#34;&gt;k-d&lt;/a&gt;, và &lt;a href=&#34;https://en.wikipedia.org/wiki/Quadtree&#34; target=&#34;_blank&#34;&gt;Quadtree&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;ví-dụ-1&#34;&gt;Ví dụ&lt;/h2&gt;
-
-&lt;p&gt;Để đơn giản bài toán ta xét trường hợp mặt phẳng với dữ liệu đầu vào là tập các đoạn thẳng sao cho từng cặp trong tập không giao nhau $S={s_1, s_2, \dots, s_n}$, output của bài toán là một cây BSP mà mỗi vùng trong mỗi node lá chỉ chứa 1 một đoạn thẳng.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Chọn ngẫu nhiên (theo phân phối đều) một hoán vị $\pi$ trong tập hoá vị của ${1, 2, \dots, n }$ (gồm $n!$ phần tử).&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Tồn tại một vùng chứa nhiều hơn 1 đoạn thẳng:&lt;/p&gt;
-
-&lt;p&gt;2.a Cắt vùng này bởi &lt;em&gt;đường thẳng&lt;/em&gt; $l(s_i)$ trong đó $i$ là phần tử đầu tiên trong hoán vị (ở đây đường thẳng $l$ sẽ chứa $s_i$) $\pi$ sao cho $s_i$ cắt vùng đang xét.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;phân-tích&#34;&gt;Phân tích&lt;/h2&gt;
-
-&lt;p&gt;Gọi biến $X_{ij}$ là biến ngẫu nhiên và $X_{ij}=1$ khi đường thẳng chứa $s_i$ cắt $s_j$ trong một vòng gọi đệ quy nào đó, $X_{ij}=0$ trong trường hợp ngược lại.&lt;/p&gt;
-
-&lt;p&gt;Ở đây ta muốn xét xem kì vọng số lần thuật toán này cắt phải một đoạn thẳng trong tập đầu vào $S$.&lt;/p&gt;
-
-&lt;p&gt;$$\mathbf{E} (X) = \mathbf{E} \left [ \sum_{i=1}^{n} \sum_{i=1}^{n} X _ {ij} \right ]$$
-$$= \sum_{i=1}^{n} \sum_{i=1}^{n} \mathbf{E} [X _ {ij} ]$$
-$$= \sum_{i=1}^{n} \sum_{i=1}^{n} Pr [X _ {ij} = 1 ]$$&lt;/p&gt;
-
-&lt;p&gt;Bài toán được quy về việc tính xác suất $Pr[X_{ij}=1]$. Gọi $t$ là giao điểm của $s_i$ và $s_j$, $index(i,j)=t$ nếu $s_i$ cắt $t-1$ đoạn thẳng trước khi giao với $s_j$, như ví dụ bên dưới $s_{ij}=4$. Trường hợp hai đoạn thẳng không cắt nhau thì $S_{ij}=\infty$.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/kyaZ5CL.png&#34; alt=&#34;Ví dụ về giá trị index(i, j)&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bởi đường thẳng chứa $s_i$ bất kì có thể tiến vô cùng về hai phía nên tồn tại hai đoạn sao cho $index(s_i, s_j) = index(s_i, s_k)$. Nếu $index(s_i, s_j)=t$ ta gọi $s_{i1}, s_{i2}, \dots, s_{it}$ là những đoạn thẳng mà $s_i$ sẽ cắt trước khi giao với $s_j$, xác suất đề sự kiện này xảy ra là $\frac{1}{t+1}$&lt;/p&gt;
-
-&lt;p&gt;Cho một đoạn $s_k$ cố định và $m \in {0, 1, 2, dots, n-2 }$ tồn tại tối đa hai đoạn thẳng $s_l$ sao cho $index(s_l, s_k)=m$&lt;/p&gt;
-
-&lt;p&gt;Cận trên được tính như sau:&lt;/p&gt;
-
-&lt;p&gt;$$\mathbf{E}[X] = \sum_{i=1}^{n} \sum_{j=1}^{n} Pr [X _ {ij} = 1 ]$$
-$$\leq \sum_{i=1}^{n} \sum_{j=1}^{n} \frac{1}{index(i, j) + 1}$$
-$$\sum_{i=1}^{n} \sum_{k=2}^{n} \frac{2}{k}$$
-$$= 2n \ln n$$&lt;/p&gt;
-
-&lt;h1 id=&#34;tài-liệu-tham-khảo&#34;&gt;Tài liệu tham khảo.&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.csee.wvu.edu/~ksmani/courses/fa01/random/lecnotes/lecture2.pdf&#34; target=&#34;_blank&#34;&gt;Introduction to Randomized Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://cs.au.dk/~gudmund/Documents/randompearlnotes.pdf&#34; target=&#34;_blank&#34;&gt;Randomised Algorithms&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Cảm nhận Star Wars VII: The Force Awakens</title>
-      <link>http://dangkhoasdc.github.io/post/startwars-vii-review/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/startwars-vii-review/</guid>
-      <description>&lt;p&gt;Từ nhỏ, tôi luôn thích những cuộc phiêu lưu và những câu chuyện giả tưởng. Từ cuộc phiêu lưu của Robinson đến con tàu chu du hai mươi ngàn dặm dưới đáy biển của Jules Verne hay cuộc chiến ngoài vũ trụ trong Starcraft. Star Wars cũng không phải là ngoại lệ, dĩ nhiên tôi không phải fan cuồng đến mức đọc từng trang wiki về từng nhân vật, thậm chí đến những nhân vật xuất hiện trong phim có vài giây cũng có hẳn &lt;a href=&#34;https://www.youtube.com/watch?v=bsb9ZTmbSKQ&amp;amp;feature=youtu.be&amp;amp;t=38s&#34; target=&#34;_blank&#34;&gt;trang wiki riêng cơ mà&lt;/a&gt;. Và dù biết đến Star Wars khá muộn màng vào những năm đại học, câu chuyện về cuộc chiến trong dải thiên hà xa xôi luôn khiến tôi thích thú.&lt;/p&gt;
-
-&lt;p&gt;Hôm nay tôi dành ngày nghỉ lễ để xem &lt;em&gt;Star Wars VII: The Force Awakens&lt;/em&gt;. Cảm nhận của tôi không gì ngoài một từ: &lt;em&gt;xuất sắc&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/wiYUg5a.jpg&#34; alt=&#34;Người trong mộng trong các thế hệ fan Star Wars&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Trước khi vào rạp, tôi không mong nhân vật nữ mới sẽ mang đến cảm giác như &lt;a href=&#34;https://www.youtube.com/watch?v=KSYValHWNOs&#34; target=&#34;_blank&#34;&gt;công chúa Leia&lt;/a&gt; từng mang đến. Nàng mang một vẻ đẹp nhẹ nhàng với tính cách vừa là của một nàng công chúa kiêu kì vừa là một người tướng của quân Kháng Chiến. Ngoài ra nàng còn rất thông minh và bá đạo, đôi lúc nàng “chơi lầy” khiến thanh niên Han Solo nhiều lúc cứng cả họng. Với việc xây dựng nhân vật nữ mới Rey xuất thân không phải tầng lớp quí tộc, một phần mang hơi hướng hiện đại khiến tôi có cảm giác bất an cho nhân vật này. Tôi cũng không biết cách tiếp cận của đạo diễn sẽ thế nào. Trong khi các tập IV, V và VI là những tượng đài kinh điển của điện ảnh và là biểu tượng của văn hoá Pop, tập I, II, III đã khiến khán giả thất vọng vì kịch bản sơ sài, hiệu ứng hình ảnh sử dụng thừa thãi và nhân vật trẻ trâu Anakin xứng đáng được liệt vào danh sách những đứa trẻ trâu nhất trong lịch sử điện ảnh, áp lực đè lên tập VII không hề nhỏ. Họ phải làm vừa lòng những fan trung thành nhất, khôi phục lại hình ảnh mang tính chất biểu tượng, và hơn thế nữa là tạo nên một thế hệ những khán giả mới.&lt;/p&gt;
-
-&lt;p&gt;Theo quan điểm của tôi, Star Wars 7 đã thành công ngoài mong đợi.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/G8Nxl0E.jpg&#34; alt=&#34;Các figures đội quân stormstrooper và tàu chiến tại sân bay Changi&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tính đến thời điểm hiện tại, nói về mặt doanh thu toàn cầu đã là một minh chứng hùng hồn về việc Star Wars 7 đã chinh phục trái tim người hâm mộ. Với điểm IMDB và điểm Tomatoes khá cao đã phản ảnh được chất lượng của bộ phim trong mắt những nhà phê bình. Và nếu có dịp, tôi vẫn sẽ ra rạp và xem lại bộ phim đầy hấp dẫn này.&lt;/p&gt;
-
-&lt;p&gt;Với những người đã xem các tập trước, đặc biệt là tập IV, V và VI thì Star Wars VII như một cầu nối kí ức. Chúng ta được gặp lại Han Solo và Chewbacca, được gặp lại Leia và các droid C-3PO, R2-D2. Tính cách của họ vẫn vậy, chàng cao bồi Han Solo vẫn tưng tửng như ngày nào, nàng Leia vẫn đẹp (lão) rạng ngời. C-3PO vẫn nhiều chuyện như xưa, R2-D2 thì vẫn “nghiêm túc” với sứ mệnh của mình. Luke giờ thì là phiên bản 2 của Obi-wan Kenobi. Những tàn tích của cuộc chiến tranh với xác tàu chiến và cỗ máy AT-AT nằm la liệt, đội quân stormstrooper vẫn là bia tập bắn cho phe chính nghĩa, cùng rất nhiều thiết bị vũ trụ làm fan cảm thấy bồi hồi xúc động.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/SoGieNB.jpg&#34; alt=&#34;Đám này vẫn mãi là bia đỡ đạn&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Và chúng ta cũng được gặp những con người của thế hệ sau: Rey, Ren, Finn và Poe. Cuộc đời và số phận của họ đang dần được hé lộ cùng với bộ phim. Điểm hay của bộ phim chính là việc kế thừa và tôn trọng những gì thuộc về “truyền thống” của Star Wars như đoạn mở đầu phim (khiến bản thân mình khi nghe nhạc còn rùng mình vì thích thú) hay cũng những con quái vật trên màn chiếu hologram, hệ thống chiến đầu trên tàu Falcon hay những cảnh rượt nhau sát sườn hệ thống vũ khí của phe Bóng Tối. Star Wars vừa là một câu chuyện nối tiếp, vừa là bản cover (tôi không gọi nó là remake) tuyệt vời. Giữ lại cái chất trong Star Wars và mang một luồng gió mới cho dòng phim kinh điển.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/ck9UNAJ.jpg&#34; alt=&#34;Đoạn Opening kinh điển&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Âm thanh và nhạc nền đóng một phần không nhỏ trong thành công của bộ phim. Cả những kĩ thuật sử dụng hiệu ứng ánh sáng và hoá trang, Star Wars 7 đã tránh được vết xe đổ của bộ prequel trước đó. Hình ảnh hành tinh sa mạc và những chủng tộc hành tinh xuất hiện, đống tàn tích sau cuộc chiến tranh đã thể hiện rõ nét hơn về những gì sau sự kiện “Return of The Jedi”. Khi các phần prequel bị thiên hạ thém cà chua vì lạm dụng kĩ xảo, chúng ta càng không mong đợi Star Wars 7 mang đến sự đột phá về cách làm phim, nhưng cách mà Star Wars 7 đã làm đầy thông thinh, kết hợp yếu tố hiệu ứng hình ảnh với practical effect, vừa mô tả được sự hùng vĩ cả các hành tinh, tàu vũ trụ, những trận chiến khốc liệt, vừa tạo nên những thước phim rất chân thật.&lt;/p&gt;
-
-&lt;p&gt;Tôi không rõ Kylo Ren vì sao lại quá lo lắng vì không đạt được sức mạnh như ông ngoại mình. Nhưng tôi đảm bảo độ trẻ trâu của nhân vật này đã bằng với Darth Vader lúc còn là Anakin. Thật sự tôi cũng không hiểu sao mấy ông đạo diễn thích làm nhân vật phản diện trẻ trâu đến thế. Nhưng điểm cộng cho Ren đó là khi anh tức giận, thay vì bóp phát chết luôn tướng của mình như ông ngoại làm, anh ta lấy kiếm chém búa lua xua - ít ra anh còn biết bảo vệ nguồn nhân lực và người có tài. Đoạn đầy nước mắt của Ren theo mình nghĩ là do chả diễn sâu để ông bố không đề phòng. Coi như là một điểm cộng trong sự thủ đoạn của anh ấy. Finn và Rey rất dễ thương - nhưng bản thân mình thấy độ dễ thương và khùng không bằng Leia và Han. Rey thì cứng cỏi và mạnh mẽ hơn Leia nhiều, một phần là do nàng có thần lực. Mình rất thích Poe, chàng phi công xuất sắc và cũng hơi tưng tửng này. Tuy nhiên so về độ điên và bảnh thì không thể bằng Han Solo rồi.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://i.imgur.com/WN3WoYU.jpg&#34; alt=&#34;Tội nghiệp Luke&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tóm lại, câu chuyện từ phần 1 đến phần 7 rốt cuộc xoay quanh “gia đình bá đạo” Skywalker cho cả thiên hà ăn hành ngập mặt và gánh chịu bao nhiêu tai ương. Con gái nhà này thì khùng khùng thất thường lại chảnh (đắng lòng khi phải nhận xét về Leia yêu dấu như vậy), con trai thì đứa nào cũng nhăm nhe sát hại cha mình, nếu không về mặt sáng thì cũng về mặt tối, thằng không bị chặt tay cũng bị ngâm mình trong dung nham, và điển hình là gen trẻ trâu di truyền qua nhiều thế hệ. Và tốt hơn hết, nếu bạn sống trong vũ trụ này, vào một ngày đẹp trời nào đó có ai đưa cho bạn thanh gươm ánh sáng màu xanh lá thì tốt nhất là trả lại gươm, xách tàu chạy 500 parsec tới vùng Vành Đai và chịu khó sống cuộc đời yên bình. Còn không …&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;May The Force Be With You&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;====&lt;/p&gt;
-
-&lt;p&gt;1: &lt;a href=&#34;http://kenh14.vn/mot-phim/star-wars-the-force-awakens-bo-phim-can-moc-1-ty-usd-doanh-thu-nhanh-nhat-moi-thoi-dai-20151228124025985.chn&#34; target=&#34;_blank&#34;&gt;http://kenh14.vn/mot-phim/star-wars-the-force-awakens-bo-phim-can-moc-1-ty-usd-doanh-thu-nhanh-nhat-moi-thoi-dai-20151228124025985.chn&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;2: &lt;a href=&#34;http://www.imdb.com/title/tt2488496/?ref_=nv_sr_1&#34; target=&#34;_blank&#34;&gt;http://www.imdb.com/title/tt2488496/?ref_=nv_sr_1&lt;/a&gt;&lt;/p&gt;
-</description>
     </item>
     
   </channel>

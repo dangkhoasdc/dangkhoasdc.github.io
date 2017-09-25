@@ -5,8 +5,35 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/post/taocp/howto/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/project/taocp/</loc>
+      <lastmod>2017-09-24T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/post/headphones/</loc>
       <lastmod>2017-09-24T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/post/matlab/</loc>
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -43,15 +70,6 @@
     
       <loc>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</loc>
       <lastmod>2017-09-16T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://dangkhoasdc.github.io/post/cpp/</loc>
-      <lastmod>2017-09-13T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -381,7 +399,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/algorithms/</loc>
-      <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -468,7 +486,9 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/post/latex/</loc>
+      <loc>http://dangkhoasdc.github.io/tags/matlab/</loc>
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+      <priority>0</priority>
     </url>
     
   
@@ -507,7 +527,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/notes/</loc>
-      <lastmod>2017-09-13T00:00:00+00:00</lastmod>
+      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -516,7 +536,7 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/post/</loc>
+      <loc>http://dangkhoasdc.github.io/tags/others/</loc>
       <lastmod>2017-09-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -526,8 +546,8 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/tags/programming/</loc>
-      <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+      <loc>http://dangkhoasdc.github.io/post/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -536,8 +556,8 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/tags/programming-languages/</loc>
-      <lastmod>2017-09-13T00:00:00+00:00</lastmod>
+      <loc>http://dangkhoasdc.github.io/tags/programming/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -556,7 +576,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/project/</loc>
-      <lastmod>2017-09-12T00:00:00+00:00</lastmod>
+      <lastmod>2017-09-24T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -606,7 +626,17 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/</loc>
-      <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/tags/taocp/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

@@ -21,16 +21,39 @@
 &lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Show the information of a variable. It is very useful when we the code takes so much memory: &lt;code&gt;whos &amp;lt;variable name&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Sum of squared of elements: &lt;code&gt;sumsqr(X)&lt;/code&gt;. Use &lt;code&gt;sum(sum(A.^2, 1))&lt;/code&gt; instead of you want to use less memory.&lt;/li&gt;
-&lt;li&gt;Memory optimizations tips and tricks: &lt;a href=&#34;http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations&#34; target=&#34;_blank&#34;&gt;[Undocumented Matlab]&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Show the information of a variable. It is very useful when we the code takes
+so much memory: &lt;code&gt;whos &amp;lt;variable name&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Sum of squared of elements: &lt;code&gt;sumsqr(X)&lt;/code&gt;. Use &lt;code&gt;sum(sum(A.^2, 1))&lt;/code&gt; instead
+if you want to use less memory.&lt;/li&gt;
+&lt;li&gt;Memory optimizations tips and tricks:
+[&lt;a href=&#34;http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations&#34; target=&#34;_blank&#34;&gt;Undocumented Matlab&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Use column-based representation instead of the row-based one. For example, to
+represent a list of items from 1 to 5, use &lt;code&gt;[1 2 3 4 5]&lt;/code&gt; (not &lt;code&gt;[1; 2; 3; 4; 5]&lt;/code&gt;).
+It becomes convient because MATLAB supports &lt;code&gt;foreach&lt;/code&gt;-like statement:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;for element = list
+    % &amp;lt;statements&amp;gt;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If &lt;code&gt;list&lt;/code&gt; is a matrix, the above statement will assign each column of &lt;code&gt;list&lt;/code&gt; to
+&lt;code&gt;element&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;code-optimization&#34;&gt;Code Optimization&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replace &lt;code&gt;isempty(find(&amp;lt;expr&amp;gt;))&lt;/code&gt; by &lt;code&gt;isempty(find(&amp;lt;expr&amp;gt;, 1))&lt;/code&gt; to
+improve performance.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&#34;libraries&#34;&gt;Libraries&lt;/h1&gt;
 
 &lt;h2 id=&#34;vlfeat&#34;&gt;VLFeat&lt;/h2&gt;
 
-&lt;h3 id=&#34;use-vl-imreadjpeg-instead-of-imread-it-could-speed-up-reading-image-files&#34;&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

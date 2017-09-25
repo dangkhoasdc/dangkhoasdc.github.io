@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Algorithms on Dang-Khoa&#39;s blog </title>
-    <link>http://dangkhoasdc.github.io/tags/algorithms/</link>
-    <description>Recent content in Algorithms on Dang-Khoa&#39;s blog </description>
+    <title>Taocp on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/taocp/</link>
+    <description>Recent content in Taocp on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
     <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/algorithms/" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/taocp/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
@@ -183,64 +183,6 @@ nghiên cứu của ông (Ông mất chỉ 1 - tiếng để hoàn thành luận
 tiến sĩ của mình). [ &lt;a href=&#34;https://youtu.be/vUJ01nRE7r0&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; ].
 Mình sẽ có một bài tóm tắt về cuộc phỏng vấn đầy hấp dẫn này.&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>An adventure in The Art of Computer Programming</title>
-      <link>http://dangkhoasdc.github.io/project/taocp/</link>
-      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/project/taocp/</guid>
-      <description>
-
-&lt;h3 id=&#34;list-of-related-notes&#34;&gt;List of related notes:&lt;/h3&gt;
-
-&lt;p&gt;Some notes will be written in English.Stay tuned.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bài toán chuyển ngày sang thứ</title>
-      <link>http://dangkhoasdc.github.io/post/sakamoto_method/</link>
-      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/sakamoto_method/</guid>
-      <description>
-
-&lt;p&gt;Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo;
-Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&amp;gt; Chủ Nhật, 1 -&amp;gt; Thứ Hai &amp;hellip;
-Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;amp;R C).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;dayofweek(y, m, d) {
-    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
-    y -= m &amp;lt; 3;
-    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &amp;ldquo;ranh&amp;rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; (Nếu ngày &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; là thứ Hai thì &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; sẽ là thứ 5). &lt;code&gt;t[]&lt;/code&gt; chính là offset cho ngày đầu tiên của tháng so với ngày &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt;, như vậy ta có &lt;code&gt;t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}&lt;/code&gt; (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.&lt;/p&gt;
-
-&lt;p&gt;Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm &lt;code&gt;y&lt;/code&gt;, ta phải cộng thêm &lt;code&gt;y&lt;/code&gt; ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.&lt;/p&gt;
-
-&lt;p&gt;Những năm nhuận, ta lại phải thêm cái ngày &lt;sup&gt;29&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; vào trong, tức là nó sẽ thêm 1 ngày nữa, trong &lt;code&gt;y&lt;/code&gt; năm? nếu có &lt;code&gt;y&lt;/code&gt; năm nhuận thì sẽ có thêm &lt;code&gt;x&lt;/code&gt; ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.&lt;/p&gt;
-
-&lt;p&gt;Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày &lt;sup&gt;29&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : &lt;code&gt;y -= m &amp;lt; 3&lt;/code&gt;. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.&lt;/p&gt;
-
-&lt;p&gt;Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng &lt;code&gt;t[]&lt;/code&gt; lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào &lt;code&gt;t[0]&lt;/code&gt; và &lt;code&gt;t[1]&lt;/code&gt; và giữ nguyên các &lt;code&gt;t[]&lt;/code&gt; còn lại Sau đó chuyển -1 trong &lt;code&gt;d-1&lt;/code&gt; vào offset, lúc đó ta sẽ được mảng &lt;code&gt;t[]&lt;/code&gt; như trong code gốc.&lt;/p&gt;
-
-&lt;p&gt;Ta còn một vấn đề là xác định ngày ban đầu để làm mốc và độ lệch &lt;code&gt;c&lt;/code&gt; của ngày gốc đó so với ngày Chủ Nhật với &lt;code&gt;index = 0&lt;/code&gt;. Nhưng bằng kiểm chứng, người ta phát hiện ra &lt;code&gt;c = 0&lt;/code&gt;. Wow. 😲&lt;/p&gt;
-
-&lt;p&gt;Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.&lt;/p&gt;
-
-&lt;p&gt;Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.&lt;/p&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week&#34; target=&#34;_blank&#34;&gt;Wiki: Determination of the day of the week&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
 </description>
     </item>
     

@@ -7,8 +7,231 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Sat, 16 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="/tags/programming/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
+      <link>http://dangkhoasdc.github.io/post/taocp/howto/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/taocp/howto/</guid>
+      <description>
+
+&lt;p&gt;Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có
+tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ
+nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua.
+Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và
+&amp;ldquo;cuồng&amp;rdquo; như Donald Knuth. Và mong ước của mình từ khi bước chân vào giảng đường
+đại học, theo đuổi đam mê với Khoa Học Máy Tính, rằng mình sẽ chinh phục cuốn
+&amp;ldquo;Kinh Thánh&amp;rdquo; này. Đó là một cuộc hành trình, và còn thử thách hơn cả tất cả
+những hành trình mình từng trải nghiệm.&lt;/p&gt;
+
+&lt;p&gt;Ngày sinh nhật vào năm đầu tiên đi làm, mình đã tự thưởng cho bản thân bản &lt;a href=&#34;https://www.amazon.com/Computer-Programming-Volumes-1-4A-Boxed/dp/0321751043/ref=sr_1_1?ie=UTF8&amp;amp;qid=1506337149&amp;amp;sr=8-1&amp;amp;keywords=the+art+of+computer+programming&#34; target=&#34;_blank&#34;&gt;full
+set của bộ
+sách&lt;/a&gt;
+.  Trước giờ mình chỉ dùng với mục đích tham khảo là chính. Nhưng vừa sau đợt
+sinh nhật 24 của mình, mình quyết định phải &amp;ldquo;chinh phục&amp;rdquo; bằng được cuốn sách.
+Mà theo plan của mình Volume 1 sẽ tốn tầm &amp;hellip; 1-2 năm. Và có lẽ, mình sẽ mất
+chừng chục năm để chinh phục Volume 4A 😆. Chưa kể, phần 4B cực kì khó nhằn
+vì có cả Satistiability trong đó. Có lẽ riêng Volume 4 không thôi thì đã trở
+thành tượng đài mất rồi.&lt;/p&gt;
+
+&lt;h1 id=&#34;taocp-liệu-có-khó-đọc&#34;&gt;TAoCP liệu có khó đọc?&lt;/h1&gt;
+
+&lt;p&gt;Theo mình thì không. Nhiều người khi nhìn vào cuốn sách với hàng đống công thức
+toán và những bài tập khó nhằng cũng như code mã máy MIX khiến họ nghĩ đây là
+một cuốn sách rất khó đọc. Nhưng ngay từ đoạn giới thiệu, Don Knuth đã hướng dẫn
+cách đọc và ông đã chỉ rõ những vấn đề mà người đọc thắc mắc.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Với MIX - mình đồng ý quan điểm của Don Knuth, nếu ông viết chương trình theo
+C/C++ hay Java hay Python, một thời gian sau chắc chắn nó sẽ có vấn đề. Kể cả
+những ngôn ngữ bậc cao càng khiến ta khó phân tích chính xác số lượng tính
+toán trong thuật toán đó. Mà theo phân tích của Knuth, đó phải là những phân
+tích chính xác. Ngôn ngữ của MIX cũng rất dễ đọc, không đến nối rắc rối như
+mọi người tưởng. Đồng thời, việc đọc code bằng mã máy khuyến khích người đọc
+&amp;ldquo;vọc&amp;rdquo; với thuật toán được ghi. Thêm nữa, &amp;ldquo;ngôn ngữ bậc cao&amp;rdquo; mà Knuth dùng
+chính là tiếng Anh.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Trong biểu đồ sử dụng sách của mình, Knuth có nói rằng nếu các công thức toán
+&amp;ldquo;is all Greek to you&amp;rdquo; ta chỉ cần xem qua và nắm được kết quả cơ bản mà
+phần đó đề cập, và hầu như các kết quả đó được nói ở đầu mục hoặc cuối mục.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Với bài tập của TAoCP, Knuth đề xuất hệ thống phân loại. Hơn hết, hệ thống
+này nhằm giúp cho người đọc, với thời lượng cho phép của mình, lựa chọn và
+làm những bài bản thân nghĩ là phù hợp. Bởi thật sự những bài với độ khó lớn
+hơn 45, dù là không dính đến toán, M hay HM đều cần rất nhiều thời gian
+nghiên cứu. Bản thân mình nghĩ nếu giải được những bài đó thì có thể hoàn
+thành được PhD của Computer Science rồi. Nhưng mình vẫn nghĩ người đọc nên
+xem qua các câu hỏi này,  &lt;strong&gt;vì nó chính là biên giới tri thức trong khoa học
+máy tính.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Knuth nêu rõ trong cuốn sách của mình, mục đích của cuốn sách phục vụ: (1) là
+tài liệu tham khảo chính xác và chi tiết về phân tích thuật toán, (2) là một
+sách giáo khoa  &lt;strong&gt;tự học&lt;/strong&gt;  dành cho những người đam mê về thuật toán cũng như Khoa
+Học Máy Tính. Nếu bạn mua TAoCP chỉ với giá trị tham khảo thì đó hoàn toàn là
+mục đích chính xác của bộ sách: mình đặc biệt thích phần tra khảo về lịch sử.
+Đúng ra, Don Knuth rất quan tâm đến lịch sử của Khoa Học Máy Tính, đó là lí
+do vì sao trong sách đề cập các thông tin lịch sử lại chi tiết đến như vậy.
+Nhưng ngoài ra, phần bài tập lẫn lời giải, mà thường chiếm đến &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; cuốn sách,
+nói lên rằng Knuth mong mỏi cuốn sách này sẽ là một tài liệu học tốt dành cho
+mọi người.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kế hoạch của mình rất đơn giản: Chinh phục TAoCP đồng thời giúp mọi người dễ
+dàng tiếp cận với tài liệu quý giá này. Quá nhiều bạn đọc dường như sợ tiếp cận
+cuốn sách bởi những &amp;ldquo;myth&amp;rdquo; vừa nêu, đồng thời, chinh phục TAoCP là một hành
+trình thực sự thú vị. Mình đã học được rất nhiều điều thông qua cuốn sách. Những
+ngày đầu đại học khi lần đầu cầm trong tay Volume 1, mình mới thực sự hiểu
+&amp;ldquo;computer science&amp;rdquo; là một khoa học đầy hấp dẫn, và nó cũng rất &amp;ldquo;art&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Mình đồng ý với quan điểm của Knuth, người làm về phân tích thuật toán hạnh phúc
+gấp đôi những ngành khác: họ chiêm nghiệm được những công thức toán phức tạp để
+tính toán độ phức tạp, phân tích thuật toán, đồng thời họ cảm nhận được tính
+hiệu quả của thuật toán đó trong thực tế. Ta chắc chắn không cần bận tâm đến câu
+&amp;ldquo;học toán để làm gì&amp;rdquo;, bởi khi tiếp cận với phân tích thuật toán, ta cảm nhận
+ngay được ích lợi của toán học, thuật toán cũng như vẻ đẹp của thuật toán khi ta
+cài đặt và sử dụng trong thực tiễn.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;một-chút-về-dự-án-này&#34;&gt;Một chút về dự án này&lt;/h1&gt;
+
+&lt;p&gt;Ngoài những chi tiết ở trên, một phần khiến TAoCP khó đọc ở chỗ thông tin được
+Knuth viết tương đối cô đặc. Chính vì lẽ đó mà đôi khi có những phần tương đối
+khó hiểu đối với những bạn tìm hiểu về khoa học máy tính và chưa có nhiều kiến
+thức trước đó. Mục tiêu của project này nhằm giúp các bạn dễ tiếp cận hơn với
+sách, đồng thời giải thích các phần bài tập, bởi mình thấy Knuth viết phần
+Solutions cực kì gọn, và đôi khi cũng không biết là từ đâu lại có những đáp số
+đó. Ngoài ra, tìm hiểu về TAoCP cũng chính là tìm hiểu các thuật toán kinh điển,
+các bài toán làm trên nền tảng của Khoa Học Máy Tính cũng như đây là nguồn tài
+liệu rất quý giá để mài dũa &amp;ldquo;algorithmic thinking&amp;rdquo;. Một lý do nữa khiến mình có
+hứng thú để làm đó là hiện nay tuy có khá nhiều blog, repo trên Github note lại
+TAoCP nhưng chưa có ai viết đầy đủ, hoặc chi tiết.&lt;/p&gt;
+
+&lt;p&gt;Loạt bài viết cùa mình yêu cầu người đọc đã đọc qua trước chương hoặc phần mình
+đề cập trong bài viết, trong các bài viết mình sẽ chú trọng đến các chi tiết
+sau:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Các chi tiết tương đối khó hiểu.&lt;/li&gt;
+&lt;li&gt;Phần bài tập.&lt;/li&gt;
+&lt;li&gt;Các state-of-the-art hiện nay.&lt;/li&gt;
+&lt;li&gt;Các thông tin lý thú liên quan đến chủ đề đó.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mình có tích hợp plugin Hypothesis giúp các bạn có thể highlight, viết note trên
+blog của mình, đồng thời phần comment để mọi người thuận tiện trao đổi với nhau
+cũng như giúp mình update các lỗi có trong bài viết.&lt;/p&gt;
+
+&lt;h1 id=&#34;kinh-nghiệm-cá-nhân&#34;&gt;Kinh nghiệm cá nhân&lt;/h1&gt;
+
+&lt;p&gt;Một số kinh nghiệm bản thân khi mình đọc TAoCP, thực ra đến tận bây giờ bản thân
+mình mới dành thời gian với cuốn sách, trước đây mình chủ yếu dùng tham khảo là
+chính:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Luôn có giấy và bút bên cạnh để có thể:
+
+&lt;ul&gt;
+&lt;li&gt;Chạy &amp;ldquo;chay&amp;rdquo; các thuật toán.&lt;/li&gt;
+&lt;li&gt;Làm bài tập.&lt;/li&gt;
+&lt;li&gt;Hiểu công thức đang muốn nói điều gì.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Có một sổ tay ghi chú. Một số chỗ Knuth viết rất cô đọng và mình nghĩ chỉ có
+cách ghi note lại mới thực sự nhớ và hiểu được.&lt;/li&gt;
+&lt;li&gt;Thử implement thuật toán bằng một ngôn ngữ ưa thích. Quan điểm của mình thì
+C hoặc C++ là phù hợp nhất. C thì có thể gần với mục đích nhất,
+trong khi đó C++ sẽ tiện hơn.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;một-chút-về-phần-preface-volume-i&#34;&gt;Một chút về phần Preface (Volume I)&lt;/h1&gt;
+
+&lt;p&gt;Tuy chỉ là phần lời nói đầu, nhưng tác giả đã đề cập đến khá nhiều câu chuyện
+hay ho mà mình có thể tóm lượt như sau:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Thuở xa xưa khi Khoa học máy tính mới hình thành, có 3 ngành chính thịnh hành
+lúc bấy giờ: numerical analysis, artificial intelligent và language theory.
+Chính Knuth là người đã khai sinh ra nhánh &amp;ldquo;analysis of algorithms&amp;rdquo;. Trước đó
+đã có các công trình của Alan Turing, Jon von Neumann tuy nhiên đó là những
+nghiên cứu rời rạc và không có một hệ thống hoàn chỉnh.&lt;/li&gt;
+&lt;li&gt;Trong phần preface, Knuth đề cập rằng những phân tích của mình &amp;ldquo;non-numerical&amp;rdquo;
+bởi vì nó quan tâm - đến các đối tượng rời rạc nhiều hơn.
+Nếu chọn &amp;ldquo;nonnumerical analysis&amp;rdquo; thì nó - hơi mang tính tiêu cực
+(có lẽ do tiền tố &amp;ldquo;non&amp;rdquo; trong đó). Trong khi đó &amp;ldquo;programming techniques&amp;rdquo; thì
+lại quá chuyên về 1 phần trong lĩnh vực. Đó là lí do mà ông chọn từ
+&amp;ldquo;analysis of algorithms&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;Việc chọn mã máy MIX cũng được ông phân tích khá rõ trong phần này.
+Nó thực sự những lý do đó - hoàn toán thuyết phục. Mình nghĩ một ngôn ngữ gần
+nhất ông có thể dùng đó là &amp;ldquo;C&amp;rdquo;. Nhưng nếu như vậy ông phải định nghĩa số chỉ
+thị cho từng câu lệnh trong &amp;ldquo;C&amp;rdquo;, điều này mình nghĩ không đơn giản lắm.&lt;/li&gt;
+&lt;li&gt;Người đồng hành với ông trong cuốn sách này có &amp;ldquo;Robert W. Floyd&amp;rdquo;,
+ông chính là tác giả thuật toán&amp;rdquo;Floyd-Warshall&amp;rdquo;, thuật toán phát hiện
+vòng trong danh sách liên kết cũng như những đóng góp tiêu biểu của ông
+trong &amp;ldquo;program verificaition&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;ghi-chú&#34;&gt;Ghi chú&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Một bài nói của Don Knuth về mối quan tâm của ông với
+lịch sử khoa học máy tính: [ &lt;a href=&#34;https://youtu.be/gAXdDEQveKw&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; ]&lt;/li&gt;
+&lt;li&gt;Phỏng vấn Don Knuth. Có khá nhiều chi tiết thú vị về suốt cuộc đời làm
+nghiên cứu của ông (Ông mất chỉ 1 - tiếng để hoàn thành luận án
+tiến sĩ của mình). [ &lt;a href=&#34;https://youtu.be/vUJ01nRE7r0&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; ].
+Mình sẽ có một bài tóm tắt về cuộc phỏng vấn đầy hấp dẫn này.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Matlab</title>
+      <link>http://dangkhoasdc.github.io/post/matlab/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/matlab/</guid>
+      <description>
+
+&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Show the information of a variable. It is very useful when we the code takes
+so much memory: &lt;code&gt;whos &amp;lt;variable name&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Sum of squared of elements: &lt;code&gt;sumsqr(X)&lt;/code&gt;. Use &lt;code&gt;sum(sum(A.^2, 1))&lt;/code&gt; instead
+if you want to use less memory.&lt;/li&gt;
+&lt;li&gt;Memory optimizations tips and tricks:
+[&lt;a href=&#34;http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations&#34; target=&#34;_blank&#34;&gt;Undocumented Matlab&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Use column-based representation instead of the row-based one. For example, to
+represent a list of items from 1 to 5, use &lt;code&gt;[1 2 3 4 5]&lt;/code&gt; (not &lt;code&gt;[1; 2; 3; 4; 5]&lt;/code&gt;).
+It becomes convient because MATLAB supports &lt;code&gt;foreach&lt;/code&gt;-like statement:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;for element = list
+    % &amp;lt;statements&amp;gt;
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If &lt;code&gt;list&lt;/code&gt; is a matrix, the above statement will assign each column of &lt;code&gt;list&lt;/code&gt; to
+&lt;code&gt;element&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;code-optimization&#34;&gt;Code Optimization&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Replace &lt;code&gt;isempty(find(&amp;lt;expr&amp;gt;))&lt;/code&gt; by &lt;code&gt;isempty(find(&amp;lt;expr&amp;gt;, 1))&lt;/code&gt; to
+improve performance.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;libraries&#34;&gt;Libraries&lt;/h1&gt;
+
+&lt;h2 id=&#34;vlfeat&#34;&gt;VLFeat&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Bài toán chuyển ngày sang thứ</title>
@@ -51,35 +274,6 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 &lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week&#34; target=&#34;_blank&#34;&gt;Wiki: Determination of the day of the week&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>C&#43;&#43;</title>
-      <link>http://dangkhoasdc.github.io/post/cpp/</link>
-      <pubDate>Wed, 13 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/cpp/</guid>
-      <description>
-
-&lt;h4 id=&#34;there-are-some-notes-about-cool-stuff-in-c-and-also-some-crazy-things&#34;&gt;There are some notes about cool stuff in C++, and also some crazy things.&lt;/h4&gt;
-
-&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;size()&lt;/code&gt; of containers always have type of &lt;code&gt;unsigned int&lt;/code&gt;, cast to &lt;code&gt;int&lt;/code&gt; if there are any chances we have to compare to an integer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;object-oriented-programming&#34;&gt;Object Oriented Programming&lt;/h1&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;/* (1) */
-T object(arg);
-
-/* (2) */
-T object{arg};
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(1) can be used by all types of class and non-class. In contrast, (2) is only used to initialize non-class type.&lt;/p&gt;
 </description>
     </item>
     
