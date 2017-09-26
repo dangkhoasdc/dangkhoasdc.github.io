@@ -44,6 +44,13 @@
 &lt;li&gt;Change the cursor to block.&lt;/li&gt;
 &lt;li&gt;Turn off the mouse support feature in vim (&lt;code&gt;:set mouse=&lt;/code&gt;) in order to copy
 text from Windows to vim.&lt;/li&gt;
+&lt;li&gt;Copy from vim to Windows applications:
+
+&lt;ol&gt;
+&lt;li&gt;Install xsel/xclip on Ubuntu.&lt;/li&gt;
+&lt;li&gt;Install &lt;a href=&#34;https://sourceforge.net/projects/xming/&#34; target=&#34;_blank&#34;&gt;Xming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Set &lt;code&gt;export DISPLAY=:0&lt;/code&gt; in the bashrc or zshrc&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
