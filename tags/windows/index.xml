@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/windows/</link>
+    <description>Recent content in Windows on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/windows/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Why Ubuntu on Windows?</title>
+      <link>http://dangkhoasdc.github.io/post/ubuntu_on_windows/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/ubuntu_on_windows/</guid>
+      <description>
+
+&lt;p&gt;For programming purposes, I prefer Linux to Windows. However, Windows is really good at entertaining and office works. I admit that Microsoft Office is the best office suited I ever have experienced. Besides, OneNote is one of my favorite note-taking software, not to mention my beloved Bilizzard games such as Diablo, Starcraft.&lt;/p&gt;
+
+&lt;p&gt;One solution to combine Windows and Linux is to install dual-boot in the machine. However, I am tired of switching between 2 OSs. In addition, we have to configure the systems so that it can easily transfer files between 2 different partition formats.&lt;/p&gt;
+
+&lt;p&gt;Another workaround is to run Windows or Linux on a virtual machine. Since I usually play video games, I could not use Windows as a client. Running Linux virtually seems promising. Unfortunately, my laptop is not strong enough to run the virtual machine smoothly.&lt;/p&gt;
+
+&lt;p&gt;Finally, M$ comes up with a new feature in Windows 10 which is &amp;lsquo;Windows Subsystem for Linux&amp;rsquo;. Suprisingly, it works flawlessly except several minor issues.&lt;/p&gt;
+
+&lt;h1 id=&#34;settings&#34;&gt;Settings&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Turn Windows Sybsystem on: (1) find &lt;code&gt;Windows features&lt;/code&gt; and select &lt;code&gt;Windows Subsystem for Linux&lt;/code&gt; , wait for the installation and restart the machine.&lt;/li&gt;
+&lt;li&gt;Open Windows Store and install Ubuntu. I also saw OpenSuse on the store. Hopefully, there will be more distros adapted in future, especially Arch Linhx/Manjaro which is my favorite.&lt;/li&gt;
+&lt;li&gt;After working around with Ubuntu and Tmux in &lt;code&gt;cmder&lt;/code&gt; , I found out that &lt;a href=&#34;https://github.com/mintty/wsltty&#34; target=&#34;_blank&#34;&gt;wsltty&lt;/a&gt; is the best solution to avoid fonts broken, key arrow issues. Besides, it run faster than &lt;code&gt;cmder&lt;/code&gt; although &lt;code&gt;cmder&lt;/code&gt; has many useful features.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here is the result:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://static.notion-static.com/67ecfe6abf0242199ffec19dd227a000/Untitled&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are several tips:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Change the cursor to block.&lt;/li&gt;
+&lt;li&gt;Turn off the mouse support feature in vim (&lt;code&gt;:set mouse=&lt;/code&gt;) in order to copy
+text from Windows to vim.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
