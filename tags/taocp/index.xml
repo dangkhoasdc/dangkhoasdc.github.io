@@ -158,17 +158,17 @@ Chính Knuth là người đã khai sinh ra nhánh &amp;ldquo;analysis of algori
 đã có các công trình của Alan Turing, Jon von Neumann tuy nhiên đó là những
 nghiên cứu rời rạc và không có một hệ thống hoàn chỉnh.&lt;/li&gt;
 &lt;li&gt;Trong phần preface, Knuth đề cập rằng những phân tích của mình &amp;ldquo;non-numerical&amp;rdquo;
-bởi vì nó quan tâm - đến các đối tượng rời rạc nhiều hơn.
-Nếu chọn &amp;ldquo;nonnumerical analysis&amp;rdquo; thì nó - hơi mang tính tiêu cực
+bởi vì nó quan tâm đến các đối tượng rời rạc nhiều hơn.
+Nếu chọn &amp;ldquo;nonnumerical analysis&amp;rdquo; thì lại hơi mang tính tiêu cực
 (có lẽ do tiền tố &amp;ldquo;non&amp;rdquo; trong đó). Trong khi đó &amp;ldquo;programming techniques&amp;rdquo; thì
-lại quá chuyên về 1 phần trong lĩnh vực. Đó là lí do mà ông chọn từ
+lại quá hẹp về 1 phần trong lĩnh vực. Đó là lí do mà ông chọn từ
 &amp;ldquo;analysis of algorithms&amp;rdquo;.&lt;/li&gt;
 &lt;li&gt;Việc chọn mã máy MIX cũng được ông phân tích khá rõ trong phần này.
-Nó thực sự những lý do đó - hoàn toán thuyết phục. Mình nghĩ một ngôn ngữ gần
-nhất ông có thể dùng đó là &amp;ldquo;C&amp;rdquo;. Nhưng nếu như vậy ông phải định nghĩa số chỉ
-thị cho từng câu lệnh trong &amp;ldquo;C&amp;rdquo;, điều này mình nghĩ không đơn giản lắm.&lt;/li&gt;
-&lt;li&gt;Người đồng hành với ông trong cuốn sách này có &amp;ldquo;Robert W. Floyd&amp;rdquo;,
-ông chính là tác giả thuật toán&amp;rdquo;Floyd-Warshall&amp;rdquo;, thuật toán phát hiện
+Thực sự những lý do đó hoàn toàn thuyết phục. Mình nghĩ một ngôn ngữ gần
+nhất ông có thể dùng đó là C. Nhưng nếu như vậy ông phải định nghĩa số chỉ
+thị cho từng câu lệnh trong C, điều này mình nghĩ không đơn giản lắm.&lt;/li&gt;
+&lt;li&gt;Người đồng hành với ông trong cuốn sách này là &lt;a href=&#34;https://en.wikipedia.org/wiki/Robert_W._Floyd&#34; target=&#34;_blank&#34;&gt; Robert W. Floyd &lt;/a&gt;,
+ông chính là tác giả thuật toán &amp;ldquo;Floyd-Warshall&amp;rdquo;, thuật toán phát hiện
 vòng trong danh sách liên kết cũng như những đóng góp tiêu biểu của ông
 trong &amp;ldquo;program verificaition&amp;rdquo;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -177,10 +177,10 @@ trong &amp;ldquo;program verificaition&amp;rdquo;.&lt;/li&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Một bài nói của Don Knuth về mối quan tâm của ông với
-lịch sử khoa học máy tính: [ &lt;a href=&#34;https://youtu.be/gAXdDEQveKw&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; ]&lt;/li&gt;
+lịch sử khoa học máy tính: [&lt;a href=&#34;https://youtu.be/gAXdDEQveKw&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;]&lt;/li&gt;
 &lt;li&gt;Phỏng vấn Don Knuth. Có khá nhiều chi tiết thú vị về suốt cuộc đời làm
-nghiên cứu của ông (Ông mất chỉ 1 - tiếng để hoàn thành luận án
-tiến sĩ của mình). [ &lt;a href=&#34;https://youtu.be/vUJ01nRE7r0&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; ].
+nghiên cứu của ông (Ông mất chỉ 1 giờ để hoàn thành luận án
+tiến sĩ của mình). [&lt;a href=&#34;https://youtu.be/vUJ01nRE7r0&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;].
 Mình sẽ có một bài tóm tắt về cuộc phỏng vấn đầy hấp dẫn này.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
