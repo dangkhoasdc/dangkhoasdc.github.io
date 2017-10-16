@@ -54,6 +54,17 @@ improve performance.&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&#34;editor&#34;&gt;Editor&lt;/h1&gt;
+
+&lt;h2 id=&#34;nvim&#34;&gt;Nvim&lt;/h2&gt;
+
+&lt;p&gt;Plugins:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/daeyun/vim-matlab&#34; target=&#34;_blank&#34;&gt;vim-matlab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lazywei/vim-matlab&#34; target=&#34;_blank&#34;&gt;matlab syntax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     

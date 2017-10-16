@@ -11,6 +11,50 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>[Font] Một lỗi nhỏ trong &#34;Đừng hỏi em&#34;</title>
+      <link>http://dangkhoasdc.github.io/post/dung_hoi_em-font/</link>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/dung_hoi_em-font/</guid>
+      <description>
+
+&lt;p&gt;Một lỗi tương đối nhỏ về mặt lịch sử trong clip mới ra mắt của Mỹ Tâm - &amp;ldquo;Đừng
+Hỏi Em&amp;rdquo;. Font chữ trong tờ giấy này là font Arial, được thiết kế lần đầu tiên
+năm 1982 ( được các hãng phần mềm phân phối vào khoảng năm 1992,) tuy nhiên
+theo mình đó thì thời đó ở VN chắc vẫn còn dùng máy in đời cũ, mà có ngay cả
+như vậy thì clip rõ ràng là các sự kiện trước năm 1975.  Vậy nên việc sử dụng 1
+font đc tạo ra năm 1982 có gì đó hơi sai về lịch sử ở đây, đúng ra bên sản xuất
+nên chọn 1 font nào đó cổ hơn cho để đúng về mặt lịch sử và mốc thời gian.  Vì
+sao mình quan tâm đến font, vì có 1 lần Don Knuth nói ông mất 1 tuần để viết ra
+1 công thức để có thể vẽ chữ &amp;ldquo;S&amp;rdquo; - hoàn hảo nhất có thể. Giáo sư John Hennessy
+, cha đẻ kiến trúc MIPS, president thứ 10 của Stanford và đc mệnh danh là &amp;ldquo;bố
+già Silicon Valley&amp;rdquo; từng sửng sốt với cách thiết kế chữ &amp;ldquo;S&amp;rdquo; và bao nhiêu
+tinh hoa của thuật toán, đồ họa máy tính đc đưa vào trong đó.  Điều đó
+khiến mình tò mò về cách mà các font chữ đc tạo và vẽ, dẫn đến việc tìm
+hiểu lịch sử ngành in ấn =))&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/Vxe3UJi.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ra không phải máy gõ chữ nào cũng tạo ra font chữ xấu. Thực ra font chữ đã khá
+hoàn hảo ở thế hệ máy in kim loại nóng (hot metal typesetting), sau đó đến máy
+gõ chữ (typewriter) mà hậu duyện dòng này là font chữ monospaced (thậm chí
+developer toàn dùng monospaced khi code chứ ko dùng serif ). Sau khi hot metal
+bị thay thế bởi digital printer, lúc đó chữ render cực kì xấu, đến nỗi Don
+Knuth tuyên bố sẽ ko viết TAoCP nếu tình trạng chữ như vậy. Cuối cùng ông bỏ ra
+10 năm để tạo ra Tex và Metafont. Sau này dần dần công nghệ in ấn phát triển,
+các font thiết kế tốt hơn nên mới có kq là font &amp;ldquo;đẹp&amp;rdquo; như hiện nay.&lt;/p&gt;
+
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Z4HivEWoXGE&#34; target=&#34;_blank&#34;&gt;Đừng hỏi em&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.leemunroe.com/steve-jobs-calligraphy/&#34; target=&#34;_blank&#34;&gt;Steve Jobs On Taking a Calligraphy class&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Arial&#34; target=&#34;_blank&#34;&gt;Arial font&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Why Ubuntu on Windows?</title>
       <link>http://dangkhoasdc.github.io/post/ubuntu_on_windows/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
@@ -338,6 +382,17 @@ improve performance.&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h1 id=&#34;editor&#34;&gt;Editor&lt;/h1&gt;
+
+&lt;h2 id=&#34;nvim&#34;&gt;Nvim&lt;/h2&gt;
+
+&lt;p&gt;Plugins:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/daeyun/vim-matlab&#34; target=&#34;_blank&#34;&gt;vim-matlab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lazywei/vim-matlab&#34; target=&#34;_blank&#34;&gt;matlab syntax&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
@@ -612,15 +667,6 @@ Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để c
       <pubDate>Tue, 04 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/publication/selective_deep_conv/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Simultaneous Feature Aggregating and Hashing for Large-scale Image Search</title>
-      <link>http://dangkhoasdc.github.io/publication/sah/</link>
-      <pubDate>Tue, 20 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/publication/sah/</guid>
       <description></description>
     </item>
     
