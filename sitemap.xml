@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/post/why_so_serious/</loc>
+      <lastmod>2017-11-15T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/post/amazon_replacement_policy/</loc>
       <lastmod>2017-11-08T00:00:00+00:00</lastmod>
     </url>
@@ -194,6 +203,15 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/post/diablo3-review/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/post/intro_randalgs/</loc>
       <lastmod>2016-10-23T00:00:00+00:00</lastmod>
     </url>
@@ -258,15 +276,6 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/post/protocol-buffers-caffe/</loc>
-      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://dangkhoasdc.github.io/post/diablo3-review/</loc>
       <lastmod>2016-10-23T00:00:00+00:00</lastmod>
     </url>
     
@@ -435,7 +444,27 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/tags/books/</loc>
+      <lastmod>2016-10-10T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/tags/computer-vison/</loc>
+      <lastmod>2015-06-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -454,8 +483,28 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/tags/computer-vison/</loc>
-      <lastmod>2015-06-01T00:00:00+00:00</lastmod>
+      <loc>http://dangkhoasdc.github.io/tags/courses/</loc>
+      <lastmod>2016-08-08T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/tags/cpp/</loc>
+      <lastmod>2017-09-06T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/tags/cvpr/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -475,7 +524,17 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/deep-learning/</loc>
-      <lastmod>2017-09-12T00:00:00+00:00</lastmod>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/tags/deep-learning/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -505,6 +564,16 @@
     
       <loc>http://dangkhoasdc.github.io/tags/font/</loc>
       <lastmod>2017-10-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/tags/games/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -544,7 +613,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/misc/</loc>
-      <lastmod>2017-11-08T00:00:00+00:00</lastmod>
+      <lastmod>2017-11-15T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -564,7 +633,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/notes/</loc>
-      <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+      <lastmod>2017-11-15T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -573,8 +642,8 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/tags/others/</loc>
-      <lastmod>2017-09-24T00:00:00+00:00</lastmod>
+      <loc>http://dangkhoasdc.github.io/tags/opencv/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -584,7 +653,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/post/</loc>
-      <lastmod>2017-11-08T00:00:00+00:00</lastmod>
+      <lastmod>2017-11-15T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -642,6 +711,16 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/tags/research/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/tags/review/</loc>
       <lastmod>2017-09-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -662,8 +741,8 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/tags/</loc>
-      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+      <loc>http://dangkhoasdc.github.io/tags/software-engineer/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -673,6 +752,16 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/taocp/</loc>
+      <lastmod>2017-09-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/tags/</loc>
       <lastmod>2017-09-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
