@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -11,7 +13,7 @@
   <meta name="description" content="Research Assistant">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/post/matlab/">
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/tags/programming/">
 
   
   
@@ -69,7 +71,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://dangkhoasdc.github.io/post/matlab/">
+  <link rel="canonical" href="http://dangkhoasdc.github.io/tags/programming/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -77,19 +79,17 @@
   <meta property="twitter:creator" content="@dksdc">
   
   <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
-  <meta property="og:url" content="http://dangkhoasdc.github.io/post/matlab/">
-  <meta property="og:title" content="Matlab | Dang-Khoa&#39;s blog ">
-  <meta property="og:description" content="">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/tags/programming/">
+  <meta property="og:title" content="Programming | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="Research Assistant">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2017-09-18T00:00:00&#43;00:00">
-  
-  <meta property="article:modified_time" content="2017-09-18T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2015-02-25T00:00:00&#43;00:00">
   
 
   
 
-  <title>Matlab | Dang-Khoa&#39;s blog </title>
+  <title>Programming | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -198,214 +198,42 @@
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+
+
+
+<div class="universal-wrapper">
+
+  <h1>Programming</h1>
 
   
 
-
-  <div class="article-container">
-    <div class="article-inner">
-      <h1 itemprop="name">Matlab</h1>
-
+  
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/post/spams-lib/">Spams Lib và Những Tâm Sự</a></h2>
+    <div class="article-style">
       
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2017-09-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2017-09-18
-    </time>
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/post/matlab/#disqus_thread"></a>
-  
-
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Matlab&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fmatlab%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fmatlab%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fmatlab%2f&amp;title=Matlab"
-         target="_blank" rel="noopener">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=Matlab&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fmatlab%2f">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-  
-
-</div>
-
-
-      <div class="article-style" itemprop="articleBody">
-        
-
-<h1 id="general">General</h1>
-
-<ul>
-<li>Show the information of a variable. It is very useful when we the code takes
-so much memory: <code>whos &lt;variable name&gt;</code>.</li>
-<li>Sum of squared of elements: <code>sumsqr(X)</code>. Use <code>sum(sum(A.^2, 1))</code> instead
-if you want to use less memory.</li>
-<li>Memory optimizations tips and tricks:
-[<a href="http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations" target="_blank">Undocumented Matlab</a>]</li>
-<li>Use column-based representation instead of the row-based one. For example, to
-represent a list of items from 1 to 5, use <code>[1 2 3 4 5]</code> (not <code>[1; 2; 3; 4; 5]</code>).
-It becomes convient because MATLAB supports <code>foreach</code>-like statement:</li>
-</ul>
-
-<pre><code class="language-matlab">for element = list
-    % &lt;statements&gt;
-end
-</code></pre>
-
-<p>If <code>list</code> is a matrix, the above statement will assign each column of <code>list</code> to
-<code>element</code>.</p>
-
-<h1 id="code-optimization">Code Optimization</h1>
-
-<ul>
-<li>Replace <code>isempty(find(&lt;expr&gt;))</code> by <code>isempty(find(&lt;expr&gt;, 1))</code> to
-improve performance.</li>
-</ul>
-
-<h1 id="libraries">Libraries</h1>
-
-<h2 id="vlfeat">VLFeat</h2>
-
-<ul>
-<li>Use <code>vl_imreadjpeg</code> instead of <code>imread</code>. It could speed up reading image files.</li>
-</ul>
-
-<h1 id="editor">Editor</h1>
-
-<h2 id="nvim">Nvim</h2>
-
-<p>Plugins:</p>
-
-<ul>
-<li><a href="https://github.com/daeyun/vim-matlab" target="_blank">vim-matlab</a></li>
-<li><a href="https://github.com/lazywei/vim-matlab" target="_blank">matlab syntax</a></li>
-</ul>
-
-<h1 id="data-structures">Data Structures</h1>
-
-<h2 id="string">String</h2>
-
-<h3 id="find-a-string-in-a-cell-array">Find a string in a cell array</h3>
-
-<pre><code class="language-matlab">find(ismember(cell_array, str));
-</code></pre>
-
-      </div>
-
+      Không còn gì sung sướng hơn sau 2 ngày ngồi cài cái khỉ gió sparse coding lib cho python, link cái thằng khỉ gió nó ở đây: Spams lib. Mặc dù đã cố gắng nhưng phải mất mấy tiếng đồng hồ mình mới xong được cu cậu này.
+Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như sau:
+ Không giống như cu Linux hay các bản distro của nó.
       
-
-
-<div class="article-tags">
-  
-  <a class="btn btn-primary btn-outline" href="/tags/notes">notes</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/programming">programming</a>
-  
-  <a class="btn btn-primary btn-outline" href="/tags/matlab">matlab</a>
-  
-</div>
-
-
-
     </div>
   </div>
+  
 
-</article>
-
-
-
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
+  
+<nav>
+  <ul class="pager">
     
-    <li><a href="/post/sakamoto_method/">Bài toán chuyển ngày sang thứ</a></li>
+    <li><a href="/tags/programming/">&lt;</a></li>
     
-    <li><a href="/post/rand/">rand() is harmful</a></li>
-    
-    <li><a href="/post/install_opencv_vs/">Hướng dẫn cài đặt OpenCV trên Windows</a></li>
-    
-    <li><a href="/post/it_news/">Những kênh thông tin công nghệ</a></li>
-    
-    <li><a href="/post/review_cpp_proglang_book/">Review: The C&#43;&#43; Programming Languages</a></li>
     
   </ul>
-</div>
+</nav>
 
-
-
-
-<div class="article-container">
-  
-<section id="comments">
-  <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
 
 
 </div>
-
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
@@ -501,4 +329,6 @@ improve performance.</li>
 
   </body>
 </html>
+
+
 
