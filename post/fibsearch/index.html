@@ -371,7 +371,9 @@ tăng $F_k$ đơn vị.</li>
 
 <p>Thuật toán <code>fibsearch</code> chính là việc xây dựng cây fibonacci bậc $k$ với $N=F_{k+1}$.</p>
 
-<p>Trong Figure 1, trường hợp $N=13$, ta có thể thấy root = $F_6 = 8$, phần nhánh bên trái của 8 có
+<p>Trong Figure 1, trường hợp $N=13$, cây có bậc $k=6$, số internal nodes
+$F_{k+1}-1=12$ và $F_{k}=13$ external nodes. Ngoài ra,
+ta có thể thấy root = $F_6 = 8$, phần nhánh bên trái của 8 có
 $F_6-1=7$ internal nodes, và bên phải gồm $F_5-1 = 4$ internal
 nodes. Tiếp tục xuống các level thấp hơn là các giá trị $F$ nhỏ hơn và theo
 đúng quy luật đã nêu. Nhìn hình ta có thể hình dung phần nào, với cách tiếp cận
@@ -386,8 +388,6 @@ nguồn C++ của thuật toán.</p>
 <ul>
 <li><a href="http://users.ics.forth.gr/~lourakis/fibsrch/" target="_blank">C implementation</a></li>
 <li>TAoCP.</li>
-<li>Algorithms - Sedgewick, phần <a href="https://algs4.cs.princeton.edu/14analysis/" target="_blank">web exercises</a>
-có đề cập solution.</li>
 </ul>
 
 <h1 id="todo">TODO</h1>
