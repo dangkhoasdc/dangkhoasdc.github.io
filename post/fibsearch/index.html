@@ -221,7 +221,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    4 min read
   </span>
   
 
@@ -297,7 +297,7 @@ shift bit tốn nhiều chi phí hơn so với phép cộng trừ. Tuy nhiên, <
 còn được sử dụng khi tốn ưu thời gian tìm kiếm khi mà dữ liệu quá lớn không
 thể đọc lên được toàn bộ lên RAM hoặc cache, khi đó thời gian đọc trên bộ
 lưu trữ ngoại vi trở nên tốn kém ( <a href="https://stackoverflow.com/a/22877947/1629214" target="_blank">link </a>).
-Tuy nhiên mình nghĩa <code>fibsearch</code>
+Tuy nhiên mình nghĩ <code>fibsearch</code>
 sẽ là một câu hỏi phỏng vấn cực kì thú vị.</p>
 
 <blockquote>
@@ -345,11 +345,11 @@ P4. [Xét cây con Fibonacci bên phải]
 
 <figure >
     
-        <img src="https://i.imgur.com/93ocZhT.jpg" />
+        <img src="https://imgur.com/download/iCyGe2U" />
     
     
     <figcaption>
-        <h4>Cây tìm kiếm Fibonacci</h4>
+        <h4>Cây tìm kiếm Fibonacci với k=6</h4>
         
     </figcaption>
     
@@ -358,11 +358,27 @@ P4. [Xét cây con Fibonacci bên phải]
 
 <p>Phần dưới đây là mô tả ngắn gọn cách mà thuật toán này thực thi. Khác với tìm
 kiếm nhị phân chia các nhánh tìm kiếm thành các cây nhị phân, <code>fibsearch</code> thay
-vào đó xây dựng cây Fibonacci. Chính xác hơn là với $N = F_{k}$ , nhánh con bên
-trái sẽ là $F_{k-1} $ và nhánh phải sẽ là $F_{k-2}$ . Trường hợp $N \neq F_k$
-có hơi &ldquo;tricky&rdquo; một chút nhưng cũng khá dễ giải quyết và không ảnh hưởng
-đến tính đúng đắn của thuật toán.
-Một chứng minh cụ thể và chi tiết hơn sẽ được cập nhật sau, kèm theo đó là mã
+vào đó xây dựng cây Fibonacci. <em>Cây Fibonacci bậc $k$</em> được định nghĩa là &ldquo;cây&rdquo; với
+$F_{k+1}-1$ internal nodes (vòng tròn) và $F_{k+1}$ external nodes (hình vuông),<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>
+cây Fibonacci được xây dựng như sau:</p>
+
+<ol>
+<li>$k=0$ hoặc $k=1$, cây chỉ có 1 external node là 0.</li>
+<li>$k \geq 2$, root là có giá trị $F_k$, cây con bên trái là cây fibonacci
+bậc $k-1$ và cây con bên phải là cây fibonacci bậc $k-2$ với tất cả các nodes
+tăng $F_k$ đơn vị.</li>
+</ol>
+
+<p>Thuật toán <code>fibsearch</code> chính là việc xây dựng cây fibonacci bậc $k$ với $N=F_{k+1}$.</p>
+
+<p>Trong Figure 1, trường hợp $N=13$, ta có thể thấy root = $F_6 = 8$, phần nhánh bên trái của 8 có
+$F_6-1=7$ internal nodes, và bên phải gồm $F_5-1 = 4$ internal
+nodes. Tiếp tục xuống các level thấp hơn là các giá trị $F$ nhỏ hơn và theo
+đúng quy luật đã nêu. Nhìn hình ta có thể hình dung phần nào, với cách tiếp cận
+chia để trị tương đồng với tìm kiếm nhị phân, tìm kiếm fibonaci &ldquo;có thể&rdquo;
+có độ phức tạp tương tự.</p>
+
+<p>Một chứng minh cụ thể và chi tiết hơn sẽ được cập nhật sau, kèm theo đó là mã
 nguồn C++ của thuật toán.</p>
 
 <h1 id="references">References</h1>
@@ -371,7 +387,7 @@ nguồn C++ của thuật toán.</p>
 <li><a href="http://users.ics.forth.gr/~lourakis/fibsrch/" target="_blank">C implementation</a></li>
 <li>TAoCP.</li>
 <li>Algorithms - Sedgewick, phần <a href="https://algs4.cs.princeton.edu/14analysis/" target="_blank">web exercises</a>
-có đề cập solution.-</li>
+có đề cập solution.</li>
 </ul>
 
 <h1 id="todo">TODO</h1>
@@ -381,6 +397,15 @@ có đề cập solution.-</li>
 <li><label><input type="checkbox" disabled class="task-list-item"> Phiên bản C++.</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> So sánh độ phức tạp với tìm kiếm nhị phân, tổng quát hóa bài toán.</label></li>
 </ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">cũng không biết nên dịch internal nodes với external nodes thế nào cho hợp (node trong và node ngoài?).
+ <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
+</ol>
+</div>
 
       </div>
 
