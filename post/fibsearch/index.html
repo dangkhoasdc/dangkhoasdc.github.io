@@ -312,7 +312,7 @@ mình chỉ trình bày mã giả. Có thể tham khảo phần cài đặt bằ
 <a href="#references">References</a>. Một phiên bản cải tiến với kích thức mảng $N$ bất
 kì sẽ được update sau.</p>
 
-<pre><code>Input: mảng $K_0, K_2, ..., K_(N-1)$ được sắp xếp và phần tử $X$ cần tìm. Giả sử
+<pre><code>Input: mảng $K_0, K_2, ..., K_(N-1)$ được sắp xếp và phần tử $K$ cần tìm. Giả sử
 $N = F_{N+1}$
 
 P1. [Khởi tạo] i = F[k], p = F[k-1], q = F[k-2]
@@ -322,9 +322,10 @@ P2. [So sánh].
         else: return i;
 P3. [Xét cây con Fibonacci bên trái]
     if q = 0 : return -1
-    else: i -= q
-          (p, q) = (q, p-q)
-          go to P2
+    else:
+        i -= q
+        (p, q) = (q, p-q)
+        go to P2
 P4. [Xét cây con Fibonacci bên phải]
     if p = 1: return -1
     else:
