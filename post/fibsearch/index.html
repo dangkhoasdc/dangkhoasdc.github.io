@@ -221,7 +221,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    5 min read
   </span>
   
 
@@ -387,6 +387,28 @@ có độ phức tạp tương tự.</p>
 <p>Một chứng minh cụ thể và chi tiết hơn sẽ được cập nhật sau, kèm theo đó là mã
 nguồn C++ của thuật toán.</p>
 
+<h1 id="dạng-tổng-quát">Dạng tổng quát</h1>
+
+<p>Cả tìm kiếm nhị phân lẫn Fibonacci search thực ra cũng thuộc một dạng tổng quát
+của một chiến lược chia để trị trong tìm kiếm chuỗi đã được sắp xếp.</p>
+
+<p>Gọi $p$ và $q$ thỏa $p+q=1$, gọi $C(N)$ là số phép so sánh cần thực hiện của
+giải thuật. Chiến lược ở đây đó là chia mảng thành 2 phần với số lượng phần
+tử lần lượt là $pN$ và $qN$. Ta có dãy truy hồi số phép so sánh trong thuật toán:</p>
+
+<p>$$ C(N) = 1 + pC(pN) + qC(qN) $$</p>
+
+<p>Công thức này có dạng close form là $C(N) = \log_bN$ trong đó $b$ là hằng số
+cần tìm. Dễ dàng thấy được với tìm kiếm nhị phần $p=q={1 \over 2}$, còn với
+<code>fibsearch</code> thì $p={1 \over \phi}$ và $q= {1 \over \phi^2}$. Cụm $pC(pN)$ ở
+đây có nghĩa là xác suất $p$ phần tử cần tìm nằm trong khoảng $pN$ phần tử
+đã được chia, tương tự với $qC(qN)$.</p>
+
+<p>[$b = p^{-p}q^{-q}$
+nhưng hiện giờ vẫn chưa biết giải như thế nào. Đây là dạng divide-and-conquer
+recurrence. Nếu sử dụng <a href="https://courses.csail.mit.edu/6.046/spring04/handouts/akrabazzi.pdf" target="_blank">Akra-Bazzi method</a>
+thì ta chỉ mới tìm được $\Theta(1 + \ln N)$ của nó nhưng vẫn chưa xác định được $b$].</p>
+
 <h1 id="references">References</h1>
 
 <ul>
@@ -401,9 +423,13 @@ nghĩ đây là bản cài đặt khá chuẩn rồi.</li>
 <h1 id="todo">TODO</h1>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Minh họa cây Fibonacci.</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Minh họa cây Fibonacci.</label></li>
 <li><label><input type="checkbox" disabled class="task-list-item"> Phiên bản C++.</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> So sánh độ phức tạp với tìm kiếm nhị phân, tổng quát hóa bài toán.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> So sánh độ phức tạp với tìm kiếm nhị phân, tổng quát hóa bài toán.
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> Hằng số $b$.</label></li>
+</ul></label></li>
 </ul>
 <div class="footnotes">
 
