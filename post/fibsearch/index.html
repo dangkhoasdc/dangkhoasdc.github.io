@@ -312,16 +312,16 @@ mình chỉ trình bày mã giả. Có thể tham khảo phần cài đặt bằ
 <a href="#references">References</a>. Một phiên bản cải tiến với kích thức mảng $N$ bất
 kì sẽ được update sau.</p>
 
-<pre><code>Input: mảng $K_0, K_2, ..., K_(N-1)$ được sắp xếp và phần tử $K$ cần tìm. Giả sử
-$N = F_{N+1}$
+<pre><code>Input: mảng $K_1, K_2, ..., K_N$ được sắp xếp và phần tử $K$ cần tìm. Giả sử
+$N+1 = F_{k+1}. Lưu ý index của mảng bắt đầu 1$
 
 P1. [Khởi tạo] i = F[k], p = F[k-1], q = F[k-2]
 P2. [So sánh].
-        If K[i] &lt; K: go to P3.
-        else if K[i] &gt; K: go to P4.
-        else: return i;
+    if K[i] &lt; K: go to P3.
+    else if K[i] &gt; K: go to P4.
+    else: return i;
 P3. [Xét cây con Fibonacci bên trái]
-    if q = 0 : return -1
+    if q = 0: return -1
     else:
         i -= q
         (p, q) = (q, p-q)
@@ -339,6 +339,7 @@ P4. [Xét cây con Fibonacci bên phải]
 
 <ul>
 <li>Thiết kế thuật toán cho trường hợp $N \geq 0$.</li>
+<li>Thiết kế thuật toán với index bắt đầu bằng 0.</li>
 </ul>
 
 <h1 id="phân-tích">Phân tích</h1>
@@ -389,6 +390,9 @@ nguồn C++ của thuật toán.</p>
 <ul>
 <li><a href="http://users.ics.forth.gr/~lourakis/fibsrch/" target="_blank">C implementation</a></li>
 <li>TAoCP.</li>
+<li>Algorithms, Fourth Edition, Sedgewick.</li>
+<li><a href="http://www.geeksforgeeks.org/fibonacci-search/" target="_blank">GeeksforGeeks&rsquo;s Fibonaccian Searching</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fibonacci_search_technique" target="_blank">Wiki</a></li>
 </ul>
 
 <h1 id="todo">TODO</h1>
