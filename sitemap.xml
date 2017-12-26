@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/post/repertoire/</loc>
+      <lastmod>2017-12-26T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/post/fibsearch/</loc>
       <lastmod>2017-12-19T00:00:00+00:00</lastmod>
     </url>
@@ -601,6 +610,16 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/tags/math/</loc>
+      <lastmod>2017-12-26T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/tags/matlab/</loc>
       <lastmod>2017-09-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -662,7 +681,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/post/</loc>
-      <lastmod>2017-12-19T00:00:00+00:00</lastmod>
+      <lastmod>2017-12-26T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
