@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/post/vietcs/</loc>
+      <lastmod>2017-12-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/post/repertoire/</loc>
       <lastmod>2017-12-26T00:00:00+00:00</lastmod>
     </url>
@@ -481,6 +490,16 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/tags/computer-science/</loc>
+      <lastmod>2017-12-27T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/tags/computer-vison/</loc>
       <lastmod>2015-06-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -641,7 +660,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/misc/</loc>
-      <lastmod>2017-11-22T00:00:00+08:00</lastmod>
+      <lastmod>2017-12-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -661,7 +680,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/notes/</loc>
-      <lastmod>2017-11-22T00:00:00+08:00</lastmod>
+      <lastmod>2017-12-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -681,7 +700,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/post/</loc>
-      <lastmod>2017-12-26T00:00:00+00:00</lastmod>
+      <lastmod>2017-12-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
