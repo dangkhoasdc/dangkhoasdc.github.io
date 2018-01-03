@@ -221,7 +221,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    7 min read
   </span>
   
 
@@ -274,7 +274,9 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        <p>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc
+        
+
+<p>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc
 dữ liệu khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai
 trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:</p>
 
@@ -469,6 +471,38 @@ nhờ đó ta có thể viết mã theo &ldquo;Design by Contract&rdquo; hay the
 của Java và C++. Sắp tới C++ sẽ giới thiệu khái niệm <code>concept</code> và theo tác
 giả của C++ là sẽ giải quyết vấn đề suốt 35 năm qua của Generic Programming
 (<a href="https://developers.slashdot.org/story/17/01/23/003247/c-creator-wants-to-solve-35-year-old-generic-programming-issues-with-concepts" target="_blank">link</a>).</p>
+
+<h1 id="các-toán-tử-khác">Các toán tử khác</h1>
+
+<p>Sau khi cài đặt toán tử <code>&lt;</code>, thông thường ta sẽ có nhu cầu cài đặt các toán
+tử so sánh khác như <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>. May mắn thay ta có thể quy đổi các toán tử
+này dễ dàng thông qua <code>&lt;</code>:</p>
+
+<ul>
+<li><code>&gt;</code>: chính là <code>rhs&lt;lsh</code>.</li>
+<li><code>&lt;=</code>: là <code>!(rhs&lt;lsh)</code>.</li>
+<li><code>&gt;=</code>: <code>!(lhs&lt;rhs)</code>.</li>
+</ul>
+
+<p>Trong thâm ta ta có cảm giác rằng thể nào cũng có rất nhiều CTDL ta sử cài đặt
+kiểu này: chỉ cần định nghĩa <code>&lt;</code> và 3 toán tử còn lại tự nội suy. Nhờ vào kỹ
+thuật <a href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern" target="_blank">Curiously recurring template pattern</a>,
+ta có một code khá gọn:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+struct order {
+    virtual bool operator&lt;( const T&amp; rhs) const = 0;
+    bool operator&gt;( const T&amp; rhs) const
+        {return rhs&lt;static_cast&lt;const T&amp;&gt;(*this);}
+    bool operator&gt;=( const T&amp; rhs) const
+        {return !((*this)&lt;rhs); }
+    bool operator&lt;=( const T&amp; rhs) const
+        {return !(rhs&lt; static_cast&lt;const T&amp;&gt;(*this));}
+};
+</code></pre>
+
+<p>Như vậy chỉ cần kế thừa <code>order</code> và cài đặt <code>&lt;</code>, ta sẽ có luôn 3 toán tử còn lại.
+Điều duy nhất mình ức chê là phải sử dụng <code>static_cast</code>.</p>
 
       </div>
 
