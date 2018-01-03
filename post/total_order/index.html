@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.31.1" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/post/total_order/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/post/total_order/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dksdc">
+  <meta property="twitter:creator" content="@dksdc">
+  
+  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/post/total_order/">
+  <meta property="og:title" content="Cài đặt quan hệ thứ tự trong C&#43;&#43; | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-01-03T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-01-03T00:00:00&#43;00:00">
+  
+
+  
+
+  <title>Cài đặt quan hệ thứ tự trong C&#43;&#43; | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Cài đặt quan hệ thứ tự trong C&#43;&#43;</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-01-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-01-03
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/post/total_order/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=C%c3%a0i%20%c4%91%e1%ba%b7t%20quan%20h%e1%bb%87%20th%e1%bb%a9%20t%e1%bb%b1%20trong%20C%2b%2b&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2ftotal_order%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2ftotal_order%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2ftotal_order%2f&amp;title=C%c3%a0i%20%c4%91%e1%ba%b7t%20quan%20h%e1%bb%87%20th%e1%bb%a9%20t%e1%bb%b1%20trong%20C%2b%2b"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=C%c3%a0i%20%c4%91%e1%ba%b7t%20quan%20h%e1%bb%87%20th%e1%bb%a9%20t%e1%bb%b1%20trong%20C%2b%2b&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2ftotal_order%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc
+dữ liệu khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai
+trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:</p>
+
+<ul>
+<li>Total Order: Quan hệ thứ tự. Đây là một trong những quan hệ quen thuộc nhất,
+có vai trò quan trọng trong các thuật toán sắp xếp.</li>
+<li>Equivalence relation: Quan hệ tương đương: được sử dụng trong các thuật toán
+hashing.</li>
+</ul>
+
+<p>Tuy nhiên trong bài này thay vì đề cập trực tiếp đến quan hệ thứ tự (Total Order),
+ta thử sử dụng quan hệ tổng quát hơn chút <strong>weak order</strong>. Điều khác biệt duy nhất
+của Weak Order so với Total Order nằm ở chỗ weak order không có tính đối xứng.
+Và trong &ldquo;thực tế đời sống&rdquo;, Weak Order chính là dấu <code>&lt;</code>.</p>
+
+<p>Vậy có điều gì khó khăn khi phải cài đặt dấu <code>&lt;</code> này? Giả sử ta có một hàm như
+sau:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt; bool f(const T&amp; lhs, const T&amp; rhs) { return lsh&lt;rhs; }
+
+</code></pre>
+
+<p>Giả sử ta viết một thư viện trong đó chứa hàm <code>f</code> và mong muốn bất kì ai sử
+dụng cũng phải cài đặt dấu <code>&lt;</code> cho CTDL của mình. Bởi đôi khi, dấu <code>&lt;</code> mặc
+định của C++ chưa chắc mang ngữ nghĩa đúng, hay bất kì một CTDL tự tạo nào
+không chứa dấu <code>&lt;</code> cũng gặp lỗi. Vậy nếu có cơ chế nào giúp trình biên dịch
+phát hiện được LTV quên cài đặt dấu này. Cụ thể hơn ta, muốn có:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+bool f(const T&amp; lhs, const T&amp; rhs) {
+    // Error if T does not have `&lt;` operator
+    // otherwise
+    return lsh&lt;rhs;
+}
+
+</code></pre>
+
+<p>Trong C++11, ta có 1 cơ chế khá giống như vậy:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+bool f(const T&amp; lhs, const T&amp; rhs) {
+    static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt; operator&quot;);
+    return lsh&lt;rhs;
+}
+
+</code></pre>
+
+<p>Kỹ thuật sử dụng <code>struct&lt;T&gt;::value</code> được gọi là type traits, được sử dụng rất
+phổ biến trong STL, metaprogramming, các thư viện như BOOST, dlib. Tiếp <code>::value</code>
+ở đây phải là static, không có gì phải bàn. Đồng thời, <code>::value</code> trả về yes/no
+khi lớp T chứa/ hoặc không chứa <code>&lt;</code>. Do giá trị này được kiểm tra lúc trình biên
+dịch thực thi, nên hẳn là <code>constexpr</code>. Xong tạm thời ta có 1 cài đặt:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+class has_less_operator{
+    private:
+        // stuff
+    public:
+        static constexpr bool value = // and other stuff;
+};
+</code></pre>
+
+<p>Và giờ đến phần khoai nhất khi cài đặt. Ta buộc phải gán &ldquo;cái gì đó&rdquo; vào <code>value</code>,
+nhưng ngay tại thời điểm cài đặt ta còn không biết nó có giá trị gì, và hoàn toàn
+phụ thuật vào CTDL <code>T</code> nào đó do LTV khác viết. Hay nói một cách khác, chính giá
+trị boolean cũng bị tham số hóa theo kiểu. May mắn thay, STL có hỗ trợ vụ này:</p>
+
+<pre><code class="language-cpp">#include &lt;type_traits&gt;
+
+using namespace std;
+
+typedef true_type yes;
+typedef false_type no;
+
+</code></pre>
+
+<p>Lúc này ta có thể viết :</p>
+
+<pre><code class="language-cpp">static constexpr bool value = is_same&lt;yes, /* X */&gt;::value;
+</code></pre>
+
+<p>Như vậy <code>value</code> sẽ phụ thuộc vào <code>is_same&lt;yes, X&gt;::value</code>. Vấn đề X ở đây là gì?
+Ta xem trong STL, <code>is_same</code> nhận 2 datatype làm input. Vậy X chính là 1 datatype
+khác. Nhưng cụ thể hơn nó có thể là yes/no để <code>value</code> trở thành yes/no.</p>
+
+<p>Tới đây là một đoạn cực kì fancy, nhưng mình không biết giải thích trước thế nào
+nhưng trước hết cứ viết ra đã:</p>
+
+<pre><code class="language-cpp">static constexpr bool value = is_same&lt;yes,
+                                    decltype(test&lt;T&gt;(nullptr))
+                                    &gt;::value;
+</code></pre>
+
+<p><code>decltype</code> trả về kiểu dữ liệu <code>return type</code> của hàm <code>test</code> và ta cố tình đưa
+toàn bộ cài đặt vào trong <code>test</code> này. Bởi toán tử <code>&lt;</code> trong C++ yêu cầu 1 tham
+số đầu vào nên ta để 1 tham số hàm <code>test</code> làm dummy. Như vậy ta biết chắc chắn
+<code>test&lt;T&gt;</code> trả về 1 trong 2 kiểu dữ liệu : <code>yes</code> hoặc <code>no</code> như được typedef phía
+trên. Đồng thời, ta biết rằng mặc định mọi kiểu dữ liệu <code>T</code> sẽ trả về <code>no</code>.</p>
+
+<p>Tức ta có :</p>
+
+<pre><code class="language-cpp">template&lt;typename&gt; static no test(...);
+</code></pre>
+
+<p>Xong cho phần sai. Giờ làm thế nào để trả về <code>yes</code> khi dữ liệu thực sự đã cài
+đặt <code>&lt;</code>. Ta có 1 hàm test thứ 2:</p>
+
+<pre><code class="language-cpp">template&lt;typename P&gt; static auto test (P *p)
+    -&gt; decltype(declval&lt;T&gt;()&lt;(*p), yes());
+</code></pre>
+
+<p>WTF =))) Điều gì đang xảy ra ở đây? Nhờ một khái niệm <a href="https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error" target="_blank">SNINAE</a>
+Chúng ta được chứng kiến sự điên rồ của C++. Hãy phân tích câu lệnh trên.
+Phần <code>template&lt;typename T&gt; static</code> không có gì khác với <code>test</code> của <code>no</code>. Kết
+quả trả về là <code>auto</code> để &ldquo;nhường&rdquo; phần quyết định cho <code>decltype</code>. <code>decltype</code> làm
+chuyện như sau, nếu biểu thức <code>declval&lt;T&gt;()&lt;(*p), yes()</code> biên dịch được thì
+<code>auto</code> sẽ trở thành <code>yes</code> nhờ vào &ldquo;comma-separated list&rdquo;: trả về kết quả của term
+cuối cùng trong list. Vậy vấn đề nằm ở <code>declval</code>. Hàm nào giúp ta gọi được
+<code>&lt;</code> mà không cần thông qua constructor. Chính xác hơn <code>declval&lt;T&gt;()</code> là
+template function với tham số kiểu dữ liệu <code>T</code>, trả về kiểu reference X nào đó,
+nhờ đó ta gọi được <code>&lt;(*p)</code>: chính là phép <code>&lt;</code> thần thánh của chúng ta. Nếu như
+không tồn tại <code>&lt;</code>, biểu thức này fail nhưng sẽ không bị báo lỗi biên dịch mà thay
+vào đó trình biên dịch gán <code>test</code> cho <code>static no test(...)</code>.</p>
+
+<p>Tổng kết lại ta có code như sau:</p>
+
+<pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+
+using namespace std;
+typedef std::true_type yes;
+typedef std::false_type no;
+
+template&lt;typename T&gt;
+class has_less_operator {
+    private:
+    template&lt;typename P&gt; static auto test(P *p) -&gt; decltype(std::declval&lt;P&gt;()&lt;(*p), yes());
+    template&lt;typename&gt; static no test(...);
+
+
+    public:
+    static constexpr bool value = is_same&lt;
+                                    yes,
+                                    decltype(test&lt;T&gt;(nullptr))
+                               &gt;::value;
+};
+
+template&lt;typename T&gt;
+bool f(const T&amp; lsh, const T&amp; rhs) {
+    static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt;&quot;);
+    return lsh&lt;rhs;
+}
+
+struct s1 {
+    int i;
+    s1(int _i): i(_i) {  }
+    inline bool operator&lt;(const s1&amp; other) const {
+        return i &lt; other.i;
+    }
+};
+
+struct s2 {
+    int i;
+    s2(int _i): i(_i) {  }
+};
+
+int main(int argc, char const* argv[])
+{
+    s1 a(10);
+    s1 b(20);
+    f(a, b);
+    /* s2 c(10), d(20); */
+    /* f(c, d); */
+    return 0;
+}
+
+</code></pre>
+
+<p>Nếu ta uncomment s2 và f bên dưới, ta có thông báo lỗi như sau:</p>
+
+<pre><code>a.cpp: In instantiation of ‘bool f(const T&amp;, const T&amp;) [with T = s2]’:
+a.cpp:47:11:   required from here
+a.cpp:24:5: error: static assertion failed: Please implement &lt;
+     static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt;&quot;);
+     ^~~~~~~~~~~~~
+</code></pre>
+
+<p>Thông báo cực kì dễ hiểu. Với việc sử dụng một số IDE thông minh, thậm chí thông
+báo lỗi sẽ được thông báo ngay lúc cài đặt <code>s2</code> và gọi <code>f</code>. Quan trọng hơn,
+nhờ đó ta có thể viết mã theo &ldquo;Design by Contract&rdquo; hay theo phong cách interface
+của Java và C++. Sắp tới C++ sẽ giới thiệu khái niệm <code>concept</code> và theo tác
+giả của C++ là sẽ giải quyết vấn đề suốt 35 năm qua của Generic Programming
+(<a href="https://developers.slashdot.org/story/17/01/23/003247/c-creator-wants-to-solve-35-year-old-generic-programming-issues-with-concepts" target="_blank">link</a>).</p>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/tags/programming">programming</a>
+  
+  <a class="btn btn-primary btn-outline" href="/tags/c&#43;&#43;">C&#43;&#43;</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/fibsearch/">Giải thuật tìm kiếm Fibonacci</a></li>
+    
+    <li><a href="/post/taocp/howto/">Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</a></li>
+    
+    <li><a href="/post/matlab/">Matlab</a></li>
+    
+    <li><a href="/post/sakamoto_method/">Bài toán chuyển ngày sang thứ</a></li>
+    
+    <li><a href="/post/rand/">rand() is harmful</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+
