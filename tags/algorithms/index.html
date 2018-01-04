@@ -84,7 +84,7 @@
   <meta property="og:description" content="Research Assistant">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2017-12-19T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2018-01-04T00:00:00&#43;00:00">
   
 
   
@@ -208,6 +208,16 @@
   
 
   
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/post/improved_qsort/">Một số biến thể Quicksort</a></h2>
+    <div class="article-style">
+      
+      Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[&ndash;j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="http://dangkhoasdc.github.io/post/fibsearch/">Giải thuật tìm kiếm Fibonacci</a></h2>

@@ -82,7 +82,7 @@
   <meta property="og:description" content="Research Assistant">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2018-01-03T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2018-01-04T00:00:00&#43;00:00">
   
 
   
@@ -206,6 +206,59 @@
   
 
   
+  
+    
+    
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  
+  <h3 class="article-title" itemprop="name">
+    <a href="http://dangkhoasdc.github.io/post/improved_qsort/" itemprop="url">Một số biến thể Quicksort</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-01-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-01-04
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/post/improved_qsort/#disqus_thread"></a>
+  
+
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[--j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
+    
+  </div>
+  <p class="read-more">
+    <a href="http://dangkhoasdc.github.io/post/improved_qsort/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
   
     
     
@@ -679,59 +732,6 @@ One solution to combine Windows and Linux is to install dual-boot in the machine
   </div>
   <p class="read-more">
     <a href="http://dangkhoasdc.github.io/post/taocp/howto/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-    
-    
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/post/headphones/" itemprop="url">Tai nghe dành programmer</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2017-09-24 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2017-09-24
-    </time>
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/post/headphones/#disqus_thread"></a>
-  
-
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    Thực ra câu chuyện mình sắp kể không liên quan là mấy đến tai nghe dành cho programmer. Nó ít nhiều liên quan đến chuyện: ra quyết định tối ưu và không cần đắn đo đến nó nữa.
-Tuy nhiên, vì đang nói đến tai nghe dành cho programmer. Nên tiện thể mình đề cập. Chuyện là mình đang cần một tai nghe có tính năng noise cancelling tốt, vì tiếng xì xầm cũng như âm thanh văn phòng khiến mình khó tập trung, bản thân vừa làm research vừa programming, đôi khi mình cần không gian rất yên tĩnh để có thể dành toàn bộ neural cho 1 task nào đó.
-    
-  </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/post/headphones/" class="btn btn-primary btn-outline">
       CONTINUE READING
     </a>
   </p>
