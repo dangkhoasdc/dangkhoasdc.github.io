@@ -307,8 +307,7 @@ void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) {
 
 <p>Độ phức tạp được đánh giá thông qua hàm:</p>
 
-<p>$$ C(1) = 0 $$
-$$ C(N) = n-1 + {1\over n}\sum_{i=0}^{n-1} ( C(i) + C(n-i-1)) $$</p>
+<p>$$ C(N) = n-1 + {1\over n}\sum_{i=0}^{n-1} ( C(i) + C(n-i-1)) $$</p>
 
 <p>Trong phần <code>partition</code> thực hiện $n-1$ phép so sánh, sau đó gọi 2 lần quicksort với kích thước lần lượt là $i$ và $n-i-1$, xác suất cho mỗi phần tử trong mảng theo phân phối đều là ${1\over n}$ vậy nên ta được biểu thức như trên.</p>
 
@@ -322,7 +321,7 @@ $$ C(N) = n-1 + {1\over n}\sum_{i=0}^{n-1} ( C(i) + C(n-i-1)) $$</p>
 
 <h2 id="hạn-chế-trường-hợp-worst-case">Hạn chế trường hợp worst-case</h2>
 
-<p>Một trong những phương pháp chống worst-case nổi tiếng của quicksort là xáo trộn mảng input trước khi dùng quicksort. Dùng Knuth&rsquo;shuffle với độ phức tạp $\mathcal{O}(N)$ ta có thể đảm bảo hiệu quả của thuật toán. Ngoài ra, việc xáo trộn mảng input khiến cải tiến này, thường được gọi với cái tên randomized quicksort, trở thành ví dự kinh điển trong việc phân tích các thuật toán ngẫu nhiên. Mình có một <a href="http://dkhoa.me/post/randalgs_ex/" target="_blank">bài viết</a> đề cập tới phân tích randomized quicksort.</p>
+<p>Một trong những phương pháp chống worst-case nổi tiếng của quicksort là xáo trộn mảng input trước khi dùng quicksort. Dùng <a href="https://en.wikipedia.org/wiki/FisherYates_shuffle" target="_blank">Knuth shuffle</a> với độ phức tạp $\mathcal{O}(N)$ ta có thể đảm bảo hiệu quả của thuật toán. Ngoài ra, việc xáo trộn mảng input khiến cải tiến này, thường được gọi với cái tên randomized quicksort, trở thành ví dự kinh điển trong việc phân tích các thuật toán ngẫu nhiên. Mình có một <a href="http://dkhoa.me/post/randalgs_ex/" target="_blank">bài viết</a> đề cập tới phân tích randomized quicksort.</p>
 
 <p>Ngoài cách xáo trộn mảng ra, còn có một số cách tiếp cận khác:</p>
 
@@ -348,15 +347,15 @@ if (hi-lo &lt; CUTOFF) {
 <p>Với phiên bản được implement bên trên, ta có thể bỏ đi câu lệnh <code>if</code> trong  <code>while</code> như sau:</p>
 
 <ul>
-<li>Ta có thể bỏ <code>if</code> khi kiểm tra <code>j</code> bởi a[lo]&lt;a[lo] không bao giờ xảy ra.</li>
+<li>Ta có thể bỏ <code>if</code> khi kiểm tra <code>j</code> bởi a[lo] &lt; a[lo] không bao giờ xảy ra.</li>
 <li>Để bỏ <code>if</code> trong <code>i</code>. Trước khi gọi quicksort, ta đặt 1 giá trị cờ là <code>MAX_INT</code> chẳng hạn. Như vậy luôn đảm bảo tồn tại 1 giá trị lớn hơn a[lo].</li>
 </ul>
 
 <h2 id="median-of-three-và-median-of-five">Median-of-three và median-of-five</h2>
 
-<p>Thủ thuật khá kinh điển để tránh worst-case: sample <sup>3</sup>&frasl;<sub>5</sub> phần tử, lấy giá trị median và lấy median đó làm pivot.</p>
+<p>Thủ thuật khá kinh điển để tránh worst-case: sample 3 hay 5 phần tử, lấy giá trị median và lấy median đó làm pivot.</p>
 
-<h3 id="tukey-s-ninther-quicksort">Tukey&rsquo;s ninther quicksort.</h3>
+<h3 id="tukey-ninther-quicksort">Tukey ninther quicksort.</h3>
 
 <p>Dùng 9 phần tử thay cho <sup>3</sup>&frasl;<sub>5</sub> phần tử.</p>
 
@@ -394,6 +393,8 @@ if (hi-lo &lt; CUTOFF) {
 </ul>
 
 <p>Phiên bản này cũng chính là phiên bản <code>qsort</code> trong GNU C.</p>
+
+<p>Phiên bản Java của Sedgewick cũng rất đáng để tìm hiểu: <a href="https://algs4.cs.princeton.edu/23quicksort/QuickX.java.html" target="_blank">source code QuickX</a>.</p>
 
 <h2 id="samplesort">Samplesort</h2>
 
