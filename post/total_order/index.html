@@ -277,13 +277,13 @@
         
 
 <p>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc
-dữ liệu khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai
+dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai
 trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:</p>
 
 <ul>
-<li>Total Order: Quan hệ thứ tự. Đây là một trong những quan hệ quen thuộc nhất,
+<li>Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất,
 có vai trò quan trọng trong các thuật toán sắp xếp.</li>
-<li>Equivalence relation: Quan hệ tương đương: được sử dụng trong các thuật toán
+<li>Equivalence relation (Quan hệ tương đương): được sử dụng trong các thuật toán
 hashing.</li>
 </ul>
 
@@ -324,10 +324,12 @@ bool f(const T&amp; lhs, const T&amp; rhs) {
 
 </code></pre>
 
-<p>Kỹ thuật sử dụng <code>struct&lt;T&gt;::value</code> được gọi là type traits, được sử dụng rất
-phổ biến trong STL, metaprogramming, các thư viện như BOOST, dlib. Tiếp <code>::value</code>
+<p>Kỹ thuật sử dụng <code>struct&lt;T&gt;::value</code> được gọi là <a href="https://accu.org/index.php/journals/442" target="_blank">type traits</a>,
+được sử dụng rất
+phổ biến trong STL, metaprogramming, các thư viện như BOOST, dlib. Tiếp, <code>::value</code>
 ở đây phải là static, không có gì phải bàn. Đồng thời, <code>::value</code> trả về yes/no
-khi lớp T chứa/ hoặc không chứa <code>&lt;</code>. Do giá trị này được kiểm tra lúc trình biên
+khi lớp T chứa/ hoặc không chứa <code>&lt;</code>, nên kiểu phải là <code>bool</code>. Do giá trị này được
+kiểm tra lúc trình biên
 dịch thực thi, nên hẳn là <code>constexpr</code>. Xong tạm thời ta có 1 cài đặt:</p>
 
 <pre><code class="language-cpp">template&lt;typename T&gt;
@@ -388,8 +390,10 @@ trên. Đồng thời, ta biết rằng mặc định mọi kiểu dữ liệu <
     -&gt; decltype(declval&lt;T&gt;()&lt;(*p), yes());
 </code></pre>
 
-<p>WTF =))) Điều gì đang xảy ra ở đây? Nhờ một khái niệm <a href="https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error" target="_blank">SNINAE</a>
-Chúng ta được chứng kiến sự điên rồ của C++. Hãy phân tích câu lệnh trên.
+<p>WTF =))) Điều gì đang xảy ra ở đây? Nhờ một khái niệm <a href="https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error" target="_blank">SFINAE</a>,
+chúng ta được chứng kiến sự điên rồ của C++.</p>
+
+<p>Hãy phân tích câu lệnh trên.
 Phần <code>template&lt;typename T&gt; static</code> không có gì khác với <code>test</code> của <code>no</code>. Kết
 quả trả về là <code>auto</code> để &ldquo;nhường&rdquo; phần quyết định cho <code>decltype</code>. <code>decltype</code> làm
 chuyện như sau, nếu biểu thức <code>declval&lt;T&gt;()&lt;(*p), yes()</code> biên dịch được thì
@@ -484,7 +488,7 @@ này dễ dàng thông qua <code>&lt;</code>:</p>
 <li><code>&gt;=</code>: <code>!(lhs&lt;rhs)</code>.</li>
 </ul>
 
-<p>Trong thâm ta ta có cảm giác rằng thể nào cũng có rất nhiều CTDL ta sử cài đặt
+<p>Trong thâm ta ta có cảm giác rằng thể nào cũng có rất nhiều CTDL ta cài đặt
 kiểu này: chỉ cần định nghĩa <code>&lt;</code> và 3 toán tử còn lại tự nội suy. Nhờ vào kỹ
 thuật <a href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern" target="_blank">Curiously recurring template pattern</a>,
 ta có một code khá gọn:</p>
