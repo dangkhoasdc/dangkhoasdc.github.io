@@ -285,6 +285,8 @@ trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến nh
 optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất
 để thực thi.</li>
 <li>Trong Hệ Điều Hành, các giải thuật lập lịch, scheduling.</li>
+<li>Trong các hệ thống giả lập, những sự kiện theo trình tự thời gian được ưu tiên
+thực thi trước.</li>
 </ul>
 
 <p>Priority Queues có hai toán tử rất quan trọng:</p>
@@ -359,9 +361,17 @@ khoảng cách của node hiện tại tới node <code>NULL</code> gần nhất
 <li><a href="https://www.geeksforgeeks.org/leftist-tree-leftist-heap/" target="_blank">Geeksforgeeks</a></li>
 </ol>
 
+<p>Ưu điểm của CTDL này chính là việc nó có khả năng gộp 2 priority queues lại với
+độ phức tạp khá nhỏ. Tuy nhiên, CTDL này thực sự không còn phổ biến.</p>
+
 <h2 id="cây-cân-bằng">Cây cân bằng</h2>
 
 <h2 id="stratified-tree">Stratified tree</h2>
+
+<p>Cấu trúc dữ liệu này có một cái tên phổ biến hơn: <strong>van Emde boas tree</strong> [Rất
+tiếc trên Wikipedia, phần
+<a href="https://en.wikipedia.org/wiki/Van_Emde_Boas_tree" target="_blank">van Emde Boas tre</a>
+lại không đề cập đến tên gọi gốc của CTDL này].</p>
 
 <blockquote>
 <p>Beware of bugs in the above code; I have only proved it correct, not tried it</p>
