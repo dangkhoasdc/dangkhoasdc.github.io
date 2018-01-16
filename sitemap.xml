@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/post/gen_inversion_table/</loc>
+      <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/post/selectedpapers_cs/</loc>
       <lastmod>2018-01-15T00:00:00+00:00</lastmod>
     </url>
@@ -471,14 +480,6 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/programming/randomized-algs/</loc>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://dangkhoasdc.github.io/publication_types/1/</loc>
       <lastmod>2017-07-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -498,7 +499,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/algorithms/</loc>
-      <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+      <lastmod>2018-01-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -746,7 +747,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/post/</loc>
-      <lastmod>2018-01-15T00:00:00+00:00</lastmod>
+      <lastmod>2018-01-16T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -855,7 +856,17 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/</loc>
-      <lastmod>2018-01-10T00:00:00+00:00</lastmod>
+      <lastmod>2018-01-16T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/tags/taocp/</loc>
+      <lastmod>2017-12-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
