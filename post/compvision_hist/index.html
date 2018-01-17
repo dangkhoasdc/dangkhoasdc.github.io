@@ -221,7 +221,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    7 min read
   </span>
   
 
@@ -276,47 +276,132 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p>Edition: Pre-fascicle 1A (Revision -100).</p>
+<p>Edition: Pre-fascicle 1A (Revision -99).</p>
 
-<blockquote>
-<p>Bài viết được viết từ các ghi chú của tác giả thông qua sách Computer Vision: Algorithms and Application và khóa học cs231n@Stanford</p>
-</blockquote>
-
-<p>Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT - hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông tin về một hướng nghiên cứu khá hấp dẫn này.</p>
+<p>[Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính
+muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi
+vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT -
+hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông
+tin về một hướng nghiên cứu khá hấp dẫn này.]</p>
 
 <h1 id="giới-thiệu">Giới thiệu</h1>
 
-<p>Bởi TGMT là một hướng nghiên cứu liên quan đến khá nhiều lĩnh vực khác nhau, đặc biệt là sinh học, khoa học nhận thức, khoa học máy tính, toán học, vật lý; chính điều đó lịch sử của TGMT được xem xét bởi các mốc thời gian khác nhau tùy theo ý kiến của tác giả. Phần dưới được mình tổng hợp từ “timeline” của hai nhà nghiên cứu nổi tiếng là “cô cô” <a href="https://scholar.google.com/citations?user=rDfyQnIAAAAJ" target="_blank">Lei Fei-Fei</a> và sư tổ <a href="https://scholar.google.com/citations?user=3_u1jHQAAAAJ" target="_blank">Szeliski</a>. Có thể hiểu ngành TGMT là một nhánh con của trí tuệ nhân tạo (AI) trong thời kì đầu - những năm 1950s, một trong những mục tiêu tối thượng của AI chính là có thể giả lập được trí tuệ của con người. Đó là đối với AI, CV cũng không phải ngoại lệ; các bài toán trong CV cũng nhằm giải quyết bài toán làm thế nào một hệ thống thị giác có khả năng hiểu và thao tác với hình ảnh giống như cách một hệ thống thị giác sinh học làm được.</p>
+<p>Bởi TGMT là một hướng nghiên cứu liên quan đến khá nhiều lĩnh vực khác nhau,
+đặc biệt là sinh học, khoa học nhận thức, khoa học máy tính, toán học, vật lý;
+chính điều đó lịch sử của TGMT được xem xét bởi các mốc thời gian khác nhau tùy
+theo ý kiến của tác giả. Phần dưới được mình tổng hợp từ “timeline” của hai nhà
+nghiên cứu nổi tiếng là “cô cô” <a href="https://scholar.google.com/citations?user=rDfyQnIAAAAJ" target="_blank">Lei
+Fei-Fei</a> và sư tổ
+<a href="https://scholar.google.com/citations?user=3_u1jHQAAAAJ" target="_blank">Szeliski</a> thông qua
+các bài giảng và sách giáo trình. Có thể hiểu
+ngành TGMT là một nhánh con của trí tuệ nhân tạo (AI) trong thời kì đầu - những
+năm 1950s, một trong những mục tiêu tối thượng của AI chính là có thể giả lập
+được trí tuệ của con người. Đó là đối với AI, CV cũng không phải ngoại lệ; các
+bài toán trong CV cũng nhằm giải quyết bài toán làm thế nào một hệ thống thị
+giác có khả năng hiểu và thao tác với hình ảnh giống như cách một hệ thống thị
+giác sinh học làm được.</p>
 
-<p>Vậy làm thế nào một hệ thống thị giác sinh học có thể quan sát, hiểu được những hình ảnh mà cơ quan cảm thụ (mắt) thu nhận được. Câu hỏi đặt ta phải tìm hiểu về quá trình cơ chế này được phát triển trong tự nhiên và những nghiên cứu về não bộ nhằm hiểu được cơ chế hoạt động của một trong những giác quan quan trọng của cơ thể.</p>
+<p>Vậy làm thế nào một hệ thống thị giác sinh học có thể quan sát, hiểu được những
+hình ảnh mà cơ quan cảm thụ (mắt) thu nhận được. Câu hỏi đặt ta phải tìm hiểu
+về quá trình cơ chế này được phát triển trong tự nhiên và những nghiên cứu về
+não bộ nhằm hiểu được cơ chế hoạt động của một trong những giác quan quan trọng
+của cơ thể. Thông qua những tìm hiểu này, đã có nhiều bước tiến diễn ra trong
+các ngành khác nhau như Vật Lý, Sinh Học, Toán Học, và sau này Trí Tuệ Nhân Tạo.</p>
 
 <h1 id="pre-computer-vision">Pre-computer vision</h1>
 
 <h2 id="543-triệu-năm-trước-công-nguyên">543 triệu năm trước Công Nguyên</h2>
 
-<p><img src="https://www.papermasters.com/images/cambrian-explosion.jpg" alt="" /></p>
 
-<p>Đây là thời kì “Big Bang của tiến hóa sinh học”, trước thời điểm này các sinh vật hiện diện trên Trái Đất rất hạn chế. Và đột nhiên, như vụ nổ Big Bang, bỗng xuất hiện sự bùng nổ các sinh vật hiện diện tràn ngập trên Trái Đất. Dựa trên các bằng chứng khảo cổ học cũng như địa chấn Trái Đất, <a href="https://en.wikipedia.org/wiki/Cambrian_explosion#Possible_causes_of_the_.22explosion.22" target="_blank">nhiều giả thuyết được đặt ra</a> nhằm giải thích cho hiện tượng này. Có thể một thiên thạch chứa  mầm sống ngoài vũ trụ đã mang đến các vi sinh vật, hay có chăng sự biến đổi thời tiết và môi trường dẫn đến sự bùng nổ các giống loài.</p>
+<figure >
+    
+        <img src="https://www.papermasters.com/images/cambrian-explosion.jpg" />
+    
+    
+    <figcaption>
+        <h4>Vụ nổ Cambrian, nguồn: Papermasters</h4>
+        
+    </figcaption>
+    
+</figure>
 
-<p>Các nhà sinh vật gọi đây là “<a href="https://en.wikipedia.org/wiki/Cambrian_explosion" target="_blank">vụ nổ kì Cambrian</a>”, chỉ trong một thời gian ngắn, một loạt các sinh vật với cơ thể phức tạp và cấu trúc mới xuất hiện. Một <a href="https://en.wikipedia.org/wiki/Evolution_of_the_eye#Rate_of_evolution" target="_blank">giả thuyết</a> quan trọng được đưa ra chính là <strong>sự xuất hiện của cơ quan thị giác</strong>, lần đầu tiên có một sinh vật có thể tương tác với môi trường xung quanh. Các sinh vật này không còn thụ động với môi trường nữa, cũng chính bởi điều đó thúc đầy loài săn mồi và bị ăn thịt thúc đẩy khả năng cảm nhận của mình, dẫn đến các sinh vật ở thời kì này tương tác tốt với môi trường. Một dẫn chứng quan trọng của giả thuyết này chính là đây là thời kì sớm nhất mà các nhà khoa học có thể tìm thấy cơ quan “thị giác” trong các hóa thạch.</p>
 
-<p>Chính nhờ sự phát triển của cơ quan thị giác, mà sau tất cả bước tiến hóa đến tận bây giờ, hệ thống này đã giúp cho các sinh vật có thể <strong>tồn tại, điều hướng, thao tác</strong> với môi trường xunh quanh. Đó cũng chính là mục tiêu của các nhà nghiên cứu AI trong giai đoạn đầu hình TGMT: làm thế nào hệ thống AI có thể <em>tồn tại, điều hướng, tao tác</em> với môi trước tác nhân (agent).</p>
+<p>Đây là thời kì “Big Bang của tiến hóa sinh học”, trước thời điểm này các sinh
+vật hiện diện trên Trái Đất rất hạn chế. Và đột nhiên, như vụ nổ Big Bang, bỗng
+xuất hiện sự bùng nổ các sinh vật hiện diện tràn ngập trên Trái Đất. Dựa trên
+các bằng chứng khảo cổ học cũng như địa chấn Trái Đất, <a href="https://en.wikipedia.org/wiki/Cambrian_explosion#Possible_causes_of_the_.22explosion.22" target="_blank">nhiều giả thuyết được
+đặt
+ra</a>
+nhằm giải thích cho hiện tượng này. Có thể một thiên thạch chứa  mầm sống ngoài
+vũ trụ đã mang đến các vi sinh vật, hay có chăng sự biến đổi thời tiết và môi
+trường dẫn đến sự bùng nổ các giống loài. [Những giả thuyết này về sau được
+đưa vào văn học, điện ảnh khá nhiều. Đồng thời cũng có nhiều nghiên cứu
+tập trung đến hướng này, đọc thêm: <a href="https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345331354" target="_blank">Cosmos - Carl Sagan</a>]</p>
+
+<p>Các nhà sinh vật gọi đây là “<a href="https://en.wikipedia.org/wiki/Cambrian_explosion" target="_blank">vụ nổ kì
+Cambrian</a>”, chỉ trong một
+thời gian ngắn, một loạt các sinh vật với cơ thể phức tạp và cấu trúc mới xuất
+hiện. Một <a href="https://en.wikipedia.org/wiki/Evolution_of_the_eye#Rate_of_evolution" target="_blank">giả
+thuyết</a>
+quan trọng được đưa ra chính là <strong>sự xuất hiện của cơ quan thị giác</strong>, lần đầu
+tiên có một sinh vật có thể tương tác với môi trường xung quanh. Các sinh vật
+này không còn thụ động với môi trường nữa; cũng chính bởi điều đó thúc đầy loài
+săn mồi và con mồi thúc đẩy khả năng cảm nhận của mình, dẫn đến các sinh vật
+ở thời kì này phát triển cơ chế tương tác với môi trường. Một dẫn chứng quan trọng
+của giả thuyết này chính là đây là thời kì sớm nhất mà các nhà khoa học có thể
+tìm thấy cơ quan “thị giác” trong các hóa thạch.</p>
+
+<p>Chính nhờ sự phát triển của cơ quan thị giác, mà sau tất cả bước tiến hóa đến
+tận bây giờ, hệ thống này đã giúp cho các sinh vật có thể <strong>tồn tại, điều
+hướng, thao tác</strong> với môi trường xunh quanh. Đó cũng chính là mục tiêu của các
+nhà nghiên cứu AI trong giai đoạn đầu hình TGMT: làm thế nào hệ thống AI có thể
+<strong>tồn tại, điều hướng, tao tác</strong> với môi trường tác nhân tác nhân (agent)<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
 
 <h2 id="thế-kỉ-16-camera-obscura-leonardo-da-vinci">Thế kỉ 16 - Camera Obscura - Leonardo da Vinci</h2>
 
-<p><img src="https://usercontent2.hubstatic.com/6047721_f1024.jpg" alt="" /></p>
 
-<p>Trong suốt lịch sử, loài người đã dần dần phát minh những thiết bị có thể nắm bắt được những gì họ trông thấy (<a href="https://en.wikipedia.org/wiki/Camera_obscura" target="_blank">Link</a>). Những phát kiến được tìm thấy ở Trung Quốc, Hi Lạp và các nền văn minh khác. Tuy nhiên đến tận thế kỉ 16, <strong>Leonardo da Vinci là người đầu tiên có những ghi chú cụ thể và chi tiết về công cụ</strong> này - mà sau này ta gọi là “camera”.</p>
+<figure >
+    
+        <img src="https://usercontent2.hubstatic.com/6047721_f1024.jpg" />
+    
+    
+    <figcaption>
+        <h4>Camera Obscura and a painter. Nguồn: Không rõ.</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Trong suốt lịch sử, loài người đã dần dần phát minh những thiết bị có thể nắm
+bắt được những gì họ trông thấy
+(<a href="https://en.wikipedia.org/wiki/Camera_obscura" target="_blank">Link</a>). Những phát kiến được
+tìm thấy ở Trung Quốc, Hi Lạp và các nền văn minh khác. Tuy nhiên đến tận thế
+kỉ 16, <strong>Leonardo da Vinci là người đầu tiên có những ghi chú cụ thể và chi
+tiết về công cụ</strong> này - mà sau này ta gọi là “camera”.</p>
 
 <p><img src="https://usercontent1.hubstatic.com/6047724_f496.jpg" alt="" /></p>
 
-<p>Trong các tài liệu của mình, Leonardo đã sử dụng cơ chế “pin hole” để mô hình hóa cách camera ghi lại khoảnh khắc xung quanh. Đồng thời ông cũng dùng cơ chế này để tìm hiểu cách hoạt động của mắt người.</p>
+<p>Trong các tài liệu của mình, Leonardo đã sử dụng cơ chế “pin hole” để mô hình
+hóa cách camera ghi lại khoảnh khắc xung quanh. Đồng thời ông cũng dùng cơ chế
+này để tìm hiểu cách hoạt động của mắt người. [Chi tiết về cuộc đời và các
+công trình của Leonardo da Vinci, cuốn
+<a href="https://www.amazon.com/Leonardo-Vinci-Walter-Isaacson/dp/1501139150" target="_blank">Leonardo da Vinci</a>
+của Walter Isaacson
+rất đáng đọc.].</p>
 
-<p>Cũng từ sau giai đoạn này, nhiều phát minh đã xuất hiện. Và ngày nay, “camera” trở thành một phần không thể thiếu trong cuộc sống hiện đại. Thống kê năm 2016 có thấy số lượng cảm biến hình ảnh còn nhiều hơn dân số Trái Đất. Tuy nhiên, việc phát minh ra camera, cũng như các ghi chú của Leonardo chỉ dừng lại mức <strong>sao chép thế giới thị giác.</strong> Lúc này một camera vẫn chưa <em>hiểu</em> được những gì mình thu nhận được.</p>
+<p>Cũng từ sau giai đoạn này, nhiều phát minh đã xuất hiện. Và ngày nay, “camera”
+trở thành một phần không thể thiếu trong cuộc sống hiện đại. Thống kê năm 2016
+có thấy số lượng cảm biến hình ảnh còn nhiều hơn dân số Trái Đất. Tuy nhiên,
+việc phát minh ra camera, cũng như các ghi chú của Leonardo chỉ dừng lại mức
+<strong>sao chép thế giới thị giác.</strong> Lúc này một camera vẫn chưa <em>hiểu</em> được những
+gì mình thu nhận được.</p>
 
 <h2 id="1959-hubel-wiesel">1959: Hubel &amp; Wiesel</h2>
 
-<p>Làm thế nào con người có thể hiểu được những gì đôi mắt nhìn thấy? Cơ chế hoạt động của não bộ khi bắt được tín hiệu hình ảnh? Những câu hỏi này không ngừng thúc đẩy các nhà khoa học tìm hiểu vấn đề này.</p>
+<p>Làm thế nào con người có thể hiểu được những gì đôi mắt nhìn thấy? Cơ chế hoạt
+động của não bộ khi bắt được tín hiệu hình ảnh? Những câu hỏi này không ngừng
+thúc đẩy các nhà khoa học tìm hiểu vấn đề này.</p>
 
 
 <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
@@ -324,9 +409,21 @@
  </div>
 
 
-<p>Nghiên cứu đạt giải Nobel năm 1981 này được thực nghiệm trên những chú mèo nhằm tìm câu trả lời cho câu hỏi về thị giác trong não bộ. Các nhà khoa học đã gắn các thiết bị ghi nhận tín hiện mỗi khi phần não (primary visual cortex) kích ứng với các sự thay đổi hình ảnh. Khi thử nghiệm với các hình ảnh như cá, thịt, hoa … hầu như não mèo không kích ứng tín hiệu nào. Lúc đó các nhà khoa học hầu như thất vọng với kết quả thu được. Nhưng điều lạ lùng là họ thấy các tín hiệu được kích ứng mỗi khi họ thay đổi tấm phim. Và sau đó, kết luận được đưa ra là tiền đề cho các nghiên cứu sau này của TGMT: tín hiệu não chỉ kích ứng với sự chuyển động của các cấu trúc cơ bản (biên, cạnh). Sau này, trong deep learning, kết quả visualize của tầng conv cũng cho kết quả tương tự.</p>
+<p>Nghiên cứu đạt giải Nobel năm 1981 này được thực nghiệm trên những chú mèo nhằm
+tìm câu trả lời cho câu hỏi về thị giác trong não bộ. Các nhà khoa học đã gắn
+các thiết bị ghi nhận tín hiện mỗi khi phần não (primary visual cortex) kích
+ứng với các sự thay đổi hình ảnh. Khi thử nghiệm với các hình ảnh như cá, thịt,
+hoa … hầu như não mèo không kích ứng tín hiệu nào. Lúc đó các nhà khoa học hầu
+như thất vọng với kết quả thu được. Nhưng điều lạ lùng là họ thấy các tín hiệu
+được kích ứng mỗi khi họ thay đổi tấm phim. Và sau đó, kết luận được đưa ra là
+tiền đề cho các nghiên cứu sau này của TGMT: tín hiệu não chỉ kích ứng với sự
+chuyển động của các cấu trúc cơ bản (biên, cạnh). Sau này, trong deep learning,
+kết quả visualize của tầng conv cũng cho kết quả tương tự.</p>
 
-<p>Điều thú vị của não bộ về xử lí thị giác: não bộ cần khá nhiều phần trăm cơ quan của mình để có thể “hiểu” những gì mắt ghi nhận được (gần 50% thể tích não), và bộ phần này (visual cortex) nằm phần phía sau của não bộ. Có thể hiểu rằng đây là tác vụ khó nhất mà não bộ cần phải làm.</p>
+<p>Điều thú vị của não bộ về xử lí thị giác: não bộ cần khá nhiều phần trăm cơ
+quan của mình để có thể “hiểu” những gì mắt ghi nhận được (gần 50% thể tích
+não), và bộ phần này (visual cortex) nằm phần phía sau của não bộ. Có thể hiểu
+rằng đây là tác vụ khó nhất mà não bộ cần phải làm.</p>
 
 <h1 id="computer-vision-era">Computer Vision era</h1>
 
@@ -347,6 +444,21 @@
 <h2 id="2001">2001</h2>
 
 <h1 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h1>
+
+<h1 id="todo">TODO</h1>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> Add references.</label></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">Có một mối quan hệ mật thiết với Học Tăng Cường (Reinforcement Learning) [Có lẽ mình cần đề cập một chút ở đây]
+ <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
+</ol>
+</div>
 
       </div>
 
