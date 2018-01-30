@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.32.4" />
+  <meta name="generator" content="Hugo 0.34" />
   <meta name="author" content="Dang-Khoa">
   <meta name="description" content="Research Assistant">
 
@@ -369,6 +369,74 @@
         
           
       
+
+      
+      
+        
+        
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  
+  <h3 class="article-title" itemprop="name">
+    <a href="http://dangkhoasdc.github.io/post/who_am_i/" itemprop="url">Tôi là ai</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-01-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-01-30
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/post/who_am_i/#disqus_thread"></a>
+  
+
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    Có lẽ bản thân tôi đã ảo tưởng về khả năng của mình, thời gian gần đây mọi chuyện trở nên tồi tệ, thêm một bài báo bị reject. Như thể có gì đó ở cuốn họng mà không thể nuốt trôi được.
+Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn được nữa. Hoặc cũng có thể trước giờ mọi điều tôi đạt được hoàn toàn nhờ may mắn.
+    
+  </div>
+  <p class="read-more">
+    <a href="http://dangkhoasdc.github.io/post/who_am_i/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+      
+
+      
+
+        
+
+        
+        
+
+        
+        
+          
+      
           
       
 
@@ -630,76 +698,6 @@
   </div>
   <p class="read-more">
     <a href="http://dangkhoasdc.github.io/post/impl_priority_queues/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-      
-
-      
-
-        
-
-        
-        
-
-        
-        
-          
-      
-          
-      
-
-      
-      
-        
-        
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/post/improved_qsort/" itemprop="url">Một số biến thể Quicksort</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2018-01-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2018-01-04
-    </time>
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/post/improved_qsort/#disqus_thread"></a>
-  
-
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
-// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[--j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
-    
-  </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/post/improved_qsort/" class="btn btn-primary btn-outline">
       CONTINUE READING
     </a>
   </p>
