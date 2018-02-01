@@ -398,6 +398,21 @@ với $M \geq 6$ và phản chứng nhận định của Euler. Đồng thời, 
 9 2 8 1 6 7 4 0 3 5
 </code></pre>
 
+<p>Một solution trong sách:</p>
+
+<pre><code>0 2 8 5 9 4 7 3 6 1
+1 7 4 9 3 6 5 0 2 8
+2 5 6 4 8 7 0 1 9 3
+3 6 9 0 4 5 8 2 1 7
+4 8 1 7 5 3 6 9 0 2
+5 1 7 8 0 2 9 4 3 6
+6 9 0 2 7 1 3 8 4 5
+7 3 5 1 2 0 4 6 8 9
+8 0 2 3 6 9 1 7 5 4
+9 4 3 6 1 8 2 5 7 0
+
+</code></pre>
+
 <h1 id="transvervals">Transvervals</h1>
 
 <p>Parker sử dụng lại khái niệm transversal mà trước đây Euler từng định nghĩa,
@@ -409,17 +424,18 @@ Giả sử ta có $k$ là giá trị đầu tiên của transversal, dựa vào 
 tử phía sau, ta thay bằng $k$. Chọn ra $M$ transversal của $k = 0, 1, \cdots, M-1$
 ta sẽ tạo thành 1 orthogonal matrix.</p>
 
-<p>Thuật toán đếm số tranversal của một ma trận vuông N.</p>
+<p>Thuật toán đếm số transversal của một ma trận vuông N.</p>
 
-<pre><code class="language-cpp">class transversal {
+<pre><code class="language-cpp">typedef vector&lt;vector&lt;int&gt;&gt; mat;
+class transversal {
 private:
     int n;
     vector&lt;bool&gt; row;
     vector&lt;bool&gt; nums;
-    vector&lt;vector&lt;int&gt;&gt; input;
+    mat input;
     int cnt;
 public:
-    transversal(mat in_): n(in_.size()), input(in_),
+    transversal(const mat&amp; in_): n(in_.size()), input(in_),
     row(n, false), nums(n, false), cnt(0) {
         assert(in_.size() == in_[0].size());
     }
