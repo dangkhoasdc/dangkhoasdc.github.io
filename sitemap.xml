@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/post/story_telling_witcher3/</loc>
+      <lastmod>2018-02-13T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/post/programming_pearls/</loc>
       <lastmod>2018-02-07T00:00:00+00:00</lastmod>
     </url>
@@ -673,15 +682,6 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/deep/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://dangkhoasdc.github.io/tags/documentary/</loc>
       <lastmod>2017-09-18T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -703,7 +703,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/tags/games/</loc>
-      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+      <lastmod>2018-02-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -803,7 +803,7 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/post/</loc>
-      <lastmod>2018-02-07T00:00:00+00:00</lastmod>
+      <lastmod>2018-02-13T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -814,15 +814,6 @@
     
       <loc>http://dangkhoasdc.github.io/tags/programming/</loc>
       <lastmod>2018-01-10T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
-      <loc>http://dangkhoasdc.github.io/programming/</loc>
       <priority>0</priority>
     </url>
     
