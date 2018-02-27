@@ -221,6 +221,59 @@
   
   
   <h3 class="article-title" itemprop="name">
+    <a href="http://dangkhoasdc.github.io/post/opencv_android_studio_ndk.vi/" itemprop="url">Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</a>
+  </h3>
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-02-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-02-25
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/post/opencv_android_studio_ndk.vi/#disqus_thread"></a>
+  
+
+  
+
+  
+
+</div>
+
+  <div class="article-style" itemprop="articleBody">
+    
+    Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có hỗ trợ Android được cung cấp sẵn ở OpenCV Homepage. Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì điện thoại phải cài đặt ứng dụng OpenCV Manager.
+Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên bản OpenCV với các tùy chỉnh của riêng cho từng yêu cầu, ví dụ như sử dụng đặc trưng SIFT hoặc các thuật toán có bản quyền.
+    
+  </div>
+  <p class="read-more">
+    <a href="http://dangkhoasdc.github.io/post/opencv_android_studio_ndk.vi/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+  
+    
+    
+
+<div class="article-list-item" itemscope itemprop="blogPost">
+  
+  
+  <h3 class="article-title" itemprop="name">
     <a href="http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/" itemprop="url">Setup OpenCV and Android Studio with NDK support</a>
   </h3>
   
@@ -689,59 +742,6 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
   </div>
   <p class="read-more">
     <a href="http://dangkhoasdc.github.io/post/impl_priority_queues/" class="btn btn-primary btn-outline">
-      CONTINUE READING
-    </a>
-  </p>
-</div>
-
-  
-    
-    
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/post/improved_qsort/" itemprop="url">Một số biến thể Quicksort</a>
-  </h3>
-  
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2018-01-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2018-01-04
-    </time>
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/post/improved_qsort/#disqus_thread"></a>
-  
-
-  
-
-  
-
-</div>
-
-  <div class="article-style" itemprop="articleBody">
-    
-    Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
-// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[--j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
-    
-  </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/post/improved_qsort/" class="btn btn-primary btn-outline">
       CONTINUE READING
     </a>
   </p>
