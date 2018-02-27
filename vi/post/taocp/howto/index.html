@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/taocp/howto/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/taocp/howto/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dksdc">
+  <meta property="twitter:creator" content="@dksdc">
+  
+  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/taocp/howto/">
+  <meta property="og:title" content="Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP) | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-09-25T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2017-12-20T00:00:00&#43;00:00">
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2248880369139457",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+  <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP) | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+        Last updated on
+    
+    <time datetime="2017-09-25 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2017-12-20
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/vi/post/taocp/howto/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%c4%90%e1%bb%8dc%20%22Ngh%e1%bb%87%20Thu%e1%ba%adt%20L%e1%ba%adp%20Tr%c3%acnh%22%20%28TAoCP%29&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2ftaocp%2fhowto%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2ftaocp%2fhowto%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2ftaocp%2fhowto%2f&amp;title=%c4%90%e1%bb%8dc%20%22Ngh%e1%bb%87%20Thu%e1%ba%adt%20L%e1%ba%adp%20Tr%c3%acnh%22%20%28TAoCP%29"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%c4%90%e1%bb%8dc%20%22Ngh%e1%bb%87%20Thu%e1%ba%adt%20L%e1%ba%adp%20Tr%c3%acnh%22%20%28TAoCP%29&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2ftaocp%2fhowto%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<p>Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có
+tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ
+nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua.
+Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và
+&ldquo;cuồng&rdquo; như Donald Knuth. Và mong ước của mình từ khi bước chân vào giảng đường
+đại học, theo đuổi đam mê với Khoa Học Máy Tính, rằng mình sẽ chinh phục cuốn
+&ldquo;Kinh Thánh&rdquo; này. Đó là một cuộc hành trình, và còn thử thách hơn cả tất cả
+những hành trình mình từng trải nghiệm.</p>
+
+<p>Ngày sinh nhật vào năm đầu tiên đi làm, mình đã tự thưởng cho bản thân bản <a href="https://www.amazon.com/Computer-Programming-Volumes-1-4A-Boxed/dp/0321751043/ref=sr_1_1?ie=UTF8&amp;qid=1506337149&amp;sr=8-1&amp;keywords=the+art+of+computer+programming" target="_blank">full
+set của bộ
+sách</a>
+.  Trước giờ mình chỉ dùng với mục đích tham khảo là chính. Nhưng vừa sau đợt
+sinh nhật 24 của mình, mình quyết định phải &ldquo;chinh phục&rdquo; bằng được cuốn sách.
+Mà theo plan của mình Volume 1 sẽ tốn tầm &hellip; 1-2 năm. Và có lẽ, mình sẽ mất
+chừng chục năm để chinh phục Volume 4A 😆. Chưa kể, phần 4B cực kì khó nhằn
+vì có cả Satistiability trong đó. Có lẽ riêng Volume 4 không thôi thì đã trở
+thành tượng đài mất rồi.</p>
+
+<h1 id="taocp-liệu-có-khó-đọc">TAoCP liệu có khó đọc?</h1>
+
+<p>Theo mình thì không. Nhiều người khi nhìn vào cuốn sách với hàng đống công thức
+toán và những bài tập khó nhằng cũng như code mã máy MIX khiến họ nghĩ đây là
+một cuốn sách rất khó đọc. Nhưng ngay từ đoạn giới thiệu, Don Knuth đã hướng dẫn
+cách đọc và ông đã chỉ rõ những vấn đề mà người đọc thắc mắc.</p>
+
+<ol>
+<li><p>Với MIX - mình đồng ý quan điểm của Don Knuth, nếu ông viết chương trình theo
+C/C++ hay Java hay Python, một thời gian sau chắc chắn nó sẽ có vấn đề. Kể cả
+những ngôn ngữ bậc cao càng khiến ta khó phân tích chính xác số lượng tính
+toán trong thuật toán đó. Mà theo phân tích của Knuth, đó phải là những phân
+tích chính xác. Ngôn ngữ của MIX cũng rất dễ đọc, không đến nối rắc rối như
+mọi người tưởng. Đồng thời, việc đọc code bằng mã máy khuyến khích người đọc
+&ldquo;vọc&rdquo; với thuật toán được ghi. Thêm nữa, &ldquo;ngôn ngữ bậc cao&rdquo; mà Knuth dùng
+chính là tiếng Anh.</p></li>
+
+<li><p>Trong biểu đồ sử dụng sách của mình, Knuth có nói rằng nếu các công thức toán
+&ldquo;is all Greek to you&rdquo; ta chỉ cần xem qua và nắm được kết quả cơ bản mà
+phần đó đề cập, và hầu như các kết quả đó được nói ở đầu mục hoặc cuối mục.</p></li>
+
+<li><p>Với bài tập của TAoCP, Knuth đề xuất hệ thống phân loại. Hơn hết, hệ thống
+này nhằm giúp cho người đọc, với thời lượng cho phép của mình, lựa chọn và
+làm những bài bản thân nghĩ là phù hợp. Bởi thật sự những bài với độ khó lớn
+hơn 45, dù là không dính đến toán, M hay HM đều cần rất nhiều thời gian
+nghiên cứu. Bản thân mình nghĩ nếu giải được những bài đó thì có thể hoàn
+thành được PhD của Computer Science rồi. Nhưng mình vẫn nghĩ người đọc nên
+xem qua các câu hỏi này,  <strong>vì nó chính là biên giới tri thức trong khoa học
+máy tính.</strong></p></li>
+
+<li><p>Knuth nêu rõ trong cuốn sách của mình, mục đích của cuốn sách phục vụ: (1) là
+tài liệu tham khảo chính xác và chi tiết về phân tích thuật toán, (2) là một
+sách giáo khoa  <strong>tự học</strong>  dành cho những người đam mê về thuật toán cũng như Khoa
+Học Máy Tính. Nếu bạn mua TAoCP chỉ với giá trị tham khảo thì đó hoàn toàn là
+mục đích chính xác của bộ sách: mình đặc biệt thích phần tra khảo về lịch sử.
+Đúng ra, Don Knuth rất quan tâm đến lịch sử của Khoa Học Máy Tính, đó là lí
+do vì sao trong sách đề cập các thông tin lịch sử lại chi tiết đến như vậy.
+Nhưng ngoài ra, phần bài tập lẫn lời giải, mà thường chiếm đến <sup>1</sup>&frasl;<sub>3</sub> cuốn sách,
+nói lên rằng Knuth mong mỏi cuốn sách này sẽ là một tài liệu học tốt dành cho
+mọi người.</p></li>
+</ol>
+
+<p>Kế hoạch của mình rất đơn giản: Chinh phục TAoCP đồng thời giúp mọi người dễ
+dàng tiếp cận với tài liệu quý giá này. Quá nhiều bạn đọc dường như sợ tiếp cận
+cuốn sách bởi những &ldquo;myth&rdquo; vừa nêu, đồng thời, chinh phục TAoCP là một hành
+trình thực sự thú vị. Mình đã học được rất nhiều điều thông qua cuốn sách. Những
+ngày đầu đại học khi lần đầu cầm trong tay Volume 1, mình mới thực sự hiểu
+&ldquo;computer science&rdquo; là một khoa học đầy hấp dẫn, và nó cũng rất &ldquo;art&rdquo;.</p>
+
+<p>Mình đồng ý với quan điểm của Knuth, người làm về phân tích thuật toán hạnh phúc
+gấp đôi những ngành khác: họ chiêm nghiệm được những công thức toán phức tạp để
+tính toán độ phức tạp, phân tích thuật toán, đồng thời họ cảm nhận được tính
+hiệu quả của thuật toán đó trong thực tế. Ta chắc chắn không cần bận tâm đến câu
+&ldquo;học toán để làm gì&rdquo;, bởi khi tiếp cận với phân tích thuật toán, ta cảm nhận
+ngay được ích lợi của toán học, thuật toán cũng như vẻ đẹp của thuật toán khi ta
+cài đặt và sử dụng trong thực tiễn.</p>
+
+<hr />
+
+<h1 id="một-chút-về-dự-án-này">Một chút về dự án này</h1>
+
+<p>Ngoài những chi tiết ở trên, một phần khiến TAoCP khó đọc ở chỗ thông tin được
+Knuth viết tương đối cô đặc. Chính vì lẽ đó mà đôi khi có những phần tương đối
+khó hiểu đối với những bạn tìm hiểu về khoa học máy tính và chưa có nhiều kiến
+thức trước đó. Mục tiêu của project này nhằm giúp các bạn dễ tiếp cận hơn với
+sách, đồng thời giải thích các phần bài tập, bởi mình thấy Knuth viết phần
+Solutions cực kì gọn, và đôi khi cũng không biết là từ đâu lại có những đáp số
+đó. Ngoài ra, tìm hiểu về TAoCP cũng chính là tìm hiểu các thuật toán kinh điển,
+các bài toán làm trên nền tảng của Khoa Học Máy Tính cũng như đây là nguồn tài
+liệu rất quý giá để mài dũa &ldquo;algorithmic thinking&rdquo;. Một lý do nữa khiến mình có
+hứng thú để làm đó là hiện nay tuy có khá nhiều blog, repo trên Github note lại
+TAoCP nhưng chưa có ai viết đầy đủ, hoặc chi tiết.</p>
+
+<p>Loạt bài viết cùa mình yêu cầu người đọc đã đọc qua trước chương hoặc phần mình
+đề cập trong bài viết, trong các bài viết mình sẽ chú trọng đến các chi tiết
+sau:</p>
+
+<ul>
+<li>Các chi tiết tương đối khó hiểu.</li>
+<li>Phần bài tập.</li>
+<li>Các state-of-the-art hiện nay.</li>
+<li>Các thông tin lý thú liên quan đến chủ đề đó.</li>
+</ul>
+
+<p>Mình có tích hợp plugin Hypothesis giúp các bạn có thể highlight, viết note trên
+blog của mình, đồng thời phần comment để mọi người thuận tiện trao đổi với nhau
+cũng như giúp mình update các lỗi có trong bài viết.</p>
+
+<h1 id="kinh-nghiệm-cá-nhân">Kinh nghiệm cá nhân</h1>
+
+<p>Một số kinh nghiệm bản thân khi mình đọc TAoCP, thực ra đến tận bây giờ bản thân
+mình mới dành thời gian với cuốn sách, trước đây mình chủ yếu dùng tham khảo là
+chính:</p>
+
+<ul>
+<li>Luôn có giấy và bút bên cạnh để có thể:
+
+<ul>
+<li>Chạy &ldquo;chay&rdquo; các thuật toán.</li>
+<li>Làm bài tập.</li>
+<li>Hiểu công thức đang muốn nói điều gì.</li>
+</ul></li>
+<li>Có một sổ tay ghi chú. Một số chỗ Knuth viết rất cô đọng và mình nghĩ chỉ có
+cách ghi note lại mới thực sự nhớ và hiểu được.</li>
+<li>Thử implement thuật toán bằng một ngôn ngữ ưa thích. Quan điểm của mình thì
+C hoặc C++ là phù hợp nhất. C thì có thể gần với mục đích nhất,
+trong khi đó C++ sẽ tiện hơn.</li>
+</ul>
+
+<h1 id="một-chút-về-phần-preface-volume-i">Một chút về phần Preface (Volume I)</h1>
+
+<p>Tuy chỉ là phần lời nói đầu, nhưng tác giả đã đề cập đến khá nhiều câu chuyện
+hay ho mà mình có thể tóm lượt như sau:</p>
+
+<ul>
+<li>Thuở xa xưa khi Khoa học máy tính mới hình thành, có 3 ngành chính thịnh hành
+lúc bấy giờ: numerical analysis, artificial intelligent và language theory.
+Chính Knuth là người đã khai sinh ra nhánh &ldquo;analysis of algorithms&rdquo;. Trước đó
+đã có các công trình của Alan Turing, Jon von Neumann tuy nhiên đó là những
+nghiên cứu rời rạc và không có một hệ thống hoàn chỉnh.</li>
+<li>Trong phần preface, Knuth đề cập rằng những phân tích của mình &ldquo;non-numerical&rdquo;
+bởi vì nó quan tâm đến các đối tượng rời rạc nhiều hơn.
+Nếu chọn &ldquo;nonnumerical analysis&rdquo; thì lại hơi mang tính tiêu cực
+(có lẽ do tiền tố &ldquo;non&rdquo; trong đó). Trong khi đó &ldquo;programming techniques&rdquo; thì
+lại quá hẹp về 1 phần trong lĩnh vực. Đó là lí do mà ông chọn từ
+&ldquo;analysis of algorithms&rdquo;.</li>
+<li>Việc chọn mã máy MIX cũng được ông phân tích khá rõ trong phần này.
+Thực sự những lý do đó hoàn toàn thuyết phục. Mình nghĩ một ngôn ngữ gần
+nhất ông có thể dùng đó là C. Nhưng nếu như vậy ông phải định nghĩa số chỉ
+thị cho từng câu lệnh trong C, điều này mình nghĩ không đơn giản lắm.</li>
+<li>Người đồng hành với ông trong cuốn sách này là <a href="https://en.wikipedia.org/wiki/Robert_W._Floyd" target="_blank"> Robert W. Floyd </a>,
+ông chính là tác giả thuật toán &ldquo;Floyd-Warshall&rdquo;, thuật toán phát hiện
+vòng trong danh sách liên kết cũng như những đóng góp tiêu biểu của ông
+trong &ldquo;program verificaition&rdquo;.</li>
+</ul>
+
+<h1 id="ghi-chú">Ghi chú</h1>
+
+<ul>
+<li>Một bài nói của Don Knuth về mối quan tâm của ông với
+lịch sử khoa học máy tính: [<a href="https://youtu.be/gAXdDEQveKw" target="_blank">link</a>]</li>
+<li>Phỏng vấn Don Knuth. Có khá nhiều chi tiết thú vị về suốt cuộc đời làm
+nghiên cứu của ông (Ông mất chỉ 1 giờ để hoàn thành luận án
+tiến sĩ của mình). [<a href="https://youtu.be/vUJ01nRE7r0" target="_blank">link</a>].
+Mình sẽ có một bài tóm tắt về cuộc phỏng vấn đầy hấp dẫn này.</li>
+</ul>
+
+<h1 id="tài-liệu">Tài liệu</h1>
+
+<p>Một số tài liệu mình thấy là khá hay để có thể bắt đầu tìm hiểu công trình
+của Knuth. Dưới đây là danh sách các sách mình đang/ đã đọc. Không theo lối
+thông thường mà dân tình hay truyền nhau sách này hay sách kia hay mà chưa bao
+giờ đụng vô, mình chỉ review những sách mình đã tiếp xúc:</p>
+
+<ol>
+<li>Algorithms - Sedgewick: cuốn sách lập trình mình tâm đắc nhất khi cung cấp
+cả code lẫn những phân tích chi tiết.</li>
+<li>Introduction to Analysis of Algorithms - Sedgewick &amp; Flajolet: dẫn nhập trực
+tiếp vào công trình của Knuth, mình nghĩ đây là bước đệm quan trọng, cuốn sách
+này thực sự rất hay.</li>
+<li>Conrete Mathematics - Knuth: Không chỉ dần cho dân Toán, cuốn sách này đọc
+rất &ldquo;đã&rdquo; (Mình đang cố gắng đọc và làm nhiều bài tập nhất có thể)</li>
+</ol>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/taocp">taocp</a>
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/programming">programming</a>
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/algorithms">algorithms</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/vi/post/sakamoto_method/">Bài toán chuyển ngày sang thứ</a></li>
+    
+    <li><a href="/vi/post/rand/">rand() is harmful</a></li>
+    
+    <li><a href="/vi/post/install_opencv_vs/">Hướng dẫn cài đặt OpenCV trên Windows</a></li>
+    
+    <li><a href="/vi/post/intro_randalgs/">Dẫn nhập thuật toán ngẫu nhiên</a></li>
+    
+    <li><a href="/vi/post/randalgs_ex/">Các thuật toán ngẫu nhiên</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

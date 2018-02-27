@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/cvpr16-stat/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/cvpr16-stat/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dksdc">
+  <meta property="twitter:creator" content="@dksdc">
+  
+  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/cvpr16-stat/">
+  <meta property="og:title" content="Một chút thống kê về các bài báo CVPR16 | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2016-10-23T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2016-10-23T00:00:00&#43;00:00">
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2248880369139457",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+  <title>Một chút thống kê về các bài báo CVPR16 | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Một chút thống kê về các bài báo CVPR16</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2016-10-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2016-10-23
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/vi/post/cvpr16-stat/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=M%e1%bb%99t%20ch%c3%bat%20th%e1%bb%91ng%20k%c3%aa%20v%e1%bb%81%20c%c3%a1c%20b%c3%a0i%20b%c3%a1o%20CVPR16&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fcvpr16-stat%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fcvpr16-stat%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fcvpr16-stat%2f&amp;title=M%e1%bb%99t%20ch%c3%bat%20th%e1%bb%91ng%20k%c3%aa%20v%e1%bb%81%20c%c3%a1c%20b%c3%a0i%20b%c3%a1o%20CVPR16"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=M%e1%bb%99t%20ch%c3%bat%20th%e1%bb%91ng%20k%c3%aa%20v%e1%bb%81%20c%c3%a1c%20b%c3%a0i%20b%c3%a1o%20CVPR16&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fcvpr16-stat%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<p>Hôm nay tình cờ thấy cái link liệt kê <a href="http://www.cv-foundation.org/openaccess/CVPR2016.py" target="_blank">các bài được accept ở CVPR16</a>, thế là mình ngồi thống kê vài cái cho vui</p>
+
+<p>Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:</p>
+
+<ol>
+<li>Số bài báo được accept: 643 bài.</li>
+<li>Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài.</li>
+<li>Bài có chữ <em>deep</em> trong tiêu đề: 87 bài, chiếm 13.53% tổng số bài được accept.</li>
+<li>Bài có số tác giả nhiều nhất: <em>Multimodal Spontaneous Emotion Corpus for Human Behavior Analysis</em> với 13 tác giả đứng tên.</li>
+
+<li><p>Bài chỉ có 1 tác giả (một mình chống mafia):</p>
+
+<ul>
+<li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kobayashi_Structured_Feature_Similarity_CVPR_2016_paper.pdf" target="_blank">Structured Feature Similarity With Explicit Feature Map</a></li>
+<li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Qi_Hierarchically_Gated_Deep_CVPR_2016_paper.pdf" target="_blank">Hierarchically Gated Deep Networks for Semantic Segmentation</a></li>
+<li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Sekii_Robust_Real-Time_3D_CVPR_2016_paper.pdf" target="_blank">Robust, Real-Time 3D Tracking of Multiple Objects With Similar Appearances</a></li>
+<li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Semantic_Filtering_CVPR_2016_paper.pdf" target="_blank">Semantic Filtering</a></li>
+<li><a href="http://arxiv.org/abs/1603.00560" target="_blank">Learnt Quasi-Transitive Similarity for Retrieval From Large Collections of Faces</a></li>
+</ul></li>
+</ol>
+
+<p>cv-foundation còn hào phóng đính kèm trong source link download các paper, đồng thời có cả bibtex của các bài, nếu kết hợp với arxiv api thì có thể thống kê được nhiều thứ hay ho hơn nữa =))</p>
+
+<h1 id="một-số-thống-kê-về-tác-giả">Một số thống kê về tác giả.</h1>
+
+<p>Thử xem phân phối số lượng tác giả trên đầu bài của CVPR16 thế nào. Theo như kết quả, số bài ở CVPR16 trung bình có từ 2, 3 hoặc 4 tác giả đứng tên. Nhiều nhất là các bài có 3 tác giả (186 bài). Ngoại trừ gã outlier 13 tác giả thì biểu đồ đã gần giống với <em>phân phối chuẩn</em> rồi.</p>
+
+<p><img src="http://i.imgur.com/gpHfOTW.png" alt="Biểu đồ phân bố số lượng tác giả trong một bài báo" /></p>
+
+<p>Có <em>1843</em> tác giả có bài trong CVPR16. Ngoài <em>Ming-Hsuan Yang</em> bá đạo ở trên, trong danh sách tác giả nhiều bài còn có những cái tên nổi bật như: Pascal Fua, Li Fei-Fei. Dưới đây là danh sách các tác giả có nhiều bài nhất trong CVPR16:</p>
+
+<ol>
+<li>Lei Zhang [<a href="https://scholar.google.com/citations?user=tAK5l1IAAAAJ" target="_blank">scholar</a>] [<a href="http://www4.comp.polyu.edu.hk/~cslzhang/" target="_blank">homepage</a>]: 7 bài.</li>
+<li>In So Kweon [<a href="https://scholar.google.com.sg/citations?user=XA8EOlEAAAAJ&amp;hl=en" target="_blank">scholar</a>] [<a href="http://rcv.kaist.ac.kr/v2/bbs/member_detail.php?mb_id=%20iskweon" target="_blank">homepage</a>]: 7 bài.</li>
+<li>Antonio Torralba [<a href="https://scholar.google.com/citations?user=8cxDHS4AAAAJ" target="_blank">scholar</a>] [<a href="http://web.mit.edu/torralba/www/" target="_blank">homepage</a>]: 7 bài.</li>
+<li>Jiashi Feng [<a href="https://scholar.google.com.sg/citations?hl=en&amp;user=Q8iay0gAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank">scholar</a>] [<a href="https://sites.google.com/site/jshfeng/" target="_blank">homepage</a>]: 7 bài.</li>
+<li>Wangmeng Zuo [<a href="https://scholar.google.com/citations?user=rUOpCEYAAAAJ" target="_blank">scholar</a>] [<a href="http://homepage.hit.edu.cn/pages/wangmengzuo" target="_blank">homepage</a>]: 7 bài.</li>
+<li>Anton van den Hengel [<a href="https://scholar.google.com.sg/citations?user=nMGZ2ZQAAAAJ&amp;hl=en" target="_blank">scholar</a>] [<a href="https://cs.adelaide.edu.au/~hengel/" target="_blank">homepage</a>]: 8 bài.</li>
+<li>Bernt Schiele [<a href="https://scholar.google.com/citations?user=z76PBfYAAAAJ" target="_blank">scholar</a>] [<a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/people/bernt-schiele/" target="_blank">homepage</a>]: 8 bài.</li>
+<li>Luc Van Gool [<a href="https://scholar.google.com.hk/citations?user=TwMib_QAAAAJ&amp;hl=zh-CN" target="_blank">scholar</a>] [<a href="http://www.vision.ee.ethz.ch/~vangool/" target="_blank">homepage</a>]: 8 bài.</li>
+<li>Xiaogang Wang [<a href="https://scholar.google.com.sg/citations?user=-B5JgjsAAAAJ&amp;hl=en" target="_blank">scholar</a>] [<a href="http://www.ee.cuhk.edu.hk/~xgwang/" target="_blank">homepage</a>]: 9 bài.</li>
+<li>Ming-Hsuan Yang [<a href="https://scholar.google.com/citations?user=p9-ohHsAAAAJ" target="_blank">scholar</a>] [<a href="http://faculty.ucmerced.edu/mhyang/" target="_blank">homepage</a>]: 11 bài.</li>
+</ol>
+
+<p>Một điểm mình quan tâm nữa là mối quan hệ giữa các tác giả với nhau <del>đó là lí do mình viết: một mình chống mafia ở đoạn trên</del>. Ở đây mình dùng <code>graph-tool</code> để minh hoạ data đã thu thập được. Cách xây dựng đồ thị khá đơn giản: những tác giả đứng chung bài với nhau sẽ có cạnh nối với nhau.</p>
+
+<p>Xưa kia nhà toán học Michael Gurevich đã từng thử điều này với các nhà toán học, và hiện nay bài toán <a href="https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/" target="_blank">Six degree of Seperation</a> đã nổi tiếng và quan tâm nhiều.</p>
+
+<p><img src="http://i.imgur.com/QIiCNur.png" alt="Vision Gang" /></p>
+
+<p>Nhìn hình ta có thể hình dung có 1 hội mafia cực lớn dây mơ rễ má với nhau. Và các team lẻ lẻ hơn thì bị nằm ngoài rìa, có 1 số team hoạt động khá độc lập (nằm giữa vùng trung tâm và vành đai). Đồng thời những chấm đỏ mỏng manh nằm ngoài vùng vành đai chính là các thánh một mình chống mafia, xin hoan nghênh các anh.</p>
+
+<h1 id="chủ-đề-của-cvpr16">Chủ đề của <code>CVPR16</code></h1>
+
+<p><img src="http://i.imgur.com/9AxhgVP.png" alt="Main topics" /></p>
+
+<p>Ban đầu mình dự định sử dụng <code>arvix-api</code> để lấy keywords từ Bibtex tuy nhiên vì có cơ số bài hiện chưa có trên Arvix (mình sample 5 bài và cả 5 bài đều không được tìm thấy trên đó) nên không có cách để lấy chính xác keywords.</p>
+
+<p>Có 2 cách tiếp cận:</p>
+
+<ol>
+<li>Dựa vào tiêu đề. Cách này sẽ nhanh hơn vì dữ liệu này đã có sẵn.</li>
+<li>Dựa vào nội dung. Cách làm tương đối đơn giản nhưng hơi mất thời gian: (1) download đống paper từ <code>cv-foundation</code>, (2) dùng <code>pdf2text</code> lưu text, (3) dùng 1 số thuật toán clustering để phân loại.</li>
+</ol>
+
+<p>Cách thứ (2) tương đối dài hơi nên mình ưu tiên dùng cách thứ (1) trước. Một thuật toán để rút trích keywords khá nổi tiếng là <a href="https://github.com/aneesha/RAKE/blob/master/rake.py" target="_blank">RAKE</a>. Dưới đây là kết quả.</p>
+
+<pre><code>    deep convolutional neural networks
+    convolutional neural networks
+    recurrent neural networks
+    deep neural networks
+    salient object detection
+    convolutional networks
+    sparse coding
+    object detection
+    image segmentation
+    action recognition
+    semantic segmentation
+    optical flow
+    shot learning
+    unsupervised learning
+    activity recognition
+    set registration
+    person re
+    image
+    pose
+    detection
+    video
+    learning
+
+</code></pre>
+
+<h1 id="future-works">Future Works</h1>
+
+<p>Hiện giờ minh đang tìm cách download toàn bộ pdf của bài năm nay để làm clustering và phân tích nội dung, đồng thời làm 1 tool search nho nhỏ. Ngoài ra hiện giờ mình đang tìm kiếm danh sách các bài các năm trước để có thêm 1 số phân tích hay ho hơn nữa (về trending, các bài được cite nhiều,).</p>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/cvpr">cvpr</a>
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/research">research</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/vi/post/nafosted_travel_fund/">Quy Trình Xin Tài Trợ NAFOSTED</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

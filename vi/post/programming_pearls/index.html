@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  <link rel="alternate" hreflang="en" href="http://dangkhoasdc.github.io/post/programming_pearls/">
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/programming_pearls/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/programming_pearls/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dksdc">
+  <meta property="twitter:creator" content="@dksdc">
+  
+  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/programming_pearls/">
+  <meta property="og:title" content="Programming Pearls | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-02-07T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-02-07T00:00:00&#43;00:00">
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2248880369139457",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+  <title>Programming Pearls | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span>Tiếng Việt</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/post/programming_pearls/">
+                <span>English</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Programming Pearls</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-02-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-02-07
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/vi/post/programming_pearls/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Programming%20Pearls&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fprogramming_pearls%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fprogramming_pearls%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fprogramming_pearls%2f&amp;title=Programming%20Pearls"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Programming%20Pearls&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fprogramming_pearls%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        <p>Programing Pearls - Jon Bentley</p>
+
+<p>Xuất sắc.</p>
+
+<p>Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thùng của Amazon ra
+và lượn 1, 2 trang để thốt lên 1 từ &ldquo;xuất sắc&rdquo; cả. Điểm qua một số sách về
+&ldquo;Algorithms&rdquo; mà tôi từng đọc và tìm hiểu:</p>
+
+<ul>
+<li>CLRS: về mặt lý thuyết, đây thực sự là &ldquo;introduction&rdquo; nhưng đầy đủ và chi
+tiết. Tôi không quá ấn tượng bởi cách viết và mã giả.</li>
+<li>Algorithms, Sedgewick: một trong những cuốn tôi rất thích, code sử dụng Java
+và hoàn toàn chạy được, cách chứng minh về correctness và complexity dễ tiếp cận, đồng thời minh họa
+trong sách phải nói là ấn tượng. ĐIều làm tôi không hài lòng là giấy quá
+mỏng, cách viết hơi đơn điệu và tuy có sử dụng OOP nhưng không đề cập nhiều.</li>
+<li>TAoCP: hoàn toàn hàn lâm.</li>
+<li>Elements of Interview Programming: một cuốn thuần túy để luyện đi interviews.</li>
+</ul>
+
+<p>Programming Pearls hoàn toàn ngược lại, đây là cái nhìn của 1 engineer về sử
+dụng thuật toán trong công việc và giải quyết các vấn đề. Hay đúng hơn là cuộc
+hành trình của Jon Bentley. Dĩ nhiên Jon Bentley quá nổi tiếng là tác giả
+kd-tree, nhưng trước đây ông còn là &ldquo;thánh review code&rdquo; khi có khá nhiều người
+gửi code để ông đánh giá [có cả Knuth khi ông đi quảng cáo Literate
+Programming].</p>
+
+<p>Sách tuy mỏng nhưng chứa đựng đầy &ldquo;ngọc&rdquo;, cách viết thú vị và hài hước, xen lẫn
+đó là cách tiếp cận đầy khoa học, tham khảo đầy đủ và toàn diện cùng những câu
+đố khá hay đáng làm tài liệu luyện programming cũng như cách nhìn nhận của 1
+người làm industry vào các giải thuật và cách sử dụng hiệu quả, đặc biệt là
+cách mà tác giả tiếp cận vấn đề, sử dụng nhuần nhuyễn các kỹ thuật để giải
+quyết.</p>
+
+<p>Về mặt &ldquo;học thuật&rdquo;, tôi nghĩ khả năng của Bentley là không bàn, nhưng đứng về
+mặt &ldquo;engineer&rdquo; thì cuốn sách này thế nào? Xin trích dẫn từ lời của Steve
+McConnell [tác giả Code Complete]:</p>
+
+<p>&rdquo;&hellip; Programming Pearls was one of the most influential books I read early in
+my career, and many of the insights I first encountered in that book stayed
+with me long after I read it. &hellip;&rdquo;</p>
+
+<p>p.s: Ít có cuốn sách lập trình nào mà tác giả tự tin nói &ldquo;tao đọc hết 3 volume
+của TAoCP và biết khi gặp vấn đề nào thì nên tra phần nào&rdquo;, và cũng ít có cuốn
+nào vừa tham khảo CLRS, Algorithms in C, TAoCP, Ullman&rsquo;s books vừa tham khảo
+Code Complete, The Mythical Man-Month&hellip;</p>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/books">books</a>
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/algorithms">algorithms</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/vi/post/selectedpapers_cs/">Sách: Selected Papers on Computer Science</a></li>
+    
+    <li><a href="/vi/post/impl_priority_queues/">Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</a></li>
+    
+    <li><a href="/vi/post/improved_qsort/">Một số biến thể Quicksort</a></li>
+    
+    <li><a href="/vi/post/fibsearch/">Giải thuật tìm kiếm Fibonacci</a></li>
+    
+    <li><a href="/vi/post/taocp/howto/">Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

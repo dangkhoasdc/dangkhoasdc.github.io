@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/refactoring-review/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/refactoring-review/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dksdc">
+  <meta property="twitter:creator" content="@dksdc">
+  
+  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/refactoring-review/">
+  <meta property="og:title" content="Review Refactoring | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2016-10-23T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2016-10-23T00:00:00&#43;00:00">
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2248880369139457",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+  <title>Review Refactoring | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Review Refactoring</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2016-10-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2016-10-23
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/vi/post/refactoring-review/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Review%20Refactoring&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frefactoring-review%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frefactoring-review%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frefactoring-review%2f&amp;title=Review%20Refactoring"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Review%20Refactoring&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frefactoring-review%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<p>Mình quyết định đọc cuốn <a href="https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672" target="_blank">Refactoring: Improving the Design of Existing Code</a> sau khi đọc xong cuốn <em>Design Pattern</em>.</p>
+
+<h1 id="sơ-lược">Sơ lược</h1>
+
+<p><img src="http://d.gr-assets.com/books/1386925632l/44936.jpg" alt="Refactoring: Improving the Design of Existing Code" /></p>
+
+<p>Mặc dù đã được nghe đến khái niệm này rất nhiều lần, tuy nhiên sau khi đọc xong cuốn sách, đối chiếu với những trải nghiệm của bản thân về các project trước đây. Mình hiểu:</p>
+
+<blockquote>
+<p>Refactor là quá trình thao tác trên mã nguồn có sẵn nhằm gia tăng chất lượng mã nguồn nhưng vẫn giữ lại được các ràng buộc của hệ thống.</p>
+</blockquote>
+
+<p>Như vậy, <em>refactor</em> không phải quá trình tạo mới hoàn toàn một dự án hay một hệ thống nào cả, mà nhằm làm tăng <em>chất lượng</em> của mã nguồn đó. <em>Chất lượng</em> ở đây được đánh giá trên các độ đo khác nhau:</p>
+
+<ol>
+<li>Khả năng mở rộng của mã nguồn.</li>
+<li>Khả năng dễ đọc và tìm lỗi.</li>
+<li>Khả năng thích ứng với lỗi (tính robustness)</li>
+<li>Hiệu suất của hệ thống.</li>
+</ol>
+
+<p>Ngoài việc làm gia tăng chất lượng của hệ thống, bên cạnh đó <em>refactor</em> phải đảm bảo giữ lại được các ràng buộc mà trước đó hệ thống đã có. Ví dụ như:</p>
+
+<ol>
+<li>Những APIs đã được phát hành của hệ thống, ta không nên <em>refactor</em> và thay đổi luôn các APIs đó.</li>
+<li>Những <em>class</em>, <em>functions</em> liên hệ trực tiếp đến các modules khác trong hệ thống lớn hơn.</li>
+</ol>
+
+<h1 id="những-kĩ-thuật-trong-refactor">Những kĩ thuật trong refactor</h1>
+
+<p>Một phần quan trọng của cuốn sách không chỉ nói về định nghĩa của <em>refactor</em> mà còn đề cập đến lí do vì sao cần <em>refactor</em>, khi nào nên <em>refactor</em>, những tác động nào ảnh hưởng đến quá trình <em>refactor</em>, và đặc biệt là <em>xây dựng bộ test cho hệ thống</em>. Trước giờ mình chủ yếu làm các hệ thống trong academic, việc xây dựng các bộ test không được chú trọng quá nhiều. Nhưng thực sự đọc xong cuốn sách mình nghĩ mình nên tập các viết các bộ test trước khi viết một function nào đó. Việc <em>tự tay</em> viết các bộ test mang lại khá nhiều thuận lợi:</p>
+
+<ol>
+<li>Giúp người thiết kế biết được giao diện tương tác API mà function mình đảm nhiệm.</li>
+<li>Hiểu được các ràng buộc về Input/Output và tham số.</li>
+<li>Thuận lợi cho việc refactor, các bộ test sẽ giúp ta kiểm tra xem việc vừa refactor xong có ảnh hưởng gì đến hệ thống hiện có không.</li>
+<li>Hình thành được outline của hệ thống trong quá trình xây dựng bộ test.</li>
+</ol>
+
+<p>Cuốn sách được bố cục phần nào giống với bên <em>Design Pattern</em>, cung cấp một lượng lớn <em>từ vựng</em> về các kĩ thuật refactor. Với mỗi kĩ thuật được đề cập, tác giả nêu lên: động lực sử dụng, ví dụ minh họa, các lưu ý. Các kĩ thuật refactor được chia thành các category</p>
+
+<ul>
+<li>Thao tác trên các method trong 1 class.</li>
+<li>Thao tác trên các method giữa các class với nhau.</li>
+<li>Tổ chức dữ liệu.</li>
+<li>Đơn giản hóa các câu lệnh điều kiện.</li>
+<li>Đơn giản hóa các hàm.</li>
+<li>Tái tổ chức hệ thống class.</li>
+</ul>
+
+<p>Cuối cùng là những thao tác refactor ảnh hưởng đến các ràng buộc của hệ thống, đây là những thao tác sẽ ảnh hưởng lên đến việc tương tác giữa các hệ thống với nhau nên cần suy nghĩ cẩn trọng trước khi thực hiện.</p>
+
+<p>Phần cuối cùng là các công cụ refactor, mình nghĩ phần nào không cần nói nhiều vì trên các IDE nổi tiếng như <em>Visual Studio</em>, <em>Eclipse</em>, <em>IntelIJ</em> thì các kĩ thuật refactor đã trở thành những tính năng khá quen thuộc. Việc refactor tự động giúp tránh xảy ra lỗi và giảm thời gian cho công việc này khá nhiều.</p>
+
+<blockquote>
+<p>Nếu có hành động nào đó lặp đi lặp lại trên 5 lần. Tốt hơn là ta nên làm cách khiến nó thành tự động.</p>
+</blockquote>
+
+<h1 id="bình-luận">Bình luận</h1>
+
+<p>Đây là cuốn sách cuối cùng mình đọc liên quan đến công nghệ phần mềm trước khi đến với phần thử thách với mình nhiều hơn: Machine Learning và Computer Vision.</p>
+
+<p>Cuốn sách đặc biệt phù hợp với các bạn sinh viên năm 3, 4 sau khi đã học về lập trình hướng đối tượng cũng như đã trải qua một thời gian tiếp xúc với những mã nguồn, dự án có sẵn. Thời gian đọc có lẽ mất từ 5-7 ngày.</p>
+
+<p>Điều thú vị khi mình đọc đó là cảm giác:</p>
+
+<blockquote>
+<p>wtf?? đổi tên biến cũng được gọi là refactor wtf?? đổi tên hàm cũng vậy …</p>
+</blockquote>
+
+<p>Mình nghiệm ra, refactor không phải là cái gì đó quá cao siêu, có lẽ bạn nào lập trình cũng đã từng thực hiện một lần. Nhưng refactor như thế nào hiệu quả, tốn ít thời gian và công sức và hơn hết là biết cách refactor là một chuyện khác.</p>
+
+<p><em>Refactoring</em> là cuốn sách sẽ giải đáp những điều đó.</p>
+
+<h1 id="future-works">Future Works</h1>
+
+<p>Mình đã đọc xong cuốn <em>Design Patterns</em> nhưng chưa biết review thế nào. Có lẽ cần nhiều thời gian hơn để có thể viết về các mẫu. Nhưng có lẽ mình không tập trung nhiều thời gian.</p>
+
+<p>Kế hoạch sắp đến: <em>Pattern Recognition and Machine Learning</em>.</p>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/review">review</a>
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/software-engineer">software engineer</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/vi/post/startwars-vii-review/">Cảm nhận Star Wars VII: The Force Awakens</a></li>
+    
+    <li><a href="/vi/post/startwars-series-review/">Review Start Wars series</a></li>
+    
+    <li><a href="/vi/post/diablo3-review/">Diablo III</a></li>
+    
+    <li><a href="/vi/post/review_cpp_proglang_book/">Review: The C&#43;&#43; Programming Languages</a></li>
+    
+    <li><a href="/vi/post/review_algs_princeton_coursera/">Review Algorithms (Princeton) - Coursera</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

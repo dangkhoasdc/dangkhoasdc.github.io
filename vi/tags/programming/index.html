@@ -244,8 +244,105 @@ Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên b�
     </div>
   </div>
   
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/impl_priority_queues/">Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</a></h2>
+    <div class="article-style">
+      
+      Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
+ CTDL quan trọng cho các thuật toán khác như Dijkstra&rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/improved_qsort/">Một số biến thể Quicksort</a></h2>
+    <div class="article-style">
+      
+      Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[&ndash;j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/total_order/">Cài đặt quan hệ thứ tự trong C&#43;&#43;</a></h2>
+    <div class="article-style">
+      
+      Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
+ Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/fibsearch/">Giải thuật tìm kiếm Fibonacci</a></h2>
+    <div class="article-style">
+      
+      Mình không tìm được từ nào tiếng Việt có thể dịch được từ &ldquo;Fibonaccian Searching&rdquo;, nếu &ldquo;binary searching&rdquo; có thể dịch là &ldquo;tìm kiếm nhị phân&rdquo;, thì &ldquo;Fibonaccian Searching&rdquo; không có ngữ nghĩa gì nhiều.
+Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.
+Lịch sử Thuật toán được để xuất bởi Devid E.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/taocp/howto/">Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</a></h2>
+    <div class="article-style">
+      
+      Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &ldquo;cuồng&rdquo; như Donald Knuth.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/sakamoto_method/">Bài toán chuyển ngày sang thứ</a></h2>
+    <div class="article-style">
+      
+      Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/rand/">rand() is harmful</a></h2>
+    <div class="article-style">
+      
+      rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng .
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/install_opencv_vs/">Hướng dẫn cài đặt OpenCV trên Windows</a></h2>
+    <div class="article-style">
+      
+      Biên dịch thư viện OpenCV Điểm thuận lợi của việc tự cài đặt và biên dịch thư viện có thể kể đến như sau:
+ Hỗ trợ IDE mới nhất, như trong bản OpenCV 3.0 (22/11/2015) thì chưa có bản biên dịch sẵn dành cho VS 2015. Customize được các thư viện khác liên quan như Kinect, OpenCL, Python…  Link Download thư viện OpenCV cho HĐH Windows
+Bước 1: Giải nén thư viện vào thư mục được định sẵn.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/review_cpp_proglang_book/">Review: The C&#43;&#43; Programming Languages</a></h2>
+    <div class="article-style">
+      
+      Hồi năm 1 đại học, mình rất thích cuốn C Programming Language của K&amp;C, dù cuốn sách khá là ít trang nhưng đầy tinh tuý và rất hấp dẫn. Đến tận bây giờ, khi đã tốt nghiệp ra trường, tức đã 4 năm được biết cuốn sách, đôi lúc mình vẫn muốn đọc lại. Một thời gian sau mình có đọc thêm một số sách có tựa: The XXX Programming Language nhưng chỉ thấy C++ là hay.
+      
+    </div>
+  </div>
+  
 
   
+<nav>
+  <ul class="pager">
+    
+    
+    <li><a href="/vi/tags/programming/page/2/">&gt;</a></li>
+    
+  </ul>
+</nav>
+
 
 
 </div>

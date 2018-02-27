@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/randalgs_ex/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/randalgs_ex/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dksdc">
+  <meta property="twitter:creator" content="@dksdc">
+  
+  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/randalgs_ex/">
+  <meta property="og:title" content="Các thuật toán ngẫu nhiên | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2016-10-23T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2016-10-23T00:00:00&#43;00:00">
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2248880369139457",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+  <title>Các thuật toán ngẫu nhiên | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Các thuật toán ngẫu nhiên</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2016-10-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2016-10-23
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/vi/post/randalgs_ex/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=C%c3%a1c%20thu%e1%ba%adt%20to%c3%a1n%20ng%e1%ba%abu%20nhi%c3%aan&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frandalgs_ex%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frandalgs_ex%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frandalgs_ex%2f&amp;title=C%c3%a1c%20thu%e1%ba%adt%20to%c3%a1n%20ng%e1%ba%abu%20nhi%c3%aan"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=C%c3%a1c%20thu%e1%ba%adt%20to%c3%a1n%20ng%e1%ba%abu%20nhi%c3%aan&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frandalgs_ex%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<h1 id="các-ví-dụ-về-thuật-toán-ngẫu-nhiên">Các ví dụ về thuật toán ngẫu nhiên</h1>
+
+<p>Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách <a href="https://www.amazon.com/Randomized-Algorithms-Rajeev-Motwani/dp/0521474655" target="_blank">Randomized Algorithms</a></p>
+
+<h1 id="randomized-quicksort">Randomized Quicksort</h1>
+
+<p>Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên. Thử tưởng tượng ta cho quicksort thông thường chạy 10 lần với dữ liệu đã sắp xếp với randomized-quicksort cũng với cấu hình như vậy, ta sẽ thấy sự khác biệt lớn.</p>
+
+<h2 id="thuật-toán">Thuật toán</h2>
+
+<h2 id="chứng-minh">Chứng minh</h2>
+
+<p>Cho dữ liệu đầu vào gồm $n$ phần tử khác nhau. Gọi $S_i, 1 \leq i \leq n$ là phần tử <em>rank i</em> (phần tử nhỏ thứ <em>i</em>) trong mảng, đồng thời ta có $X_{ij}$ biến ngẫu nhiên bằng 1 nếu xuất hiện phép so sánh của 2 phần tử $S_i$ và $S_j$ trong quá trình thực thi, bằng không nếu không xuất hiện phép so sánh nào.</p>
+
+<p>Như vậy, độ phức tạp của <code>randomized-quicksort</code> được tính thông qua quá trình sắp xếp mảng theo pivot mà chi phí chính nằm ở phép so sánh các phần tử, tổng chi phí chính là</p>
+
+<p>$$ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} $$</p>
+
+<p>Tuy nhiên, điều ta quan tâm hơn ở đây là <em>kì vọng</em> chi phí trong các lần thực thi:</p>
+
+<p>$$E \left [ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&gt;i} E[X_{ij}]$$</p>
+
+<p>Công thức trên được xây dựng dựa vào một tính chất của kì vọng: <a href="https://brilliant.org/wiki/linearity-of-expectation/" target="_blank">tính tuyến tính của kì vọng</a>. Như vậy kì vọng của tổng các chi phí so sánh chính bằng tổng của từng kì vọng của biến ngẫu nhiên $ X_{ij}$. Gọi $p_{ij}$ là xác suất để $X_{ij}=1$. Ta có:</p>
+
+<p>$$ E[X_{ij}] = p_{ij} * 1 + (1-p) * 0 = p_{ij} $$
+$$ E \left [ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&gt;i} p_{ij} $$</p>
+
+<p>Bài toán được qui về việc tính xác suất khi nào phép so sánh giữa hai phần tử $S_i$ và $S_j$ xuất hiện.</p>
+
+<p>Nếu ta xem quá trình thực thi của <code>randomized-quicksort</code> là quá trình xây dựng cây nhị phân: với mỗi node chính là 1 pivot tại thời điểm gọi hàm <code>partition</code>, kết quả hàm <code>partition</code> ta có được 2 cây con bên trái và phải của node pivot dùng để so sánh. Nếu $S_i$ và $S_j$ nằm ở hai nhánh con trái-phải thì phép so sánh giữa hai phần tử này chắc chắn không xảy ra. Như vậy $S_i$ và $S_j$ có quan hệ cha con - một trong hai phần tử phải thuộc node cấp lớn hơn của node kia. Một giả thuyết khác cần xem xét đó là xác suất các số được chọn làm pivot phải bằng nhau (uniform distribution) - có được giả thuyết này ta mới tính được độ phức tạp trong thời gian trung bình được.</p>
+
+<p>Như vậy, để $X_{ij}=1$ khi và chỉ khi một trong hay vị trí $S_i$ hoặc $S_j$ được chọn, và đó là $p_{ij} = \frac{2}{j - i + 1} $ (Xác suất này được tính khi loại đi xác suất chọn phải những pivot nằm bên trái của $S_i$ hoặc nằm bên phải của $S_j$)</p>
+
+<p>Như vậy ta có:</p>
+
+<p>$$E \left [ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} \right ] = \sum_{i=1}^n \sum_{j&gt;i} \frac{2}{j - i + 1}$$</p>
+
+<p>Đặt $k = j - i + 1$, ta được:</p>
+
+<p>$$\sum_{i=1}^n \sum_{j&gt;i} p_{ij} \leq \sum_{i=1}^n \sum_{k=1}^{n-i+1} \frac{1}{k}$$</p>
+
+<p>$$\leq 2 \sum_{i=1}^n \sum_{k=1}^{n} \frac{1}{k}$$</p>
+
+<p>$$= 2n \sum_{k=1}^{n} \frac{1}{k}$$</p>
+
+<p>$\sum_{k=1}^{n} \frac{1}{k}$ chính là <a href="https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Rate_of_divergence" target="_blank">chuỗi harmony</a> và tổng này sẽ hội tụ về xấp xỉ của $ln(n)$. Và như vậy</p>
+
+<p>$$E \left [ \sum_{i=1}^n \sum_{j&gt;i} X_{ij} \right ] \leq 2n\log{n}$$</p>
+
+<h1 id="random-mincut">Random Mincut</h1>
+
+<h2 id="ví-dụ">Ví dụ</h2>
+
+<p>Giả sử ta có dữ liệu facebook của đám bạn cấp 3 và đang tò mò xem trong chục năm qua, những đứa bạn đó có lập thành nhóm chơi thân nào không. Dữ liệu đầu vào là danh sách các bạn trong lớp cấp 3 và mỗi quan hệ từng người với nhau (quan hệ bạn cấp 3, bạn đại học, đồng nghiệp, quan hệ nam nữ, vợ chồng).</p>
+
+<p>Giả sử ta tạo một đồ thị với đỉnh là một người trong lớp, <code>a</code> có thể nối với <code>b</code> thông qua các cạnh nối:</p>
+
+<ul>
+<li>Bạn cấp 3 (cái này chắc chắn)</li>
+<li>Bạn đại học</li>
+<li>Đồng nghiệp</li>
+</ul>
+
+<p>Việc tìm ra nhóm bạn <em>thân</em> - tức gắng bó với nhau sau thời gian cấp 3 chính là việc tìm cách tách đồ thị lớn này thành những đồ thị con.</p>
+
+<p>Những bài toán <em>chia cắt</em> đồ thị gọi là <em>graph cut</em>, nếu trong bài toán yêu cầu tìm ra đoạn cắt nào có chi phí thấp nhất: cắt ít số cạnh nhất - thì đó chính là bài toán tìm <em>mincut</em>.</p>
+
+<p>Trong ví dụ này ta xét đồ thị là một <a href="http://mathworld.wolfram.com/Multigraph.html" target="_blank">multigraph</a> - tức đồ thị có thể có nhiều cạnh cùng nối chung hai điểm. Một số định nghĩa cho phép <em>multigraph</em> là đồ thị có các cạnh lặp (self-loop). Để thuận tiện cho việc chứng minh và minh hoạ, các đồ thị được đề cập trong bài là các đồ thị vô hướng.</p>
+
+<h2 id="karger-mincut-https-en-wikipedia-org-wiki-karger-27s-algorithm"><a href="https://en.wikipedia.org/wiki/Karger%27s_algorithm" target="_blank">Karger Mincut</a></h2>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Single_run_of_Karger%E2%80%99s_Mincut_algorithm.svg" alt="Minh hoạ thuật toán Karger" /></p>
+
+<p>Một quá trình quan trọng trong thuật toán Karger là <em>Edge Contraction</em> - gộp cạnh. Cho một cạnh $ e = {u, v}$, sau phép gộp cạnh ta sẽ có được một <em>đỉnh</em> mới là $uv$ trong đó tất cả các cạnh nối từ $u$ đến $v$ hay ngược lại đều bị loại bỏ, đồng thời các cạnh lặp (self-loop) cũng bị xoá bỏ.</p>
+
+<p>Với các cạnh khác $ e’ = {u, w}$ hay $e’={v, w}$ đều trở thành $e’={uv,w}$.</p>
+
+<p>Một cách đơn giản: phép gộp cạnh sẽ nhập 2 đỉnh lại với nhau - xoá toàn bộ các cạnh nối 2 cạnh cũ và giữ lại những cạnh nối 2 đỉnh đó với các đỉnh khác trong đồ thị.</p>
+
+<p>Thuật toán được mô tả như sau:</p>
+
+<pre><code>1. Chọn ngẫu nhiên (theo phân phối đều) một cạnh trong đồ thị.
+2. Thực hiện phép gộp cạnh vừa chọn.
+3. Lặp lại bước (1) cho đến khi số đỉnh trong đồ thị còn lại 2.
+4. Output: min-cut là các cạnh còn lại trong đồ thị
+</code></pre>
+
+<h2 id="tính-đúng-đắng-của-giải-thuật">Tính đúng đắng của giải thuật</h2>
+
+<p>Để có thể tính được độ phức tạp trong thời gian trung bình, ta cần quay lại một chút về các tính chất của đồ thị. Cho đa đồ thị (multigraph) $G=(V, E)$ gồm các đỉnh $V$ và các cạnh $E$. Gọi $d(v)$ là bậc của đỉnh $v$ là tổng số các cạnh liên thuộc với $v$. Ta có tính chất sau:</p>
+
+<p>$$\sum_{v \in V} d(v) = 2 | E |$$</p>
+
+<p>Gọi $C$ là lát cắt có kích thước nhỏ nhất $k$ - tức số lượng các cạnh trong lát cắt đó là $k$. Do đó, bậc tối thiểu của mỗi cạnh trong đồ thị này là $k$. Bởi nếu tồn tại một đỉnh có bậc nhỏ hơn $k$ thì lắt cắt $k$ không phải là lát cắt nhỏ nhất.</p>
+
+<p>Như vậy ta có:</p>
+
+<p>$$nk \leq \sum_{v \in V} d(v) = 2 | E |$$
+$$|E| \geq \frac{nk}{2}$$</p>
+
+<p>Ta thấy xác suất để thuật toán gộp cạnh chọn đúng ngay 1 cạnh trong C chính là</p>
+
+<p>$$\frac{k}{|E|}$$</p>
+
+<p>kết hợp với bất đẳng thức phía trên, ta được:</p>
+
+<p>$$\frac{k}{|E|} \leq \frac{2k}{nk} = \frac{2}{n}$$</p>
+
+<p>Như vậy, xác suất để thuật toán gộp cạnh không chọn phải các cạnh của $C$ là $p_n $.</p>
+
+<p>Ta có $p_n \leq (1-\frac{2}{n})p_{n-1} $ .</p>
+
+<p>Đồng thời ta cũng có $ p_2 = 1 $ lí do là bởi Karger chỉ chọn cạnh để gộp khi $ \vert V \vert &gt; 2 $</p>
+
+<p>Nên khi $ n=2 $ thì biến cố chọn phải cạnh để gộp nằm trong $ C $ chắc chắn không xảy ra.</p>
+
+<p>Xác suất $p_n$ có cận như sau:</p>
+
+<p>$$p_n \geq \prod_{i=0}^{n-3} \left (1 - \frac{2}{n-i} \right ) = \frac{2}{n(n-1)}$$</p>
+
+<p>Để dễ tưởng tượng hơn, ta có thể phân tích một chút về trường hợp Karger không tìm ra được mincut, rõ ràng xác suất đó chính là $ 1 - \frac{2}{n(n-1)}$, để tăng độ chính xác, ta có thể cho Karger chạy $k$ lần. Lúc này, xác suất Karger không tìm ra được mincut là: $ \left (1 - \frac{2}{n(n-1)} \right )^k$. Có một bất đẳng thức thú vị ở đây:</p>
+
+<p>$$\frac{1}{4} \leq \left (1 - \frac{1}{x} \right )^ x \leq \frac{1}{e}$$</p>
+
+<p>Giả sử $k = \frac{n(n-1)}{2}\ln n$ ta có được kết quả khá đẹp như sau:</p>
+
+<p>$$\left (1 - \frac{2}{n(n-1)} \right )^{\frac{n(n-1)}{2}\ln n} \leq \left (\frac{1}{e} \right )^{\frac{n(n-1)}{2}\ln n} = \left (\frac{1}{e} \right ) ^{\ln n} = \frac{1}{n}$$</p>
+
+<h1 id="binary-planar-partitions">Binary Planar Partitions</h1>
+
+<h2 id="giới-thiệu">Giới thiệu</h2>
+
+<p><img src="http://i.imgur.com/cGwRyxq.png" alt="Một ví dụ về cây BSP" /></p>
+
+<p>Binary Planar Partitions (trong trường hợp tổng quát là <em>Binary Space Partitions</em>) là một phương pháp phổ biến được sử dụng nhằm chia cắt không gian thành các tập lồi (convex set) chứa các siêu phẳng - hyperplane. Sự chia cắt này tạo nên một cấu trúc dữ liệu được gọi là cây BSP.</p>
+
+<p>BSP có nhiều ứng dụng, đặc biệt là trong các bài toán về đồ hoạ. Điển hình như trong bài toán dựng hình (xác định đối tượng nào được dựng trong khung hình từ góc một góc nhìn nào đó), trong hệ thống CAD, phát hiện va chạm trong robotics, cũng như trong các bài toán chứa các cấu trúc không gian phức tạp.</p>
+
+<p>Trong trường hợp tổng quát, cây BSP, từ mỗi node của mình sẽ chia không gian thành hai nửa siêu phẳng, từ mỗi nửa siêu phẳng đó sẽ tiếp tục được chia cắt thành các nửa siêu phẳng nhỏ hơn sao cho những node lá cuối cùng sẽ chứa 1 đối tượng mà thuộc không gian. Có thể thấy cây BSP là trường hợp tổng quát của cây <a href="https://en.wikipedia.org/wiki/K-d_tree" target="_blank">k-d</a>, và <a href="https://en.wikipedia.org/wiki/Quadtree" target="_blank">Quadtree</a>.</p>
+
+<h2 id="ví-dụ-1">Ví dụ</h2>
+
+<p>Để đơn giản bài toán ta xét trường hợp mặt phẳng với dữ liệu đầu vào là tập các đoạn thẳng sao cho từng cặp trong tập không giao nhau $S={s_1, s_2, \dots, s_n}$, output của bài toán là một cây BSP mà mỗi vùng trong mỗi node lá chỉ chứa 1 một đoạn thẳng.</p>
+
+<ol>
+<li>Chọn ngẫu nhiên (theo phân phối đều) một hoán vị $\pi$ trong tập hoá vị của ${1, 2, \dots, n }$ (gồm $n!$ phần tử).</li>
+
+<li><p>Tồn tại một vùng chứa nhiều hơn 1 đoạn thẳng:</p>
+
+<p>2.a Cắt vùng này bởi <em>đường thẳng</em> $l(s_i)$ trong đó $i$ là phần tử đầu tiên trong hoán vị (ở đây đường thẳng $l$ sẽ chứa $s_i$) $\pi$ sao cho $s_i$ cắt vùng đang xét.</p></li>
+</ol>
+
+<h2 id="phân-tích">Phân tích</h2>
+
+<p>Gọi biến $X_{ij}$ là biến ngẫu nhiên và $X_{ij}=1$ khi đường thẳng chứa $s_i$ cắt $s_j$ trong một vòng gọi đệ quy nào đó, $X_{ij}=0$ trong trường hợp ngược lại.</p>
+
+<p>Ở đây ta muốn xét xem kì vọng số lần thuật toán này cắt phải một đoạn thẳng trong tập đầu vào $S$.</p>
+
+<p>$$\mathbf{E} (X) = \mathbf{E} \left [ \sum_{i=1}^{n} \sum_{i=1}^{n} X _ {ij} \right ]$$
+$$= \sum_{i=1}^{n} \sum_{i=1}^{n} \mathbf{E} [X _ {ij} ]$$
+$$= \sum_{i=1}^{n} \sum_{i=1}^{n} Pr [X _ {ij} = 1 ]$$</p>
+
+<p>Bài toán được quy về việc tính xác suất $Pr[X_{ij}=1]$. Gọi $t$ là giao điểm của $s_i$ và $s_j$, $index(i,j)=t$ nếu $s_i$ cắt $t-1$ đoạn thẳng trước khi giao với $s_j$, như ví dụ bên dưới $s_{ij}=4$. Trường hợp hai đoạn thẳng không cắt nhau thì $S_{ij}=\infty$.</p>
+
+<p><img src="http://i.imgur.com/kyaZ5CL.png" alt="Ví dụ về giá trị index(i, j)" /></p>
+
+<p>Bởi đường thẳng chứa $s_i$ bất kì có thể tiến vô cùng về hai phía nên tồn tại hai đoạn sao cho $index(s_i, s_j) = index(s_i, s_k)$. Nếu $index(s_i, s_j)=t$ ta gọi $s_{i1}, s_{i2}, \dots, s_{it}$ là những đoạn thẳng mà $s_i$ sẽ cắt trước khi giao với $s_j$, xác suất đề sự kiện này xảy ra là $\frac{1}{t+1}$</p>
+
+<p>Cho một đoạn $s_k$ cố định và $m \in {0, 1, 2, dots, n-2 }$ tồn tại tối đa hai đoạn thẳng $s_l$ sao cho $index(s_l, s_k)=m$</p>
+
+<p>Cận trên được tính như sau:</p>
+
+<p>$$\mathbf{E}[X] = \sum_{i=1}^{n} \sum_{j=1}^{n} Pr [X _ {ij} = 1 ]$$
+$$\leq \sum_{i=1}^{n} \sum_{j=1}^{n} \frac{1}{index(i, j) + 1}$$
+$$\sum_{i=1}^{n} \sum_{k=2}^{n} \frac{2}{k}$$
+$$= 2n \ln n$$</p>
+
+<h1 id="tài-liệu-tham-khảo">Tài liệu tham khảo.</h1>
+
+<ol>
+<li><a href="http://www.csee.wvu.edu/~ksmani/courses/fa01/random/lecnotes/lecture2.pdf" target="_blank">Introduction to Randomized Algorithms</a></li>
+<li><a href="http://cs.au.dk/~gudmund/Documents/randompearlnotes.pdf" target="_blank">Randomised Algorithms</a></li>
+</ol>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/algorithms">algorithms</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/vi/post/intro_randalgs/">Dẫn nhập thuật toán ngẫu nhiên</a></li>
+    
+    <li><a href="/vi/post/review_algs_princeton_coursera/">Review Algorithms (Princeton) - Coursera</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

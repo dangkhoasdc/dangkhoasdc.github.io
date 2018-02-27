@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/protocol-buffers-caffe/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/protocol-buffers-caffe/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dksdc">
+  <meta property="twitter:creator" content="@dksdc">
+  
+  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/protocol-buffers-caffe/">
+  <meta property="og:title" content="Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2016-10-23T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2016-10-23T00:00:00&#43;00:00">
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2248880369139457",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+  <title>Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2016-10-23 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2016-10-23
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/vi/post/protocol-buffers-caffe/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=S%e1%bb%ad%20d%e1%bb%a5ng%20Protocol%20Buffers%20trong%20C%2b%2b%20v%c3%a0%20Caffe&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fprotocol-buffers-caffe%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fprotocol-buffers-caffe%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fprotocol-buffers-caffe%2f&amp;title=S%e1%bb%ad%20d%e1%bb%a5ng%20Protocol%20Buffers%20trong%20C%2b%2b%20v%c3%a0%20Caffe"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=S%e1%bb%ad%20d%e1%bb%a5ng%20Protocol%20Buffers%20trong%20C%2b%2b%20v%c3%a0%20Caffe&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fprotocol-buffers-caffe%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<h5 id="protocol-buffers-protobuf-hay-pb-là-một-trong-những-thành-phần-quan-trọng-trong-thư-viện-caffe-http-caffe-berkeleyvision-org-bài-viết-dưới-đây-là-một-số-note-và-cách-sử-dụng-protocol-buffers-trong-ngôn-ngữ-c-mục-tiêu-ban-đầu-chủ-yếu-tìm-hiểu-xem-khả-năng-tuỳ-chỉnh-của-caffe-đến-đâu">Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện <a href="http://caffe.berkeleyvision.org/" target="_blank">Caffe</a>. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C++. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu.</h5>
+
+<h1 id="giới-thiệu">Giới thiệu</h1>
+
+<p><a href="https://developers.google.com/protocol-buffers/docs/overview" target="_blank">Protocol Buffers</a> là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển. Protocol Buffers có thể so sánh giống như XML, tuy nhiên PB có một số ưu điểm (theo quảng cáo của Google): tiện hơn, nhẹ hơn (từ 3 đến 10 lần so với XML), thao tác đọc ghi nhanh hơn (20 đến 100 lần nhanh hơn so với XML) và dễ dàng hơn. Protocol Buffers cho phép người dùng thiết kế dữ liệu và sử dụng code tự động phát sinh để đọc ghi các dữ liệu đó.</p>
+
+<h1 id="cơ-chế">Cơ chế</h1>
+
+<p>Người dùng định nghĩa cấu trúc dữ liệu của mình trong file <code>.proto</code>. Trong đó định nghĩa kiểu dữ liệu, ràng buộc của các thuộc tính cũng như cấu trúc (mảng hay giá trị scalar). Trình biên dịch PB sẽ dịch file <code>.proto</code> thành một file mà ngôn ngữ lập trình đọc được (trong trường hợp C++ là file <code>.h</code>) giúp lập trình viên thao tác trên dữ liệu được thiết kế trước đó. Và như vậy, thay vì tự thiết kế 1 dữ liệu bằng chính ngôn ngữ lập trình, và tốn thêm thời gian để viết các cơ chế đọc ghi, chuyển đổi dữ liệu hay chuyển từ định dạng này (text) sang định dạng khác (binary), ProtoBuf sẽ tự động sinh code cho những thao tác này.</p>
+
+<h1 id="trong-caffe">Trong Caffe</h1>
+
+<p>Protocol Buffers đóng vai trò khá quan trọng trong thư viện <a href="https://github.com/BVLC/caffe" target="_blank">Caffe</a>. Nếu không sử dụng PB thì Caffe trở thành một thư viện rất khó xài bởi nhiều lí do:</p>
+
+<ol>
+<li><p>Không có tài liệu cụ thể để tuỳ chỉnh các layer hay tự thiết kế mạng cho riêng hệ thống. Vấn đề này được giải quyết đơn giản nhờ PB. PB cho phép cá c tác giả của Caffe tạo ra các dữ liệu dùng cho hệ thống này (Solver, Layer, Net, …). Những ai dùng Caffe chỉ cần bỏ chút thời gian để đọc lại đoạn thiết kế trong <a href="https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto" target="_blank">file <code>proto</code> này</a> đã được comment khá đầy đủ và chi tiết. Nhờ việc open source phần này nên các nhóm nghiên cứu khác có khả năng custom bằng cách thêm các Layer hoặc thêm các hàm vàotrong hệ thống Caffe.</p></li>
+
+<li><p>Khả năng không custom cao: việc tạo ra một kiến trúc mới khá dễ dàng nhờ vào PB. Việc thiết kế một mạng giờ đây giống như một trò xếp hình với các khối là những kiểu dữ liệu được thiết kế trong ProtoBuf [Hình 1]. Một ví dụ kinh điển là sử dụng Caffe để <a href="http://caffe.berkeleyvision.org/gathered/examples/mnist.html" target="_blank">thiết kế mạng LeNet</a>. Người nghiên cứu không phải quá nặng đầu hay nhũn não để viết code C++ hay Matlab hay Python hay Cuda để thiết kế mạng mà thay vào đó là viết một kiến trúc trong file <code>prototxt</code> như thiết kế một cấu trúc XML hoặc JSON. Tác giả Caffe cũng không nhũn não khi ngồi parse từ file text sang kiểu dữ liệu của mình.</p></li>
+</ol>
+
+<p><img src="http://i.imgur.com/chfn2ch.png" alt="Mạng Deep Learning" /></p>
+
+<h1 id="cài-đặt">Cài đặt</h1>
+
+<p>Clone mã nguồn của <a href="https://github.com/google/protobuf" target="_blank">ProtoBuf tại Github</a>, sau đó cài theo lệnh</p>
+
+<pre><code>    ./autogen.sh
+    ./configure
+    make
+    make install
+
+</code></pre>
+
+<h1 id="thiết-kế-dữ-liệu">Thiết kế dữ liệu</h1>
+
+<p>Dữ liệu được thiết kế trong một file <code>proto</code>. Dưới đây là ví dụ trong website của Google, mục đích để quản lý danh bạ điện thoại.</p>
+
+<pre><code class="language-protocol-buffers">    package tutorial;
+
+    message Person {
+      required string name = 1;
+      required int32 id = 2;
+      optional string email = 3;
+
+      enum PhoneType {
+        MOBILE = 0;
+        HOME = 1;
+        WORK = 2;
+      }
+
+      message PhoneNumber {
+        required string number = 1;
+        optional PhoneType type = 2 [default = HOME];
+      }
+
+      repeated PhoneNumber phone = 4;
+    }
+
+    message AddressBook {
+      repeated Person person = 1;
+    }
+
+</code></pre>
+
+<p>Để biên dịch file này, ta gõ lệnh</p>
+
+<pre><code>    protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto
+</code></pre>
+
+<p>Trong đó <code>$SRC_DIR</code> là thư mục chứa mã nguồn, <code>$DST_DIR</code> là thư mục chứa các code cpp mà ProtoBuf sẽ phát sinh, <code>addressbook.proto</code> là file chứa dữ liệu danh bạ. Trước khi xem thử trong ProtoBuf viết cái chi chi, ta xem thử ProtoBuf đã phát sinh ra 2 file <code>addressbook.pb.cc</code> và <code>addressbook.pb.h</code>. Trong đó chứa tất cả phần định nghĩa và cài đặt của các Lớp đối tượng Person, PhoneNumber. Chính xác là ProtoBuf đã <em>làm giúp</em> dev chuyện thiết kế lớp, viết phần truy xuất và chuyển đổi kiểu dữ liệu, thao tác các thuật tính (kiểm tra thuộc tính, getter và setter). Xong, ta quay lại phần thiết kế của ProtoBuf.</p>
+
+<h1 id="cú-pháp">Cú pháp</h1>
+
+<p>Trong bài viết mình chỉ giới thiệu rất vắn tắt về các từ khoá sử dụng trong ProtoBuf nhằm có thể tìm hiểu cơ chế thiết kế dữ liệu trong Caffe. Chi tiết hơn về cứ pháp ngôn ngữ này có thể tham khảo ở <a href="https://developers.google.com/protocol-buffers/docs/proto3" target="_blank">trang tài liệu của ProtoBuf</a>.</p>
+
+<ol>
+<li><code>package</code>: tương đương với namespace trong C++.</li>
+<li><code>message</code>: tương đương với Class trong C++.</li>
+<li><code>int32</code> ,<code>string</code> , <code>enum</code>: tương đương với các kiểu dữ liệu trong C++. Ngoài ra trong ProtoBuf còn có <code>bool</code>, <code>float</code>, <code>double</code>.</li>
+<li>Các giá trị 1, 2, … đằng sau các khai báo: các tag phân biệt nhau trong một message.</li>
+
+<li><p>Có 3 modifier như sau: <code>required</code>, <code>optional</code>, <code>repeated</code>:</p>
+
+<p>a. <code>required</code>: trường bắt buộc phải tồn tại trong 1 lớp.
+b. <code>optional</code>: trường có thể tồn tại hoặc không trong một lớp.
+c. <code>repeated</code>: trường là một mảng động (không có phần tử nào hoặc có 1 hay nhiều phần tử).</p></li>
+</ol>
+
+<h2 id="trong-caffe-1">Trong Caffe</h2>
+
+<p>Bây giờ quay trở lại <a href="https://github.com/BVLC/caffe/blob/master/src/caffe/proto/caffe.proto" target="_blank">file <code>proto</code> của Caffe</a> và dường như mọi thứ đã quá rõ ràng. Với mỗi hàm activation, hàm loss, các Layer (convolution, reshape, filter, …) và Blob (chứa dữ liệu) Caffe thiết kế các lớp chính là nơi chứa các tham số cho các hàm, layer và data này.</p>
+
+<p>Một điều khá thú vị đó là thư viện <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a> của Google cũng sử dụng ProtoBuf cho project của họ.</p>
+
+<p>Nếu như chú ý kĩ, trên website của Caffe không liệt kê toàn bộ các tham số có thể cấu hình cho các Layer trong thiết kế mạng. Có thể kể đến ở đây như <a href="http://caffe.berkeleyvision.org/tutorial/data.html" target="_blank">Data Layer</a>, trong tham số transform_data có <code>scale</code>, <code>mean_file_size</code>, <code>mirror</code> và <code>crop_size</code>; nhưng nếu xem trong phần định nghĩa của protobuf, ta thấy ngoài ra còn có <code>mean_file</code>, <code>mean_value</code>, <code>force_color</code> và <code>force_gray</code>, qua đó ta thấy được rõ ràng xem protobuf có lợi hơn là xem trong phần documents. Một điểm thuận lợi khác là file <code>caffe.proto</code> được cập nhật liên tục so với document trên website.</p>
+
+<p>Lấy một ví dụ minh hoạ trong mạng <a href="https://github.com/BVLC/caffe/tree/master/models/bvlc_alexnet" target="_blank">AlexNet</a>. Có 2 file prototxt rất đáng quan tâm và hầu như ở các model được cung cấp sẵn đều có đó là: <code>train_val.prototxt</code> và <code>solver.txt</code>.</p>
+
+<h3 id="train-val-prototxt">train_val.prototxt</h3>
+
+<p>Đây là file chứa kiến trúc mạng của mô hình được cung cấp. Trong này định nghĩa toàn bộ kiến trúc (các tầng, tham số của mỗi tầng) cũng như định nghĩa dữ liệu đầu vào và output đầu ra cho mạng deep.</p>
+
+<pre><code class="language-protobuf">    name: &quot;AlexNet&quot;
+    layer {
+      name: &quot;data&quot;
+      type: &quot;Data&quot;
+      top: &quot;data&quot;
+      top: &quot;label&quot;
+      include {
+        phase: TRAIN
+      }
+      transform_param {
+        mirror: true
+        crop_size: 227
+        mean_file: &quot;data/ilsvrc12/imagenet_mean.binaryproto&quot;
+      }
+      data_param {
+        source: &quot;examples/imagenet/ilsvrc12_train_lmdb&quot;
+        batch_size: 256
+        backend: LMDB
+      }
+    }
+    layer {
+      name: &quot;data&quot;
+      type: &quot;Data&quot;
+      top: &quot;data&quot;
+      top: &quot;label&quot;
+      include {
+        phase: TEST
+      }
+      transform_param {
+        mirror: false
+        crop_size: 227
+        mean_file: &quot;data/ilsvrc12/imagenet_mean.binaryproto&quot;
+      }
+      data_param {
+        source: &quot;examples/imagenet/ilsvrc12_val_lmdb&quot;
+        batch_size: 50
+        backend: LMDB
+      }
+    }
+
+</code></pre>
+
+<p>Thành phần đầu tiên là <code>name</code>, tên của mạng. Các phần tử tiếp theo là các <code>layer</code>, tất cả các tham số liên quan đến layer đều nằm trong khối ngoặc <code>&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;w&quot;&gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;</code>. Có 3 thành phần chắc chắn có của một layer:</p>
+
+<ol>
+<li><code>name</code>: tên của layer. Caffe dựa vào tên layer để xác định xem layer đó ở đâu trong mạng.</li>
+<li><code>type</code>: chắc chắn rồi, Caffe cần biết đây là layer Input hay là layer Convolution hay là ReLu hay là Softmax.</li>
+<li><code>top/bottom</code>: xác định xem layer hiện tại sẽ nằm trên layer nào và sẽ nằm dưới layer nào. Vì kiến trúc mạng kiểu xếp tầng thế này rất thuận tiện để thiết kế mạng CNN. Và điểm bất lợi đó là ta khó có thể thiết kế các mạng có cấu trúc phức tạp hơn, kiểu như đồ thì chẳng hạn.</li>
+</ol>
+
+<p>Ngoài 3 thuộc tính kể trên, mỗi layer sẽ có những tham số khác, phụ thuộc vào loại layer và tính chât của layer đó trong mạng.</p>
+
+<h3 id="solver-prototxt">solver.prototxt</h3>
+
+<p>Đây là tập tin chứa tham số trong quá trình train mạng deep và các tham số trong quá trình forward cũng như lan truyền ngược.</p>
+
+<pre><code class="language-protobuf">    net: &quot;models/bvlc_alexnet/train_val.prototxt&quot;
+    test_iter: 1000
+    test_interval: 1000
+    base_lr: 0.01
+    lr_policy: &quot;step&quot;
+    gamma: 0.1
+    stepsize: 100000
+    display: 20
+    max_iter: 450000
+    momentum: 0.9
+    weight_decay: 0.0005
+    snapshot: 10000
+    snapshot_prefix: &quot;models/bvlc_alexnet/caffe_alexnet_train&quot;
+    solver_mode: GPU
+</code></pre>
+
+<p>Ta dễ dàng thấy ở đây có <code>net</code>: dẫn đến file chứa kiến trúc mạng. Một số tham số khá quen thuộc như: <code>momentum</code>, <code>max_iter</code>, có cả một thuộc tính nhằm set xem mạng sẽ chạy ở GPU hay CPU (<code>solver_mode</code>). Cũng giống như các tham số ở <code>train_val.prototxt</code>, tất cả các thông tin về cấu hình được đề cập trong file <code>caffe.proto</code>.</p>
+
+<h2 id="tổng-kết">Tổng kết</h2>
+
+<p>Protobuf đóng vai trò quan trọng trong công cụ Caffe, giúp các nhà nghiên cứu có thể dễ dàng xây dựng, chỉnh sửa, cũng như chia sẻ kiến trúc mạng của mình với cộng đồng. Ngoài ra protobuf còn giúp nhà lập trình dễ dàng trong quá trình xây dựng hệ thống phần mềm cũng như mã nguồn. Đối với người dùng, việc xem xét, hiệu chỉnh trên file prototxt thuận lợi và tốn ít công sức hơn so với đọc từ code C++ hay kể cả matlab, cũng như có một “ngôn ngữ chung” cho thiết kế mạng deep.</p>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/deep-learning">deep learning</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

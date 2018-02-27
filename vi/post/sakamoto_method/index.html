@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/sakamoto_method/">
+
+  
+  
+
+
+  
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/sakamoto_method/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@dksdc">
+  <meta property="twitter:creator" content="@dksdc">
+  
+  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/sakamoto_method/">
+  <meta property="og:title" content="Bài toán chuyển ngày sang thứ | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-09-16T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2017-09-16T00:00:00&#43;00:00">
+  
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2248880369139457",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+  <title>Bài toán chuyển ngày sang thứ | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <div class="article-inner">
+      <h1 itemprop="name">Bài toán chuyển ngày sang thứ</h1>
+
+      
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-09-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2017-09-16
+    </time>
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <a href="http://dangkhoasdc.github.io/vi/post/sakamoto_method/#disqus_thread"></a>
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fsakamoto_method%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fsakamoto_method%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fsakamoto_method%2f&amp;title=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fsakamoto_method%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+      <div class="article-style" itemprop="articleBody">
+        
+
+<p>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo;
+Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip;
+Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).</p>
+
+<pre><code class="language-c">dayofweek(y, m, d) {
+    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
+    y -= m &lt; 3;
+    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
+}
+</code></pre>
+
+<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với <sup>1</sup>&frasl;<sub>1</sub> (Nếu ngày <sup>1</sup>&frasl;<sub>1</sub> là thứ Hai thì <sup>1</sup>&frasl;<sub>2</sub> sẽ là thứ 5). <code>t[]</code> chính là offset cho ngày đầu tiên của tháng so với ngày <sup>1</sup>&frasl;<sub>1</sub>, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
+
+<p>Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm <code>y</code>, ta phải cộng thêm <code>y</code> ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.</p>
+
+<p>Những năm nhuận, ta lại phải thêm cái ngày <sup>29</sup>&frasl;<sub>2</sub> vào trong, tức là nó sẽ thêm 1 ngày nữa, trong <code>y</code> năm? nếu có <code>y</code> năm nhuận thì sẽ có thêm <code>x</code> ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.</p>
+
+<p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày <sup>29</sup>&frasl;<sub>2</sub>, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
+
+<p>Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng <code>t[]</code> lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào <code>t[0]</code> và <code>t[1]</code> và giữ nguyên các <code>t[]</code> còn lại Sau đó chuyển -1 trong <code>d-1</code> vào offset, lúc đó ta sẽ được mảng <code>t[]</code> như trong code gốc.</p>
+
+<p>Ta còn một vấn đề là xác định ngày ban đầu để làm mốc và độ lệch <code>c</code> của ngày gốc đó so với ngày Chủ Nhật với <code>index = 0</code>. Nhưng bằng kiểm chứng, người ta phát hiện ra <code>c = 0</code>. Wow. 😲</p>
+
+<p>Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.</p>
+
+<p>Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.</p>
+
+<h3 id="references">References</h3>
+
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week" target="_blank">Wiki: Determination of the day of the week</a></li>
+<li><a href="https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ" target="_blank">Source</a></li>
+</ol>
+
+      </div>
+
+      
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/programming">programming</a>
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/algorithms">algorithms</a>
+  
+</div>
+
+
+
+    </div>
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/vi/post/rand/">rand() is harmful</a></li>
+    
+    <li><a href="/vi/post/install_opencv_vs/">Hướng dẫn cài đặt OpenCV trên Windows</a></li>
+    
+    <li><a href="/vi/post/randalgs_ex/">Các thuật toán ngẫu nhiên</a></li>
+    
+    <li><a href="/vi/post/intro_randalgs/">Dẫn nhập thuật toán ngẫu nhiên</a></li>
+    
+    <li><a href="/vi/post/review_cpp_proglang_book/">Review: The C&#43;&#43; Programming Languages</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

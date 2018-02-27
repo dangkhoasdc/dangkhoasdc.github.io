@@ -13,6 +13,8 @@
   <meta name="description" content="Research Assistant">
 
   
+  <link rel="alternate" hreflang="vi" href="http://dangkhoasdc.github.io/vi/tags/algorithms/">
+  
   <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/tags/algorithms/">
 
   
@@ -198,6 +200,22 @@
         
 
         
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span>English</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/vi/tags/algorithms/">
+                <span>Tiếng Việt</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
       </ul>
 
     </div>
@@ -240,46 +258,6 @@ Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thù
   </div>
   
   <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/impl_priority_queues/">Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</a></h2>
-    <div class="article-style">
-      
-      Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
- CTDL quan trọng cho các thuật toán khác như Dijkstra&rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/improved_qsort/">Một số biến thể Quicksort</a></h2>
-    <div class="article-style">
-      
-      Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
-// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[&ndash;j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/fibsearch/">Giải thuật tìm kiếm Fibonacci</a></h2>
-    <div class="article-style">
-      
-      Mình không tìm được từ nào tiếng Việt có thể dịch được từ &ldquo;Fibonaccian Searching&rdquo;, nếu &ldquo;binary searching&rdquo; có thể dịch là &ldquo;tìm kiếm nhị phân&rdquo;, thì &ldquo;Fibonaccian Searching&rdquo; không có ngữ nghĩa gì nhiều.
-Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.
-Lịch sử Thuật toán được để xuất bởi Devid E.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/taocp/howto/">Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</a></h2>
-    <div class="article-style">
-      
-      Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &ldquo;cuồng&rdquo; như Donald Knuth.
-      
-    </div>
-  </div>
-  
-  <div>
     <h2><a href="http://dangkhoasdc.github.io/project/taocp/">An adventure in The Art of Computer Programming</a></h2>
     <div class="article-style">
       
@@ -288,47 +266,8 @@ Lịch sử Thuật toán được để xuất bởi Devid E.
     </div>
   </div>
   
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/sakamoto_method/">Bài toán chuyển ngày sang thứ</a></h2>
-    <div class="article-style">
-      
-      Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/randalgs_ex/">Các thuật toán ngẫu nhiên</a></h2>
-    <div class="article-style">
-      
-      Các ví dụ về thuật toán ngẫu nhiên Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách Randomized Algorithms
-Randomized Quicksort Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên.
-      
-    </div>
-  </div>
-  
-  <div>
-    <h2><a href="http://dangkhoasdc.github.io/post/intro_randalgs/">Dẫn nhập thuật toán ngẫu nhiên</a></h2>
-    <div class="article-style">
-      
-      Hôm rồi học course Introduction to Algorithm (2006-MIT) mình được biết qua khái niệm Randomized Algorithms, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.
-Định nghĩa Randomized Algorithms (viết gọn là randalgs) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.
-Điểm thú vị của randalgs chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến kì vọng trong trường hợp xấu nhất.
-      
-    </div>
-  </div>
-  
 
   
-<nav>
-  <ul class="pager">
-    
-    
-    <li><a href="/tags/algorithms/page/2/">&gt;</a></li>
-    
-  </ul>
-</nav>
-
 
 
 </div>
