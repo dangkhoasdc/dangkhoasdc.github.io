@@ -38,6 +38,9 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/post/latin_square/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/post/latin_square/" hreflang="en"/>
+    
       <loc>http://dangkhoasdc.github.io/vi/post/latin_square/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
     </url>

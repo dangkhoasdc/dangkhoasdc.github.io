@@ -11,6 +11,8 @@
   <meta name="description" content="Research Assistant">
 
   
+  <link rel="alternate" hreflang="vi" href="http://dangkhoasdc.github.io/vi/post/latin_square/">
+  
   <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/post/latin_square/">
 
   
@@ -78,7 +80,7 @@
   
   <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
   <meta property="og:url" content="http://dangkhoasdc.github.io/post/latin_square/">
-  <meta property="og:title" content="Khối Latin và câu chuyện toán học và lịch sử máy tính | Dang-Khoa&#39;s blog ">
+  <meta property="og:title" content="Latin squares and a story of computer science history | Dang-Khoa&#39;s blog ">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
@@ -96,7 +98,7 @@
 </script>
 
 
-  <title>Khối Latin và câu chuyện toán học và lịch sử máy tính | Dang-Khoa&#39;s blog </title>
+  <title>Latin squares and a story of computer science history | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -198,6 +200,22 @@
         
 
         
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span>English</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/vi/post/latin_square/">
+                <span>Tiếng Việt</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
       </ul>
 
     </div>
@@ -212,7 +230,7 @@
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Khối Latin và câu chuyện toán học và lịch sử máy tính</h1>
+      <h1 itemprop="name">Latin squares and a story of computer science history</h1>
 
       
 
@@ -246,7 +264,7 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Kh%e1%bb%91i%20Latin%20v%c3%a0%20c%c3%a2u%20chuy%e1%bb%87n%20to%c3%a1n%20h%e1%bb%8dc%20v%c3%a0%20l%e1%bb%8bch%20s%e1%bb%ad%20m%c3%a1y%20t%c3%adnh&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flatin_square%2f"
+         href="https://twitter.com/intent/tweet?text=Latin%20squares%20and%20a%20story%20of%20computer%20science%20history&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flatin_square%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -260,14 +278,14 @@
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flatin_square%2f&amp;title=Kh%e1%bb%91i%20Latin%20v%c3%a0%20c%c3%a2u%20chuy%e1%bb%87n%20to%c3%a1n%20h%e1%bb%8dc%20v%c3%a0%20l%e1%bb%8bch%20s%e1%bb%ad%20m%c3%a1y%20t%c3%adnh"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flatin_square%2f&amp;title=Latin%20squares%20and%20a%20story%20of%20computer%20science%20history"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Kh%e1%bb%91i%20Latin%20v%c3%a0%20c%c3%a2u%20chuy%e1%bb%87n%20to%c3%a1n%20h%e1%bb%8dc%20v%c3%a0%20l%e1%bb%8bch%20s%e1%bb%ad%20m%c3%a1y%20t%c3%adnh&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flatin_square%2f">
+         href="mailto:?subject=Latin%20squares%20and%20a%20story%20of%20computer%20science%20history&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flatin_square%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -283,19 +301,20 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p>Trong dự án dài hơi về TAoCP, những phần đầu của Vol 4A.</p>
+<p>The content of this note mostly belongs to the first section of TAoCP, Vol4A.</p>
 
-<h1 id="định-nghĩa">Định nghĩa</h1>
+<h1 id="definition">Definition</h1>
 
-<p>Cho một ma trận vuông có kích thước M và các phần tử thuộc $\{0, 1, \cdots, M-1
-\}$, ta xây dựng ma trận sao cho mỗi phần tử $i$ trong tập $\{0, 1, \cdots,
-M-1\}$ chỉ xuất hiện đúng 1 lần trong mỗi cột và mỗi dòng.</p>
+<p>Given a square matrix of size $M$ and each element is $\{0, 1, \cdots, M-1
+\}$, we construct a matrix such that for the element $i$ in the set $\{0, 1, \cdots,
+M-1\}$ only appears exactly 1 time on every row and column.</p>
 
-<h3 id="ví-dụ">Ví dụ</h3>
+<h3 id="examples">Examples</h3>
 
-<p>Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 4 loại $\heartsuit,
-\diamondsuit, \clubsuit, \spadesuit$, ta sắp xếp sao cho mỗi dòng/cột có đủ 4
-chất và 4 quân (Jacques Ozaman, mathematiques et physiques, Paris 1725).</p>
+<p>We have 16 cards which comprises a combination of 4 ranks, i.e, J, K, Q, A and
+4 suits: $\heartsuit,
+\diamondsuit, \clubsuit, \spadesuit$, we arrange the cards such that for each
+column or row, we have 4 ranks and 4 suitst (Jacques Ozaman, mathematiques et physiques, Paris 1725).</p>
 
 
 <figure >
@@ -304,33 +323,29 @@ chất và 4 quân (Jacques Ozaman, mathematiques et physiques, Paris 1725).</p>
     
     
     <figcaption>
-        <h4>Cách sắp xếp quân bài. Source: TAoCP, Vol 4A.</h4>
+        <h4>One instance of such the arrangment. Source: TAoCP, Vol 4A.</h4>
         
     </figcaption>
     
 </figure>
 
 
-<h1 id="ứng-dụng">Ứng dụng</h1>
+<h1 id="applications">Applications</h1>
 
-<p>Thực ra trong toán học đôi khi ta không cần một ứng dụng thực tế của một vấn
-đề để có động lực nghiên cứu hay tìm hiểu. Tuy nhiên, mình lại là một thanh
-niên học khoa học máy tính với thiên hướng &ldquo;engineer&rdquo; hơn là các nhà toán học
-cao siêu, nên mình đòi hỏi cái mình học có tính ứng dụng ít nhiều. Về khối
-vuông Latin này có kha khá ứng dụng:</p>
+<p>While studying mathematics, sometimes we could not find an obvious application in order to motivate ourself to study the concept. However, since am a computer science engineer who is pragmatic than _mathematical inclination, I am specially interested in concepts which have applications in real life. Regards the latin square, we get several ones:</p>
 
 <ul>
-<li>Sudoku là một dạng của khối vuông Latin, và trò chơi này trở thành một trong
-những trò chơi giải đố nổi tiếng nhất thế giới.</li>
-<li>Trong cài đặt thí nghiệm.</li>
-<li>Mã sửa lỗi.</li>
-<li>Mã hóa.</li>
+<li><a href="https://en.wikipedia.org/wiki/Sudoku" target="_blank">Sudoku</a>: the variant of latin square
+is one of the most popular puzzles in the world.</li>
+<li><a href="https://en.wikipedia.org/wiki/Blocking_(statistics)" target="_blank">Design of experiments</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Latin_square#Error_correcting_codes" target="_blank">Error corecting codes</a>.</li>
+<li><a href="http://elscorcho.50webs.com/latinsquares.pdf" target="_blank">Crytography</a>.</li>
 </ul>
 
-<h1 id="câu-chuyện-lịch-sử">Câu chuyện lịch sử</h1>
+<h1 id="war-story">War Story</h1>
 
-<p>Năm 1779, một câu đố tương tự như trong phần ví dụ đã thu hút nhà toán học
-vĩ đại: Leonhard Euler</p>
+<p>In 1779, a puzzle similar to aforemention example attracted the famous
+mathematician: Leonhard Euler:</p>
 
 <blockquote>
 <p>Thirty-six officers of six different ranks, taken from six different
@@ -339,14 +354,15 @@ each column will contain one officer of each rank and one of each regiment.
 How can they do it?</p>
 </blockquote>
 
-<p>Dù đã gần như mù nhưng Euler vẫn quyết tâm giải bài toán này và tổng quát hóa
-cho các trường hợp $M = 1, 2, \cdots$. Tuy nhiên, với $M\mod 4 = 2$ khiến ông
-không giải được, Sau đó ông đã đưa ra một conjenture rằng không thể giải
-câu đố này với trường hợp tổng quát $M \mod 4 = 2$.</p>
+<p>Even though being amost blind, Euler was determined to solve the puzzle and
+tried to generalize the problem for other cases $M = 1, 2, \cdots$. However,
+when $M\mod 4 = 2$, he could not solve it. Later, he stated a conjenture that
+there is no solution for $M \mod 4 = 2$.</p>
 
-<p>Tuy nhiên phần định nghĩa về khối Latin hơn khác 1 chút so với phần ví
-dụ. Nếu ta đặt $\heartsuit = 1, \diamondsuit = 2, \clubsuit = 3, \spadesuit = 4$,
-và tách chất và quân bài ra 2 ma trận, ta được 2 ma trận Latin.</p>
+<p>However, the puzzle Euler tackled is quite different compared to the definition
+given in the previous section. More precisely, let $\heartsuit = 1, \diamondsuit = 2,
+\clubsuit = 3, \spadesuit = 4$, and we divide ranks and suits into 2 seperated
+matrices, we got two Latin squares:</p>
 
 <p>$$
 \begin{bmatrix}
@@ -357,7 +373,7 @@ K&amp; Q&amp; J&amp; A
 \end{bmatrix}
 $$</p>
 
-<p>và</p>
+<p>and</p>
 
 <p>$$
 \begin{bmatrix}
@@ -368,7 +384,7 @@ $$</p>
 \end{bmatrix}
 $$</p>
 
-<p>Figure 1 trở thành</p>
+<p>Fig. 1 becomes:</p>
 
 <p>$$
 \begin{bmatrix}
@@ -379,22 +395,22 @@ K1&amp; Q2&amp; J3&amp; A4
 \end{bmatrix}
 $$</p>
 
-<p>Hai ma trận được gọi là orthogonal khi chập các phần tử lại với nhau, mỗi phần
-tử trong ma trận mới là duy nhất.
-Bài toán lúc đó Euler phải giải là: cho 1 ma trận Latin, làm sao để tìm được
-một ma trận Latin khác orthogonal với nó.
-Ma trận sau khi được chập lại gọi là Graeco-Latin.
-Để chứng minh nhận định của Euler đúng hay sai, các nhà toán học đã mất gần 180
-năm với sự giúp đỡ của máy tính.</p>
+<p>Two Latin sqaures is orthogonal iff when we combine two elements with the same
+position together, each element in the new matrix is unique. The puzzle of Euler
+is: given a Latin sqaure, how do we find another Latin matrix which is orthogonal
+to the given one.</p>
 
-<p>Năm 1957, Paige và Tompkins đã thử lập trình trên máy SWAC để tìm ví dụ phản
-chứng khi $M=10$ nhưng sau gần 5 giờ chạy liên tục không ra kết quả, họ đã
-tắt chương trình.</p>
+<p>The combined matrix is called as a Graeco-Latinx matrix.</p>
 
-<p>Năm 1960, Parker và đồng sự đã chứng minh rằng có thể tìm được 1 ma trận orthogonal
-với $M \geq 6$ và phản chứng nhận định của Euler. Đồng thời, ông cũng viết
-1 chương trình trên máy UNIVAC 1206 để sinh ra ma trận đó. Chương trình chưa
-đến 1 giờ để có thể tìm ra lời giải với cùng input năm 1957:</p>
+<p>In order to prove Euler&rsquo;s conjenture, mathematics spent almost 180 years with
+the support from computers. In 1957, Paige and Tompkins programmed on SWAC to find
+a counterexample with $M=10$. After 10 hours running without any results, they
+terminated the program.</p>
+
+<p>In 1960, Parker et al. proved that it is possible to find an orthogonal Latin
+square when $M \geq 6$ and disprove the conjenture. In addition, they also
+wrote a program on UNIVAC 1206 which is able to generate the matrix. The
+program only took nearly 1 hour to find a solution of input in 1957:</p>
 
 <pre><code>0 1 2 3 4 5 6 7 8 9
 1 8 3 2 5 4 7 6 9 0
@@ -408,7 +424,7 @@ với $M \geq 6$ và phản chứng nhận định của Euler. Đồng thời, 
 9 2 8 1 6 7 4 0 3 5
 </code></pre>
 
-<p>Một solution trong sách:</p>
+<p>One instant of the solution (TAoCP):</p>
 
 <pre><code>0 2 8 5 9 4 7 3 6 1
 1 7 4 9 3 6 5 0 2 8
@@ -425,16 +441,16 @@ với $M \geq 6$ và phản chứng nhận định của Euler. Đồng thời, 
 
 <h1 id="transvervals">Transvervals</h1>
 
-<p>Parker sử dụng lại khái niệm transversal mà trước đây Euler từng định nghĩa,
-transversal là cách để chọn ra chuỗi $M$ phần tử sao cho chỉ có 1 phần tử duy
-nhất ở mỗi dòng, mỗi cột và duy nhất trong transversal.</p>
+<p>Parker utilized a concepted called transversal which was previously proposed by
+Euler. A transersal is a way to choose a sequence of $M$ elements such that there
+is only 1 element in each row, each column and is unique in the sequence.</p>
 
-<p>Ví dụ: 0859734216, tức ta chọn 0 ở cột 1, 8 ở cột 2, 5 ở cột 3, &hellip; 6 ở cột 10.
-Giả sử ta có $k$ là giá trị đầu tiên của transversal, dựa vào giá trị từng phần
-tử phía sau, ta thay bằng $k$. Chọn ra $M$ transversal của $k = 0, 1, \cdots, M-1$
-ta sẽ tạo thành 1 orthogonal matrix.</p>
+<p>For example: 0859734216, it means that we choose 0 in column 1, 8 in column 2, 5
+in column 3, etc. Supposed that $k$ is the first item of a transversal, based on
+following elements, we replace them by $k$. Given $M$ transversals of $k = 0, 1,
+\cdots, M-1$, we are able to construct an orthogonal matrix.</p>
 
-<p>Thuật toán đếm số transversal của một ma trận vuông N.</p>
+<p>The algorithm below counts the number of transversals of a Latin square.</p>
 
 <pre><code class="language-cpp">typedef vector&lt;vector&lt;int&gt;&gt; mat;
 class transversal {
@@ -490,18 +506,14 @@ private:
 };
 </code></pre>
 
-<p>Lấy input từ cuốn TAoCP ra được kết quả:</p>
+<p>From the above input, we get the output:</p>
 
 <pre><code>79 96 76 87 70 84 83 75 95 63
 </code></pre>
 
-<p>Bem, đúng với kết quả trong sách. Chỉnh sửa một chút ta có thể có được toàn
-bộ các transversal cần tìm. Sau đó với mỗi tranversal của $k$, ta chọn ra bộ nào
-không có phần tử trùng (trong index của orthogonal matrix), ta sẽ tìm được
-ma trận. Chi tiết về phần này sẽ được đề cập trong bài viết nói về
-Dancing Links.</p>
+<p>It is exactly the same as in the book. We later can modify the code to find all transversals given an input. After that, for every transversal $k$, we choose a set such that there is no duplicate elements which becomes the output matrix.  The details of the algorithm will be discussed in later posts about Dancing Links.</p>
 
-<h1 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h1>
+<h1 id="references">References</h1>
 
 <ol>
 <li>Knuth, Donald E. The Art of Computer Programming, Volume 4A: Combinatorial Algorithms, Part 1. Pearson Education India, 2011.</li>
@@ -535,8 +547,6 @@ Dancing Links.</p>
   <ul>
     
     <li><a href="/post/gen_inversion_table/">Generate the inversion table from an integer sequence</a></li>
-    
-    <li><a href="/post/taocp/howto/">Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</a></li>
     
   </ul>
 </div>
