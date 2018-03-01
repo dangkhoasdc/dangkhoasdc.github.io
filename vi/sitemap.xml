@@ -68,6 +68,9 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/post/selectedpapers_cs/" hreflang="en"/>
+    
       <loc>http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/</loc>
       <lastmod>2018-01-15T00:00:00+00:00</lastmod>
     </url>

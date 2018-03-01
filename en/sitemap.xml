@@ -50,6 +50,18 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/post/selectedpapers_cs/" hreflang="en"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/" hreflang="vi"/>
+    
+      <loc>http://dangkhoasdc.github.io/post/selectedpapers_cs/</loc>
+      <lastmod>2018-01-15T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/post/repertoire/</loc>
       <lastmod>2017-12-26T00:00:00+00:00</lastmod>
     </url>
