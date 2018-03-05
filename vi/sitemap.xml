@@ -59,6 +59,9 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/post/compvision_hist/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/post/compvision_hist/" hreflang="en"/>
+    
       <loc>http://dangkhoasdc.github.io/vi/post/compvision_hist/</loc>
       <lastmod>2018-01-17T00:00:00+00:00</lastmod>
     </url>
@@ -486,6 +489,9 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/computer-vision/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/computer-vision/" hreflang="en"/>
+    
       <loc>http://dangkhoasdc.github.io/vi/tags/computer-vision/</loc>
       <lastmod>2018-01-17T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -588,6 +594,9 @@
     
     
     <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/history/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/history/" hreflang="en"/>
     
       <loc>http://dangkhoasdc.github.io/vi/tags/history/</loc>
       <lastmod>2018-01-17T00:00:00+00:00</lastmod>

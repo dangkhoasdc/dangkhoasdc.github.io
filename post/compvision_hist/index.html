@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="generator" content="Hugo 0.37" />
   <meta name="author" content="Dang-Khoa">
   <meta name="description" content="Research Assistant">
 
+  
+  <link rel="alternate" hreflang="vi" href="http://dangkhoasdc.github.io/vi/post/compvision_hist/">
   
   <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/post/compvision_hist/">
 
@@ -78,7 +80,7 @@
   
   <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
   <meta property="og:url" content="http://dangkhoasdc.github.io/post/compvision_hist/">
-  <meta property="og:title" content="Lịch sử Thị Giác Máy Tính | Dang-Khoa&#39;s blog ">
+  <meta property="og:title" content="History of Computer Vision - Part 1 | Dang-Khoa&#39;s blog ">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
@@ -96,7 +98,7 @@
 </script>
 
 
-  <title>Lịch sử Thị Giác Máy Tính | Dang-Khoa&#39;s blog </title>
+  <title>History of Computer Vision - Part 1 | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -198,6 +200,22 @@
         
 
         
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span>English</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/vi/post/compvision_hist/">
+                <span>Tiếng Việt</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
       </ul>
 
     </div>
@@ -212,7 +230,7 @@
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Lịch sử Thị Giác Máy Tính</h1>
+      <h1 itemprop="name">History of Computer Vision - Part 1</h1>
 
       
 
@@ -228,7 +246,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    7 min read
+    3 min read
   </span>
   
 
@@ -246,7 +264,7 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=L%e1%bb%8bch%20s%e1%bb%ad%20Th%e1%bb%8b%20Gi%c3%a1c%20M%c3%a1y%20T%c3%adnh&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcompvision_hist%2f"
+         href="https://twitter.com/intent/tweet?text=History%20of%20Computer%20Vision%20-%20Part%201&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcompvision_hist%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -260,14 +278,14 @@
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcompvision_hist%2f&amp;title=L%e1%bb%8bch%20s%e1%bb%ad%20Th%e1%bb%8b%20Gi%c3%a1c%20M%c3%a1y%20T%c3%adnh"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcompvision_hist%2f&amp;title=History%20of%20Computer%20Vision%20-%20Part%201"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=L%e1%bb%8bch%20s%e1%bb%ad%20Th%e1%bb%8b%20Gi%c3%a1c%20M%c3%a1y%20T%c3%adnh&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcompvision_hist%2f">
+         href="mailto:?subject=History%20of%20Computer%20Vision%20-%20Part%201&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcompvision_hist%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -283,111 +301,91 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p>Edition: Pre-fascicle 1A (Revision -99).</p>
+<p>[It is such a long time since I wrote a dedicated technical post about
+computer vision.]</p>
 
-<p>[Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính
-muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi
-vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT -
-hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông
-tin về một hướng nghiên cứu khá hấp dẫn này.]</p>
+<h1 id="introduction">Introduction</h1>
 
-<h1 id="giới-thiệu">Giới thiệu</h1>
+<p>Since Computer Vision is an interdisciplinary research which involves different
+fields such as physics, biology, computer science, neuroscience, etc. For this
+reason, there are different approaches when people consider about the
+history of computer science. In this post, I summarize two viewpoints of
+<a href="http://vision.stanford.edu/feifeili/" target="_blank">Prof. Fei-Fei Li</a>, and
+<a href="http://szeliski.org/Book/" target="_blank">Prof. Richard Szeliski</a> from their courses [<a href="http://vision.stanford.edu/teaching/cs131_fall1415/index.html" target="_blank">1</a>] and
+textbooks [<a href="http://szeliski.org/Book/" target="_blank">1</a>]. In the early period of the research, computer vision is considered
+as a subfield of Artificial Intelligence. In the 1950s, the major goal of Artificial
+Intelligence is to create a framework which is able to simulate the brain
+mechanism of humans. As regards Computer Vision, majority research problems at that time
+is also to find a system which is able to understand and manipulate visual inputs
+as the human cognition system.</p>
 
-<p>Bởi TGMT là một hướng nghiên cứu liên quan đến khá nhiều lĩnh vực khác nhau,
-đặc biệt là sinh học, khoa học nhận thức, khoa học máy tính, toán học, vật lý;
-chính điều đó lịch sử của TGMT được xem xét bởi các mốc thời gian khác nhau tùy
-theo ý kiến của tác giả. Phần dưới được mình tổng hợp từ “timeline” của hai nhà
-nghiên cứu nổi tiếng là “cô cô” <a href="https://scholar.google.com/citations?user=rDfyQnIAAAAJ" target="_blank">Lei
-Fei-Fei</a> và sư tổ
-<a href="https://scholar.google.com/citations?user=3_u1jHQAAAAJ" target="_blank">Szeliski</a> thông qua
-các bài giảng và sách giáo trình. Có thể hiểu
-ngành TGMT là một nhánh con của trí tuệ nhân tạo (AI) trong thời kì đầu - những
-năm 1950s, một trong những mục tiêu tối thượng của AI chính là có thể giả lập
-được trí tuệ của con người. Đó là đối với AI, CV cũng không phải ngoại lệ; các
-bài toán trong CV cũng nhằm giải quyết bài toán làm thế nào một hệ thống thị
-giác có khả năng hiểu và thao tác với hình ảnh giống như cách một hệ thống thị
-giác sinh học làm được.</p>
+<p>Why and how can visual systems precisely observe and interpret a scane which
+is received from eyes? This question requires us study the machenism of
+visual system from organisms and the development of the system throughtout
+evolution. There are many prominent discoveries in many fields engaging when
+scienctists were trying to find the answer.</p>
 
-<p>Vậy làm thế nào một hệ thống thị giác sinh học có thể quan sát, hiểu được những
-hình ảnh mà cơ quan cảm thụ (mắt) thu nhận được. Câu hỏi đặt ta phải tìm hiểu
-về quá trình cơ chế này được phát triển trong tự nhiên và những nghiên cứu về
-não bộ nhằm hiểu được cơ chế hoạt động của một trong những giác quan quan trọng
-của cơ thể. Thông qua những tìm hiểu này, đã có nhiều bước tiến diễn ra trong
-các ngành khác nhau như Vật Lý, Sinh Học, Toán Học, và sau này Trí Tuệ Nhân Tạo.</p>
-
-<h1 id="pre-computer-vision">Pre-computer vision</h1>
-
-<h2 id="543-triệu-năm-trước-công-nguyên">543 triệu năm trước Công Nguyên</h2>
+<h1 id="543m-bc">543M BC</h1>
 
 
-<figure >
+<figure>
     
         <img src="https://www.papermasters.com/images/cambrian-explosion.jpg" />
     
     
     <figcaption>
-        <h4>Vụ nổ Cambrian, nguồn: Papermasters</h4>
+        <h4>The Cambrian explosion, source: Papermasters</h4>
         
     </figcaption>
     
 </figure>
 
 
-<p>Đây là thời kì “Big Bang của tiến hóa sinh học”, trước thời điểm này các sinh
-vật hiện diện trên Trái Đất rất hạn chế. Và đột nhiên, như vụ nổ Big Bang, bỗng
-xuất hiện sự bùng nổ các sinh vật hiện diện tràn ngập trên Trái Đất. Dựa trên
-các bằng chứng khảo cổ học cũng như địa chấn Trái Đất, <a href="https://en.wikipedia.org/wiki/Cambrian_explosion#Possible_causes_of_the_.22explosion.22" target="_blank">nhiều giả thuyết được
-đặt
-ra</a>
-nhằm giải thích cho hiện tượng này. Có thể một thiên thạch chứa  mầm sống ngoài
-vũ trụ đã mang đến các vi sinh vật, hay có chăng sự biến đổi thời tiết và môi
-trường dẫn đến sự bùng nổ các giống loài. [Những giả thuyết này về sau được
-đưa vào văn học, điện ảnh khá nhiều. Đồng thời cũng có nhiều nghiên cứu
-tập trung đến hướng này, đọc thêm: <a href="https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345331354" target="_blank">Cosmos - Carl Sagan</a>]</p>
+<p>This is the Big Bang of evolution since prior to this particular time, there are
+few origanims existing in the planet. And suddenly, a huge number of living beings
+appears on Eather. Based on archaeological evidences, there are
+<a href="https://en.wikipedia.org/wiki/Cambrian_explosion#Possible_causes_of_the_.22explosion.22" target="_blank">several hypothesises</a> are proposed in order to explain the phenomenon. Perhaps
+a meteor brought those livings, or perhaps there were tremendous changes in
+weather, enviroments which transform the whole biology on the planet. [These assumptions
+ are extensively discussed in <a href="https://www.amazon.com/Cosmos-Carl-Sagan/dp/0345331354" target="_blank">Cosmos, Carl Sagan</a>].</p>
 
-<p>Các nhà sinh vật gọi đây là “<a href="https://en.wikipedia.org/wiki/Cambrian_explosion" target="_blank">vụ nổ kì
-Cambrian</a>”, chỉ trong một
-thời gian ngắn, một loạt các sinh vật với cơ thể phức tạp và cấu trúc mới xuất
-hiện. Một <a href="https://en.wikipedia.org/wiki/Evolution_of_the_eye#Rate_of_evolution" target="_blank">giả
-thuyết</a>
-quan trọng được đưa ra chính là <strong>sự xuất hiện của cơ quan thị giác</strong>, lần đầu
-tiên có một sinh vật có thể tương tác với môi trường xung quanh. Các sinh vật
-này không còn thụ động với môi trường nữa; cũng chính bởi điều đó thúc đầy loài
-săn mồi và con mồi thúc đẩy khả năng cảm nhận của mình, dẫn đến các sinh vật
-ở thời kì này phát triển cơ chế tương tác với môi trường. Một dẫn chứng quan trọng
-của giả thuyết này chính là đây là thời kì sớm nhất mà các nhà khoa học có thể
-tìm thấy cơ quan “thị giác” trong các hóa thạch.</p>
+<p>Biologists called the phenomenon as <a href="https://en.wikipedia.org/wiki/Cambrian_explosion" target="_blank">the Cambrian explosion</a>, in a short period when most major animal appeared in the
+ fossil record. <a href="https://en.wikipedia.org/wiki/Evolution_of_the_eye#Rate_of_evolution" target="_blank">One assumption</a> to reason the phenomenon is that there emergence
+ of visual system on animals. At the first time in history, organisms
+ no longer were susceptible to surroundings since the visual system help them
+ flexibly interact with environemnts ad well as avoid the predators. Thank to
+ these systems, animals are able to <strong>survive, navigate, and manipulate</strong>. These
+ activities later are considered as the most important problems in artificial
+ visual system, i.e, to create a system that can <strong>survive, navigate, and manipulate</strong>
+ surrounds<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</p>
 
-<p>Chính nhờ sự phát triển của cơ quan thị giác, mà sau tất cả bước tiến hóa đến
-tận bây giờ, hệ thống này đã giúp cho các sinh vật có thể <strong>tồn tại, điều
-hướng, thao tác</strong> với môi trường xunh quanh. Đó cũng chính là mục tiêu của các
-nhà nghiên cứu AI trong giai đoạn đầu hình TGMT: làm thế nào hệ thống AI có thể
-<strong>tồn tại, điều hướng, tao tác</strong> với môi trường tác nhân tác nhân (agent)<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>.</p>
+<p>which I will talk about in another post.
+ discussion this</p>
 
-<h2 id="thế-kỉ-16-camera-obscura-leonardo-da-vinci">Thế kỉ 16 - Camera Obscura - Leonardo da Vinci</h2>
+<h1 id="16th-century">16th Century</h1>
 
 
-<figure >
+<figure>
     
         <img src="https://usercontent2.hubstatic.com/6047721_f1024.jpg" />
     
     
     <figcaption>
-        <h4>Camera Obscura and a painter. Nguồn: Không rõ.</h4>
+        <h4>Camera Obscura and a painter. Nguồn: unknown.</h4>
         
     </figcaption>
     
 </figure>
 
 
-<p>Trong suốt lịch sử, loài người đã dần dần phát minh <a href="https://en.wikipedia.org/wiki/Camera_obscura" target="_blank">những thiết bị</a>
-có thể nắm bắt được những gì trông thấy. Những phát kiến được
-tìm thấy ở Trung Quốc, Hi Lạp và các nền văn minh khác. Tuy nhiên đến tận thế
-kỉ 16, <strong>Leonardo da Vinci là người đầu tiên có những ghi chú cụ thể và chi
-tiết về công cụ</strong> này - mà sau này ta gọi là “camera”.</p>
+<p>Throughout history, mandkind progressively invented devices which are able to
+capture a scene. There are many inventions around the world, e.g, in China,
+Egyt and other ancient civilizations. However, util the 16th century, <strong>Leonardo
+da Vinci</strong> is the first man who obtains rigorous records which discuss how these
+devices work in detail. Later, these mystery devices are called &ldquo;cameras&rdquo;.</p>
 
 
-<figure >
+<figure>
     
         <img src="https://usercontent1.hubstatic.com/6047724_f496.jpg" />
     
@@ -400,80 +398,30 @@ tiết về công cụ</strong> này - mà sau này ta gọi là “camera”.</
 </figure>
 
 
-<p>Trong các tài liệu của mình, Leonardo đã sử dụng cơ chế “pin hole” để mô hình
-hóa cách camera ghi lại khoảnh khắc xung quanh. Đồng thời ông cũng dùng cơ chế
-này để tìm hiểu cách hoạt động của mắt người. [Chi tiết về cuộc đời và các
-công trình của Leonardo da Vinci, cuốn
-<a href="https://www.amazon.com/Leonardo-Vinci-Walter-Isaacson/dp/1501139150" target="_blank">Leonardo da Vinci</a>
-của Walter Isaacson
-rất đáng đọc.].</p>
+<p>In his documents, Leonardo used the <strong>pinhole</strong> principal to model the
+machenic by which a camera can capture an scene. Sometimes, it is also referred
+as <strong>camera obscura</strong>. In addition, he applied this principal in order to
+understand how human eyes function.
+[<a href="https://www.amazon.com/Leonardo-Vinci-Walter-Isaacson/dp/1501139150" target="_blank">This book</a> describes extensively Leonardo&rsquo;s incredible works.]</p>
 
-<p>Cũng từ sau giai đoạn này, nhiều phát minh đã xuất hiện. Và ngày nay, “camera”
-trở thành một phần không thể thiếu trong cuộc sống hiện đại. Thống kê năm 2016
-có thấy số lượng cảm biến hình ảnh còn nhiều hơn dân số Trái Đất. Tuy nhiên,
-việc phát minh ra camera, cũng như các ghi chú của Leonardo chỉ dừng lại mức
-<strong>sao chép thế giới thị giác.</strong> Lúc này một camera vẫn chưa <em>hiểu</em> được những
-gì mình thu nhận được.</p>
+<p>In this particular period, there are many inventions of the camera. Nowadays,
+cameras beocme one of the most popular device around the world. As in 2016,
+the number of visual sensors are more than the world population. However,
+these inventions as well as Leonardo&rsquo;s discovers just end up copying the
+visual environment and cameras still could not <strong>understand</strong> neither
+<strong>interpret</strong> what they received.</p>
 
-<h2 id="1959-hubel-wiesel">1959: Hubel &amp; Wiesel</h2>
+<hr />
 
-<p>Làm thế nào con người có thể hiểu được những gì đôi mắt nhìn thấy? Cơ chế hoạt
-động của não bộ khi bắt được tín hiệu hình ảnh? Những câu hỏi này không ngừng
-thúc đẩy các nhà khoa học tìm hiểu vấn đề này.</p>
-
-
-<div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/IOHayh06LJ4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
- </div>
-
-
-<p>Nghiên cứu đạt giải Nobel năm 1981 này được thực nghiệm trên những chú mèo nhằm
-tìm câu trả lời cho câu hỏi về thị giác trong não bộ. Các nhà khoa học đã gắn
-các thiết bị ghi nhận tín hiện mỗi khi phần não (primary visual cortex) kích
-ứng với các sự thay đổi hình ảnh. Khi thử nghiệm với các hình ảnh như cá, thịt,
-hoa … hầu như não mèo không kích ứng tín hiệu nào. Lúc đó các nhà khoa học hầu
-như thất vọng với kết quả thu được. Nhưng điều lạ lùng là họ thấy các tín hiệu
-được kích ứng mỗi khi họ thay đổi tấm phim. Và sau đó, kết luận được đưa ra là
-tiền đề cho các nghiên cứu sau này của TGMT: tín hiệu não chỉ kích ứng với sự
-chuyển động của các cấu trúc cơ bản (biên, cạnh). Sau này, trong deep learning,
-kết quả visualize của tầng conv cũng cho kết quả tương tự.</p>
-
-<p>Điều thú vị của não bộ về xử lí thị giác: não bộ cần khá nhiều phần trăm cơ
-quan của mình để có thể “hiểu” những gì mắt ghi nhận được (gần 50% thể tích
-não), và bộ phần này (visual cortex) nằm phần phía sau của não bộ. Có thể hiểu
-rằng đây là tác vụ khó nhất mà não bộ cần phải làm.</p>
-
-<h1 id="computer-vision-era">Computer Vision era</h1>
-
-<h2 id="1963">1963</h2>
-
-<h2 id="1966">1966</h2>
-
-<h2 id="1970">1970</h2>
-
-<h2 id="1973-1977">1973&amp;1977</h2>
-
-<h2 id="1987">1987</h2>
-
-<h2 id="1997">1997</h2>
-
-<h2 id="1999">1999</h2>
-
-<h2 id="2001">2001</h2>
-
-<h1 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h1>
-
-<h1 id="todo">TODO</h1>
-
-<ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Add references.</label></li>
-</ul>
+<p>In the next couple of posts, I will discuss the progress of computer vision
+in the modern era, especially 1950-1970 when Artificial Intelligence was
+sheer active in research community.</p>
 <div class="footnotes">
 
 <hr />
 
 <ol>
-<li id="fn:1">Có một mối quan hệ mật thiết với Học Tăng Cường (Reinforcement Learning) [Có lẽ mình cần đề cập một chút ở đây]
+<li id="fn:1">It is quite similiar to another area of machine learning: Reinforcement Learning,
  <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
 </ol>
 </div>
