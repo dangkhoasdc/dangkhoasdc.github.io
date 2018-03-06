@@ -11,6 +11,8 @@
   <meta name="description" content="Research Assistant">
 
   
+  <link rel="alternate" hreflang="en" href="http://dangkhoasdc.github.io/post/install_opencv_vs/">
+  
   <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/install_opencv_vs/">
 
   
@@ -198,6 +200,22 @@
         
 
         
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span>Tiếng Việt</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/post/install_opencv_vs/">
+                <span>English</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
       </ul>
 
     </div>
@@ -300,7 +318,7 @@
 
 <p><img src="http://i.imgur.com/iFzMg6J.png" alt="Danh sách thư mục OpenCV" /></p>
 
-<p>Bước 3: Mở CMake. Trong phần <code>Where is the source code</code> sẽ trỏ đến thư mục <code>sources</code> đã đề cập lúc trước. Phần <code>Where to build the binaries</code> là nơi chứa phần thư viện được biên dịch. Trong ví dụ này đường dẫn là <code>C:\opencv\source\build</code>.</p>
+<p>Bước 3: Mở CMake. Trong phần <code>Where is the source code</code> sẽ trỏ đến thư mục <code>sources</code> đã đề cập lúc trước. Phần <code>Where to build the binaries</code> là nơi chứa phần thư viện được biên dịch. Trong ví dụ này đường dẫn là <code>C:\opencv\sources\build</code>.</p>
 
 <p><img src="http://i.imgur.com/BGpSwUO.png" alt="Giao diện CMake" /></p>
 
@@ -340,7 +358,7 @@
 
 <h3 id="cấu-hình-thư-viện-cho-quá-trình-lập-trình">Cấu hình thư viện cho quá trình lập trình</h3>
 
-<p>Nhấn Alt + F7 để vào phần Properties của Project. Chọn Thẻ Linker, mục Additional Library Directories ta trỏ đến thư mục lib\Debug (trong ví dụ này là: <code>C:\oepncv\sources\build\lib\Debug</code>). Vì đang cấu hình cho target là Debug nên phần Configuration phải là Debug</p>
+<p>Nhấn Alt + F7 để vào phần Properties của Project. Chọn Thẻ Linker, mục <code>Additional Library Directories</code> ta trỏ đến thư mục <code>lib\Debug</code> (trong ví dụ này là: <code>C:\opencv\sources\build\lib\Debug</code>). Vì đang cấu hình cho target là Debug nên phần Configuration phải là Debug</p>
 
 <p><img src="http://i.imgur.com/kAG7ftJ.png" alt="Configuration" /> <img src="http://i.imgur.com/QBpuB7C.png" alt="Libs" /> Chuyển đến thẻ Input, mục Additional Dependencies ta nhập các file sau:</p>
 
@@ -364,33 +382,33 @@ opencv_videoio300d.lib
 opencv_videostab300d.lib
 </code></pre>
 
-<p>Sau khi cấu hình xong, ta chuyển qua target là Release và thực hiện giống hệt như vậy. Tuy nhiên đường dẫn lần này sẽ là sources\build\lib\Release.</p>
+<p>Sau khi cấu hình xong, ta chuyển qua target là Release và thực hiện giống hệt như vậy. Tuy nhiên đường dẫn lần này sẽ là <code>C:\opoencv\sources\build\lib\Release</code>.</p>
 
 <p>Phần Additional Dependencies sẽ là:</p>
 
-<pre><code>    opencv_calib3d300.lib
-    opencv_core300.lib
-    opencv_features2d300.lib
-    opencv_flann300.lib
-    opencv_hal300.lib
-    opencv_highgui300.lib
-    opencv_imgcodecs300.lib
-    opencv_imgproc300.lib
-    opencv_ml300.lib
-    opencv_objdetect300.lib
-    opencv_photo300.lib
-    opencv_shape300.lib
-    opencv_stitching300.lib
-    opencv_superres300.lib
-    opencv_ts300.lib
-    opencv_video300.lib
-    opencv_videoio300.lib
-    opencv_videostab300.lib
+<pre><code>opencv_calib3d300.lib
+opencv_core300.lib
+opencv_features2d300.lib
+opencv_flann300.lib
+opencv_hal300.lib
+opencv_highgui300.lib
+opencv_imgcodecs300.lib
+opencv_imgproc300.lib
+opencv_ml300.lib
+opencv_objdetect300.lib
+opencv_photo300.lib
+opencv_shape300.lib
+opencv_stitching300.lib
+opencv_superres300.lib
+opencv_ts300.lib
+opencv_video300.lib
+opencv_videoio300.lib
+opencv_videostab300.lib
 </code></pre>
 
 <h3 id="cấu-hình-thư-viện-cho-quá-trình-thực-thi">Cấu hình thư viện cho quá trình thực thi</h3>
 
-<p>Khi thực hiện build 1 chương trình, VS sẽ tạo ra trong thư mục của Solution một thư mục với cấu trúc như sau: <code>\Debug</code> và <code>\Release</code>. Trong ví dụ này là x64\Debug, x64\Release. Ta chép toàn bộ file trong build\bin\Debug vào x64\Debug, tương tự như vậy đối với build\bin\Release và x64\Release.</p>
+<p>Khi thực hiện build 1 chương trình, VS sẽ tạo ra trong thư mục của Solution hai thư mục với cấu trúc như sau: <code>\Debug</code> và <code>\Release</code>. Trong ví dụ này là x64\Debug, x64\Release. Ta chép toàn bộ file trong build\bin\Debug vào x64\Debug, tương tự như vậy đối với build\bin\Release và x64\Release.</p>
 
 <p>Tạo một file cpp và run thử chương trình.</p>
 
@@ -409,7 +427,7 @@ int main() {
 }
 </code></pre>
 
-<p>(Với mã nguồn này lưu ý đặt 1 file tên là demo.jpg vào trong thư mục chứa mã nguồn).</p>
+<p>(Với mã nguồn này lưu ý đặt 1 file tên là <code>demo.jpg</code> vào trong thư mục chứa mã nguồn).</p>
 
 <p><img src="http://i.imgur.com/CtRS1r5.png" alt="Demo" /></p>
 
@@ -447,7 +465,7 @@ dir Release\*.lib /B &gt;..\DependenciesRelease.txt
 <pre><code> setx -m OPENCV_DIR C:\opencv
 </code></pre>
 
-<p>Nhấn Windows E để mở Windows Explore</p>
+<p>Nhấn <code>Windows E</code> để mở File Explorer</p>
 
 <p><img src="http://i.imgur.com/8tTY60w.png" alt="Windows Explorer" /></p>
 
@@ -468,7 +486,7 @@ dir Release\*.lib /B &gt;..\DependenciesRelease.txt
 <p>Trong sidebar Property Manager ta thấy danh sách các config tương ứng với từng target
 architecture trong project.</p>
 
-<p><img src="http://i.imgur.com/UrkPyJs.png" alt="Path Variable Config" /></p>
+<p><img src="http://i.imgur.com/UrkPyJs.png" alt="Property Manager" /></p>
 
 <p>Ta sẽ tạo một Property Sheet mới (Click chuột phải vào từng mục và chọn Add New Project Property Sheet…), double click vào mục mới tạo và cấu hình giống hệt với mục 2. Sau đó lưu lại. VS sẽ tạo ra 1 file có định dạng props trong project. Sau này khi tạo ra 1 project mới ta chỉ cần import Property đã tạo mà không cần config lại từ đầu.</p>
 
@@ -490,6 +508,8 @@ architecture trong project.</p>
   <a class="btn btn-primary btn-outline" href="/vi/tags/programming">programming</a>
   
   <a class="btn btn-primary btn-outline" href="/vi/tags/opencv">opencv</a>
+  
+  <a class="btn btn-primary btn-outline" href="/vi/tags/visual-studio">visual studio</a>
   
 </div>
 

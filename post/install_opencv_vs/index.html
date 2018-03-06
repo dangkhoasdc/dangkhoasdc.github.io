@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.36.1" />
+  <meta name="generator" content="Hugo 0.37" />
   <meta name="author" content="Dang-Khoa">
   <meta name="description" content="Research Assistant">
 
+  
+  <link rel="alternate" hreflang="vi" href="http://dangkhoasdc.github.io/vi/post/install_opencv_vs/">
   
   <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/post/install_opencv_vs/">
 
@@ -78,7 +80,7 @@
   
   <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
   <meta property="og:url" content="http://dangkhoasdc.github.io/post/install_opencv_vs/">
-  <meta property="og:title" content="Hướng dẫn cài đặt OpenCV trên Windows | Dang-Khoa&#39;s blog ">
+  <meta property="og:title" content="Install the OpenCV library on Visual Studio | Dang-Khoa&#39;s blog ">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
@@ -96,7 +98,7 @@
 </script>
 
 
-  <title>Hướng dẫn cài đặt OpenCV trên Windows | Dang-Khoa&#39;s blog </title>
+  <title>Install the OpenCV library on Visual Studio | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -198,6 +200,22 @@
         
 
         
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span>English</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/vi/post/install_opencv_vs/">
+                <span>Tiếng Việt</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
       </ul>
 
     </div>
@@ -212,7 +230,7 @@
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Hướng dẫn cài đặt OpenCV trên Windows</h1>
+      <h1 itemprop="name">Install the OpenCV library on Visual Studio</h1>
 
       
 
@@ -228,7 +246,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    7 min read
+    5 min read
   </span>
   
 
@@ -246,7 +264,7 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=H%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20c%c3%a0i%20%c4%91%e1%ba%b7t%20OpenCV%20tr%c3%aan%20Windows&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2finstall_opencv_vs%2f"
+         href="https://twitter.com/intent/tweet?text=Install%20the%20OpenCV%20library%20on%20Visual%20Studio&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2finstall_opencv_vs%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
@@ -260,14 +278,14 @@
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2finstall_opencv_vs%2f&amp;title=H%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20c%c3%a0i%20%c4%91%e1%ba%b7t%20OpenCV%20tr%c3%aan%20Windows"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2finstall_opencv_vs%2f&amp;title=Install%20the%20OpenCV%20library%20on%20Visual%20Studio"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=H%c6%b0%e1%bb%9bng%20d%e1%ba%abn%20c%c3%a0i%20%c4%91%e1%ba%b7t%20OpenCV%20tr%c3%aan%20Windows&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2finstall_opencv_vs%2f">
+         href="mailto:?subject=Install%20the%20OpenCV%20library%20on%20Visual%20Studio&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2finstall_opencv_vs%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -283,66 +301,203 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<h2 id="biên-dịch-thư-viện-opencv">Biên dịch thư viện OpenCV</h2>
+<h2 id="compiling-the-libray">Compiling the libray</h2>
 
-<p>Điểm thuận lợi của việc tự cài đặt và biên dịch thư viện có thể kể đến như sau:</p>
-
-<ol>
-<li>Hỗ trợ IDE mới nhất, như trong bản OpenCV 3.0 (22/11/2015) thì chưa có bản biên dịch sẵn dành cho VS 2015.</li>
-<li>Customize được các thư viện khác liên quan như Kinect, OpenCL, Python…</li>
-</ol>
-
-<p><a href="http://downloads.sourceforge.net/project/opencvlibrary/opencv-win/3.0.0/opencv-3.0.0.exe?r=http%3A%2F%2Fopencv.org%2F&amp;ts=1448134045&amp;use_mirror=nchc" target="_blank">Link Download thư viện OpenCV cho HĐH Windows</a></p>
-
-<p>Bước 1: Giải nén thư viện vào thư mục được định sẵn. Giả sử đường dẫn của mã nguồn là <code>C:\opencv</code></p>
-
-<p><img src="http://i.imgur.com/rwpgj0b.png" alt="Giải nén mã nguồn thư viện OpenCV" /> Bước 2: Tải và cài đặt <a href="https://cmake.org/files/v3.4/cmake-3.4.0-win32-x86.exe" target="_blank">CMake</a>. Thư mục <code>build</code> chứa những tập tin của phần mã nguồn được biên dịch sẵn. Phần <code>sources</code> được sử dụng cho cài đặt manual.</p>
-
-<p><img src="http://i.imgur.com/iFzMg6J.png" alt="Danh sách thư mục OpenCV" /></p>
-
-<p>Bước 3: Mở CMake. Trong phần <code>Where is the source code</code> sẽ trỏ đến thư mục <code>sources</code> đã đề cập lúc trước. Phần <code>Where to build the binaries</code> là nơi chứa phần thư viện được biên dịch. Trong ví dụ này đường dẫn là <code>C:\opencv\source\build</code>.</p>
-
-<p><img src="http://i.imgur.com/BGpSwUO.png" alt="Giao diện CMake" /></p>
-
-<p>Bước tiếp theo nhấn Configure, sau đó chọn bộ generator cho project, trong phần này sẽ chọn tương ứng với IDE/Compiler mà mã nguồn mình sử dụng. Đồng thời, nếu máy tính đang ở kiến trúc x86 thì chọn các phiên bản IDE với tùy chọn là x86 (Ví dụ Visual Studio 14 2015). Đối với các máy tính kiến trúc x64 thì chọn phiên bản có hậu tố là Win64. Nhấn Finish để kết thúc cấu hình.</p>
-
-<p>Sau khi configure xong thì danh sách các tùy chọn khi biên dịch để hiện ra với rất nhiều tùy biến đi kèm. Phần này trong tutorial này sẽ bỏ qua vì mục tiêu chỉ cần cài đặt bộ thư viện ở mức mặc định là thành công rồi. Nếu không có gì thay đổi ta nhấn chọn Generate.</p>
-
-<p>Sau khi quá trình phát sinh mã nguồn hoàn tất, trong thư mục build sẽ xuất hiện các Project/Solution khác nhau.</p>
-
-<p>Bước 4: Dùng Visual Studio để mở solution có tên là OPENCV. Lưu ý: khi bản VS này phải trùng với bản VS đã configure trong cmake.</p>
-
-<p><img src="http://i.imgur.com/nfvzGPb.png" alt="Target và Architecture của Visual Studio" /></p>
-
-<p>Quá trình biên dịch cần thực hiện qua 2 bước: (1) biên dịch thư viện cho quá trình Debug và (2) biên dịch chương trình trong quá trình Release. Để thực hiện các bước này đơn giản chỉ cần click chọn Target sẽ build rồi sau đó nhấn F7 và ngồi đợi (Mất khoàng 10-15 phút cho quá trình biên dịch trên Debug/Release). Kết quả trong quá trình biên dịch sẽ có khoảng 50 projects biên dịch thành công, 17 cái bị skip và 2 cái bị fail. Sau khi biên dịch, ta sẽ có 2 thư mục cần quan tâm nằm trong build. Đó là thư mục lib chứa toàn bộ dữ liệu cần thiết cho quá trình lập trình; thư mục là dữ liệu cần thiết để chương trình sau khi build có thể chạy được.</p>
-
-<h2 id="cấu-hình-opencv-trên-visual-studio">Cấu hình Opencv trên Visual Studio</h2>
-
-<p>Bước 1: Tạo một Project (Empty Project).</p>
-
-<p><img src="http://i.imgur.com/OR6H08N.png" alt="Tạo Empty Project" /></p>
-
-<p>Trước khi thực hiện tiếp các công việc cấu hình cho project. Ta cần xác định rõ sẽ cần cấu hình những thông tin gì:</p>
+<p>There are many benefits of compiling the library from source instead of using
+the pre-compiled version:</p>
 
 <ol>
-<li>Nơi chứa header file của OpenCV. Dĩ nhiên ta cần làm điều này để include các đối tượng, hàm… của OpenCV.</li>
-<li>Cấu hình các file cần thiết khi lập trình.</li>
-<li>Cấu hình các file cần thiết cho quá trình thực thi. Bởi trong Visual Studio có 2 target khi run bao gồm Debug và Release, nên ta cần phải cấu hình riêng biệt cho mỗi target đó.</li>
+<li>Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0
+(22/11/2015) is not compatible with Visual Studio 2015.</li>
+<li>Be able to customize the library, we can add several options to OpenCV,
+for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.</li>
 </ol>
 
-<h3 id="cấu-hình-header-file">Cấu hình header file</h3>
+<p>Down the source code for the Windows environment <a href="http://downloads.sourceforge.net/project/opencvlibrary/opencv-win/3.0.0/opencv-3.0.0.exe?r=http%3A%2F%2Fopencv.org%2F&amp;ts=1448134045&amp;use_mirror=nchc" target="_blank">here</a>.</p>
 
-<p>Click chuột phải vào tên project (InstallOpencv) chọn Properties (Hoặc nhấn Alt + F7).</p>
+<p>Step 1: Extract the file into a folder, let say <code>C:\opencv</code>.</p>
 
-<p><img src="http://i.imgur.com/GB9Dd20.png" alt="Config additional header file" /></p>
 
-<p>Phía bên phần Sidebar chọn C/C++, General, mục Additional Include Directories ta trỏ đến thư mục <code>opencv\build\include</code> (không phải <del><code>sources\build\include</code></del>). Để đảm bảo ta có thể check bằng cách kiểm tra xem thư mục include đó có các header file không. Xong nhấn OK.</p>
+<figure>
+    
+        <img src="http://i.imgur.com/rwpgj0b.png" />
+    
+    
+    <figcaption>
+        <h4>Extract the library</h4>
+        
+    </figcaption>
+    
+</figure>
 
-<h3 id="cấu-hình-thư-viện-cho-quá-trình-lập-trình">Cấu hình thư viện cho quá trình lập trình</h3>
 
-<p>Nhấn Alt + F7 để vào phần Properties của Project. Chọn Thẻ Linker, mục Additional Library Directories ta trỏ đến thư mục lib\Debug (trong ví dụ này là: <code>C:\oepncv\sources\build\lib\Debug</code>). Vì đang cấu hình cho target là Debug nên phần Configuration phải là Debug</p>
+<p>Folder <code>build</code> contains pre-compiled DLLs of the library, while filder <code>sources</code>
+are used for manully installing.</p>
 
-<p><img src="http://i.imgur.com/kAG7ftJ.png" alt="Configuration" /> <img src="http://i.imgur.com/QBpuB7C.png" alt="Libs" /> Chuyển đến thẻ Input, mục Additional Dependencies ta nhập các file sau:</p>
+
+<figure>
+    
+        <img src="http://i.imgur.com/iFzMg6J.png" />
+    
+    
+    <figcaption>
+        <h4>Folders in OpenCV</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Step 2: Download and install <a href="https://cmake.org/files/v3.4/cmake-3.4.0-win32-x86.exe" target="_blank">CMake</a>.</p>
+
+<p>Step 3: Run CMake. <code>Where is the soruce code</code> points to folder <code>sources</code> of OpenCV
+as mentioned in the previous step. <code>Where to build the binaries</code>: where we put
+output of library, i.e, DLLs files. In this tutorial, I put it in <code>C:\opencv\sources\build</code>.</p>
+
+
+<figure>
+    
+        <img src="http://i.imgur.com/BGpSwUO.png" />
+    
+    
+    <figcaption>
+        <h4>CMake interface</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>The next step is to press <code>Configure</code> and later select the generator for the
+project. In this section, we select the corresponding IDE/Compiler. In addition,
+if the computer is <code>x86</code> architecture then we have to select the IDE version
+which is <code>x86</code> as well, i.e, <code>Visual Studio 14 2015</code>. If the computer is <code>x64</code>
+then we select IDE versions with postfix <code>Win64</code>. Select <code>Finish</code> to complete
+the configuration.</p>
+
+<p>After that, CMake enumerate all options we can customize. In this tutorial, however,
+I would skip this part since the goal of this post is to install the default setting
+and hence other setup will be discuss in other posts. Press <code>Generate</code> to
+continue.</p>
+
+<p>After generating the source code with selected compiler and IDE, folder <code>build</code>
+includes different Projects/Solutions.</p>
+
+<p>Step 4: Use Visual Studio to open solution <code>OPENCV</code>. Beware of the version of
+VS have to be the same of as configured in CMAKE.</p>
+
+
+<figure>
+    
+        <img src="http://i.imgur.com/nfvzGPb.png" />
+    
+    
+    <figcaption>
+        <h4>Targets and Architectures of Visual Studio</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Next, we compile the library (press <code>F7</code>):</p>
+
+<ol>
+<li>Build the solution with the <code>Debug</code> mode.</li>
+<li>Build the solution with the <code>Release</code> mode</li>
+</ol>
+
+<p>Each step takes about 10-15 minutes. The output maybe contains 50 successfully
+complied projects, 17 skipped and 2 fail projects. Visual Studio generates two
+particulars folders <code>lib\Debug</code> and <code>lib\Release</code> which contain all DLLs for
+Debug and Release modes, respectively.</p>
+
+<h2 id="setup-opencv-on-visual-studio">Setup OpenCV on Visual Studio</h2>
+
+<p>Step 1: Create a new empty project.</p>
+
+
+<figure>
+    
+        <img src="http://i.imgur.com/OR6H08N.png" />
+    
+    
+    <figcaption>
+        <h4>Create a new project</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Before configuring the project, we have to determine the following information
+for the project:</p>
+
+<ol>
+<li>Header files of OpenCV.</li>
+<li>Configurate for <strong>programming</strong> with OpenCV.</li>
+<li>Configurate for <strong>executing</strong> the project with OpenCV support. Since there
+are 2 targets, namely <code>Debug</code> and <code>Release</code>, we have to seperately configurate
+each target.</li>
+</ol>
+
+<h3 id="header-files">Header files</h3>
+
+<p>Right click to the project <code>InstallOpencv</code>, select <code>Properties</code> (<code>Alt + F7</code>).</p>
+
+
+<figure>
+    
+        <img src="http://i.imgur.com/GB9Dd20.png" />
+    
+    
+    <figcaption>
+        <h4>Config additional header file</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>In the sidebar, select <code>C/C++</code> -&gt; <code>General</code> -&gt; <code>Additional Include Directories</code>,
+we point to <code>opencv\build\include</code> (NOT <del><code>sources\build\include</code></del>). Press OK.</p>
+
+<h3 id="setup-the-library-for-programming">Setup the library for <strong>programming</strong></h3>
+
+<p>Press <code>Alt + F7</code> to open dialog <code>Properties</code> of the Project. Select tab <code>Linker</code>,
+in <code>Additional Library Directories</code> we point to <code>lib\Debug</code>, i.e, <code>C:\opencv\sources\bild\lib\Debug</code>.
+Nhấn Alt + F7 để vào phần Properties của Project. Chọn Thẻ Linker, mục Additional Library Directories ta trỏ đến thư mục lib\Debug (trong ví dụ này là: <code>C:\oepncv\sources\build\lib\Debug</code>) since
+we are using the <code>Debug</code> target.</p>
+
+
+<figure>
+    
+        <img src="http://i.imgur.com/kAG7ftJ.png" />
+    
+    
+    <figcaption>
+        <h4>Configuration</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+
+<figure>
+    
+        <img src="http://i.imgur.com/QBpuB7C.png" />
+    
+    
+    <figcaption>
+        <h4>Additional Library Directories</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Move to tab <code>Input</code>, select <code>Additional Dependencies</code>, we input these files:</p>
 
 <pre><code>opencv_calib3d300d.lib
 opencv_core300d.lib
@@ -364,37 +519,39 @@ opencv_videoio300d.lib
 opencv_videostab300d.lib
 </code></pre>
 
-<p>Sau khi cấu hình xong, ta chuyển qua target là Release và thực hiện giống hệt như vậy. Tuy nhiên đường dẫn lần này sẽ là sources\build\lib\Release.</p>
+<p>Next, we move to the <code>Release</code> target and repeat previous steps. However,
+the path now is <code>C:\opencv\sources\build\lib\Release</code>.</p>
 
-<p>Phần Additional Dependencies sẽ là:</p>
+<p>Additional Dependencies are:</p>
 
-<pre><code>    opencv_calib3d300.lib
-    opencv_core300.lib
-    opencv_features2d300.lib
-    opencv_flann300.lib
-    opencv_hal300.lib
-    opencv_highgui300.lib
-    opencv_imgcodecs300.lib
-    opencv_imgproc300.lib
-    opencv_ml300.lib
-    opencv_objdetect300.lib
-    opencv_photo300.lib
-    opencv_shape300.lib
-    opencv_stitching300.lib
-    opencv_superres300.lib
-    opencv_ts300.lib
-    opencv_video300.lib
-    opencv_videoio300.lib
-    opencv_videostab300.lib
+<pre><code>opencv_calib3d300.lib
+opencv_core300.lib
+opencv_features2d300.lib
+opencv_flann300.lib
+opencv_hal300.lib
+opencv_highgui300.lib
+opencv_imgcodecs300.lib
+opencv_imgproc300.lib
+opencv_ml300.lib
+opencv_objdetect300.lib
+opencv_photo300.lib
+opencv_shape300.lib
+opencv_stitching300.lib
+opencv_superres300.lib
+opencv_ts300.lib
+opencv_video300.lib
+opencv_videoio300.lib
+opencv_videostab300.lib
 </code></pre>
 
-<h3 id="cấu-hình-thư-viện-cho-quá-trình-thực-thi">Cấu hình thư viện cho quá trình thực thi</h3>
+<h3 id="setup-the-library-for-running-the-code">Setup the library for <strong>running</strong> the code</h3>
 
-<p>Khi thực hiện build 1 chương trình, VS sẽ tạo ra trong thư mục của Solution một thư mục với cấu trúc như sau: <code>\Debug</code> và <code>\Release</code>. Trong ví dụ này là x64\Debug, x64\Release. Ta chép toàn bộ file trong build\bin\Debug vào x64\Debug, tương tự như vậy đối với build\bin\Release và x64\Release.</p>
+<p>While building the project, Visual Studio creates two new folders of the solution:
+<code>\Debug</code> and <code>\Release</code> with the architecture name we are using. In this example,
+they are <code>x64\Debug</code> and <code>x64\Release</code>. We copy all files from <code>build\bin\Debug</code>
+to <code>x64\Debug</code>, also files in <code>build\bin\Release</code> to <code>x64\Release</code>.</p>
 
-<p>Tạo một file cpp và run thử chương trình.</p>
-
-<p>Mã nguồn:</p>
+<p>Create an example and run the program.</p>
 
 <pre><code class="language-cpp">#include &lt;opencv2/opencv.hpp&gt;
 #include &lt;iostream&gt;
@@ -409,75 +566,144 @@ int main() {
 }
 </code></pre>
 
-<p>(Với mã nguồn này lưu ý đặt 1 file tên là demo.jpg vào trong thư mục chứa mã nguồn).</p>
+<p>[Place <code>demo.jpg</code> in the project folder to run the code]</p>
 
-<p><img src="http://i.imgur.com/CtRS1r5.png" alt="Demo" /></p>
 
-<p>Kết quả ta được như hình trên.</p>
+<figure>
+    
+        <img src="http://i.imgur.com/CtRS1r5.png" />
+    
+    
+    <figcaption>
+        <h4>Demo</h4>
+        
+    </figcaption>
+    
+</figure>
 
-<h2 id="tuy-nhiên">Tuy nhiên</h2>
 
-<p>Có một chữ tuy nhiên to đùng như vậy vì với cách cấu hình thế này có khá là nhiều bất cập:</p>
+<h2 id="however">However</h2>
+
+<p>There are many drawbacks here:</p>
 
 <ol>
-<li>Mỗi lần tạo 1 project OpenCV mới mà ngồi config (Mục 2) thì cũng rất là mất thời gian. Chưa kể trong lúc cấu hình mà quên mất một công đoạn nào thì có khi đi tong cả buổi chỉ để fix lỗi.</li>
-<li>Những file trong sources\bin\Debug hay Release đều xấp xỉ 900MB. Vị chi mỗi lần chép qua bên project thì tốn thêm 1.8GB bộ nhớ. Chỉ cần trong máy chứa dăm ba project dùng OpenCV thì sẽ ngốn dung lượng đến chừng nào.</li>
-<li>Phần Additional Dependencies mỗi phiên bản OpenCV mỗi khác, làm thế nào để lấy được danh sách các file như thế này.</li>
+<li>Every time we create a project including OpenCV support, we have to follow
+these settings (Section 2). It is tedious. One mistake can cost us several hours
+to figure out.</li>
+<li>The size of library files in <code>sources\bin\Debug</code> and <code>source\bin\Release</code> are
+approximately 900MB each. Copying two libraries to the project takes 1.8GB even
+though the source code alone only cost several KBs.</li>
+<li>How we can get all file names of <code>Additional Dependencies</code> since each OpenCV
+version has different files.</li>
 </ol>
 
-<p>Ta sẽ giải quyết từ dễ đến khó trước.</p>
+<p>Let see how we can resolve these problems.</p>
 
 <h3 id="additional-dependencies">Additional Dependencies</h3>
 
-<p>Sau khi biên dịch xong thư viện ta mở Command Line và trỏ đến thư mục <code>sources\build\lib</code></p>
+<p>Open the command line and point to <code>sources\build\lib</code>:</p>
 
-<p>Gõ lệnh sau</p>
+<p>Type these commands:</p>
 
 <pre><code>dir Debug\*d.lib /B &gt;..\DependenciesDebug.txt
 dir Release\*.lib /B &gt;..\DependenciesRelease.txt
 
 </code></pre>
 
-<p>Sau khi gõ xong thì trong thư mục build sẽ xuất hiện 2 file text là DependenciesDebug và DependenciesRelease chứa danh sách tât cả các file libs. Mỗi lần sử dụng chỉ cần mở file lên và chép vào.</p>
+<p>All files are saved in <code>DependenciesDebug.txt</code> and <code>DependenciesRelease.txt</code>.
+We simply copy the content to <code>Additional Dependencies</code> when creating a new project.</p>
 
-<h3 id="lib-configuration">Lib Configuration</h3>
+<h3 id="library-configuration">Library Configuration</h3>
 
-<p>Mở Command Line (Với quyền Admin - click chuột phải vào biểu tượng Start và chọn Command Promp) và gõ lệnh</p>
+<p>Open the Command Line with Admin permission, type these commands:</p>
 
 <pre><code> setx -m OPENCV_DIR C:\opencv
 </code></pre>
 
-<p>Nhấn Windows E để mở Windows Explore</p>
+<p><code>Windows + E</code> to open <code>File Explorer</code>
+Nhấn Windows E để mở Windows Explore</p>
 
-<p><img src="http://i.imgur.com/8tTY60w.png" alt="Windows Explorer" /></p>
 
-<p>Click vào Computer và chọn Properties</p>
+<figure>
+    
+        <img src="http://i.imgur.com/8tTY60w.png" />
+    
+    
+    <figcaption>
+        <h4>File Explorer</h4>
+        
+    </figcaption>
+    
+</figure>
 
-<p><img src="http://i.imgur.com/NKnfVzz.png" alt="Advanced System Settings" /></p>
 
-<p>Chọn Advanced system settings. Trong thẻ Advanced chọn Environment Variables…</p>
+<p>Right click on <code>Computer</code> and select <code>Properties</code>.</p>
 
-<p><img src="http://i.imgur.com/HdUETeV.png" alt="Path Variable Config" /></p>
 
-<p>Điền ngay phía sau của phần Variable value giá trị sau: <code>%OPENCV_DIR%\sources\build\bin\Debug;%OPENCV_DIR%\sources\build\bin\Release</code></p>
+<figure>
+    
+        <img src="http://i.imgur.com/NKnfVzz.png" />
+    
+    
+    <figcaption>
+        <h4>Advanced System Settings</h4>
+        
+    </figcaption>
+    
+</figure>
 
-<p>Xong, và từ giờ trở đi ta không cần phải chép các file trong build\bin vào trong project nữa.</p>
 
-<h3 id="sao-lưu-config-của-project">Sao lưu config của project</h3>
+<p>Select <code>Advanced System Settings</code>. In tab <code>Advanced</code>, select <code>Environment Variables…</code></p>
 
-<p>Trong sidebar Property Manager ta thấy danh sách các config tương ứng với từng target
-architecture trong project.</p>
 
-<p><img src="http://i.imgur.com/UrkPyJs.png" alt="Path Variable Config" /></p>
+<figure>
+    
+        <img src="http://i.imgur.com/HdUETeV.png" />
+    
+    
+    <figcaption>
+        <h4>Path Variable Configurate</h4>
+        
+    </figcaption>
+    
+</figure>
 
-<p>Ta sẽ tạo một Property Sheet mới (Click chuột phải vào từng mục và chọn Add New Project Property Sheet…), double click vào mục mới tạo và cấu hình giống hệt với mục 2. Sau đó lưu lại. VS sẽ tạo ra 1 file có định dạng props trong project. Sau này khi tạo ra 1 project mới ta chỉ cần import Property đã tạo mà không cần config lại từ đầu.</p>
 
-<p>Vì đã set OPENCV_DIR là thư mục của OpenCV nên ta có thể thay đổi đường dẫn của các config thành</p>
+<p>Fill these values: <code>%OPENCV_DIR%\sources\build\bin\Debug;%OPENCV_DIR%\sources\build\bin\Release</code></p>
+
+<p>Done, henceforth, we do not have to copy files from <code>build\bin</code> to the project.</p>
+
+<h3 id="saving-configuration-of-the-project">Saving configuration of the project</h3>
+
+<p>In the sidebar <code>Property Manager</code>, we seethe list of all configs corresponding
+to target archtectures in the project.</p>
+
+
+<figure>
+    
+        <img src="http://i.imgur.com/UrkPyJs.png" />
+    
+    
+    <figcaption>
+        <h4>Property Manager</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>We create a new Property Sheet by right clicking into each section and selecting
+<code>Add New Project Property Sheet</code>. Double click to the new sheet and configure
+as mentioned in Section 2. Visual Studio will create a new file with extension <code>props</code>
+in the project. Henceforth, while creating a new project, we only need to import the
+Property.</p>
+
+<p>Since we set the variable path being <code>OPENCV_DIR</code>, we can change the paths in
+the configuraton as following:</p>
 
 <pre><code>    %OPENCV_DIR%\build\include
     %OPENCV_DIR%\source\build\lib\Debug
     %OPENCV_DIR%\source\build\lib\Release
-
 </code></pre>
 
       </div>
@@ -491,6 +717,8 @@ architecture trong project.</p>
   
   <a class="btn btn-primary btn-outline" href="/tags/opencv">opencv</a>
   
+  <a class="btn btn-primary btn-outline" href="/tags/visual-studio">visual studio</a>
+  
 </div>
 
 
@@ -501,24 +729,6 @@ architecture trong project.</p>
 </article>
 
 
-
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/post/review_cpp_proglang_book/">Review: The C&#43;&#43; Programming Languages</a></li>
-    
-    <li><a href="/post/oop-python/">Lập Trình Hướng Đối Tượng Trong Python</a></li>
-    
-    <li><a href="/post/viet-luan-van/">Kinh Nghiệm Viết Tài Liệu Khoa Học</a></li>
-    
-    <li><a href="/post/opencv-tips/">Ghi chú hướng dẫn cài đặt OpenCV</a></li>
-    
-    <li><a href="/post/spams-lib/">Spams Lib và Những Tâm Sự</a></li>
-    
-  </ul>
-</div>
 
 
 

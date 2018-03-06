@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
@@ -11,7 +13,9 @@
   <meta name="description" content="Research Assistant">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/rand/">
+  <link rel="alternate" hreflang="en" href="http://dangkhoasdc.github.io/tags/visual-studio/">
+  
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/tags/visual-studio/">
 
   
   
@@ -69,7 +73,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/rand/">
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/tags/visual-studio/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -77,14 +81,12 @@
   <meta property="twitter:creator" content="@dksdc">
   
   <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
-  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/rand/">
-  <meta property="og:title" content="rand() is harmful | Dang-Khoa&#39;s blog ">
-  <meta property="og:description" content="">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/tags/visual-studio/">
+  <meta property="og:title" content="Visual studio | Dang-Khoa&#39;s blog ">
+  <meta property="og:description" content="Research Assistant">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2017-09-06T00:00:00&#43;00:00">
-  
-  <meta property="article:modified_time" content="2017-09-06T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2016-10-23T00:00:00&#43;00:00">
   
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -96,7 +98,7 @@
 </script>
 
 
-  <title>rand() is harmful | Dang-Khoa&#39;s blog </title>
+  <title>Visual studio | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -198,6 +200,22 @@
         
 
         
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span>Tiếng Việt</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="nav-item">
+              <a href="/tags/visual-studio/">
+                <span>English</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
       </ul>
 
     </div>
@@ -205,166 +223,33 @@
 </nav>
 
 
-<article class="article" itemscope itemtype="http://schema.org/Article">
+
+
+
+<div class="universal-wrapper">
+
+  <h1>Visual studio</h1>
 
   
 
-
-  <div class="article-container">
-    <div class="article-inner">
-      <h1 itemprop="name">rand() is harmful</h1>
-
+  
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/install_opencv_vs/">Hướng dẫn cài đặt OpenCV trên Windows</a></h2>
+    <div class="article-style">
       
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2017-09-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2017-09-06
-    </time>
-  </span>
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/rand/#disqus_thread"></a>
-  
-
-  
-
-  
-  
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    <li>
-      <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=rand%28%29%20is%20harmful&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frand%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frand%2f"
-         target="_blank" rel="noopener">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frand%2f&amp;title=rand%28%29%20is%20harmful"
-         target="_blank" rel="noopener">
-        <i class="fa fa-linkedin"></i>
-      </a>
-    </li>
-    <li>
-      <a class="email"
-         href="mailto:?subject=rand%28%29%20is%20harmful&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2frand%2f">
-        <i class="fa fa-envelope"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-
-  
-
-</div>
-
-
-      <div class="article-style" itemprop="articleBody">
-        
-
-<h1 id="rand">rand()</h1>
-
-<p>Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo;
-Bài talk duy chỉ nói về việc dùng hàm <code>rand()</code> và đặc biệt sử dụng chung với <code>%</code> (mod) hay floating point scale là thực sự <em>sai lầm</em>  và <em>nghiêm trọng</em> . Đặc biệt, nó không hề tạo ra uniform distribution như ta thường nghĩ, thậm chí nó khiến cho 1 số giá trị đặc biệt hiếm khi xảy ra 😄</p>
-
-<p>Bản chất hàm <code>rand</code> được implement khá đơn giản <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator" target="_blank"> linear congruential </a> nhờ tận dụng tính chất của số căn nguyên thủy (xem <a href="https://en.wikipedia.org/wiki/Lehmer_random_number_generator" target="_blank">Lehmer random generator</a>). Điều thú vị nằm ở chỗ 1 tính chất không liên quan mấy bên lý thuyết số lại hỗ trợ cho việc sinh số ngẫu nhiên.
-Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để check xem empirical results có đúng với probabilities không (uniform distribution với biến ngẫu nhiên rời rạc), đó là dùng Chi squared test.</p>
-
-<p>Link:
-<a href="https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful" target="_blank">https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful</a></p>
-
-      </div>
-
+      Biên dịch thư viện OpenCV Điểm thuận lợi của việc tự cài đặt và biên dịch thư viện có thể kể đến như sau:
+ Hỗ trợ IDE mới nhất, như trong bản OpenCV 3.0 (22/11/2015) thì chưa có bản biên dịch sẵn dành cho VS 2015. Customize được các thư viện khác liên quan như Kinect, OpenCL, Python…  Link Download thư viện OpenCV cho HĐH Windows
+Bước 1: Giải nén thư viện vào thư mục được định sẵn.
       
-
-
-<div class="article-tags">
-  
-  <a class="btn btn-primary btn-outline" href="/vi/tags/programming">programming</a>
-  
-  <a class="btn btn-primary btn-outline" href="/vi/tags/cpp">cpp</a>
-  
-</div>
-
-
-
     </div>
   </div>
-
-</article>
-
-
-
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/vi/post/constexpr/">constexpr: Hằng biểu thức trong C&#43;&#43;11</a></li>
-    
-    <li><a href="/vi/post/install_opencv_vs/">Hướng dẫn cài đặt OpenCV trên Windows</a></li>
-    
-    <li><a href="/vi/post/review_cpp_proglang_book/">Review: The C&#43;&#43; Programming Languages</a></li>
-    
-    <li><a href="/vi/post/oop-python/">Lập Trình Hướng Đối Tượng Trong Python</a></li>
-    
-    <li><a href="/vi/post/viet-luan-van/">Kinh Nghiệm Viết Tài Liệu Khoa Học</a></li>
-    
-  </ul>
-</div>
-
-
-
-
-<div class="article-container">
   
-<section id="comments">
-  <div id="disqus_thread"></div>
-<script>
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
+
+  
 
 
 </div>
-
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
@@ -460,4 +345,6 @@ Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để c
 
   </body>
 </html>
+
+
 

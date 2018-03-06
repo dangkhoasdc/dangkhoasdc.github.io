@@ -164,6 +164,18 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/post/install_opencv_vs/" hreflang="en"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/post/install_opencv_vs/" hreflang="vi"/>
+    
+      <loc>http://dangkhoasdc.github.io/post/install_opencv_vs/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/project/usbl/</loc>
       <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     </url>
@@ -474,6 +486,19 @@
     
       <loc>http://dangkhoasdc.github.io/tags/taocp/</loc>
       <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/visual-studio/" hreflang="en"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/visual-studio/" hreflang="vi"/>
+    
+      <loc>http://dangkhoasdc.github.io/tags/visual-studio/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
