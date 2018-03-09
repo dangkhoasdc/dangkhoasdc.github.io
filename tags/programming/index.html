@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.37" />
+  <meta name="generator" content="Hugo 0.37.1" />
   <meta name="author" content="Dang-Khoa">
   <meta name="description" content="Research Assistant">
 
@@ -86,7 +86,7 @@
   <meta property="og:description" content="Research Assistant">
   <meta property="og:locale" content="en-us">
   
-  <meta property="og:updated_time" content="2018-02-25T00:00:00&#43;00:00">
+  <meta property="og:updated_time" content="2018-03-09T00:00:00&#43;00:00">
   
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -233,6 +233,29 @@
   
 
   
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/post/advmatlab/">Cool stuff I&#39;ve learnt from AdvMATLAB</a></h2>
+    <div class="article-style">
+      
+      AdvMATLAB is a free course from Stanford ONLINE Lagunita which basically is a MOOC platform from Edx. Still, there are many fascinting courses delivered by Stanford.
+This is a note of cool stuff I&rsquo;ve found while studying this course which I never known before.
+Language Features Numeric Data Types:
+single, double, int8, int16, int32, int64, uint8, uint16, uint32, uint64, NaN, Inf  So, NaN and Inf are seperate data types.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/post/opencv_android_practice/">OpenCV on Android: practices and tips</a></h2>
+    <div class="article-style">
+      
+      Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
+Basically, we have a function playing as a bridge between Java APIs and NDK:
+public native void function_name(long matAddress);  To call the function, we use Mat&rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.
+      
+    </div>
+  </div>
   
   <div>
     <h2><a href="http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/">Setup OpenCV and Android Studio with NDK support</a></h2>
