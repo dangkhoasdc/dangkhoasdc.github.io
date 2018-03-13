@@ -11,7 +11,7 @@
   <meta name="description" content="Research Assistant">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/oop-python/">
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/post/cyclic_perm/">
 
   
   
@@ -69,7 +69,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/oop-python/">
+  <link rel="canonical" href="http://dangkhoasdc.github.io/post/cyclic_perm/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -77,14 +77,14 @@
   <meta property="twitter:creator" content="@dksdc">
   
   <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
-  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/oop-python/">
-  <meta property="og:title" content="Lập Trình Hướng Đối Tượng Trong Python | Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/post/cyclic_perm/">
+  <meta property="og:title" content="Cyclic permutations | Dang-Khoa&#39;s blog ">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2015-07-20T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2018-03-10T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2015-07-20T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2018-03-10T00:00:00&#43;00:00">
   
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -96,7 +96,7 @@
 </script>
 
 
-  <title>Lập Trình Hướng Đối Tượng Trong Python | Dang-Khoa&#39;s blog </title>
+  <title>Cyclic permutations | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -109,13 +109,13 @@
       
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
               data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       
-      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+      <a class="navbar-brand" href="/">Dang-Khoa&#39;s blog </a>
     </div>
 
     
@@ -128,7 +128,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/#posts">
+          <a href="/#posts">
             
             <span>Posts</span>
           </a>
@@ -140,7 +140,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/#about">
+          <a href="/#about">
             
             <span>Home</span>
           </a>
@@ -152,7 +152,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/#projects">
+          <a href="/#projects">
             
             <span>Projects</span>
           </a>
@@ -164,7 +164,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/#publications_selected">
+          <a href="/#publications_selected">
             
             <span>Publications</span>
           </a>
@@ -176,7 +176,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/about/">
+          <a href="/about/">
             
             <span>About</span>
           </a>
@@ -188,7 +188,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/tags/notes/">
+          <a href="/tags/notes/">
             
             <span>Notes</span>
           </a>
@@ -212,7 +212,7 @@
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Lập Trình Hướng Đối Tượng Trong Python</h1>
+      <h1 itemprop="name">Cyclic permutations</h1>
 
       
 
@@ -220,22 +220,22 @@
 
   <span class="article-date">
     
-    <time datetime="2015-07-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2015-07-20
+    <time datetime="2018-03-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-03-10
     </time>
   </span>
 
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    1 min read
   </span>
   
 
   
   
   <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/oop-python/#disqus_thread"></a>
+  <a href="http://dangkhoasdc.github.io/post/cyclic_perm/#disqus_thread"></a>
   
 
   
@@ -246,28 +246,28 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=L%e1%ba%adp%20Tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20Trong%20Python&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2foop-python%2f"
+         href="https://twitter.com/intent/tweet?text=Cyclic%20permutations&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcyclic_perm%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2foop-python%2f"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcyclic_perm%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2foop-python%2f&amp;title=L%e1%ba%adp%20Tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20Trong%20Python"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcyclic_perm%2f&amp;title=Cyclic%20permutations"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=L%e1%ba%adp%20Tr%c3%acnh%20H%c6%b0%e1%bb%9bng%20%c4%90%e1%bb%91i%20T%c6%b0%e1%bb%a3ng%20Trong%20Python&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2foop-python%2f">
+         href="mailto:?subject=Cyclic%20permutations&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2fcyclic_perm%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -281,103 +281,12 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        
-
-<p>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.</p>
-
-<h1 id="enum-trong-python">Enum trong python</h1>
-
-<p>Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</p>
-
-<pre><code class="language-python">from enum import Enum
-
-class Color(Enum):
-    RED     = 1
-    GREEN   = 2
-    BLUE    = 3
-
-</code></pre>
-
-<h2 id="không-multiple-constructors">Không multiple constructors</h2>
-
-<p>Nhưng ta có thể sử dụng <code>optical argument</code> như một thế mạnh và thay thế cho multiple constructor.</p>
-
-<h2 id="không-access-modifier">Không access modifier</h2>
-
-<p>Đồng nghĩa với việc không có <code>public</code>, <code>private</code> hay là <code>protected</code> gì cả. Ngay cả việc thêm <code>__</code> vào trước properties hay method cũng không giải quyết được vấn đề. Với mỗi thuộc tính <code>__p</code> của lớp <code>A</code> đơn giản là được đổi tên thành <code>_A__p</code>.</p>
-
-<h3 id="private-methods">Private methods</h3>
-
-<p>Sử dụng tiền tố <code>__</code> khác các phương thức muốn đặt <code>private</code>.</p>
-
-<h2 id="tạo-property">Tạo property</h2>
-
-<p>Nếu được, tạo thành method thay thế. Còn không có thể sử dụng decorator <code>@property</code> trước method để đổi thành property.</p>
-
-<h2 id="đa-kế-thừa">Đa kế thừa</h2>
-
-<p>Tránh vấn đề này càng tốt. Tham khảo <a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem" target="_blank">tại đây</a>.</p>
-
-<h2 id="các-thuộc-tính-và-method-static">Các thuộc tính và method static</h2>
-
-<p>Mình không nghĩ là cần thuộc tính hay method static cho lắm. Nếu có thể cài thuộc tính/method static thì thay vào đó có thể đặt bên ngoài class và xếp trong cùng module. Nhưng vậy có thể truy cập các thuộc tính, hàm thông qua module thay vì class, và mình thấy hầu như không khác nhau là mấy.</p>
-
-<h2 id="gọi-constructor-từ-lớp-cha">Gọi constructor từ lớp cha</h2>
-
-<p>Đây là một vấn đề khá nan giải trong trường hợp đa kế thừa. Giả sử ta có lớp A, lớp B và C. Trong đó lớp C kế thừa vừa lớp A và lớp B. Vấn đề là làm thế nào để gọi A, B trong hàm khởi tạo, và làm thế nào để biết lớp cha nào được gọi trước.</p>
-
-<pre><code class="language-python">class A(object):
-    def __init__(self):
-        super(A, self).__init__()
-        print &quot;entering A&quot;
-        print &quot;leaving A&quot;
-
-class B(object):
-    def __init__(self):
-        super(B, self).__init__()
-        print &quot;entering B&quot;
-        print &quot;leaving B&quot;
-
-class C(A,B):
-    def __init__(self):
-        print &quot;entering c&quot;
-        super(C, self).__init__()
-        print &quot;leaving c&quot;
-
-
-if __name__ == '__main__':
-    c = C()
-
-</code></pre>
-
-<p>Có một số điều khá thú vị xoay quanh điều này sau khi ta thử nghiệm hoán vị trình tự kế thừa, trình tự định nghĩa lớp:</p>
-
-<ol>
-<li>Trong mỗi hàm phải khai báo <code>super(ClassName, self).__init__()</code> thì việc gọi các hàm khởi tạo từ các lớp cha mới thực hiện được.</li>
-<li>Không phụ thuộc vào trình tự kế thừa.</li>
-<li>Trình tự hàm khởi tạo được gọi dựa them alphabet.</li>
-</ol>
-
-<h2 id="practices">Practices</h2>
-
-<ol>
-<li>Để kiểm tra một biến có phải là 1 thể hiện của lớp không, sử dụng hàm <code>isinstance</code>, tuy nhiên khuyến khích không xài. Vì Python là Duck Type mà.</li>
-<li>Khai báo một thứ na ná struct trong C/C++:
-{% highlight python %}
-class ClassName:
-pass
-{% endhighlight%}</li>
-</ol>
-
-<p>Sau đó thì có thể tha hồ thêm thuộc tính nào vào cũng được.</p>
-
-<h2 id="references">References</h2>
-
-<ol>
-<li><a href="https://docs.python.org/2/tutorial/classes.html" target="_blank">https://docs.python.org/2/tutorial/classes.html</a></li>
-</ol>
-
-<p>P.s: Các chủ đề hại não và nâng cao có thể được đề cập là Iterators, Generators, &hellip;</p>
+        <p>In this post I will talk about cyclic permutations which is discussed in TAoCP
+in different sections, e.g., section 1.3.3 for some applications of
+permutations, section 5.1.1 analyze the difference between inversion and other
+permutation properties. Besides, the concept has been used in several interesting
+problems, especially in counting the minimum number of exchanges in a
+permutation, or an array.</p>
 
       </div>
 
@@ -386,9 +295,7 @@ pass
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/vi/tags/programming">programming</a>
-  
-  <a class="btn btn-primary btn-outline" href="/vi/tags/python">python</a>
+  <a class="btn btn-primary btn-outline" href="/tags/tags">tags</a>
   
 </div>
 
@@ -400,20 +307,6 @@ pass
 </article>
 
 
-
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/vi/post/viet-luan-van/">Kinh Nghiệm Viết Tài Liệu Khoa Học</a></li>
-    
-    <li><a href="/vi/post/opencv-tips/">Ghi chú hướng dẫn cài đặt OpenCV</a></li>
-    
-    <li><a href="/vi/post/spams-lib/">Spams Lib và Những Tâm Sự</a></li>
-    
-  </ul>
-</div>
 
 
 

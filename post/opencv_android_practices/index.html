@@ -297,7 +297,7 @@ the data.</p>
 All computations in NDK will affect the content of MAT in both Java and
 NDK layers.</p>
 
-<p>In the NDK code, to use <code>cv::Mat</code> object regardings <code>java Mat</code>, we can use
+<p>In the NDK code, to use <code>cv::Mat</code> object regarding <code>java Mat</code>, we can use
 <code>static_cast</code>:</p>
 
 <pre><code class="language-cpp">
@@ -307,7 +307,7 @@ Mat&amp; im = *(static_cast&lt;Mat*&gt;(addrImg));
 <h2 id="notes">Notes</h2>
 
 <p>There is a huge different in image channels between <code>Java OpenCV</code> and <code>NDK OpenCV</code>.
-When we deocde the path or file to a bitmap in Java, we have to convert
+When we decode the path or file to a bitmap in Java, we have to convert
 the bitmap to <code>ARGB_8888</code> color channel, otherwise it does not work. Actually,
 it also can work on <code>RGB_565</code> but for some reasons I can not remember, I always
 use <code>ARGB_8888</code> in the project.</p>
@@ -315,7 +315,7 @@ use <code>ARGB_8888</code> in the project.</p>
 <pre><code class="language-java">Bitmap bm32_image = bm.copy(Bitmap.Config.ARGB_8888, true);
 </code></pre>
 
-<p>To manipulate the image corerctly in NDK, we should covert it to the normal
+<p>To manipulate the image correctly in NDK, we should covert it to the normal
 RGB channel, otherwise sometimes we get some bugs making us frustrating.</p>
 
 <pre><code class="language-java">// convert ARGB_8888 to RGB
@@ -328,7 +328,7 @@ function_name(rgb_im.getNativeObjAddr());
 </code></pre>
 
 <p>Other practice is to put some assertions in NDK code to make sure that we the
-use corerct format for the input.</p>
+use the correct format for the input.</p>
 
 <h1 id="opencv-s-camera">OpenCV&rsquo;s Camera</h1>
 
@@ -365,7 +365,7 @@ required methods from the <code>CvCameraViewLisener2</code>. There 3 methods are
 <li><code>onCameraFrame</code>.</li>
 </ul>
 
-<p>Prior to processing the camera, we need to intialize the variable holding
+<p>Prior to processing the camera, we need to initialize the variable holding
 callbacks of three aforementioned methods:</p>
 
 <pre><code class="language-java">private CameraBridgeViewBase mOpenCVCamera;
@@ -406,7 +406,7 @@ callbacks of three aforementioned methods:</p>
 
 </code></pre>
 
-<p>Noting that OpenCV&rsquo;s Camera is not able to set a portray mode. One workaround
+<p>Noting that OpenCV&rsquo;s Camera is not able to set the portrait mode. One workaround
 is to turn the Activity to <code>landscape</code> by putting the following line inside tag <code>Activity</code>
 in <code>AndroidManifest.xml</code></p>
 
