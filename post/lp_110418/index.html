@@ -287,10 +287,10 @@
 
 <h1 id="how-to-solve-constraint-optimization-in-python">How to solve constraint optimization in Python?</h1>
 
-<p>I immediately think about <a href="https://developers.google.com/optimization/" target="_blank">OR-Tools</a> which is the prominient library for solving discrete and integer optimization. The main drawback is that i do not know whether it can integrate into numerical library, especially deep learning frameworks such as Theano, Tensorflow, etc.
+<p>I immediately think about <a href="https://developers.google.com/optimization/" target="_blank">OR-Tools</a> which is the prominent library for solving discrete and integer optimization. The main drawback is that I do not know whether it can integrate into numerical library, especially deep learning frameworks such as Theano, Tensorflow, etc.
 However, the workaround is quite simple, <code>scipe</code> actually supports a bunch of optimization algorithms, including some methods we can adapt for constraint functions.</p>
 
-<p>For instance, <code>scipy.optimize.minimize</code> is able to solve the objective with equality and inequality constraints [<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize" target="_blank">link</a>]. The problem is now tractable because there are many approaches we can try to relax the constraints and later use the aforementioned funciton to solve. Contrarily, deep learning frameworks only
+<p>For instance, <code>scipy.optimize.minimize</code> is able to solve the objective with equality and inequality constraints [<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize" target="_blank">link</a>]. The problem is now tractable because there are many approaches we can try to relax the constraints and later use the aforementioned function to solve. Contrarily, deep learning frameworks only
 support the SGD and its variants.</p>
 
       </div>

@@ -19,7 +19,7 @@
       
       <guid>http://dangkhoasdc.github.io/post/lp_110418/</guid>
       <description>I just found a bag of gems from Peter Norvig, the author of Artificial Intelligence: A Modern Approach, which in my opinion is the must-read book for anyone who truly want to learn about AI.
-How to solve constraint optimization in Python? I immediately think about OR-Tools which is the prominient library for solving discrete and integer optimization. The main drawback is that i do not know whether it can integrate into numerical library, especially deep learning frameworks such as Theano, Tensorflow, etc.</description>
+How to solve constraint optimization in Python? I immediately think about OR-Tools which is the prominent library for solving discrete and integer optimization. The main drawback is that I do not know whether it can integrate into numerical library, especially deep learning frameworks such as Theano, Tensorflow, etc.</description>
     </item>
     
     <item>
