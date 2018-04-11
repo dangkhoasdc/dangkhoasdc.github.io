@@ -567,6 +567,9 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/deep-learning/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/deep-learning/" hreflang="en"/>
+    
       <loc>http://dangkhoasdc.github.io/vi/tags/deep-learning/</loc>
       <lastmod>2016-10-23T00:00:00+00:00</lastmod>
       <priority>0</priority>

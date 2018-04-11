@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.38" />
+  <meta name="generator" content="Hugo 0.38.2" />
   <meta name="author" content="Dang-Khoa">
   <meta name="description" content="Research Assistant">
 
@@ -288,9 +288,9 @@
 <h1 id="how-to-solve-constraint-optimization-in-python">How to solve constraint optimization in Python?</h1>
 
 <p>I immediately think about <a href="https://developers.google.com/optimization/" target="_blank">OR-Tools</a> which is the prominient library for solving discrete and integer optimization. The main drawback is that i do not know whether it can integrate into numerical library, especially deep learning frameworks such as Theano, Tensorflow, etc.
-However, the workaround is quite simple, <code>scipe</code> actually supports a bunch of optimization algorithms, including some methods we can adopt to constraint functions.</p>
+However, the workaround is quite simple, <code>scipe</code> actually supports a bunch of optimization algorithms, including some methods we can adapt for constraint functions.</p>
 
-<p>For instance, <code>scipy.optimize.minimize</code> is able to solve the objective with equality and inequality constraints [<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize" target="_blank">link</a>]. The problem is now tractable because there are many approaches we can try to relax the constriants and later use the aforementioned funciton to solve. Contrarily, deep learning frameworks only
+<p>For instance, <code>scipy.optimize.minimize</code> is able to solve the objective with equality and inequality constraints [<a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.minimize.html#scipy.optimize.minimize" target="_blank">link</a>]. The problem is now tractable because there are many approaches we can try to relax the constraints and later use the aforementioned funciton to solve. Contrarily, deep learning frameworks only
 support the SGD and its variants.</p>
 
       </div>
@@ -322,13 +322,13 @@ support the SGD and its variants.</p>
     
     <li><a href="/post/lp_100418/">Log: Rust and OOP in Python</a></li>
     
+    <li><a href="/post/theano_getting_started/">Theano: A graph computation framework - Notes and Tips</a></li>
+    
     <li><a href="/post/opencv_android_practices/">OpenCV on Android: practices and tips</a></li>
     
     <li><a href="/post/opencv_android_studio_ndk/">Setup OpenCV and Android Studio with NDK support</a></li>
     
     <li><a href="/post/matlab/">Matlab</a></li>
-    
-    <li><a href="/post/install_opencv_vs/">Install the OpenCV library on Visual Studio</a></li>
     
   </ul>
 </div>

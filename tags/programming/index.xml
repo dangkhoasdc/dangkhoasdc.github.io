@@ -33,6 +33,18 @@ Python  Avoid the unexpected keyword arguments passed to function error: Put **k
     </item>
     
     <item>
+      <title>Theano: A graph computation framework - Notes and Tips</title>
+      <link>http://dangkhoasdc.github.io/post/theano_getting_started/</link>
+      <pubDate>Tue, 03 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/theano_getting_started/</guid>
+      <description>Although the library stops developing, it is worth to learn since there are many prominent papers using Theano. Besides, there are lots of stuff to learn from the implementation.
+So, Theano basically is a symbolic graphs of computation. Plus, it can do automatically gradient computing stuff.
+Learning Materials  Fancy Presentation  Installation sudo pip install theano  To fix the inconsistent between float32 and float64, in .theanorc:
+[global] floatX = float32  Getting Started There are several conventions:</description>
+    </item>
+    
+    <item>
       <title>OpenCV on Android: practices and tips</title>
       <link>http://dangkhoasdc.github.io/post/opencv_android_practices/</link>
       <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
