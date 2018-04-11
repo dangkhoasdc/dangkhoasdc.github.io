@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Courses on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/vi/tags/courses/</link>
+    <description>Recent content in Courses on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Mon, 08 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/vi/tags/courses/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Review Algorithms (Princeton) - Coursera</title>
+      <link>http://dangkhoasdc.github.io/vi/post/review_algs_princeton_coursera/</link>
+      <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/post/review_algs_princeton_coursera/</guid>
+      <description>Đây là một trong những khoá rất đỉnh về lập trình, vì sao ư?
+ Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/rust/</link>
+    <description>Recent content in Rust on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Tue, 10 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Programming Logs</title>
+      <link>http://dangkhoasdc.github.io/post/lp_100418/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/lp_100418/</guid>
+      <description>Rust Rust is really interesting. It is much easier to implement the total order with several default methods than that of C++.
+Python  Avoid the unexpected keyword arguments passed to function error: Put **kwargs in the end of argument list in the function definition:  def f(a): print(&amp;quot;Definitely error&amp;quot;) d = {&#39;a&#39;:10, &#39;c&#39;:20} f(d) def f1(a, **kwargs): print(&amp;quot;Problem solved&amp;quot;) f1(d)   To design the interface mechanism in Python, we can use the abc (Abstract Base Classes) module.</description>
+    </item>
+    
+  </channel>
+</rss>

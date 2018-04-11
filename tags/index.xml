@@ -7,20 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Algorithms</title>
       <link>http://dangkhoasdc.github.io/tags/algorithms/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/tags/algorithms/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Computer Vision</title>
+      <title>Android</title>
+      <link>http://dangkhoasdc.github.io/tags/android/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Books</title>
+      <link>http://dangkhoasdc.github.io/tags/books/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer vision</title>
+      <link>http://dangkhoasdc.github.io/tags/computer-vision/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer-vision</title>
       <link>http://dangkhoasdc.github.io/tags/computer-vision/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
       
@@ -29,16 +58,7 @@
     </item>
     
     <item>
-      <title>Computer Vison</title>
-      <link>http://dangkhoasdc.github.io/tags/computer-vison/</link>
-      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/tags/computer-vison/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Deep Learning</title>
+      <title>Deep-learning</title>
       <link>http://dangkhoasdc.github.io/tags/deep-learning/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
       
@@ -47,29 +67,29 @@
     </item>
     
     <item>
-      <title>Documentary</title>
-      <link>http://dangkhoasdc.github.io/tags/documentary/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      <title>History</title>
+      <link>http://dangkhoasdc.github.io/tags/history/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/tags/documentary/</guid>
+      <guid>http://dangkhoasdc.github.io/tags/history/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Font</title>
-      <link>http://dangkhoasdc.github.io/tags/font/</link>
-      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/tags/font/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Image Retrieval</title>
+      <title>Image-retrieval</title>
       <link>http://dangkhoasdc.github.io/tags/image-retrieval/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/tags/image-retrieval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Math</title>
+      <link>http://dangkhoasdc.github.io/tags/math/</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/math/</guid>
       <description></description>
     </item>
     
@@ -83,54 +103,36 @@
     </item>
     
     <item>
-      <title>Memories</title>
-      <link>http://dangkhoasdc.github.io/tags/memories/</link>
-      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/tags/memories/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Misc</title>
       <link>http://dangkhoasdc.github.io/tags/misc/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/tags/misc/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Movies</title>
-      <link>http://dangkhoasdc.github.io/tags/movies/</link>
-      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/tags/movies/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Notes</title>
       <link>http://dangkhoasdc.github.io/tags/notes/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/tags/notes/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Others</title>
-      <link>http://dangkhoasdc.github.io/tags/others/</link>
-      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Opencv</title>
+      <link>http://dangkhoasdc.github.io/tags/opencv/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/tags/others/</guid>
+      <guid>http://dangkhoasdc.github.io/tags/opencv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programming</title>
       <link>http://dangkhoasdc.github.io/tags/programming/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/tags/programming/</guid>
       <description></description>
@@ -139,9 +141,45 @@
     <item>
       <title>Python</title>
       <link>http://dangkhoasdc.github.io/tags/python/</link>
-      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rust</title>
+      <link>http://dangkhoasdc.github.io/tags/rust/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Taocp</title>
+      <link>http://dangkhoasdc.github.io/tags/taocp/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/taocp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visual studio</title>
+      <link>http://dangkhoasdc.github.io/tags/visual-studio/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/visual-studio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>http://dangkhoasdc.github.io/tags/windows/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/windows/</guid>
       <description></description>
     </item>
     

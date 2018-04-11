@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine learning on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/vi/tags/machine-learning/</link>
+    <description>Recent content in Machine learning on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Thu, 29 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/vi/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Overfitting là cái quái gì</title>
+      <link>http://dangkhoasdc.github.io/vi/post/overfitting/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/post/overfitting/</guid>
+      <description>Đây là cuộc hành trình của mình tìm về bản chất của câu chuyện overfiting, underfitting và các khái niệm lung tung xung quanh như bias-variance tradeoff.
+Tài liệu tham khảo chính được lấy từ 2 cuốn sách:
+ Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. Learning from data. Vol. 4. New York, NY, USA:: AMLBook, 2012. Friedman, Jerome, Trevor Hastie, and Robert Tibshirani. The elements of statistical learning. Vol.</description>
+    </item>
+    
+  </channel>
+</rss>

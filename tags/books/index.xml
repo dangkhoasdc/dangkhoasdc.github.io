@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/books/</link>
+    <description>Recent content in Books on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Wed, 07 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Programming Pearls</title>
+      <link>http://dangkhoasdc.github.io/post/programming_pearls/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/programming_pearls/</guid>
+      <description>Programing Pearls - Jon Bentley
+Excellent.
+Until now, there is no such book which makes me shout out like this after receiving from Amazon. Let brieftly review some favoriate books:
+ CLRS: theoretically, this really is an &amp;ldquo;introduction&amp;rdquo; textbook about algorithms. Nonetheless, it still is an extensive reference and full of details. However, I am not impressed by the writing style and the pseudo-code.
+ Algorithms, Sedgewick: one of the best textbooks ever.</description>
+    </item>
+    
+    <item>
+      <title>Selected Papers on Computer Science (Don Knuth) and the current state of Deep Learning</title>
+      <link>http://dangkhoasdc.github.io/post/selectedpapers_cs/</link>
+      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/selectedpapers_cs/</guid>
+      <description>Book Info:
+    Description     Title Selected Papers on Computer Science [Amazon]   Author Donald Knuth   Pages 276    This is the most accessible book from Don Knuth. Although I was published nearly 20 years ago, it still is a classic computer science book. In Amazon, there is an interesting comment about the book from Peter Norvig (Director of Google Research).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Computer science on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/vi/tags/computer-science/</link>
+    <description>Recent content in Computer science on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Wed, 27 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/vi/tags/computer-science/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Người Việt trong Khoa học Máy Tính</title>
+      <link>http://dangkhoasdc.github.io/vi/post/vietcs/</link>
+      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/post/vietcs/</guid>
+      <description>Dưới đây là ghi chép/ sưu tầm của bản thân về những người Việt đã ảnh hưởng đến sự lịch sử và sự phát triển của Khoa học Máy Tính. Đây là thống kê cá nhân và nếu có bạn nào có phát hành lại thì nhớ ghi nguồn nhé :) [Một số nhân vật mình không rõ tên cụ thể trong tiếng Việt nên sẽ ghi bằng tên ghi trên wiki hoặc trang cá nhân.</description>
+    </item>
+    
+  </channel>
+</rss>

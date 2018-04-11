@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/vi/tags/tutorial/</link>
+    <description>Recent content in Tutorial on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Mon, 01 Jun 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/vi/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ghi chú hướng dẫn cài đặt OpenCV</title>
+      <link>http://dangkhoasdc.github.io/vi/post/opencv-tips/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/post/opencv-tips/</guid>
+      <description>I don&amp;rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.
+ Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C++, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.
+Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style step by step nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn.</description>
+    </item>
+    
+  </channel>
+</rss>

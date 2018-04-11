@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/vi/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Wed, 03 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/vi/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cài đặt quan hệ thứ tự trong C&#43;&#43;</title>
+      <link>http://dangkhoasdc.github.io/vi/post/total_order/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/post/total_order/</guid>
+      <description>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
+ Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.</description>
+    </item>
+    
+  </channel>
+</rss>

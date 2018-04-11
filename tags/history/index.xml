@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>History on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/history/</link>
+    <description>Recent content in History on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/history/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>History of Computer Vision - Part 1</title>
+      <link>http://dangkhoasdc.github.io/post/compvision_hist/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/compvision_hist/</guid>
+      <description>[It is such a long time since I wrote a dedicated technical post about computer vision.]
+Introduction Since Computer Vision is an interdisciplinary research which involves different fields such as physics, biology, computer science, neuroscience, etc. For this reason, there are different approaches when people consider about the history of computer science. In this post, I summarize two viewpoints of Prof. Fei-Fei Li, and Prof. Richard Szeliski from their courses [1] and textbooks [1].</description>
+    </item>
+    
+  </channel>
+</rss>
