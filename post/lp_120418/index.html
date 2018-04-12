@@ -11,7 +11,7 @@
   <meta name="description" content="Research Assistant">
 
   
-  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/sakamoto_method/">
+  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/post/lp_120418/">
 
   
   
@@ -69,7 +69,7 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
 
-  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/sakamoto_method/">
+  <link rel="canonical" href="http://dangkhoasdc.github.io/post/lp_120418/">
 
   <meta property="twitter:card" content="summary_large_image">
   
@@ -77,14 +77,14 @@
   <meta property="twitter:creator" content="@dksdc">
   
   <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
-  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/sakamoto_method/">
-  <meta property="og:title" content="Bài toán chuyển ngày sang thứ | Dang-Khoa&#39;s blog ">
+  <meta property="og:url" content="http://dangkhoasdc.github.io/post/lp_120418/">
+  <meta property="og:title" content="Log: Using Scipy&#39;s Optimization for constrained function | Dang-Khoa&#39;s blog ">
   <meta property="og:description" content="">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2017-09-16T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2018-04-12T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2017-09-16T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2018-04-12T00:00:00&#43;00:00">
   
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -96,7 +96,7 @@
 </script>
 
 
-  <title>Bài toán chuyển ngày sang thứ | Dang-Khoa&#39;s blog </title>
+  <title>Log: Using Scipy&#39;s Optimization for constrained function | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
@@ -109,13 +109,13 @@
       
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
               data-target=".navbar-collapse" aria-expanded="false">
-        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       
-      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+      <a class="navbar-brand" href="/">Dang-Khoa&#39;s blog </a>
     </div>
 
     
@@ -128,7 +128,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/#posts">
+          <a href="/#posts">
             
             <span>Posts</span>
           </a>
@@ -140,7 +140,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/#about">
+          <a href="/#about">
             
             <span>Home</span>
           </a>
@@ -152,7 +152,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/#projects">
+          <a href="/#projects">
             
             <span>Projects</span>
           </a>
@@ -164,7 +164,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/#publications_selected">
+          <a href="/#publications_selected">
             
             <span>Publications</span>
           </a>
@@ -176,7 +176,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/about/">
+          <a href="/about/">
             
             <span>About</span>
           </a>
@@ -188,7 +188,7 @@
         
 
         <li class="nav-item">
-          <a href="/vi/tags/notes/">
+          <a href="/tags/notes/">
             
             <span>Notes</span>
           </a>
@@ -212,7 +212,7 @@
 
   <div class="article-container">
     <div class="article-inner">
-      <h1 itemprop="name">Bài toán chuyển ngày sang thứ</h1>
+      <h1 itemprop="name">Log: Using Scipy&#39;s Optimization for constrained function</h1>
 
       
 
@@ -220,22 +220,22 @@
 
   <span class="article-date">
     
-    <time datetime="2017-09-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2017-09-16
+    <time datetime="2018-04-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-04-12
     </time>
   </span>
 
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    1 min read
   </span>
   
 
   
   
   <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/sakamoto_method/#disqus_thread"></a>
+  <a href="http://dangkhoasdc.github.io/post/lp_120418/#disqus_thread"></a>
   
 
   
@@ -246,28 +246,28 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fsakamoto_method%2f"
+         href="https://twitter.com/intent/tweet?text=Log%3a%20Using%20Scipy%27s%20Optimization%20for%20constrained%20function&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flp_120418%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fsakamoto_method%2f"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flp_120418%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fsakamoto_method%2f&amp;title=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flp_120418%2f&amp;title=Log%3a%20Using%20Scipy%27s%20Optimization%20for%20constrained%20function"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=B%c3%a0i%20to%c3%a1n%20chuy%e1%bb%83n%20ng%c3%a0y%20sang%20th%e1%bb%a9&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fsakamoto_method%2f">
+         href="mailto:?subject=Log%3a%20Using%20Scipy%27s%20Optimization%20for%20constrained%20function&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fpost%2flp_120418%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -281,41 +281,21 @@
 
 
       <div class="article-style" itemprop="articleBody">
-        
+        <p>One thing is worth noting that <code>scipy.optimization.minimize</code> only is able to
+solve the vector input, instead of multiple dimensional input.</p>
 
-<p>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo;
-Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip;
-Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).</p>
+<p>Just found an interesting course about probability and simulation [<a href="https://eml.berkeley.edu/books/choice2.html" target="_blank">Discrete
+Choice Methods with Simulation</a>].</p>
 
-<pre><code class="language-c">dayofweek(y, m, d) {
-    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
-    y -= m &lt; 3;
-    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
-}
-</code></pre>
+<p>To use first-order function operations in Python, use helper functions in
+<code>functools</code>. It is pretty good.</p>
 
-<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với <sup>1</sup>&frasl;<sub>1</sub> (Nếu ngày <sup>1</sup>&frasl;<sub>1</sub> là thứ Hai thì <sup>1</sup>&frasl;<sub>2</sub> sẽ là thứ 5). <code>t[]</code> chính là offset cho ngày đầu tiên của tháng so với ngày <sup>1</sup>&frasl;<sub>1</sub>, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
+<p>One thing to remember is that we always have to call the methods to evaluate
+the graph of Theano via <code>eval</code> or the <code>function</code> construction. We can not
+call directly the graph and expect a real values returned.</p>
 
-<p>Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm <code>y</code>, ta phải cộng thêm <code>y</code> ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.</p>
-
-<p>Những năm nhuận, ta lại phải thêm cái ngày <sup>29</sup>&frasl;<sub>2</sub> vào trong, tức là nó sẽ thêm 1 ngày nữa, trong <code>y</code> năm? nếu có <code>y</code> năm nhuận thì sẽ có thêm <code>x</code> ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.</p>
-
-<p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày <sup>29</sup>&frasl;<sub>2</sub>, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
-
-<p>Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng <code>t[]</code> lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào <code>t[0]</code> và <code>t[1]</code> và giữ nguyên các <code>t[]</code> còn lại Sau đó chuyển -1 trong <code>d-1</code> vào offset, lúc đó ta sẽ được mảng <code>t[]</code> như trong code gốc.</p>
-
-<p>Ta còn một vấn đề là xác định ngày ban đầu để làm mốc và độ lệch <code>c</code> của ngày gốc đó so với ngày Chủ Nhật với <code>index = 0</code>. Nhưng bằng kiểm chứng, người ta phát hiện ra <code>c = 0</code>. Wow. 😲</p>
-
-<p>Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.</p>
-
-<p>Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.</p>
-
-<h3 id="references">References</h3>
-
-<ol>
-<li><a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week" target="_blank">Wiki: Determination of the day of the week</a></li>
-<li><a href="https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ" target="_blank">Source</a></li>
-</ol>
+<p>Second is that we can pass shared variables directly to the output of <code>theano.function</code>
+instead of giving to the <code>inputs</code> parameter.</p>
 
       </div>
 
@@ -324,9 +304,7 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 
 <div class="article-tags">
   
-  <a class="btn btn-primary btn-outline" href="/vi/tags/programming">programming</a>
-  
-  <a class="btn btn-primary btn-outline" href="/vi/tags/algorithms">algorithms</a>
+  <a class="btn btn-primary btn-outline" href="/tags/python">python</a>
   
 </div>
 
@@ -338,24 +316,6 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 </article>
 
 
-
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/vi/post/rand/">rand() is harmful</a></li>
-    
-    <li><a href="/vi/post/intro_randalgs/">Dẫn nhập thuật toán ngẫu nhiên</a></li>
-    
-    <li><a href="/vi/post/randalgs_ex/">Các thuật toán ngẫu nhiên</a></li>
-    
-    <li><a href="/vi/post/install_opencv_vs/">Hướng dẫn cài đặt OpenCV trên Windows</a></li>
-    
-    <li><a href="/vi/post/review_cpp_proglang_book/">Review: The C&#43;&#43; Programming Languages</a></li>
-    
-  </ul>
-</div>
 
 
 
