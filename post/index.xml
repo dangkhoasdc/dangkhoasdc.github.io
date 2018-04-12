@@ -7,22 +7,10 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Apr 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Log: Using Scipy&#39;s Optimization for constrained function</title>
-      <link>http://dangkhoasdc.github.io/post/lp_120418/</link>
-      <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/lp_120418/</guid>
-      <description>One thing is worth noting that scipy.optimization.minimize only is able to solve the vector input, instead of multiple dimensional input.
-Just found an interesting course about probability and simulation [Discrete Choice Methods with Simulation].
-To use first-order function operations in Python, use helper functions in functools. It is pretty good.
-One thing to remember is that we always have to call the methods to evaluate the graph of Theano via eval or the function construction.</description>
-    </item>
     
     <item>
       <title>Theano: A graph computation framework - Notes and Tips</title>
