@@ -413,6 +413,36 @@ in <code>AndroidManifest.xml</code></p>
 <pre><code class="language-xml">android:screenOrientation=&quot;landscape&quot;
 </code></pre>
 
+<h1 id="data-manipulation">Data Manipulation</h1>
+
+<h3 id="unsigned-char-mat"><code>unsigned char</code> Mat</h3>
+
+<p>It is troublesome when we want to assign a value of 255 to an <code>unsigned char</code> Mat
+because this language does not support <code>unsigned char</code> as a primitive type.
+One workaround is to allocate a <code>16S</code> Mat, manipulate on that matrix, and
+finally convert to <code>8U</code>.</p>
+
+<h3 id="point2f-and-point">Point2f and Point</h3>
+
+<p>To convert <code>MatOfPoint</code> to <code>MatOfPoint2f</code>, we use the constructor:</p>
+
+<pre><code class="language-java">MatOfPoint matofpoint = new MatOfPoint(matofpoint2f.toArray());
+</code></pre>
+
+<h2 id="accessing-the-pixel-values">Accessing the pixel values</h2>
+
+<p>In order to retrieve and assign pixel value, we use the getter/setter from <code>Mat</code>.</p>
+
+<pre><code class="language-java">short[] pixel = new short[nchannels];
+
+m.get(i, j, pixel); // retrieve pixel values at (i, j)
+// in this example, the pixel has 3 channels
+pixel[0] = 255;
+pixel[1] = 0;
+pixel[2] = 125;
+m.set(i, j, pixel);
+</code></pre>
+
       </div>
 
       
