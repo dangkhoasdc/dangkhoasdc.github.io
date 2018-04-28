@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="generator" content="Hugo 0.39" />
   <meta name="author" content="Dang-Khoa">
   <meta name="description" content="Research Assistant">
 
@@ -84,7 +84,7 @@
   
   <meta property="article:published_time" content="2017-09-26T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2017-09-26T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2018-04-28T00:00:00&#43;00:00">
   
 
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -220,8 +220,10 @@
 
   <span class="article-date">
     
+        Last updated on
+    
     <time datetime="2017-09-26 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2017-09-26
+      2018-04-28
     </time>
   </span>
 
@@ -283,20 +285,42 @@
       <div class="article-style" itemprop="articleBody">
         
 
-<p>For programming purposes, I prefer Linux to Windows. However, Windows is really good at entertaining and office works. I admit that Microsoft Office is the best office suited I ever have experienced. Besides, OneNote is one of my favorite note-taking software, not to mention my beloved Bilizzard games such as Diablo, Starcraft.</p>
+<p>For programming purposes, I prefer Linux to Windows. However, Windows is
+really good at entertaining and office works. Beside, Microsoft Office is the
+best office suit I ever have experienced, and OneNote is one of my favorite
+note-taking software. Not to mention my beloved Bilizzard games such as Diablo,
+Starcraft and other video games.</p>
 
-<p>One solution to combine Windows and Linux is to install dual-boot in the machine. However, I am tired of switching between 2 OSs. In addition, we have to configure the systems so that it can easily transfer files between 2 different partition formats.</p>
+<p>A solution to integrate Windows and Linux in one machine is
+to install dual-boot. However, I am tired of switching between 2 OSs.
+In addition, we have to configure the systems so that it can easily transfer
+files between 2 different partition formats.</p>
 
-<p>Another workaround is to run Windows or Linux on a virtual machine. Since I usually play video games, I could not use Windows as a client. Running Linux virtually seems promising. Unfortunately, my laptop is not strong enough to run the virtual machine smoothly.</p>
+<p>Another workaround is to run Windows or Linux on a virtual machine.
+Since I usually play video games, I could not use Windows as a client.
+Running Linux virtually seems promising. Unfortunately, my laptop is not strong
+enough to run the virtual machine smoothly.</p>
 
-<p>Finally, M$ comes up with a new feature in Windows 10 which is &lsquo;Windows Subsystem for Linux&rsquo;. Suprisingly, it works flawlessly except several minor issues.</p>
+<p>Finally, M$ comes up with a new feature in Windows 10 named
+<a href="http://wsl-guide.org/en/latest/" target="_blank">&lsquo;Windows Subsystem for Linux&rsquo;</a>. Suprisingly,
+it works flawlessly except several minor issues.</p>
 
 <h1 id="settings">Settings</h1>
 
 <ol>
-<li>Turn Windows Sybsystem on: (1) find <code>Windows features</code> and select <code>Windows Subsystem for Linux</code> , wait for the installation and restart the machine.</li>
-<li>Open Windows Store and install Ubuntu. I also saw OpenSuse on the store. Hopefully, there will be more distros adapted in future, especially Arch Linhx/Manjaro which is my favorite.</li>
-<li>After working around with Ubuntu and Tmux in <code>cmder</code> , I found out that <a href="https://github.com/mintty/wsltty" target="_blank">wsltty</a> is the best solution to avoid fonts broken, key arrow issues. Besides, it run faster than <code>cmder</code> although <code>cmder</code> has many useful features.</li>
+<li>Turn Windows Subsystem On: find <code>Windows features</code> and
+select <code>Windows Subsystem for Linux</code> , wait for the installation and
+restart.</li>
+
+<li><p>Open Windows Store and install Ubuntu.
+I also saw OpenSuse on the store.
+Hopefully, there will be more distros adapted in future,
+especially Arch Linhx/Manjaro which is my favorite.</p></li>
+
+<li><p>After working around with Ubuntu and Tmux in <code>cmder</code>, I have found out
+that <a href="https://github.com/mintty/wsltty" target="_blank">wsltty</a> is the best tool to avoid
+fonts broken, key arrow issues. Besides, it run faster
+than <code>cmder</code> although <code>cmder</code> has many useful features.</p></li>
 </ol>
 
 <p>Here is the result:</p>
@@ -317,6 +341,24 @@ text from Windows to vim.</li>
 <li>Set <code>export DISPLAY=:0</code> in the bashrc or zshrc</li>
 </ol></li>
 </ul>
+
+<h1 id="installing-archlinux-on-wsl">Installing ArchLinux on WSL</h1>
+
+<p>After several months waiting a better solution, finally I found <a href="https://github.com/yuk7/ArchWSL" target="_blank">ArchWSL</a>
+which is easy to install and full of configuration. In addition, it turns out
+that <code>wsltty</code> is not a tool I really want since there are still some issues with
+Unicode font and delay. Now I am using <code>xfce4-terminal</code> with the help from
+Xming.</p>
+
+<p>With a few steps we are able to run xfce4-terminal directly from Windows:</p>
+
+<ol>
+<li><a href="https://tunecomp.net/add-program-to-startup-windows-10/" target="_blank">Set Xming to run on startup</a>.</li>
+<li>Use following command in Run to execute <code>xfce4-terminal</code>:</li>
+</ol>
+
+<pre><code>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -windowstyle hidden -Command &quot;iex \&quot;path\to\arch.exe run DISPLAY=:0 xfce4-terminal&quot;&quot;
+</code></pre>
 
       </div>
 

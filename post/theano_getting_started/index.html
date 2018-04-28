@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="generator" content="Hugo 0.39" />
   <meta name="author" content="Dang-Khoa">
   <meta name="description" content="Research Assistant">
 
@@ -339,7 +339,10 @@ f = function([x, y], z)
 </code></pre>
 
 <p>To create a scalar varialbe, use <code>T.&lt;type&gt;scalar('name_variable')</code> where <code>&lt;type&gt;</code> stands for the type of
-the variable. The prefixes <code>b,i,f,d,c</code> used for <code>byte, integer, float, double, complex</code> respectively. By the way, there are 7 primitive types in Theano: byte (b), 16-bit integer (w), 32-bit integers (i), 4-bit integers (l), float (f), double (d), complex &copy;.</p>
+the variable. The prefixes <code>b, i, f, d, c</code> used for <code>byte, integer, float, double,
+complex</code> respectively. By the way, there are 7 primitive types in Theano: byte
+(b), 16-bit integer (w), 32-bit integers (i), 4-bit integers (l), float (f),
+double (d), complex &copy;.</p>
 
 <p>Use <code>pp</code> to pretty-print the symbolic variable of Theano.</p>
 
@@ -358,22 +361,36 @@ ones:</p>
 
 <h1 id="data-management">Data Management</h1>
 
-<p>Must-Read material: <a href="http://deeplearning.net/software/theano/tutorial/aliasing.html" target="_blank">Understand Memory Aliasing for Speed and Correctness</a>. There are some takeaway notes:</p>
+<p>Must-Read material: <a href="http://deeplearning.net/software/theano/tutorial/aliasing.html" target="_blank">Understand Memory Aliasing for Speed and
+Correctness</a>.
+There are some takeaway notes:</p>
 
 <ul>
 <li>Use <code>borrow=True</code> when creating new share variables.</li>
-<li>Use <code>borrow=False</code> when retrieving the values of TensorVariable, this also is the default value of <code>borrow</code> in <code>get_value</code>.</li>
+<li>Use <code>borrow=False</code> when retrieving the values of TensorVariable, this also is
+the default value of <code>borrow</code> in <code>get_value</code>.</li>
 </ul>
 
 <h1 id="tensor-operations">Tensor Operations</h1>
 
 <h2 id="nondifferentiable-functions">Nondifferentiable functions</h2>
 
-<p>Firstly, let take a look at the <code>sgn</code> function. <a href="https://github.com/Theano/Theano/blob/82a3ec977b7c8630d92871e70d62e5a2c52cea62/theano/scalar/basic.py#L2482" target="_blank">Its gradients</a> are zeros. It means that if we put the signed function, which is especially common in the hashing problem, all prior components of the network are not able to update their weights. Therefore, if the loss function is an autoencoder, namely:</p>
+<p>Firstly, let take a look at the <code>sgn</code> function. <a href="https://github.com/Theano/Theano/blob/82a3ec977b7c8630d92871e70d62e5a2c52cea62/theano/scalar/basic.py#L2482" target="_blank">Its
+gradients</a>
+are zeros. It means that if we put the signed function, which is especially
+common in the hashing problem, all prior components of the network are not able
+to update their weights. Therefore, if the loss function is an autoencoder,
+namely:</p>
 
 <p>$$ L = \left\lVert f(sgn(g(X))) - X \right\rVert $$</p>
 
-<p>where $g$ and $f$ are encoder and decoder, respectively. We could not learn the encoder at all.</p>
+<p>Where $g$ and $f$ are encoder and decoder, respectively. We could not learn the encoder at all.</p>
+
+<h1 id="gradients">Gradients</h1>
+
+<ul>
+<li>To set a variable to be a constant, use <code>theano.gradient.zero_grad</code></li>
+</ul>
 
       </div>
 
