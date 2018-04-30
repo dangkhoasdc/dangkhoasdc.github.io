@@ -11,18 +11,6 @@
   <meta name="description" content="Research Assistant">
 
   
-  <link rel="alternate" hreflang="en" href="http://dangkhoasdc.github.io/post/">
-  
-  <link rel="alternate" hreflang="en-us" href="http://dangkhoasdc.github.io/vi/post/">
-
-  
-  
-
-
-  
-
-  
-  
   
   
     
@@ -30,9 +18,7 @@
   
     
     
-      
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-      
+    <link rel="stylesheet" href="/css/highlight.min.css">
     
   
   
@@ -41,11 +27,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
   
   
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
-  
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
   
   <link rel="stylesheet" href="/css/custom-theme.css">
   
@@ -65,51 +48,26 @@
     
   
 
-  
   <link rel="alternate" href="http://dangkhoasdc.github.io/vi/post/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
   <link rel="feed" href="http://dangkhoasdc.github.io/vi/post/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
-  
 
-  <link rel="manifest" href="/site.webmanifest">
   <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
   <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/">
 
-  <meta property="twitter:card" content="summary_large_image">
   
-  <meta property="twitter:site" content="@dksdc">
-  <meta property="twitter:creator" content="@dksdc">
-  
-  <meta property="og:site_name" content="Dang-Khoa&#39;s blog ">
-  <meta property="og:url" content="http://dangkhoasdc.github.io/vi/post/">
-  <meta property="og:title" content="Posts | Dang-Khoa&#39;s blog ">
-  <meta property="og:description" content="Research Assistant">
-  <meta property="og:locale" content="en-us">
-  
-  <meta property="og:updated_time" content="2018-03-29T00:00:00&#43;00:00">
-  
-
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-2248880369139457",
-    enable_page_level_ads: true
-  });
-</script>
-
 
   <title>Posts | Dang-Khoa&#39;s blog </title>
 
 </head>
-<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
   <div class="container">
 
     
     <div class="navbar-header">
-      
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
               data-target=".navbar-collapse" aria-expanded="false">
         <span class="sr-only">Chuyển Điều Hướng</span>
@@ -117,7 +75,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      
       <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
     </div>
 
@@ -235,16 +192,10 @@
 
   
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/overfitting/">Overfitting là cái quái gì</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/overfitting/" itemprop="url">Overfitting là cái quái gì</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -256,49 +207,37 @@
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/machine-learning">machine learning</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/overfitting/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Đây là cuộc hành trình của mình tìm về bản chất của câu chuyện overfiting, underfitting và các khái niệm lung tung xung quanh như bias-variance tradeoff.
+    <div class="article-style"><p>
+      
+      Đây là cuộc hành trình của mình tìm về bản chất của câu chuyện overfiting, underfitting và các khái niệm lung tung xung quanh như bias-variance tradeoff.
 Tài liệu tham khảo chính được lấy từ 2 cuốn sách:
  Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. Learning from data. Vol. 4. New York, NY, USA:: AMLBook, 2012. Friedman, Jerome, Trevor Hastie, and Robert Tibshirani. The elements of statistical learning. Vol.
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/overfitting/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/opencv_android_studio_ndk/">Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/opencv_android_studio_ndk/" itemprop="url">Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -310,48 +249,42 @@ Tài liệu tham khảo chính được lấy từ 2 cuốn sách:
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/android">android</a
+    >, 
+    
+    <a href="/vi/tags/opencv">opencv</a
+    >, 
+    
+    <a href="/vi/tags/programming">programming</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/opencv_android_studio_ndk/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có hỗ trợ Android được cung cấp sẵn ở OpenCV Homepage. Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì điện thoại phải cài đặt ứng dụng OpenCV Manager.
+    <div class="article-style"><p>
+      
+      Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có hỗ trợ Android được cung cấp sẵn ở OpenCV Homepage. Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì điện thoại phải cài đặt ứng dụng OpenCV Manager.
 Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên bản OpenCV với các tùy chỉnh của riêng cho từng yêu cầu, ví dụ như sử dụng đặc trưng SIFT hoặc các thuật toán có bản quyền.
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/opencv_android_studio_ndk/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/story_telling_witcher3/">Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/story_telling_witcher3/" itemprop="url">Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -363,48 +296,36 @@ Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên b�
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    7 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/games">games</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/story_telling_witcher3/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.
+    <div class="article-style"><p>
+      
+      Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.
   Không bàn đến việc yếu tố điện ảnh, kỹ thuật cắt cảnh đã giúp phân đoạn này đáng nhớ và xuất sắc, thì một yếu tố làm nên chi tiết Geralt và Ciri hội ngộ thêm phần xúc động đó là xây dựng nhân vật trong game.
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/story_telling_witcher3/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/programming_pearls/">Programming Pearls</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/programming_pearls/" itemprop="url">Programming Pearls</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -416,50 +337,41 @@ Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên b�
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    3 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/books">books</a
+    >, 
+    
+    <a href="/vi/tags/algorithms">algorithms</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/programming_pearls/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Programing Pearls - Jon Bentley
+    <div class="article-style"><p>
+      
+      Programing Pearls - Jon Bentley
 Xuất sắc.
 Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thùng của Amazon ra và lượn 1, 2 trang để thốt lên 1 từ &ldquo;xuất sắc&rdquo; cả. Điểm qua một số sách về &ldquo;Algorithms&rdquo; mà tôi từng đọc và tìm hiểu:
  CLRS: về mặt lý thuyết, đây thực sự là &ldquo;introduction&rdquo; nhưng đầy đủ và chi tiết. Tôi không quá ấn tượng bởi cách viết và mã giả.
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/programming_pearls/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/latin_square/">Khối Latin và câu chuyện toán học và lịch sử máy tính</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/latin_square/" itemprop="url">Khối Latin và câu chuyện toán học và lịch sử máy tính</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -471,49 +383,37 @@ Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thù
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    6 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/taocp">taocp</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/latin_square/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Trong dự án dài hơi về TAoCP, những phần đầu của Vol 4A.
-Định nghĩa Cho một ma trận vuông có kích thước M và các phần tử thuộc $\{0, 1, \cdots, M-1 \}$, ta xây dựng ma trận sao cho mỗi phần tử $i$ trong tập $\{0, 1, \cdots, M-1\}$ chỉ xuất hiện đúng 1 lần trong mỗi cột và mỗi dòng.
+    <div class="article-style"><p>
+      
+      Trong dự án dài hơi về TAoCP, những phần đầu của Vol 4A.
+Định nghĩa Cho một ma trận vuông có kích thước M và các phần tử thuộc ${0, 1, \cdots, M-1 }$, ta xây dựng ma trận sao cho mỗi phần tử $i$ trong tập ${0, 1, \cdots, M-1}$ chỉ xuất hiện đúng 1 lần trong mỗi cột và mỗi dòng.
 Ví dụ Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 4 loại $\heartsuit, \diamondsuit, \clubsuit, \spadesuit$, ta sắp xếp sao cho mỗi dòng/cột có đủ 4 chất và 4 quân (Jacques Ozaman, mathematiques et physiques, Paris 1725).
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/latin_square/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/who_am_i/">Tôi là ai</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/who_am_i/" itemprop="url">Tôi là ai</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -525,48 +425,36 @@ Ví dụ Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    3 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/misc">misc</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/who_am_i/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Có lẽ bản thân tôi đã ảo tưởng về khả năng của mình, thời gian gần đây mọi chuyện trở nên tồi tệ, thêm một bài báo bị reject. Như thể có gì đó ở cuốn họng mà không thể nuốt trôi được.
+    <div class="article-style"><p>
+      
+      Có lẽ bản thân tôi đã ảo tưởng về khả năng của mình, thời gian gần đây mọi chuyện trở nên tồi tệ, thêm một bài báo bị reject. Như thể có gì đó ở cuốn họng mà không thể nuốt trôi được.
 Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn được nữa. Hoặc cũng có thể trước giờ mọi điều tôi đạt được hoàn toàn nhờ may mắn.
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/who_am_i/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/compvision_hist/">Lịch sử Thị Giác Máy Tính - Phần 1</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/compvision_hist/" itemprop="url">Lịch sử Thị Giác Máy Tính - Phần 1</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -578,48 +466,39 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    7 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/computer-vision">computer vision</a
+    >, 
+    
+    <a href="/vi/tags/history">history</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/compvision_hist/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Edition: Pre-fascicle 1A (Revision -99).
+    <div class="article-style"><p>
+      
+      Edition: Pre-fascicle 1A (Revision -99).
 [Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT - hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông tin về một hướng nghiên cứu khá hấp dẫn này.
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/compvision_hist/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/">Sách: Selected Papers on Computer Science</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/" itemprop="url">Sách: Selected Papers on Computer Science</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -631,48 +510,36 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    6 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/books">books</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Một chút thông tin về cuốn sách trước khi mình đánh giá:
+    <div class="article-style"><p>
+      
+      Một chút thông tin về cuốn sách trước khi mình đánh giá:
    Thông tin Mô tả     Tiêu đề Selected Papers on Computer Science [Amazon]   Tác giả Donald Knuth   Số trang 276    Đây là một trong những cuốn sách dễ tiếp cận nhất của Don Knuth. Tuy được xuất bản cách đây khá lâu (gần 20 năm về trước), nhưng đây là một trong những cuốn sách kinh điển dẫn nhập về KHMT.
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/impl_priority_queues/">Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/impl_priority_queues/" itemprop="url">Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -684,48 +551,39 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    4 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/programming">programming</a
+    >, 
+    
+    <a href="/vi/tags/algorithms">algorithms</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/impl_priority_queues/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
+    <div class="article-style"><p>
+      
+      Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
  CTDL quan trọng cho các thuật toán khác như Dijkstra&rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.
-    
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/impl_priority_queues/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
+  <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/improved_qsort/">Một số biến thể Quicksort</a></h2>
     
-
-<div class="article-list-item" itemscope itemprop="blogPost">
-  
-  
-  <h3 class="article-title" itemprop="name">
-    <a href="http://dangkhoasdc.github.io/vi/post/improved_qsort/" itemprop="url">Một số biến thể Quicksort</a>
-  </h3>
-  
 
 <div class="article-metadata">
 
@@ -737,37 +595,34 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
   </span>
 
   
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    5 min read
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/programming">programming</a
+    >, 
+    
+    <a href="/vi/tags/algorithms">algorithms</a
+    >
+    
   </span>
   
-
-  
-  
-  <span class="middot-divider"></span>
-  <a href="http://dangkhoasdc.github.io/vi/post/improved_qsort/#disqus_thread"></a>
-  
-
   
 
   
 
 </div>
 
-  <div class="article-style" itemprop="articleBody">
-    
-    Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
-// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[--j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
-    
+    <div class="article-style"><p>
+      
+      Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[&ndash;j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
+      
+    </p></div>
   </div>
-  <p class="read-more">
-    <a href="http://dangkhoasdc.github.io/vi/post/improved_qsort/" class="btn btn-primary btn-outline">
-      ĐỌC TIẾP
-    </a>
-  </p>
-</div>
-
   
 
   
@@ -775,7 +630,7 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
   <ul class="pager">
     
     
-    <li><a href="/vi/post/page/2/">&gt;</a></li>
+    <li><a href="/vi/post/page/2/">Next &raquo;</a></li>
     
   </ul>
 </nav>
@@ -789,9 +644,8 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
 
       &copy; 2017 Dang-Khoa &middot; 
 
-      Powered by the
-      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
 
       <span class="pull-right" aria-hidden="true">
         <a href="#" id="back_to_top">
@@ -805,45 +659,13 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
   </div>
 </footer>
 
-
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Cite</h4>
-      </div>
-      <div>
-        <pre><code class="modal-body tex"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
-          <i class="fa fa-copy"></i> Copy
-        </a>
-        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
-          <i class="fa fa-download"></i> Download
-        </a>
-        <div id="modal-error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
     
-
-    
-    
-    <script id="dsq-count-scr" src="//httpdangkhoasdcgithubio.disqus.com/count.js" async></script>
-    
-
-    
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-    
     
     <script src="/js/hugo-academic.js"></script>
     
@@ -851,9 +673,7 @@ Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn 
     
     
       
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
-      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
 
       
 
