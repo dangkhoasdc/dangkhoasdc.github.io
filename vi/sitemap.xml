@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/vi/post/bioshock_infinite/</loc>
+      <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/vi/post/overfitting/</loc>
       <lastmod>2018-03-29T00:00:00+00:00</lastmod>
     </url>
@@ -610,6 +619,16 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/vi/tags/gaming/</loc>
+      <lastmod>2018-05-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/history/" hreflang="vi"/>
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/history/" hreflang="en"/>
     
@@ -696,7 +715,7 @@
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/post/" hreflang="en"/>
     
       <loc>http://dangkhoasdc.github.io/vi/post/</loc>
-      <lastmod>2018-03-29T00:00:00+00:00</lastmod>
+      <lastmod>2018-05-01T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

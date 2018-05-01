@@ -194,6 +194,50 @@
   
   <div>
     
+    <h2><a href="http://dangkhoasdc.github.io/vi/post/improved_qsort/">Một số biến thể Quicksort</a></h2>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-01-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-01-04
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/programming">programming</a
+    >, 
+    
+    <a href="/vi/tags/algorithms">algorithms</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+    <div class="article-style"><p>
+      
+      Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&lt;=v) if (i == hi) break; while (v&lt;=a[&ndash;j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:
+      
+    </p></div>
+  </div>
+  
+  <div>
+    
     <h2><a href="http://dangkhoasdc.github.io/vi/post/total_order/">Cài đặt quan hệ thứ tự trong C&#43;&#43;</a></h2>
     
 
@@ -583,49 +627,6 @@ Một bộ phim tài liệu lịch sử xuất sắc về chiến Tranh Việt N
     <div class="article-style"><p>
       
       Lâu lâu tôi lại đi dạo một vòng ở Sin chơi. Một phần thường ngày cuối tuần chỉ cắm đầu trên lab, một phần thì muốn đi đông cho vui. Chứ thực ra, nếu đi chơi một mình, hay đi với hai thằng thì rất chán. Tôi nghĩ đi chơi trừ khi đi với bạn gái hoặc bạn khác giới, còn lại đực rựa đi chung với nhau thì 3-4 người là phù hợp.
-      
-    </p></div>
-  </div>
-  
-  <div>
-    
-    <h2><a href="http://dangkhoasdc.github.io/vi/post/sakamoto_method/">Bài toán chuyển ngày sang thứ</a></h2>
-    
-
-<div class="article-metadata">
-
-  <span class="article-date">
-    
-    <time datetime="2017-09-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2017-09-16
-    </time>
-  </span>
-
-  
-
-  
-  
-  
-  <span class="article-tags">
-    <i class="fa fa-tags"></i>
-    
-    <a href="/vi/tags/programming">programming</a
-    >, 
-    
-    <a href="/vi/tags/algorithms">algorithms</a
-    >
-    
-  </span>
-  
-  
-
-  
-
-</div>
-
-    <div class="article-style"><p>
-      
-      Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).
       
     </p></div>
   </div>
