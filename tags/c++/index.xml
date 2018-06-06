@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C&#43;&#43; on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in C&#43;&#43; on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Wed, 10 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>C&#43;&#43;20 news</title>
+      <link>http://dangkhoasdc.github.io/logs/cpp20/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/logs/cpp20/</guid>
+      <description>C++20 Features Range-based for statements with initializer With C++20, we can initialize local variables inside the range-based for. For example:
+{ T thing = f(); for (auto&amp;amp; x: thing.items()) { mutate(&amp;amp;x); log(x); } }  With the new feature, we can shorten the code:
+for (T thing= f(); auto&amp;amp; x : thing.items()) { mutate(&amp;amp;x); log(x); }  Bit-casting object representations  The proposal Get the bits of an object. The new header &amp;lt;bit&amp;gt;  Operator &amp;lt;=&amp;gt; It compress the whole comparison operators of the total order into a single symbol &amp;lt;=&amp;gt; (as I understood).</description>
+    </item>
+    
+  </channel>
+</rss>

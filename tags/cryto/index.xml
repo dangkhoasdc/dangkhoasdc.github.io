@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryto on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/tags/cryto/</link>
+    <description>Recent content in Cryto on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Mon, 05 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/cryto/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Crytocurrency Technology</title>
+      <link>http://dangkhoasdc.github.io/logs/cryto_tech/</link>
+      <pubDate>Mon, 05 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/logs/cryto_tech/</guid>
+      <description>Crytographic Hash Function A mathematic function:
+ Input: any string Output: fixed-size output (usually 256 bits) Efficiently computable  Properties: Collision-free It is very difficult to find $x$ and $y$ for a crytographic hash function such that:
+$ x\neq y {\text and} H(x)= H(y)$  What is a quantitative measures for difficult level to find a collision?
+One method: try $2^130$ randomly chosen inputs, we can got 99.8% chance of collision.</description>
+    </item>
+    
+  </channel>
+</rss>

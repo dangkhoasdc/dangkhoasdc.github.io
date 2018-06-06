@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.40.3" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  <link rel="alternate" href="" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+  <link rel="feed" href="" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/logs/end2end-sh-bdnn/">
+
+  
+
+  <title> | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name"></h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="0001-01-01 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      0001-01-01
+    </time>
+  </span>
+
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2flogs%2fend2end-sh-bdnn%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2flogs%2fend2end-sh-bdnn%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2flogs%2fend2end-sh-bdnn%2f&amp;title="
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2flogs%2fend2end-sh-bdnn%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="end2end-sh-bdnn">End2End SH-BDNN</h1>
+
+<p>to submit to <code>TIP</code></p>
+
+<hr />
+
+<ul class="task-list">
+<li><p><strong>Logs</strong></p>
+
+<ul>
+<li>11/09/17</li>
+</ul>
+
+<p>I think we should change the dataset, it seems that <code>SUN397</code> could not be applied for the algorithms.</p>
+
+<p>Bit of index <code>0th</code> is always 1.</p>
+
+<p>The result is quite promising. Hope that it can outperform ITQ-CCA.</p>
+
+<ul>
+<li>12/09/17</li>
+</ul>
+
+<p>The result is very good. It is comparable with the Augmented Lagrangian(AL) method. I guest that the end2end version can outperform the ECCV paper.</p>
+
+<p>Actually, it is only comparable with ITQ-CCA and has lower accuracy than the AL method. However, I don&rsquo;t have to compare with methods mentioned in the AL paper. Therefore, it seems ok.</p>
+
+<ul>
+<li>14/09/17</li>
+</ul>
+
+<p>I was happy with the results. It outperforms the SH-BDNN roughly 10% on SUN397 datasets. It means that the end-2-end model can achieve even better. I have to quickly check that and finish the experiments on the dataset by the weekend.
+Because Dzung is now quit the project, I have to carry out experiments for face recognition and person re-identification. I will start the task next week. Hopefully, everything gonna be alright.</p>
+
+<ul>
+<li>15/09/17</li>
+</ul>
+
+<p>There are some problems in NUS-WIDE, multiple labels make me struggled with many stuff.
+Turn out I have to carefully consider <code>tidx</code> , one label per sample.</p>
+
+<ul>
+<li>18/09/17</li>
+</ul>
+
+<p>I now can figure out how to handle with NUS-WIDE. One more problem is how to outperform the Kevin&rsquo;s method. It seems too high in his paper. Currently, mAP on ITQ is about 18.12. There are some factors affecting the results:</p>
+
+<ul>
+<li>Data setttings.</li>
+
+<li><p>Hyperparameters.</p></li>
+
+<li><p>19/09/17</p></li>
+</ul>
+
+<p>Current results of SH-BDNN on NUS-WIDE is not promising as I thought. It still takes much more memory than I estimated and it seems impossible to run for a small validation ratio. I have two options:</p>
+
+<ul>
+<li>Continue optimizing memory for the code.</li>
+<li>Finetune hyperparameters.</li>
+</ul>
+
+<p>But first I hvae to check the result of ITQ-CCA.</p>
+
+<p>Oh no, the dataset is very different from what mentioned in Kevin&rsquo;s paper. Have to double check again. That&rsquo;s right, I messed up the whole dataset. Actually the indexes in tags are totally different and not corresponding to the image list.</p>
+
+<p>As I thought, fine-tuning end-to-end models is not easy. Now I have to figure out what is good hyperparameters for SUN397.</p>
+
+<ul>
+<li>22/09/17</li>
+</ul>
+
+<p>Can not escape the optimal point of SH-BDNN. We have to find another hyperparameters.</p>
+
+<ul>
+<li>25/09/17</li>
+</ul>
+
+<p>How do we know that our settings are correct? It seems the results in Kevin&rsquo;s paper is untrustworthy. Basically, just create a naive setting and then run on several methods.</p>
+
+<ul>
+<li>26/09/17</li>
+</ul>
+
+<p>I will follow the settings from the paper &lsquo;Supervised Hashing for Image Retrieval via Imge Representation Learning&rsquo;.</p>
+
+<ul>
+<li>28/09/17</li>
+</ul>
+
+<p>Damn it. I can not figure out why the results are so bad. I tried every settings I could imaged but none of them worked. In case I could not solve the problem, I will contact Kevin to ask about the setting.</p>
+
+<ul>
+<li>01/10/17</li>
+</ul>
+
+<p>Even papers of Ian Reid have different results compared to my output. Damn it, something are so wrong in my code. I have to spend my weekend figuring out.</p>
+
+<ul>
+<li>02/10/17</li>
+</ul>
+
+<p>Current invalid files: 50491</p></li>
+
+<li><p>TODO</p>
+
+<ul class="task-list">
+<li>11/09/2017</li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Implement the dataset <em>exactly</em> as mentioned in the Lagrangian paper</label></li>
+<li>12/09/2017</li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Use 42 classes instead of 36 classes.</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Generate ground truth for NUS-WIDE</label></li>
+<li>13/09/2017</li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Finetune end2end for SUN397 dataset</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item">  <del>Run SH-BDNN on NUS-WIDE</del></label></li>
+<li>15/09/17</li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Write the paper</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Run experiments on SH-BDNN L=32</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Run E2E-SH-BDNN on Sun397</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Run SH-BDNN on NUS-WIDE</label></li>
+<li>19/09/17</li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Run NUS-WIDE on SH-BDNN</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Change <code>vl_hash</code> : add <code>lambda5</code></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Choose a dataset for face recognition</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Run NUS-WIDE on ITQ-CCA</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Finetune SUN397 on END2END</label></li>
+
+<li><p>[x]  Preprocess <code>imdb</code> of SUN397 and save it.</p></li>
+
+<li><p>20/09/17</p></li>
+
+<li><p>[x]  Replicate mAP settings as Kevin&rsquo;s paper.</p></li>
+
+<li><p>[x]  Re-generate <code>NUS-WIDE</code> dataset.</p></li>
+
+<li><p>21/09/17</p></li>
+
+<li><p>[x]  download VGG-Faces</p></li>
+
+<li><p>[x]  Debug E2E on SUN397</p></li>
+
+<li><p>22/09/17</p></li>
+
+<li><p>[ ]  Run SUN397 dataset.</p></li>
+
+<li><p>[ ]  Run NUS-WIDE dataset.</p></li>
+
+<li><p>25/09/17</p></li>
+
+<li><p>[x]  Finish downloading VGG-Faces</p></li>
+
+<li><p>[x]  Run SUN397 24bit on E2E-SH-BDNN</p></li>
+
+<li><p>[x]  Debug NUS-WIDE dataset on SH-BDNN</p></li>
+
+<li><p>26/09/17</p></li>
+
+<li><p>[x]  Run SUN397 16bit on E2E-SH-BDNN</p></li>
+
+<li><p>[x]  Run SUN397 8bit on E2E-SH-BDNN</p></li>
+
+<li><p>[x]  Debug NUS-WIDE</p></li>
+
+<li><p>30/09/17</p></li>
+
+<li><p>[x]  Config VGG-Faces</p></li>
+
+<li><p>[ ]  <del>Write the paper</del></p></li>
+
+<li><p>[x]  Debug SH-BDNN</p></li>
+
+<li><p>04/10/17</p></li>
+
+<li><p>[x]  Run sh-bdnn code-length = 32</p></li>
+
+<li><p>[x]  Install nus-wide sh-bdnn to Dz&rsquo;s machine</p></li>
+
+<li><p>05/10/17</p></li>
+
+<li><p>[ ]  Finetune nus-wide end2end code-length = 8</p></li>
+
+<li><p>[ ]  Finetune nus-wide en2end code-length = 32</p></li>
+
+<li><p>[ ]  Setup <code>matconvnet</code> on Dzung machine</p></li>
+
+<li><p>[ ]  Setup face verification code</p></li>
+</ul></li>
+</ul>
+
+<h1 id="plan">Plan</h1>
+
+<p><a href="./Refactor-the-whole-project-66d582506413448a9d1dbc0b65a60f95.md">Refactor the whole project.</a></p>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item">  Write the outline for the end-to-end section</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item">  Run experiments for face recognition and person re-identification</label></li>
+</ul>
+
+<h2 id="weekly-plan">Weekly Plan</h2>
+
+<ul class="task-list">
+<li><sup>25</sup>&frasl;<sub>09</sub>-01/10
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Update SUN397 results.</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Run NUS-WIDE on Sh-bdnn</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item">  <del>Config VGG-Faces</del></label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Write the paper</label></li>
+</ul></li>
+<li>02/10-08/10
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item">  End2End for NUS-WIDE</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item">  Setup face verification</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item">  Write the paper</label></li>
+</ul></li>
+</ul>
+
+<h1 id="documents">Documents</h1>
+
+<p>The <code>SUN397</code> dataset is configured the same as the AL paper instead of Kevin&rsquo;s journal.</p>
+
+<p><a href="./Sun397-SH-BDNN-parameters-5f8cf3cb188b40d2983af4e090e3fd3c.md">Sun397 - SH-BDNN parameters</a></p>
+
+<p><a href="./Sun397-Parameters-1147a5dec0d94d95899dd53796c3a06f.md">Sun397 Parameters</a></p>
+
+<p><a href="./NUS-WIDE-Setups-5f3aa4e6052e49988b725ddaba728df7.md">NUS-WIDE Setups</a></p>
+
+<p><a href="./Face-recognition-experiments-9066b70feb934cfe88fedfb1f045968f.md">Face recognition experiments</a></p>
+
+<p><a href="./MatConvNet-problems-43f5f837f1c64277904265f06b00ee23.md">MatConvNet problems</a></p>
+
+<p><a href="./ICASSP18-Paper-bee5480ae9f744daa9d314a970ff54df.md">ICASSP18 Paper</a></p>
+
+<h2 id="data-configuration">Data Configuration</h2>
+
+<ul>
+<li>Image Size : <code>227 x 227</code> .</li>
+<li>Actually, I just realize that the similarity matrix can not be constructed as a sparse matrix. I have a workaround, but we have to change <code>-1</code> to <code>0</code> .</li>
+<li>Use <code>imdb.images.set</code> to count number of training samples/testing samples.</li>
+</ul>
+
+<h2 id="code-optimization">Code Optimization</h2>
+
+<p>There are some tips I think it could be very useful when struggling with handling large size matrices.</p>
+
+<p><strong>The simiarity matrix</strong> I must admit that I see many papers in computer vision community formulazing the relationships between samples by this matrix. It usually has the form:</p>
+
+<p>S(i,j) =
+\begin{cases}
+-1 \; \text{cls}(x_i)= \text{cls}(x_j)  <br />
+1 \; \text{otherwise}
+\end{cases}</p>
+
+<p>It is a right formula. In terms of mathematical notions, there is no wrong in the matrix. However, if we implement exactly the similarity matrix like that, it will consume a huge amount of memory. For example, 50k samples take roughly 18GB (for <code>double</code> data type in MATLAB). Even we cast it as a <code>int8</code> type, later we have to change back to <code>single</code> either <code>double</code> data type to compute. However, just change the formulate a little bit, we get some advantages:</p>
+
+<p>S(i,j) =
+\begin{cases}
+0 \; \text{cls}(x_i)= \text{cls}(x_j)  <br />
+1 \; \text{otherwise}
+\end{cases}</p>
+
+<p>Why? we can use sparse matrix to store the matrix because the negative pairs usually dominate positive ones. For instant, the number of element <code>1</code> in the matrix is about 3% of the total elements. Let formalize the percentage of positive pairs: we have a dataset which have <code>m</code> classes and <code>n</code> samples per class. The matrix has size of <code>mxn x mxn</code> . The percentage is</p>
+
+<p>\frac{m \times n^2}{m^2n^2} = \frac{1}{m}</p>
+
+<p>In SUN397 dataset, I get 6.4 GB to construct the similarity matrix whereas the sparse version takes only 0.4 GB.</p>
+
+<p><strong>Avoid allocating memory</strong> MATLAB is one of the best programming languages to build a prototype for computer vision algorithms. But sometimes, people declare many redundant variable and hence it is wasteful of memory. In case of computing large size matrices, we have to take care of every variable which involves content of the matrix:</p>
+
+<ul>
+<li>When creating and later modifying a variable, it will be allocated a new memory.</li>
+<li>Check the algorithm and consider when we can use in-place operations.</li>
+</ul>
+
+<p>Undocumneted Matlab gives <a href="http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations" target="_blank">some insights</a> about internal memory optimizations. It will help you when profiling the implementation.</p>
+
+<h1 id="results">Results</h1>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://dangkhoasdc.github.io/logs/face-recognition-experiments/"><span
+      aria-hidden="true">&larr;</span> </a></li>
+    
+
+    
+    <li class="next"><a href="http://dangkhoasdc.github.io/logs/demo/"> <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

@@ -16,11 +16,6 @@
     
   
   
-    
-    
-    <link rel="stylesheet" href="/css/highlight.min.css">
-    
-  
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
@@ -48,17 +43,17 @@
     
   
 
-  <link rel="alternate" href="http://dangkhoasdc.github.io/tags/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
-  <link rel="feed" href="http://dangkhoasdc.github.io/tags/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+  <link rel="alternate" href="http://dangkhoasdc.github.io/logs/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+  <link rel="feed" href="http://dangkhoasdc.github.io/logs/index.xml" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="http://dangkhoasdc.github.io/tags/">
+  <link rel="canonical" href="http://dangkhoasdc.github.io/logs/">
 
   
 
-  <title>Tags | Dang-Khoa&#39;s blog </title>
+  <title>Publications | Dang-Khoa&#39;s blog </title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -158,22 +153,6 @@
         
 
         
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
-            <i class="fa fa-globe" aria-hidden="true"></i>
-            <span>English</span>
-          </a>
-          <ul class="dropdown-menu">
-            
-            <li class="nav-item">
-              <a href="/vi/tags/">
-                <span>Tiếng Việt</span>
-              </a>
-            </li>
-            
-          </ul>
-        </li>
-        
       </ul>
 
     </div>
@@ -186,29 +165,106 @@
 
 <div class="universal-wrapper">
 
-  <h1>Tags</h1>
+  <h1>Publications</h1>
 
   
 
   
   
   <div>
-    <h2><a href="http://dangkhoasdc.github.io/tags/visual-studio/">Visual studio</a></h2>
+    <h2><a href="http://dangkhoasdc.github.io/logs/aofalgs/">Analysis of Algorithms</a></h2>
+    <div class="article-style">
+      
+      A Galactic Algorithms How do we analyze an algorithm  Implement a correct and good code of the algorithm. Select the cost model for the algorithm, e.g, comparisons or other costs.  The cost model should be independent from the implementation. Decide the input model, e.g, randomness and other properties.  Build mathematics models of the algorithms [The hard part].  Break down the operations in the algorithm. Formulate a mathematical problem.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/logs/cpp_better_c/">C&#43;&#43; is better than C</a></h2>
+    <div class="article-style">
+      
+      A note of Week 1 from C++ for C programmers
+ C++ A good old example  Multi-paradigmatic. A really upside: the shift from ordinary imperative programming to encapsulation-based on the object-oriented paradigm.  C example code:
+#include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; #include &lt;time.h&gt; #define SIDES 6 #define R_SIDES (rand() % SIDES + 1) int main() { int ntrails; int d1, d2; int i, j; srand(clock()); int outcomes[10000] = {0}; printf(&quot;Number of trials:&quot;); scanf(&quot;%d&quot;, &amp;ntrails); for (i = 0; i &lt; ntrails; ++i) { outcomes[(d1 = R_SIDE) + (d2 = R_SIDE)]++; } printf(&quot;probability \n&quot;); for (j = 2; j &lt; ntrials * SIDES+1; ++j) { printf(&quot;j = %d p = %lf\n&quot;, j, (double)(outcomes[j]/trails)); } return 0; }  To C++ example
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/logs/estimate_size/">Estimate object size from a reference object</a></h2>
+    <div class="article-style">
+      
+      Estimating object&rsquo;s area by multiple images My main idea is to use essential matrix or maybe fundamental matrix to find the relationship between the image coordinate and the real world coordinate. There are two main problems which makes me struggle alot:
+ How is the essential matrix if two cameras are diffent? Specicially, if two cameras have two distinct focal lengths and distortions, how we can formulate the relationship matrix between them?
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/logs/cryto_tech/">Crytocurrency Technology</a></h2>
+    <div class="article-style">
+      
+      Crytographic Hash Function A mathematic function:
+ Input: any string Output: fixed-size output (usually 256 bits) Efficiently computable  Properties: Collision-free It is very difficult to find $x$ and $y$ for a crytographic hash function such that:
+$ x\neq y {\text and} H(x)= H(y)$  What is a quantitative measures for difficult level to find a collision?
+One method: try $2^130$ randomly chosen inputs, we can got 99.8% chance of collision.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/logs/josephus_problem/">The Josephus problem</a></h2>
     <div class="article-style">
       
     </div>
   </div>
   
   <div>
-    <h2><a href="http://dangkhoasdc.github.io/tags/windows/">Windows</a></h2>
+    <h2><a href="http://dangkhoasdc.github.io/logs/extend_cvpr17/">Extend CVPR17 paper to the journal version</a></h2>
+    <div class="article-style">
+      
+      Logs 2017-12-19 Update the supervised version of sah.  2017-12-21 The data is damn huge and hence I am not able to store all conv5 features into a cell. Therefore, I decide to split data into 3 parts, namely training set, testing test while extracting.
+2018-01-08 anh Tuan&rsquo;s experiment results % OXFORD5k % Params: L=32 gamma=10.000000 mu=1000000000.000000 lambda=0.010000 beta=0.100000 MAP = 0.135326 % Params: L=32 gamma=10.000000 mu=100000000.000000 lambda=0.010000 beta=0.100000 MAP = 0.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/logs/stayingfit/">StayingFit</a></h2>
+    <div class="article-style">
+      
+      Content What&rsquo;s my motivation? The first assignment in the course is to describe the motivation why I enrolled the class? My respond is to gain more energy for other activities such as efficient working, research. I feel that I got exhausted easily and was not able to work in a long period.
+Physical Exercise and Guidelines Benefits Emotional Benefits  Improved coping skills. Hell Happier! Imroved cognition. Better overall mood.
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/logs/cpp20/">C&#43;&#43;20 news</a></h2>
+    <div class="article-style">
+      
+      C++20 Features Range-based for statements with initializer With C++20, we can initialize local variables inside the range-based for. For example:
+{ T thing = f(); for (auto&amp; x: thing.items()) { mutate(&amp;x); log(x); } }  With the new feature, we can shorten the code:
+for (T thing= f(); auto&amp; x : thing.items()) { mutate(&amp;x); log(x); }  Bit-casting object representations  The proposal Get the bits of an object. The new header &lt;bit&gt;  Operator &lt;=&gt; It compress the whole comparison operators of the total order into a single symbol &lt;=&gt; (as I understood).
+      
+    </div>
+  </div>
+  
+  <div>
+    <h2><a href="http://dangkhoasdc.github.io/logs/java_mem/">Introduction to Java Memory</a></h2>
     <div class="article-style">
       
     </div>
   </div>
   
   <div>
-    <h2><a href="http://dangkhoasdc.github.io/tags/working/">Working</a></h2>
+    <h2><a href="http://dangkhoasdc.github.io/logs/cvpr18/"></a></h2>
     <div class="article-style">
+      
+      Deadline: 15-11-2017.
+Outline  Direction: the retrieval problem. Target on binary codes. Binary constraints and current limitations.  Papers Introduction  Image retrieval: give details about a content-based image retrieval (CBIR).  Experiments :todo:cvpr18:
+TODO Writing the paper * [X] Apply the CVPR18 format * [X] Write the introduction * [ ] Write the Experiment section (13/11/2017)  Experiments * [X] Run SSDN on: * [X] L = 128 * [X] L = 256 * [X] L = 512 * [ ] t-SNE visualization * [ ] SSDH L=256  Logs 2017-11-12 I could not replicate the result of SSDH on Oxford5k.
       
     </div>
   </div>
@@ -218,8 +274,8 @@
 <nav>
   <ul class="pager">
     
-    <li><a href="/tags/page/2/">&laquo; Previous</a></li>
     
+    <li><a href="/logs/page/2/">Next &raquo;</a></li>
     
   </ul>
 </nav>
@@ -260,15 +316,6 @@
     
 
     
-    
-      
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-
-      
-
-      
-
-      <script>hljs.initHighlightingOnLoad();</script>
     
 
     
