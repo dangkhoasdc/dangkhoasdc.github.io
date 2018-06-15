@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Install OpenCV 3 non-free module on Ubuntu</title>
+      <link>http://dangkhoasdc.github.io/post/opencv3_nonfree/</link>
+      <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/opencv3_nonfree/</guid>
+      <description>The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
+Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.</description>
+    </item>
     
     <item>
       <title>OpenCV on Android: practices and tips</title>
