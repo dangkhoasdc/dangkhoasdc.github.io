@@ -191,6 +191,18 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/project/taocp/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/project/taocp/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/project/taocp/</loc>
+      <lastmod>2017-09-24T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/vi/post/headphones/</loc>
       <lastmod>2017-09-24T00:00:00+00:00</lastmod>
     </url>
@@ -236,6 +248,18 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/project/deep_hashing/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/project/deep_hashing/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/project/deep_hashing/</loc>
+      <lastmod>2017-09-12T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/vi/post/review_good_will_hunting/</loc>
       <lastmod>2017-09-10T00:00:00+00:00</lastmod>
     </url>
@@ -256,6 +280,54 @@
     
       <loc>http://dangkhoasdc.github.io/vi/post/rand/</loc>
       <lastmod>2017-09-06T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/publication/selective_deep_conv/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/publication/selective_deep_conv/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/publication/selective_deep_conv/</loc>
+      <lastmod>2017-07-04T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/publication/sah/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/publication/sah/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/publication/sah/</loc>
+      <lastmod>2017-06-20T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/publication/gemb/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/publication/gemb/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/publication/gemb/</loc>
+      <lastmod>2017-05-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/publication/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/publication/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/publication/</loc>
+      <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
     
   
@@ -392,6 +464,30 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/project/usbl/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/project/usbl/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/project/usbl/</loc>
+      <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/publication/lymph_counting/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/publication/lymph_counting/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/publication/lymph_counting/</loc>
+      <lastmod>2015-08-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/vi/post/oop-python/</loc>
       <lastmod>2015-07-20T00:00:00+00:00</lastmod>
     </url>
@@ -439,6 +535,31 @@
     
       <loc>http://dangkhoasdc.github.io/vi/post/spams-lib/</loc>
       <lastmod>2015-02-25T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/publication/2dpca/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/publication/2dpca/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/publication/2dpca/</loc>
+      <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/publication_types/1/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/publication_types/1/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/publication_types/1/</loc>
+      <lastmod>2017-07-04T00:00:00+00:00</lastmod>
+      <priority>0</priority>
     </url>
     
   
@@ -551,6 +672,19 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/computer-vision/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/computer-vision/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/tags/computer-vision/</loc>
+      <lastmod>2017-09-12T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/vi/tags/courses/</loc>
       <lastmod>2016-08-08T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -593,6 +727,19 @@
     
     
     <url>
+    
+      <loc>http://dangkhoasdc.github.io/vi/tags/deep-learning/</loc>
+      <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/deep-learning/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/deep-learning/" hreflang="en"/>
     
       <loc>http://dangkhoasdc.github.io/vi/tags/deep-learning/</loc>
       <lastmod>2016-10-23T00:00:00+00:00</lastmod>
@@ -649,6 +796,19 @@
     
       <loc>http://dangkhoasdc.github.io/vi/tags/history/</loc>
       <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/image-retrieval/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/image-retrieval/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/tags/image-retrieval/</loc>
+      <lastmod>2017-09-12T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -752,10 +912,24 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/project/" hreflang="vi"/>
+      <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/project/" hreflang="en"/>
+    
+      <loc>http://dangkhoasdc.github.io/vi/project/</loc>
+      <lastmod>2017-09-24T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/publication_types/" hreflang="vi"/>
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/publication_types/" hreflang="en"/>
     
       <loc>http://dangkhoasdc.github.io/vi/publication_types/</loc>
+      <lastmod>2017-07-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
