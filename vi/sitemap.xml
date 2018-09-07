@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/vi/post/zalo_landmark/</loc>
+      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/vi/post/nha_trang_summer18/</loc>
       <lastmod>2018-07-07T00:00:00+00:00</lastmod>
     </url>
@@ -648,6 +657,16 @@
     
     <url>
     
+      <loc>http://dangkhoasdc.github.io/vi/tags/computer-vision/</loc>
+      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>http://dangkhoasdc.github.io/vi/tags/computer-science/</loc>
       <lastmod>2017-12-27T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -827,6 +846,16 @@
     <url>
     
       <loc>http://dangkhoasdc.github.io/vi/tags/machine-learning/</loc>
+      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>http://dangkhoasdc.github.io/vi/tags/machine-learning/</loc>
       <lastmod>2018-03-29T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
@@ -899,7 +928,7 @@
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/post/" hreflang="en"/>
     
       <loc>http://dangkhoasdc.github.io/vi/post/</loc>
-      <lastmod>2018-07-07T00:00:00+00:00</lastmod>
+      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

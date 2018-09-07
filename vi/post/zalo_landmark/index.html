@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.48" />
+  <meta name="author" content="Dang-Khoa">
+  <meta name="description" content="Research Assistant">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+  <link rel="stylesheet" href="/css/custom-theme.css">
+  
+
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-2381283-3', 'auto');
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+
+  <link rel="alternate" href="" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+  <link rel="feed" href="" type="application/rss+xml" title="Dang-Khoa&#39;s blog ">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="http://dangkhoasdc.github.io/vi/post/zalo_landmark/">
+
+  
+
+  <title>AI Challenge - Landmark: Kỹ thuật và ý tưởng | Dang-Khoa&#39;s blog </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Chuyển Điều Hướng</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/vi/">Dang-Khoa&#39;s blog </a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/about/">
+            
+            <span>About</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/vi/tags/notes/">
+            
+            <span>Notes</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">AI Challenge - Landmark: Kỹ thuật và ý tưởng</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-09-07 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2018-09-07
+    </time>
+  </span>
+
+  
+
+  
+  
+  
+  <span class="article-tags">
+    <i class="fa fa-tags"></i>
+    
+    <a href="/vi/tags/machine-learning">Machine Learning</a
+    >, 
+    
+    <a href="/vi/tags/computer-vision">Computer Vision</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fzalo_landmark%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=AI%20Challenge%20-%20Landmark%3a%20K%e1%bb%b9%20thu%e1%ba%adt%20v%c3%a0%20%c3%bd%20t%c6%b0%e1%bb%9fng&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fzalo_landmark%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fzalo_landmark%2f&amp;title=AI%20Challenge%20-%20Landmark%3a%20K%e1%bb%b9%20thu%e1%ba%adt%20v%c3%a0%20%c3%bd%20t%c6%b0%e1%bb%9fng"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+    <li>
+      <a class="email"
+         href="mailto:?subject=AI%20Challenge%20-%20Landmark%3a%20K%e1%bb%b9%20thu%e1%ba%adt%20v%c3%a0%20%c3%bd%20t%c6%b0%e1%bb%9fng&amp;body=http%3a%2f%2fdangkhoasdc.github.io%2fvi%2fpost%2fzalo_landmark%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<p>Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.</p>
+
+<h1 id="dữ-liệu">Dữ Liệu</h1>
+
+<p>Dưới đây là phân phối số lượng ảnh trên mỗi label.</p>
+
+
+<figure>
+    
+        <img src="/landmark_hist-5d75e5f9-d406-4cdd-971a-c0888816188a.png" />
+    
+    
+    <figcaption>
+        <h4>Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.</p>
+
+<p>![]()</p>
+
+
+<figure>
+    
+        <img src="/Untitled-c29fea32-26df-4a6f-8e46-69a4ff17cfaa.png" />
+    
+    
+    <figcaption>
+        <h4>Một số hình lấy từ tập train, mỗi dòng là các mẫu thuộc 1 địa danh. </h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h1 id="kỹ-thuật">Kỹ thuật</h1>
+
+<p>Team mình đã sử dụng 9 models khác nhau để train và sau đó stack/blend lại. Bao gồm:</p>
+
+<ul>
+<li>Denset121, DenseNet161</li>
+<li>Resnet50, Resnet152</li>
+<li>ResNext50, ResNext101</li>
+<li>Wide-resnet.</li>
+<li>Inception_v4, Inceptionresnet_v2.</li>
+</ul>
+
+<p>[Mình đã finetune 34 models khác nhau với kiến trúc và optimizer scheme khác nhau (learning rate/ weight decay/ data augmentation không tính)]</p>
+
+<p>Để tăng độ chính xác model, tụi mình có sử dụng và thử 1 số phương pháp sau [phần bôi đen là những kỹ thuật rất quan trọng để tăng hiệu quả của model]:</p>
+
+<ul>
+<li><strong>Freeze network rồi finetune, sau đó unfreeze toàn bộ và train</strong>. [Thực sự hiệu quả]. Tuy nhiên lưu ý một điều: sau khi unfreeze toàn bộ các layer thì quá trình train sẽ rất chậm, ta cần phải điều chỉnh số lượng epoch ở bước này cho hợp lý.</li>
+<li><strong>Sử dụng Cyclic Learning Rates</strong> [Thực sự hiệu quả]. Tham số mà mình thấy ổn nhất, cũng như có thời gian train tương đối chấp nhận được (tầm 20h/ 1 model): <code>cycle_length = 2, cycle_multiplier = 2, num_cycles = 4</code></li>
+<li>Adam Optimizer + Weight Decay [Improve 1 cách tương đối]. Adam giúp loss giảm nhanh hơn SGD.</li>
+<li>Differential Weigh Decay tuy vậy không thấy cải thiện được gì.</li>
+<li>Stochastic Gradient Descent with Warm Restarts: khá tốt.</li>
+<li>Stochastic Weight Averaging: Không hiệu quả + khiến thời gian train tăng..</li>
+<li><strong>Differential Learning Rate</strong>: improve tương đối.</li>
+<li><strong>Data Augmentation/ Test Time Augmentation</strong>: Thực sự hiệu quả. Đây là cách hiệu quả nhất để tránh overfitting.</li>
+<li>Tăng kích thước ảnh: Thực sự hiệu quả. Tuy nhiên phụ thuộc vào Memory của GPUs và kiến trúc mạng. Bộ ba thần thánh của mình là: <code>224, 256, 299</code>.</li>
+<li>Sử dụng fully connected layers kết hợp với kNN làm thành 1 classifier: đây là ý tưởng của team <a href="https://www.kaggle.com/c/landmark-recognition-challenge/discussion/57896" target="_blank">4th Google Landmark Recognition</a> - thực sự không hiệu quả trong case này [, hoặc là mình implement bậy rồi] .</li>
+<li>Để handle imblance data: ta có thể dùng upsampling, downsampling hoặc sử dụng distribution khác cho sampler (mình đã implement multinomial distribution thay cho uniform của pytorch) cũng như sử dụng weighted loss (thêm weight dựa trên số lượng sample/class). Một số kỹ thuật có thể tham khảo ở đây [Link]. Khá tiếc khi phần này đã bị leader reject, trong khi top 1 Landmark đã dùng kỹ thuật này để đạt kết quả tốt ở private test.</li>
+<li>Để có thể chọn learning rate hợp lí và nhanh, kỹ thuật trong bài [Cyclical Learning Rates for Training Neural Networks] được sử dụng phổ biến, ta có thể plot nhiều setting của một model trên cùng 1 figure để chọn learning phù hợp. Nếu bạn lười, cứ set learning rate là <code>3e-4</code>. Thánh Karpathy đã verify điều đó (<a href="https://twitter.com/karpathy/status/801621764144971776" target="_blank">Twitter</a>).</li>
+</ul>
+
+
+<figure>
+    
+        <img src="/pjimage-66fbbed9-4648-4b1b-9081-c550a350c5d9.jpg" />
+    
+    
+</figure>
+
+
+<p>Một số bài viết hỗ trợ trong quá trình finetune:</p>
+
+<ul>
+<li>Playing around with SGDR [<a href="https://sidravi1.github.io/blog/2018/04/25/playing-with-sgdr" target="_blank">Link</a>]</li>
+<li>Differential Learning Rates [<a href="https://blog.slavv.com/differential-learning-rates-59eff5209a4f" target="_blank">Link</a>]</li>
+<li>Optimization techniques comparison in Julia: SGD, Momentum, Adagrad, Adadelta, Adam [<a href="https://int8.io/comparison-of-optimization-techniques-stochastic-gradient-descent-momentum-adagrad-and-adadelta/" target="_blank">Link</a>]</li>
+</ul>
+
+<p>Về phần stack/blend, mình nhường lại cho leader Khả Ái (Phát); hầu như các solution trên Forum Machine Learning Cơ Bản mà các bạn top 3 post đều nằm trong plan thực hiện của Khả Ái. Nên mình tin nếu lúc đó mình làm đúng plan thì kết quả bên Landmark lẫn Music đã rất khác rồi.</p>
+
+<p>[Nhân đây: Noi theo tấm gương sáng ngời cùng đường lối sáng suốt của leader , mình phát động phong trào đẩy mạnh học tập và làm theo tư tưởng, đạo đức Hoàng Quý Phát]</p>
+
+
+<figure>
+    
+        <img src="/Untitled-25ba1c0a-2c99-441e-ae1a-e78c67f99a7b.png" />
+    
+    
+    <figcaption>
+        <h4>T-SNE của ResNet50 features 1 subset của train data (feature:Resnet50)jq </h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<h2 id="other">Other</h2>
+
+<ul>
+<li>Mình dùng 1 Titan X, 2 1080 Ti, 1 P100 để train. Trước deadline vài ngày có dùng 1 máy Google Cloud.</li>
+<li>Rất nhiều hình gif bị save thành jpg, ta có thể dùng trick để avoid lỗi những ảnh này.</li>
+<li>Đừng sa lầy bởi code đểu, đừng nghe dân mạng chém gió và cố gắng bám sát vào plan của mình. Chỉ nên tin những nguồn đáng tin cậy.</li>
+<li>Sử dụng <a href="http://notion.so" target="_blank">notion.so</a> để quản lý ghi chú, kết quả thí nghiệm và lên kế hoạch.</li>
+</ul>
+
+<h1 id="các-ý-tưởng-khác">Các ý tưởng khác</h1>
+
+<h2 id="image-retrieval-knn">Image Retrieval - KNN</h2>
+
+<p>Để sử dụng kỹ thuật image retrieval hiệu quả [tức là image retrieval thực sự outperform classification] thì dataset cần hội đủ các yếu tố:</p>
+
+<ol>
+<li>Dataset có số lượng label rất lớn.</li>
+<li>Phân phối training samples không đều và chênh lệch lớn.</li>
+<li>Mối tương quan giữa các ảnh trong cùng 1 class thấp.</li>
+</ol>
+
+<p>Ví dụ điển hình là tập Google Landmark với 1.5 triệu ảnh, và 15K label (landmark) khác nhau. Hình dưới cho thấy rất nhiều label có số lượng trainng ít.</p>
+
+
+<figure>
+    
+        <img src="/Untitled-2cfccd2a-efe1-4790-898d-28bd8ef2aa02.png" />
+    
+    
+</figure>
+
+
+<p>Trong 3 điều kiện trên thì tập Landmark của Zalo thỏa được (2) và (3) phần nào đó. Ví dụ ở class 0 và 1, độ tương quan khá thấp, và nếu không biết trước được rằng các hình nằm chung 1 class thì mình nghĩ đến cả human còn nhầm đây là các địa điểm khác nhau:</p>
+
+<p><img src="/class_0-c9292bd7-ff47-490b-a2a8-3fc0f26a975b.png" alt="" />
+<img src="/class_1-073f62d3-1634-45b6-8986-03a0829acdad.png" alt="" /></p>
+
+<p>Ở các kỹ thuật trong retrieval có thể đơn giản hóa như sau:</p>
+
+<ul>
+<li>Tận dụng local features làm representation và search dựa trên Euclidean distance.</li>
+<li>Dùng k-NN kết với với kd tree (exact search) hoặc PQ (approximate search) để giảm thời gian search (lưu ý ràng buộc 6 tiếng inference) [dĩ nhiên với dataset nhỏ thì cứ dùng k-NN].</li>
+<li>Dùng các kỹ thuật Pooling hoặc Masking [2] thay vì dùng trực tiếp feature tầng cuối của network. Và như vậy, ta sẽ pooling ở tầng conv thay vì tầng fully connected.</li>
+</ul>
+
+<p>Local features như RootSIFT+BoW hoặc RootSIFT+Triemb hoạt động rất tốt trong case này:</p>
+
+
+<figure>
+    
+        <img src="/Untitled-4f51efac-f6a9-44a0-80b8-1accb8131443.png" />
+    
+    
+    <figcaption>
+        <h4>Nguồn: slide - Ranked 3rd Google Landmark Recognition Challenge</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>Với kỹ thuật này, ta có thể apply 1 số technique hay ho như:</p>
+
+<ul>
+<li>Query Expansion [3].</li>
+<li>Regional Diffusion [4].</li>
+</ul>
+
+<p>Image Retrieval cùng với các kỹ thuật này đã đạt kết quả rất tốt ở hai cuộc thi là Landmark Retrieval và Landmark Recognition của Google [<a href="https://drive.google.com/file/d/12Zb0NZL3Ys6SPLiAvCroW5w3gZIYCB2X/view" target="_blank">Link</a>]. Mình nghĩ ít nhiều nó sẽ giúp improve performance, đặc biệt là với với class có intra-class correlation thấp.</p>
+
+<h2 id="fine-grained-classification">Fine-grained Classification</h2>
+
+<p>Nếu ta xem xét các labels và thứ tự của nó, ta nhận ra rằng các lớp chung 1 category sẽ nằm cạnh nhau. Ví dụ:</p>
+
+<ul>
+<li>Từ label 17 → 23: các thể loại cầu; bao gồm: Cầu Chương Dương, Cầu Tràng Tiền, Cầu Rồng, Cầu Tình Yêu, Cầu Tay Vàng Bà Nà.</li>
+<li>Label từ 25 → 28: các thể loại cột cờ: Cột cờ Hà Nội, Cột cờ Hà Giang, Cột cờ Đảo Trường Sa và Cột cờ Cà Mau.</li>
+<li>Label 9 → 11: các chợ: Chợ Bến Thành, chợ Nổi và chợ Đồng Xuân.</li>
+<li>Label 71 → 79: các nhà thờ Công Giáo: Nhà Thờ Đức Bà, Nhà Thờ Nha Trang, Nhà Thờ ở Phú Yên, &hellip;</li>
+</ul>
+
+<p>Một ý tưởng đơn giản đó là ta gom hết các data trong các nhóm đó lại với nhau thành 1 label lớn: ví dụ &ldquo;chợ&rdquo;, &ldquo;cầu&rdquo;, &ldquo;cột cờ&rdquo; và xây dựng bộ classifier trên đó (tạm gọi là Classifier-A). Kết quả có thể đem làm trọng số cho classifier chính với 103 classes. Ngoài ra, ta có thể &ldquo;random&rdquo; trong trường hợp kết quả ra thấp: Nếu bộ classifier 103 lớp không classify được, nhưng bộ Classifier-A ra kết quả là &ldquo;cầu&rdquo; với confidence cao, ta có thể random trong đó [Dĩ nhiên, có nhưng phương pháp fancy hơn để inference ra kết quả]; ngay cả với random, giả sử groundtruth là 1 trong 7 loại cầu: thì ta có xác suất 1-6C3/7C3 = 42.8571 %. Theo bản thân mình, đây cũng là cách mà con người nhận biết landmark. Fancy hơn, bạn có thể dùng Maximum Spanning Tree Clustering [<a href="https://drive.google.com/file/d/1MhaaCAICiL3_DA7m9gBEHLL9XxEycyUs/view" target="_blank">Link</a>]</p>
+
+<p>Đồng thời, với quan sát như trên, ta có thể sử dụng 1 số phương pháp fine-grained classification để cải thiện độ chính xác. Bởi theo như quan sát, các kiến trúc cầu, nhà thờ, hay cột cờ có độ tương đồng hình ảnh khá giống nhau, thậm chí nếu chụp ở 1 góc nào đó thì kể cả con người cũng khó phân biệt được. Nên data như vậy rất phù hợp với kỹ thuật fine-grained classification.</p>
+
+<h1 id="fun-stuff">Fun stuff</h1>
+
+<ul>
+<li>Với query là ảnh con cá này:</li>
+</ul>
+
+<p><img src="/fish-4493b101-370a-46c7-ac0e-e4d3a5537886.jpeg" alt="" /></p>
+
+<p>Model predict ra cơ sở nước mắm Phú Quốc.</p>
+
+<p>model của team mình predict ra label 70 - Cơ sở chế biến nước mắm Phú Quốc. Mặc dù sau khi kiểm tra 497 hình của class 70 này bằng mắt, không hình nào trong training data có hình con cá. Mình gọi đây là: The next level of AI.</p>
+
+<ul>
+<li>Hình tượng chúa ở Brazil được cho làm query, trong khi đây là cuộc thi Landmark ở Việt Nam, hình này còn xuất hiện vài lần trong tập test.</li>
+</ul>
+
+<p><img src="/tuong_chua-efa06a8a-29e9-49bf-a002-679ab006730b.jpeg" alt="" /></p>
+
+<ul>
+<li>Mình rất muốn đi DisneyLand ở Việt Nam :(</li>
+</ul>
+
+<p><img src="/disneyland-bcabc3bb-b9bb-4c2c-8e30-9c00914a9c40.png" alt="" /></p>
+
+<ul>
+<li>Rất nhiều hình trong training data sử dụng ảnh của các site khác, mình tò mò là bên Zalo đã xin phép bản quyền chưa.</li>
+</ul>
+
+<p>P.s: I love Vietnam</p>
+
+<p><img src="/pjimage(1)-cb2a7399-7029-4c51-acf5-34894cce2c1a.jpg" alt="" /></p>
+
+<p>Mình không biết 3 hình này thuộc địa danh nào ở Việt Nam, nhưng rất đẹp.</p>
+
+<h1 id="references">References</h1>
+
+<p>[a] Cyclical Learning Rates for Training Neural Networks 2015, Leslie N. Smith.</p>
+
+<p>[1] Fine-tuning CNN Image Retrieval with No Human Annotation,</p>
+
+<p>[2] Selective Deep Convolutional Features for Image Retrieval</p>
+
+<p>[3] Total recall: Automatic query expansion with a generative feature model for object retrieval</p>
+
+<p>[4] A. Iscen, G. Tolias, Y. Avrithis, T. Furon, O. Chum. &ldquo;Efficient Diffusion on Region Manifolds: Recovering Small Objects with Compact CNN Representations&rdquo;, CVPR 2017</p>
+
+<p>Xin chân thành cảm ơn sự giúp đỡ và hỗ trợ của VietAI trong quá trình mình tham gia cuộc thi. Dù không được vào Top 3 nhưng cũng là 1 trải nghiệm thú vị với nhiều điều đáng học hỏi.</p>
+
+    </div>
+  </div>
+
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="http://dangkhoasdc.github.io/vi/post/nha_trang_summer18/"><span
+      aria-hidden="true">&larr;</span> Kinh nghiệm du lịch Nha Trang</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
+<div class="article-container">
+  
+<section id="comments">
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Dang-Khoa &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      
+    <script>
+    $(document).ready(function() {
+        $('pre>span.src,pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+    </script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+    </script>
+
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML" integrity="sha512-tOav5w1OjvsSJzePRtt2uQPFwBoHt1VZcUq8l8nm5284LEKE9FSJBQryzMBzHxY5P0zRdNqEcpLIRVYFNgu1jw==" crossorigin="anonymous"></script>
+    
+
+    
+
+  </body>
+</html>
+

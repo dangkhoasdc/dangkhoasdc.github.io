@@ -5,15 +5,6 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/post/zalo_landmark/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://dangkhoasdc.github.io/post/a/</loc>
       <lastmod>2018-09-04T00:00:00+00:00</lastmod>
     </url>
@@ -366,16 +357,6 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/tags/computer-vision/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/tags/computer-vision/" hreflang="en"/>
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/tags/computer-vision/" hreflang="vi"/>
     
@@ -454,16 +435,6 @@
     
     <url>
     
-      <loc>http://dangkhoasdc.github.io/tags/machine-learning/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <loc>http://dangkhoasdc.github.io/tags/math/</loc>
       <lastmod>2017-12-26T00:00:00+00:00</lastmod>
       <priority>0</priority>
@@ -527,7 +498,7 @@
       <xhtml:link rel="alternate" href="http://dangkhoasdc.github.io/vi/post/" hreflang="vi"/>
     
       <loc>http://dangkhoasdc.github.io/post/</loc>
-      <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+      <lastmod>2018-09-04T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

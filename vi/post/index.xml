@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Sat, 07 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/vi/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI Challenge - Landmark: Kỹ thuật và ý tưởng</title>
+      <link>http://dangkhoasdc.github.io/vi/post/zalo_landmark/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/post/zalo_landmark/</guid>
+      <description>Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.
+Dữ Liệu Dưới đây là phân phối số lượng ảnh trên mỗi label.
+  Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.   Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.</description>
+    </item>
     
     <item>
       <title>Kinh nghiệm du lịch Nha Trang</title>
