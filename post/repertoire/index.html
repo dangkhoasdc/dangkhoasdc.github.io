@@ -247,46 +247,49 @@
     <div class="article-style" itemprop="articleBody">
       
 
-<p>The repertoire method is an approach to find a closed-form for recurrence relations and
-sum of series. The method is introduced in Chapter 1 of ConMath but most readers
-at the first time struggled with it. Through the book, especially in Chapter 1 and 2, the repertoire method
-demonstrates its ability to solve many sums and recurrences. However, I honestly admit that it is quite difficult to apply and do not fully understand how it works. In this note I try to figure the way to effectively apply
-the method for solving recurrences.</p>
+<p>The repertoire method is an approach to find a closed-form for recurrence relations
+and sum of series. The method is introduced in Chapter 1 of ConMath but
+most readers at the first time struggled to understand. Through the book,
+especially Chapter 1 and 2, the repertoire method demonstrates its ability
+to solve many sums and recurrences. However, I honestly admit that it is quite
+difficult to apply and do not fully understand how it works.</p>
 
 <h1 id="definition">Definition</h1>
 
-<p>In essence, the main goal of the main is to find coefficients for a <strong>linear
-combinations</strong> of a set of recurrences. This method works very well on linear
+<p>In essence, the main goal of the method is to find coefficients for a <strong>linear
+combination</strong> of a set of recurrences. This method works very well on linear
 recurrences. Therefore, if we have to find a closed-form of a linear recurrence,
 this is worth trying.</p>
 
 <p>The method is not described clearly in ConMath because the authors always come
 up with a set of recurrences and get their coefficients but they do not
-mention how they can figure out. Regarding this aspect, Sedgewick&rsquo;s book obtains
+mention how they figured out. Regarding this aspect, Sedgewick&rsquo;s book obtains
 accessible clarification and systematic examples. Therefore, I use the procedure
 in Sedgewick&rsquo;s book as a formal recipe for the repertoire method:</p>
 
 <ol>
 <li>Relax the recurrence by adding an extra function term.</li>
-<li>Substitue known functions into the recurrence to derive identities similar to the recurrence.</li>
-<li>Take linear combination of such identities to derive an equation identical to the recurrence.</li>
+<li>Substitue known functions into the recurrence to derive identities similar
+to the recurrence.</li>
+<li>Take linear combination of such identities to derive an equation identical
+to the recurrence.</li>
 </ol>
 
-<p>At the first time, it is quite abstract. However, some examples carried out
-in the book illustrate how we can manipulate the steps. Suppose that we have
-a recurrence $a_{n} = a_{n-1} + {\text stuff} $. First we generalize the
-identity by replacing ${\text stuff}$ by $f(n)$, i.e., $a_{n} = a_{n-1} + f(n)$.
-We easily obtain $f(n) =  a_{n} - a_{n-1}$. The next step is to build a table
+<p>At the first time, it is quite abstract. However, some examples carry
+in the book illustrate how we manipulate the steps. Suppose that we have
+a recurrence $a<em>{n} = a</em>{n-1} + {\text stuff} $. Firstly, we generalize the
+identity by replacing ${\text stuff}$ by $f(n)$, i.e., $a<em>{n} = a</em>{n-1} + f(n)$.
+We easily obtain $f(n) =  a<em>{n} - a</em>{n-1}$. The next step is to build a table
 of ingredients in which we can construct $f(n)$. Finally, we determine coefficients
-of each component so that it satisfies $f(n)$ and the initial value of the
+of each component so that they satisfy $f(n)$ and the initial value of the
 recurrence.</p>
 
 <p>For more details and explanations, I strongly recommend reading
 <a href="https://math.stackexchange.com/a/1023510/397515" target="_blank">Markus Scheuer&rsquo;s answer</a>. Of
 course, ConMath (Chapter 1, 2, 6) is a good book for practicing the method except
 understanding purposes. Section 2.5 from Sedgewick&rsquo;s book summarizes
-some approaches for find the closed-form including the repertoire method. Examples
-in the book are required reading.</p>
+some approaches for find the closed-form including the repertoire method.
+Examples in the book are required reading.</p>
 
 <p>The best way to fully understand the method is to work through examples.</p>
 
@@ -295,21 +298,21 @@ in the book are required reading.</p>
 <h2 id="closed-form-of-sums">Closed-form of sums</h2>
 
 <p>We can easily convert a sum of a sequence into a linear recurrence. Let begin
-with the fist example which only contains a term $n^3$.</p>
+with the first example which only contains a single term $n^3$.</p>
 
-<p>$ S_{n} = \sum_{k=0}^n n^3$</p>
+<p>$ S<em>{n} = \sum</em>{k=0}^n k^3$</p>
 
 <p>This sum can be seen as:
-$ a_{0} = 0$
-$ a_{n} = a_{n-1} + n^3$</p>
+$ a<em>{0} = 0$
+$ a</em>{n} = a_{n-1} + n^3$</p>
 
-<p>Next we have to build a table of $a_{n}$ and $a_n - a_{n-1}$.</p>
+<p>Next we have to build a table of $a_{n}$ and $a<em>n - a</em>{n-1}$.</p>
 
 <table>
 <thead>
 <tr>
 <th>$a_n$</th>
-<th>$a_n -a_{n-1}$</th>
+<th>$a<em>n -a</em>{n-1}$</th>
 </tr>
 </thead>
 
@@ -341,12 +344,12 @@ $ a_{n} = a_{n-1} + n^3$</p>
 </tbody>
 </table>
 
-<p>How do I can fill these value of $a_n$? Since we want $f(n)$ obtains $n^3$
-and we observe that $f(n) = a_n - a_{n-1}$ depends on the degree of $n$ in
-$a_n$ and hence we come up with some simple sequence, compute $a_n - a_{n-1}$.
+<p>How can we fill these values $a_n$? Since we want $f(n)$ obtains $n^3$
+and we observe that $f(n) = a<em>n - a</em>{n-1}$ depends on the degree of $n$ in
+$a_n$ and hence we come up with some simple sequence, compute $a<em>n - a</em>{n-1}$.
 Turn out $f(n)$ have smaller degree of $n$ than $a_n$ exactly 1. $f(n)$ obtaining $n^3$
 means that $a_n$ has to obtain $n^4$. The simplest form we can come up with
-is $n^3 = \alpha (4n^3-6n^2+4n-1)$. So $\alpha = {1\over 4}$, we need to eliminate $n^2$,
+is $n^3 = \alpha (4n^3-6n^2+4n-1)$. So $\alpha = &frac14;$, we need to eliminate $n^2$,
 $n$ and constants. In the second attempt, we add $n^3$ and $n^2$ into the
 linear combination:
 $$
@@ -354,70 +357,40 @@ $$
 $$</p>
 
 <p>$$
-\begin{cases}
--6\alpha + 3\beta = 0\newline
-4\alpha -3\beta + 2\lambda = 0\newline
--\alpha + \beta - \lambda = 0
-\end{cases}
+\left{
+  \begin{array}{l}
+   -6\alpha + 3\beta = 0 \newline
+   4\alpha -3\beta + 2\lambda = 0 \newline
+   -\alpha + \beta - \lambda = 0
+  \end{array}
+\right.
 $$</p>
 
 <p>The solution is $(\alpha, \beta,\lambda) =({1\over 4}, {1\over 2}, {1\over 4}) $
 and hence $a_n = \alpha n^3 + \beta n^2 + \lambda n = {1\over 4}n^2(n+1)^2$.
 Also, since $a_0 = 0$, it is the final solution.</p>
 
-<p>Let try another example, this time we use an exercise in ConMath:</p>
-
-<p>$$ S_{n} = \sum_{k=0}^{k} (-1)^kk^2$$</p>
-
-<table>
-<thead>
-<tr>
-<th>$a_n$</th>
-<th>$a_n-a_{n-1}$</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>$(-1)^nn^2$</td>
-<td>$(-1)^n(2n^2-2n+1)$</td>
-</tr>
-
-<tr>
-<td>$(-1)^n $</td>
-<td>$2(-1)^n$</td>
-</tr>
-
-<tr>
-<td>$(-1)^nn $</td>
-<td>$(-1)^n(2n-1)$</td>
-</tr>
-</tbody>
-</table>
-
-<p>The solution is $S_n = {1\over 2}(-1)^nn(n+1)$ since we just add the first term
-and the last term together and then divide by 2, we get $f(n)$. When I first saw
-the sum, I could not think any sequences which help me find $f(n)$. After
-play which some sequences, I realize that assigning $a_n = f(n) = (-1)^nn^2$
-actually lets other patterns be discovered.</p>
+<p>$ S<em>{n} = \sum</em>{k=0}^{n} (-1)^nn^2$</p>
 
 <h2 id="linear-recurrences">Linear Recurrences</h2>
 
 <p>$ a_0 = 7 $</p>
 
-<p>$ a_n = a_{n-1} + 2n^2 + 7 \; n &gt; 0 $</p>
+<p>$ a<em>n = a</em>{n-1} + 2n^2 + 7 \; n &gt; 0 $</p>
 
 <p>Based on the table we built in previous examples, we can construct a linear
 combination for the recurrence:</p>
 
-<p>$\alpha(3n^2-3n+1) + \beta(2n-1) + \lambda 1 = 2n^2+7$</p>
+<p>$\alpha(3n^3-3n+1) + \beta(2n-1) + \lambda 1- 2n^2+7$</p>
 
 <p>$$
-\begin{cases}
-3\alpha = 2 \newline
--3\alpha + 2\beta = 0 \newline
-\alpha - \beta + \lambda = 7
-\end{cases}
+\left{
+  \begin{array}{l}
+   3\alpha = 2 <br />
+   -3\alpha + 2\beta = 0 <br />
+   \alpha - \beta + \lambda = 7
+  \end{array}
+\right.
 $$</p>
 
 <p>The solution is $(\alpha, \beta, \lambda) = ({2\over 3}, 1, {22\over 3})$. However,
