@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine learning on Dang-Khoa&#39;s blog </title>
+    <title>machine learning on Dang-Khoa&#39;s blog </title>
     <link>http://dangkhoasdc.github.io/vi/tags/machine-learning/</link>
-    <description>Recent content in Machine learning on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in machine learning on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
@@ -21,10 +21,6 @@
       <description>Đây là cuộc hành trình của mình tìm về bản chất của câu chuyện overfiting, underfitting và các khái niệm lung tung xung quanh như bias-variance tradeoff.
 Tài liệu tham khảo chính được lấy từ 2 cuốn sách:
  Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. Learning from data. Vol. 4. New York, NY, USA:: AMLBook, 2012. Friedman, Jerome, Trevor Hastie, and Robert Tibshirani. The elements of statistical learning. Vol.</description>
-    </item>
-    
-  </channel>
-</rss>đề này.</description>
     </item>
     
   </channel>

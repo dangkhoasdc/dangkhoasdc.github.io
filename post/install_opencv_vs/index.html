@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.48" />
+  <meta name="generator" content="Hugo 0.50" />
   <meta name="author" content="Dang-Khoa">
   <meta name="description" content="Research Assistant">
 
@@ -285,34 +285,20 @@ for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.</li>
 
 <p>Step 1: Extract the file into a folder, let say <code>C:\opencv</code>.</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/rwpgj0b.png" />
-    
-    
-    <figcaption>
-        <h4>Extract the library</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/rwpgj0b.png"/> <figcaption>
+            <h4>Extract the library</h4>
+        </figcaption>
 </figure>
 
 
 <p>Folder <code>build</code> contains pre-compiled DLLs of the library, while filder <code>sources</code>
 are used for manully installing.</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/iFzMg6J.png" />
-    
-    
-    <figcaption>
-        <h4>Folders in OpenCV</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/iFzMg6J.png"/> <figcaption>
+            <h4>Folders in OpenCV</h4>
+        </figcaption>
 </figure>
 
 
@@ -322,17 +308,10 @@ are used for manully installing.</p>
 as mentioned in the previous step. <code>Where to build the binaries</code>: where we put
 output of library, i.e, DLLs files. In this tutorial, I put it in <code>C:\opencv\sources\build</code>.</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/BGpSwUO.png" />
-    
-    
-    <figcaption>
-        <h4>CMake interface</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/BGpSwUO.png"/> <figcaption>
+            <h4>CMake interface</h4>
+        </figcaption>
 </figure>
 
 
@@ -354,17 +333,10 @@ includes different Projects/Solutions.</p>
 <p>Step 4: Use Visual Studio to open solution <code>OPENCV</code>. Beware of the version of
 VS have to be the same of as configured in CMAKE.</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/nfvzGPb.png" />
-    
-    
-    <figcaption>
-        <h4>Targets and Architectures of Visual Studio</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/nfvzGPb.png"/> <figcaption>
+            <h4>Targets and Architectures of Visual Studio</h4>
+        </figcaption>
 </figure>
 
 
@@ -384,17 +356,10 @@ Debug and Release modes, respectively.</p>
 
 <p>Step 1: Create a new empty project.</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/OR6H08N.png" />
-    
-    
-    <figcaption>
-        <h4>Create a new project</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/OR6H08N.png"/> <figcaption>
+            <h4>Create a new project</h4>
+        </figcaption>
 </figure>
 
 
@@ -413,17 +378,10 @@ each target.</li>
 
 <p>Right click to the project <code>InstallOpencv</code>, select <code>Properties</code> (<code>Alt + F7</code>).</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/GB9Dd20.png" />
-    
-    
-    <figcaption>
-        <h4>Config additional header file</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/GB9Dd20.png"/> <figcaption>
+            <h4>Config additional header file</h4>
+        </figcaption>
 </figure>
 
 
@@ -437,31 +395,17 @@ in <code>Additional Library Directories</code> we point to <code>lib\Debug</code
 Nhấn Alt + F7 để vào phần Properties của Project. Chọn Thẻ Linker, mục Additional Library Directories ta trỏ đến thư mục lib\Debug (trong ví dụ này là: <code>C:\oepncv\sources\build\lib\Debug</code>) since
 we are using the <code>Debug</code> target.</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/kAG7ftJ.png" />
-    
-    
-    <figcaption>
-        <h4>Configuration</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/kAG7ftJ.png"/> <figcaption>
+            <h4>Configuration</h4>
+        </figcaption>
 </figure>
 
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/QBpuB7C.png" />
-    
-    
-    <figcaption>
-        <h4>Additional Library Directories</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/QBpuB7C.png"/> <figcaption>
+            <h4>Additional Library Directories</h4>
+        </figcaption>
 </figure>
 
 
@@ -536,17 +480,10 @@ int main() {
 
 <p>[Place <code>demo.jpg</code> in the project folder to run the code]</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/CtRS1r5.png" />
-    
-    
-    <figcaption>
-        <h4>Demo</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/CtRS1r5.png"/> <figcaption>
+            <h4>Demo</h4>
+        </figcaption>
 </figure>
 
 
@@ -591,49 +528,28 @@ We simply copy the content to <code>Additional Dependencies</code> when creating
 <p><code>Windows + E</code> to open <code>File Explorer</code>
 Nhấn Windows E để mở Windows Explore</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/8tTY60w.png" />
-    
-    
-    <figcaption>
-        <h4>File Explorer</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/8tTY60w.png"/> <figcaption>
+            <h4>File Explorer</h4>
+        </figcaption>
 </figure>
 
 
 <p>Right click on <code>Computer</code> and select <code>Properties</code>.</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/NKnfVzz.png" />
-    
-    
-    <figcaption>
-        <h4>Advanced System Settings</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/NKnfVzz.png"/> <figcaption>
+            <h4>Advanced System Settings</h4>
+        </figcaption>
 </figure>
 
 
 <p>Select <code>Advanced System Settings</code>. In tab <code>Advanced</code>, select <code>Environment Variables…</code></p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/HdUETeV.png" />
-    
-    
-    <figcaption>
-        <h4>Path Variable Configurate</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/HdUETeV.png"/> <figcaption>
+            <h4>Path Variable Configurate</h4>
+        </figcaption>
 </figure>
 
 
@@ -646,17 +562,10 @@ Nhấn Windows E để mở Windows Explore</p>
 <p>In the sidebar <code>Property Manager</code>, we seethe list of all configs corresponding
 to target archtectures in the project.</p>
 
-
 <figure>
-    
-        <img src="http://i.imgur.com/UrkPyJs.png" />
-    
-    
-    <figcaption>
-        <h4>Property Manager</h4>
-        
-    </figcaption>
-    
+    <img src="http://i.imgur.com/UrkPyJs.png"/> <figcaption>
+            <h4>Property Manager</h4>
+        </figcaption>
 </figure>
 
 
