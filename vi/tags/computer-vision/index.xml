@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>computer vision on Dang-Khoa&#39;s blog </title>
+    <title>computer-vision on Dang-Khoa&#39;s blog </title>
     <link>http://dangkhoasdc.github.io/vi/tags/computer-vision/</link>
-    <description>Recent content in computer vision on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in computer-vision on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 12 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/vi/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Lịch sử Thị Giác Máy Tính - Phần 1</title>
-      <link>http://dangkhoasdc.github.io/vi/post/compvision_hist/</link>
-      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      <title>Hashing in content-based image retrieval</title>
+      <link>http://dangkhoasdc.github.io/vi/project/deep_hashing/</link>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/post/compvision_hist/</guid>
-      <description>Edition: Pre-fascicle 1A (Revision -99).
-[Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT - hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông tin về một hướng nghiên cứu khá hấp dẫn này.</description>
+      <guid>http://dangkhoasdc.github.io/vi/project/deep_hashing/</guid>
+      <description>Since I worked at SUTD, I have been working on the content-based image retrieval. It is very active in academia and industry. Actually, there are some works I have accomplished:
+ Image hasing: a joint optimization for image embedding and hashing (CVPR17 paper). Deep Image Retrieval: a scheme for unified deep learning and image retrieval (ACM MM17 paper). Mobile version of Triangulation Embedding. Deep Hashing Image (In progress).  </description>
     </item>
     
-  </channel>
-</rss>.github.io/vi/project/usbl/</link>
+    <item>
+      <title>Urban-Area Scene-Based Localization</title>
+      <link>http://dangkhoasdc.github.io/vi/project/usbl/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/vi/project/usbl/</guid>
