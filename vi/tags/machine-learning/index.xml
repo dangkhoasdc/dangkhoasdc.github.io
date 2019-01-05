@@ -14,10 +14,10 @@
     
     <item>
       <title>Overfitting là cái quái gì</title>
-      <link>http://dangkhoasdc.github.io/vi/post/overfitting/</link>
+      <link>http://dangkhoasdc.github.io/vi/docs/overfitting/</link>
       <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/post/overfitting/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/docs/overfitting/</guid>
       <description>Đây là cuộc hành trình của mình tìm về bản chất của câu chuyện overfiting, underfitting và các khái niệm lung tung xung quanh như bias-variance tradeoff.
 Tài liệu tham khảo chính được lấy từ 2 cuốn sách:
  Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. Learning from data. Vol. 4. New York, NY, USA:: AMLBook, 2012. Friedman, Jerome, Trevor Hastie, and Robert Tibshirani. The elements of statistical learning. Vol.</description>

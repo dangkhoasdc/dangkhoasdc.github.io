@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
+Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Install OpenCV 3 non-free module on Ubuntu • Dang-Khoa'>
+<meta property='og:description' content='The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
+Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/docs/opencv3_nonfree/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='android'><meta property='article:tag' content='opencv'><meta property='article:tag' content='programming'><meta property='article:published_time' content='2018-06-15T00:00:00Z'/><meta property='article:modified_time' content='2018-06-15T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Install OpenCV 3 non-free module on Ubuntu • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/docs/opencv3_nonfree/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Install OpenCV 3 non-free module on Ubuntu</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-06-15T00:00:00Z'>2018, Jun 15</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>The <code>opencv_nonfree</code> module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.</p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<ul>
+<li>Remove the old version which has been installed in the system.</li>
+<li>Do not install <code>opencv</code> via <code>apt-get</code></li>
+<li>Install <code>cmake</code> : <code>sudo apt-get install cmake</code></li>
+</ul>
+
+<h1 id="installation">Installation</h1>
+
+<ol>
+<li>Download opencv <code>git clone https://github.com/opencv/opencv</code>
+
+<ol>
+<li>Do not download the source from homepage.</li>
+</ol></li>
+<li>Download the <code>opencv_contrib</code> : <code>git clone https://github.com/opencv/opencv_contrib</code>
+
+<ol>
+<li>Check both <code>opencv</code> and <code>opencv_contrib</code> are the latest versions otherwise we can not compile them.</li>
+</ol></li>
+<li>Extract the source.</li>
+<li><code>cd path/to/opencv-source</code></li>
+<li><code>Run Cmake: cmake-gui</code></li>
+<li>In the textbox <code>Where is the source code</code>, it should be the path of OpenCV</li>
+<li><code>Where to build the binaries</code> : path to your build directory, e.g, <code>~/opencv/build</code></li>
+<li>Select <code>Configure</code></li>
+<li>When the dialog <code>CMakeSetup</code> pops up, configure the compiler according to your system.  (Most of the time is to select <code>Unix Makefiles</code>  as the generator and <code>Use default native compilers</code> as well.)</li>
+
+<li><p>After automatically generating Makefiles, CMake will show all available settings.
+<img src="https://d2mxuefqeaa7sj.cloudfront.net/s_523E39E4ECA35EB029767FC1B7193005C2F8774AAA68534E53805B9B19325704_1492980683137_file.png" alt="" /></p></li>
+
+<li><p>Select <code>OPENCV&gt;OPENCV_ENALBLE_NONFREE</code></p></li>
+
+<li><p>On <code>OPENCV&gt;OPENCV_EXTRA_MODULES_PATH</code> , give the path to folder <code>modules</code> inside <code>opencv_contrib</code></p></li>
+
+<li><p>Select <code>Configure</code> the project again. On the output window, check whether it produces <code>Non-free algorithms are enabled</code> .</p></li>
+
+<li><p>On <code>BUILD</code> , make sure that you have selected the appropriate modules for features extraction, e.g, <code>BUILD_opencv_xfeatures2d</code>.</p></li>
+
+<li><p><code>Configure</code> the project again.</p></li>
+
+<li><p>Select <code>Generate</code></p></li>
+
+<li><p><code>cd /path/to/opencv/build</code></p></li>
+
+<li><p><code>make all</code> (To speed up : <code>make all -j8</code> )</p></li>
+
+<li><p><code>make install</code></p></li>
+</ol>
+
+<p>Done.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/android'>android</a>, <a class='tag' href='/tags/opencv'>opencv</a>, <a class='tag' href='/tags/programming'>programming</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/docs/opencv_android_practices/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>OpenCV on Android: practices and tips</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/docs/a/'>
+        <span class='screen-reader-text'>Next post: </span>Hello world with Literate Programming<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

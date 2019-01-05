@@ -14,20 +14,20 @@
     
     <item>
       <title>Miscellaneous notes</title>
-      <link>http://dangkhoasdc.github.io/post/why_so_serious/</link>
+      <link>http://dangkhoasdc.github.io/docs/why_so_serious/</link>
       <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/why_so_serious/</guid>
+      <guid>http://dangkhoasdc.github.io/docs/why_so_serious/</guid>
       <description>Therer are some not-so-serious miscellaneous thoughts, comments of mine about everything in an informal format using Vietnamese and English.
-Table of Contents  Deep Learning and truely science researching &amp;ldquo;Thời gian trôi như chó chạy ngoài đồng&amp;rdquo; How to classify images of fruit Chuyện fake news, fake quotes và toxic information.  References    Deep Learning and truely science researching    &amp;ldquo;too often where people will something against their own gut instincts because they think the community wants them to do it that way, so people will work on a certain subject even though they aren&amp;rsquo;t terribly interested in it because they think that they&amp;rsquo;ll get more prestige by working on it.</description>
+Deep Learning and truely science researching    &amp;ldquo;too often where people will something against their own gut instincts because they think the community wants them to do it that way, so people will work on a certain subject even though they aren&amp;rsquo;t terribly interested in it because they think that they&amp;rsquo;ll get more prestige by working on it.</description>
     </item>
     
     <item>
       <title>Matlab</title>
-      <link>http://dangkhoasdc.github.io/post/matlab/</link>
+      <link>http://dangkhoasdc.github.io/docs/matlab/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/matlab/</guid>
+      <guid>http://dangkhoasdc.github.io/docs/matlab/</guid>
       <description>General  Show the information of a variable. It is very useful when we the code takes so much memory: whos &amp;lt;variable name&amp;gt;. Sum of squared of elements: sumsqr(X). Use sum(sum(A.^2, 1)) instead if you want to use less memory. Memory optimizations tips and tricks: [Undocumented Matlab] Use column-based representation instead of the row-based one. For example, to represent a list of items from 1 to 5, use [1 2 3 4 5] (not [1; 2; 3; 4; 5]).</description>
     </item>
     

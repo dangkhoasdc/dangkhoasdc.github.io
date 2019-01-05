@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/vi/page/</link>
+    <description>Recent content in Pages on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    
+	<atom:link href="http://dangkhoasdc.github.io/vi/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>http://dangkhoasdc.github.io/vi/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/page/about/</guid>
+      <description>Engimo came as combination of two words: &amp;ldquo;engeineering&amp;rdquo; and Minimo.</description>
+    </item>
+    
+  </channel>
+</rss>

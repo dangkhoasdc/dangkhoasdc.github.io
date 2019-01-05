@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Hôm rồi học course Introduction to Algorithm (2006-MIT) mình được biết qua khái niệm Randomized Algorithms, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.
+Định nghĩa Randomized Algorithms (viết gọn là randalgs) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.
+Điểm thú vị của randalgs chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến kì vọng trong trường hợp xấu nhất.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Dẫn nhập thuật toán ngẫu nhiên • Dang-Khoa'>
+<meta property='og:description' content='Hôm rồi học course Introduction to Algorithm (2006-MIT) mình được biết qua khái niệm Randomized Algorithms, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.
+Định nghĩa Randomized Algorithms (viết gọn là randalgs) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.
+Điểm thú vị của randalgs chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến kì vọng trong trường hợp xấu nhất.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/intro_randalgs/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='algorithms'><meta property='article:published_time' content='2016-10-23T00:00:00Z'/><meta property='article:modified_time' content='2016-10-23T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Dẫn nhập thuật toán ngẫu nhiên • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/intro_randalgs/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Dẫn nhập thuật toán ngẫu nhiên</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2016-10-23T00:00:00Z'>2016, Oct 23</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Hôm rồi học course <em>Introduction to Algorithm (2006-MIT)</em> mình được biết qua khái niệm <em>Randomized Algorithms</em>, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.</p>
+
+<h1 id="định-nghĩa">Định nghĩa</h1>
+
+<p><em>Randomized Algorithms</em> (viết gọn là <code>randalgs</code>) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.</p>
+
+<p>Điểm thú vị của <code>randalgs</code> chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến <em>kì vọng trong trường hợp xấu nhất</em>.</p>
+
+<p>Tưởng tượng ta có một hệ thống nghiêm trọng, nếu như hệ thống đó bị crash thì sẽ kích hoạt <a href="https://en.wikipedia.org/wiki/Cheget" target="_blank">Cheget</a> và <a href="https://en.wikipedia.org/wiki/Nuclear_football" target="_blank">Nuclear football</a> cùng một lúc. Hệ thống quá lớn và phức tạp, quan trọng hơn, nó sẽ không hoạt động được khi liên tục phải chạy <code>quicksort</code> trong $\mathcal{O}(n^2)$ - dữ liệu đầu vào là mảng được sắp xếp sẵn.</p>
+
+<p>Hacker, bằng một cách nào đó biết được điều này và tấn công hệ thống bằng cách đưa vào hệ thống những mảng đã sắp xếp sẵn. Và bùm, apocalyptic diễn ra.</p>
+
+<p>Và để ngăn chặn thảm hoạ đó xảy đến, ta tạo ra một phiên bản gọi là <code>randomized quicksort</code>: trước khi được xử lý, mảng đầu vào sẽ được xáo trộn. Và cho dù hacker có cố tình tấn công bằng chuỗi đã sắp xếp thì sau bước tiền xử lý này , mảng được sắp xếp ngẫu nhiên.</p>
+
+<p>Nếu một input có trật tự ngẫu nhiên, sau khi xáo trộn trở thành một chuỗi thứ tự thì sao? <a href="https://en.wikipedia.org/wiki/Murphy%27s_law" target="_blank">Murphy’s law</a></p>
+
+<blockquote>
+<p>Nếu đã xui, thì hẳn phải xui nhất có thể.</p>
+</blockquote>
+
+<h1 id="ví-dụ">Ví dụ</h1>
+
+<p>Một biến thế nổi tiếng của <em>Quick sort</em> chính là <em>Randomized Quicksort</em>, có hai phiên bản chính:</p>
+
+<ol>
+<li>Chọn ngẫu nhiên pivot để xử lý.</li>
+<li>Xáo trộn mảng đầu vào trước khi sắp xếp.</li>
+</ol>
+
+<p><em>Randomized Quicksort</em> được tạo ra nhằm tránh trường hợp xấu nhất của thuật toán <em>quicksort</em> là $\mathcal{O}(n^2)$.</p>
+
+<h1 id="phân-loại">Phân loại</h1>
+
+<blockquote>
+<p>In Las Vegas, the dealer can tell you whether you’ve won or lost, but in Monte Carlo, le croupier ne parle que Français, so you have no idea what he’s saying</p>
+</blockquote>
+
+<h2 id="las-vegas-algorithm">Las Vegas algorithm</h2>
+
+<p>Thuật toán nằm trong họ <em>Las Vegas</em> <em>luôn luôn</em> đảm bảo kết quả trả ra đúng với mong muốn. Quicksort là một ví dụ điển hình.</p>
+
+<p>Nói cách khác, <em>Las Vegas</em> không chơi hên xui ở kết quả trả về, nó chỉ sử dụng yếu tố ngẫu nhiên trong các phép tính toán để cho ra kết quả đúng.</p>
+
+<h2 id="monte-carlo-algorithm">Monte Carlo algorithm</h2>
+
+<p>Khác với <em>Las Vegas</em>, <em>Monte Carlo</em> không đảm bảo kết quả sẽ luôn luôn đúng. Nhưng <em>Monto Carlo</em> có xác suất kết quả sai thấp có thể.</p>
+
+<p>Thay vì sử dụng xác suất như một trong những quá trình tính toán, <em>Monte Carlo</em> hên xui ngay cả kể quả trả về.</p>
+
+<h2 id="phân-biệt">Phân biệt</h2>
+
+<h3 id="bài-toán">Bài toán</h3>
+
+<p>Cho một chuỗi có độ dài <code>2n</code> trong đó có <code>n</code> kí tự <code>a</code> và <code>n</code> kí tự <code>b</code>. Nhiệm vụ là tìm ra một vị trí bất kì trong chuỗi chứa kí tự a</p>
+
+<pre><code class="language-python">    import sys
+    import random
+
+    # Las Vegas version
+    def find_a_lv(string):
+        while True:
+            pos = random.randint(0, len(string)-1)
+            if string[pos] == 'a': return pos
+
+    # Monte Carlo version
+    def find_a_mc(string, k):
+        pos = 0
+        while k and string[pos] != 'a':
+            k = k -1
+            pos = random.randint(0, len(string)-1)
+
+        return pos
+
+    if __name__ == '__main__':
+        string = sys.argv[1]
+        if len(string) % 2 == 1:
+            raise ValueError(&quot;Wrong input&quot;)
+
+        print find_a_lv(string)
+        print find_a_mc(string, len(string)/2)
+</code></pre>
+
+<p>Ta dễ dàng nhận thấy <code>find_a_lv</code> luôn luôn cho ra kết quả, tuy nhiên đôi khi nó lại không thực sự hiệu quả. Ví dụ như nếu ta có chuỗi đầu vào là “ab” và <code>find_a_lv</code> mất 2 triệu vòng lặp mới pick đúng <code>pos=0</code>.Dĩ nhiên xác suất để xảy ra chuyện đó rất thấp, nhưng không có nghĩa là nó không xảy ra.</p>
+
+<p>Còn trong trường hợp <code>find_a_mc</code>, kết quả sẽ sai với xác suất khá dễ tính: $\frac{1}{2^k}$ - khi trong <code>k</code> lần thử để chọn đúng vị trí chứa <code>b</code>.</p>
+
+<h1 id="các-kĩ-thuật-cơ-bản">Các kĩ thuật cơ bản</h1>
+
+<p><img src="http://i.imgur.com/0YSlgjJ.png" alt="Methodologies" /></p>
+
+<ol>
+<li>Avoiding adversarial inputs:
+
+<ul>
+<li>Trong các thuật toán online.</li>
+<li>Hashing.</li>
+<li>Trong các thuật toán sắp xếp.</li>
+</ul></li>
+<li>Verification:
+
+<ul>
+<li>Phát sinh số ngẫu nhiên trong các bài toán kiểm thực.</li>
+</ul></li>
+<li>Random sampling:
+
+<ul>
+<li>Trong các bài toán tìm kiếm (tìm median..)</li>
+<li>Trong các thuật toán geometry.</li>
+</ul></li>
+<li>Load balancing:
+
+<ul>
+<li>Parallel algorithms.</li>
+<li>Hashing problems.</li>
+</ul></li>
+<li>Symmetry breaking:
+
+<ul>
+<li>Dùng trong hệ thống distributed.</li>
+</ul></li>
+<li>Probabilistic existence proofs:
+
+<ul>
+<li>Thông qua các thực nghiệm.</li>
+<li>Đảm bảo trong bài toán tìm kiếm đối tượng cần tìm tồn tại.</li>
+</ul></li>
+</ol>
+
+<h1 id="tài-liệu">Tài liệu</h1>
+
+<h2 id="khoá-học">Khoá học</h2>
+
+<ol>
+<li><a href="https://courses.cs.washington.edu/courses/cse525/13sp/" target="_blank">Randomized Algorithms and Probabilistic Analysis - Washington</a></li>
+<li><a href="http://cs.brown.edu/courses/cs155/slides/slides.html" target="_blank">Probabilistic Methods in Computer Science</a></li>
+</ol>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/algorithms'>algorithms</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/install_opencv_vs/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Hướng dẫn cài đặt OpenCV trên Windows</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/diablo3-review/'>
+        <span class='screen-reader-text'>Next post: </span>Diablo III<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

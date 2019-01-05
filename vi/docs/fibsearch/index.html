@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Mình không tìm được từ nào tiếng Việt có thể dịch được từ &ldquo;Fibonaccian Searching&rdquo;, nếu &ldquo;binary searching&rdquo; có thể dịch là &ldquo;tìm kiếm nhị phân&rdquo;, thì &ldquo;Fibonaccian Searching&rdquo; không có ngữ nghĩa gì nhiều.
+Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.
+Lịch sử Thuật toán được để xuất bởi Devid E.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Giải thuật tìm kiếm Fibonacci • Dang-Khoa'>
+<meta property='og:description' content='Mình không tìm được từ nào tiếng Việt có thể dịch được từ &ldquo;Fibonaccian Searching&rdquo;, nếu &ldquo;binary searching&rdquo; có thể dịch là &ldquo;tìm kiếm nhị phân&rdquo;, thì &ldquo;Fibonaccian Searching&rdquo; không có ngữ nghĩa gì nhiều.
+Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.
+Lịch sử Thuật toán được để xuất bởi Devid E.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/fibsearch/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='programming'><meta property='article:tag' content='algorithms'><meta property='article:published_time' content='2017-12-19T00:00:00Z'/><meta property='article:modified_time' content='2017-12-19T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Giải thuật tìm kiếm Fibonacci • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/fibsearch/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Giải thuật tìm kiếm Fibonacci</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2017-12-19T00:00:00Z'>2017, Dec 19</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Mình không tìm được từ nào tiếng Việt có thể dịch được từ &ldquo;Fibonaccian Searching&rdquo;,
+nếu &ldquo;binary searching&rdquo; có thể dịch là &ldquo;tìm kiếm nhị phân&rdquo;, thì &ldquo;Fibonaccian Searching&rdquo;
+không có ngữ nghĩa gì nhiều.</p>
+
+<p>Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài
+ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.</p>
+
+<h1 id="lịch-sử">Lịch sử</h1>
+
+<p>Thuật toán được để xuất bởi Devid E. Ferguson (CACM-1960, <a href="https://dl.acm.org/citation.cfm?id=367496" target="_blank">link</a>).
+Một số phát hiện liên quan, chủ yếu về nguồn gốc cây Fibonacci có thể tham khảo tại TAoCP - Vol 3 (Mục 6.2.1).</p>
+
+<h1 id="thuật-toán">Thuật toán</h1>
+
+<p>Điểm thú vị của thuật toán này nằm ở chỗ thuật toán không sử dụng phép chia, nhưng vẫn đạt được
+độ hiệu quả của binary search. Tuy nhiên, ưu điểm này thực sự có tác dụng
+vào thời điểm thuật toán này được đề xuất (1960) khi mà các chép chia, hay
+shift bit tốn nhiều chi phí hơn so với phép cộng trừ. Tuy nhiên, <code>fibsearch</code>
+còn được sử dụng khi tốn ưu thời gian tìm kiếm khi mà dữ liệu quá lớn không
+thể đọc lên được toàn bộ lên RAM hoặc cache, khi đó thời gian đọc trên bộ
+lưu trữ ngoại vi trở nên tốn kém ( <a href="https://stackoverflow.com/a/22877947/1629214" target="_blank">link </a>).
+Tuy nhiên mình nghĩ <code>fibsearch</code>
+sẽ là một câu hỏi phỏng vấn cực kì thú vị.</p>
+
+<blockquote>
+<p>Thiết kế một thuật toán tìm kiếm nhị phân không sử dụng phép nhân, chia hoặc
+dịch bit với độ phức tạp $\mathcal{O}(\lg N)$</p>
+</blockquote>
+
+<h3 id="cài-đặt">Cài đặt</h3>
+
+<p>Phần dưới đây là giải thuật lấy từ TAoCP, mình nghĩ là cực kì dễ hiểu, tạm thời
+mình chỉ trình bày mã giả. Có thể tham khảo phần cài đặt bằng C, trong phần
+<a href="#references">References</a>. Một phiên bản cải tiến với kích thức mảng $N$ bất
+kì sẽ được update sau.</p>
+
+<pre><code>Input: mảng $K_1, K_2, ..., K_N$ được sắp xếp và phần tử $K$ cần tìm. Giả sử
+$N+1 = F_{k+1}. Lưu ý index của mảng bắt đầu 1$
+
+P1. [Khởi tạo] i = F[k], p = F[k-1], q = F[k-2]
+P2. [So sánh].
+    if K[i] &lt; K: go to P3.
+    else if K[i] &gt; K: go to P4.
+    else: return i;
+P3. [Xét cây con Fibonacci bên trái]
+    if q = 0: return -1
+    else:
+        i -= q
+        (p, q) = (q, p-q)
+        go to P2
+P4. [Xét cây con Fibonacci bên phải]
+    if p = 1: return -1
+    else:
+        i += q
+        p -= q
+        q -= p
+        go to P2
+</code></pre>
+
+<h2 id="bài-tập">Bài tập</h2>
+
+<ul>
+<li>Thiết kế thuật toán cho trường hợp $N \geq 0$.</li>
+<li>Thiết kế thuật toán với index bắt đầu bằng 0. Về mặt kĩ thuật chỉ có 1 thay đổi
+nhỏ trong code, nhưng cây Fibonacci sẽ tương đối khác.</li>
+</ul>
+
+<h1 id="phân-tích">Phân tích</h1>
+
+<figure>
+    <img src="https://imgur.com/download/iCyGe2U"/> <figcaption>
+            <h4>Cây tìm kiếm Fibonacci với k=6. Source: TAoCP, Vol 3, P417.</h4>
+        </figcaption>
+</figure>
+
+
+<p>Phần dưới đây là mô tả ngắn gọn cách mà thuật toán này thực thi. Khác với tìm
+kiếm nhị phân chia các nhánh tìm kiếm thành các cây nhị phân, <code>fibsearch</code> thay
+vào đó xây dựng cây Fibonacci. <em>Cây Fibonacci bậc $k$</em> được định nghĩa là &ldquo;cây&rdquo; với
+$F_{k+1}-1$ internal nodes (vòng tròn) và $F_{k+1}$ external nodes (hình vuông),<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>
+cây Fibonacci được xây dựng như sau:</p>
+
+<ol>
+<li>$k=0$ hoặc $k=1$, cây chỉ có 1 external node là 0.</li>
+<li>$k \geq 2$, root là có giá trị $F_k$, cây con bên trái là cây fibonacci
+bậc $k-1$ và cây con bên phải là cây fibonacci bậc $k-2$ với tất cả các nodes
+tăng $F_k$ đơn vị.</li>
+</ol>
+
+<p>Thuật toán <code>fibsearch</code> chính là việc xây dựng cây fibonacci bậc $k$ với $N=F_{k+1}$.</p>
+
+<p>Trong Figure 1, cây có bậc $k=6$ (tương đương với tìm mảng có $N=12$ phần tử
+($N+1=F_{k+1} = F_7 = 13$)), số internal nodes
+$F_{k+1}-1=12$ và $F_{k+1}=13$ external nodes. Ngoài ra,
+ta có thể thấy root = $F_6 = 8$, phần nhánh bên trái của 8 có
+$F_6-1=7$ internal nodes, và bên phải gồm $F_5-1 = 4$ internal
+nodes. Tiếp tục xuống các level thấp hơn là các giá trị $F$ nhỏ hơn và theo
+đúng quy luật đã nêu. Nhìn hình ta có thể hình dung phần nào, với cách tiếp cận
+chia để trị tương đồng với tìm kiếm nhị phân, tìm kiếm fibonaci &ldquo;có thể&rdquo;
+có độ phức tạp tương tự.</p>
+
+<p>Một chứng minh cụ thể và chi tiết hơn sẽ được cập nhật sau, kèm theo đó là mã
+nguồn C++ của thuật toán.</p>
+
+<h1 id="dạng-tổng-quát">Dạng tổng quát</h1>
+
+<p>Cả tìm kiếm nhị phân lẫn Fibonacci search thực ra cũng thuộc một dạng tổng quát
+của một chiến lược chia để trị trong tìm kiếm chuỗi đã được sắp xếp.</p>
+
+<p>Gọi $p$ và $q$ thỏa $p+q=1$, gọi $C(N)$ là số phép so sánh cần thực hiện của
+giải thuật. Chiến lược ở đây đó là chia mảng thành 2 phần với số lượng phần
+tử lần lượt là $pN$ và $qN$. Ta có dãy truy hồi số phép so sánh trong thuật toán:</p>
+
+<p>$$ C(N) = 1 + pC(pN) + qC(qN) $$</p>
+
+<p>Công thức này có dạng close form là $C(N) = \log_bN$ trong đó $b$ là hằng số
+cần tìm. Dễ dàng thấy được với tìm kiếm nhị phần $p=q={1 \over 2}$, còn với
+<code>fibsearch</code> thì $p={1 \over \phi}$ và $q= {1 \over \phi^2}$. Cụm $pC(pN)$ ở
+đây có nghĩa là xác suất $p$ phần tử cần tìm nằm trong khoảng $pN$ phần tử
+đã được chia, tương tự với $qC(qN)$.</p>
+
+<p>[$b = p^{-p}q^{-q}$
+nhưng hiện giờ vẫn chưa biết giải như thế nào. Đây là dạng divide-and-conquer
+recurrence. Nếu sử dụng <a href="https://courses.csail.mit.edu/6.046/spring04/handouts/akrabazzi.pdf" target="_blank">Akra-Bazzi method</a>
+thì ta chỉ mới tìm được $\Theta(1 + \ln N)$ của nó nhưng vẫn chưa xác định được $b$].</p>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li><a href="http://users.ics.forth.gr/~lourakis/fibsrch/" target="_blank">C implementation</a>: cá nhân mình
+nghĩ đây là bản cài đặt khá chuẩn rồi.</li>
+<li>Knuth, Donald Ervin. The art of computer programming. Vol. 3. Pearson Education, 1997.[ aka TAoCP in my blog]</li>
+<li>Sedgewick, Robert, and Kevin Wayne. Algorithms. Addison-Wesley Professional, 2011.</li>
+<li><a href="http://www.geeksforgeeks.org/fibonacci-search/" target="_blank">GeeksforGeeks&rsquo;s Fibonaccian Searching</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Fibonacci_search_technique" target="_blank">Wiki</a>.</li>
+</ul>
+
+<h1 id="todo">TODO</h1>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Minh họa cây Fibonacci.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Phiên bản C++.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> So sánh độ phức tạp với tìm kiếm nhị phân, tổng quát hóa bài toán.
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> Hằng số $b$.</label></li>
+</ul></label></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">cũng không biết nên dịch internal nodes với external nodes thế nào cho hợp (node trong và node ngoài?).
+ <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
+</ol>
+</div>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/programming'>programming</a>, <a class='tag' href='/vi/tags/algorithms'>algorithms</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/amazon_replacement_policy/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Chính sách gửi trả hàng của Amazon</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/vietcs/'>
+        <span class='screen-reader-text'>Next post: </span>Người Việt trong Khoa học Máy Tính<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

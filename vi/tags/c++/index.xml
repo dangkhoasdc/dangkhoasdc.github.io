@@ -14,10 +14,10 @@
     
     <item>
       <title>Cài đặt quan hệ thứ tự trong C&#43;&#43;</title>
-      <link>http://dangkhoasdc.github.io/vi/post/total_order/</link>
+      <link>http://dangkhoasdc.github.io/vi/docs/total_order/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/post/total_order/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/docs/total_order/</guid>
       <description>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
  Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.</description>
     </item>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/docs/</link>
+    <description>Recent content in Documentation on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello world with Literate Programming</title>
+      <link>http://dangkhoasdc.github.io/docs/a/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/a/</guid>
+      <description>Hello world . Processed by unicode2rstsubs.py, part of Docutils: . -- . Processed by unicode2rstsubs.py, part of Docutils: . -- This is a demo for pyweb
+First, we have to define the program, let call it hello.cpp:
+hello.cpp (1) =
+→header files for program (2) int main(int argc, const char* [] argv) { →print the message (3) }   ◊ hello.cpp (1).
+ Header Files Basically, we only need a header file which handles the output of the message, namely std::cout:</description>
+    </item>
+    
+    <item>
+      <title>Install OpenCV 3 non-free module on Ubuntu</title>
+      <link>http://dangkhoasdc.github.io/docs/opencv3_nonfree/</link>
+      <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/opencv3_nonfree/</guid>
+      <description>The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
+Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV on Android: practices and tips</title>
+      <link>http://dangkhoasdc.github.io/docs/opencv_android_practices/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/opencv_android_practices/</guid>
+      <description>Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
+Basically, we have a function playing as a bridge between Java APIs and NDK:
+public native void function_name(long matAddress);  To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
+    </item>
+    
+    <item>
+      <title>Setup OpenCV and Android Studio with NDK support</title>
+      <link>http://dangkhoasdc.github.io/docs/opencv_android_studio_ndk/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/opencv_android_studio_ndk/</guid>
+      <description>In this tutorial, I will demonstrate how to configurate the renowned computer vision libary, OpenCV, with the current Android Studio version (3.0.1). Let get started. The compiled version of OpenCV which supports Android is available at OpenCV Homepage. Download and extract it. Please note that to test the application properly on the mobile devices, the OpenCV Manager has to be installed.
+In another tutorial, I will talk about how to compile our own OpenCV library and put it to Android Studio since the pre-compiled library misses some interesting and important components, e.</description>
+    </item>
+    
+    <item>
+      <title>Programming Pearls</title>
+      <link>http://dangkhoasdc.github.io/docs/programming_pearls/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/programming_pearls/</guid>
+      <description>Programing Pearls - Jon Bentley
+Excellent.
+Until now, there is no such book which makes me shout out like this after receiving from Amazon. Let brieftly review some favoriate books:
+ CLRS: theoretically, this really is an &amp;ldquo;introduction&amp;rdquo; textbook about algorithms. Nonetheless, it still is an extensive reference and full of details. However, I am not impressed by the writing style and the pseudo-code.
+ Algorithms, Sedgewick: one of the best textbooks ever.</description>
+    </item>
+    
+    <item>
+      <title>Latin squares and a story of computer science history</title>
+      <link>http://dangkhoasdc.github.io/docs/latin_square/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/latin_square/</guid>
+      <description>The content of this note mostly belongs to the first section of TAoCP, Vol4A.
+Definition Given a square matrix of size $M$ and each element is $\{0, 1, \cdots, M-1 \}$, we construct a matrix such that for the element $i$ in the set $\{0, 1, \cdots, M-1\}$ only appears exactly 1 time on every row and column.
+Examples We have 16 cards which comprises a combination of 4 ranks, i.</description>
+    </item>
+    
+    <item>
+      <title>History of Computer Vision - Part 1</title>
+      <link>http://dangkhoasdc.github.io/docs/compvision_hist/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/compvision_hist/</guid>
+      <description>[It is such a long time since I wrote a dedicated technical post about computer vision.]
+Introduction Since Computer Vision is an interdisciplinary research which involves different fields such as physics, biology, computer science, neuroscience, etc. For this reason, there are different approaches when people consider about the history of computer science. In this post, I summarize two viewpoints of Prof. Fei-Fei Li, and Prof. Richard Szeliski from their courses [1] and textbooks [1].</description>
+    </item>
+    
+    <item>
+      <title>Generate the inversion table from an integer sequence</title>
+      <link>http://dangkhoasdc.github.io/docs/gen_inversion_table/</link>
+      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/gen_inversion_table/</guid>
+      <description>The programming exercise is from TAoCP, Vol3, 5.1.1-6:
+ Design an algorithm that computes the inversion table $b_1, b_2 \cdots b_n$ corresponding to a given permutation $a_1a_2 \cdots a_n$ of ${1, 2, \cdots , n}$, where the running time is essentially proportional to $n\ log n$ on typical computers.
+ I was really stuck on the solution Knuth given in the book. The author also mentioned another approach which actually is a modifination of merge sort.</description>
+    </item>
+    
+    <item>
+      <title>Selected Papers on Computer Science (Don Knuth) and the current state of Deep Learning</title>
+      <link>http://dangkhoasdc.github.io/docs/selectedpapers_cs/</link>
+      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/selectedpapers_cs/</guid>
+      <description>Book Info:
+    Description     Title Selected Papers on Computer Science [Amazon]   Author Donald Knuth   Pages 276    This is the most accessible book from Don Knuth. Although I was published nearly 20 years ago, it still is a classic computer science book. In Amazon, there is an interesting comment about the book from Peter Norvig (Director of Google Research).</description>
+    </item>
+    
+    <item>
+      <title>The repertoire method</title>
+      <link>http://dangkhoasdc.github.io/docs/repertoire/</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/repertoire/</guid>
+      <description>The repertoire method is an method of finding closed-form of recurrence relations and sum of a series. The method is introduced in Chapter 1 of ConMath but most readers at the first time seem to struggle with it. Through the book, especially Chapter 1 and 2, the repertoire method demonstrates its ability to solve many sums and recurrences. However, I honestly admit that it is quite difficult to apply and fully understand how it works.</description>
+    </item>
+    
+    <item>
+      <title>Miscellaneous notes</title>
+      <link>http://dangkhoasdc.github.io/docs/why_so_serious/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/why_so_serious/</guid>
+      <description>Therer are some not-so-serious miscellaneous thoughts, comments of mine about everything in an informal format using Vietnamese and English.
+Deep Learning and truely science researching    &amp;ldquo;too often where people will something against their own gut instincts because they think the community wants them to do it that way, so people will work on a certain subject even though they aren&amp;rsquo;t terribly interested in it because they think that they&amp;rsquo;ll get more prestige by working on it.</description>
+    </item>
+    
+    <item>
+      <title>Why Ubuntu on Windows?</title>
+      <link>http://dangkhoasdc.github.io/docs/ubuntu_on_windows/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/ubuntu_on_windows/</guid>
+      <description>For programming purposes, I prefer Linux to Windows. However, Windows is really good at entertaining and office works. Beside, Microsoft Office is the best office suit I ever have experienced, and OneNote is one of my favorite note-taking software. Not to mention my beloved Bilizzard games such as Diablo, Starcraft and other video games.
+A solution to integrate Windows and Linux in one machine is to install dual-boot. However, I am tired of switching between 2 OSs.</description>
+    </item>
+    
+    <item>
+      <title>Matlab</title>
+      <link>http://dangkhoasdc.github.io/docs/matlab/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/matlab/</guid>
+      <description>General  Show the information of a variable. It is very useful when we the code takes so much memory: whos &amp;lt;variable name&amp;gt;. Sum of squared of elements: sumsqr(X). Use sum(sum(A.^2, 1)) instead if you want to use less memory. Memory optimizations tips and tricks: [Undocumented Matlab] Use column-based representation instead of the row-based one. For example, to represent a list of items from 1 to 5, use [1 2 3 4 5] (not [1; 2; 3; 4; 5]).</description>
+    </item>
+    
+    <item>
+      <title>Install the OpenCV library on Visual Studio</title>
+      <link>http://dangkhoasdc.github.io/docs/install_opencv_vs/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/install_opencv_vs/</guid>
+      <description>Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
+ Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here.</description>
+    </item>
+    
+  </channel>
+</rss>

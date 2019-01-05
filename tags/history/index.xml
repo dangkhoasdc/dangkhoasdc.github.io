@@ -14,10 +14,10 @@
     
     <item>
       <title>History of Computer Vision - Part 1</title>
-      <link>http://dangkhoasdc.github.io/post/compvision_hist/</link>
+      <link>http://dangkhoasdc.github.io/docs/compvision_hist/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/compvision_hist/</guid>
+      <guid>http://dangkhoasdc.github.io/docs/compvision_hist/</guid>
       <description>[It is such a long time since I wrote a dedicated technical post about computer vision.]
 Introduction Since Computer Vision is an interdisciplinary research which involves different fields such as physics, biology, computer science, neuroscience, etc. For this reason, there are different approaches when people consider about the history of computer science. In this post, I summarize two viewpoints of Prof. Fei-Fei Li, and Prof. Richard Szeliski from their courses [1] and textbooks [1].</description>
     </item>

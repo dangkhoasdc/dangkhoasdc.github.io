@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.
+Enum trong python Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Lập Trình Hướng Đối Tượng Trong Python • Dang-Khoa'>
+<meta property='og:description' content='Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.
+Enum trong python Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/oop-python/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='programming'><meta property='article:tag' content='python'><meta property='article:published_time' content='2015-07-20T00:00:00Z'/><meta property='article:modified_time' content='2015-07-20T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Lập Trình Hướng Đối Tượng Trong Python • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/oop-python/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Lập Trình Hướng Đối Tượng Trong Python</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2015-07-20T00:00:00Z'>2015, Jul 20</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.</p>
+
+<h1 id="enum-trong-python">Enum trong python</h1>
+
+<p>Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</p>
+
+<pre><code class="language-python">from enum import Enum
+
+class Color(Enum):
+    RED     = 1
+    GREEN   = 2
+    BLUE    = 3
+
+</code></pre>
+
+<h2 id="không-multiple-constructors">Không multiple constructors</h2>
+
+<p>Nhưng ta có thể sử dụng <code>optical argument</code> như một thế mạnh và thay thế cho multiple constructor.</p>
+
+<h2 id="không-access-modifier">Không access modifier</h2>
+
+<p>Đồng nghĩa với việc không có <code>public</code>, <code>private</code> hay là <code>protected</code> gì cả. Ngay cả việc thêm <code>__</code> vào trước properties hay method cũng không giải quyết được vấn đề. Với mỗi thuộc tính <code>__p</code> của lớp <code>A</code> đơn giản là được đổi tên thành <code>_A__p</code>.</p>
+
+<h3 id="private-methods">Private methods</h3>
+
+<p>Sử dụng tiền tố <code>__</code> khác các phương thức muốn đặt <code>private</code>.</p>
+
+<h2 id="tạo-property">Tạo property</h2>
+
+<p>Nếu được, tạo thành method thay thế. Còn không có thể sử dụng decorator <code>@property</code> trước method để đổi thành property.</p>
+
+<h2 id="đa-kế-thừa">Đa kế thừa</h2>
+
+<p>Tránh vấn đề này càng tốt. Tham khảo <a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem" target="_blank">tại đây</a>.</p>
+
+<h2 id="các-thuộc-tính-và-method-static">Các thuộc tính và method static</h2>
+
+<p>Mình không nghĩ là cần thuộc tính hay method static cho lắm. Nếu có thể cài thuộc tính/method static thì thay vào đó có thể đặt bên ngoài class và xếp trong cùng module. Nhưng vậy có thể truy cập các thuộc tính, hàm thông qua module thay vì class, và mình thấy hầu như không khác nhau là mấy.</p>
+
+<h2 id="gọi-constructor-từ-lớp-cha">Gọi constructor từ lớp cha</h2>
+
+<p>Đây là một vấn đề khá nan giải trong trường hợp đa kế thừa. Giả sử ta có lớp A, lớp B và C. Trong đó lớp C kế thừa vừa lớp A và lớp B. Vấn đề là làm thế nào để gọi A, B trong hàm khởi tạo, và làm thế nào để biết lớp cha nào được gọi trước.</p>
+
+<pre><code class="language-python">class A(object):
+    def __init__(self):
+        super(A, self).__init__()
+        print &quot;entering A&quot;
+        print &quot;leaving A&quot;
+
+class B(object):
+    def __init__(self):
+        super(B, self).__init__()
+        print &quot;entering B&quot;
+        print &quot;leaving B&quot;
+
+class C(A,B):
+    def __init__(self):
+        print &quot;entering c&quot;
+        super(C, self).__init__()
+        print &quot;leaving c&quot;
+
+
+if __name__ == '__main__':
+    c = C()
+
+</code></pre>
+
+<p>Có một số điều khá thú vị xoay quanh điều này sau khi ta thử nghiệm hoán vị trình tự kế thừa, trình tự định nghĩa lớp:</p>
+
+<ol>
+<li>Trong mỗi hàm phải khai báo <code>super(ClassName, self).__init__()</code> thì việc gọi các hàm khởi tạo từ các lớp cha mới thực hiện được.</li>
+<li>Không phụ thuộc vào trình tự kế thừa.</li>
+<li>Trình tự hàm khởi tạo được gọi dựa them alphabet.</li>
+</ol>
+
+<h2 id="practices">Practices</h2>
+
+<ol>
+<li>Để kiểm tra một biến có phải là 1 thể hiện của lớp không, sử dụng hàm <code>isinstance</code>, tuy nhiên khuyến khích không xài. Vì Python là Duck Type mà.</li>
+<li>Khai báo một thứ na ná struct trong C/C++:
+{% highlight python %}
+class ClassName:
+pass
+{% endhighlight%}</li>
+</ol>
+
+<p>Sau đó thì có thể tha hồ thêm thuộc tính nào vào cũng được.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+<li><a href="https://docs.python.org/2/tutorial/classes.html" target="_blank">https://docs.python.org/2/tutorial/classes.html</a></li>
+</ol>
+
+<p>P.s: Các chủ đề hại não và nâng cao có thể được đề cập là Iterators, Generators, &hellip;</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/programming'>programming</a>, <a class='tag' href='/vi/tags/python'>python</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/em-laptop-yeu-dau/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Thôi đành chia tay </a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/review_algs_princeton_coursera/'>
+        <span class='screen-reader-text'>Next post: </span>Review Algorithms (Princeton) - Coursera<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

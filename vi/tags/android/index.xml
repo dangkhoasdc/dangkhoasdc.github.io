@@ -14,10 +14,10 @@
     
     <item>
       <title>Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</title>
-      <link>http://dangkhoasdc.github.io/vi/post/opencv_android_studio_ndk/</link>
+      <link>http://dangkhoasdc.github.io/vi/docs/opencv_android_studio_ndk/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/post/opencv_android_studio_ndk/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/docs/opencv_android_studio_ndk/</guid>
       <description>Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có hỗ trợ Android được cung cấp sẵn ở OpenCV Homepage. Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì điện thoại phải cài đặt ứng dụng OpenCV Manager.
 Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên bản OpenCV với các tùy chỉnh của riêng cho từng yêu cầu, ví dụ như sử dụng đặc trưng SIFT hoặc các thuật toán có bản quyền.</description>
     </item>

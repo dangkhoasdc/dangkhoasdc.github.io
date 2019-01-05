@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Mình quyết định đọc cuốn Refactoring: Improving the Design of Existing Code sau khi đọc xong cuốn Design Pattern.
+Sơ lược Mặc dù đã được nghe đến khái niệm này rất nhiều lần, tuy nhiên sau khi đọc xong cuốn sách, đối chiếu với những trải nghiệm của bản thân về các project trước đây. Mình hiểu:
+ Refactor là quá trình thao tác trên mã nguồn có sẵn nhằm gia tăng chất lượng mã nguồn nhưng vẫn giữ lại được các ràng buộc của hệ thống.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Review Refactoring • Dang-Khoa'>
+<meta property='og:description' content='Mình quyết định đọc cuốn Refactoring: Improving the Design of Existing Code sau khi đọc xong cuốn Design Pattern.
+Sơ lược Mặc dù đã được nghe đến khái niệm này rất nhiều lần, tuy nhiên sau khi đọc xong cuốn sách, đối chiếu với những trải nghiệm của bản thân về các project trước đây. Mình hiểu:
+ Refactor là quá trình thao tác trên mã nguồn có sẵn nhằm gia tăng chất lượng mã nguồn nhưng vẫn giữ lại được các ràng buộc của hệ thống.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/refactoring-review/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='review'><meta property='article:tag' content='software engineer'><meta property='article:published_time' content='2016-10-23T00:00:00Z'/><meta property='article:modified_time' content='2016-10-23T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Review Refactoring • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/refactoring-review/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Review Refactoring</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2016-10-23T00:00:00Z'>2016, Oct 23</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Mình quyết định đọc cuốn <a href="https://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672" target="_blank">Refactoring: Improving the Design of Existing Code</a> sau khi đọc xong cuốn <em>Design Pattern</em>.</p>
+
+<h1 id="sơ-lược">Sơ lược</h1>
+
+<p><img src="http://d.gr-assets.com/books/1386925632l/44936.jpg" alt="Refactoring: Improving the Design of Existing Code" /></p>
+
+<p>Mặc dù đã được nghe đến khái niệm này rất nhiều lần, tuy nhiên sau khi đọc xong cuốn sách, đối chiếu với những trải nghiệm của bản thân về các project trước đây. Mình hiểu:</p>
+
+<blockquote>
+<p>Refactor là quá trình thao tác trên mã nguồn có sẵn nhằm gia tăng chất lượng mã nguồn nhưng vẫn giữ lại được các ràng buộc của hệ thống.</p>
+</blockquote>
+
+<p>Như vậy, <em>refactor</em> không phải quá trình tạo mới hoàn toàn một dự án hay một hệ thống nào cả, mà nhằm làm tăng <em>chất lượng</em> của mã nguồn đó. <em>Chất lượng</em> ở đây được đánh giá trên các độ đo khác nhau:</p>
+
+<ol>
+<li>Khả năng mở rộng của mã nguồn.</li>
+<li>Khả năng dễ đọc và tìm lỗi.</li>
+<li>Khả năng thích ứng với lỗi (tính robustness)</li>
+<li>Hiệu suất của hệ thống.</li>
+</ol>
+
+<p>Ngoài việc làm gia tăng chất lượng của hệ thống, bên cạnh đó <em>refactor</em> phải đảm bảo giữ lại được các ràng buộc mà trước đó hệ thống đã có. Ví dụ như:</p>
+
+<ol>
+<li>Những APIs đã được phát hành của hệ thống, ta không nên <em>refactor</em> và thay đổi luôn các APIs đó.</li>
+<li>Những <em>class</em>, <em>functions</em> liên hệ trực tiếp đến các modules khác trong hệ thống lớn hơn.</li>
+</ol>
+
+<h1 id="những-kĩ-thuật-trong-refactor">Những kĩ thuật trong refactor</h1>
+
+<p>Một phần quan trọng của cuốn sách không chỉ nói về định nghĩa của <em>refactor</em> mà còn đề cập đến lí do vì sao cần <em>refactor</em>, khi nào nên <em>refactor</em>, những tác động nào ảnh hưởng đến quá trình <em>refactor</em>, và đặc biệt là <em>xây dựng bộ test cho hệ thống</em>. Trước giờ mình chủ yếu làm các hệ thống trong academic, việc xây dựng các bộ test không được chú trọng quá nhiều. Nhưng thực sự đọc xong cuốn sách mình nghĩ mình nên tập các viết các bộ test trước khi viết một function nào đó. Việc <em>tự tay</em> viết các bộ test mang lại khá nhiều thuận lợi:</p>
+
+<ol>
+<li>Giúp người thiết kế biết được giao diện tương tác API mà function mình đảm nhiệm.</li>
+<li>Hiểu được các ràng buộc về Input/Output và tham số.</li>
+<li>Thuận lợi cho việc refactor, các bộ test sẽ giúp ta kiểm tra xem việc vừa refactor xong có ảnh hưởng gì đến hệ thống hiện có không.</li>
+<li>Hình thành được outline của hệ thống trong quá trình xây dựng bộ test.</li>
+</ol>
+
+<p>Cuốn sách được bố cục phần nào giống với bên <em>Design Pattern</em>, cung cấp một lượng lớn <em>từ vựng</em> về các kĩ thuật refactor. Với mỗi kĩ thuật được đề cập, tác giả nêu lên: động lực sử dụng, ví dụ minh họa, các lưu ý. Các kĩ thuật refactor được chia thành các category</p>
+
+<ul>
+<li>Thao tác trên các method trong 1 class.</li>
+<li>Thao tác trên các method giữa các class với nhau.</li>
+<li>Tổ chức dữ liệu.</li>
+<li>Đơn giản hóa các câu lệnh điều kiện.</li>
+<li>Đơn giản hóa các hàm.</li>
+<li>Tái tổ chức hệ thống class.</li>
+</ul>
+
+<p>Cuối cùng là những thao tác refactor ảnh hưởng đến các ràng buộc của hệ thống, đây là những thao tác sẽ ảnh hưởng lên đến việc tương tác giữa các hệ thống với nhau nên cần suy nghĩ cẩn trọng trước khi thực hiện.</p>
+
+<p>Phần cuối cùng là các công cụ refactor, mình nghĩ phần nào không cần nói nhiều vì trên các IDE nổi tiếng như <em>Visual Studio</em>, <em>Eclipse</em>, <em>IntelIJ</em> thì các kĩ thuật refactor đã trở thành những tính năng khá quen thuộc. Việc refactor tự động giúp tránh xảy ra lỗi và giảm thời gian cho công việc này khá nhiều.</p>
+
+<blockquote>
+<p>Nếu có hành động nào đó lặp đi lặp lại trên 5 lần. Tốt hơn là ta nên làm cách khiến nó thành tự động.</p>
+</blockquote>
+
+<h1 id="bình-luận">Bình luận</h1>
+
+<p>Đây là cuốn sách cuối cùng mình đọc liên quan đến công nghệ phần mềm trước khi đến với phần thử thách với mình nhiều hơn: Machine Learning và Computer Vision.</p>
+
+<p>Cuốn sách đặc biệt phù hợp với các bạn sinh viên năm 3, 4 sau khi đã học về lập trình hướng đối tượng cũng như đã trải qua một thời gian tiếp xúc với những mã nguồn, dự án có sẵn. Thời gian đọc có lẽ mất từ 5-7 ngày.</p>
+
+<p>Điều thú vị khi mình đọc đó là cảm giác:</p>
+
+<blockquote>
+<p>wtf?? đổi tên biến cũng được gọi là refactor wtf?? đổi tên hàm cũng vậy …</p>
+</blockquote>
+
+<p>Mình nghiệm ra, refactor không phải là cái gì đó quá cao siêu, có lẽ bạn nào lập trình cũng đã từng thực hiện một lần. Nhưng refactor như thế nào hiệu quả, tốn ít thời gian và công sức và hơn hết là biết cách refactor là một chuyện khác.</p>
+
+<p><em>Refactoring</em> là cuốn sách sẽ giải đáp những điều đó.</p>
+
+<h1 id="future-works">Future Works</h1>
+
+<p>Mình đã đọc xong cuốn <em>Design Patterns</em> nhưng chưa biết review thế nào. Có lẽ cần nhiều thời gian hơn để có thể viết về các mẫu. Nhưng có lẽ mình không tập trung nhiều thời gian.</p>
+
+<p>Kế hoạch sắp đến: <em>Pattern Recognition and Machine Learning</em>.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/review'>review</a>, <a class='tag' href='/vi/tags/software-engineer'>software engineer</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/startwars-series-review/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Review Start Wars series</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/nafosted_travel_fund/'>
+        <span class='screen-reader-text'>Next post: </span>Quy Trình Xin Tài Trợ NAFOSTED<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

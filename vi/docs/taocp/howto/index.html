@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &ldquo;cuồng&rdquo; như Donald Knuth.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP) • Dang-Khoa'>
+<meta property='og:description' content='Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &ldquo;cuồng&rdquo; như Donald Knuth.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/taocp/howto/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='taocp'><meta property='article:tag' content='programming'><meta property='article:tag' content='algorithms'><meta property='article:published_time' content='2017-09-25T00:00:00Z'/><meta property='article:modified_time' content='2017-12-20T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP) • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/taocp/howto/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2017-09-25T00:00:00Z'>2017, Sep 25</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có
+tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ
+nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua.
+Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và
+&ldquo;cuồng&rdquo; như Donald Knuth. Và mong ước của mình từ khi bước chân vào giảng đường
+đại học, theo đuổi đam mê với Khoa Học Máy Tính, rằng mình sẽ chinh phục cuốn
+&ldquo;Kinh Thánh&rdquo; này. Đó là một cuộc hành trình, và còn thử thách hơn cả tất cả
+những hành trình mình từng trải nghiệm.</p>
+
+<p>Ngày sinh nhật vào năm đầu tiên đi làm, mình đã tự thưởng cho bản thân bản <a href="https://www.amazon.com/Computer-Programming-Volumes-1-4A-Boxed/dp/0321751043/ref=sr_1_1?ie=UTF8&amp;qid=1506337149&amp;sr=8-1&amp;keywords=the+art+of+computer+programming" target="_blank">full
+set của bộ
+sách</a>
+.  Trước giờ mình chỉ dùng với mục đích tham khảo là chính. Nhưng vừa sau đợt
+sinh nhật 24 của mình, mình quyết định phải &ldquo;chinh phục&rdquo; bằng được cuốn sách.
+Mà theo plan của mình Volume 1 sẽ tốn tầm &hellip; 1-2 năm. Và có lẽ, mình sẽ mất
+chừng chục năm để chinh phục Volume 4A 😆. Chưa kể, phần 4B cực kì khó nhằn
+vì có cả Satistiability trong đó. Có lẽ riêng Volume 4 không thôi thì đã trở
+thành tượng đài mất rồi.</p>
+
+<h1 id="taocp-liệu-có-khó-đọc">TAoCP liệu có khó đọc?</h1>
+
+<p>Theo mình thì không. Nhiều người khi nhìn vào cuốn sách với hàng đống công thức
+toán và những bài tập khó nhằng cũng như code mã máy MIX khiến họ nghĩ đây là
+một cuốn sách rất khó đọc. Nhưng ngay từ đoạn giới thiệu, Don Knuth đã hướng dẫn
+cách đọc và ông đã chỉ rõ những vấn đề mà người đọc thắc mắc.</p>
+
+<ol>
+<li><p>Với MIX - mình đồng ý quan điểm của Don Knuth, nếu ông viết chương trình theo
+C/C++ hay Java hay Python, một thời gian sau chắc chắn nó sẽ có vấn đề. Kể cả
+những ngôn ngữ bậc cao càng khiến ta khó phân tích chính xác số lượng tính
+toán trong thuật toán đó. Mà theo phân tích của Knuth, đó phải là những phân
+tích chính xác. Ngôn ngữ của MIX cũng rất dễ đọc, không đến nối rắc rối như
+mọi người tưởng. Đồng thời, việc đọc code bằng mã máy khuyến khích người đọc
+&ldquo;vọc&rdquo; với thuật toán được ghi. Thêm nữa, &ldquo;ngôn ngữ bậc cao&rdquo; mà Knuth dùng
+chính là tiếng Anh.</p></li>
+
+<li><p>Trong biểu đồ sử dụng sách của mình, Knuth có nói rằng nếu các công thức toán
+&ldquo;is all Greek to you&rdquo; ta chỉ cần xem qua và nắm được kết quả cơ bản mà
+phần đó đề cập, và hầu như các kết quả đó được nói ở đầu mục hoặc cuối mục.</p></li>
+
+<li><p>Với bài tập của TAoCP, Knuth đề xuất hệ thống phân loại. Hơn hết, hệ thống
+này nhằm giúp cho người đọc, với thời lượng cho phép của mình, lựa chọn và
+làm những bài bản thân nghĩ là phù hợp. Bởi thật sự những bài với độ khó lớn
+hơn 45, dù là không dính đến toán, M hay HM đều cần rất nhiều thời gian
+nghiên cứu. Bản thân mình nghĩ nếu giải được những bài đó thì có thể hoàn
+thành được PhD của Computer Science rồi. Nhưng mình vẫn nghĩ người đọc nên
+xem qua các câu hỏi này,  <strong>vì nó chính là biên giới tri thức trong khoa học
+máy tính.</strong></p></li>
+
+<li><p>Knuth nêu rõ trong cuốn sách của mình, mục đích của cuốn sách phục vụ: (1) là
+tài liệu tham khảo chính xác và chi tiết về phân tích thuật toán, (2) là một
+sách giáo khoa  <strong>tự học</strong>  dành cho những người đam mê về thuật toán cũng như Khoa
+Học Máy Tính. Nếu bạn mua TAoCP chỉ với giá trị tham khảo thì đó hoàn toàn là
+mục đích chính xác của bộ sách: mình đặc biệt thích phần tra khảo về lịch sử.
+Đúng ra, Don Knuth rất quan tâm đến lịch sử của Khoa Học Máy Tính, đó là lí
+do vì sao trong sách đề cập các thông tin lịch sử lại chi tiết đến như vậy.
+Nhưng ngoài ra, phần bài tập lẫn lời giải, mà thường chiếm đến 1/3 cuốn sách,
+nói lên rằng Knuth mong mỏi cuốn sách này sẽ là một tài liệu học tốt dành cho
+mọi người.</p></li>
+</ol>
+
+<p>Kế hoạch của mình rất đơn giản: Chinh phục TAoCP đồng thời giúp mọi người dễ
+dàng tiếp cận với tài liệu quý giá này. Quá nhiều bạn đọc dường như sợ tiếp cận
+cuốn sách bởi những &ldquo;myth&rdquo; vừa nêu, đồng thời, chinh phục TAoCP là một hành
+trình thực sự thú vị. Mình đã học được rất nhiều điều thông qua cuốn sách. Những
+ngày đầu đại học khi lần đầu cầm trong tay Volume 1, mình mới thực sự hiểu
+&ldquo;computer science&rdquo; là một khoa học đầy hấp dẫn, và nó cũng rất &ldquo;art&rdquo;.</p>
+
+<p>Mình đồng ý với quan điểm của Knuth, người làm về phân tích thuật toán hạnh phúc
+gấp đôi những ngành khác: họ chiêm nghiệm được những công thức toán phức tạp để
+tính toán độ phức tạp, phân tích thuật toán, đồng thời họ cảm nhận được tính
+hiệu quả của thuật toán đó trong thực tế. Ta chắc chắn không cần bận tâm đến câu
+&ldquo;học toán để làm gì&rdquo;, bởi khi tiếp cận với phân tích thuật toán, ta cảm nhận
+ngay được ích lợi của toán học, thuật toán cũng như vẻ đẹp của thuật toán khi ta
+cài đặt và sử dụng trong thực tiễn.</p>
+
+<hr />
+
+<h1 id="một-chút-về-dự-án-này">Một chút về dự án này</h1>
+
+<p>Ngoài những chi tiết ở trên, một phần khiến TAoCP khó đọc ở chỗ thông tin được
+Knuth viết tương đối cô đặc. Chính vì lẽ đó mà đôi khi có những phần tương đối
+khó hiểu đối với những bạn tìm hiểu về khoa học máy tính và chưa có nhiều kiến
+thức trước đó. Mục tiêu của project này nhằm giúp các bạn dễ tiếp cận hơn với
+sách, đồng thời giải thích các phần bài tập, bởi mình thấy Knuth viết phần
+Solutions cực kì gọn, và đôi khi cũng không biết là từ đâu lại có những đáp số
+đó. Ngoài ra, tìm hiểu về TAoCP cũng chính là tìm hiểu các thuật toán kinh điển,
+các bài toán làm trên nền tảng của Khoa Học Máy Tính cũng như đây là nguồn tài
+liệu rất quý giá để mài dũa &ldquo;algorithmic thinking&rdquo;. Một lý do nữa khiến mình có
+hứng thú để làm đó là hiện nay tuy có khá nhiều blog, repo trên Github note lại
+TAoCP nhưng chưa có ai viết đầy đủ, hoặc chi tiết.</p>
+
+<p>Loạt bài viết cùa mình yêu cầu người đọc đã đọc qua trước chương hoặc phần mình
+đề cập trong bài viết, trong các bài viết mình sẽ chú trọng đến các chi tiết
+sau:</p>
+
+<ul>
+<li>Các chi tiết tương đối khó hiểu.</li>
+<li>Phần bài tập.</li>
+<li>Các state-of-the-art hiện nay.</li>
+<li>Các thông tin lý thú liên quan đến chủ đề đó.</li>
+</ul>
+
+<p>Mình có tích hợp plugin Hypothesis giúp các bạn có thể highlight, viết note trên
+blog của mình, đồng thời phần comment để mọi người thuận tiện trao đổi với nhau
+cũng như giúp mình update các lỗi có trong bài viết.</p>
+
+<h1 id="kinh-nghiệm-cá-nhân">Kinh nghiệm cá nhân</h1>
+
+<p>Một số kinh nghiệm bản thân khi mình đọc TAoCP, thực ra đến tận bây giờ bản thân
+mình mới dành thời gian với cuốn sách, trước đây mình chủ yếu dùng tham khảo là
+chính:</p>
+
+<ul>
+<li>Luôn có giấy và bút bên cạnh để có thể:
+
+<ul>
+<li>Chạy &ldquo;chay&rdquo; các thuật toán.</li>
+<li>Làm bài tập.</li>
+<li>Hiểu công thức đang muốn nói điều gì.</li>
+</ul></li>
+<li>Có một sổ tay ghi chú. Một số chỗ Knuth viết rất cô đọng và mình nghĩ chỉ có
+cách ghi note lại mới thực sự nhớ và hiểu được.</li>
+<li>Thử implement thuật toán bằng một ngôn ngữ ưa thích. Quan điểm của mình thì
+C hoặc C++ là phù hợp nhất. C thì có thể gần với mục đích nhất,
+trong khi đó C++ sẽ tiện hơn.</li>
+</ul>
+
+<h1 id="một-chút-về-phần-preface-volume-i">Một chút về phần Preface (Volume I)</h1>
+
+<p>Tuy chỉ là phần lời nói đầu, nhưng tác giả đã đề cập đến khá nhiều câu chuyện
+hay ho mà mình có thể tóm lượt như sau:</p>
+
+<ul>
+<li>Thuở xa xưa khi Khoa học máy tính mới hình thành, có 3 ngành chính thịnh hành
+lúc bấy giờ: numerical analysis, artificial intelligent và language theory.
+Chính Knuth là người đã khai sinh ra nhánh &ldquo;analysis of algorithms&rdquo;. Trước đó
+đã có các công trình của Alan Turing, Jon von Neumann tuy nhiên đó là những
+nghiên cứu rời rạc và không có một hệ thống hoàn chỉnh.</li>
+<li>Trong phần preface, Knuth đề cập rằng những phân tích của mình &ldquo;non-numerical&rdquo;
+bởi vì nó quan tâm đến các đối tượng rời rạc nhiều hơn.
+Nếu chọn &ldquo;nonnumerical analysis&rdquo; thì lại hơi mang tính tiêu cực
+(có lẽ do tiền tố &ldquo;non&rdquo; trong đó). Trong khi đó &ldquo;programming techniques&rdquo; thì
+lại quá hẹp về 1 phần trong lĩnh vực. Đó là lí do mà ông chọn từ
+&ldquo;analysis of algorithms&rdquo;.</li>
+<li>Việc chọn mã máy MIX cũng được ông phân tích khá rõ trong phần này.
+Thực sự những lý do đó hoàn toàn thuyết phục. Mình nghĩ một ngôn ngữ gần
+nhất ông có thể dùng đó là C. Nhưng nếu như vậy ông phải định nghĩa số chỉ
+thị cho từng câu lệnh trong C, điều này mình nghĩ không đơn giản lắm.</li>
+<li>Người đồng hành với ông trong cuốn sách này là <a href="https://en.wikipedia.org/wiki/Robert_W._Floyd" target="_blank"> Robert W. Floyd </a>,
+ông chính là tác giả thuật toán &ldquo;Floyd-Warshall&rdquo;, thuật toán phát hiện
+vòng trong danh sách liên kết cũng như những đóng góp tiêu biểu của ông
+trong &ldquo;program verificaition&rdquo;.</li>
+</ul>
+
+<h1 id="ghi-chú">Ghi chú</h1>
+
+<ul>
+<li>Một bài nói của Don Knuth về mối quan tâm của ông với
+lịch sử khoa học máy tính: [<a href="https://youtu.be/gAXdDEQveKw" target="_blank">link</a>]</li>
+<li>Phỏng vấn Don Knuth. Có khá nhiều chi tiết thú vị về suốt cuộc đời làm
+nghiên cứu của ông (Ông mất chỉ 1 giờ để hoàn thành luận án
+tiến sĩ của mình). [<a href="https://youtu.be/vUJ01nRE7r0" target="_blank">link</a>].
+Mình sẽ có một bài tóm tắt về cuộc phỏng vấn đầy hấp dẫn này.</li>
+</ul>
+
+<h1 id="tài-liệu">Tài liệu</h1>
+
+<p>Một số tài liệu mình thấy là khá hay để có thể bắt đầu tìm hiểu công trình
+của Knuth. Dưới đây là danh sách các sách mình đang/ đã đọc. Không theo lối
+thông thường mà dân tình hay truyền nhau sách này hay sách kia hay mà chưa bao
+giờ đụng vô, mình chỉ review những sách mình đã tiếp xúc:</p>
+
+<ol>
+<li>Algorithms - Sedgewick: cuốn sách lập trình mình tâm đắc nhất khi cung cấp
+cả code lẫn những phân tích chi tiết.</li>
+<li>Introduction to Analysis of Algorithms - Sedgewick &amp; Flajolet: dẫn nhập trực
+tiếp vào công trình của Knuth, mình nghĩ đây là bước đệm quan trọng, cuốn sách
+này thực sự rất hay.</li>
+<li>Conrete Mathematics - Knuth: Không chỉ dần cho dân Toán, cuốn sách này đọc
+rất &ldquo;đã&rdquo; (Mình đang cố gắng đọc và làm nhiều bài tập nhất có thể)</li>
+</ol>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/taocp'>taocp</a>, <a class='tag' href='/vi/tags/programming'>programming</a>, <a class='tag' href='/vi/tags/algorithms'>algorithms</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/headphones/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Tai nghe dành programmer</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/dung_hi_em-font/'>
+        <span class='screen-reader-text'>Next post: </span>[Font] Một lỗi nhỏ trong &#34;Đừng hỏi em&#34;<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

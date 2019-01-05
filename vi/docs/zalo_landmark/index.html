@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.
+Dữ Liệu Dưới đây là phân phối số lượng ảnh trên mỗi label.
+  Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.   Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='AI Challenge - Landmark: Kỹ thuật và ý tưởng • Dang-Khoa'>
+<meta property='og:description' content='Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.
+Dữ Liệu Dưới đây là phân phối số lượng ảnh trên mỗi label.
+  Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.   Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/zalo_landmark/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='Machine Learning'><meta property='article:tag' content='Computer Vision'><meta property='article:published_time' content='2018-09-07T00:00:00Z'/><meta property='article:modified_time' content='2018-09-07T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>AI Challenge - Landmark: Kỹ thuật và ý tưởng • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/zalo_landmark/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>AI Challenge - Landmark: Kỹ thuật và ý tưởng</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-09-07T00:00:00Z'>2018, Sep 07</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.</p>
+
+<h1 id="dữ-liệu">Dữ Liệu</h1>
+
+<p>Dưới đây là phân phối số lượng ảnh trên mỗi label.</p>
+
+<figure>
+    <img src="/landmark_hist-5d75e5f9-d406-4cdd-971a-c0888816188a.png"/> <figcaption>
+            <h4>Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.</h4>
+        </figcaption>
+</figure>
+
+
+<p>Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.</p>
+
+<p>![]()</p>
+
+<figure>
+    <img src="/Untitled-c29fea32-26df-4a6f-8e46-69a4ff17cfaa.png"/> <figcaption>
+            <h4>Một số hình lấy từ tập train, mỗi dòng là các mẫu thuộc 1 địa danh. </h4>
+        </figcaption>
+</figure>
+
+
+<h1 id="kỹ-thuật">Kỹ thuật</h1>
+
+<p>Team mình đã sử dụng 9 models khác nhau để train và sau đó stack/blend lại. Bao gồm:</p>
+
+<ul>
+<li>Denset121, DenseNet161</li>
+<li>Resnet50, Resnet152</li>
+<li>ResNext50, ResNext101</li>
+<li>Wide-resnet.</li>
+<li>Inception_v4, Inceptionresnet_v2.</li>
+</ul>
+
+<p>[Mình đã finetune 34 models khác nhau với kiến trúc và optimizer scheme khác nhau (learning rate/ weight decay/ data augmentation không tính)]</p>
+
+<p>Để tăng độ chính xác model, tụi mình có sử dụng và thử 1 số phương pháp sau [phần bôi đen là những kỹ thuật rất quan trọng để tăng hiệu quả của model]:</p>
+
+<ul>
+<li><strong>Freeze network rồi finetune, sau đó unfreeze toàn bộ và train</strong>. [Thực sự hiệu quả]. Tuy nhiên lưu ý một điều: sau khi unfreeze toàn bộ các layer thì quá trình train sẽ rất chậm, ta cần phải điều chỉnh số lượng epoch ở bước này cho hợp lý.</li>
+<li><strong>Sử dụng Cyclic Learning Rates</strong> [Thực sự hiệu quả]. Tham số mà mình thấy ổn nhất, cũng như có thời gian train tương đối chấp nhận được (tầm 20h/ 1 model): <code>cycle_length = 2, cycle_multiplier = 2, num_cycles = 4</code></li>
+<li>Adam Optimizer + Weight Decay [Improve 1 cách tương đối]. Adam giúp loss giảm nhanh hơn SGD.</li>
+<li>Differential Weigh Decay tuy vậy không thấy cải thiện được gì.</li>
+<li>Stochastic Gradient Descent with Warm Restarts: khá tốt.</li>
+<li>Stochastic Weight Averaging: Không hiệu quả + khiến thời gian train tăng..</li>
+<li><strong>Differential Learning Rate</strong>: improve tương đối.</li>
+<li><strong>Data Augmentation/ Test Time Augmentation</strong>: Thực sự hiệu quả. Đây là cách hiệu quả nhất để tránh overfitting.</li>
+<li>Tăng kích thước ảnh: Thực sự hiệu quả. Tuy nhiên phụ thuộc vào Memory của GPUs và kiến trúc mạng. Bộ ba thần thánh của mình là: <code>224, 256, 299</code>.</li>
+<li>Sử dụng fully connected layers kết hợp với kNN làm thành 1 classifier: đây là ý tưởng của team <a href="https://www.kaggle.com/c/landmark-recognition-challenge/discussion/57896" target="_blank">4th Google Landmark Recognition</a> - thực sự không hiệu quả trong case này [, hoặc là mình implement bậy rồi] .</li>
+<li>Để handle imblance data: ta có thể dùng upsampling, downsampling hoặc sử dụng distribution khác cho sampler (mình đã implement multinomial distribution thay cho uniform của pytorch) cũng như sử dụng weighted loss (thêm weight dựa trên số lượng sample/class). Một số kỹ thuật có thể tham khảo ở đây [Link]. Khá tiếc khi phần này đã bị leader reject, trong khi top 1 Landmark đã dùng kỹ thuật này để đạt kết quả tốt ở private test.</li>
+<li>Để có thể chọn learning rate hợp lí và nhanh, kỹ thuật trong bài [Cyclical Learning Rates for Training Neural Networks] được sử dụng phổ biến, ta có thể plot nhiều setting của một model trên cùng 1 figure để chọn learning phù hợp. Nếu bạn lười, cứ set learning rate là <code>3e-4</code>. Thánh Karpathy đã verify điều đó (<a href="https://twitter.com/karpathy/status/801621764144971776" target="_blank">Twitter</a>).</li>
+</ul>
+
+<figure>
+    <img src="/pjimage-66fbbed9-4648-4b1b-9081-c550a350c5d9.jpg"/> 
+</figure>
+
+
+<p>Một số bài viết hỗ trợ trong quá trình finetune:</p>
+
+<ul>
+<li>Playing around with SGDR [<a href="https://sidravi1.github.io/blog/2018/04/25/playing-with-sgdr" target="_blank">Link</a>]</li>
+<li>Differential Learning Rates [<a href="https://blog.slavv.com/differential-learning-rates-59eff5209a4f" target="_blank">Link</a>]</li>
+<li>Optimization techniques comparison in Julia: SGD, Momentum, Adagrad, Adadelta, Adam [<a href="https://int8.io/comparison-of-optimization-techniques-stochastic-gradient-descent-momentum-adagrad-and-adadelta/" target="_blank">Link</a>]</li>
+</ul>
+
+<p>Về phần stack/blend, mình nhường lại cho leader Khả Ái (Phát); hầu như các solution trên Forum Machine Learning Cơ Bản mà các bạn top 3 post đều nằm trong plan thực hiện của Khả Ái. Nên mình tin nếu lúc đó mình làm đúng plan thì kết quả bên Landmark lẫn Music đã rất khác rồi.</p>
+
+<p>[Nhân đây: Noi theo tấm gương sáng ngời cùng đường lối sáng suốt của leader , mình phát động phong trào đẩy mạnh học tập và làm theo tư tưởng, đạo đức Hoàng Quý Phát]</p>
+
+<figure>
+    <img src="/Untitled-25ba1c0a-2c99-441e-ae1a-e78c67f99a7b.png"/> <figcaption>
+            <h4>T-SNE của ResNet50 features 1 subset của train data (feature:Resnet50)jq </h4>
+        </figcaption>
+</figure>
+
+
+<h2 id="other">Other</h2>
+
+<ul>
+<li>Mình dùng 1 Titan X, 2 1080 Ti, 1 P100 để train. Trước deadline vài ngày có dùng 1 máy Google Cloud.</li>
+<li>Rất nhiều hình gif bị save thành jpg, ta có thể dùng trick để avoid lỗi những ảnh này.</li>
+<li>Đừng sa lầy bởi code đểu, đừng nghe dân mạng chém gió và cố gắng bám sát vào plan của mình. Chỉ nên tin những nguồn đáng tin cậy.</li>
+<li>Sử dụng <a href="http://notion.so" target="_blank">notion.so</a> để quản lý ghi chú, kết quả thí nghiệm và lên kế hoạch.</li>
+</ul>
+
+<h1 id="các-ý-tưởng-khác">Các ý tưởng khác</h1>
+
+<h2 id="image-retrieval-knn">Image Retrieval - KNN</h2>
+
+<p>Để sử dụng kỹ thuật image retrieval hiệu quả [tức là image retrieval thực sự outperform classification] thì dataset cần hội đủ các yếu tố:</p>
+
+<ol>
+<li>Dataset có số lượng label rất lớn.</li>
+<li>Phân phối training samples không đều và chênh lệch lớn.</li>
+<li>Mối tương quan giữa các ảnh trong cùng 1 class thấp.</li>
+</ol>
+
+<p>Ví dụ điển hình là tập Google Landmark với 1.5 triệu ảnh, và 15K label (landmark) khác nhau. Hình dưới cho thấy rất nhiều label có số lượng trainng ít.</p>
+
+<figure>
+    <img src="/Untitled-2cfccd2a-efe1-4790-898d-28bd8ef2aa02.png"/> 
+</figure>
+
+
+<p>Trong 3 điều kiện trên thì tập Landmark của Zalo thỏa được (2) và (3) phần nào đó. Ví dụ ở class 0 và 1, độ tương quan khá thấp, và nếu không biết trước được rằng các hình nằm chung 1 class thì mình nghĩ đến cả human còn nhầm đây là các địa điểm khác nhau:</p>
+
+<p><img src="/class_0-c9292bd7-ff47-490b-a2a8-3fc0f26a975b.png" alt="" />
+<img src="/class_1-073f62d3-1634-45b6-8986-03a0829acdad.png" alt="" /></p>
+
+<p>Ở các kỹ thuật trong retrieval có thể đơn giản hóa như sau:</p>
+
+<ul>
+<li>Tận dụng local features làm representation và search dựa trên Euclidean distance.</li>
+<li>Dùng k-NN kết với với kd tree (exact search) hoặc PQ (approximate search) để giảm thời gian search (lưu ý ràng buộc 6 tiếng inference) [dĩ nhiên với dataset nhỏ thì cứ dùng k-NN].</li>
+<li>Dùng các kỹ thuật Pooling hoặc Masking [2] thay vì dùng trực tiếp feature tầng cuối của network. Và như vậy, ta sẽ pooling ở tầng conv thay vì tầng fully connected.</li>
+</ul>
+
+<p>Local features như RootSIFT+BoW hoặc RootSIFT+Triemb hoạt động rất tốt trong case này:</p>
+
+<figure>
+    <img src="/Untitled-4f51efac-f6a9-44a0-80b8-1accb8131443.png"/> <figcaption>
+            <h4>Nguồn: slide - Ranked 3rd Google Landmark Recognition Challenge</h4>
+        </figcaption>
+</figure>
+
+
+<p>Với kỹ thuật này, ta có thể apply 1 số technique hay ho như:</p>
+
+<ul>
+<li>Query Expansion [3].</li>
+<li>Regional Diffusion [4].</li>
+</ul>
+
+<p>Image Retrieval cùng với các kỹ thuật này đã đạt kết quả rất tốt ở hai cuộc thi là Landmark Retrieval và Landmark Recognition của Google [<a href="https://drive.google.com/file/d/12Zb0NZL3Ys6SPLiAvCroW5w3gZIYCB2X/view" target="_blank">Link</a>]. Mình nghĩ ít nhiều nó sẽ giúp improve performance, đặc biệt là với với class có intra-class correlation thấp.</p>
+
+<h2 id="fine-grained-classification">Fine-grained Classification</h2>
+
+<p>Nếu ta xem xét các labels và thứ tự của nó, ta nhận ra rằng các lớp chung 1 category sẽ nằm cạnh nhau. Ví dụ:</p>
+
+<ul>
+<li>Từ label 17 → 23: các thể loại cầu; bao gồm: Cầu Chương Dương, Cầu Tràng Tiền, Cầu Rồng, Cầu Tình Yêu, Cầu Tay Vàng Bà Nà.</li>
+<li>Label từ 25 → 28: các thể loại cột cờ: Cột cờ Hà Nội, Cột cờ Hà Giang, Cột cờ Đảo Trường Sa và Cột cờ Cà Mau.</li>
+<li>Label 9 → 11: các chợ: Chợ Bến Thành, chợ Nổi và chợ Đồng Xuân.</li>
+<li>Label 71 → 79: các nhà thờ Công Giáo: Nhà Thờ Đức Bà, Nhà Thờ Nha Trang, Nhà Thờ ở Phú Yên, &hellip;</li>
+</ul>
+
+<p>Một ý tưởng đơn giản đó là ta gom hết các data trong các nhóm đó lại với nhau thành 1 label lớn: ví dụ &ldquo;chợ&rdquo;, &ldquo;cầu&rdquo;, &ldquo;cột cờ&rdquo; và xây dựng bộ classifier trên đó (tạm gọi là Classifier-A). Kết quả có thể đem làm trọng số cho classifier chính với 103 classes. Ngoài ra, ta có thể &ldquo;random&rdquo; trong trường hợp kết quả ra thấp: Nếu bộ classifier 103 lớp không classify được, nhưng bộ Classifier-A ra kết quả là &ldquo;cầu&rdquo; với confidence cao, ta có thể random trong đó [Dĩ nhiên, có nhưng phương pháp fancy hơn để inference ra kết quả]; ngay cả với random, giả sử groundtruth là 1 trong 7 loại cầu: thì ta có xác suất 1-6C3/7C3 = 42.8571 %. Theo bản thân mình, đây cũng là cách mà con người nhận biết landmark. Fancy hơn, bạn có thể dùng Maximum Spanning Tree Clustering [<a href="https://drive.google.com/file/d/1MhaaCAICiL3_DA7m9gBEHLL9XxEycyUs/view" target="_blank">Link</a>]</p>
+
+<p>Đồng thời, với quan sát như trên, ta có thể sử dụng 1 số phương pháp fine-grained classification để cải thiện độ chính xác. Bởi theo như quan sát, các kiến trúc cầu, nhà thờ, hay cột cờ có độ tương đồng hình ảnh khá giống nhau, thậm chí nếu chụp ở 1 góc nào đó thì kể cả con người cũng khó phân biệt được. Nên data như vậy rất phù hợp với kỹ thuật fine-grained classification.</p>
+
+<h1 id="fun-stuff">Fun stuff</h1>
+
+<ul>
+<li>Với query là ảnh con cá này:</li>
+</ul>
+
+<p><img src="/fish-4493b101-370a-46c7-ac0e-e4d3a5537886.jpeg" alt="" /></p>
+
+<p>Model predict ra cơ sở nước mắm Phú Quốc.</p>
+
+<p>model của team mình predict ra label 70 - Cơ sở chế biến nước mắm Phú Quốc. Mặc dù sau khi kiểm tra 497 hình của class 70 này bằng mắt, không hình nào trong training data có hình con cá. Mình gọi đây là: The next level of AI.</p>
+
+<ul>
+<li>Hình tượng chúa ở Brazil được cho làm query, trong khi đây là cuộc thi Landmark ở Việt Nam, hình này còn xuất hiện vài lần trong tập test.</li>
+</ul>
+
+<p><img src="/tuong_chua-efa06a8a-29e9-49bf-a002-679ab006730b.jpeg" alt="" /></p>
+
+<ul>
+<li>Mình rất muốn đi DisneyLand ở Việt Nam :(</li>
+</ul>
+
+<p><img src="/disneyland-bcabc3bb-b9bb-4c2c-8e30-9c00914a9c40.png" alt="" /></p>
+
+<ul>
+<li>Rất nhiều hình trong training data sử dụng ảnh của các site khác, mình tò mò là bên Zalo đã xin phép bản quyền chưa.</li>
+</ul>
+
+<p>P.s: I love Vietnam</p>
+
+<p><img src="/pjimage(1)-cb2a7399-7029-4c51-acf5-34894cce2c1a.jpg" alt="" /></p>
+
+<p>Mình không biết 3 hình này thuộc địa danh nào ở Việt Nam, nhưng rất đẹp.</p>
+
+<h1 id="references">References</h1>
+
+<p>[a] Cyclical Learning Rates for Training Neural Networks 2015, Leslie N. Smith.</p>
+
+<p>[1] Fine-tuning CNN Image Retrieval with No Human Annotation,</p>
+
+<p>[2] Selective Deep Convolutional Features for Image Retrieval</p>
+
+<p>[3] Total recall: Automatic query expansion with a generative feature model for object retrieval</p>
+
+<p>[4] A. Iscen, G. Tolias, Y. Avrithis, T. Furon, O. Chum. &ldquo;Efficient Diffusion on Region Manifolds: Recovering Small Objects with Compact CNN Representations&rdquo;, CVPR 2017</p>
+
+<p>Xin chân thành cảm ơn sự giúp đỡ và hỗ trợ của VietAI trong quá trình mình tham gia cuộc thi. Dù không được vào Top 3 nhưng cũng là 1 trải nghiệm thú vị với nhiều điều đáng học hỏi.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/machine-learning'>Machine Learning</a>, <a class='tag' href='/vi/tags/computer-vision'>Computer Vision</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/nha_trang_summer18/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Kinh nghiệm du lịch Nha Trang</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

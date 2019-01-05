@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C&#43;&#43;). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng .'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='rand() is harmful • Dang-Khoa'>
+<meta property='og:description' content='rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C&#43;&#43;). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng .'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/rand/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='programming'><meta property='article:tag' content='cpp'><meta property='article:published_time' content='2017-09-06T00:00:00Z'/><meta property='article:modified_time' content='2017-09-06T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>rand() is harmful • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/rand/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>rand() is harmful</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2017-09-06T00:00:00Z'>2017, Sep 06</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<h1 id="rand">rand()</h1>
+
+<p>Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo;
+Bài talk duy chỉ nói về việc dùng hàm <code>rand()</code> và đặc biệt sử dụng chung với <code>%</code> (mod) hay floating point scale là thực sự <em>sai lầm</em>  và <em>nghiêm trọng</em> . Đặc biệt, nó không hề tạo ra uniform distribution như ta thường nghĩ, thậm chí nó khiến cho 1 số giá trị đặc biệt hiếm khi xảy ra 😄</p>
+
+<p>Bản chất hàm <code>rand</code> được implement khá đơn giản <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator" target="_blank"> linear congruential </a> nhờ tận dụng tính chất của số căn nguyên thủy (xem <a href="https://en.wikipedia.org/wiki/Lehmer_random_number_generator" target="_blank">Lehmer random generator</a>). Điều thú vị nằm ở chỗ 1 tính chất không liên quan mấy bên lý thuyết số lại hỗ trợ cho việc sinh số ngẫu nhiên.
+Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để check xem empirical results có đúng với probabilities không (uniform distribution với biến ngẫu nhiên rời rạc), đó là dùng Chi squared test.</p>
+
+<p>Link:
+<a href="https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful" target="_blank">https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful</a></p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/programming'>programming</a>, <a class='tag' href='/vi/tags/cpp'>cpp</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/randalgs_ex/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Các thuật toán ngẫu nhiên</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/la_la_land/'>
+        <span class='screen-reader-text'>Next post: </span>La La Land<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='The repertoire method is an method of finding closed-form of recurrence relations and sum of a series. The method is introduced in Chapter 1 of ConMath but most readers at the first time seem to struggle with it. Through the book, especially Chapter 1 and 2, the repertoire method demonstrates its ability to solve many sums and recurrences. However, I honestly admit that it is quite difficult to apply and fully understand how it works.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='The repertoire method • Dang-Khoa'>
+<meta property='og:description' content='The repertoire method is an method of finding closed-form of recurrence relations and sum of a series. The method is introduced in Chapter 1 of ConMath but most readers at the first time seem to struggle with it. Through the book, especially Chapter 1 and 2, the repertoire method demonstrates its ability to solve many sums and recurrences. However, I honestly admit that it is quite difficult to apply and fully understand how it works.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/docs/repertoire/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='math'><meta property='article:published_time' content='2017-12-26T00:00:00Z'/><meta property='article:modified_time' content='2017-12-26T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>The repertoire method • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/docs/repertoire/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>The repertoire method</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2017-12-26T00:00:00Z'>2017, Dec 26</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>The repertoire method is an method of finding closed-form of recurrence relations
+and sum of a series. The method is introduced in Chapter 1 of ConMath but
+most readers at the first time seem to struggle with it. Through the book,
+especially Chapter 1 and 2, the repertoire method demonstrates its ability to
+solve many sums and recurrences. However, I honestly admit that it is quite
+difficult to apply and fully understand how it works. In this note, I try to
+figure the way to effectively apply the method for solving recurrences.</p>
+
+<h1 id="definition">Definition</h1>
+
+<p>In essence, the main goal of the method is to find coefficients for a <strong>linear
+combination</strong> of a set of recurrences. This method works very well on linear
+recurrences, in the sense that the solutions can be expressed as a sum of
+coefficients multiplied by functions of $n$ Therefore,
+if we have to find a closed-form of a linear recurrence, this is worth trying.</p>
+
+<p>The method is not described clearly in ConMath because the authors always come
+up with a set of recurrences and get their coefficients but they do not
+mention how they figure out. Regarding this aspect, Sedgewick&rsquo;s book obtains
+accessible clarification and systematic examples. Therefore, I use the procedure
+in Sedgewick&rsquo;s book as a recipe for the repertoire method:</p>
+
+<ol>
+<li>Relax the recurrence by adding an extra function term.</li>
+<li>Substitue known functions into the recurrence to derive identities similar to the recurrence.</li>
+<li>Take linear combination of such identities to derive an equation identical to the recurrence.</li>
+</ol>
+
+<p>At the first look, it is quite abstract. However, some examples carried out
+in the book illustrate how we manipulate the steps. Suppose that we have
+recurrence $a_{n} = a_{n-1} + {\text stuff} $. First we generalize the
+identity by replacing ${\text stuff}$ with $f(n)$, i.e., $a_{n} = a_{n-1} + f(n)$.
+We easily obtain $f(n) =  a_{n} - a_{n-1}$. The next step is to build a table
+of ingredients in which we can construct $f(n)$. Finally, we determine coefficients
+of each component so that they satisfy $f(n)$ and the basis of the
+recurrence.</p>
+
+<p>For more details and explanations, I strongly recommend reading
+<a href="https://math.stackexchange.com/a/1023510/397515" target="_blank">Markus Scheuer&rsquo;s answer</a>. Of
+course, ConMath (Chapter 1, 2, 6) is a good material for practicing the method
+except understanding purposes. Section 2.5 from Sedgewick&rsquo;s book summarizes
+some approaches to finding the closed-form including the repertoire method.
+Examples in the book are required reading.</p>
+
+<p>The best way to fully understand the method is to work through examples.</p>
+
+<h1 id="examples">Examples</h1>
+
+<h2 id="closed-form-of-sums">Closed-form of sums</h2>
+
+<p>We can easily convert sum of a sequence into a linear recurrence. Let begin
+with the first example which only contains term $n^3$.</p>
+
+<p>$ S_{n} = \sum_{k=0}^n k^3$</p>
+
+<p>This sum can be seen as:</p>
+
+<p>$ a_{0} = 0$
+$ a_{n} = a_{n-1} + n^3$</p>
+
+<p>Next,  we build a table of $a_{n}$ and $a_n - a_{n-1}$.</p>
+
+<table>
+<thead>
+<tr>
+<th>$a_n$</th>
+<th>$a_n -a_{n-1}$</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>n</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>$n^2$</td>
+<td>$2n-1$</td>
+</tr>
+
+<tr>
+<td>$n^3$</td>
+<td>$3n^2-3n+1$</td>
+</tr>
+
+<tr>
+<td>$n^4$</td>
+<td>$4n^3-6n^2+4n-1$</td>
+</tr>
+</tbody>
+</table>
+
+<p>How can I fill $a_n$? Since we want $f(n)$ obtains $n^3$
+and we observe that $f(n) = a_n - a_{n-1}$ depends on the degree of $n$ in
+$a_n$ and hence we come up with some simple sequence, i.e., computing $a_n - a_{n-1}$.
+Turn out $f(n)$ have smaller degree of $n$ than $a_n$ exactly 1. $f(n)$ obtaining $n^3$
+means that $a_n$ has to obtain $n^4$. The simplest form we can come up with
+is $n^3 = \alpha (4n^3-6n^2+4n-1)$. So $\alpha = {1\over 4}$, we need to eliminate $n^2$,
+$n$ and constants. In the second attempt, we add $n^3$ and $n^2$ into the
+linear combination:</p>
+
+<p>$$
+\alpha (4n^3-6n^2+4n-1) + \beta(3n^2-3n+1) + \lambda (2n-1) = n^3
+$$</p>
+
+<p>$$
+\begin{cases}
+-6\alpha + 3\beta = 0\newline
+4\alpha -3\beta + 2\lambda = 0\newline
+-\alpha + \beta - \lambda = 0
+\end{cases}
+$$</p>
+
+<p>The solution is $(\alpha, \beta,\lambda) =({1\over 4}, {1\over 2}, {1\over 4}) $
+and hence $a_n = \alpha n^3 + \beta n^2 + \lambda n = {1\over 4}n^2(n+1)^2$.
+Also, since $a_0 = 0$, it is the final solution.</p>
+
+<p>Let try another example, this time we use an exercise in ConMath:</p>
+
+<p>$$ S_{n} = \sum_{k=0}^{k} (-1)^kk^2$$</p>
+
+<table>
+<thead>
+<tr>
+<th>$a_n$</th>
+<th>$a_n-a_{n-1}$</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>$(-1)^nn^2$</td>
+<td>$(-1)^n(2n^2-2n+1)$</td>
+</tr>
+
+<tr>
+<td>$(-1)^n $</td>
+<td>$2(-1)^n$</td>
+</tr>
+
+<tr>
+<td>$(-1)^nn $</td>
+<td>$(-1)^n(2n-1)$</td>
+</tr>
+</tbody>
+</table>
+
+<p>The solution is $S_n = {1\over 2}(-1)^n n(n+1)$ since we just add the first term
+and the last term together and then divide by 2, we get $f(n)$. When I first saw
+the sum, I could not think any sequences which help me find $f(n)$. After
+play which some sequences, I realize that assigning $a_n = f(n) = (-1)^nn^2$
+actually lets other patterns be discovered.</p>
+
+<h2 id="linear-recurrences">Linear Recurrences</h2>
+
+<p>$ a_0 = 7 $</p>
+
+<p>$ a_n = a_{n-1} + 2n^2 + 7 \; n &gt; 0 $</p>
+
+<p>Based on the table we built in previous examples, we can construct a linear
+combination for the recurrence:</p>
+
+<p>$\alpha(3n^2-3n+1) + \beta(2n-1) + \lambda 1 = 2n^2+7$</p>
+
+<p>$$
+\begin{cases}
+3\alpha = 2 \newline
+-3\alpha + 2\beta = 0 \newline
+\alpha - \beta + \lambda = 7
+\end{cases}
+$$</p>
+
+<p>The solution is $(\alpha, \beta, \lambda) = ({2\over 3}, 1, {22\over 3})$. However,
+at this time $a_0= 0 \neq 7$, we have to add constant $7$ to the final form.
+The closed-form is $a_n = {2\over 3}n^3+n^2+{22\over 3}n+7$.</p>
+
+<h2 id="exercise-1-16-conmath">Exercise 1.16 (ConMath)</h2>
+
+<p>$$
+g(1) = \alpha
+$$
+$$
+g(2n+j) = 3g(n) + \gamma n + \beta \; j = 0, 1 ; n \geq 1
+$$</p>
+
+<h1 id="related-materials">Related Materials</h1>
+
+<p>After hours searching on Internet, I found some useful links which actually
+helps me understand the method:</p>
+
+<ul>
+<li><a href="http://blog.wakatta.jp/blog/2012/01/14/concrete-mathematics-repertoire-method/" target="_blank">Wakatta&rsquo;s post</a></li>
+<li><a href="https://math.stackexchange.com/a/1023510/397515" target="_blank">Math stackexchange answer</a>:
+this one is damn good.</li>
+<li><a href="http://pindancing.blogspot.sg/2011/02/repertoire-method-in-concrete.html" target="_blank">Pindancing&rsquo;s post</a></li>
+<li>Sedgewick, Robert, and Philippe Flajolet. An introduction to the analysis of algorithms. Pearson Education India, 1996. [IMO,
+the explanation in this book is much better than in ConMath.]</li>
+<li>Graham, Ronald L., et al. &ldquo;Concrete mathematics: a foundation for computer science.&rdquo; Computers in Physics 3.5 (1989): 106-107.</li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/math'>math</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/docs/why_so_serious/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Miscellaneous notes</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/docs/selectedpapers_cs/'>
+        <span class='screen-reader-text'>Next post: </span>Selected Papers on Computer Science (Don Knuth) and the current state of Deep Learning<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

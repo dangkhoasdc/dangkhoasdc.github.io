@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>computer-vision on Dang-Khoa&#39;s blog </title>
+    <title>computer vision on Dang-Khoa&#39;s blog </title>
     <link>http://dangkhoasdc.github.io/tags/computer-vision/</link>
-    <description>Recent content in computer-vision on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in computer vision on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Tue, 12 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hashing in content-based image retrieval</title>
-      <link>http://dangkhoasdc.github.io/project/deep_hashing/</link>
-      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      <title>OpenCV on Android: practices and tips</title>
+      <link>http://dangkhoasdc.github.io/docs/opencv_android_practices/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/project/deep_hashing/</guid>
-      <description>Since I worked at SUTD, I have been working on the content-based image retrieval. It is very active in academia and industry. Actually, there are some works I have accomplished:
- Image hasing: a joint optimization for image embedding and hashing (CVPR17 paper). Deep Image Retrieval: a scheme for unified deep learning and image retrieval (ACM MM17 paper). Mobile version of Triangulation Embedding. Deep Hashing Image (In progress).  </description>
+      <guid>http://dangkhoasdc.github.io/docs/opencv_android_practices/</guid>
+      <description>Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
+Basically, we have a function playing as a bridge between Java APIs and NDK:
+public native void function_name(long matAddress);  To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
     </item>
     
     <item>
-      <title>Urban-Area Scene-Based Localization</title>
-      <link>http://dangkhoasdc.github.io/project/usbl/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>History of Computer Vision - Part 1</title>
+      <link>http://dangkhoasdc.github.io/docs/compvision_hist/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/project/usbl/</guid>
-      <description>My main role is to develop the localization system for the MinDef project. Besides, I conducted research on Deep Image Retrieval and 3D reconstructions.
- Develop the on-device urban scane-based localization system on Android devices. There are some major components I have implemented on mobile:  Image Retrieval (Triangluation Embedding (CPU + GPU)) Vector Quantization (Product Quantization). Hashing-based Image Matching. Pose Estimation  Implement and conduct experiments on deep hashing image retrieval and feature learning.</description>
+      <guid>http://dangkhoasdc.github.io/docs/compvision_hist/</guid>
+      <description>[It is such a long time since I wrote a dedicated technical post about computer vision.]
+Introduction Since Computer Vision is an interdisciplinary research which involves different fields such as physics, biology, computer science, neuroscience, etc. For this reason, there are different approaches when people consider about the history of computer science. In this post, I summarize two viewpoints of Prof. Fei-Fei Li, and Prof. Richard Szeliski from their courses [1] and textbooks [1].</description>
     </item>
     
   </channel>

@@ -14,10 +14,10 @@
     
     <item>
       <title>Latin squares and a story of computer science history</title>
-      <link>http://dangkhoasdc.github.io/post/latin_square/</link>
+      <link>http://dangkhoasdc.github.io/docs/latin_square/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/latin_square/</guid>
+      <guid>http://dangkhoasdc.github.io/docs/latin_square/</guid>
       <description>The content of this note mostly belongs to the first section of TAoCP, Vol4A.
 Definition Given a square matrix of size $M$ and each element is $\{0, 1, \cdots, M-1 \}$, we construct a matrix such that for the element $i$ in the set $\{0, 1, \cdots, M-1\}$ only appears exactly 1 time on every row and column.
 Examples We have 16 cards which comprises a combination of 4 ranks, i.</description>
@@ -25,10 +25,10 @@ Examples We have 16 cards which comprises a combination of 4 ranks, i.</descript
     
     <item>
       <title>Generate the inversion table from an integer sequence</title>
-      <link>http://dangkhoasdc.github.io/post/gen_inversion_table/</link>
+      <link>http://dangkhoasdc.github.io/docs/gen_inversion_table/</link>
       <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/gen_inversion_table/</guid>
+      <guid>http://dangkhoasdc.github.io/docs/gen_inversion_table/</guid>
       <description>The programming exercise is from TAoCP, Vol3, 5.1.1-6:
  Design an algorithm that computes the inversion table $b_1, b_2 \cdots b_n$ corresponding to a given permutation $a_1a_2 \cdots a_n$ of ${1, 2, \cdots , n}$, where the running time is essentially proportional to $n\ log n$ on typical computers.
  I was really stuck on the solution Knuth given in the book. The author also mentioned another approach which actually is a modifination of merge sort.</description>

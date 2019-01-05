@@ -14,30 +14,30 @@
     
     <item>
       <title>Install OpenCV 3 non-free module on Ubuntu</title>
-      <link>http://dangkhoasdc.github.io/post/opencv3_nonfree/</link>
+      <link>http://dangkhoasdc.github.io/docs/opencv3_nonfree/</link>
       <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/opencv3_nonfree/</guid>
+      <guid>http://dangkhoasdc.github.io/docs/opencv3_nonfree/</guid>
       <description>The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
 Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.</description>
     </item>
     
     <item>
       <title>Setup OpenCV and Android Studio with NDK support</title>
-      <link>http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/</link>
+      <link>http://dangkhoasdc.github.io/docs/opencv_android_studio_ndk/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/</guid>
+      <guid>http://dangkhoasdc.github.io/docs/opencv_android_studio_ndk/</guid>
       <description>In this tutorial, I will demonstrate how to configurate the renowned computer vision libary, OpenCV, with the current Android Studio version (3.0.1). Let get started. The compiled version of OpenCV which supports Android is available at OpenCV Homepage. Download and extract it. Please note that to test the application properly on the mobile devices, the OpenCV Manager has to be installed.
 In another tutorial, I will talk about how to compile our own OpenCV library and put it to Android Studio since the pre-compiled library misses some interesting and important components, e.</description>
     </item>
     
     <item>
       <title>Install the OpenCV library on Visual Studio</title>
-      <link>http://dangkhoasdc.github.io/post/install_opencv_vs/</link>
+      <link>http://dangkhoasdc.github.io/docs/install_opencv_vs/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/install_opencv_vs/</guid>
+      <guid>http://dangkhoasdc.github.io/docs/install_opencv_vs/</guid>
       <description>Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
  Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here.</description>
     </item>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C&#43;&#43;. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
+ Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Cài đặt quan hệ thứ tự trong C&#43;&#43; • Dang-Khoa'>
+<meta property='og:description' content='Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C&#43;&#43;. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
+ Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/total_order/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='programming'><meta property='article:tag' content='C&#43;&#43;'><meta property='article:published_time' content='2018-01-03T00:00:00Z'/><meta property='article:modified_time' content='2018-01-03T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Cài đặt quan hệ thứ tự trong C&#43;&#43; • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/total_order/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Cài đặt quan hệ thứ tự trong C&#43;&#43;</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-01-03T00:00:00Z'>2018, Jan 03</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc
+dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai
+trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:</p>
+
+<ul>
+<li>Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất,
+có vai trò quan trọng trong các thuật toán sắp xếp.</li>
+<li>Equivalence relation (Quan hệ tương đương): được sử dụng trong các thuật toán
+hashing.</li>
+</ul>
+
+<p>Tuy nhiên trong bài này thay vì đề cập trực tiếp đến quan hệ thứ tự (Total Order),
+ta thử sử dụng quan hệ tổng quát hơn chút <strong>weak order</strong>. Điều khác biệt duy nhất
+của Weak Order so với Total Order nằm ở chỗ weak order không có tính đối xứng.
+Và trong &ldquo;thực tế đời sống&rdquo;, Weak Order chính là dấu <code>&lt;</code>.</p>
+
+<p>Vậy có điều gì khó khăn khi phải cài đặt dấu <code>&lt;</code> này? Giả sử ta có một hàm như
+sau:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt; bool f(const T&amp; lhs, const T&amp; rhs) { return lsh&lt;rhs; }
+
+</code></pre>
+
+<p>Giả sử ta viết một thư viện trong đó chứa hàm <code>f</code> và mong muốn bất kì ai sử
+dụng cũng phải cài đặt dấu <code>&lt;</code> cho CTDL của mình. Bởi đôi khi, dấu <code>&lt;</code> mặc
+định của C++ chưa chắc mang ngữ nghĩa đúng, hay bất kì một CTDL tự tạo nào
+không chứa dấu <code>&lt;</code> cũng gặp lỗi. Vậy nếu có cơ chế nào giúp trình biên dịch
+phát hiện được LTV quên cài đặt dấu này. Cụ thể hơn ta, muốn có:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+bool f(const T&amp; lhs, const T&amp; rhs) {
+    // Error if T does not have `&lt;` operator
+    // otherwise
+    return lsh&lt;rhs;
+}
+
+</code></pre>
+
+<p>Trong C++11, ta có 1 cơ chế khá giống như vậy:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+bool f(const T&amp; lhs, const T&amp; rhs) {
+    static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt; operator&quot;);
+    return lsh&lt;rhs;
+}
+
+</code></pre>
+
+<p>Kỹ thuật sử dụng <code>struct&lt;T&gt;::value</code> được gọi là <a href="https://accu.org/index.php/journals/442" target="_blank">type traits</a>,
+được sử dụng rất
+phổ biến trong STL, metaprogramming, các thư viện như BOOST, dlib. Tiếp, <code>::value</code>
+ở đây phải là static, không có gì phải bàn. Đồng thời, <code>::value</code> trả về yes/no
+khi lớp T chứa/ hoặc không chứa <code>&lt;</code>, nên kiểu phải là <code>bool</code>. Do giá trị này được
+kiểm tra lúc trình biên
+dịch thực thi, nên hẳn là <code>constexpr</code>. Xong tạm thời ta có 1 cài đặt:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+class has_less_operator{
+    private:
+        // stuff
+    public:
+        static constexpr bool value = // and other stuff;
+};
+</code></pre>
+
+<p>Và giờ đến phần khoai nhất khi cài đặt. Ta buộc phải gán &ldquo;cái gì đó&rdquo; vào <code>value</code>,
+nhưng ngay tại thời điểm cài đặt ta còn không biết nó có giá trị gì, và hoàn toàn
+phụ thuật vào CTDL <code>T</code> nào đó do LTV khác viết. Hay nói một cách khác, chính giá
+trị boolean cũng bị tham số hóa theo kiểu. May mắn thay, STL có hỗ trợ vụ này:</p>
+
+<pre><code class="language-cpp">#include &lt;type_traits&gt;
+
+using namespace std;
+
+typedef true_type yes;
+typedef false_type no;
+
+</code></pre>
+
+<p>Lúc này ta có thể viết :</p>
+
+<pre><code class="language-cpp">static constexpr bool value = is_same&lt;yes, /* X */&gt;::value;
+</code></pre>
+
+<p>Như vậy <code>value</code> sẽ phụ thuộc vào <code>is_same&lt;yes, X&gt;::value</code>. Vấn đề X ở đây là gì?
+Ta xem trong STL, <code>is_same</code> nhận 2 datatype làm input. Vậy X chính là 1 datatype
+khác. Nhưng cụ thể hơn nó có thể là yes/no để <code>value</code> trở thành yes/no.</p>
+
+<p>Tới đây là một đoạn cực kì fancy, nhưng mình không biết giải thích trước thế nào
+nhưng trước hết cứ viết ra đã:</p>
+
+<pre><code class="language-cpp">static constexpr bool value = is_same&lt;yes,
+                                    decltype(test&lt;T&gt;(nullptr))
+                                    &gt;::value;
+</code></pre>
+
+<p><code>decltype</code> trả về kiểu dữ liệu <code>return type</code> của hàm <code>test</code> và ta cố tình đưa
+toàn bộ cài đặt vào trong <code>test</code> này. Bởi toán tử <code>&lt;</code> trong C++ yêu cầu 1 tham
+số đầu vào nên ta để 1 tham số hàm <code>test</code> làm dummy. Như vậy ta biết chắc chắn
+<code>test&lt;T&gt;</code> trả về 1 trong 2 kiểu dữ liệu : <code>yes</code> hoặc <code>no</code> như được typedef phía
+trên. Đồng thời, ta biết rằng mặc định mọi kiểu dữ liệu <code>T</code> sẽ trả về <code>no</code>.</p>
+
+<p>Tức ta có :</p>
+
+<pre><code class="language-cpp">template&lt;typename&gt; static no test(...);
+</code></pre>
+
+<p>Xong cho phần sai. Giờ làm thế nào để trả về <code>yes</code> khi dữ liệu thực sự đã cài
+đặt <code>&lt;</code>. Ta có 1 hàm test thứ 2:</p>
+
+<pre><code class="language-cpp">template&lt;typename P&gt; static auto test (P *p)
+    -&gt; decltype(declval&lt;T&gt;()&lt;(*p), yes());
+</code></pre>
+
+<p>WTF =))) Điều gì đang xảy ra ở đây? Nhờ một khái niệm <a href="https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error" target="_blank">SFINAE</a>,
+chúng ta được chứng kiến sự điên rồ của C++.</p>
+
+<p>Hãy phân tích câu lệnh trên.
+Phần <code>template&lt;typename T&gt; static</code> không có gì khác với <code>test</code> của <code>no</code>. Kết
+quả trả về là <code>auto</code> để &ldquo;nhường&rdquo; phần quyết định cho <code>decltype</code>. <code>decltype</code> làm
+chuyện như sau, nếu biểu thức <code>declval&lt;T&gt;()&lt;(*p), yes()</code> biên dịch được thì
+<code>auto</code> sẽ trở thành <code>yes</code> nhờ vào &ldquo;comma-separated list&rdquo;: trả về kết quả của term
+cuối cùng trong list. Vậy vấn đề nằm ở <code>declval</code>. Hàm nào giúp ta gọi được
+<code>&lt;</code> mà không cần thông qua constructor. Chính xác hơn <code>declval&lt;T&gt;()</code> là
+template function với tham số kiểu dữ liệu <code>T</code>, trả về kiểu reference X nào đó,
+nhờ đó ta gọi được <code>&lt;(*p)</code>: chính là phép <code>&lt;</code> thần thánh của chúng ta. Nếu như
+không tồn tại <code>&lt;</code>, biểu thức này fail nhưng sẽ không bị báo lỗi biên dịch mà thay
+vào đó trình biên dịch gán <code>test</code> cho <code>static no test(...)</code>.</p>
+
+<p>Tổng kết lại ta có code như sau:</p>
+
+<pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+
+using namespace std;
+typedef std::true_type yes;
+typedef std::false_type no;
+
+template&lt;typename T&gt;
+class has_less_operator {
+    private:
+    template&lt;typename P&gt; static auto test(P *p) -&gt; decltype(std::declval&lt;P&gt;()&lt;(*p), yes());
+    template&lt;typename&gt; static no test(...);
+
+
+    public:
+    static constexpr bool value = is_same&lt;
+                                    yes,
+                                    decltype(test&lt;T&gt;(nullptr))
+                               &gt;::value;
+};
+
+template&lt;typename T&gt;
+bool f(const T&amp; lsh, const T&amp; rhs) {
+    static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt;&quot;);
+    return lsh&lt;rhs;
+}
+
+struct s1 {
+    int i;
+    s1(int _i): i(_i) {  }
+    inline bool operator&lt;(const s1&amp; other) const {
+        return i &lt; other.i;
+    }
+};
+
+struct s2 {
+    int i;
+    s2(int _i): i(_i) {  }
+};
+
+int main(int argc, char const* argv[])
+{
+    s1 a(10);
+    s1 b(20);
+    f(a, b);
+    /* s2 c(10), d(20); */
+    /* f(c, d); */
+    return 0;
+}
+
+</code></pre>
+
+<p>Nếu ta uncomment s2 và f bên dưới, ta có thông báo lỗi như sau:</p>
+
+<pre><code>a.cpp: In instantiation of ‘bool f(const T&amp;, const T&amp;) [with T = s2]’:
+a.cpp:47:11:   required from here
+a.cpp:24:5: error: static assertion failed: Please implement &lt;
+     static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt;&quot;);
+     ^~~~~~~~~~~~~
+</code></pre>
+
+<p>Thông báo cực kì dễ hiểu. Với việc sử dụng một số IDE thông minh, thậm chí thông
+báo lỗi sẽ được thông báo ngay lúc cài đặt <code>s2</code> và gọi <code>f</code>. Quan trọng hơn,
+nhờ đó ta có thể viết mã theo &ldquo;Design by Contract&rdquo; hay theo phong cách interface
+của Java và C++. Sắp tới C++ sẽ giới thiệu khái niệm <code>concept</code> và theo tác
+giả của C++ là sẽ giải quyết vấn đề suốt 35 năm qua của Generic Programming
+(<a href="https://developers.slashdot.org/story/17/01/23/003247/c-creator-wants-to-solve-35-year-old-generic-programming-issues-with-concepts" target="_blank">link</a>).</p>
+
+<h1 id="các-toán-tử-khác">Các toán tử khác</h1>
+
+<p>Sau khi cài đặt toán tử <code>&lt;</code>, thông thường ta sẽ có nhu cầu cài đặt các toán
+tử so sánh khác như <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>. May mắn thay ta có thể quy đổi các toán tử
+này dễ dàng thông qua <code>&lt;</code>:</p>
+
+<ul>
+<li><code>&gt;</code>: chính là <code>rhs&lt;lsh</code>.</li>
+<li><code>&lt;=</code>: là <code>!(rhs&lt;lsh)</code>.</li>
+<li><code>&gt;=</code>: <code>!(lhs&lt;rhs)</code>.</li>
+</ul>
+
+<p>Trong thâm ta ta có cảm giác rằng thể nào cũng có rất nhiều CTDL ta cài đặt
+kiểu này: chỉ cần định nghĩa <code>&lt;</code> và 3 toán tử còn lại tự nội suy. Nhờ vào kỹ
+thuật <a href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern" target="_blank">Curiously recurring template pattern</a>,
+ta có một code khá gọn:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+struct order {
+    virtual bool operator&lt;( const T&amp; rhs) const = 0;
+    bool operator&gt;( const T&amp; rhs) const
+        {return rhs&lt;static_cast&lt;const T&amp;&gt;(*this);}
+    bool operator&gt;=( const T&amp; rhs) const
+        {return !((*this)&lt;rhs); }
+    bool operator&lt;=( const T&amp; rhs) const
+        {return !(rhs&lt; static_cast&lt;const T&amp;&gt;(*this));}
+};
+</code></pre>
+
+<p>Như vậy chỉ cần kế thừa <code>order</code> và cài đặt <code>&lt;</code>, ta sẽ có luôn 3 toán tử còn lại.
+Điều duy nhất mình ức chê là phải sử dụng <code>static_cast</code>.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/programming'>programming</a>, <a class='tag' href='/vi/tags/c&#43;&#43;'>C&#43;&#43;</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/vietcs/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Người Việt trong Khoa học Máy Tính</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/improved_qsort/'>
+        <span class='screen-reader-text'>Next post: </span>Một số biến thể Quicksort<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

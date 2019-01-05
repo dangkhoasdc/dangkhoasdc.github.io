@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
+ CTDL quan trọng cho các thuật toán khác như Dijkstra&rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Có bao nhiêu cách cài đặt Hàng đợi ưu tiên? • Dang-Khoa'>
+<meta property='og:description' content='Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
+ CTDL quan trọng cho các thuật toán khác như Dijkstra&rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/impl_priority_queues/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='programming'><meta property='article:tag' content='algorithms'><meta property='article:published_time' content='2018-01-10T00:00:00Z'/><meta property='article:modified_time' content='2018-01-10T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên? • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/impl_priority_queues/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2018-01-10T00:00:00Z'>2018, Jan 10</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển
+trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:</p>
+
+<ul>
+<li>CTDL quan trọng cho các thuật toán khác như Dijkstra&rsquo;s Algorithms.</li>
+<li>Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative
+optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất
+để thực thi.</li>
+<li>Trong Hệ Điều Hành, các giải thuật lập lịch, scheduling.</li>
+<li>Trong các hệ thống giả lập, những sự kiện theo trình tự thời gian được ưu tiên
+thực thi trước.</li>
+</ul>
+
+<p>Priority Queues có hai toán tử rất quan trọng:</p>
+
+<ul>
+<li>Chèn một phần tử vào queue (<code>find_max</code>).</li>
+<li>Lấy ra phần tử lớn nhất trong queue (<code>push</code>).</li>
+</ul>
+
+<p>Chính vì hai chức năng này nên đôi khi Priority queues còn được nhắc đến với cái
+tên: Largest in, first out; (để phân biệt với First in, First out hay First in,
+last out). Cụ thể hơn, nếu phần tử <code>K[N]</code> là <strong>phần tử lớn nhất</strong> được chèn vào, thì
+<code>K[N]</code> cũng là <strong>phần tử đầu tiên</strong> được lấy ra.</p>
+
+<p>Bởi tầm quan trọng của 2 hàm này, khi tiếp cận bất kì cài đặt nào liên quan
+đến priority queues, ta luôn quan tâm cách mà 2 toán tử này duy trì trạng thái
+trình tự của các phần tử trong CTDL, đó cũng là phần phân tích chính trong bài
+viết này.</p>
+
+<h1 id="các-phương-pháp-cài-đặt">Các phương pháp cài đặt</h1>
+
+<p>Toàn bộ các cài đặt bằng C++ và các phân tích được đề cập chi tiết trong note
+<code>Algorithms</code> trên Github của mình. Trên blog mình chỉ tóm tắt sơ lược về các
+cài đặt và một số fun facts xung quanh.</p>
+
+<p>Danh sách bên dưới có một điều thú vị, đó là ta sẽ thấy độ thần thánh của R.Tarjan,
+ông đóng góp 4/12 cấu trúc được đề cập.</p>
+
+<h2 id="cài-đặt-bằng-mảng">Cài đặt bằng mảng</h2>
+
+<p>Một cách đơn giản nhất khi sử dụng mảng đó là:</p>
+
+<ol>
+<li>Luôn giữ một mảng được sắp xếp, <code>find_max</code> đơn giản chỉ là lấy ra phần tử
+đầu hoặc cuối dãy. Khi <code>push</code>, ta sử dụng chiến lược tương tự như <code>insertion_sort</code>.</li>
+<li><code>push</code> thực hiện như mảng bình thường. Khi gọi <code>find_max</code>, ta đơn giản tìm
+phần tử lớn nhất trong mảng đó.</li>
+</ol>
+
+<p>Cả hai phương pháp đều có độ phức tạp $\mathcal{O}(1)$ và $\mathcal{O}(N)$ ứng
+với <code>find_max</code>, <code>push</code> (cho trường hợp 1) và <code>push</code>,<code>find_max</code> (cho trường
+hợp 2).</p>
+
+<p>Một cách tốt hơn, khá dễ cài đặt là sử dụng heapsort với độ phức tạp là $\lg N$
+cho cả 2 toán tử. Chi tiết về heapsort và heap trong priority queue thì quá kinh
+điển rồi, hầu như mọi sách về thuật toán đề có đề cập.</p>
+
+<h2 id="leftist-tree">Leftist tree</h2>
+
+<p>Tác giả: Clark A. Crane (1971).</p>
+
+<p>Một phương pháp cài đặt dạng danh sách liên kết, trong đó mỗi node có các phần
+tử như sau:</p>
+
+<pre><code class="language-cpp">template&lt;typename Key&gt;
+struct node {
+    node * left;
+    node * right;
+    int dist;
+    Key k;
+};
+</code></pre>
+
+<p>Đây là cây nhị phân đặt biệt, trong đó cây con bên trái luôn nhiều phần tử hơn
+cây con bên phải, việc này được duy trì thông qua việc câp nhật giá trị <code>dist</code>:
+khoảng cách của node hiện tại tới node <code>NULL</code> gần nhất.</p>
+
+<p>Chi tiết về thuật toán và cài đặt:</p>
+
+<ol>
+<li>TAoCP, Vol 3, Section 5.2.3: A linked representation for priority queues.</li>
+<li><a href="https://www.geeksforgeeks.org/leftist-tree-leftist-heap/" target="_blank">Geeksforgeeks</a></li>
+</ol>
+
+<p>Ưu điểm của CTDL này chính là việc nó có khả năng gộp 2 priority queues lại với
+độ phức tạp khá nhỏ. Tuy nhiên, CTDL này thực sự không còn phổ biến.</p>
+
+<h2 id="cây-cân-bằng">Cây cân bằng</h2>
+
+<h2 id="stratified-tree">Stratified tree</h2>
+
+<p>Cấu trúc dữ liệu này có một cái tên phổ biến hơn: <strong>van Emde boas tree</strong> [Rất
+tiếc trên Wikipedia, phần
+<a href="https://en.wikipedia.org/wiki/Van_Emde_Boas_tree" target="_blank">van Emde Boas tre</a>
+lại không đề cập đến tên gọi gốc của CTDL này].</p>
+
+<blockquote>
+<p>Beware of bugs in the above code; I have only proved it correct, not tried it</p>
+</blockquote>
+
+<p>Câu nói kinh điển này của Don Knuth xuất phát từ việc ông trao đổi với tác giả
+của cấu trúc này <a href="http://www-cs-faculty.stanford.edu/~knuth/faq.html" target="_blank">[link 1]</a>,
+<a href="http://www.illc.uva.nl/Research/Publications/Reports/PP-2013-16.text.pdf" target="_blank">[link 2]</a>.</p>
+
+<h2 id="binomial-queues">Binomial Queues</h2>
+
+<p>Tác giả: J. Vuillemin (1978).</p>
+
+<h2 id="pagodas">Pagodas</h2>
+
+<p>Tác giả: J. Francon, G. Viennot, and J. Vuillemin (1978).</p>
+
+<h2 id="pairing-heaps">Pairing heaps</h2>
+
+<p>Tác giả: Micheal Fredman, Robert Sedgewick, Daniel Sleator, Robert Tarjan (1986).</p>
+
+<h2 id="skew-heaps">Skew heaps</h2>
+
+<h2 id="fibonacci-heaps-và-dạng-tổng-quát-af-heaps">Fibonacci heaps và dạng tổng quát: AF heaps</h2>
+
+<p>Một trong những ví dụ kinh điển về những thuật toán/CTDL có tính chất rất tốt
+về mặt lý thuyết nhưng lại thất bại trong ứng dụng thực tiễn.</p>
+
+<h2 id="calendar-queues">Calendar queues</h2>
+
+<h2 id="relaxed-heaps">Relaxed heaps</h2>
+
+<h2 id="fishspear">Fishspear</h2>
+
+<h2 id="hot-queues">Hot queues</h2>
+
+<h1 id="so-sánh">So sánh</h1>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/programming'>programming</a>, <a class='tag' href='/vi/tags/algorithms'>algorithms</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/improved_qsort/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Một số biến thể Quicksort</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/selectedpapers_cs/'>
+        <span class='screen-reader-text'>Next post: </span>Sách: Selected Papers on Computer Science<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

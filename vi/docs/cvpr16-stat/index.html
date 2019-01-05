@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang='vi'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+ Số bài báo được accept: 643 bài. Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài. Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Một chút thống kê về các bài báo CVPR16 • Dang-Khoa'>
+<meta property='og:description' content='Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+ Số bài báo được accept: 643 bài. Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài. Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.'>
+<meta property='og:url' content='http://dangkhoasdc.github.io/vi/docs/cvpr16-stat/'>
+<meta property='og:site_name' content='Dang-Khoa&#39;s blog '>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/ff98eba7ca4592a175b13bd623f28f0c?s=256'><meta property='article:author' content='https://facebook.com/dangkhoasdc'><meta property='article:section' content='Docs'><meta property='article:tag' content='cvpr'><meta property='article:tag' content='research'><meta property='article:published_time' content='2016-10-23T00:00:00Z'/><meta property='article:modified_time' content='2016-10-23T00:00:00Z'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@dksdc'>
+
+<meta name="generator" content="Hugo 0.53" />
+
+  <title>Một chút thống kê về các bài báo CVPR16 • Dang-Khoa</title>
+  <link rel='canonical' href='http://dangkhoasdc.github.io/vi/docs/cvpr16-stat/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  
+
+</head>
+
+
+<body class='page type-docs'>
+
+  <div class='site'>
+
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='/vi/docs/' class="">
+          <span>Docs</span>
+        </a>
+      </li><li class='item'>
+        <a href='#posts' class="">
+          <span>Posts</span>
+        </a>
+      </li><li class='item'>
+        <a href='#about' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='#projects' class="">
+          <span>Projects</span>
+        </a>
+      </li><li class='item'>
+        <a href='#publications_selected' class="">
+          <span>Publications</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li><li class='item'>
+        <a href='/tags/notes/' class="">
+          <span>Notes</span>
+        </a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='vi' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Một chút thống kê về các bài báo CVPR16</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2016-10-23T00:00:00Z'>2016, Oct 23</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
+  
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Hôm nay tình cờ thấy cái link liệt kê <a href="http://www.cv-foundation.org/openaccess/CVPR2016.py" target="_blank">các bài được accept ở CVPR16</a>, thế là mình ngồi thống kê vài cái cho vui</p>
+
+<p>Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:</p>
+
+<ol>
+<li>Số bài báo được accept: 643 bài.</li>
+<li>Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài.</li>
+<li>Bài có chữ <em>deep</em> trong tiêu đề: 87 bài, chiếm 13.53% tổng số bài được accept.</li>
+<li>Bài có số tác giả nhiều nhất: <em>Multimodal Spontaneous Emotion Corpus for Human Behavior Analysis</em> với 13 tác giả đứng tên.</li>
+
+<li><p>Bài chỉ có 1 tác giả (một mình chống mafia):</p>
+
+<ul>
+<li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kobayashi_Structured_Feature_Similarity_CVPR_2016_paper.pdf" target="_blank">Structured Feature Similarity With Explicit Feature Map</a></li>
+<li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Qi_Hierarchically_Gated_Deep_CVPR_2016_paper.pdf" target="_blank">Hierarchically Gated Deep Networks for Semantic Segmentation</a></li>
+<li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Sekii_Robust_Real-Time_3D_CVPR_2016_paper.pdf" target="_blank">Robust, Real-Time 3D Tracking of Multiple Objects With Similar Appearances</a></li>
+<li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Semantic_Filtering_CVPR_2016_paper.pdf" target="_blank">Semantic Filtering</a></li>
+<li><a href="http://arxiv.org/abs/1603.00560" target="_blank">Learnt Quasi-Transitive Similarity for Retrieval From Large Collections of Faces</a></li>
+</ul></li>
+</ol>
+
+<p>cv-foundation còn hào phóng đính kèm trong source link download các paper, đồng thời có cả bibtex của các bài, nếu kết hợp với arxiv api thì có thể thống kê được nhiều thứ hay ho hơn nữa =))</p>
+
+<h1 id="một-số-thống-kê-về-tác-giả">Một số thống kê về tác giả.</h1>
+
+<p>Thử xem phân phối số lượng tác giả trên đầu bài của CVPR16 thế nào. Theo như kết quả, số bài ở CVPR16 trung bình có từ 2, 3 hoặc 4 tác giả đứng tên. Nhiều nhất là các bài có 3 tác giả (186 bài). Ngoại trừ gã outlier 13 tác giả thì biểu đồ đã gần giống với <em>phân phối chuẩn</em> rồi.</p>
+
+<p><img src="http://i.imgur.com/gpHfOTW.png" alt="Biểu đồ phân bố số lượng tác giả trong một bài báo" /></p>
+
+<p>Có <em>1843</em> tác giả có bài trong CVPR16. Ngoài <em>Ming-Hsuan Yang</em> bá đạo ở trên, trong danh sách tác giả nhiều bài còn có những cái tên nổi bật như: Pascal Fua, Li Fei-Fei. Dưới đây là danh sách các tác giả có nhiều bài nhất trong CVPR16:</p>
+
+<ol>
+<li>Lei Zhang [<a href="https://scholar.google.com/citations?user=tAK5l1IAAAAJ" target="_blank">scholar</a>] [<a href="http://www4.comp.polyu.edu.hk/~cslzhang/" target="_blank">homepage</a>]: 7 bài.</li>
+<li>In So Kweon [<a href="https://scholar.google.com.sg/citations?user=XA8EOlEAAAAJ&amp;hl=en" target="_blank">scholar</a>] [<a href="http://rcv.kaist.ac.kr/v2/bbs/member_detail.php?mb_id=%20iskweon" target="_blank">homepage</a>]: 7 bài.</li>
+<li>Antonio Torralba [<a href="https://scholar.google.com/citations?user=8cxDHS4AAAAJ" target="_blank">scholar</a>] [<a href="http://web.mit.edu/torralba/www/" target="_blank">homepage</a>]: 7 bài.</li>
+<li>Jiashi Feng [<a href="https://scholar.google.com.sg/citations?hl=en&amp;user=Q8iay0gAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank">scholar</a>] [<a href="https://sites.google.com/site/jshfeng/" target="_blank">homepage</a>]: 7 bài.</li>
+<li>Wangmeng Zuo [<a href="https://scholar.google.com/citations?user=rUOpCEYAAAAJ" target="_blank">scholar</a>] [<a href="http://homepage.hit.edu.cn/pages/wangmengzuo" target="_blank">homepage</a>]: 7 bài.</li>
+<li>Anton van den Hengel [<a href="https://scholar.google.com.sg/citations?user=nMGZ2ZQAAAAJ&amp;hl=en" target="_blank">scholar</a>] [<a href="https://cs.adelaide.edu.au/~hengel/" target="_blank">homepage</a>]: 8 bài.</li>
+<li>Bernt Schiele [<a href="https://scholar.google.com/citations?user=z76PBfYAAAAJ" target="_blank">scholar</a>] [<a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/people/bernt-schiele/" target="_blank">homepage</a>]: 8 bài.</li>
+<li>Luc Van Gool [<a href="https://scholar.google.com.hk/citations?user=TwMib_QAAAAJ&amp;hl=zh-CN" target="_blank">scholar</a>] [<a href="http://www.vision.ee.ethz.ch/~vangool/" target="_blank">homepage</a>]: 8 bài.</li>
+<li>Xiaogang Wang [<a href="https://scholar.google.com.sg/citations?user=-B5JgjsAAAAJ&amp;hl=en" target="_blank">scholar</a>] [<a href="http://www.ee.cuhk.edu.hk/~xgwang/" target="_blank">homepage</a>]: 9 bài.</li>
+<li>Ming-Hsuan Yang [<a href="https://scholar.google.com/citations?user=p9-ohHsAAAAJ" target="_blank">scholar</a>] [<a href="http://faculty.ucmerced.edu/mhyang/" target="_blank">homepage</a>]: 11 bài.</li>
+</ol>
+
+<p>Một điểm mình quan tâm nữa là mối quan hệ giữa các tác giả với nhau <del>đó là lí do mình viết: một mình chống mafia ở đoạn trên</del>. Ở đây mình dùng <code>graph-tool</code> để minh hoạ data đã thu thập được. Cách xây dựng đồ thị khá đơn giản: những tác giả đứng chung bài với nhau sẽ có cạnh nối với nhau.</p>
+
+<p>Xưa kia nhà toán học Michael Gurevich đã từng thử điều này với các nhà toán học, và hiện nay bài toán <a href="https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/" target="_blank">Six degree of Seperation</a> đã nổi tiếng và quan tâm nhiều.</p>
+
+<p><img src="http://i.imgur.com/QIiCNur.png" alt="Vision Gang" /></p>
+
+<p>Nhìn hình ta có thể hình dung có 1 hội mafia cực lớn dây mơ rễ má với nhau. Và các team lẻ lẻ hơn thì bị nằm ngoài rìa, có 1 số team hoạt động khá độc lập (nằm giữa vùng trung tâm và vành đai). Đồng thời những chấm đỏ mỏng manh nằm ngoài vùng vành đai chính là các thánh một mình chống mafia, xin hoan nghênh các anh.</p>
+
+<h1 id="chủ-đề-của-cvpr16">Chủ đề của <code>CVPR16</code></h1>
+
+<p><img src="http://i.imgur.com/9AxhgVP.png" alt="Main topics" /></p>
+
+<p>Ban đầu mình dự định sử dụng <code>arvix-api</code> để lấy keywords từ Bibtex tuy nhiên vì có cơ số bài hiện chưa có trên Arvix (mình sample 5 bài và cả 5 bài đều không được tìm thấy trên đó) nên không có cách để lấy chính xác keywords.</p>
+
+<p>Có 2 cách tiếp cận:</p>
+
+<ol>
+<li>Dựa vào tiêu đề. Cách này sẽ nhanh hơn vì dữ liệu này đã có sẵn.</li>
+<li>Dựa vào nội dung. Cách làm tương đối đơn giản nhưng hơi mất thời gian: (1) download đống paper từ <code>cv-foundation</code>, (2) dùng <code>pdf2text</code> lưu text, (3) dùng 1 số thuật toán clustering để phân loại.</li>
+</ol>
+
+<p>Cách thứ (2) tương đối dài hơi nên mình ưu tiên dùng cách thứ (1) trước. Một thuật toán để rút trích keywords khá nổi tiếng là <a href="https://github.com/aneesha/RAKE/blob/master/rake.py" target="_blank">RAKE</a>. Dưới đây là kết quả.</p>
+
+<pre><code>    deep convolutional neural networks
+    convolutional neural networks
+    recurrent neural networks
+    deep neural networks
+    salient object detection
+    convolutional networks
+    sparse coding
+    object detection
+    image segmentation
+    action recognition
+    semantic segmentation
+    optical flow
+    shot learning
+    unsupervised learning
+    activity recognition
+    set registration
+    person re
+    image
+    pose
+    detection
+    video
+    learning
+
+</code></pre>
+
+<h1 id="future-works">Future Works</h1>
+
+<p>Hiện giờ minh đang tìm cách download toàn bộ pdf của bài năm nay để làm clustering và phân tích nội dung, đồng thời làm 1 tool search nho nhỏ. Ngoài ra hiện giờ mình đang tìm kiếm danh sách các bài các năm trước để có thêm 1 số phân tích hay ho hơn nữa (về trending, các bài được cite nhiều,).</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>Tags: </span><a class='tag' href='/vi/tags/cvpr'>cvpr</a>, <a class='tag' href='/vi/tags/research'>research</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/vi/docs/it_news/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Những kênh thông tin công nghệ</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/vi/docs/install_opencv_vs/'>
+        <span class='screen-reader-text'>Next post: </span>Hướng dẫn cài đặt OpenCV trên Windows<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><div class='copyright'>
+  <p>&amp;copy; 2017 Dang-Khoa</p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
+
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
