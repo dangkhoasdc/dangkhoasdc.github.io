@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trang chủ on Dang-Khoa&#39;s blog </title>
+    <link>http://dangkhoasdc.github.io/vi/</link>
+    <description>Recent content in Trang chủ on Dang-Khoa&#39;s blog </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/vi/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>dangkhoasdc</title>
+      <link>http://dangkhoasdc.github.io/vi/dangkhoasdc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/dangkhoasdc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AI Challenge - Landmark: Kỹ thuật và ý tưởng</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/zalo_landmark/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/zalo_landmark/</guid>
+      <description>Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.
+Dữ Liệu Dưới đây là phân phối số lượng ảnh trên mỗi label.
+  Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.   Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.</description>
+    </item>
+    
+    <item>
+      <title>Kinh nghiệm du lịch Nha Trang</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/nha_trang_summer18/</link>
+      <pubDate>Sat, 07 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/nha_trang_summer18/</guid>
+      <description>Một vài kinh nghiệm cá nhân sau 1 chuyến đi du lịch Nha Trang tự túc từ HCM.
+Phương tiện đi lại Từ Hồ Chí Minh ta có nhiều lựa chọn để đi Nha Trang:
+ Đi xe khách: 400K/ 1 vé xe chất lượng cao, xuất phát từ 9h40pm đến 6h sáng hôm sau sẽ tới bến. Đi trong đêm và sáng sớm tới Nha Trang để có thể tiết kiệm được nửa ngày.</description>
+    </item>
+    
+    <item>
+      <title>Kinh nghiệm xin làm passport mới ở Singapore</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/passport_renewal/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/passport_renewal/</guid>
+      <description>Tình hình đến cuối tháng 4, 2019 mới hết hạn passport của mình, tuy nhiên vào đầu tháng 10 mình có đi Châu Âu và dự là trong tháng 6 này mình sẽ xin visa nên để không bị lỡ cỡ mình quyết định sẽ làm passport lúc này.
+Theo tham khảo ban đầu của mình thì có vẻ như làm ở Việt Nam tiện hơn rất nhiều so với làm ở Sing bởi vài lý do:</description>
+    </item>
+    
+    <item>
+      <title>Làm nghiên cứu theo phong cách Agile</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/research_agile_method/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/research_agile_method/</guid>
+      <description>Bài viết xoay quanh một số mẹo vặt về làm nghiên cứu trong Khoa Học Máy Tính (KHMT), đặc biệt là hướng Machine Learning của một thanh niên mới tập tành làm research.
+Lên kế hoạch Không giống như PhD khi học có kha khá nhiều thời gian để tìm hiểu bài toán nghiên cứu, thông thường nhóm mình chỉ có 2-3 tháng để tập trung cho 1 nghiêu cứu và phải hoàn thành bằng 1, 2 submission và các hội nghị.</description>
+    </item>
+    
+    <item>
+      <title>Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning]</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/bioshock_infinite/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/bioshock_infinite/</guid>
+      <description>Trong một ngày rảnh rỗi giữa hai đợt deadlines và trong cái không khí ảm đạm do mùa mưa sắp tới của Singapore, tôi đã quyết định ngồi chơi cái game mà hồi nhỏ mà không hiểu gì: Bioshock. Tuy nhiên lần này tôi lại chơi bản Bioshock Infinite. Để nói về game này, tôi không gọi đó là chơi game, đó là một trải nghiệm.
+  Với cốt truyện lôi cuốn cùng với những chủ đề lồng vào nhau nhuần nhuyễn, Bioshock Infinite mang đến người chơi một thành phố Columbia steampunk với bề ngoài hào nhoáng, sung túc, và hạnh phúc.</description>
+    </item>
+    
+    <item>
+      <title>Overfitting là cái quái gì</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/overfitting/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/overfitting/</guid>
+      <description>Đây là cuộc hành trình của mình tìm về bản chất của câu chuyện overfiting, underfitting và các khái niệm lung tung xung quanh như bias-variance tradeoff.
+Tài liệu tham khảo chính được lấy từ 2 cuốn sách:
+ Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. Learning from data. Vol. 4. New York, NY, USA:: AMLBook, 2012. Friedman, Jerome, Trevor Hastie, and Robert Tibshirani. The elements of statistical learning. Vol.</description>
+    </item>
+    
+    <item>
+      <title>Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/opencv_android_studio_ndk/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/opencv_android_studio_ndk/</guid>
+      <description>Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có hỗ trợ Android được cung cấp sẵn ở OpenCV Homepage. Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì điện thoại phải cài đặt ứng dụng OpenCV Manager.
+Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên bản OpenCV với các tùy chỉnh của riêng cho từng yêu cầu, ví dụ như sử dụng đặc trưng SIFT hoặc các thuật toán có bản quyền.</description>
+    </item>
+    
+    <item>
+      <title>Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/story_telling_witcher3/</link>
+      <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/story_telling_witcher3/</guid>
+      <description>Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.
+  Không bàn đến việc yếu tố điện ảnh, kỹ thuật cắt cảnh đã giúp phân đoạn này đáng nhớ và xuất sắc, thì một yếu tố làm nên chi tiết Geralt và Ciri hội ngộ thêm phần xúc động đó là xây dựng nhân vật trong game.</description>
+    </item>
+    
+    <item>
+      <title>Programming Pearls</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/programming_pearls/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/programming_pearls/</guid>
+      <description>Programing Pearls - Jon Bentley
+Xuất sắc.
+Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thùng của Amazon ra và lượn 1, 2 trang để thốt lên 1 từ &amp;ldquo;xuất sắc&amp;rdquo; cả. Điểm qua một số sách về &amp;ldquo;Algorithms&amp;rdquo; mà tôi từng đọc và tìm hiểu:
+ CLRS: về mặt lý thuyết, đây thực sự là &amp;ldquo;introduction&amp;rdquo; nhưng đầy đủ và chi tiết. Tôi không quá ấn tượng bởi cách viết và mã giả.</description>
+    </item>
+    
+    <item>
+      <title>Khối Latin và câu chuyện toán học và lịch sử máy tính</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/latin_square/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/latin_square/</guid>
+      <description>Trong dự án dài hơi về TAoCP, những phần đầu của Vol 4A.
+Định nghĩa Cho một ma trận vuông có kích thước M và các phần tử thuộc $\{0, 1, \cdots, M-1 \}$, ta xây dựng ma trận sao cho mỗi phần tử $i$ trong tập $\{0, 1, \cdots, M-1\}$ chỉ xuất hiện đúng 1 lần trong mỗi cột và mỗi dòng.
+Ví dụ Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 4 loại $\heartsuit, \diamondsuit, \clubsuit, \spadesuit$, ta sắp xếp sao cho mỗi dòng/cột có đủ 4 chất và 4 quân (Jacques Ozaman, mathematiques et physiques, Paris 1725).</description>
+    </item>
+    
+    <item>
+      <title>Tôi là ai</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/who_am_i/</link>
+      <pubDate>Tue, 30 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/who_am_i/</guid>
+      <description>Có lẽ bản thân tôi đã ảo tưởng về khả năng của mình, thời gian gần đây mọi chuyện trở nên tồi tệ, thêm một bài báo bị reject. Như thể có gì đó ở cuốn họng mà không thể nuốt trôi được.
+Có lẽ năng lực của tôi chỉ có vậy và không thể tiến xa hơn được nữa. Hoặc cũng có thể trước giờ mọi điều tôi đạt được hoàn toàn nhờ may mắn.</description>
+    </item>
+    
+    <item>
+      <title>Lịch sử Thị Giác Máy Tính - Phần 1</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/compvision_hist/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/compvision_hist/</guid>
+      <description>Edition: Pre-fascicle 1A (Revision -99).
+[Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT - hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông tin về một hướng nghiên cứu khá hấp dẫn này.</description>
+    </item>
+    
+    <item>
+      <title>Sách: Selected Papers on Computer Science</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/selectedpapers_cs/</link>
+      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/selectedpapers_cs/</guid>
+      <description>Một chút thông tin về cuốn sách trước khi mình đánh giá:
+   Thông tin Mô tả     Tiêu đề Selected Papers on Computer Science [Amazon]   Tác giả Donald Knuth   Số trang 276    Đây là một trong những cuốn sách dễ tiếp cận nhất của Don Knuth. Tuy được xuất bản cách đây khá lâu (gần 20 năm về trước), nhưng đây là một trong những cuốn sách kinh điển dẫn nhập về KHMT.</description>
+    </item>
+    
+    <item>
+      <title>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/impl_priority_queues/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/impl_priority_queues/</guid>
+      <description>Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
+ CTDL quan trọng cho các thuật toán khác như Dijkstra&amp;rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.</description>
+    </item>
+    
+    <item>
+      <title>Một số biến thể Quicksort</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/improved_qsort/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/improved_qsort/</guid>
+      <description>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
+    </item>
+    
+    <item>
+      <title>Cài đặt quan hệ thứ tự trong C&#43;&#43;</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/total_order/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/total_order/</guid>
+      <description>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
+ Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.</description>
+    </item>
+    
+    <item>
+      <title>Người Việt trong Khoa học Máy Tính</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/vietcs/</link>
+      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/vietcs/</guid>
+      <description>Dưới đây là ghi chép/ sưu tầm của bản thân về những người Việt đã ảnh hưởng đến sự lịch sử và sự phát triển của Khoa học Máy Tính. Đây là thống kê cá nhân và nếu có bạn nào có phát hành lại thì nhớ ghi nguồn nhé :) [Một số nhân vật mình không rõ tên cụ thể trong tiếng Việt nên sẽ ghi bằng tên ghi trên wiki hoặc trang cá nhân.</description>
+    </item>
+    
+    <item>
+      <title>Giải thuật tìm kiếm Fibonacci</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/fibsearch/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/fibsearch/</guid>
+      <description>Mình không tìm được từ nào tiếng Việt có thể dịch được từ &amp;ldquo;Fibonaccian Searching&amp;rdquo;, nếu &amp;ldquo;binary searching&amp;rdquo; có thể dịch là &amp;ldquo;tìm kiếm nhị phân&amp;rdquo;, thì &amp;ldquo;Fibonaccian Searching&amp;rdquo; không có ngữ nghĩa gì nhiều.
+Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.
+Lịch sử Thuật toán được để xuất bởi Devid E.</description>
+    </item>
+    
+    <item>
+      <title>Chính sách gửi trả hàng của Amazon</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/amazon_replacement_policy/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/amazon_replacement_policy/</guid>
+      <description>Quy trình này mình tìm hiểu khi mua những hàng sử dụng International Shipping, lí do nó khiến mình quan ngại là vì:
+ Chính sách đổi trả của Amazon thế nào với hàng được chuyển quốc tế. Nếu mình phải trả lại hàng (ví dụ gửi từ Singapore lại qua bên Mỹ) thì phía Amazon có chịu trả chi phí cho mình không? Hàng đổi được gửi như thế nào.</description>
+    </item>
+    
+    <item>
+      <title>[Font] Một lỗi nhỏ trong &#34;Đừng hỏi em&#34;</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/dung_hi_em-font/</link>
+      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/dung_hi_em-font/</guid>
+      <description>Một lỗi tương đối nhỏ về mặt lịch sử trong clip mới ra mắt của Mỹ Tâm - &amp;ldquo;Đừng Hỏi Em&amp;rdquo;. Font chữ trong tờ giấy này là font Arial, được thiết kế lần đầu tiên năm 1982 ( được các hãng phần mềm phân phối vào khoảng năm 1992,) tuy nhiên theo mình đó thì thời đó ở VN chắc vẫn còn dùng máy in đời cũ, mà có ngay cả như vậy thì clip rõ ràng là các sự kiện trước năm 1975.</description>
+    </item>
+    
+    <item>
+      <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/taocp/howto/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/taocp/howto/</guid>
+      <description>Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &amp;ldquo;cuồng&amp;rdquo; như Donald Knuth.</description>
+    </item>
+    
+    <item>
+      <title>Tai nghe dành programmer</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/headphones/</link>
+      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/headphones/</guid>
+      <description>Thực ra câu chuyện mình sắp kể không liên quan là mấy đến tai nghe dành cho programmer. Nó ít nhiều liên quan đến chuyện: ra quyết định tối ưu và không cần đắn đo đến nó nữa.
+Tuy nhiên, vì đang nói đến tai nghe dành cho programmer. Nên tiện thể mình đề cập. Chuyện là mình đang cần một tai nghe có tính năng noise cancelling tốt, vì tiếng xì xầm cũng như âm thanh văn phòng khiến mình khó tập trung, bản thân vừa làm research vừa programming, đôi khi mình cần không gian rất yên tĩnh để có thể dành toàn bộ neural cho 1 task nào đó.</description>
+    </item>
+    
+    <item>
+      <title>The Vietnam War - Dejavu</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/vietnam_war-dejavu/</link>
+      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/vietnam_war-dejavu/</guid>
+      <description>[Link from PBS]
+Một bộ phim tài liệu lịch sử xuất sắc về chiến Tranh Việt Nam. Với sự tham gia phỏng vấn của nhà văn Bảo Ninh, nhà báo Huy Đức. Điều làm nên bộ phim chính là tính chân thực và nhìn nhận đa chiều ở tất cả các bên tham gia vào cuộc chiến. Khác với &amp;ldquo;cuộc chiến 10k ngày&amp;rdquo;, bộ phim tài liệu trước đó &amp;ldquo;tránh&amp;rdquo; nói nhiều đến nội bộ việt nam cũng như quan hệ với Pháp.</description>
+    </item>
+    
+    <item>
+      <title>Một vòng Henderson Waves và Haw Par Villa</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/henderson_waves-haw_par_villa/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/henderson_waves-haw_par_villa/</guid>
+      <description>Lâu lâu tôi lại đi dạo một vòng ở Sin chơi. Một phần thường ngày cuối tuần chỉ cắm đầu trên lab, một phần thì muốn đi đông cho vui. Chứ thực ra, nếu đi chơi một mình, hay đi với hai thằng thì rất chán. Tôi nghĩ đi chơi trừ khi đi với bạn gái hoặc bạn khác giới, còn lại đực rựa đi chung với nhau thì 3-4 người là phù hợp.</description>
+    </item>
+    
+    <item>
+      <title>Bài toán chuyển ngày sang thứ</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/sakamoto_method/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/sakamoto_method/</guid>
+      <description>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&amp;gt; Chủ Nhật, 1 -&amp;gt; Thứ Hai &amp;hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;amp;R C).</description>
+    </item>
+    
+    <item>
+      <title>Hậu Tây Du Kí</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/hau_tay_du_ky/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/hau_tay_du_ky/</guid>
+      <description>Ngày xưa mình mê coi phim này cực kì. Cứ mỗi lần đài lên sóng là rống họng lên hát: &amp;ldquo;quoài oa xinh xiên&amp;rdquo;. Đoạn nhạc phim mở đầu phải nói rất ấn tượng và mình nhớ mãi đến bây giờ. Hôm nay tình cờ được nghe bản lời Việt của 1 bài trong Hậu Tây Du Kí từ chế Bích Phương, tuổi thơ bỗng nhiên trào về.
+  Mới nghe là mình đã biết ngay rằng đây là bài nhạc phim bất hủ hôm nào.</description>
+    </item>
+    
+    <item>
+      <title>Good Will Hunting và những bài toán đồ thị </title>
+      <link>http://dangkhoasdc.github.io/vi/docs/review_good_will_hunting/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/review_good_will_hunting/</guid>
+      <description>Lâu lắm rồi tôi mới được xem một bộ phim hay đến vậy, có lẽ từ khi xem La La Land, đó là những bộ phim buộc bạn phải ngẩn ngơ một lồi lâu và không ngừng suy nghĩ về nhân vật và những lời thoại. Không có những kĩ xảo tráng lệ hay cốt truyện hại não, bộ phim đơn giản chỉ là câu chuyện của một thanh niên với bộ óc thiên tài trải nghiệm những thay đổi trong cuộc đời.</description>
+    </item>
+    
+    <item>
+      <title>La La Land</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/la_la_land/</link>
+      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/la_la_land/</guid>
+      <description>Tuổi trẻ, tình yêu và khát vọng. Đó là La La Land. Một tựa phim đầy mơ hồ. Nhưng không phải, có lẽ âm &amp;ldquo;La La Land&amp;rdquo; vang lên như một thứ âm nhạc của tuổi trẻ, vượt qua những rào cản của ngôn ngữ, đó là chốn thiên đường mà những kẻ khao khát từng chìm đắm và mơ mộng.
+Xem La La Land tôi nhớ đến Black Swan và Whiplash, cũng là câu chuyện về những người trẻ với khát vọng và niềm đam mê của mình.</description>
+    </item>
+    
+    <item>
+      <title>rand() is harmful</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/rand/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/rand/</guid>
+      <description>rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &amp;ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&amp;rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng .</description>
+    </item>
+    
+    <item>
+      <title>Các thuật toán ngẫu nhiên</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/randalgs_ex/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/randalgs_ex/</guid>
+      <description>Các ví dụ về thuật toán ngẫu nhiên Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách Randomized Algorithms
+Randomized Quicksort Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên.</description>
+    </item>
+    
+    <item>
+      <title>Cảm nhận Star Wars VII: The Force Awakens</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/startwars-vii-review/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/startwars-vii-review/</guid>
+      <description>Từ nhỏ, tôi luôn thích những cuộc phiêu lưu và những câu chuyện giả tưởng. Từ cuộc phiêu lưu của Robinson đến con tàu chu du hai mươi ngàn dặm dưới đáy biển của Jules Verne hay cuộc chiến ngoài vũ trụ trong Starcraft. Star Wars cũng không phải là ngoại lệ, dĩ nhiên tôi không phải fan cuồng đến mức đọc từng trang wiki về từng nhân vật, thậm chí đến những nhân vật xuất hiện trong phim có vài giây cũng có hẳn [trang wiki riêng cơ mà](https://www.</description>
+    </item>
+    
+    <item>
+      <title>Diablo III</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/diablo3-review/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/diablo3-review/</guid>
+      <description>Sau gần 4 năm kể từ khi phát hành, mình mới được chơi cái game này. Thực ra do một cách tình cờ mà thấy được cái giá rẻ bất ngờ của em ý, tính ra là 20 USD cho bản Standard. Hoá ra là do đã có bản Expansion nên bản cũ mới rẻ vậy. Thôi thì lượm về chơi vậy.
+Lần đầu tiên chơi game Diablo là bản Diablo 2 Fury Within hồi lớp 6 lớp 7 gì đó.</description>
+    </item>
+    
+    <item>
+      <title>Dẫn nhập thuật toán ngẫu nhiên</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/intro_randalgs/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/intro_randalgs/</guid>
+      <description>Hôm rồi học course Introduction to Algorithm (2006-MIT) mình được biết qua khái niệm Randomized Algorithms, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.
+Định nghĩa Randomized Algorithms (viết gọn là randalgs) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.
+Điểm thú vị của randalgs chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến kì vọng trong trường hợp xấu nhất.</description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn cài đặt OpenCV trên Windows</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/install_opencv_vs/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/install_opencv_vs/</guid>
+      <description>Biên dịch thư viện OpenCV Điểm thuận lợi của việc tự cài đặt và biên dịch thư viện có thể kể đến như sau:
+ Hỗ trợ IDE mới nhất, như trong bản OpenCV 3.0 (22/11/2015) thì chưa có bản biên dịch sẵn dành cho VS 2015. Customize được các thư viện khác liên quan như Kinect, OpenCL, Python…  Link Download thư viện OpenCV cho HĐH Windows
+Bước 1: Giải nén thư viện vào thư mục được định sẵn.</description>
+    </item>
+    
+    <item>
+      <title>Một chút thống kê về các bài báo CVPR16</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/cvpr16-stat/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/cvpr16-stat/</guid>
+      <description>Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+ Số bài báo được accept: 643 bài. Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài. Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.</description>
+    </item>
+    
+    <item>
+      <title>Những kênh thông tin công nghệ</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/it_news/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/it_news/</guid>
+      <description>Đây là một chủ đề được mình nói kha khá nhiều lần tại Open Talk ở trường ĐH Tự Nhiên (nói quá thôi chứ đi có 2 lần). Một trong những thiếu sót lớn của sinh viên CNTT đó là không nắm kịp tin tức công nghệ cũng như không biết thế giới đang chạy tới đâu rồi. Chia sẻ dưới đây của mình chỉ tập trung vào các mảng mình quan tâm nên dĩ nhiên còn rất nhiều thiếu sót những lĩnh vực khá.</description>
+    </item>
+    
+    <item>
+      <title>Quy Trình Xin Tài Trợ NAFOSTED</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/nafosted_travel_fund/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/nafosted_travel_fund/</guid>
+      <description>Tiêu chí Để đảm bảo hồ sơ được duyệt, bài báo và hội nghị tham dự phải đạt một số tiêu chí mà Quỹ đưa ra:
+ Nhà khoa học đang thực hiện đề tài do Quỹ hỗ trợ, hoặc Nhà khoa học là người dưới 35 tuổi. Quỹ đánh giá hội nghị dựa trên lịch sử của hội nghị, uy tín của đơn vị tài trợ hội nghị, uy tính của các nhà khoa học khách mời hay uy tính của ban tổ chức.</description>
+    </item>
+    
+    <item>
+      <title>Review Refactoring</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/refactoring-review/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/refactoring-review/</guid>
+      <description>Mình quyết định đọc cuốn Refactoring: Improving the Design of Existing Code sau khi đọc xong cuốn Design Pattern.
+Sơ lược Mặc dù đã được nghe đến khái niệm này rất nhiều lần, tuy nhiên sau khi đọc xong cuốn sách, đối chiếu với những trải nghiệm của bản thân về các project trước đây. Mình hiểu:
+ Refactor là quá trình thao tác trên mã nguồn có sẵn nhằm gia tăng chất lượng mã nguồn nhưng vẫn giữ lại được các ràng buộc của hệ thống.</description>
+    </item>
+    
+    <item>
+      <title>Review Start Wars series</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/startwars-series-review/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/startwars-series-review/</guid>
+      <description>Mình đã giành một ngày cuối tuần và dịp nghỉ lễ để ngồi xem 3 phần của Star Wars: 4, 5 và 6. Đánh giá sơ bộ về bộ phim thì nếu đặt bản thân vào thời điểm bộ phim được ra mắt thì đúng là một kiệt tác. Giờ mình xem vẫn còn rất ấn tượng với kĩ xảo được thực hiện trong phim. Theo như mình biết về 3D và các hiệu ứng hình ảnh vào thời điểm đó để dựng nên những mô hình 3D phi thuyền hay các loài ở các hành tinh là điều không thể.</description>
+    </item>
+    
+    <item>
+      <title>Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/protocol-buffers-caffe/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/protocol-buffers-caffe/</guid>
+      <description>Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện Caffe. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C++. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu. Giới thiệu Protocol Buffers là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển.</description>
+    </item>
+    
+    <item>
+      <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/constexpr/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/constexpr/</guid>
+      <description>constexpr Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này. Ta quay một chút về cú pháp define bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm.</description>
+    </item>
+    
+    <item>
+      <title>Review: The C&#43;&#43; Programming Languages</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/review_cpp_proglang_book/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/review_cpp_proglang_book/</guid>
+      <description>Hồi năm 1 đại học, mình rất thích cuốn C Programming Language của K&amp;amp;C, dù cuốn sách khá là ít trang nhưng đầy tinh tuý và rất hấp dẫn. Đến tận bây giờ, khi đã tốt nghiệp ra trường, tức đã 4 năm được biết cuốn sách, đôi lúc mình vẫn muốn đọc lại. Một thời gian sau mình có đọc thêm một số sách có tựa: The XXX Programming Language nhưng chỉ thấy C++ là hay.</description>
+    </item>
+    
+    <item>
+      <title>Review Algorithms (Princeton) - Coursera</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/review_algs_princeton_coursera/</link>
+      <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/review_algs_princeton_coursera/</guid>
+      <description>Đây là một trong những khoá rất đỉnh về lập trình, vì sao ư?
+ Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.</description>
+    </item>
+    
+    <item>
+      <title>Lập Trình Hướng Đối Tượng Trong Python</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/oop-python/</link>
+      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/oop-python/</guid>
+      <description>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &amp;hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.
+Enum trong python Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</description>
+    </item>
+    
+    <item>
+      <title>Thôi đành chia tay </title>
+      <link>http://dangkhoasdc.github.io/vi/docs/em-laptop-yeu-dau/</link>
+      <pubDate>Sun, 19 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/em-laptop-yeu-dau/</guid>
+      <description>Và thế là ẻm laptop cũ của đã ra đi theo tiếng gọi của một tên hay một tập đoàn trộm nào đó mà mình không biết được. Dành chút thời gian thương tiếc em nó vậy. Cũng đã 4 năm rồi.
+Ngày xưa đi mua laptop cứ nghĩ máy nào cấu hình mạnh là ngon cơm, mà thực ra ẻm Dell mình mua trâu bò lắm. Có những lúc chạy thực nghiệm mình để máy chạy liên tục trong mấy ngày liền.</description>
+    </item>
+    
+    <item>
+      <title>Kinh Nghiệm Viết Tài Liệu Khoa Học</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/viet-luan-van/</link>
+      <pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/viet-luan-van/</guid>
+      <description>Sau thời gian đắng lòng vì cái luận văn và phải lên bờ xuống ruộng với nhiều tình huống éo le cây me. Cũng thêm vào đó, sau cái sự vụ này rút ra được nhiều kinh nghiệm xương máu hơn bao giờ hết. Hiện giờ công việc dù vấn đang ngập mặt, nhưng có vẻ thư thả hơn, kèm theo đó kết quả thực nghiệm khá tốt, công việc trên lab cũng dần ổn định khiến tinh thần phấn chấn và có nhiều kế hoạch loạn xị ngầu hơn trong thời gian tới.</description>
+    </item>
+    
+    <item>
+      <title>Mưa Vẫn Hay Mưa</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/mua-van-hay-mua/</link>
+      <pubDate>Sat, 13 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/mua-van-hay-mua/</guid>
+      <description>Mưa vẫn hay mưa trên hàng lá nhỏ
+ Lâu lắm rồi tôi mới cảm nhận một cơn mưa Sài Gòn khiến tôi nhớ nhà da diết đến vậy. Khác ở quê, mưa ở Sài Gòn thật khó chịu, chợt đến, chợt đi, chả ai hay. Những cơn mưa vội vàng như nhịp sống ở đây vậy.
+Mùa này ở quê nhà, hẳn mưa mùa hè đang đến. Những lúc ngồi trong quán cafe quen thuộc nhìn những hàng xe đan nhau trên con đường Nguyễn Văn Cừ, chợt trong tôi hiện về thằng nhóc năm xưa rúc dưới tấm chăn nằm nghe tiếng mưa gõ nhịp trên mái tôn, những cơn mưa dài không dứt, một thời vô tư lự, một thời vô ưu.</description>
+    </item>
+    
+    <item>
+      <title>Ghi chú hướng dẫn cài đặt OpenCV</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/opencv-tips/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/opencv-tips/</guid>
+      <description>I don&amp;rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.
+ Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C++, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.
+Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style step by step nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn.</description>
+    </item>
+    
+    <item>
+      <title>Spams Lib và Những Tâm Sự</title>
+      <link>http://dangkhoasdc.github.io/vi/docs/spams-lib/</link>
+      <pubDate>Wed, 25 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/docs/spams-lib/</guid>
+      <description>Không còn gì sung sướng hơn sau 2 ngày ngồi cài cái khỉ gió sparse coding lib cho python, link cái thằng khỉ gió nó ở đây: Spams lib. Mặc dù đã cố gắng nhưng phải mất mấy tiếng đồng hồ mình mới xong được cu cậu này.
+Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như sau:
+ Không giống như cu Linux hay các bản distro của nó.</description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>http://dangkhoasdc.github.io/vi/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/vi/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

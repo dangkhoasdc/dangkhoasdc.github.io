@@ -1,736 +1,179 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dang-Khoa&#39;s blog  on Dang-Khoa&#39;s blog </title>
+    <title>Home on Dang-Khoa&#39;s blog </title>
     <link>http://dangkhoasdc.github.io/</link>
-    <description>Recent content in Dang-Khoa&#39;s blog  on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in Home on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>Chính sách gửi trả hàng của Amazon</title>
-      <link>http://dangkhoasdc.github.io/post/amazon_replacement_policy/</link>
-      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      <title>About Me</title>
+      <link>http://dangkhoasdc.github.io/about-me/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/amazon_replacement_policy/</guid>
-      <description>
-
-&lt;p&gt;Quy trình này mình tìm hiểu khi mua những hàng sử dụng International Shipping,
-lí do nó khiến mình quan ngại là vì:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Chính sách đổi trả của Amazon thế nào với hàng được chuyển quốc tế.&lt;/li&gt;
-&lt;li&gt;Nếu mình phải trả lại hàng (ví dụ gửi từ Singapore lại qua bên Mỹ) thì phía
-Amazon có chịu trả chi phí cho mình không?&lt;/li&gt;
-&lt;li&gt;Hàng đổi được gửi như thế nào.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Sau đây là kinh nghiệm của mình sau 1 buổi sáng hì hục tìm hiểu:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Amazon cung cấp 2 options: (1) refund - hoàn lại tiền, (2) give a replacement
-thay hàng bị hỏng bằng cái khác.&lt;/li&gt;
-&lt;li&gt;Amazon sẽ gửi lại phí ship chi khách hàng nếu họ nhận được hàng bị hỏng và
-mình có hóa đơn đưa cho họ.&lt;/li&gt;
-&lt;li&gt;Hàng gửi phải đến Amazon trong vòng 1 tháng.&lt;/li&gt;
-&lt;li&gt;Maximum tiền ship mà Amazon trả là 20 USD.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Để tiến hành thủ tục trả hàng thì cách tốt nhất mình thấy là liên hệ trực tiếp
-với bên Amazon, đề cập vấn đề gặp phải, và họ sẽ tự động làm các thủ tục giúp
-bạn.&lt;/p&gt;
-
-&lt;p&gt;Ở Singapore mình đã thử gửi bằng SingPost và phát hiện ra chi phí khá là đắt.
-Ví dụ 1 cuốn sách mình mua tầm 90 SGD nhưng để gửi lại qua Mỹ thì phí vận
-chuyển mất 60 SGD, mặc dù Amazon cam kết trả tiền shipping nhưng theo mình nhớ
-khoảng này maximum có 20 USD ~ 27 SGD.&lt;/p&gt;
-
-&lt;h3 id=&#34;lưu-ý-cho-các-bạn-mua-sách&#34;&gt;Lưu ý cho các bạn mua sách&lt;/h3&gt;
-
-&lt;p&gt;Lý do mình đổi sách là vì 1 số figure bị lỗi, tuy nhiên vấn đề là xác suất sách
-mới thay thế cũng có nguy cơ bị như vậy. Điều đó đã từng xảy ra, điển hình như
-cuốn &amp;ldquo;Selected Papers on Fun and Games&amp;rdquo; của Don Knuth
-(&lt;a href=&#34;https://www.amazon.com/gp/customer-reviews/R3RM8ZYU34LJM2/ref=cm_cr_dp_d_rvw_ttl?ie=UTF8&amp;amp;ASIN=157586584X&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;).
-Vậy nên miình nghĩ tốt hơn hoặc là xác định mua sách ở Amazon có tỉ lệ hên xui
-nhất định, và giải pháp tốt hơn đó là refund thay vì lấy 1 cuốn khác (vì có
-nguy cơ cuốn mới cũng bị như cuốn cũ).&lt;/p&gt;
-
-&lt;p&gt;Tuy nhiên việc mua hàng ở Mỹ, ship về Singapore rồi gửi trả lại với mình thấy không
-đáng lắm (với sách). Nên theo kinh nghiệm của bản thân:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Chỉ thực sự đổi hàng khi cần thiết.&lt;/li&gt;
-&lt;li&gt;Hàng điện tử, nhỏ gọn nhé và chi phí ship + công sức nhỏ.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;23/10/2017: Amazon đã gửi cho mình bản mới của cuốn sách, và thật kì diệu, sách
-&lt;strong&gt;vẫn bị những lỗi như cũ&lt;/strong&gt; (wtf). Kinh nghiệm ở trên của mình còn hữu dụng
-chán. Thật tiếc vì phải vote 4 sao cho textbook kinh điển của Sedgewick, nhưng
-mình không còn giải pháp nào khác
-&lt;a href=&#34;https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/ref=cm_cr_arp_d_product_top?ie=UTF8&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;24/10/2017: Chính xác là Amazon sẽ gửi lại đúng 20 USD (~27 SGD) cho dù mình
-phải chịu giá shipping cao hơn nhiều (59.9 SGD). Vậy nên khi mua hàng trên
-Amazon mà international shipping thì cần rất cẩn thận, check hàng kỹ trước khi
-mua.&lt;/p&gt;
-</description>
+      <guid>http://dangkhoasdc.github.io/about-me/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>[Font] Một lỗi nhỏ trong &#34;Đừng hỏi em&#34;</title>
-      <link>http://dangkhoasdc.github.io/post/dung_hoi_em-font/</link>
-      <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
+      <title>Hello world with Literate Programming</title>
+      <link>http://dangkhoasdc.github.io/docs/a/</link>
+      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/dung_hoi_em-font/</guid>
-      <description>
-
-&lt;p&gt;Một lỗi tương đối nhỏ về mặt lịch sử trong clip mới ra mắt của Mỹ Tâm - &amp;ldquo;Đừng
-Hỏi Em&amp;rdquo;. Font chữ trong tờ giấy này là font Arial, được thiết kế lần đầu tiên
-năm 1982 ( được các hãng phần mềm phân phối vào khoảng năm 1992,) tuy nhiên
-theo mình đó thì thời đó ở VN chắc vẫn còn dùng máy in đời cũ, mà có ngay cả
-như vậy thì clip rõ ràng là các sự kiện trước năm 1975.&lt;/p&gt;
-
-&lt;p&gt;Vậy nên việc sử dụng 1 font đc tạo ra năm 1982 có gì đó hơi sai về lịch sử ở
-đây, đúng ra bên sản xuất nên chọn 1 font nào đó cổ hơn cho để đúng về mặt lịch
-sử và mốc thời gian.&lt;/p&gt;
-
-&lt;p&gt;Vì sao mình quan tâm đến font, vì có 1 lần Don Knuth nói
-ông mất 1 tuần để viết ra 1 công thức để có thể vẽ chữ &amp;ldquo;S&amp;rdquo; - hoàn hảo nhất có
-thể. Giáo sư John Hennessy , cha đẻ kiến trúc MIPS, president thứ 10 của
-Stanford và đc mệnh danh là &amp;ldquo;bố già Silicon Valley&amp;rdquo; từng sửng sốt với cách
-thiết kế chữ &amp;ldquo;S&amp;rdquo; và bao nhiêu tinh hoa của thuật toán, đồ họa máy tính đc đưa
-vào trong đó.  Điều đó khiến mình tò mò về cách mà các font chữ đc tạo và vẽ,
-dẫn đến việc tìm hiểu lịch sử ngành in ấn =))&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/Vxe3UJi.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Không phải máy gõ chữ nào cũng tạo ra font chữ xấu. Thực ra font chữ đã khá
-hoàn hảo ở thế hệ máy in kim loại nóng (hot metal typesetting), sau đó đến máy
-gõ chữ (typewriter) mà hậu duyện dòng này là font chữ monospaced (thậm chí
-developer toàn dùng monospaced khi code chứ ko dùng serif ). Sau khi hot metal
-bị thay thế bởi digital printer, lúc đó chữ render cực kì xấu, đến nỗi Don
-Knuth tuyên bố sẽ ko viết TAoCP nếu tình trạng chữ như vậy. Cuối cùng ông bỏ ra
-10 năm để tạo ra Tex và Metafont. Sau này dần dần công nghệ in ấn phát triển,
-các font thiết kế tốt hơn nên mới có kq là font &amp;ldquo;đẹp&amp;rdquo; như hiện nay.&lt;/p&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Z4HivEWoXGE&#34; target=&#34;_blank&#34;&gt;Đừng hỏi em&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.leemunroe.com/steve-jobs-calligraphy/&#34; target=&#34;_blank&#34;&gt;Steve Jobs On Taking a Calligraphy class&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Arial&#34; target=&#34;_blank&#34;&gt;Arial font&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>http://dangkhoasdc.github.io/docs/a/</guid>
+      <description>Hello world . Processed by unicode2rstsubs.py, part of Docutils: . -- . Processed by unicode2rstsubs.py, part of Docutils: . -- This is a demo for pyweb
+First, we have to define the program, let call it hello.cpp:
+hello.cpp (1) =
+→header files for program (2) int main(int argc, const char* [] argv) { →print the message (3) }   ◊ hello.cpp (1).
+ Header Files Basically, we only need a header file which handles the output of the message, namely std::cout:</description>
+    </item>
+    
+    <item>
+      <title>Install OpenCV 3 non-free module on Ubuntu</title>
+      <link>http://dangkhoasdc.github.io/docs/opencv3_nonfree/</link>
+      <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/opencv3_nonfree/</guid>
+      <description>The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
+Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.</description>
+    </item>
+    
+    <item>
+      <title>OpenCV on Android: practices and tips</title>
+      <link>http://dangkhoasdc.github.io/docs/opencv_android_practices/</link>
+      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/opencv_android_practices/</guid>
+      <description>Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
+Basically, we have a function playing as a bridge between Java APIs and NDK:
+public native void function_name(long matAddress); To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
+    </item>
+    
+    <item>
+      <title>Setup OpenCV and Android Studio with NDK support</title>
+      <link>http://dangkhoasdc.github.io/docs/opencv_android_studio_ndk/</link>
+      <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/opencv_android_studio_ndk/</guid>
+      <description>In this tutorial, I will demonstrate how to configurate the renowned computer vision libary, OpenCV, with the current Android Studio version (3.0.1). Let get started. The compiled version of OpenCV which supports Android is available at OpenCV Homepage. Download and extract it. Please note that to test the application properly on the mobile devices, the OpenCV Manager has to be installed.
+In another tutorial, I will talk about how to compile our own OpenCV library and put it to Android Studio since the pre-compiled library misses some interesting and important components, e.</description>
+    </item>
+    
+    <item>
+      <title>Programming Pearls</title>
+      <link>http://dangkhoasdc.github.io/docs/programming_pearls/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/programming_pearls/</guid>
+      <description>Programing Pearls - Jon Bentley
+Excellent.
+Until now, there is no such book which makes me shout out like this after receiving from Amazon. Let brieftly review some favoriate books:
+ CLRS: theoretically, this really is an &amp;ldquo;introduction&amp;rdquo; textbook about algorithms. Nonetheless, it still is an extensive reference and full of details. However, I am not impressed by the writing style and the pseudo-code.
+ Algorithms, Sedgewick: one of the best textbooks ever.</description>
+    </item>
+    
+    <item>
+      <title>Latin squares and a story of computer science history</title>
+      <link>http://dangkhoasdc.github.io/docs/latin_square/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/latin_square/</guid>
+      <description>The content of this note mostly belongs to the first section of TAoCP, Vol4A.
+Definition Given a square matrix of size $M$ and each element is $\{0, 1, \cdots, M-1 \}$, we construct a matrix such that for the element $i$ in the set $\{0, 1, \cdots, M-1\}$ only appears exactly 1 time on every row and column.
+Examples We have 16 cards which comprises a combination of 4 ranks, i.</description>
+    </item>
+    
+    <item>
+      <title>History of Computer Vision - Part 1</title>
+      <link>http://dangkhoasdc.github.io/docs/compvision_hist/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/compvision_hist/</guid>
+      <description>[It is such a long time since I wrote a dedicated technical post about computer vision.]
+Introduction Since Computer Vision is an interdisciplinary research which involves different fields such as physics, biology, computer science, neuroscience, etc. For this reason, there are different approaches when people consider about the history of computer science. In this post, I summarize two viewpoints of Prof. Fei-Fei Li, and Prof. Richard Szeliski from their courses [1] and textbooks [1].</description>
+    </item>
+    
+    <item>
+      <title>Generate the inversion table from an integer sequence</title>
+      <link>http://dangkhoasdc.github.io/docs/gen_inversion_table/</link>
+      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/gen_inversion_table/</guid>
+      <description>The programming exercise is from TAoCP, Vol3, 5.1.1-6:
+ Design an algorithm that computes the inversion table $b_1, b_2 \cdots b_n$ corresponding to a given permutation $a_1a_2 \cdots a_n$ of ${1, 2, \cdots , n}$, where the running time is essentially proportional to $n\ log n$ on typical computers.
+ I was really stuck on the solution Knuth given in the book. The author also mentioned another approach which actually is a modifination of merge sort.</description>
+    </item>
+    
+    <item>
+      <title>Selected Papers on Computer Science (Don Knuth) and the current state of Deep Learning</title>
+      <link>http://dangkhoasdc.github.io/docs/selectedpapers_cs/</link>
+      <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/selectedpapers_cs/</guid>
+      <description>Book Info:
+    Description     Title Selected Papers on Computer Science [Amazon]   Author Donald Knuth   Pages 276    This is the most accessible book from Don Knuth. Although I was published nearly 20 years ago, it still is a classic computer science book. In Amazon, there is an interesting comment about the book from Peter Norvig (Director of Google Research).</description>
+    </item>
+    
+    <item>
+      <title>The repertoire method</title>
+      <link>http://dangkhoasdc.github.io/docs/repertoire/</link>
+      <pubDate>Tue, 26 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/repertoire/</guid>
+      <description>The repertoire method is an method of finding closed-form of recurrence relations and sum of a series. The method is introduced in Chapter 1 of ConMath but most readers at the first time seem to struggle with it. Through the book, especially Chapter 1 and 2, the repertoire method demonstrates its ability to solve many sums and recurrences. However, I honestly admit that it is quite difficult to apply and fully understand how it works.</description>
+    </item>
+    
+    <item>
+      <title>Miscellaneous notes</title>
+      <link>http://dangkhoasdc.github.io/docs/why_so_serious/</link>
+      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/docs/why_so_serious/</guid>
+      <description>Therer are some not-so-serious miscellaneous thoughts, comments of mine about everything in an informal format using Vietnamese and English.
+Deep Learning and truely science researching    &amp;ldquo;too often where people will something against their own gut instincts because they think the community wants them to do it that way, so people will work on a certain subject even though they aren&amp;rsquo;t terribly interested in it because they think that they&amp;rsquo;ll get more prestige by working on it.</description>
     </item>
     
     <item>
       <title>Why Ubuntu on Windows?</title>
-      <link>http://dangkhoasdc.github.io/post/ubuntu_on_windows/</link>
+      <link>http://dangkhoasdc.github.io/docs/ubuntu_on_windows/</link>
       <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/ubuntu_on_windows/</guid>
-      <description>
-
-&lt;p&gt;For programming purposes, I prefer Linux to Windows. However, Windows is really good at entertaining and office works. I admit that Microsoft Office is the best office suited I ever have experienced. Besides, OneNote is one of my favorite note-taking software, not to mention my beloved Bilizzard games such as Diablo, Starcraft.&lt;/p&gt;
-
-&lt;p&gt;One solution to combine Windows and Linux is to install dual-boot in the machine. However, I am tired of switching between 2 OSs. In addition, we have to configure the systems so that it can easily transfer files between 2 different partition formats.&lt;/p&gt;
-
-&lt;p&gt;Another workaround is to run Windows or Linux on a virtual machine. Since I usually play video games, I could not use Windows as a client. Running Linux virtually seems promising. Unfortunately, my laptop is not strong enough to run the virtual machine smoothly.&lt;/p&gt;
-
-&lt;p&gt;Finally, M$ comes up with a new feature in Windows 10 which is &amp;lsquo;Windows Subsystem for Linux&amp;rsquo;. Suprisingly, it works flawlessly except several minor issues.&lt;/p&gt;
-
-&lt;h1 id=&#34;settings&#34;&gt;Settings&lt;/h1&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Turn Windows Sybsystem on: (1) find &lt;code&gt;Windows features&lt;/code&gt; and select &lt;code&gt;Windows Subsystem for Linux&lt;/code&gt; , wait for the installation and restart the machine.&lt;/li&gt;
-&lt;li&gt;Open Windows Store and install Ubuntu. I also saw OpenSuse on the store. Hopefully, there will be more distros adapted in future, especially Arch Linhx/Manjaro which is my favorite.&lt;/li&gt;
-&lt;li&gt;After working around with Ubuntu and Tmux in &lt;code&gt;cmder&lt;/code&gt; , I found out that &lt;a href=&#34;https://github.com/mintty/wsltty&#34; target=&#34;_blank&#34;&gt;wsltty&lt;/a&gt; is the best solution to avoid fonts broken, key arrow issues. Besides, it run faster than &lt;code&gt;cmder&lt;/code&gt; although &lt;code&gt;cmder&lt;/code&gt; has many useful features.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Here is the result:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://static.notion-static.com/67ecfe6abf0242199ffec19dd227a000/Untitled&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There are several tips:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Change the cursor to block.&lt;/li&gt;
-&lt;li&gt;Turn off the mouse support feature in vim (&lt;code&gt;:set mouse=&lt;/code&gt;) in order to copy
-text from Windows to vim.&lt;/li&gt;
-&lt;li&gt;Copy from vim to Windows applications:
-
-&lt;ol&gt;
-&lt;li&gt;Install xsel/xclip on Ubuntu.&lt;/li&gt;
-&lt;li&gt;Install &lt;a href=&#34;https://sourceforge.net/projects/xming/&#34; target=&#34;_blank&#34;&gt;Xming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Set &lt;code&gt;export DISPLAY=:0&lt;/code&gt; in the bashrc or zshrc&lt;/li&gt;
-&lt;/ol&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
-      <link>http://dangkhoasdc.github.io/post/taocp/howto/</link>
-      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/taocp/howto/</guid>
-      <description>
-
-&lt;p&gt;Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có
-tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ
-nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua.
-Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và
-&amp;ldquo;cuồng&amp;rdquo; như Donald Knuth. Và mong ước của mình từ khi bước chân vào giảng đường
-đại học, theo đuổi đam mê với Khoa Học Máy Tính, rằng mình sẽ chinh phục cuốn
-&amp;ldquo;Kinh Thánh&amp;rdquo; này. Đó là một cuộc hành trình, và còn thử thách hơn cả tất cả
-những hành trình mình từng trải nghiệm.&lt;/p&gt;
-
-&lt;p&gt;Ngày sinh nhật vào năm đầu tiên đi làm, mình đã tự thưởng cho bản thân bản &lt;a href=&#34;https://www.amazon.com/Computer-Programming-Volumes-1-4A-Boxed/dp/0321751043/ref=sr_1_1?ie=UTF8&amp;amp;qid=1506337149&amp;amp;sr=8-1&amp;amp;keywords=the+art+of+computer+programming&#34; target=&#34;_blank&#34;&gt;full
-set của bộ
-sách&lt;/a&gt;
-.  Trước giờ mình chỉ dùng với mục đích tham khảo là chính. Nhưng vừa sau đợt
-sinh nhật 24 của mình, mình quyết định phải &amp;ldquo;chinh phục&amp;rdquo; bằng được cuốn sách.
-Mà theo plan của mình Volume 1 sẽ tốn tầm &amp;hellip; 1-2 năm. Và có lẽ, mình sẽ mất
-chừng chục năm để chinh phục Volume 4A 😆. Chưa kể, phần 4B cực kì khó nhằn
-vì có cả Satistiability trong đó. Có lẽ riêng Volume 4 không thôi thì đã trở
-thành tượng đài mất rồi.&lt;/p&gt;
-
-&lt;h1 id=&#34;taocp-liệu-có-khó-đọc&#34;&gt;TAoCP liệu có khó đọc?&lt;/h1&gt;
-
-&lt;p&gt;Theo mình thì không. Nhiều người khi nhìn vào cuốn sách với hàng đống công thức
-toán và những bài tập khó nhằng cũng như code mã máy MIX khiến họ nghĩ đây là
-một cuốn sách rất khó đọc. Nhưng ngay từ đoạn giới thiệu, Don Knuth đã hướng dẫn
-cách đọc và ông đã chỉ rõ những vấn đề mà người đọc thắc mắc.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Với MIX - mình đồng ý quan điểm của Don Knuth, nếu ông viết chương trình theo
-C/C++ hay Java hay Python, một thời gian sau chắc chắn nó sẽ có vấn đề. Kể cả
-những ngôn ngữ bậc cao càng khiến ta khó phân tích chính xác số lượng tính
-toán trong thuật toán đó. Mà theo phân tích của Knuth, đó phải là những phân
-tích chính xác. Ngôn ngữ của MIX cũng rất dễ đọc, không đến nối rắc rối như
-mọi người tưởng. Đồng thời, việc đọc code bằng mã máy khuyến khích người đọc
-&amp;ldquo;vọc&amp;rdquo; với thuật toán được ghi. Thêm nữa, &amp;ldquo;ngôn ngữ bậc cao&amp;rdquo; mà Knuth dùng
-chính là tiếng Anh.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Trong biểu đồ sử dụng sách của mình, Knuth có nói rằng nếu các công thức toán
-&amp;ldquo;is all Greek to you&amp;rdquo; ta chỉ cần xem qua và nắm được kết quả cơ bản mà
-phần đó đề cập, và hầu như các kết quả đó được nói ở đầu mục hoặc cuối mục.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Với bài tập của TAoCP, Knuth đề xuất hệ thống phân loại. Hơn hết, hệ thống
-này nhằm giúp cho người đọc, với thời lượng cho phép của mình, lựa chọn và
-làm những bài bản thân nghĩ là phù hợp. Bởi thật sự những bài với độ khó lớn
-hơn 45, dù là không dính đến toán, M hay HM đều cần rất nhiều thời gian
-nghiên cứu. Bản thân mình nghĩ nếu giải được những bài đó thì có thể hoàn
-thành được PhD của Computer Science rồi. Nhưng mình vẫn nghĩ người đọc nên
-xem qua các câu hỏi này,  &lt;strong&gt;vì nó chính là biên giới tri thức trong khoa học
-máy tính.&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Knuth nêu rõ trong cuốn sách của mình, mục đích của cuốn sách phục vụ: (1) là
-tài liệu tham khảo chính xác và chi tiết về phân tích thuật toán, (2) là một
-sách giáo khoa  &lt;strong&gt;tự học&lt;/strong&gt;  dành cho những người đam mê về thuật toán cũng như Khoa
-Học Máy Tính. Nếu bạn mua TAoCP chỉ với giá trị tham khảo thì đó hoàn toàn là
-mục đích chính xác của bộ sách: mình đặc biệt thích phần tra khảo về lịch sử.
-Đúng ra, Don Knuth rất quan tâm đến lịch sử của Khoa Học Máy Tính, đó là lí
-do vì sao trong sách đề cập các thông tin lịch sử lại chi tiết đến như vậy.
-Nhưng ngoài ra, phần bài tập lẫn lời giải, mà thường chiếm đến &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;3&lt;/sub&gt; cuốn sách,
-nói lên rằng Knuth mong mỏi cuốn sách này sẽ là một tài liệu học tốt dành cho
-mọi người.&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Kế hoạch của mình rất đơn giản: Chinh phục TAoCP đồng thời giúp mọi người dễ
-dàng tiếp cận với tài liệu quý giá này. Quá nhiều bạn đọc dường như sợ tiếp cận
-cuốn sách bởi những &amp;ldquo;myth&amp;rdquo; vừa nêu, đồng thời, chinh phục TAoCP là một hành
-trình thực sự thú vị. Mình đã học được rất nhiều điều thông qua cuốn sách. Những
-ngày đầu đại học khi lần đầu cầm trong tay Volume 1, mình mới thực sự hiểu
-&amp;ldquo;computer science&amp;rdquo; là một khoa học đầy hấp dẫn, và nó cũng rất &amp;ldquo;art&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Mình đồng ý với quan điểm của Knuth, người làm về phân tích thuật toán hạnh phúc
-gấp đôi những ngành khác: họ chiêm nghiệm được những công thức toán phức tạp để
-tính toán độ phức tạp, phân tích thuật toán, đồng thời họ cảm nhận được tính
-hiệu quả của thuật toán đó trong thực tế. Ta chắc chắn không cần bận tâm đến câu
-&amp;ldquo;học toán để làm gì&amp;rdquo;, bởi khi tiếp cận với phân tích thuật toán, ta cảm nhận
-ngay được ích lợi của toán học, thuật toán cũng như vẻ đẹp của thuật toán khi ta
-cài đặt và sử dụng trong thực tiễn.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&#34;một-chút-về-dự-án-này&#34;&gt;Một chút về dự án này&lt;/h1&gt;
-
-&lt;p&gt;Ngoài những chi tiết ở trên, một phần khiến TAoCP khó đọc ở chỗ thông tin được
-Knuth viết tương đối cô đặc. Chính vì lẽ đó mà đôi khi có những phần tương đối
-khó hiểu đối với những bạn tìm hiểu về khoa học máy tính và chưa có nhiều kiến
-thức trước đó. Mục tiêu của project này nhằm giúp các bạn dễ tiếp cận hơn với
-sách, đồng thời giải thích các phần bài tập, bởi mình thấy Knuth viết phần
-Solutions cực kì gọn, và đôi khi cũng không biết là từ đâu lại có những đáp số
-đó. Ngoài ra, tìm hiểu về TAoCP cũng chính là tìm hiểu các thuật toán kinh điển,
-các bài toán làm trên nền tảng của Khoa Học Máy Tính cũng như đây là nguồn tài
-liệu rất quý giá để mài dũa &amp;ldquo;algorithmic thinking&amp;rdquo;. Một lý do nữa khiến mình có
-hứng thú để làm đó là hiện nay tuy có khá nhiều blog, repo trên Github note lại
-TAoCP nhưng chưa có ai viết đầy đủ, hoặc chi tiết.&lt;/p&gt;
-
-&lt;p&gt;Loạt bài viết cùa mình yêu cầu người đọc đã đọc qua trước chương hoặc phần mình
-đề cập trong bài viết, trong các bài viết mình sẽ chú trọng đến các chi tiết
-sau:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Các chi tiết tương đối khó hiểu.&lt;/li&gt;
-&lt;li&gt;Phần bài tập.&lt;/li&gt;
-&lt;li&gt;Các state-of-the-art hiện nay.&lt;/li&gt;
-&lt;li&gt;Các thông tin lý thú liên quan đến chủ đề đó.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Mình có tích hợp plugin Hypothesis giúp các bạn có thể highlight, viết note trên
-blog của mình, đồng thời phần comment để mọi người thuận tiện trao đổi với nhau
-cũng như giúp mình update các lỗi có trong bài viết.&lt;/p&gt;
-
-&lt;h1 id=&#34;kinh-nghiệm-cá-nhân&#34;&gt;Kinh nghiệm cá nhân&lt;/h1&gt;
-
-&lt;p&gt;Một số kinh nghiệm bản thân khi mình đọc TAoCP, thực ra đến tận bây giờ bản thân
-mình mới dành thời gian với cuốn sách, trước đây mình chủ yếu dùng tham khảo là
-chính:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Luôn có giấy và bút bên cạnh để có thể:
-
-&lt;ul&gt;
-&lt;li&gt;Chạy &amp;ldquo;chay&amp;rdquo; các thuật toán.&lt;/li&gt;
-&lt;li&gt;Làm bài tập.&lt;/li&gt;
-&lt;li&gt;Hiểu công thức đang muốn nói điều gì.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Có một sổ tay ghi chú. Một số chỗ Knuth viết rất cô đọng và mình nghĩ chỉ có
-cách ghi note lại mới thực sự nhớ và hiểu được.&lt;/li&gt;
-&lt;li&gt;Thử implement thuật toán bằng một ngôn ngữ ưa thích. Quan điểm của mình thì
-C hoặc C++ là phù hợp nhất. C thì có thể gần với mục đích nhất,
-trong khi đó C++ sẽ tiện hơn.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;một-chút-về-phần-preface-volume-i&#34;&gt;Một chút về phần Preface (Volume I)&lt;/h1&gt;
-
-&lt;p&gt;Tuy chỉ là phần lời nói đầu, nhưng tác giả đã đề cập đến khá nhiều câu chuyện
-hay ho mà mình có thể tóm lượt như sau:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Thuở xa xưa khi Khoa học máy tính mới hình thành, có 3 ngành chính thịnh hành
-lúc bấy giờ: numerical analysis, artificial intelligent và language theory.
-Chính Knuth là người đã khai sinh ra nhánh &amp;ldquo;analysis of algorithms&amp;rdquo;. Trước đó
-đã có các công trình của Alan Turing, Jon von Neumann tuy nhiên đó là những
-nghiên cứu rời rạc và không có một hệ thống hoàn chỉnh.&lt;/li&gt;
-&lt;li&gt;Trong phần preface, Knuth đề cập rằng những phân tích của mình &amp;ldquo;non-numerical&amp;rdquo;
-bởi vì nó quan tâm đến các đối tượng rời rạc nhiều hơn.
-Nếu chọn &amp;ldquo;nonnumerical analysis&amp;rdquo; thì lại hơi mang tính tiêu cực
-(có lẽ do tiền tố &amp;ldquo;non&amp;rdquo; trong đó). Trong khi đó &amp;ldquo;programming techniques&amp;rdquo; thì
-lại quá hẹp về 1 phần trong lĩnh vực. Đó là lí do mà ông chọn từ
-&amp;ldquo;analysis of algorithms&amp;rdquo;.&lt;/li&gt;
-&lt;li&gt;Việc chọn mã máy MIX cũng được ông phân tích khá rõ trong phần này.
-Thực sự những lý do đó hoàn toàn thuyết phục. Mình nghĩ một ngôn ngữ gần
-nhất ông có thể dùng đó là C. Nhưng nếu như vậy ông phải định nghĩa số chỉ
-thị cho từng câu lệnh trong C, điều này mình nghĩ không đơn giản lắm.&lt;/li&gt;
-&lt;li&gt;Người đồng hành với ông trong cuốn sách này là &lt;a href=&#34;https://en.wikipedia.org/wiki/Robert_W._Floyd&#34; target=&#34;_blank&#34;&gt; Robert W. Floyd &lt;/a&gt;,
-ông chính là tác giả thuật toán &amp;ldquo;Floyd-Warshall&amp;rdquo;, thuật toán phát hiện
-vòng trong danh sách liên kết cũng như những đóng góp tiêu biểu của ông
-trong &amp;ldquo;program verificaition&amp;rdquo;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;ghi-chú&#34;&gt;Ghi chú&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Một bài nói của Don Knuth về mối quan tâm của ông với
-lịch sử khoa học máy tính: [&lt;a href=&#34;https://youtu.be/gAXdDEQveKw&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Phỏng vấn Don Knuth. Có khá nhiều chi tiết thú vị về suốt cuộc đời làm
-nghiên cứu của ông (Ông mất chỉ 1 giờ để hoàn thành luận án
-tiến sĩ của mình). [&lt;a href=&#34;https://youtu.be/vUJ01nRE7r0&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt;].
-Mình sẽ có một bài tóm tắt về cuộc phỏng vấn đầy hấp dẫn này.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>An adventure in The Art of Computer Programming</title>
-      <link>http://dangkhoasdc.github.io/project/taocp/</link>
-      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/project/taocp/</guid>
-      <description>
-
-&lt;h3 id=&#34;list-of-related-notes&#34;&gt;List of related notes:&lt;/h3&gt;
-
-&lt;p&gt;Some notes will be written in English.Stay tuned.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Tai nghe dành programmer</title>
-      <link>http://dangkhoasdc.github.io/post/headphones/</link>
-      <pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/headphones/</guid>
-      <description>&lt;p&gt;Thực ra câu chuyện mình sắp kể không liên quan là mấy đến tai nghe dành cho programmer. Nó ít nhiều liên quan đến chuyện: &lt;strong&gt;ra quyết định tối ưu&lt;/strong&gt; và không cần đắn đo đến nó nữa.&lt;/p&gt;
-
-&lt;p&gt;Tuy nhiên, vì đang nói đến tai nghe dành cho programmer. Nên tiện thể mình đề cập. Chuyện là mình đang cần một tai nghe có tính năng noise cancelling tốt, vì tiếng xì xầm cũng như âm thanh văn phòng khiến mình khó tập trung, bản thân vừa làm research vừa programming, đôi khi mình cần không gian rất yên tĩnh để có thể dành toàn bộ neural cho 1 task nào đó. Một cái nữa là noise isolation - mình cần 1 tai nghe không rò rỉ âm quá, vì như vậy khiến người xung quanh cũng khó chịu.&lt;/p&gt;
-
-&lt;p&gt;Sau một hồi research, mình cũng tìm được kha khá ứng viên:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/dp/B01MSZSL4I/_encoding=UTF8?coliid=IYBMB4TLNEFDG&amp;amp;colid=3NKUCAXZDPGHJ&#34; target=&#34;_blank&#34;&gt;Sennheiser HD 4.50&lt;/a&gt; (over-ear)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/gp/product/B001EZYMF4/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;amp;psc=1&#34; target=&#34;_blank&#34;&gt;Sennheiser CX 300 II&lt;/a&gt; (earbud)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/Bose-QuietComfort-Wireless-Headphones-Cancelling/dp/B01E3SNO1G/ref=sr_1_5?ie=UTF8&amp;amp;qid=1506169318&amp;amp;sr=8-5&amp;amp;keywords=headphone+bose&#34; target=&#34;_blank&#34;&gt;Bose QuietComfort 35&lt;/a&gt; (over-ear).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Có một trang khá hay là RTINGS, trong đó có hẳn mục sử dụng tai nghe trong văn phòng ( &lt;a href=&#34;http://www.rtings.com/headphones/reviews/bose/quietcontrol-30-qc30-noise-cancelling-earphones&#34; target=&#34;_blank&#34;&gt;link&lt;/a&gt; ), mình nghĩ rất đáng để lướt qua. Đại khái lướt qua thị trường thì có Bose và Sennheiser là có tai nghe khá tốt cho việc dùng ở văn phòng. Ngoài ra còn có cả Jaybird, tuy nhiên mình không thích design của hãng này lắm.&lt;/p&gt;
-
-&lt;p&gt;Một số trang dưới đây cũng rất đáng để xem xét, như một nguồn tham khảo khi quyết định mua tai nghe:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://codingsupply.com/best-headphones-programming/&#34; target=&#34;_blank&#34;&gt;Coding Supply&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.pixelmonkey.org/2016/09/11/headphones&#34; target=&#34;_blank&#34;&gt;Pixel Monkey&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.stuff.tv/features/best-noise-cancelling-headphones-every-budget/sennheiser-pxc-550&#34; target=&#34;_blank&#34;&gt;Stuff&lt;/a&gt; : tai nghe noise cancelling giá mềm.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Giờ mới là câu chuyện chính. Mình mất tầm 5 tiếng đồng hồ để xác định mình nên mua cái nào. Nhưng rốt cuộc, lại chọn đúng cái đã chọn trước đó. Bực bội hơn, mình cứ xem đi xem lại những cái tai nghe đã xem qua trước đó và thấy rằng nó hiện không phù hợp với nhu cầu của mình. Nó liên quan cả đến decision making lẫn optimization: tìm tai nghe tốt nhất trong những ràng buộc nhất định, đồng thời quyết định xem chọn mua cái nào. Sau một thời gian ngẫm nghĩ, mình đành tự propose một &amp;ldquo;framework&amp;rdquo; cho việc shopping và cố gắng không để tình trạng này diễn ra thêm lần nào nữa:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Xác định khoảng tiền mình bỏ ra. Và đây là là ràng buộc có trọng số cao nhất. Nó hạn chế mình tiêu quá tay, đồng thời giúp bản thân quản lý tài chính tốt, giảm thời gian shopping lại bởi mình có thể giảm không gian tìm kiếm xuống khá nhiều. Dĩ nhiên trước đó nên coi xem món hàng cần mua thường có khoảng giá bao nhiêu.&lt;/li&gt;
-&lt;li&gt;Thời gian bỏ ra shopping tỉ lệ thuận với số tiền ước tính. Có thể mua 1 món hàng 800-1000 usd thì mình cần 1 ngày để tìm hiểu cái mình cần mua chẳng hạn. Với những món 10-15 usd có thể chỉ cần 30 phút quyết định.&lt;/li&gt;
-&lt;li&gt;Bắt đầu tìm hiểu, nhất thiết phải ghi note lại, ghi chú các ưu nhược điểm mà những món hàng mình có dự định mua (potential items). Việc này giúp mình không phải đắn đo lại 1 món hàng hay xem đi xem lại. Theo mình thấy, nhiều link cùng đề cập đến 1 món và hầu như lúc nào mình cũng mở link để xem lại đúng mô tả của món hàng đó.&lt;/li&gt;
-&lt;li&gt;Liệt kê đầy đủ các nhu cầu, ràng buộc, Liên tục cập nhật vào ghi chép.&lt;/li&gt;
-&lt;li&gt;Nên cài đặt một &amp;ldquo;hàng đợi ưu tiên&amp;rdquo; (priority queue) theo tiêu chí của riêng mình và chỉ giữ top K phần tử tốt nhất (vd: top 3, top 5). Nếu nhưng list đó full và cần thêm 1 item nữa, thì chắc chắn mình sẽ cần bỏ đi 1 item. Nhờ vậy ta sẽ luôn phân tích ưu nhược điểm các item đó, để cuối cùng có quyết định chuẩn hơn.&lt;/li&gt;
-&lt;li&gt;Mua hàng: đơn giản là chọn &lt;code&gt;top()&lt;/code&gt; ra khỏi và mua thôi. List &lt;code&gt;k-1&lt;/code&gt; item còn lại có thể dùng để &amp;hellip; mua sau đó hoặc có thể giữ làm Wish List chẳng hạn. Tuy nhiên mình nghĩ trước đó nên re-ranking trở lại.&lt;/li&gt;
-&lt;li&gt;Nếu có nhiều items có cùng trọng số thì sao? Chuyện này có thể diễn ra, và likely diễn ra khá cao, ta có thể apply một số hypothesis sau:
-
-&lt;ul&gt;
-&lt;li&gt;Hỏi ý kiến người thân/bạn bè.&lt;/li&gt;
-&lt;li&gt;Random.&lt;/li&gt;
-&lt;li&gt;Dựa vào lượt review trên Amazon.&lt;/li&gt;
-&lt;li&gt;Chọn cái nào rẻ hơn.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+      <guid>http://dangkhoasdc.github.io/docs/ubuntu_on_windows/</guid>
+      <description>For programming purposes, I prefer Linux to Windows. However, Windows is really good at entertaining and office works. Beside, Microsoft Office is the best office suit I ever have experienced, and OneNote is one of my favorite note-taking software. Not to mention my beloved Bilizzard games such as Diablo, Starcraft and other video games.
+A solution to integrate Windows and Linux in one machine is to install dual-boot. However, I am tired of switching between 2 OSs.</description>
     </item>
     
     <item>
       <title>Matlab</title>
-      <link>http://dangkhoasdc.github.io/post/matlab/</link>
+      <link>http://dangkhoasdc.github.io/docs/matlab/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/matlab/</guid>
-      <description>
-
-&lt;h1 id=&#34;general&#34;&gt;General&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Show the information of a variable. It is very useful when we the code takes
-so much memory: &lt;code&gt;whos &amp;lt;variable name&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Sum of squared of elements: &lt;code&gt;sumsqr(X)&lt;/code&gt;. Use &lt;code&gt;sum(sum(A.^2, 1))&lt;/code&gt; instead
-if you want to use less memory.&lt;/li&gt;
-&lt;li&gt;Memory optimizations tips and tricks:
-[&lt;a href=&#34;http://undocumentedmatlab.com/blog/internal-matlab-memory-optimizations&#34; target=&#34;_blank&#34;&gt;Undocumented Matlab&lt;/a&gt;]&lt;/li&gt;
-&lt;li&gt;Use column-based representation instead of the row-based one. For example, to
-represent a list of items from 1 to 5, use &lt;code&gt;[1 2 3 4 5]&lt;/code&gt; (not &lt;code&gt;[1; 2; 3; 4; 5]&lt;/code&gt;).
-It becomes convient because MATLAB supports &lt;code&gt;foreach&lt;/code&gt;-like statement:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;for element = list
-    % &amp;lt;statements&amp;gt;
-end
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;If &lt;code&gt;list&lt;/code&gt; is a matrix, the above statement will assign each column of &lt;code&gt;list&lt;/code&gt; to
-&lt;code&gt;element&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;code-optimization&#34;&gt;Code Optimization&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Replace &lt;code&gt;isempty(find(&amp;lt;expr&amp;gt;))&lt;/code&gt; by &lt;code&gt;isempty(find(&amp;lt;expr&amp;gt;, 1))&lt;/code&gt; to
-improve performance.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;libraries&#34;&gt;Libraries&lt;/h1&gt;
-
-&lt;h2 id=&#34;vlfeat&#34;&gt;VLFeat&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Use &lt;code&gt;vl_imreadjpeg&lt;/code&gt; instead of &lt;code&gt;imread&lt;/code&gt;. It could speed up reading image files.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&#34;editor&#34;&gt;Editor&lt;/h1&gt;
-
-&lt;h2 id=&#34;nvim&#34;&gt;Nvim&lt;/h2&gt;
-
-&lt;p&gt;Plugins:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/daeyun/vim-matlab&#34; target=&#34;_blank&#34;&gt;vim-matlab&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/lazywei/vim-matlab&#34; target=&#34;_blank&#34;&gt;matlab syntax&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>http://dangkhoasdc.github.io/docs/matlab/</guid>
+      <description>General  Show the information of a variable. It is very useful when we the code takes so much memory: whos &amp;lt;variable name&amp;gt;. Sum of squared of elements: sumsqr(X). Use sum(sum(A.^2, 1)) instead if you want to use less memory. Memory optimizations tips and tricks: [Undocumented Matlab] Use column-based representation instead of the row-based one. For example, to represent a list of items from 1 to 5, use [1 2 3 4 5] (not [1; 2; 3; 4; 5]).</description>
     </item>
     
     <item>
-      <title>The Vietnam War - Dejavu</title>
-      <link>http://dangkhoasdc.github.io/post/vietnam_war-dejavu/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Install the OpenCV library on Visual Studio</title>
+      <link>http://dangkhoasdc.github.io/docs/install_opencv_vs/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/vietnam_war-dejavu/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.pbs.org/kenburns/the-vietnam-war/watch/episode-1/&#34; target=&#34;_blank&#34;&gt;[Link from PBS]&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Một bộ phim tài liệu lịch sử xuất sắc về chiến Tranh Việt Nam. Với sự tham gia phỏng vấn của nhà văn Bảo Ninh, nhà báo Huy Đức.
-Điều làm nên bộ phim chính là tính chân thực và nhìn nhận đa chiều ở tất cả các bên tham gia vào cuộc chiến. Khác với &amp;ldquo;cuộc chiến 10k ngày&amp;rdquo;, bộ phim tài liệu trước đó &amp;ldquo;tránh&amp;rdquo; nói nhiều đến nội bộ việt nam cũng như quan hệ với Pháp. Ở seri phim này, ta có một cái nhìn rộng hơn, trung lập hơn.&lt;/p&gt;
-
-&lt;p&gt;Tập 1 với tên Deja vu (bóng ma quá khứ) được xây dựng với hai mốc thời gian đan xen, như sự ẩn dụ đoán trước được sự thất bại của người Mỹ cũng sẽ giống những gì đã diễn ra ở Pháp. Deja vu, là hiện tượng tâm lý về ảo giác một trải nghiệm tưởng như bản thân từng trải qua ở một môi trường và hoàn cảnh hoàn toàn khác được nhà biên kịch khéo léo đặt cho tượng đề của tập 1: nước Mỹ chưa từng trải qua chiến tranh với Việt Nam, nhưng sau mấy chục năm nhìn lại, họ đáng ra đã &amp;ldquo;cảm nhận&amp;rdquo; được kết cục đó.&lt;/p&gt;
-
-&lt;p&gt;Ngoài những thước phim đáng giá và những nhận định chi tiết cả hai phía, điều làm tôi cực kì ấn tượng là âm nhạc. Không chỉ thể hiện nội dung truyền tải, âm nhạc trong phim mang đến hơi thở văn hóa và xã hội những năm đó. Tôi rất thích các bản của Bob Dylan vầ Rosemary Clooney. Làm tôi nhớ đến cái đài radio quen thuộc của Fallout trong một &amp;ldquo;alternative history&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Điều có tôi thích nhất chính là những diễn biến leo thang về chính trị và phản ứng của hai bên trong bối cảnh thế giới. Thêm vào đó, có những diễn biến chưa bao giờ được hai bên kể trước đó, ít nhất là theo trí nhớ của tôi. Đó là câu chuyện bức thư chưa bao giờ được gửi đến Tổng Thống Truman của Cụ Hồ. Đó là những động thái chính trị cực đoan của cả hai phía. Tôi thích nhất là giai đoạn ông Diệm thành lập chính quyền, Lê Duẩn thành Bí Thư Thứ Nhất và sự phức tạp về chính trị trên thế giới. Cảm giác bạn được xem Game Of Thrones phiên bản lịch sử vậy.&lt;/p&gt;
-
-&lt;p&gt;Những hình ảnh thì khỏi phải nói, giàu tính lịch sử và biểu tượng. Tôi phải thốt lên vậy khi xem những bức hình đầy ám ảnh.
-&lt;div&gt;
-&lt;blockquote class=&#34;imgur-embed-pub&#34; lang=&#34;en&#34; data-id=&#34;a/DXTC1&#34;&gt;&lt;a href=&#34;//imgur.com/DXTC1&#34;&gt;&lt;/a&gt;&lt;/blockquote&gt;&lt;script async src=&#34;//s.imgur.com/min/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;/div&gt;
-Tập 1 đầy hấp dẫn, từ biên kịch phim, lối dẫn chuyện, hình ảnh và âm thanh.&lt;/p&gt;
-</description>
+      <guid>http://dangkhoasdc.github.io/docs/install_opencv_vs/</guid>
+      <description>Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
+ Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here.</description>
     </item>
     
     <item>
-      <title>Một vòng Henderson Waves và Haw Par Villa</title>
-      <link>http://dangkhoasdc.github.io/post/henderson_waves-haw_par_villa/</link>
-      <pubDate>Sun, 17 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Search</title>
+      <link>http://dangkhoasdc.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/henderson_waves-haw_par_villa/</guid>
-      <description>&lt;div&gt;
-    &lt;a data-flickr-embed=&#34;true&#34; data-header=&#34;true&#34; data-footer=&#34;true&#34; href=&#34;https://www.flickr.com/photos/99093593@N07/albums/72157686733328033&#34; title=&#34;Henderson Waves&#34;&gt;&lt;img src=&#34;https://farm5.staticflickr.com/4400/37105032192_caa9b33971_c.jpg&#34; width=&#34;800&#34; height=&#34;534&#34; alt=&#34;Henderson Waves&#34;&gt;&lt;/a&gt;&lt;script async src=&#34;//embedr.flickr.com/assets/client-code.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Lâu lâu tôi lại đi dạo một vòng ở Sin chơi. Một phần thường ngày cuối tuần chỉ cắm đầu trên lab, một phần thì muốn đi đông cho vui. Chứ thực ra, nếu đi chơi một mình, hay đi với hai thằng thì rất chán. Tôi nghĩ đi chơi trừ khi đi với bạn gái hoặc bạn khác giới, còn lại đực rựa đi chung với nhau thì 3-4 người là phù hợp. Tôi chưa đi Henderson Waves bao giờ, nghe đồn đâu ban đêm ở đó đẹp lắm. Nếu search trên mạng thì sẽ thấy rất nhiều kết quả gợi ý đi đến nơi đây vào ban đêm.&lt;/p&gt;
-
-&lt;p&gt;Ghé ở Vivo City, cả đám theo đường ngay phía trước ở Vivo City để leo lên núi (hay đồi). Tựa như là một khu rừng nguyên sinh vậy. Nghe cu Vinh kể là nơi đây có cả khỉ và động vật hoang dã. Rất nhiều người xài chai xịt tránh côn trùng, thành ra mùi xả lan khắp nơi làm tôi nghĩ nơi đây trồng nhiều.
-    &lt;div&gt;
-    &lt;a data-flickr-embed=&#34;true&#34; data-header=&#34;true&#34; data-footer=&#34;true&#34; href=&#34;https://www.flickr.com/photos/99093593@N07/37105032192/in/album-72157686733328033/&#34; title=&#34;IMG_6352&#34;&gt;&lt;img src=&#34;https://farm5.staticflickr.com/4400/37105032192_caa9b33971_c.jpg&#34; width=&#34;800&#34; height=&#34;534&#34; alt=&#34;IMG_6352&#34;&gt;&lt;/a&gt;&lt;script async src=&#34;//embedr.flickr.com/assets/client-code.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-    &lt;/div&gt;
-Lâu rồi không đi đó lại nên lúc leo lên mệt đến đứt hơi. Tuy nhiên góc nhìn ở lại thật độc nhất, từ đây ta có thể nhìn ra phía cảng, một hướng khác có thể nhìn phía trung tâm. Đi một đoạn là tới Henderson Waves là một cây cầu gỗ với kiến trúc uốn lượn. Mình nghĩ đúng là khu này khi lên đèn hẳn là sẽ rất đẹp.
-    &lt;div&gt;
-    &lt;a data-flickr-embed=&#34;true&#34; data-header=&#34;true&#34; data-footer=&#34;true&#34; href=&#34;https://www.flickr.com/photos/99093593@N07/37134741271/in/album-72157686733328033/&#34; title=&#34;IMG_6354&#34;&gt;&lt;img src=&#34;https://farm5.staticflickr.com/4372/37134741271_95c849d899_c.jpg&#34; width=&#34;800&#34; height=&#34;534&#34; alt=&#34;IMG_6354&#34;&gt;&lt;/a&gt;&lt;script async src=&#34;//embedr.flickr.com/assets/client-code.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-    &lt;/div&gt;
-Sau khi đi mỏi giò, cả bọn quyết định ghé một nơi tên là Haw Par Villa, ở khá gần NUS. Để đi tới đây thì chỉ cần lên line màu vàng ở MRT, ở đó có luôn một trạm tên là Haw Par Villa. Nơi đây là một công viên với kiến trúc cổ ở trên đường Pasir Panjang với gần 1000 bức tượng và tranh vẽ. Chủ đề chính là câu chuyện văn hóa xã hội Trung Quốc, nhưng thực ra cái chính là nói về các &lt;a href=&#34;http://tinhhoa.net/nhung-hinh-phat-rung-ron-o-18-tang-dia-nguc.html&#34; target=&#34;_blank&#34;&gt; tầng điện ngục&lt;/a&gt; theo quan điểm của người Trung Quốc.
-    &lt;div&gt;
-    &lt;a data-flickr-embed=&#34;true&#34; data-header=&#34;true&#34; data-footer=&#34;true&#34; href=&#34;https://www.flickr.com/photos/99093593@N07/36439726764/in/album-72157686733328033/&#34; title=&#34;IMG_6366&#34;&gt;&lt;img src=&#34;https://farm5.staticflickr.com/4376/36439726764_9fdb07e66f_c.jpg&#34; width=&#34;800&#34; height=&#34;534&#34; alt=&#34;IMG_6366&#34;&gt;&lt;/a&gt;&lt;script async src=&#34;//embedr.flickr.com/assets/client-code.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-    &lt;/div&gt;
-Điểm thú vị ở đây là những người dựng lên công viên này chính là &lt;a href=&#34;https://en.wikipedia.org/wiki/Haw_Par_Villa#History&#34; target=&#34;_blank&#34;&gt;cha đẻ của dầu cao hổ &lt;/a&gt; . Lúc đầu mình cũng hơi nghi nghi, vì lâu lâu lại thấy mây cái tượng xung quanh với 1 khối hình rất giống mấy chai cao hổ, khi đi về google thì đúng ra là vậy. Xem ra cái công viên này cũng gần 100 năm rồi. Các tượng ở đây có style khá là lạ và hơi dị, nhưng mình nghĩ nó xuất phát từ sự lai giữa phong cách Trung Quốc và các nước lân cận.&lt;/p&gt;
-
-&lt;p&gt;Sau khi bị nhầm tùng phèo bởi các trạm Bus để đến SMU, mà thực ra chỉ cần đi tàu đến quán &amp;ldquo;Kim Korean BBQ&amp;rdquo;, quán buffet thịt nướng khá ngon với giá tương đối ổn (29 SGD với người lớn, sinh viên có giảm giá). Phải nói là lần đầu tiên được đi ăn buffet nướng ở Sin sau gần 2 năm làm ở đây. Ngẫm lại mới thấy trải nghiệm ở Sin của mình ít thật. Hy vọng có nhiều dịp được đi nữa.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Bài toán chuyển ngày sang thứ</title>
-      <link>http://dangkhoasdc.github.io/post/sakamoto_method/</link>
-      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/sakamoto_method/</guid>
-      <description>
-
-&lt;p&gt;Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo;
-Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&amp;gt; Chủ Nhật, 1 -&amp;gt; Thứ Hai &amp;hellip;
-Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;amp;R C).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-c&#34;&gt;dayofweek(y, m, d) {
-    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
-    y -= m &amp;lt; 3;
-    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &amp;ldquo;ranh&amp;rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; (Nếu ngày &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt; là thứ Hai thì &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; sẽ là thứ 5). &lt;code&gt;t[]&lt;/code&gt; chính là offset cho ngày đầu tiên của tháng so với ngày &lt;sup&gt;1&lt;/sup&gt;&amp;frasl;&lt;sub&gt;1&lt;/sub&gt;, như vậy ta có &lt;code&gt;t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}&lt;/code&gt; (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.&lt;/p&gt;
-
-&lt;p&gt;Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm &lt;code&gt;y&lt;/code&gt;, ta phải cộng thêm &lt;code&gt;y&lt;/code&gt; ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.&lt;/p&gt;
-
-&lt;p&gt;Những năm nhuận, ta lại phải thêm cái ngày &lt;sup&gt;29&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt; vào trong, tức là nó sẽ thêm 1 ngày nữa, trong &lt;code&gt;y&lt;/code&gt; năm? nếu có &lt;code&gt;y&lt;/code&gt; năm nhuận thì sẽ có thêm &lt;code&gt;x&lt;/code&gt; ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.&lt;/p&gt;
-
-&lt;p&gt;Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày &lt;sup&gt;29&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2&lt;/sub&gt;, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : &lt;code&gt;y -= m &amp;lt; 3&lt;/code&gt;. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.&lt;/p&gt;
-
-&lt;p&gt;Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng &lt;code&gt;t[]&lt;/code&gt; lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào &lt;code&gt;t[0]&lt;/code&gt; và &lt;code&gt;t[1]&lt;/code&gt; và giữ nguyên các &lt;code&gt;t[]&lt;/code&gt; còn lại Sau đó chuyển -1 trong &lt;code&gt;d-1&lt;/code&gt; vào offset, lúc đó ta sẽ được mảng &lt;code&gt;t[]&lt;/code&gt; như trong code gốc.&lt;/p&gt;
-
-&lt;p&gt;Ta còn một vấn đề là xác định ngày ban đầu để làm mốc và độ lệch &lt;code&gt;c&lt;/code&gt; của ngày gốc đó so với ngày Chủ Nhật với &lt;code&gt;index = 0&lt;/code&gt;. Nhưng bằng kiểm chứng, người ta phát hiện ra &lt;code&gt;c = 0&lt;/code&gt;. Wow. 😲&lt;/p&gt;
-
-&lt;p&gt;Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.&lt;/p&gt;
-
-&lt;p&gt;Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.&lt;/p&gt;
-
-&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week&#34; target=&#34;_blank&#34;&gt;Wiki: Determination of the day of the week&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hậu Tây Du Kí</title>
-      <link>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</link>
-      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</guid>
-      <description>&lt;p&gt;Ngày xưa mình mê coi phim này cực kì. Cứ mỗi lần đài lên sóng là rống họng lên hát: &amp;ldquo;quoài oa xinh xiên&amp;rdquo;. Đoạn nhạc phim mở đầu phải nói rất ấn tượng và mình nhớ mãi đến bây giờ. Hôm nay tình cờ được nghe bản lời Việt của 1 bài trong Hậu Tây Du Kí từ chế Bích Phương, tuổi thơ bỗng nhiên trào về.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/bkrhB-KyC6s&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Mới nghe là mình đã biết ngay rằng đây là bài nhạc phim bất hủ hôm nào. Thế là hứng chí lên tìm bản mở đầu, cái bản &amp;ldquo;quoài oa xinh xiên&amp;rdquo; đó&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/WujVQocNprY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Lúc nhỏ coi phim này khá là vui. Chuyện đầu tiên là mấy viên xá lợi, mình thì cứ nghĩ là &amp;ldquo;xí lị&amp;rdquo;, hoặc &amp;ldquo;xá xị&amp;rdquo; gì đó. Phim này thì đánh đấm quá ảo, chưa kể là câu chuyện tam giới phức tạp hơn trong Tây Du Kí bản gốc. Mình vẫn còn nhớ có những chi tiết liên kết với phần trước như vụ &amp;ldquo;Tôn Hành Giả - Giả Hành Tôn&amp;rdquo;, &amp;ldquo;Vô Thiên&amp;rdquo;, rồi cả chuyện hồi sinh của Phật Tổ, các yếu tố thần thoại và fantasy được đề cập nhiều hơn. Mặc dù tạo hình không thân quen như trước nhưng cũng rất đáng xem nếu xét những phim ra sau bộ kinh điển 1986.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hashing in content-based image retrieval</title>
-      <link>http://dangkhoasdc.github.io/project/deep_hashing/</link>
-      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/project/deep_hashing/</guid>
-      <description>&lt;p&gt;Since I worked at SUTD, I have been working on the content-based image retrieval. It is very active in academia and industry. Actually, there are some works I have accomplished:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Image hasing: a joint optimization for image embedding and hashing (CVPR17 paper).&lt;/li&gt;
-&lt;li&gt;Deep Image Retrieval: a scheme for unified deep learning and image retrieval (ACM MM17 paper).&lt;/li&gt;
-&lt;li&gt;Mobile version of Triangulation Embedding.&lt;/li&gt;
-&lt;li&gt;Deep Hashing Image (In progress).&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Good Will Hunting và những bài toán đồ thị </title>
-      <link>http://dangkhoasdc.github.io/post/review_good_will_hunting/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/review_good_will_hunting/</guid>
-      <description>&lt;p&gt;Lâu lắm rồi tôi mới được xem một bộ phim hay đến vậy, có lẽ từ khi xem La La Land, đó là những bộ phim buộc bạn phải ngẩn ngơ một lồi lâu và không ngừng suy nghĩ về nhân vật và những lời thoại. Không có những kĩ xảo tráng lệ hay cốt truyện hại não, bộ phim đơn giản chỉ là câu chuyện của một thanh niên với bộ óc thiên tài trải nghiệm những thay đổi trong cuộc đời. Điều hại não nhất chăng chính là những bài toán được đề cập trong bộ phim, một phần làm tôi rất thích thú.&lt;/p&gt;
-
-&lt;p&gt;Có lẽ nhiều người sẽ quan tâm nhiều hơn về những biến đổi của nhân vật Will, còn với tôi, tôi lại thích hình tượng hai giáo sư Sean và Lambeau. Cả hai là sự nhân cách hóa lựa chọn của Will. Khi cả hai giáo sư nói chuyện với nhau, mà đa phần cãi nhau vì bất đồng quan điểm, những gì thảo luận cho thấy họ từng là những gã thiên tài với đam mê toán học, nhưng Lambeau trở thành một “mathematical god” - với giải Field danh giá, còn Sean thì chọn một hướng đi hoàn toàn khác. Cả hai đều dù trái ngược nhau nhưng lại là phần bù của nhau. Hình ảnh hai người, và cả Will khiến tôi ám ảnh. Một phần trong con người tôi giống Lambeau: Lambeau ám ảnh bởi sự thành công, ám ảnh bởi Field danh giá, ám ảnh bởi vinh quang trong nghiên cứu. Tôi từng, và có lẽ cũng đang có những suy nghĩ tương tự, nỗi ám ảnh phải làm mọi thứ để trở thành “expert” trong lĩnh vực mình làm và lúc nào cũng ép bản thân tới hạn của công việc, như cách mà Lambeau nói về chính mình:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I am what I am today because I was pushed and because I learned to push myself&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Nhưng ấn tượng hơn cả là Sean, Sean đã đưa tôi một bài học khi nói: “There&amp;rsquo;s more to life
-than a fuckin&amp;rsquo; Field&amp;rsquo;s medal.” Chính Lambeau thừa nhận Sean thông minh hơn ông, chính Lambeau cũng thừa nhận Sean từng có thể có Field, nhưng ông đã không làm, ông đã không hối hận về quyết định của mình.&lt;/p&gt;
-
-&lt;p&gt;Bộ phim có rất nhiều đoạn hội thoại rất ý nghĩa, nhưng có lẽ đoạn hay nhất là khi Sean nói chuyện với Will, về sự khác nhau giữa kiến thức và sự thông thái: bạn có thể có được kiến thức bằng cách đọc rất nhiều sách và sở hữu một bộ óc của thiên tài; nhưng bạn không có được sự thông thái nếu không thực sự cảm nhận.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/qM-gZintWDc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Điều đặc biệt ấn tượng với tôi là khi Sean liên tục hỏi Will: “What do you wanna do?” được lặp đi lặp lại, như sự ẩn dụ của bộ phim dành cho người xem, đó chính là câu hỏi dành cho người xem. Đoạn cãi nhau của Sean và Lambeau và chính câu hỏi : “What do you wanna do?” khiến tôi luôn bần thần sau bộ phim, rốt cuộc, điều gì là điều tôi thực sự muốn làm?&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/zKQBHkzOYvw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Mỗi phân cảnh trong phim có lẽ là một câu chuyện đầy ý nghĩa về cuộc sống. Và những đoạn hội thoại ấy sẽ còn lưu lại trong tâm trí người xem thời gian dài.&lt;/p&gt;
-
-&lt;p&gt;Một bộ phim quá hay, và thật không ngờ là Matt Demon và Ben Affleck viết kịch bản xuất sắc đến vậy, đồng thời diễn xuất của các diễn viên hết sức thuyết phục. Từ bối cảnh, kịch bản, biên kịch, tất cả tạo nên một bộ phim giàu tính nghệ thuật và ý nghĩa, đó cũng chính là lí do mà bộ phim có 9 đề cừ Oscar và giành được tượng vàng cho hạng mục Nam Diễn Viên Phụ Xuất Sắc (Robin William) và Kịch Bản Gốc Hay Nhất (Matt và Ben).&lt;/p&gt;
-
-&lt;p&gt;Về những câu hỏi toán trong bộ phim, điều thú vị là Lambeau đạt giải Field trong toán tổ hợp, và đó là lí do mà mấy câu hỏi thách thức để tìm ra thiên tài toán học mới đều liên quan đến mảng này. Các câu hỏi khá hay về đồ thị: từ ma trận cạnh kề và tính chất của nó, từ hàm sinh đến phương pháp đếm đến bài toán tô màu đồ thị. Câu chuyện về các nhà toán học được đề cập trong phim cũng rất thú vị: Ranamujan (có lẽ cuộc đời và trí tuệ của ông thú vị đến nỗi tôi thường xuyên thấy bóng dáng của ông trong các lĩnh vực mình tìm hiểu: trong Hỗn Độn và Hài Hòa của gs. Trịnh Xuân Thuận, trong Volume 1 của The art of computer programming đến bộ phim The Man Who Knew Infinity trên chuyến bay đi Hawaii), Ted Kaczynki: một giáo sư toán học Berkeley, đồng thời cũng là một tên khủng bố. Có lẽ cần đến một post hàng toàn khác để có thể nói về lịch sử thú vị của những bài toán trong phim này.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/N7b0cLn-wHU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-</description>
-    </item>
-    
-    <item>
-      <title>La La Land</title>
-      <link>http://dangkhoasdc.github.io/post/la_la_land/</link>
-      <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/la_la_land/</guid>
-      <description>&lt;p&gt;Tuổi trẻ, tình yêu và khát vọng. Đó là La La Land. Một tựa phim đầy mơ hồ. Nhưng không phải, có lẽ âm &amp;ldquo;La La Land&amp;rdquo; vang lên như một thứ âm nhạc của tuổi trẻ, vượt qua những rào cản của ngôn ngữ, đó là chốn thiên đường mà những kẻ khao khát từng chìm đắm và mơ mộng.&lt;/p&gt;
-
-&lt;p&gt;Xem La La Land tôi nhớ đến &lt;a href=&#34;http://www.imdb.com/title/tt0947798/?ref_=nv_sr_1&#34; target=&#34;_blank&#34;&gt;Black Swan&lt;/a&gt; và &lt;a href=&#34;http://www.imdb.com/title/tt0947798/?ref_=nv_sr_1&#34; target=&#34;_blank&#34;&gt;Whiplash&lt;/a&gt;, cũng là câu chuyện về những người trẻ với khát vọng và niềm đam mê của mình.&lt;/p&gt;
-
-&lt;p&gt;Black Swan nói về đam mê đến ám ảnh, đến những vũ điệu balê và tác phẩm Hồ Thiên Nga nổi tiếng. Đó là câu chuyện về nghệ thuật, về bản ngã và cái giá của nghệ thuật. Cô gái (Nina - Natalie Portman) trong phim ám ảnh vai diễn đến nỗi trong tưởng tượng đã giết chết bạn diễn của mình, thoát khỏi vỏ bọc bé bỏng mỏng manh của thiên nga trắng đến hoàn toàn hóa thân thành Thiên Nga Đen với sự lôi cuốn và khao khát mãnh liệt. Nina Thoát khỏi giới hạn và khuôn khổ của bản thân để đạt đến sự hoàn hảo.&lt;/p&gt;
-
-&lt;p&gt;Whiplash lại là câu chuyện về chàng trai Andrew đam mê chơi trống. Giống Black Swan, chàng trai khi muốn vượt đến một tầm cao mới phải trả giá bằng tổn thương cả thể xác và tinh thần và cố gắng thoát khỏi vùng an toàn của chính bản thân. Tôi nghĩ hai bộ phim trên bao giờ cũng mang lại động lực cho người trẻ tìm đến sự toàn mỹ, cái đích đến của một tài năng được công nhận không bao giờ là dễ dàng.&lt;/p&gt;
-
-&lt;p&gt;La La Land chính là thành quả của tuổi trẻ và đam mê của &lt;a href=&#34;https://en.wikipedia.org/wiki/Damien_Chazelle&#34; target=&#34;_blank&#34;&gt;Damien Chazelle&lt;/a&gt;.
-La La Land là jazz, La La Land là sự tri ân của chàng sinh viên Harvard với khát vọng điện ảnh đã viết nên trong suốt thời gian ở trường. Đó là câu chuyện của chính chàng trai, gói gém trong những bản nhạc jazz trữ tình, kể về thổn thức của tuổi trẻ của anh.&lt;/p&gt;
-
-&lt;p&gt;Đó cũng là thổn thức của những người trẻ.&lt;/p&gt;
-
-&lt;p&gt;Jazz là phương tiện để chàng mang đến nỗi khắc khoải về tuổi trẻ. Như chính nhân vật Sebastian trong phim khi kể về nguồn gốc của jazz, jazz là sự tương tác của những con người ở các tầng lớp với nhau với ngôn ngữ khác biệt, họ có câu chuyện của riêng họ. Chính sự tương tác của những cảnh đời vậy tạo nên jazz. Còn phương tiện nào tuyệt hơn để nhà biên kịch truyền tải về tuổi trẻ của mình.&lt;/p&gt;
-
-&lt;p&gt;La La Land rất đẹp, đẹp từ dựng hình, từ âm thanh đến trang phục. Đó cũng chính là con mắt của người trẻ với cuộc đời, đầy ước mơ. Và đó chính là những gì đẹp đẽ nhất mà tuổi trẻ mong có được. Rất khó để diễn tả gam màu chủ đạo của bộ phim. Rực rỡ, tươi tắn. Jazz. Hollywood. Bồng bột và nhiệt huyết. Ồ, đó là màu sắc của điện ảnh.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://cdn.empireonline.com/jpg/80/0/0/1000/563/0/north/0/0/0/0/0/t/films/313369/images/nadTlnTE6DdgmYsN4iWc2a2wiaI.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Với tôi La La Land không phải là cả bộ phim, La La Land thực sự chính là trường đoạn kết thúc phim. Mọi thứ đều đẹp, mọi giấc mơ đều chạm tới, và hạnh phúc tràn ngập. Tất cả cuộn trong chất nhạc, gam màu sắc tươi tắng và lãng mạn. Và đúng như những gì dự tính, La La Land được miêu tả bằng jazz, bằng hình ảnh và tuyệt nhiên không một lời thoại. Bởi trong giấc mơ nào, đó là lời tự tình của đạo diễn, của người xem với chính họ. Đạo diễn đưa bàn tay đễn dẫn lối người xem đến La La Land của riêng họ.&lt;/p&gt;
-
-&lt;p&gt;Nhưng cái tài của đạo diễn chính là khiến người xem thổn thức với La La Land, họ cay đắng nhận ra, rốt cuộc, tên tác giả láo cá  đã kể 1 câu chuyện khác suốt hai tiếng đồng hồ. Ở đó nhân vật của chúng ta luôn hoài nghi về năng lực của mình, và họ buộc phải làm những việc họ không muốn làm, phải chọn con đường thực tâm không muốn đi. Tôi rất thích hai nhân vật chính, hoàn cảnh của họ, động lực của họ phần nào giống bản thân tôi: lạc lõng giữa những quyết định, với mục tiêu và hoài bão của bản thân. Đó là lí do tôi không chê trách gì quyết định của Mia lẫn Sebastian, tấm vé đến La La Land không dành cho mọi người. Vé đôi lại càng kham hiếm.&lt;/p&gt;
-
-&lt;p&gt;Giấc mơ tuyệt mỹ năm nào dần dần rời xa như cái ánh sáng xanh phía bên kia hồ dần rời xa Gatsby.  Phải chăng, tất cả cũng đều là giấc mơ. Gatsby chạy theo giấc mơ về sự vương giả và tình yêu, mà không gì khác là hình tượng của giấc mơ Mỹ. Mia và Sebastian cũng đuổi bám theo giấc mơ nghệ thuật riêng mình, chính là hình tượng của kinh đô Hollywood mà Sebastian nói:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;L.A. worships everything and values nothing&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Để rồi đọng lại, La La Land tuy rất đẹp, nhưng rất buồn. Bởi vùng đất ấy mãi mãi chỉ nằm trong hồi ức một thời xa lắm.&lt;/p&gt;
-
-&lt;p&gt;Có lẽ tôi không nói nhiều về sự thành công của phim. 11 đề cử giải Oscar và 5 giải thưởng được trao đã nói lên điều đó. Nhưng điều tôi đặc biệt thích, đó có lẽ là âm nhạc và hình ảnh. Hơn hết hai yếu tố trên đã trở thành một người kể chuyện trong phim. Và sự kiện trao nhầm giải ở Oscar có lẽ cũng là điều thú vị cho bộ phim. Dù rằng tình huống này thạt oái ăm cho cả đoàn phim của La La Land lẫn Moonlight.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/rvK-g1rehpU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Honest Trailer có một video xuất sắc về vụ này :lol:&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/C39YJymGp3Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-</description>
-    </item>
-    
-    <item>
-      <title>rand() is harmful</title>
-      <link>http://dangkhoasdc.github.io/post/rand/</link>
-      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/rand/</guid>
-      <description>
-
-&lt;h1 id=&#34;rand&#34;&gt;rand()&lt;/h1&gt;
-
-&lt;p&gt;Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &amp;ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&amp;rdquo;
-Bài talk duy chỉ nói về việc dùng hàm &lt;code&gt;rand()&lt;/code&gt; và đặc biệt sử dụng chung với &lt;code&gt;%&lt;/code&gt; (mod) hay floating point scale là thực sự &lt;em&gt;sai lầm&lt;/em&gt;  và &lt;em&gt;nghiêm trọng&lt;/em&gt; . Đặc biệt, nó không hề tạo ra uniform distribution như ta thường nghĩ, thậm chí nó khiến cho 1 số giá trị đặc biệt hiếm khi xảy ra 😄&lt;/p&gt;
-
-&lt;p&gt;Bản chất hàm &lt;code&gt;rand&lt;/code&gt; được implement khá đơn giản &lt;a href=&#34;https://en.wikipedia.org/wiki/Linear_congruential_generator&#34; target=&#34;_blank&#34;&gt; linear congruential &lt;/a&gt; nhờ tận dụng tính chất của số căn nguyên thủy (xem &lt;a href=&#34;https://en.wikipedia.org/wiki/Lehmer_random_number_generator&#34; target=&#34;_blank&#34;&gt;Lehmer random generator&lt;/a&gt;). Điều thú vị nằm ở chỗ 1 tính chất không liên quan mấy bên lý thuyết số lại hỗ trợ cho việc sinh số ngẫu nhiên.
-Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để check xem empirical results có đúng với probabilities không (uniform distribution với biến ngẫu nhiên rời rạc), đó là dùng Chi squared test.&lt;/p&gt;
-
-&lt;p&gt;Link:
-&lt;a href=&#34;https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful&#34; target=&#34;_blank&#34;&gt;https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful&lt;/a&gt;&lt;/p&gt;
-</description>
+      <guid>http://dangkhoasdc.github.io/search/</guid>
+      <description></description>
     </item>
     
   </channel>

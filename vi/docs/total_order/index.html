@@ -6,7 +6,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C&#43;&#43;. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
  Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.'>
-<meta name='theme-color' content='#ffcd00'>
+<meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Cài đặt quan hệ thứ tự trong C&#43;&#43; • Dang-Khoa'>
 <meta property='og:description' content='Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C&#43;&#43;. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
@@ -22,8 +22,8 @@
   
   
   <link rel='icon' href='/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
-:root{--color-accent:#ffcd00;}
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#44ccff;}
 </style>
 
 <script type="application/javascript">
@@ -42,17 +42,161 @@ if (!doNotTrack) {
 </head>
 
 
-<body class='page type-docs'>
+<body class='page type-docs has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/vi/'>
+        <img src='/images/logo.svg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    Dang-Khoa&#39;s blog 
+    </h2>
+    <div class='desc'>
+    just another blog
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/vi/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/vi/'>Trang chủ</a></li><li class='item'>
+  <a href='/vi/docs/'>Docs</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/vi/tags/c&#43;&#43;' style='font-size:1em'>C&#43;&#43;</a>
+      </li><li>
+        <a href='/vi/tags/computer-vision' style='font-size:1em'>Computer Vision</a>
+      </li><li>
+        <a href='/vi/tags/machine-learning' style='font-size:1em'>Machine Learning</a>
+      </li><li>
+        <a href='/vi/tags/algorithms' style='font-size:1.6153846153846154em'>algorithms</a>
+      </li><li>
+        <a href='/vi/tags/android' style='font-size:1em'>android</a>
+      </li><li>
+        <a href='/vi/tags/books' style='font-size:1.1538461538461537em'>books</a>
+      </li><li>
+        <a href='/vi/tags/computer-science' style='font-size:1em'>computer science</a>
+      </li><li>
+        <a href='/vi/tags/computer-vision' style='font-size:1em'>computer vision</a>
+      </li><li>
+        <a href='/vi/tags/computer-vison' style='font-size:1em'>computer vison</a>
+      </li><li>
+        <a href='/vi/tags/courses' style='font-size:1em'>courses</a>
+      </li><li>
+        <a href='/vi/tags/cpp' style='font-size:1.0769230769230769em'>cpp</a>
+      </li><li>
+        <a href='/vi/tags/cvpr' style='font-size:1em'>cvpr</a>
+      </li><li>
+        <a href='/vi/tags/deep-learning' style='font-size:1em'>deep learning</a>
+      </li><li>
+        <a href='/vi/tags/documentary' style='font-size:1em'>documentary</a>
+      </li><li>
+        <a href='/vi/tags/font' style='font-size:1em'>font</a>
+      </li><li>
+        <a href='/vi/tags/games' style='font-size:1.0769230769230769em'>games</a>
+      </li><li>
+        <a href='/vi/tags/gaming' style='font-size:1em'>gaming</a>
+      </li><li>
+        <a href='/vi/tags/history' style='font-size:1em'>history</a>
+      </li><li>
+        <a href='/vi/tags/machine-learning' style='font-size:1em'>machine learning</a>
+      </li><li>
+        <a href='/vi/tags/memories' style='font-size:1.1538461538461537em'>memories</a>
+      </li><li>
+        <a href='/vi/tags/misc' style='font-size:1.6153846153846154em'>misc</a>
+      </li><li>
+        <a href='/vi/tags/movies' style='font-size:1.3076923076923077em'>movies</a>
+      </li><li>
+        <a href='/vi/tags/notes' style='font-size:1.0769230769230769em'>notes</a>
+      </li><li>
+        <a href='/vi/tags/opencv' style='font-size:1.0769230769230769em'>opencv</a>
+      </li><li>
+        <a href='/vi/tags/programming' style='font-size:2em'>programming</a>
+      </li><li>
+        <a href='/vi/tags/python' style='font-size:1.0769230769230769em'>python</a>
+      </li><li>
+        <a href='/vi/tags/research' style='font-size:1.1538461538461537em'>research</a>
+      </li><li>
+        <a href='/vi/tags/review' style='font-size:1.7692307692307692em'>review</a>
+      </li><li>
+        <a href='/vi/tags/singapore' style='font-size:1em'>singapore</a>
+      </li><li>
+        <a href='/vi/tags/software-engineer' style='font-size:1em'>software engineer</a>
+      </li><li>
+        <a href='/vi/tags/taocp' style='font-size:1.0769230769230769em'>taocp</a>
+      </li><li>
+        <a href='/vi/tags/travel' style='font-size:1.1538461538461537em'>travel</a>
+      </li><li>
+        <a href='/vi/tags/tutorial' style='font-size:1em'>tutorial</a>
+      </li><li>
+        <a href='/vi/tags/vietnam' style='font-size:1em'>vietnam</a>
+      </li><li>
+        <a href='/vi/tags/visual-studio' style='font-size:1em'>visual studio</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
       <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
   <div class='container'>
-    
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
     <ul><li class='item'>
         <a href='/vi/' class="">
           <span>Trang chủ</span>
@@ -62,32 +206,16 @@ if (!doNotTrack) {
           <span>Docs</span>
         </a>
       </li><li class='item'>
-        <a href='/vi/page/about/' class="">
+        <a href='/vi/dangkhoasdc/' class="">
           <span>dangkhoasdc</span>
         </a>
       </li><li class='item'>
-        <a href='#posts' class="">
-          <span>Posts</span>
+        <a href='/vi/' class="vi">
+          <span>Tiếng Việt</span>
         </a>
       </li><li class='item'>
-        <a href='#about' class="">
-          <span>Home</span>
-        </a>
-      </li><li class='item'>
-        <a href='#projects' class="">
-          <span>Projects</span>
-        </a>
-      </li><li class='item'>
-        <a href='#publications_selected' class="">
-          <span>Publications</span>
-        </a>
-      </li><li class='item'>
-        <a href='/about/' class="">
-          <span>About</span>
-        </a>
-      </li><li class='item'>
-        <a href='/tags/notes/' class="">
-          <span>Notes</span>
+        <a href='/' class="en">
+          <span>English</span>
         </a>
       </li></ul>
   </div>
@@ -95,7 +223,7 @@ if (!doNotTrack) {
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'>just another blog</p>
           </div>
         </div>
       </header>
@@ -133,6 +261,15 @@ if (!doNotTrack) {
 </svg>
 <span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
   
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+7 mins read
+</span>
+
 
   
   
@@ -166,36 +303,27 @@ Và trong &ldquo;thực tế đời sống&rdquo;, Weak Order chính là dấu <
 
 <p>Vậy có điều gì khó khăn khi phải cài đặt dấu <code>&lt;</code> này? Giả sử ta có một hàm như
 sau:</p>
-
-<pre><code class="language-cpp">template&lt;typename T&gt; bool f(const T&amp; lhs, const T&amp; rhs) { return lsh&lt;rhs; }
-
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">bool</span> f(<span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> lhs, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> rhs) { <span style="color:#66d9ef">return</span> lsh<span style="color:#f92672">&lt;</span>rhs; }
+</code></pre></div>
 <p>Giả sử ta viết một thư viện trong đó chứa hàm <code>f</code> và mong muốn bất kì ai sử
 dụng cũng phải cài đặt dấu <code>&lt;</code> cho CTDL của mình. Bởi đôi khi, dấu <code>&lt;</code> mặc
 định của C++ chưa chắc mang ngữ nghĩa đúng, hay bất kì một CTDL tự tạo nào
 không chứa dấu <code>&lt;</code> cũng gặp lỗi. Vậy nếu có cơ chế nào giúp trình biên dịch
 phát hiện được LTV quên cài đặt dấu này. Cụ thể hơn ta, muốn có:</p>
-
-<pre><code class="language-cpp">template&lt;typename T&gt;
-bool f(const T&amp; lhs, const T&amp; rhs) {
-    // Error if T does not have `&lt;` operator
-    // otherwise
-    return lsh&lt;rhs;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">bool</span> f(<span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> lhs, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> rhs) {
+    <span style="color:#75715e">// Error if T does not have `&lt;` operator
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// otherwise
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> lsh<span style="color:#f92672">&lt;</span>rhs;
 }
-
-</code></pre>
-
+</code></pre></div>
 <p>Trong C++11, ta có 1 cơ chế khá giống như vậy:</p>
-
-<pre><code class="language-cpp">template&lt;typename T&gt;
-bool f(const T&amp; lhs, const T&amp; rhs) {
-    static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt; operator&quot;);
-    return lsh&lt;rhs;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">bool</span> f(<span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> lhs, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> rhs) {
+    <span style="color:#66d9ef">static_assert</span>(has_less_operator<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;::</span>value, <span style="color:#e6db74">&#34;Please implement &lt; operator&#34;</span>);
+    <span style="color:#66d9ef">return</span> lsh<span style="color:#f92672">&lt;</span>rhs;
 }
-
-</code></pre>
-
+</code></pre></div>
 <p>Kỹ thuật sử dụng <code>struct&lt;T&gt;::value</code> được gọi là <a href="https://accu.org/index.php/journals/442" target="_blank">type traits</a>,
 được sử dụng rất
 phổ biến trong STL, metaprogramming, các thư viện như BOOST, dlib. Tiếp, <code>::value</code>
@@ -203,47 +331,38 @@ phổ biến trong STL, metaprogramming, các thư viện như BOOST, dlib. Ti�
 khi lớp T chứa/ hoặc không chứa <code>&lt;</code>, nên kiểu phải là <code>bool</code>. Do giá trị này được
 kiểm tra lúc trình biên
 dịch thực thi, nên hẳn là <code>constexpr</code>. Xong tạm thời ta có 1 cài đặt:</p>
-
-<pre><code class="language-cpp">template&lt;typename T&gt;
-class has_less_operator{
-    private:
-        // stuff
-    public:
-        static constexpr bool value = // and other stuff;
-};
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#a6e22e">has_less_operator</span>{
+    <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+        <span style="color:#75715e">// stuff
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">constexpr</span> <span style="color:#66d9ef">bool</span> value <span style="color:#f92672">=</span> <span style="color:#75715e">// and other stuff;
+</span><span style="color:#75715e"></span>};
+</code></pre></div>
 <p>Và giờ đến phần khoai nhất khi cài đặt. Ta buộc phải gán &ldquo;cái gì đó&rdquo; vào <code>value</code>,
 nhưng ngay tại thời điểm cài đặt ta còn không biết nó có giá trị gì, và hoàn toàn
 phụ thuật vào CTDL <code>T</code> nào đó do LTV khác viết. Hay nói một cách khác, chính giá
 trị boolean cũng bị tham số hóa theo kiểu. May mắn thay, STL có hỗ trợ vụ này:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;type_traits&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 
-<pre><code class="language-cpp">#include &lt;type_traits&gt;
-
-using namespace std;
-
-typedef true_type yes;
-typedef false_type no;
-
-</code></pre>
-
+<span style="color:#66d9ef">typedef</span> true_type yes;
+<span style="color:#66d9ef">typedef</span> false_type no;
+</code></pre></div>
 <p>Lúc này ta có thể viết :</p>
-
-<pre><code class="language-cpp">static constexpr bool value = is_same&lt;yes, /* X */&gt;::value;
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">constexpr</span> <span style="color:#66d9ef">bool</span> value <span style="color:#f92672">=</span> is_same<span style="color:#f92672">&lt;</span>yes, <span style="color:#75715e">/* X */</span><span style="color:#f92672">&gt;::</span>value;
+</code></pre></div>
 <p>Như vậy <code>value</code> sẽ phụ thuộc vào <code>is_same&lt;yes, X&gt;::value</code>. Vấn đề X ở đây là gì?
 Ta xem trong STL, <code>is_same</code> nhận 2 datatype làm input. Vậy X chính là 1 datatype
 khác. Nhưng cụ thể hơn nó có thể là yes/no để <code>value</code> trở thành yes/no.</p>
 
 <p>Tới đây là một đoạn cực kì fancy, nhưng mình không biết giải thích trước thế nào
 nhưng trước hết cứ viết ra đã:</p>
-
-<pre><code class="language-cpp">static constexpr bool value = is_same&lt;yes,
-                                    decltype(test&lt;T&gt;(nullptr))
-                                    &gt;::value;
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">constexpr</span> <span style="color:#66d9ef">bool</span> value <span style="color:#f92672">=</span> is_same<span style="color:#f92672">&lt;</span>yes,
+                                    <span style="color:#66d9ef">decltype</span>(test<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>(<span style="color:#66d9ef">nullptr</span>))
+                                    <span style="color:#f92672">&gt;::</span>value;
+</code></pre></div>
 <p><code>decltype</code> trả về kiểu dữ liệu <code>return type</code> của hàm <code>test</code> và ta cố tình đưa
 toàn bộ cài đặt vào trong <code>test</code> này. Bởi toán tử <code>&lt;</code> trong C++ yêu cầu 1 tham
 số đầu vào nên ta để 1 tham số hàm <code>test</code> làm dummy. Như vậy ta biết chắc chắn
@@ -251,17 +370,13 @@ số đầu vào nên ta để 1 tham số hàm <code>test</code> làm dummy. Nh
 trên. Đồng thời, ta biết rằng mặc định mọi kiểu dữ liệu <code>T</code> sẽ trả về <code>no</code>.</p>
 
 <p>Tức ta có :</p>
-
-<pre><code class="language-cpp">template&lt;typename&gt; static no test(...);
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">static</span> no test(...);
+</code></pre></div>
 <p>Xong cho phần sai. Giờ làm thế nào để trả về <code>yes</code> khi dữ liệu thực sự đã cài
 đặt <code>&lt;</code>. Ta có 1 hàm test thứ 2:</p>
-
-<pre><code class="language-cpp">template&lt;typename P&gt; static auto test (P *p)
-    -&gt; decltype(declval&lt;T&gt;()&lt;(*p), yes());
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> P<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">auto</span> test (P <span style="color:#f92672">*</span>p)
+    <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">decltype</span>(declval<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>()<span style="color:#f92672">&lt;</span>(<span style="color:#f92672">*</span>p), yes());
+</code></pre></div>
 <p>WTF =))) Điều gì đang xảy ra ở đây? Nhờ một khái niệm <a href="https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error" target="_blank">SFINAE</a>,
 chúng ta được chứng kiến sự điên rồ của C++.</p>
 
@@ -278,60 +393,56 @@ không tồn tại <code>&lt;</code>, biểu thức này fail nhưng sẽ không
 vào đó trình biên dịch gán <code>test</code> cho <code>static no test(...)</code>.</p>
 
 <p>Tổng kết lại ta có code như sau:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;type_traits&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#66d9ef">typedef</span> std<span style="color:#f92672">::</span>true_type yes;
+<span style="color:#66d9ef">typedef</span> std<span style="color:#f92672">::</span>false_type no;
 
-<pre><code class="language-cpp">
-#include &lt;iostream&gt;
-#include &lt;type_traits&gt;
-
-using namespace std;
-typedef std::true_type yes;
-typedef std::false_type no;
-
-template&lt;typename T&gt;
-class has_less_operator {
-    private:
-    template&lt;typename P&gt; static auto test(P *p) -&gt; decltype(std::declval&lt;P&gt;()&lt;(*p), yes());
-    template&lt;typename&gt; static no test(...);
+<span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#a6e22e">has_less_operator</span> {
+    <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> P<span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">auto</span> test(P <span style="color:#f92672">*</span>p) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">decltype</span>(std<span style="color:#f92672">::</span>declval<span style="color:#f92672">&lt;</span>P<span style="color:#f92672">&gt;</span>()<span style="color:#f92672">&lt;</span>(<span style="color:#f92672">*</span>p), yes());
+    <span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span><span style="color:#f92672">&gt;</span> <span style="color:#66d9ef">static</span> no test(...);
 
 
-    public:
-    static constexpr bool value = is_same&lt;
+    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">constexpr</span> <span style="color:#66d9ef">bool</span> value <span style="color:#f92672">=</span> is_same<span style="color:#f92672">&lt;</span>
                                     yes,
-                                    decltype(test&lt;T&gt;(nullptr))
-                               &gt;::value;
+                                    <span style="color:#66d9ef">decltype</span>(test<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span>(<span style="color:#66d9ef">nullptr</span>))
+                               <span style="color:#f92672">&gt;::</span>value;
 };
 
-template&lt;typename T&gt;
-bool f(const T&amp; lsh, const T&amp; rhs) {
-    static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt;&quot;);
-    return lsh&lt;rhs;
+<span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">bool</span> f(<span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> lsh, <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> rhs) {
+    <span style="color:#66d9ef">static_assert</span>(has_less_operator<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;::</span>value, <span style="color:#e6db74">&#34;Please implement &lt;&#34;</span>);
+    <span style="color:#66d9ef">return</span> lsh<span style="color:#f92672">&lt;</span>rhs;
 }
 
-struct s1 {
-    int i;
-    s1(int _i): i(_i) {  }
-    inline bool operator&lt;(const s1&amp; other) const {
-        return i &lt; other.i;
+<span style="color:#66d9ef">struct</span> s1 {
+    <span style="color:#66d9ef">int</span> i;
+    s1(<span style="color:#66d9ef">int</span> _i)<span style="color:#f92672">:</span> i(_i) {  }
+    <span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;</span>(<span style="color:#66d9ef">const</span> s1<span style="color:#f92672">&amp;</span> other) <span style="color:#66d9ef">const</span> {
+        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">&lt;</span> other.i;
     }
 };
 
-struct s2 {
-    int i;
-    s2(int _i): i(_i) {  }
+<span style="color:#66d9ef">struct</span> s2 {
+    <span style="color:#66d9ef">int</span> i;
+    s2(<span style="color:#66d9ef">int</span> _i)<span style="color:#f92672">:</span> i(_i) {  }
 };
 
-int main(int argc, char const* argv[])
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#66d9ef">const</span><span style="color:#f92672">*</span> argv[])
 {
-    s1 a(10);
-    s1 b(20);
+    s1 a(<span style="color:#ae81ff">10</span>);
+    s1 b(<span style="color:#ae81ff">20</span>);
     f(a, b);
-    /* s2 c(10), d(20); */
-    /* f(c, d); */
-    return 0;
+    <span style="color:#75715e">/* s2 c(10), d(20); */</span>
+    <span style="color:#75715e">/* f(c, d); */</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
-
-</code></pre>
-
+</code></pre></div>
 <p>Nếu ta uncomment s2 và f bên dưới, ta có thông báo lỗi như sau:</p>
 
 <pre><code>a.cpp: In instantiation of ‘bool f(const T&amp;, const T&amp;) [with T = s2]’:
@@ -364,19 +475,17 @@ này dễ dàng thông qua <code>&lt;</code>:</p>
 kiểu này: chỉ cần định nghĩa <code>&lt;</code> và 3 toán tử còn lại tự nội suy. Nhờ vào kỹ
 thuật <a href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern" target="_blank">Curiously recurring template pattern</a>,
 ta có một code khá gọn:</p>
-
-<pre><code class="language-cpp">template&lt;typename T&gt;
-struct order {
-    virtual bool operator&lt;( const T&amp; rhs) const = 0;
-    bool operator&gt;( const T&amp; rhs) const
-        {return rhs&lt;static_cast&lt;const T&amp;&gt;(*this);}
-    bool operator&gt;=( const T&amp; rhs) const
-        {return !((*this)&lt;rhs); }
-    bool operator&lt;=( const T&amp; rhs) const
-        {return !(rhs&lt; static_cast&lt;const T&amp;&gt;(*this));}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">struct</span> order {
+    <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;</span>( <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> rhs) <span style="color:#66d9ef">const</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&gt;</span>( <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> rhs) <span style="color:#66d9ef">const</span>
+        {<span style="color:#66d9ef">return</span> rhs<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">static_cast</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;&gt;</span>(<span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>);}
+    <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&gt;=</span>( <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> rhs) <span style="color:#66d9ef">const</span>
+        {<span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span>((<span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>)<span style="color:#f92672">&lt;</span>rhs); }
+    <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span><span style="color:#f92672">&lt;=</span>( <span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;</span> rhs) <span style="color:#66d9ef">const</span>
+        {<span style="color:#66d9ef">return</span> <span style="color:#f92672">!</span>(rhs<span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">static_cast</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">const</span> T<span style="color:#f92672">&amp;&gt;</span>(<span style="color:#f92672">*</span><span style="color:#66d9ef">this</span>));}
 };
-</code></pre>
-
+</code></pre></div>
 <p>Như vậy chỉ cần kế thừa <code>order</code> và cài đặt <code>&lt;</code>, ta sẽ có luôn 3 toán tử còn lại.
 Điều duy nhất mình ức chê là phải sử dụng <code>static_cast</code>.</p>
 
@@ -426,12 +535,56 @@ struct order {
 </nav>
 
 
-
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
 
       </main>
 
       <footer id='footer' class='footer'>
-        <div class='container sep-before'><div class='copyright'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/dangkhoasdc' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:letan.dangkhoa@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
   <p>&amp;copy; 2017 Dang-Khoa</p>
 </div>
 
@@ -441,7 +594,7 @@ struct order {
     </div>
   </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
 
-<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script src='/js/custom.js'></script><script type='text/x-mathjax-config'>
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
 </script>
 

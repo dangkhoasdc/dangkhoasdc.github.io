@@ -5,7 +5,7 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện Caffe. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C&#43;&#43;. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu. Giới thiệu Protocol Buffers là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển.'>
-<meta name='theme-color' content='#ffcd00'>
+<meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe • Dang-Khoa'>
 <meta property='og:description' content='Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện Caffe. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C&#43;&#43;. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu. Giới thiệu Protocol Buffers là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển.'>
@@ -20,8 +20,8 @@
   
   
   <link rel='icon' href='/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
-:root{--color-accent:#ffcd00;}
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#44ccff;}
 </style>
 
 <script type="application/javascript">
@@ -40,17 +40,161 @@ if (!doNotTrack) {
 </head>
 
 
-<body class='page type-docs'>
+<body class='page type-docs has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/vi/'>
+        <img src='/images/logo.svg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    Dang-Khoa&#39;s blog 
+    </h2>
+    <div class='desc'>
+    just another blog
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/vi/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/vi/'>Trang chủ</a></li><li class='item'>
+  <a href='/vi/docs/'>Docs</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/vi/tags/c&#43;&#43;' style='font-size:1em'>C&#43;&#43;</a>
+      </li><li>
+        <a href='/vi/tags/computer-vision' style='font-size:1em'>Computer Vision</a>
+      </li><li>
+        <a href='/vi/tags/machine-learning' style='font-size:1em'>Machine Learning</a>
+      </li><li>
+        <a href='/vi/tags/algorithms' style='font-size:1.6153846153846154em'>algorithms</a>
+      </li><li>
+        <a href='/vi/tags/android' style='font-size:1em'>android</a>
+      </li><li>
+        <a href='/vi/tags/books' style='font-size:1.1538461538461537em'>books</a>
+      </li><li>
+        <a href='/vi/tags/computer-science' style='font-size:1em'>computer science</a>
+      </li><li>
+        <a href='/vi/tags/computer-vision' style='font-size:1em'>computer vision</a>
+      </li><li>
+        <a href='/vi/tags/computer-vison' style='font-size:1em'>computer vison</a>
+      </li><li>
+        <a href='/vi/tags/courses' style='font-size:1em'>courses</a>
+      </li><li>
+        <a href='/vi/tags/cpp' style='font-size:1.0769230769230769em'>cpp</a>
+      </li><li>
+        <a href='/vi/tags/cvpr' style='font-size:1em'>cvpr</a>
+      </li><li>
+        <a href='/vi/tags/deep-learning' style='font-size:1em'>deep learning</a>
+      </li><li>
+        <a href='/vi/tags/documentary' style='font-size:1em'>documentary</a>
+      </li><li>
+        <a href='/vi/tags/font' style='font-size:1em'>font</a>
+      </li><li>
+        <a href='/vi/tags/games' style='font-size:1.0769230769230769em'>games</a>
+      </li><li>
+        <a href='/vi/tags/gaming' style='font-size:1em'>gaming</a>
+      </li><li>
+        <a href='/vi/tags/history' style='font-size:1em'>history</a>
+      </li><li>
+        <a href='/vi/tags/machine-learning' style='font-size:1em'>machine learning</a>
+      </li><li>
+        <a href='/vi/tags/memories' style='font-size:1.1538461538461537em'>memories</a>
+      </li><li>
+        <a href='/vi/tags/misc' style='font-size:1.6153846153846154em'>misc</a>
+      </li><li>
+        <a href='/vi/tags/movies' style='font-size:1.3076923076923077em'>movies</a>
+      </li><li>
+        <a href='/vi/tags/notes' style='font-size:1.0769230769230769em'>notes</a>
+      </li><li>
+        <a href='/vi/tags/opencv' style='font-size:1.0769230769230769em'>opencv</a>
+      </li><li>
+        <a href='/vi/tags/programming' style='font-size:2em'>programming</a>
+      </li><li>
+        <a href='/vi/tags/python' style='font-size:1.0769230769230769em'>python</a>
+      </li><li>
+        <a href='/vi/tags/research' style='font-size:1.1538461538461537em'>research</a>
+      </li><li>
+        <a href='/vi/tags/review' style='font-size:1.7692307692307692em'>review</a>
+      </li><li>
+        <a href='/vi/tags/singapore' style='font-size:1em'>singapore</a>
+      </li><li>
+        <a href='/vi/tags/software-engineer' style='font-size:1em'>software engineer</a>
+      </li><li>
+        <a href='/vi/tags/taocp' style='font-size:1.0769230769230769em'>taocp</a>
+      </li><li>
+        <a href='/vi/tags/travel' style='font-size:1.1538461538461537em'>travel</a>
+      </li><li>
+        <a href='/vi/tags/tutorial' style='font-size:1em'>tutorial</a>
+      </li><li>
+        <a href='/vi/tags/vietnam' style='font-size:1em'>vietnam</a>
+      </li><li>
+        <a href='/vi/tags/visual-studio' style='font-size:1em'>visual studio</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
       <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
   <div class='container'>
-    
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
     <ul><li class='item'>
         <a href='/vi/' class="">
           <span>Trang chủ</span>
@@ -60,32 +204,16 @@ if (!doNotTrack) {
           <span>Docs</span>
         </a>
       </li><li class='item'>
-        <a href='/vi/page/about/' class="">
+        <a href='/vi/dangkhoasdc/' class="">
           <span>dangkhoasdc</span>
         </a>
       </li><li class='item'>
-        <a href='#posts' class="">
-          <span>Posts</span>
+        <a href='/vi/' class="vi">
+          <span>Tiếng Việt</span>
         </a>
       </li><li class='item'>
-        <a href='#about' class="">
-          <span>Home</span>
-        </a>
-      </li><li class='item'>
-        <a href='#projects' class="">
-          <span>Projects</span>
-        </a>
-      </li><li class='item'>
-        <a href='#publications_selected' class="">
-          <span>Publications</span>
-        </a>
-      </li><li class='item'>
-        <a href='/about/' class="">
-          <span>About</span>
-        </a>
-      </li><li class='item'>
-        <a href='/tags/notes/' class="">
-          <span>Notes</span>
+        <a href='/' class="en">
+          <span>English</span>
         </a>
       </li></ul>
   </div>
@@ -93,7 +221,7 @@ if (!doNotTrack) {
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'>just another blog</p>
           </div>
         </div>
       </header>
@@ -131,6 +259,15 @@ if (!doNotTrack) {
 </svg>
 <span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
   
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+8 mins read
+</span>
+
 
   
   
@@ -182,34 +319,30 @@ if (!doNotTrack) {
 <h1 id="thiết-kế-dữ-liệu">Thiết kế dữ liệu</h1>
 
 <p>Dữ liệu được thiết kế trong một file <code>proto</code>. Dưới đây là ví dụ trong website của Google, mục đích để quản lý danh bạ điện thoại.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-protocol-buffers" data-lang="protocol-buffers">    <span style="color:#f92672">package</span> <span style="color:#a6e22e">tutorial</span>;
 
-<pre><code class="language-protocol-buffers">    package tutorial;
+    <span style="color:#a6e22e">message</span> <span style="color:#a6e22e">Person</span> {
+      <span style="color:#a6e22e">required</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">name</span> = <span style="color:#ae81ff">1</span>;
+      <span style="color:#a6e22e">required</span> <span style="color:#66d9ef">int32</span> <span style="color:#a6e22e">id</span> = <span style="color:#ae81ff">2</span>;
+      <span style="color:#a6e22e">optional</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">email</span> = <span style="color:#ae81ff">3</span>;
 
-    message Person {
-      required string name = 1;
-      required int32 id = 2;
-      optional string email = 3;
-
-      enum PhoneType {
-        MOBILE = 0;
-        HOME = 1;
-        WORK = 2;
+      <span style="color:#a6e22e">enum</span> <span style="color:#a6e22e">PhoneType</span> {
+        <span style="color:#a6e22e">MOBILE</span> = <span style="color:#ae81ff">0</span>;
+        <span style="color:#a6e22e">HOME</span> = <span style="color:#ae81ff">1</span>;
+        <span style="color:#a6e22e">WORK</span> = <span style="color:#ae81ff">2</span>;
       }
 
-      message PhoneNumber {
-        required string number = 1;
-        optional PhoneType type = 2 [default = HOME];
+      <span style="color:#a6e22e">message</span> <span style="color:#a6e22e">PhoneNumber</span> {
+        <span style="color:#a6e22e">required</span> <span style="color:#66d9ef">string</span> <span style="color:#a6e22e">number</span> = <span style="color:#ae81ff">1</span>;
+        <span style="color:#a6e22e">optional</span> <span style="color:#a6e22e">PhoneType</span> <span style="color:#66d9ef">type</span> = <span style="color:#ae81ff">2</span> [<span style="color:#66d9ef">default</span> = <span style="color:#a6e22e">HOME</span>];
       }
 
-      repeated PhoneNumber phone = 4;
+      <span style="color:#a6e22e">repeated</span> <span style="color:#a6e22e">PhoneNumber</span> <span style="color:#a6e22e">phone</span> = <span style="color:#ae81ff">4</span>;
     }
 
-    message AddressBook {
-      repeated Person person = 1;
-    }
-
-</code></pre>
-
+    <span style="color:#a6e22e">message</span> <span style="color:#a6e22e">AddressBook</span> {
+      <span style="color:#a6e22e">repeated</span> <span style="color:#a6e22e">Person</span> <span style="color:#a6e22e">person</span> = <span style="color:#ae81ff">1</span>;
+    }</code></pre></div>
 <p>Để biên dịch file này, ta gõ lệnh</p>
 
 <pre><code>    protoc -I=$SRC_DIR --cpp_out=$DST_DIR $SRC_DIR/addressbook.proto
@@ -247,49 +380,45 @@ c. <code>repeated</code>: trường là một mảng động (không có phần 
 <h3 id="train-val-prototxt">train_val.prototxt</h3>
 
 <p>Đây là file chứa kiến trúc mạng của mô hình được cung cấp. Trong này định nghĩa toàn bộ kiến trúc (các tầng, tham số của mỗi tầng) cũng như định nghĩa dữ liệu đầu vào và output đầu ra cho mạng deep.</p>
-
-<pre><code class="language-protobuf">    name: &quot;AlexNet&quot;
-    layer {
-      name: &quot;data&quot;
-      type: &quot;Data&quot;
-      top: &quot;data&quot;
-      top: &quot;label&quot;
-      include {
-        phase: TRAIN
-      }
-      transform_param {
-        mirror: true
-        crop_size: 227
-        mean_file: &quot;data/ilsvrc12/imagenet_mean.binaryproto&quot;
-      }
-      data_param {
-        source: &quot;examples/imagenet/ilsvrc12_train_lmdb&quot;
-        batch_size: 256
-        backend: LMDB
-      }
-    }
-    layer {
-      name: &quot;data&quot;
-      type: &quot;Data&quot;
-      top: &quot;data&quot;
-      top: &quot;label&quot;
-      include {
-        phase: TEST
-      }
-      transform_param {
-        mirror: false
-        crop_size: 227
-        mean_file: &quot;data/ilsvrc12/imagenet_mean.binaryproto&quot;
-      }
-      data_param {
-        source: &quot;examples/imagenet/ilsvrc12_val_lmdb&quot;
-        batch_size: 50
-        backend: LMDB
-      }
-    }
-
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-protobuf" data-lang="protobuf">    name<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;AlexNet&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    layer {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      name<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      type<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Data&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      top<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      top<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;label&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      include {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        phase<span style="color:#f92672">:</span> TRAIN<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      transform_param {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        mirror<span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        crop_size<span style="color:#f92672">:</span> <span style="color:#ae81ff">227</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        mean_file<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;data/ilsvrc12/imagenet_mean.binaryproto&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      data_param {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        source<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;examples/imagenet/ilsvrc12_train_lmdb&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        batch_size<span style="color:#f92672">:</span> <span style="color:#ae81ff">256</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        backend<span style="color:#f92672">:</span> LMDB<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    layer {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      name<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      type<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Data&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      top<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;data&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      top<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;label&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      include {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        phase<span style="color:#f92672">:</span> TEST<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      transform_param {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        mirror<span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        crop_size<span style="color:#f92672">:</span> <span style="color:#ae81ff">227</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        mean_file<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;data/ilsvrc12/imagenet_mean.binaryproto&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      data_param {<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        source<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;examples/imagenet/ilsvrc12_val_lmdb&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        batch_size<span style="color:#f92672">:</span> <span style="color:#ae81ff">50</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>        backend<span style="color:#f92672">:</span> LMDB<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>      }<span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    }</code></pre></div>
 <p>Thành phần đầu tiên là <code>name</code>, tên của mạng. Các phần tử tiếp theo là các <code>layer</code>, tất cả các tham số liên quan đến layer đều nằm trong khối ngoặc <code>&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;w&quot;&gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;</code>. Có 3 thành phần chắc chắn có của một layer:</p>
 
 <ol>
@@ -303,23 +432,20 @@ c. <code>repeated</code>: trường là một mảng động (không có phần 
 <h3 id="solver-prototxt">solver.prototxt</h3>
 
 <p>Đây là tập tin chứa tham số trong quá trình train mạng deep và các tham số trong quá trình forward cũng như lan truyền ngược.</p>
-
-<pre><code class="language-protobuf">    net: &quot;models/bvlc_alexnet/train_val.prototxt&quot;
-    test_iter: 1000
-    test_interval: 1000
-    base_lr: 0.01
-    lr_policy: &quot;step&quot;
-    gamma: 0.1
-    stepsize: 100000
-    display: 20
-    max_iter: 450000
-    momentum: 0.9
-    weight_decay: 0.0005
-    snapshot: 10000
-    snapshot_prefix: &quot;models/bvlc_alexnet/caffe_alexnet_train&quot;
-    solver_mode: GPU
-</code></pre>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-protobuf" data-lang="protobuf">    net<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;models/bvlc_alexnet/train_val.prototxt&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    test_iter<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    test_interval<span style="color:#f92672">:</span> <span style="color:#ae81ff">1000</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    base_lr<span style="color:#f92672">:</span> <span style="color:#ae81ff">0.01</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    lr_policy<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;step&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    gamma<span style="color:#f92672">:</span> <span style="color:#ae81ff">0.1</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    stepsize<span style="color:#f92672">:</span> <span style="color:#ae81ff">100000</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    display<span style="color:#f92672">:</span> <span style="color:#ae81ff">20</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    max_iter<span style="color:#f92672">:</span> <span style="color:#ae81ff">450000</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    momentum<span style="color:#f92672">:</span> <span style="color:#ae81ff">0.9</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    weight_decay<span style="color:#f92672">:</span> <span style="color:#ae81ff">0.0005</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    snapshot<span style="color:#f92672">:</span> <span style="color:#ae81ff">10000</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    snapshot_prefix<span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;models/bvlc_alexnet/caffe_alexnet_train&#34;</span><span style="color:#960050;background-color:#1e0010">
+</span><span style="color:#960050;background-color:#1e0010"></span>    solver_mode<span style="color:#f92672">:</span> GPU</code></pre></div>
 <p>Ta dễ dàng thấy ở đây có <code>net</code>: dẫn đến file chứa kiến trúc mạng. Một số tham số khá quen thuộc như: <code>momentum</code>, <code>max_iter</code>, có cả một thuộc tính nhằm set xem mạng sẽ chạy ở GPU hay CPU (<code>solver_mode</code>). Cũng giống như các tham số ở <code>train_val.prototxt</code>, tất cả các thông tin về cấu hình được đề cập trong file <code>caffe.proto</code>.</p>
 
 <h2 id="tổng-kết">Tổng kết</h2>
@@ -372,12 +498,56 @@ c. <code>repeated</code>: trường là một mảng động (không có phần 
 </nav>
 
 
-
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
 
       </main>
 
       <footer id='footer' class='footer'>
-        <div class='container sep-before'><div class='copyright'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/dangkhoasdc' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:letan.dangkhoa@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
   <p>&amp;copy; 2017 Dang-Khoa</p>
 </div>
 
@@ -387,7 +557,7 @@ c. <code>repeated</code>: trường là một mảng động (không có phần 
     </div>
   </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
 
-<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script src='/js/custom.js'></script><script type='text/x-mathjax-config'>
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
 </script>
 

@@ -5,7 +5,7 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).'>
-<meta name='theme-color' content='#ffcd00'>
+<meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Bài toán chuyển ngày sang thứ • Dang-Khoa'>
 <meta property='og:description' content='Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).'>
@@ -20,8 +20,8 @@
   
   
   <link rel='icon' href='/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
-:root{--color-accent:#ffcd00;}
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#44ccff;}
 </style>
 
 <script type="application/javascript">
@@ -40,17 +40,161 @@ if (!doNotTrack) {
 </head>
 
 
-<body class='page type-docs'>
+<body class='page type-docs has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/vi/'>
+        <img src='/images/logo.svg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    Dang-Khoa&#39;s blog 
+    </h2>
+    <div class='desc'>
+    just another blog
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/vi/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/vi/'>Trang chủ</a></li><li class='item'>
+  <a href='/vi/docs/'>Docs</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/vi/tags/c&#43;&#43;' style='font-size:1em'>C&#43;&#43;</a>
+      </li><li>
+        <a href='/vi/tags/computer-vision' style='font-size:1em'>Computer Vision</a>
+      </li><li>
+        <a href='/vi/tags/machine-learning' style='font-size:1em'>Machine Learning</a>
+      </li><li>
+        <a href='/vi/tags/algorithms' style='font-size:1.6153846153846154em'>algorithms</a>
+      </li><li>
+        <a href='/vi/tags/android' style='font-size:1em'>android</a>
+      </li><li>
+        <a href='/vi/tags/books' style='font-size:1.1538461538461537em'>books</a>
+      </li><li>
+        <a href='/vi/tags/computer-science' style='font-size:1em'>computer science</a>
+      </li><li>
+        <a href='/vi/tags/computer-vision' style='font-size:1em'>computer vision</a>
+      </li><li>
+        <a href='/vi/tags/computer-vison' style='font-size:1em'>computer vison</a>
+      </li><li>
+        <a href='/vi/tags/courses' style='font-size:1em'>courses</a>
+      </li><li>
+        <a href='/vi/tags/cpp' style='font-size:1.0769230769230769em'>cpp</a>
+      </li><li>
+        <a href='/vi/tags/cvpr' style='font-size:1em'>cvpr</a>
+      </li><li>
+        <a href='/vi/tags/deep-learning' style='font-size:1em'>deep learning</a>
+      </li><li>
+        <a href='/vi/tags/documentary' style='font-size:1em'>documentary</a>
+      </li><li>
+        <a href='/vi/tags/font' style='font-size:1em'>font</a>
+      </li><li>
+        <a href='/vi/tags/games' style='font-size:1.0769230769230769em'>games</a>
+      </li><li>
+        <a href='/vi/tags/gaming' style='font-size:1em'>gaming</a>
+      </li><li>
+        <a href='/vi/tags/history' style='font-size:1em'>history</a>
+      </li><li>
+        <a href='/vi/tags/machine-learning' style='font-size:1em'>machine learning</a>
+      </li><li>
+        <a href='/vi/tags/memories' style='font-size:1.1538461538461537em'>memories</a>
+      </li><li>
+        <a href='/vi/tags/misc' style='font-size:1.6153846153846154em'>misc</a>
+      </li><li>
+        <a href='/vi/tags/movies' style='font-size:1.3076923076923077em'>movies</a>
+      </li><li>
+        <a href='/vi/tags/notes' style='font-size:1.0769230769230769em'>notes</a>
+      </li><li>
+        <a href='/vi/tags/opencv' style='font-size:1.0769230769230769em'>opencv</a>
+      </li><li>
+        <a href='/vi/tags/programming' style='font-size:2em'>programming</a>
+      </li><li>
+        <a href='/vi/tags/python' style='font-size:1.0769230769230769em'>python</a>
+      </li><li>
+        <a href='/vi/tags/research' style='font-size:1.1538461538461537em'>research</a>
+      </li><li>
+        <a href='/vi/tags/review' style='font-size:1.7692307692307692em'>review</a>
+      </li><li>
+        <a href='/vi/tags/singapore' style='font-size:1em'>singapore</a>
+      </li><li>
+        <a href='/vi/tags/software-engineer' style='font-size:1em'>software engineer</a>
+      </li><li>
+        <a href='/vi/tags/taocp' style='font-size:1.0769230769230769em'>taocp</a>
+      </li><li>
+        <a href='/vi/tags/travel' style='font-size:1.1538461538461537em'>travel</a>
+      </li><li>
+        <a href='/vi/tags/tutorial' style='font-size:1em'>tutorial</a>
+      </li><li>
+        <a href='/vi/tags/vietnam' style='font-size:1em'>vietnam</a>
+      </li><li>
+        <a href='/vi/tags/visual-studio' style='font-size:1em'>visual studio</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
       <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
   <div class='container'>
-    
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
     <ul><li class='item'>
         <a href='/vi/' class="">
           <span>Trang chủ</span>
@@ -60,32 +204,16 @@ if (!doNotTrack) {
           <span>Docs</span>
         </a>
       </li><li class='item'>
-        <a href='/vi/page/about/' class="">
+        <a href='/vi/dangkhoasdc/' class="">
           <span>dangkhoasdc</span>
         </a>
       </li><li class='item'>
-        <a href='#posts' class="">
-          <span>Posts</span>
+        <a href='/vi/' class="vi">
+          <span>Tiếng Việt</span>
         </a>
       </li><li class='item'>
-        <a href='#about' class="">
-          <span>Home</span>
-        </a>
-      </li><li class='item'>
-        <a href='#projects' class="">
-          <span>Projects</span>
-        </a>
-      </li><li class='item'>
-        <a href='#publications_selected' class="">
-          <span>Publications</span>
-        </a>
-      </li><li class='item'>
-        <a href='/about/' class="">
-          <span>About</span>
-        </a>
-      </li><li class='item'>
-        <a href='/tags/notes/' class="">
-          <span>Notes</span>
+        <a href='/' class="en">
+          <span>English</span>
         </a>
       </li></ul>
   </div>
@@ -93,7 +221,7 @@ if (!doNotTrack) {
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'>just another blog</p>
           </div>
         </div>
       </header>
@@ -131,6 +259,15 @@ if (!doNotTrack) {
 </svg>
 <span class='screen-reader-text'> by </span><a href='/vi/authors/khoa'>Dang-Khoa</a></span>
   
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+4 mins read
+</span>
+
 
   
   
@@ -149,21 +286,18 @@ if (!doNotTrack) {
 <p>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo;
 Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip;
 Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).</p>
-
-<pre><code class="language-c">dayofweek(y, m, d) {
-    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
-    y -= m &lt; 3;
-    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
-}
-</code></pre>
-
-<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với 1/1 (Nếu ngày 1/1 là thứ Hai thì &frac12; sẽ là thứ 5). <code>t[]</code> chính là offset cho ngày đầu tiên của tháng so với ngày 1/1, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">dayofweek(y, m, d) {
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> t[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>};
+    y <span style="color:#f92672">-=</span> m <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>;
+    <span style="color:#66d9ef">return</span> (y <span style="color:#f92672">+</span> y<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> y<span style="color:#f92672">/</span><span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> y<span style="color:#f92672">/</span><span style="color:#ae81ff">400</span> <span style="color:#f92672">+</span> t[m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> d) <span style="color:#f92672">%</span> <span style="color:#ae81ff">7</span>;
+}</code></pre></div>
+<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với <sup>1</sup>&frasl;<sub>1</sub> (Nếu ngày <sup>1</sup>&frasl;<sub>1</sub> là thứ Hai thì <sup>1</sup>&frasl;<sub>2</sub> sẽ là thứ 5). <code>t[]</code> chính là offset cho ngày đầu tiên của tháng so với ngày <sup>1</sup>&frasl;<sub>1</sub>, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
 
 <p>Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm <code>y</code>, ta phải cộng thêm <code>y</code> ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.</p>
 
-<p>Những năm nhuận, ta lại phải thêm cái ngày 29/2 vào trong, tức là nó sẽ thêm 1 ngày nữa, trong <code>y</code> năm? nếu có <code>y</code> năm nhuận thì sẽ có thêm <code>x</code> ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.</p>
+<p>Những năm nhuận, ta lại phải thêm cái ngày <sup>29</sup>&frasl;<sub>2</sub> vào trong, tức là nó sẽ thêm 1 ngày nữa, trong <code>y</code> năm? nếu có <code>y</code> năm nhuận thì sẽ có thêm <code>x</code> ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.</p>
 
-<p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày 29/2, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
+<p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày <sup>29</sup>&frasl;<sub>2</sub>, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
 
 <p>Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng <code>t[]</code> lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào <code>t[0]</code> và <code>t[1]</code> và giữ nguyên các <code>t[]</code> còn lại Sau đó chuyển -1 trong <code>d-1</code> vào offset, lúc đó ta sẽ được mảng <code>t[]</code> như trong code gốc.</p>
 
@@ -226,12 +360,56 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
 </nav>
 
 
-
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
 
       </main>
 
       <footer id='footer' class='footer'>
-        <div class='container sep-before'><div class='copyright'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/dangkhoasdc' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:letan.dangkhoa@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
   <p>&amp;copy; 2017 Dang-Khoa</p>
 </div>
 
@@ -241,7 +419,7 @@ Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất
     </div>
   </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
 
-<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script src='/js/custom.js'></script><script type='text/x-mathjax-config'>
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
 </script>
 

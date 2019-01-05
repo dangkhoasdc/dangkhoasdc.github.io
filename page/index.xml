@@ -5,7 +5,6 @@
     <link>http://dangkhoasdc.github.io/page/</link>
     <description>Recent content in Pages on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
     
 	<atom:link href="http://dangkhoasdc.github.io/page/index.xml" rel="self" type="application/rss+xml" />
@@ -13,19 +12,19 @@
     
     <item>
       <title>About Me</title>
-      <link>http://dangkhoasdc.github.io/page/about/</link>
+      <link>http://dangkhoasdc.github.io/about-me/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/page/about/</guid>
+      <guid>http://dangkhoasdc.github.io/about-me/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>http://dangkhoasdc.github.io/page/search/</link>
+      <link>http://dangkhoasdc.github.io/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/page/search/</guid>
+      <guid>http://dangkhoasdc.github.io/search/</guid>
       <description></description>
     </item>
     

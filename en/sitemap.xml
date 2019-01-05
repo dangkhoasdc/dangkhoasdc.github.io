@@ -33,16 +33,16 @@
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/page/about/</loc>
+    <loc>http://dangkhoasdc.github.io/about-me/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/page/about/"
+                href="http://dangkhoasdc.github.io/vi/dangkhoasdc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/page/about/"
+                href="http://dangkhoasdc.github.io/about-me/"
                 />
   </url>
   
@@ -178,6 +178,16 @@
   
   <url>
     <loc>http://dangkhoasdc.github.io/authors/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/vi/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/authors/"
+                />
   </url>
   
   <url>
@@ -196,6 +206,14 @@
   </url>
   
   <url>
+    <loc>http://dangkhoasdc.github.io/tags/config/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/og/</loc>
+  </url>
+  
+  <url>
     <loc>http://dangkhoasdc.github.io/page/</loc>
     <priority>0</priority>
     <xhtml:link
@@ -211,31 +229,31 @@
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/publication_types/</loc>
-    <priority>0</priority>
+    <loc>http://dangkhoasdc.github.io/search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/publication_types/"
+                href="http://dangkhoasdc.github.io/vi/search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/publication_types/"
+                href="http://dangkhoasdc.github.io/search/"
                 />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/page/search/</loc>
+    <loc>http://dangkhoasdc.github.io/series/</loc>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/page/search/"
+                href="http://dangkhoasdc.github.io/vi/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/page/search/"
+                href="http://dangkhoasdc.github.io/series/"
                 />
   </url>
   
@@ -331,6 +349,22 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://dangkhoasdc.github.io/tags/history/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/authors/khoa/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/vi/authors/khoa/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/authors/khoa/"
                 />
   </url>
   

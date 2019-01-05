@@ -7,7 +7,7 @@
 <meta name='description' content='The programming exercise is from TAoCP, Vol3, 5.1.1-6:
  Design an algorithm that computes the inversion table $b_1, b_2 \cdots b_n$ corresponding to a given permutation $a_1a_2 \cdots a_n$ of ${1, 2, \cdots , n}$, where the running time is essentially proportional to $n\ log n$ on typical computers.
  I was really stuck on the solution Knuth given in the book. The author also mentioned another approach which actually is a modifination of merge sort.'>
-<meta name='theme-color' content='#ffcd00'>
+<meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Generate the inversion table from an integer sequence • Dang-Khoa'>
 <meta property='og:description' content='The programming exercise is from TAoCP, Vol3, 5.1.1-6:
@@ -24,8 +24,8 @@
   
   
   <link rel='icon' href='/favicon.ico'>
-<link rel='stylesheet' href='/assets/css/main.809149b6.css'><style>
-:root{--color-accent:#ffcd00;}
+<link rel='stylesheet' href='/assets/css/main.809149b6.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#44ccff;}
 </style>
 
 <script type="application/javascript">
@@ -44,48 +44,138 @@ if (!doNotTrack) {
 </head>
 
 
-<body class='page type-docs'>
+<body class='page type-docs has-sidebar'>
 
   <div class='site'>
 
-    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/logo.svg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    Dang-Khoa&#39;s blog 
+    </h2>
+    <div class='desc'>
+    just another blog
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/'>Home</a></li><li class='item'>
+  <a href='/docs/'>Docs</a></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/algorithms' style='font-size:1.25em'>algorithms</a>
+      </li><li>
+        <a href='/tags/android' style='font-size:1.5em'>android</a>
+      </li><li>
+        <a href='/tags/books' style='font-size:1.25em'>books</a>
+      </li><li>
+        <a href='/tags/computer-vision' style='font-size:1.25em'>computer vision</a>
+      </li><li>
+        <a href='/tags/history' style='font-size:1em'>history</a>
+      </li><li>
+        <a href='/tags/math' style='font-size:1em'>math</a>
+      </li><li>
+        <a href='/tags/matlab' style='font-size:1em'>matlab</a>
+      </li><li>
+        <a href='/tags/misc' style='font-size:1.25em'>misc</a>
+      </li><li>
+        <a href='/tags/notes' style='font-size:1.25em'>notes</a>
+      </li><li>
+        <a href='/tags/opencv' style='font-size:1.5em'>opencv</a>
+      </li><li>
+        <a href='/tags/programming' style='font-size:2em'>programming</a>
+      </li><li>
+        <a href='/tags/taocp' style='font-size:1.25em'>taocp</a>
+      </li><li>
+        <a href='/tags/visual-studio' style='font-size:1em'>visual studio</a>
+      </li><li>
+        <a href='/tags/windows' style='font-size:1em'>windows</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
 
     <div class='main'>
 
       <nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
   <div class='container'>
-    
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
     <ul><li class='item'>
+        <a href='/' class="">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
         <a href='/docs/' class="">
           <span>Docs</span>
         </a>
       </li><li class='item'>
-        <a href='/page/about/' class="">
+        <a href='/about-me/' class="">
           <span>About Me</span>
         </a>
       </li><li class='item'>
-        <a href='#posts' class="">
-          <span>Posts</span>
+        <a href='/vi/' class="vi">
+          <span>Tiếng Việt</span>
         </a>
       </li><li class='item'>
-        <a href='#about' class="">
-          <span>Home</span>
-        </a>
-      </li><li class='item'>
-        <a href='#projects' class="">
-          <span>Projects</span>
-        </a>
-      </li><li class='item'>
-        <a href='#publications_selected' class="">
-          <span>Publications</span>
-        </a>
-      </li><li class='item'>
-        <a href='/about/' class="">
-          <span>About</span>
-        </a>
-      </li><li class='item'>
-        <a href='/tags/notes/' class="">
-          <span>Notes</span>
+        <a href='/' class="en">
+          <span>English</span>
         </a>
       </li></ul>
   </div>
@@ -93,7 +183,7 @@ if (!doNotTrack) {
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'></p>
+          <div class='header-info'><p class='site-title title'>Dang-Khoa&#39;s blog </p><p class='desc site-desc'>just another blog</p>
           </div>
         </div>
       </header>
@@ -131,6 +221,15 @@ if (!doNotTrack) {
 </svg>
 <span class='screen-reader-text'> by </span><a href='/authors/khoa'>Dang-Khoa</a></span>
   
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+4 mins read
+</span>
+
 
   
   
@@ -164,48 +263,45 @@ let first understand the algorithm using bitwise.</p>
 <p>The C++ implementation has a bit different from the original one. I used 0-index
 array instead of 1-index array as Knuth&rsquo;s version. Frankly, it is not the best
 version, I just want to convert the pseudo code to an executable one.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 
-<pre><code class="language-cpp">#include &lt;iostream&gt;
-#include &lt;vector&gt;
-
-using namespace std;
-
-int main(int argc, char const* argv[])
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">int</span> argc, <span style="color:#66d9ef">char</span> <span style="color:#66d9ef">const</span><span style="color:#f92672">*</span> argv[])
 {
-    // input
-    int n; cin &gt;&gt; n;
-    vector&lt;int&gt; v(n, 0);
-    for (auto&amp; vi: v) cin &gt;&gt; vi;
+    <span style="color:#75715e">// input
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> n; cin <span style="color:#f92672">&gt;&gt;</span> n;
+    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> v(n, <span style="color:#ae81ff">0</span>);
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span><span style="color:#f92672">&amp;</span> vi: v) cin <span style="color:#f92672">&gt;&gt;</span> vi;
 
-    // algorithm: TAoCP vol 3. 5.1.1-6
-    // init
-    vector&lt;int&gt; b(n, 0);
-    vector&lt;int&gt; x((n&gt;&gt;1)+1, 0);
-    int k = 0, r, s;
-    for (int nn=n; nn&gt;1; nn &gt;&gt;= 1) k++; // compute floor(lg(n))
+    <span style="color:#75715e">// algorithm: TAoCP vol 3. 5.1.1-6
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// init
+</span><span style="color:#75715e"></span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> b(n, <span style="color:#ae81ff">0</span>);
+    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> x((n<span style="color:#f92672">&gt;&gt;</span><span style="color:#ae81ff">1</span>)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>);
+    <span style="color:#66d9ef">int</span> k <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r, s;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> nn<span style="color:#f92672">=</span>n; nn<span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span>; nn <span style="color:#f92672">&gt;&gt;=</span> <span style="color:#ae81ff">1</span>) k<span style="color:#f92672">++</span>; <span style="color:#75715e">// compute floor(lg(n))
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">for</span> (; k <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; k<span style="color:#f92672">--</span>) { <span style="color:#75715e">// traversal through bits 0 -&gt; \floor(\lg N)
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> s <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; s <span style="color:#f92672">&lt;=</span> n<span style="color:#f92672">&gt;&gt;</span>(k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>); s<span style="color:#f92672">++</span>) <span style="color:#75715e">// init array x = 0 \forall elements
+</span><span style="color:#75715e"></span>            x[s] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 
-    for (; k &gt;= 0; k--) { // traversal through bits 0 -&gt; \floor(\lg N)
-        for (int s = 0; s &lt;= n&gt;&gt;(k+1); s++) // init array x = 0 \forall elements
-            x[s] = 0;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> n; <span style="color:#f92672">++</span>j) {
+            r <span style="color:#f92672">=</span> (v[j] <span style="color:#f92672">&gt;&gt;</span> k) <span style="color:#f92672">&amp;</span> <span style="color:#ae81ff">1</span>;
+            s <span style="color:#f92672">=</span> v[j] <span style="color:#f92672">&gt;&gt;</span> (k<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
 
-        for (int j = 0; j &lt; n; ++j) {
-            r = (v[j] &gt;&gt; k) &amp; 1;
-            s = v[j] &gt;&gt; (k+1);
-
-            if (r) x[s] += 1;
-            else b[v[j]-1] += x[s];
+            <span style="color:#66d9ef">if</span> (r) x[s] <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>;
+            <span style="color:#66d9ef">else</span> b[v[j]<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+=</span> x[s];
         }
     }
 
-    // output
-    for (auto bi: b) cout &lt;&lt; bi &lt;&lt; &quot; &quot;;
-    cout &lt;&lt; endl;
+    <span style="color:#75715e">// output
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> bi: b) cout <span style="color:#f92672">&lt;&lt;</span> bi <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+    cout <span style="color:#f92672">&lt;&lt;</span> endl;
 
-    return 0;
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 }
-
-</code></pre>
-
+</code></pre></div>
 <h1 id="analysis">Analysis</h1>
 
 <p>About the running time, it is discernible since the outer loop of $k$ costs
@@ -277,20 +373,19 @@ The algorithms will count candidates on set elements $1, 3, 5, 7, 9$
 <p>Instead of constructing an inversion table, this algorithm count the total
 number of inversions in a permutation which utilize merging procedures from
 the renowned mergesort.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">class</span><span style="color:#960050;background-color:#1e0010"> </span><span style="color:#a6e22e">inversion</span> {
+    <span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+        vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> x, aux;
+        <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">int</span> cnt;
+    <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+        inversion(<span style="color:#66d9ef">const</span> vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> x_)<span style="color:#f92672">:</span> x(x_), aux(x_.size()), cnt(<span style="color:#ae81ff">0</span>) {
+            merge_sort(x, <span style="color:#ae81ff">0</span>, x.size());
+        } <span style="color:#75715e">//ctor
+</span><span style="color:#75715e"></span>
+        <span style="color:#66d9ef">void</span> merge_sort(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> a, <span style="color:#66d9ef">int</span> low, <span style="color:#66d9ef">int</span> high) {
+            <span style="color:#66d9ef">if</span> (low <span style="color:#f92672">&gt;=</span> high<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> ;
 
-<pre><code class="language-cpp">class inversion {
-    private:
-        vector&lt;int&gt; x, aux;
-        long long int cnt;
-    public:
-        inversion(const vector&lt;int&gt;&amp; x_): x(x_), aux(x_.size()), cnt(0) {
-            merge_sort(x, 0, x.size());
-        } //ctor
-
-        void merge_sort(vector&lt;int&gt;&amp; a, int low, int high) {
-            if (low &gt;= high-1) return ;
-
-            int mid = low + (high-low)/2;
+            <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> low <span style="color:#f92672">+</span> (high<span style="color:#f92672">-</span>low)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
 
             merge_sort(a, low, mid);
             merge_sort(a, mid, high);
@@ -299,28 +394,27 @@ the renowned mergesort.</p>
 
         }
 
-        void merge(vector&lt;int&gt;&amp; a, int low, int mid, int high) {
-            int subidx_1  = low;
-            int subidx_2  = mid;
+        <span style="color:#66d9ef">void</span> merge(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> a, <span style="color:#66d9ef">int</span> low, <span style="color:#66d9ef">int</span> mid, <span style="color:#66d9ef">int</span> high) {
+            <span style="color:#66d9ef">int</span> subidx_1  <span style="color:#f92672">=</span> low;
+            <span style="color:#66d9ef">int</span> subidx_2  <span style="color:#f92672">=</span> mid;
 
-            for (int j = low; j &lt; high; ++j) {
-                if       (subidx_1 &gt;= subidx_2)       aux[j] = a[subidx_2++];
-                else if  (subidx_2 &gt;= high)           aux[j] = a[subidx_1++];
-                else if  (a[subidx_1] &lt;= a[subidx_2]) aux[j] = a[subidx_1++];
-                else {
-                    cnt += (mid-subidx_1); // (1)
-                    aux[j] = a[subidx_2++];
+            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> low; j <span style="color:#f92672">&lt;</span> high; <span style="color:#f92672">++</span>j) {
+                <span style="color:#66d9ef">if</span>       (subidx_1 <span style="color:#f92672">&gt;=</span> subidx_2)       aux[j] <span style="color:#f92672">=</span> a[subidx_2<span style="color:#f92672">++</span>];
+                <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span>  (subidx_2 <span style="color:#f92672">&gt;=</span> high)           aux[j] <span style="color:#f92672">=</span> a[subidx_1<span style="color:#f92672">++</span>];
+                <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span>  (a[subidx_1] <span style="color:#f92672">&lt;=</span> a[subidx_2]) aux[j] <span style="color:#f92672">=</span> a[subidx_1<span style="color:#f92672">++</span>];
+                <span style="color:#66d9ef">else</span> {
+                    cnt <span style="color:#f92672">+=</span> (mid<span style="color:#f92672">-</span>subidx_1); <span style="color:#75715e">// (1)
+</span><span style="color:#75715e"></span>                    aux[j] <span style="color:#f92672">=</span> a[subidx_2<span style="color:#f92672">++</span>];
                 }
             }
 
-            // copy back to a
-            copy(aux.begin()+low, aux.begin()+high, a.begin()+low);
+            <span style="color:#75715e">// copy back to a
+</span><span style="color:#75715e"></span>            copy(aux.begin()<span style="color:#f92672">+</span>low, aux.begin()<span style="color:#f92672">+</span>high, a.begin()<span style="color:#f92672">+</span>low);
         }
 
-        inline long long int count() const { return cnt;}
+        <span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">int</span> count() <span style="color:#66d9ef">const</span> { <span style="color:#66d9ef">return</span> cnt;}
 };
-</code></pre>
-
+</code></pre></div>
 <p>This is the exercise 5.2.5-21 in TAoCP. Unfortunately, Knuth did not mention
 the solution. The only modification is to add <code>(1)</code> to the merging step which
 counts the number of inversions of <code>a[subidx_2]</code>, the item in the second
@@ -383,12 +477,56 @@ post trully helps me understand the algorithm. Also, thank you, Google Translate
 </nav>
 
 
-
+<section id='comments' class='comments'>
+  <div class='container sep-before'>
+    <div class='comments-area'><div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  </div>
+</section>
 
       </main>
 
       <footer id='footer' class='footer'>
-        <div class='container sep-before'><div class='copyright'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/dangkhoasdc' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:letan.dangkhoa@gmail.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
   <p>&amp;copy; 2017 Dang-Khoa</p>
 </div>
 
@@ -398,7 +536,7 @@ post trully helps me understand the algorithm. Also, thank you, Google Translate
     </div>
   </div><script>window.__public_path__='http:\/\/dangkhoasdc.github.io\/assets\/js\/'</script>
 
-<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script type='text/x-mathjax-config'>
+<script src='http://dangkhoasdc.github.io/assets/js/main.68cb493a.js'></script><script src='/js/custom.js'></script><script type='text/x-mathjax-config'>
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"processEscapes":true}})
 </script>
 
