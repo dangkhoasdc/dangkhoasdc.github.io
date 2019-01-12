@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Dang-Khoa&#39;s blog </title>
+    <title>Documentation on Dang-Khoa&#39;s blog </title>
     <link>http://dangkhoasdc.github.io/post/</link>
-    <description>Recent content in Posts on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in Documentation on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Tue, 04 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learn How to Learn</title>
+      <link>http://dangkhoasdc.github.io/post/learn_howto_learn/</link>
+      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/learn_howto_learn/</guid>
+      <description>The reasons why I want to learn this course:
+ Deeply understand the material from my favorite fields such as mathematics, computer sciences, etc. Learn quickly and more effectively. Avoid procastination.  Focused and Diffuse Modes  Focused mode: concentration, when we focus on particular subjects, deeply lookinto the detail. The example from the lecture gives me a sense that this mode is the optimization methods being trapped at local region.</description>
+    </item>
     
     <item>
       <title>Hello world with Literate Programming</title>
@@ -43,7 +52,7 @@ Prerequisites  Remove the old version which has been installed in the system. Do
       <guid>http://dangkhoasdc.github.io/post/opencv_android_practices/</guid>
       <description>Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
 Basically, we have a function playing as a bridge between Java APIs and NDK:
-public native void function_name(long matAddress);  To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
+public native void function_name(long matAddress); To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
     </item>
     
     <item>
@@ -127,7 +136,7 @@ Introduction Since Computer Vision is an interdisciplinary research which involv
       
       <guid>http://dangkhoasdc.github.io/post/why_so_serious/</guid>
       <description>Therer are some not-so-serious miscellaneous thoughts, comments of mine about everything in an informal format using Vietnamese and English.
-Table of Contents  Deep Learning and truely science researching &amp;ldquo;Thời gian trôi như chó chạy ngoài đồng&amp;rdquo; How to classify images of fruit Chuyện fake news, fake quotes và toxic information.  References    Deep Learning and truely science researching    &amp;ldquo;too often where people will something against their own gut instincts because they think the community wants them to do it that way, so people will work on a certain subject even though they aren&amp;rsquo;t terribly interested in it because they think that they&amp;rsquo;ll get more prestige by working on it.</description>
+Deep Learning and truely science researching    &amp;ldquo;too often where people will something against their own gut instincts because they think the community wants them to do it that way, so people will work on a certain subject even though they aren&amp;rsquo;t terribly interested in it because they think that they&amp;rsquo;ll get more prestige by working on it.</description>
     </item>
     
     <item>

@@ -13,10 +13,10 @@
     
     <item>
       <title>Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe</title>
-      <link>http://dangkhoasdc.github.io/vi/docs/protocol-buffers-caffe/</link>
+      <link>http://dangkhoasdc.github.io/vi/post/protocol-buffers-caffe/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/docs/protocol-buffers-caffe/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/post/protocol-buffers-caffe/</guid>
       <description>Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện Caffe. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C++. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu. Giới thiệu Protocol Buffers là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển.</description>
     </item>
     

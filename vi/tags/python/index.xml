@@ -13,20 +13,20 @@
     
     <item>
       <title>Lập Trình Hướng Đối Tượng Trong Python</title>
-      <link>http://dangkhoasdc.github.io/vi/docs/oop-python/</link>
+      <link>http://dangkhoasdc.github.io/vi/post/oop-python/</link>
       <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/docs/oop-python/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/post/oop-python/</guid>
       <description>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &amp;hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.
 Enum trong python Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</description>
     </item>
     
     <item>
       <title>Kinh Nghiệm Viết Tài Liệu Khoa Học</title>
-      <link>http://dangkhoasdc.github.io/vi/docs/viet-luan-van/</link>
+      <link>http://dangkhoasdc.github.io/vi/post/viet-luan-van/</link>
       <pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/docs/viet-luan-van/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/post/viet-luan-van/</guid>
       <description>Sau thời gian đắng lòng vì cái luận văn và phải lên bờ xuống ruộng với nhiều tình huống éo le cây me. Cũng thêm vào đó, sau cái sự vụ này rút ra được nhiều kinh nghiệm xương máu hơn bao giờ hết. Hiện giờ công việc dù vấn đang ngập mặt, nhưng có vẻ thư thả hơn, kèm theo đó kết quả thực nghiệm khá tốt, công việc trên lab cũng dần ổn định khiến tinh thần phấn chấn và có nhiều kế hoạch loạn xị ngầu hơn trong thời gian tới.</description>
     </item>
     

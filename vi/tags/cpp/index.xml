@@ -13,19 +13,19 @@
     
     <item>
       <title>rand() is harmful</title>
-      <link>http://dangkhoasdc.github.io/vi/docs/rand/</link>
+      <link>http://dangkhoasdc.github.io/vi/post/rand/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/docs/rand/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/post/rand/</guid>
       <description>rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &amp;ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&amp;rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng .</description>
     </item>
     
     <item>
       <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
-      <link>http://dangkhoasdc.github.io/vi/docs/constexpr/</link>
+      <link>http://dangkhoasdc.github.io/vi/post/constexpr/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/docs/constexpr/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/post/constexpr/</guid>
       <description>constexpr Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này. Ta quay một chút về cú pháp define bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm.</description>
     </item>
     

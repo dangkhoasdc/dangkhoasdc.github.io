@@ -13,10 +13,10 @@
     
     <item>
       <title>Khối Latin và câu chuyện toán học và lịch sử máy tính</title>
-      <link>http://dangkhoasdc.github.io/vi/docs/latin_square/</link>
+      <link>http://dangkhoasdc.github.io/vi/post/latin_square/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/docs/latin_square/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/post/latin_square/</guid>
       <description>Trong dự án dài hơi về TAoCP, những phần đầu của Vol 4A.
 Định nghĩa Cho một ma trận vuông có kích thước M và các phần tử thuộc $\{0, 1, \cdots, M-1 \}$, ta xây dựng ma trận sao cho mỗi phần tử $i$ trong tập $\{0, 1, \cdots, M-1\}$ chỉ xuất hiện đúng 1 lần trong mỗi cột và mỗi dòng.
 Ví dụ Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 4 loại $\heartsuit, \diamondsuit, \clubsuit, \spadesuit$, ta sắp xếp sao cho mỗi dòng/cột có đủ 4 chất và 4 quân (Jacques Ozaman, mathematiques et physiques, Paris 1725).</description>
@@ -24,10 +24,10 @@ Ví dụ Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 
     
     <item>
       <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
-      <link>http://dangkhoasdc.github.io/vi/docs/taocp/howto/</link>
+      <link>http://dangkhoasdc.github.io/vi/post/taocp/howto/</link>
       <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/docs/taocp/howto/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/post/taocp/howto/</guid>
       <description>Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &amp;ldquo;cuồng&amp;rdquo; như Donald Knuth.</description>
     </item>
     

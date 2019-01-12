@@ -13,10 +13,10 @@
     
     <item>
       <title>Một chút thống kê về các bài báo CVPR16</title>
-      <link>http://dangkhoasdc.github.io/vi/docs/cvpr16-stat/</link>
+      <link>http://dangkhoasdc.github.io/vi/post/cvpr16-stat/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/vi/docs/cvpr16-stat/</guid>
+      <guid>http://dangkhoasdc.github.io/vi/post/cvpr16-stat/</guid>
       <description>Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
 Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
  Số bài báo được accept: 643 bài. Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài. Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.</description>
