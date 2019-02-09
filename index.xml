@@ -5,7 +5,7 @@
     <link>http://dangkhoasdc.github.io/</link>
     <description>Recent content in Home on Dang-Khoa&#39;s blog </description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 05 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,6 +17,18 @@
       
       <guid>http://dangkhoasdc.github.io/about-me/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Introduction to Model Thinking</title>
+      <link>http://dangkhoasdc.github.io/post/model_thinking/why/</link>
+      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/model_thinking/why/</guid>
+      <description>Why model? As I understood, using models is actually to apply mathematic into different problems in a unified framework.
+Intelligent Citizen of the world  Essentially, all models are wrong, but some are useful
+ Model is the new &amp;ldquo;lingua franca&amp;rdquo;.
+ Every one should know. All knowledge which human has known has models in it. It is everywhere, at any disciplines: economics (maximize payoff), biology (brain model, gene, species), political science, linguistics, law, game theory.</description>
     </item>
     
     <item>
