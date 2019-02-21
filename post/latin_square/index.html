@@ -378,16 +378,19 @@ program only took nearly 1 hour to find a solution of input in 1957:</p>
 
 </code></pre>
 
-<h1 id="transvervals">Transvervals</h1>
+<h1 id="transversals">Transversals</h1>
 
-<p>Parker utilized a concepted called transversal which was previously proposed by
-Euler. A transersal is a way to choose a sequence of $M$ elements such that there
+<p>Parker utilized a concept called transversal which was previously proposed by
+Euler. A transversal is a way to choose a sequence of $M$ elements such that there
 is only 1 element in each row, each column and is unique in the sequence.</p>
 
-<p>For example: 0859734216, it means that we choose 0 in column 1, 8 in column 2, 5
-in column 3, etc. Supposed that $k$ is the first item of a transversal, based on
-following elements, we replace them by $k$. Given $M$ transversals of $k = 0, 1,
-\cdots, M-1$, we are able to construct an orthogonal matrix.</p>
+<p>For example: 0859734216, it means that we choose 0 in the first column ,
+8 in the second column 2, 5 in the third one, etc. Supposed that $k$ is the
+first item of a transversal, based on following elements, we replace them by
+$k$. Given $M$ transversals of $k = 0, 1, \cdots, M-1$, we are able to
+construct an orthogonal matrix. For instant,
+with the sequence 0859734216, we place 0 at the 0th row of the first column,
+the 8th row of the second column, and so on.</p>
 
 <p>The algorithm below counts the number of transversals of a Latin square.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#66d9ef">typedef</span> vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> mat;
