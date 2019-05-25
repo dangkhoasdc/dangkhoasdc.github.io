@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Latin squares and a story of computer science history | Dang-Khoa&#39;s blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+    
+    
+    <li><a href="http://dangkhoasdc.github.io/post/2018/02/01/kh%E1%BB%91i-latin-v%C3%A0-c%C3%A2u-chuy%E1%BB%87n-to%C3%A1n-h%E1%BB%8Dc-v%C3%A0-l%E1%BB%8Bch-s%E1%BB%AD-m%C3%A1y-t%C3%ADnh/">vi</a></li>
+    
+
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Latin squares and a story of computer science history</span></h1>
+
+<h2 class="date">2018/02/01</h2>
+</div>
+
+<main>
+
+
+<p>The content of this note mostly belongs to the first section of TAoCP, Vol4A.</p>
+
+<h1 id="definition">Definition</h1>
+
+<p>Given a square matrix of size $M$ and each element is $\{0, 1, \cdots, M-1
+\}$, we construct a matrix such that for the element $i$ in the set $\{0, 1, \cdots,
+M-1\}$ only appears exactly 1 time on every row and column.</p>
+
+<h3 id="examples">Examples</h3>
+
+<p>We have 16 cards which comprises a combination of 4 ranks, i.e, J, K, Q, A and
+4 suits: $\heartsuit,
+\diamondsuit, \clubsuit, \spadesuit$, we arrange the cards such that for each
+column or row, we have 4 ranks and 4 suitst (Jacques Ozaman, mathematiques et physiques, Paris 1725).</p>
+
+<figure>
+    <img src="https://i.imgur.com/opJooRI.png"/> <figcaption>
+            <h4>One instance of such the arrangment. Source: TAoCP, Vol 4A.</h4>
+        </figcaption>
+</figure>
+
+
+<h1 id="applications">Applications</h1>
+
+<p>While studying mathematics, sometimes we could not find an obvious application in order to motivate ourself to study the concept. However, since am a computer science engineer who is pragmatic than _mathematical inclination, I am specially interested in concepts which have applications in real life. Regards the latin square, we get several ones:</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Sudoku">Sudoku</a>: the variant of latin square
+is one of the most popular puzzles in the world.</li>
+<li><a href="https://en.wikipedia.org/wiki/Blocking_(statistics)">Design of experiments</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Latin_square#Error_correcting_codes">Error corecting codes</a>.</li>
+<li><a href="http://elscorcho.50webs.com/latinsquares.pdf">Crytography</a>.</li>
+</ul>
+
+<h1 id="war-story">War Story</h1>
+
+<p>In 1779, a puzzle similar to aforemention example attracted the famous
+mathematician: Leonhard Euler:</p>
+
+<blockquote>
+<p>Thirty-six officers of six different ranks, taken from six different
+regiments, want to march in a $6 \times 6$ formation so that each row and
+each column will contain one officer of each rank and one of each regiment.
+How can they do it?</p>
+</blockquote>
+
+<p>Even though being amost blind, Euler was determined to solve the puzzle and
+tried to generalize the problem for other cases $M = 1, 2, \cdots$. However,
+when $M\mod 4 = 2$, he could not solve it. Later, he stated a conjenture that
+there is no solution for $M \mod 4 = 2$.</p>
+
+<p>However, the puzzle Euler tackled is quite different compared to the definition
+given in the previous section. More precisely, let $\heartsuit = 1, \diamondsuit = 2,
+\clubsuit = 3, \spadesuit = 4$, and we divide ranks and suits into 2 seperated
+matrices, we got two Latin squares:</p>
+
+<p>$$
+\begin{bmatrix}
+J&amp; A&amp; K&amp; Q\newline
+Q&amp; K&amp; A&amp; J\newline
+A&amp; J&amp; Q&amp; K\newline
+K&amp; Q&amp; J&amp; A
+\end{bmatrix}
+$$</p>
+
+<p>and</p>
+
+<p>$$
+\begin{bmatrix}
+2&amp; 1&amp; 4&amp; 3\newline
+4&amp; 3&amp; 2&amp; 1\newline
+3&amp; 4&amp; 1&amp; 2\newline
+1&amp; 2&amp; 3&amp; 4
+\end{bmatrix}
+$$</p>
+
+<p>Fig. 1 becomes:</p>
+
+<p>$$
+\begin{bmatrix}
+J2&amp; A1&amp; K4&amp; Q3\newline
+Q4&amp; K3&amp; A2&amp; J1\newline
+A3&amp; J4&amp; Q1&amp; K2\newline
+K1&amp; Q2&amp; J3&amp; A4
+\end{bmatrix}
+$$</p>
+
+<p>Two Latin sqaures is orthogonal iff when we combine two elements with the same
+position together, each element in the new matrix is unique. The puzzle of Euler
+is: given a Latin sqaure, how do we find another Latin matrix which is orthogonal
+to the given one.</p>
+
+<p>The combined matrix is called as a Graeco-Latinx matrix.</p>
+
+<p>In order to prove Euler&rsquo;s conjenture, mathematics spent almost 180 years with
+the support from computers. In 1957, Paige and Tompkins programmed on SWAC to find
+a counterexample with $M=10$. After 10 hours running without any results, they
+terminated the program.</p>
+
+<p>In 1960, Parker et al. proved that it is possible to find an orthogonal Latin
+square when $M \geq 6$ and disprove the conjenture. In addition, they also
+wrote a program on UNIVAC 1206 which is able to generate the matrix. The
+program only took nearly 1 hour to find a solution of input in 1957:</p>
+
+<pre><code>0 1 2 3 4 5 6 7 8 9
+1 8 3 2 5 4 7 6 9 0
+2 9 5 6 3 0 8 4 7 1
+3 7 0 9 8 6 1 5 2 4
+4 6 7 5 2 9 0 8 1 3
+5 0 9 4 7 8 3 1 6 2
+6 5 4 7 1 3 2 9 0 8
+7 4 1 8 0 2 9 3 5 6
+8 3 6 0 9 1 5 2 4 7
+9 2 8 1 6 7 4 0 3 5
+</code></pre>
+
+<p>One instant of the solution (TAoCP):</p>
+
+<pre><code>0 2 8 5 9 4 7 3 6 1
+1 7 4 9 3 6 5 0 2 8
+2 5 6 4 8 7 0 1 9 3
+3 6 9 0 4 5 8 2 1 7
+4 8 1 7 5 3 6 9 0 2
+5 1 7 8 0 2 9 4 3 6
+6 9 0 2 7 1 3 8 4 5
+7 3 5 1 2 0 4 6 8 9
+8 0 2 3 6 9 1 7 5 4
+9 4 3 6 1 8 2 5 7 0
+
+</code></pre>
+
+<h1 id="transversals">Transversals</h1>
+
+<p>Parker utilized a concept called transversal which was previously proposed by
+Euler. A transversal is a way to choose a sequence of $M$ elements such that there
+is only 1 element in each row, each column and is unique in the sequence.</p>
+
+<p>For example: 0859734216, it means that we choose 0 in the first column ,
+8 in the second column 2, 5 in the third one, etc. Supposed that $k$ is the
+first item of a transversal, based on following elements, we replace them by
+$k$. Given $M$ transversals of $k = 0, 1, \cdots, M-1$, we are able to
+construct an orthogonal matrix. For instant,
+with the sequence 0859734216, we place 0 at the 0th row of the first column,
+the 8th row of the second column, and so on.</p>
+
+<p>The algorithm below counts the number of transversals of a Latin square.</p>
+
+<pre><code class="language-cpp">typedef vector&lt;vector&lt;int&gt;&gt; mat;
+class transversal {
+private:
+    int n;
+    vector&lt;bool&gt; row;
+    vector&lt;bool&gt; nums;
+    mat input;
+    int cnt;
+public:
+    transversal(const mat&amp; in_): n(in_.size()), input(in_),
+    row(n, false), nums(n, false), cnt(0) {
+        assert(in_.size() == in_[0].size());
+    }
+
+    void print() { // debugging
+        for (auto&amp; rows: input) {
+            for (auto&amp; e: rows) cout &lt;&lt; e &lt;&lt; &quot; &quot;;
+            cout &lt;&lt; endl;
+        }
+    }
+
+    int compute(int idx) {
+        cnt = 0;
+        fill(row.begin(), row.end(), false);
+        fill(nums.begin(), nums.end(), false);
+        nums[input[idx][0]] = true;
+        row[idx] = true;
+        comp(1);
+        return cnt;
+    }
+
+
+private:
+    void comp(int idx) { //idx = index of column
+        if (idx == n) {
+            cnt++;
+            return;
+        }
+
+        for (int i = 0; i &lt; n; ++i) {
+            if (!row[i] &amp;&amp; !nums[input[i][idx]] ) {
+                row[i] = true;
+                nums[input[i][idx]] = true;
+                comp(idx+1);
+                row[i] = false;
+                nums[input[i][idx]] = false;
+            }
+        }
+
+    }
+
+};
+</code></pre>
+
+<p>From the above input, we get the output:</p>
+
+<pre><code>79 96 76 87 70 84 83 75 95 63
+</code></pre>
+
+<p>It is exactly the same as in the book. We later can modify the code to find all transversals given an input. After that, for every transversal $k$, we choose a set such that there is no duplicate elements which becomes the output matrix.  The details of the algorithm will be discussed in later posts about Dancing Links.</p>
+
+<h1 id="references">References</h1>
+
+<ol>
+<li>Knuth, Donald E. The Art of Computer Programming, Volume 4A: Combinatorial Algorithms, Part 1. Pearson Education India, 2011.</li>
+<li><a href="https://en.wikipedia.org/wiki/Latin_square">https://en.wikipedia.org/wiki/Latin_square</a></li>
+<li><a href="http://elscorcho.50webs.com/latinsquares.pdf">http://elscorcho.50webs.com/latinsquares.pdf</a></li>
+</ol>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

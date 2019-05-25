@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dẫn nhập thuật toán ngẫu nhiên | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Dẫn nhập thuật toán ngẫu nhiên</span></h1>
+
+<h2 class="date">2016/10/23</h2>
+</div>
+
+<main>
+
+
+<p>Hôm rồi học course <em>Introduction to Algorithm (2006-MIT)</em> mình được biết qua khái niệm <em>Randomized Algorithms</em>, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.</p>
+
+<h1 id="định-nghĩa">Định nghĩa</h1>
+
+<p><em>Randomized Algorithms</em> (viết gọn là <code>randalgs</code>) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.</p>
+
+<p>Điểm thú vị của <code>randalgs</code> chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến <em>kì vọng trong trường hợp xấu nhất</em>.</p>
+
+<p>Tưởng tượng ta có một hệ thống nghiêm trọng, nếu như hệ thống đó bị crash thì sẽ kích hoạt <a href="https://en.wikipedia.org/wiki/Cheget">Cheget</a> và <a href="https://en.wikipedia.org/wiki/Nuclear_football">Nuclear football</a> cùng một lúc. Hệ thống quá lớn và phức tạp, quan trọng hơn, nó sẽ không hoạt động được khi liên tục phải chạy <code>quicksort</code> trong $\mathcal{O}(n^2)$ - dữ liệu đầu vào là mảng được sắp xếp sẵn.</p>
+
+<p>Hacker, bằng một cách nào đó biết được điều này và tấn công hệ thống bằng cách đưa vào hệ thống những mảng đã sắp xếp sẵn. Và bùm, apocalyptic diễn ra.</p>
+
+<p>Và để ngăn chặn thảm hoạ đó xảy đến, ta tạo ra một phiên bản gọi là <code>randomized quicksort</code>: trước khi được xử lý, mảng đầu vào sẽ được xáo trộn. Và cho dù hacker có cố tình tấn công bằng chuỗi đã sắp xếp thì sau bước tiền xử lý này , mảng được sắp xếp ngẫu nhiên.</p>
+
+<p>Nếu một input có trật tự ngẫu nhiên, sau khi xáo trộn trở thành một chuỗi thứ tự thì sao? <a href="https://en.wikipedia.org/wiki/Murphy%27s_law">Murphy’s law</a></p>
+
+<blockquote>
+<p>Nếu đã xui, thì hẳn phải xui nhất có thể.</p>
+</blockquote>
+
+<h1 id="ví-dụ">Ví dụ</h1>
+
+<p>Một biến thế nổi tiếng của <em>Quick sort</em> chính là <em>Randomized Quicksort</em>, có hai phiên bản chính:</p>
+
+<ol>
+<li>Chọn ngẫu nhiên pivot để xử lý.</li>
+<li>Xáo trộn mảng đầu vào trước khi sắp xếp.</li>
+</ol>
+
+<p><em>Randomized Quicksort</em> được tạo ra nhằm tránh trường hợp xấu nhất của thuật toán <em>quicksort</em> là $\mathcal{O}(n^2)$.</p>
+
+<h1 id="phân-loại">Phân loại</h1>
+
+<blockquote>
+<p>In Las Vegas, the dealer can tell you whether you’ve won or lost, but in Monte Carlo, le croupier ne parle que Français, so you have no idea what he’s saying</p>
+</blockquote>
+
+<h2 id="las-vegas-algorithm">Las Vegas algorithm</h2>
+
+<p>Thuật toán nằm trong họ <em>Las Vegas</em> <em>luôn luôn</em> đảm bảo kết quả trả ra đúng với mong muốn. Quicksort là một ví dụ điển hình.</p>
+
+<p>Nói cách khác, <em>Las Vegas</em> không chơi hên xui ở kết quả trả về, nó chỉ sử dụng yếu tố ngẫu nhiên trong các phép tính toán để cho ra kết quả đúng.</p>
+
+<h2 id="monte-carlo-algorithm">Monte Carlo algorithm</h2>
+
+<p>Khác với <em>Las Vegas</em>, <em>Monte Carlo</em> không đảm bảo kết quả sẽ luôn luôn đúng. Nhưng <em>Monto Carlo</em> có xác suất kết quả sai thấp có thể.</p>
+
+<p>Thay vì sử dụng xác suất như một trong những quá trình tính toán, <em>Monte Carlo</em> hên xui ngay cả kể quả trả về.</p>
+
+<h2 id="phân-biệt">Phân biệt</h2>
+
+<h3 id="bài-toán">Bài toán</h3>
+
+<p>Cho một chuỗi có độ dài <code>2n</code> trong đó có <code>n</code> kí tự <code>a</code> và <code>n</code> kí tự <code>b</code>. Nhiệm vụ là tìm ra một vị trí bất kì trong chuỗi chứa kí tự a</p>
+
+<pre><code class="language-python">    import sys
+    import random
+
+    # Las Vegas version
+    def find_a_lv(string):
+        while True:
+            pos = random.randint(0, len(string)-1)
+            if string[pos] == 'a': return pos
+
+    # Monte Carlo version
+    def find_a_mc(string, k):
+        pos = 0
+        while k and string[pos] != 'a':
+            k = k -1
+            pos = random.randint(0, len(string)-1)
+
+        return pos
+
+    if __name__ == '__main__':
+        string = sys.argv[1]
+        if len(string) % 2 == 1:
+            raise ValueError(&quot;Wrong input&quot;)
+
+        print find_a_lv(string)
+        print find_a_mc(string, len(string)/2)
+</code></pre>
+
+<p>Ta dễ dàng nhận thấy <code>find_a_lv</code> luôn luôn cho ra kết quả, tuy nhiên đôi khi nó lại không thực sự hiệu quả. Ví dụ như nếu ta có chuỗi đầu vào là “ab” và <code>find_a_lv</code> mất 2 triệu vòng lặp mới pick đúng <code>pos=0</code>.Dĩ nhiên xác suất để xảy ra chuyện đó rất thấp, nhưng không có nghĩa là nó không xảy ra.</p>
+
+<p>Còn trong trường hợp <code>find_a_mc</code>, kết quả sẽ sai với xác suất khá dễ tính: $\frac{1}{2^k}$ - khi trong <code>k</code> lần thử để chọn đúng vị trí chứa <code>b</code>.</p>
+
+<h1 id="các-kĩ-thuật-cơ-bản">Các kĩ thuật cơ bản</h1>
+
+<p><img src="http://i.imgur.com/0YSlgjJ.png" alt="Methodologies" /></p>
+
+<ol>
+<li>Avoiding adversarial inputs:
+
+<ul>
+<li>Trong các thuật toán online.</li>
+<li>Hashing.</li>
+<li>Trong các thuật toán sắp xếp.</li>
+</ul></li>
+<li>Verification:
+
+<ul>
+<li>Phát sinh số ngẫu nhiên trong các bài toán kiểm thực.</li>
+</ul></li>
+<li>Random sampling:
+
+<ul>
+<li>Trong các bài toán tìm kiếm (tìm median..)</li>
+<li>Trong các thuật toán geometry.</li>
+</ul></li>
+<li>Load balancing:
+
+<ul>
+<li>Parallel algorithms.</li>
+<li>Hashing problems.</li>
+</ul></li>
+<li>Symmetry breaking:
+
+<ul>
+<li>Dùng trong hệ thống distributed.</li>
+</ul></li>
+<li>Probabilistic existence proofs:
+
+<ul>
+<li>Thông qua các thực nghiệm.</li>
+<li>Đảm bảo trong bài toán tìm kiếm đối tượng cần tìm tồn tại.</li>
+</ul></li>
+</ol>
+
+<h1 id="tài-liệu">Tài liệu</h1>
+
+<h2 id="khoá-học">Khoá học</h2>
+
+<ol>
+<li><a href="https://courses.cs.washington.edu/courses/cse525/13sp/">Randomized Algorithms and Probabilistic Analysis - Washington</a></li>
+<li><a href="http://cs.brown.edu/courses/cs155/slides/slides.html">Probabilistic Methods in Computer Science</a></li>
+</ol>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

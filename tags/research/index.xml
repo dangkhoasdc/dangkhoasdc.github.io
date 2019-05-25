@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>research on My blog</title>
+    <link>http://dangkhoasdc.github.io/tags/research/</link>
+    <description>Recent content in research on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Wed, 23 May 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Làm nghiên cứu theo phong cách Agile</title>
+      <link>http://dangkhoasdc.github.io/post/2018/05/23/l%C3%A0m-nghi%C3%AAn-c%E1%BB%A9u-theo-phong-c%C3%A1ch-agile/</link>
+      <pubDate>Wed, 23 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2018/05/23/l%C3%A0m-nghi%C3%AAn-c%E1%BB%A9u-theo-phong-c%C3%A1ch-agile/</guid>
+      <description>Bài viết xoay quanh một số mẹo vặt về làm nghiên cứu trong Khoa Học Máy Tính (KHMT), đặc biệt là hướng Machine Learning của một thanh niên mới tập tành làm research.
+Lên kế hoạch Không giống như PhD khi học có kha khá nhiều thời gian để tìm hiểu bài toán nghiên cứu, thông thường nhóm mình chỉ có 2-3 tháng để tập trung cho 1 nghiêu cứu và phải hoàn thành bằng 1, 2 submission và các hội nghị.</description>
+    </item>
+    
+    <item>
+      <title>Một chút thống kê về các bài báo CVPR16</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/</guid>
+      <description>Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+ Số bài báo được accept: 643 bài. Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài. Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.</description>
+    </item>
+    
+    <item>
+      <title>Quy Trình Xin Tài Trợ NAFOSTED</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/quy-tr%C3%ACnh-xin-t%C3%A0i-tr%E1%BB%A3-nafosted/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/quy-tr%C3%ACnh-xin-t%C3%A0i-tr%E1%BB%A3-nafosted/</guid>
+      <description>Tiêu chí Để đảm bảo hồ sơ được duyệt, bài báo và hội nghị tham dự phải đạt một số tiêu chí mà Quỹ đưa ra:
+ Nhà khoa học đang thực hiện đề tài do Quỹ hỗ trợ, hoặc Nhà khoa học là người dưới 35 tuổi. Quỹ đánh giá hội nghị dựa trên lịch sử của hội nghị, uy tín của đơn vị tài trợ hội nghị, uy tính của các nhà khoa học khách mời hay uy tính của ban tổ chức.</description>
+    </item>
+    
+  </channel>
+</rss>

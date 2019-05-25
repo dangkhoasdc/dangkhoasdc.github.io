@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>games on My blog</title>
+    <link>http://dangkhoasdc.github.io/tags/games/</link>
+    <description>Recent content in games on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 13 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/games/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện</title>
+      <link>http://dangkhoasdc.github.io/post/2018/02/13/witcher-3-x%C3%A2y-d%E1%BB%B1ng-nh%C3%A2n-v%E1%BA%ADt-v%C3%A0-ph%C6%B0%C6%A1ng-ph%C3%A1p-ph%C3%A1t-tri%E1%BB%83n-c%E1%BB%91t-truy%E1%BB%87n/</link>
+      <pubDate>Tue, 13 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2018/02/13/witcher-3-x%C3%A2y-d%E1%BB%B1ng-nh%C3%A2n-v%E1%BA%ADt-v%C3%A0-ph%C6%B0%C6%A1ng-ph%C3%A1p-ph%C3%A1t-tri%E1%BB%83n-c%E1%BB%91t-truy%E1%BB%87n/</guid>
+      <description>Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.
+  Không bàn đến việc yếu tố điện ảnh, kỹ thuật cắt cảnh đã giúp phân đoạn này đáng nhớ và xuất sắc, thì một yếu tố làm nên chi tiết Geralt và Ciri hội ngộ thêm phần xúc động đó là xây dựng nhân vật trong game.</description>
+    </item>
+    
+    <item>
+      <title>Diablo III</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/diablo-iii/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/diablo-iii/</guid>
+      <description>Sau gần 4 năm kể từ khi phát hành, mình mới được chơi cái game này. Thực ra do một cách tình cờ mà thấy được cái giá rẻ bất ngờ của em ý, tính ra là 20 USD cho bản Standard. Hoá ra là do đã có bản Expansion nên bản cũ mới rẻ vậy. Thôi thì lượm về chơi vậy.
+Lần đầu tiên chơi game Diablo là bản Diablo 2 Fury Within hồi lớp 6 lớp 7 gì đó.</description>
+    </item>
+    
+  </channel>
+</rss>

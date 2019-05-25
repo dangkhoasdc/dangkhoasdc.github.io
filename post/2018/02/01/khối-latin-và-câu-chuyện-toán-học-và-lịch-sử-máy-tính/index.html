@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Khối Latin và câu chuyện toán học và lịch sử máy tính | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+    
+    
+    <li><a href="http://dangkhoasdc.github.io/en/post/2018/02/01/latin-squares-and-a-story-of-computer-science-history/">en</a></li>
+    
+
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Khối Latin và câu chuyện toán học và lịch sử máy tính</span></h1>
+
+<h2 class="date">2018/02/01</h2>
+</div>
+
+<main>
+
+
+<p>Trong dự án dài hơi về TAoCP, những phần đầu của Vol 4A.</p>
+
+<h1 id="định-nghĩa">Định nghĩa</h1>
+
+<p>Cho một ma trận vuông có kích thước M và các phần tử thuộc $\{0, 1, \cdots, M-1
+\}$, ta xây dựng ma trận sao cho mỗi phần tử $i$ trong tập $\{0, 1, \cdots,
+M-1\}$ chỉ xuất hiện đúng 1 lần trong mỗi cột và mỗi dòng.</p>
+
+<h3 id="ví-dụ">Ví dụ</h3>
+
+<p>Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 4 loại $\heartsuit,
+\diamondsuit, \clubsuit, \spadesuit$, ta sắp xếp sao cho mỗi dòng/cột có đủ 4
+chất và 4 quân (Jacques Ozaman, mathematiques et physiques, Paris 1725).</p>
+
+<figure>
+    <img src="https://i.imgur.com/opJooRI.png"/> <figcaption>
+            <h4>Cách sắp xếp quân bài. Source: TAoCP, Vol 4A.</h4>
+        </figcaption>
+</figure>
+
+
+<h1 id="ứng-dụng">Ứng dụng</h1>
+
+<p>Thực ra trong toán học đôi khi ta không cần một ứng dụng thực tế của một vấn
+đề để có động lực nghiên cứu hay tìm hiểu. Tuy nhiên, mình lại là một thanh
+niên học khoa học máy tính với thiên hướng &ldquo;engineer&rdquo; hơn là các nhà toán học
+cao siêu, nên mình đòi hỏi cái mình học có tính ứng dụng ít nhiều. Về khối
+vuông Latin này có kha khá ứng dụng:</p>
+
+<ul>
+<li>Sudoku là một dạng của khối vuông Latin, và trò chơi này trở thành một trong
+những trò chơi giải đố nổi tiếng nhất thế giới.</li>
+<li>Trong cài đặt thí nghiệm.</li>
+<li>Mã sửa lỗi.</li>
+<li>Mã hóa.</li>
+</ul>
+
+<h1 id="câu-chuyện-lịch-sử">Câu chuyện lịch sử</h1>
+
+<p>Năm 1779, một câu đố tương tự như trong phần ví dụ đã thu hút nhà toán học
+vĩ đại: Leonhard Euler</p>
+
+<blockquote>
+<p>Thirty-six officers of six different ranks, taken from six different
+regiments, want to march in a $6 \times 6$ formation so that each row and
+each column will contain one officer of each rank and one of each regiment.
+How can they do it?</p>
+</blockquote>
+
+<p>Dù đã gần như mù nhưng Euler vẫn quyết tâm giải bài toán này và tổng quát hóa
+cho các trường hợp $M = 1, 2, \cdots$. Tuy nhiên, với $M\mod 4 = 2$ khiến ông
+không giải được, Sau đó ông đã đưa ra một conjenture rằng không thể giải
+câu đố này với trường hợp tổng quát $M \mod 4 = 2$.</p>
+
+<p>Tuy nhiên phần định nghĩa về khối Latin hơi khác 1 chút so với phần ví
+dụ. Nếu ta đặt $\heartsuit = 1, \diamondsuit = 2, \clubsuit = 3, \spadesuit = 4$,
+và tách chất và quân bài ra 2 ma trận, ta được 2 ma trận Latin.</p>
+
+<p>$$
+\begin{bmatrix}
+J&amp; A&amp; K&amp; Q\newline
+Q&amp; K&amp; A&amp; J\newline
+A&amp; J&amp; Q&amp; K\newline
+K&amp; Q&amp; J&amp; A
+\end{bmatrix}
+$$</p>
+
+<p>và</p>
+
+<p>$$
+\begin{bmatrix}
+2&amp; 1&amp; 4&amp; 3\newline
+4&amp; 3&amp; 2&amp; 1\newline
+3&amp; 4&amp; 1&amp; 2\newline
+1&amp; 2&amp; 3&amp; 4
+\end{bmatrix}
+$$</p>
+
+<p>Figure 1 trở thành</p>
+
+<p>$$
+\begin{bmatrix}
+J2&amp; A1&amp; K4&amp; Q3\newline
+Q4&amp; K3&amp; A2&amp; J1\newline
+A3&amp; J4&amp; Q1&amp; K2\newline
+K1&amp; Q2&amp; J3&amp; A4
+\end{bmatrix}
+$$</p>
+
+<p>Hai ma trận được gọi là orthogonal khi chập các phần tử lại với nhau, mỗi phần
+tử trong ma trận mới là duy nhất.
+Bài toán lúc đó Euler phải giải là: cho 1 ma trận Latin, làm sao để tìm được
+một ma trận Latin khác orthogonal với nó.
+Ma trận sau khi được chập lại gọi là Graeco-Latin.
+Để chứng minh nhận định của Euler đúng hay sai, các nhà toán học đã mất gần 180
+năm với sự giúp đỡ của máy tính.</p>
+
+<p>Năm 1957, Paige và Tompkins đã thử lập trình trên máy SWAC để tìm ví dụ phản
+chứng khi $M=10$ nhưng sau gần 5 giờ chạy liên tục không ra kết quả, họ đã
+tắt chương trình.</p>
+
+<p>Năm 1960, Parker và đồng sự đã chứng minh rằng có thể tìm được 1 ma trận orthogonal
+với $M \geq 6$ và phản chứng nhận định của Euler. Đồng thời, ông cũng viết
+1 chương trình trên máy UNIVAC 1206 để sinh ra ma trận đó. Chương trình chưa
+đến 1 giờ để có thể tìm ra lời giải với cùng input năm 1957:</p>
+
+<pre><code>0 1 2 3 4 5 6 7 8 9
+1 8 3 2 5 4 7 6 9 0
+2 9 5 6 3 0 8 4 7 1
+3 7 0 9 8 6 1 5 2 4
+4 6 7 5 2 9 0 8 1 3
+5 0 9 4 7 8 3 1 6 2
+6 5 4 7 1 3 2 9 0 8
+7 4 1 8 0 2 9 3 5 6
+8 3 6 0 9 1 5 2 4 7
+9 2 8 1 6 7 4 0 3 5
+</code></pre>
+
+<p>Một solution trong sách:</p>
+
+<pre><code>0 2 8 5 9 4 7 3 6 1
+1 7 4 9 3 6 5 0 2 8
+2 5 6 4 8 7 0 1 9 3
+3 6 9 0 4 5 8 2 1 7
+4 8 1 7 5 3 6 9 0 2
+5 1 7 8 0 2 9 4 3 6
+6 9 0 2 7 1 3 8 4 5
+7 3 5 1 2 0 4 6 8 9
+8 0 2 3 6 9 1 7 5 4
+9 4 3 6 1 8 2 5 7 0
+
+</code></pre>
+
+<h1 id="transversals">Transversals</h1>
+
+<p>Parker sử dụng lại khái niệm transversal mà trước đây Euler từng định nghĩa,
+transversal là cách để chọn ra chuỗi $M$ phần tử sao cho chỉ có 1 phần tử duy
+nhất ở mỗi dòng, mỗi cột và duy nhất trong transversal.</p>
+
+<p>Ví dụ: 0859734216, tức ta chọn 0 ở cột 1, 8 ở cột 2, 5 ở cột 3, &hellip; 6 ở cột 10.
+Giả sử ta có $k$ là giá trị đầu tiên của transversal, dựa vào giá trị từng phần
+tử phía sau, ta thay bằng $k$. Chọn ra $M$ transversal của $k = 0, 1, \cdots, M-1$
+ta sẽ tạo thành 1 orthogonal matrix.</p>
+
+<p>Thuật toán đếm số transversal của một ma trận vuông N.</p>
+
+<pre><code class="language-cpp">typedef vector&lt;vector&lt;int&gt;&gt; mat;
+class transversal {
+private:
+    int n;
+    vector&lt;bool&gt; row;
+    vector&lt;bool&gt; nums;
+    mat input;
+    int cnt;
+public:
+    transversal(const mat&amp; in_): n(in_.size()), input(in_),
+    row(n, false), nums(n, false), cnt(0) {
+        assert(in_.size() == in_[0].size());
+    }
+
+    void print() { // debugging
+        for (auto&amp; rows: input) {
+            for (auto&amp; e: rows) cout &lt;&lt; e &lt;&lt; &quot; &quot;;
+            cout &lt;&lt; endl;
+        }
+    }
+
+    int compute(int idx) {
+        cnt = 0;
+        fill(row.begin(), row.end(), false);
+        fill(nums.begin(), nums.end(), false);
+        nums[input[idx][0]] = true;
+        row[idx] = true;
+        comp(1);
+        return cnt;
+    }
+
+
+private:
+    void comp(int idx) { //idx = index of column
+        if (idx == n) {
+            cnt++;
+            return;
+        }
+
+        for (int i = 0; i &lt; n; ++i) {
+            if (!row[i] &amp;&amp; !nums[input[i][idx]] ) {
+                row[i] = true;
+                nums[input[i][idx]] = true;
+                comp(idx+1);
+                row[i] = false;
+                nums[input[i][idx]] = false;
+            }
+        }
+
+    }
+
+};
+</code></pre>
+
+<p>Lấy input từ cuốn TAoCP ra được kết quả:</p>
+
+<pre><code>79 96 76 87 70 84 83 75 95 63
+</code></pre>
+
+<p>Bem, đúng với kết quả trong sách. Chỉnh sửa một chút ta có thể có được toàn
+bộ các transversal cần tìm. Sau đó với mỗi transversal của $k$, ta chọn ra bộ nào
+không có phần tử trùng (trong index của orthogonal matrix), ta sẽ tìm được
+ma trận. Chi tiết về phần này sẽ được đề cập trong bài viết nói về
+Dancing Links.</p>
+
+<h1 id="tài-liệu-tham-khảo">Tài liệu tham khảo</h1>
+
+<ol>
+<li>Knuth, Donald E. The Art of Computer Programming, Volume 4A: Combinatorial Algorithms, Part 1. Pearson Education India, 2011.</li>
+<li><a href="https://en.wikipedia.org/wiki/Latin_square">https://en.wikipedia.org/wiki/Latin_square</a></li>
+<li><a href="http://elscorcho.50webs.com/latinsquares.pdf">http://elscorcho.50webs.com/latinsquares.pdf</a></li>
+</ol>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

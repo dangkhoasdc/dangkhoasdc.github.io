@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>books on Dang-Khoa&#39;s blog </title>
+    <title>books on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/books/</link>
-    <description>Recent content in books on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in books on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
     <lastBuildDate>Wed, 07 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
@@ -12,25 +13,33 @@
     
     <item>
       <title>Programming Pearls</title>
-      <link>http://dangkhoasdc.github.io/post/programming_pearls/</link>
+      <link>http://dangkhoasdc.github.io/post/2018/02/07/programming-pearls/</link>
       <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/programming_pearls/</guid>
+      <guid>http://dangkhoasdc.github.io/post/2018/02/07/programming-pearls/</guid>
       <description>Programing Pearls - Jon Bentley
-Excellent.
-Until now, there is no such book which makes me shout out like this after receiving from Amazon. Let brieftly review some favoriate books:
- CLRS: theoretically, this really is an &amp;ldquo;introduction&amp;rdquo; textbook about algorithms. Nonetheless, it still is an extensive reference and full of details. However, I am not impressed by the writing style and the pseudo-code.
- Algorithms, Sedgewick: one of the best textbooks ever.</description>
+Xuất sắc.
+Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thùng của Amazon ra và lượn 1, 2 trang để thốt lên 1 từ &amp;ldquo;xuất sắc&amp;rdquo; cả. Điểm qua một số sách về &amp;ldquo;Algorithms&amp;rdquo; mà tôi từng đọc và tìm hiểu:
+ CLRS: về mặt lý thuyết, đây thực sự là &amp;ldquo;introduction&amp;rdquo; nhưng đầy đủ và chi tiết. Tôi không quá ấn tượng bởi cách viết và mã giả.</description>
     </item>
     
     <item>
-      <title>Selected Papers on Computer Science (Don Knuth) and the current state of Deep Learning</title>
-      <link>http://dangkhoasdc.github.io/post/selectedpapers_cs/</link>
+      <title>Sách: Selected Papers on Computer Science</title>
+      <link>http://dangkhoasdc.github.io/post/2018/01/15/s%C3%A1ch-selected-papers-on-computer-science/</link>
       <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/selectedpapers_cs/</guid>
-      <description>Book Info:
-    Description     Title Selected Papers on Computer Science [Amazon]   Author Donald Knuth   Pages 276    This is the most accessible book from Don Knuth. Although I was published nearly 20 years ago, it still is a classic computer science book. In Amazon, there is an interesting comment about the book from Peter Norvig (Director of Google Research).</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/01/15/s%C3%A1ch-selected-papers-on-computer-science/</guid>
+      <description>Một chút thông tin về cuốn sách trước khi mình đánh giá:
+   Thông tin Mô tả     Tiêu đề Selected Papers on Computer Science [Amazon]   Tác giả Donald Knuth   Số trang 276    Đây là một trong những cuốn sách dễ tiếp cận nhất của Don Knuth. Tuy được xuất bản cách đây khá lâu (gần 20 năm về trước), nhưng đây là một trong những cuốn sách kinh điển dẫn nhập về KHMT.</description>
+    </item>
+    
+    <item>
+      <title>Review: The C&#43;&#43; Programming Languages</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</guid>
+      <description>Hồi năm 1 đại học, mình rất thích cuốn C Programming Language của K&amp;amp;C, dù cuốn sách khá là ít trang nhưng đầy tinh tuý và rất hấp dẫn. Đến tận bây giờ, khi đã tốt nghiệp ra trường, tức đã 4 năm được biết cuốn sách, đôi lúc mình vẫn muốn đọc lại. Một thời gian sau mình có đọc thêm một số sách có tựa: The XXX Programming Language nhưng chỉ thấy C++ là hay.</description>
     </item>
     
   </channel>

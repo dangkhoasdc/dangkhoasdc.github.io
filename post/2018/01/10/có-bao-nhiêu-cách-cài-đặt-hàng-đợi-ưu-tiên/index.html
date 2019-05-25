@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên? | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</span></h1>
+
+<h2 class="date">2018/01/10</h2>
+</div>
+
+<main>
+
+
+<p>Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển
+trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:</p>
+
+<ul>
+<li>CTDL quan trọng cho các thuật toán khác như Dijkstra&rsquo;s Algorithms.</li>
+<li>Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative
+optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất
+để thực thi.</li>
+<li>Trong Hệ Điều Hành, các giải thuật lập lịch, scheduling.</li>
+<li>Trong các hệ thống giả lập, những sự kiện theo trình tự thời gian được ưu tiên
+thực thi trước.</li>
+</ul>
+
+<p>Priority Queues có hai toán tử rất quan trọng:</p>
+
+<ul>
+<li>Chèn một phần tử vào queue (<code>find_max</code>).</li>
+<li>Lấy ra phần tử lớn nhất trong queue (<code>push</code>).</li>
+</ul>
+
+<p>Chính vì hai chức năng này nên đôi khi Priority queues còn được nhắc đến với cái
+tên: Largest in, first out; (để phân biệt với First in, First out hay First in,
+last out). Cụ thể hơn, nếu phần tử <code>K[N]</code> là <strong>phần tử lớn nhất</strong> được chèn vào, thì
+<code>K[N]</code> cũng là <strong>phần tử đầu tiên</strong> được lấy ra.</p>
+
+<p>Bởi tầm quan trọng của 2 hàm này, khi tiếp cận bất kì cài đặt nào liên quan
+đến priority queues, ta luôn quan tâm cách mà 2 toán tử này duy trì trạng thái
+trình tự của các phần tử trong CTDL, đó cũng là phần phân tích chính trong bài
+viết này.</p>
+
+<h1 id="các-phương-pháp-cài-đặt">Các phương pháp cài đặt</h1>
+
+<p>Toàn bộ các cài đặt bằng C++ và các phân tích được đề cập chi tiết trong note
+<code>Algorithms</code> trên Github của mình. Trên blog mình chỉ tóm tắt sơ lược về các
+cài đặt và một số fun facts xung quanh.</p>
+
+<p>Danh sách bên dưới có một điều thú vị, đó là ta sẽ thấy độ thần thánh của R.Tarjan,
+ông đóng góp <sup>4</sup>&frasl;<sub>12</sub> cấu trúc được đề cập.</p>
+
+<h2 id="cài-đặt-bằng-mảng">Cài đặt bằng mảng</h2>
+
+<p>Một cách đơn giản nhất khi sử dụng mảng đó là:</p>
+
+<ol>
+<li>Luôn giữ một mảng được sắp xếp, <code>find_max</code> đơn giản chỉ là lấy ra phần tử
+đầu hoặc cuối dãy. Khi <code>push</code>, ta sử dụng chiến lược tương tự như <code>insertion_sort</code>.</li>
+<li><code>push</code> thực hiện như mảng bình thường. Khi gọi <code>find_max</code>, ta đơn giản tìm
+phần tử lớn nhất trong mảng đó.</li>
+</ol>
+
+<p>Cả hai phương pháp đều có độ phức tạp $\mathcal{O}(1)$ và $\mathcal{O}(N)$ ứng
+với <code>find_max</code>, <code>push</code> (cho trường hợp 1) và <code>push</code>,<code>find_max</code> (cho trường
+hợp 2).</p>
+
+<p>Một cách tốt hơn, khá dễ cài đặt là sử dụng heapsort với độ phức tạp là $\lg N$
+cho cả 2 toán tử. Chi tiết về heapsort và heap trong priority queue thì quá kinh
+điển rồi, hầu như mọi sách về thuật toán đề có đề cập.</p>
+
+<h2 id="leftist-tree">Leftist tree</h2>
+
+<p>Tác giả: Clark A. Crane (1971).</p>
+
+<p>Một phương pháp cài đặt dạng danh sách liên kết, trong đó mỗi node có các phần
+tử như sau:</p>
+
+<pre><code class="language-cpp">template&lt;typename Key&gt;
+struct node {
+    node * left;
+    node * right;
+    int dist;
+    Key k;
+};
+</code></pre>
+
+<p>Đây là cây nhị phân đặt biệt, trong đó cây con bên trái luôn nhiều phần tử hơn
+cây con bên phải, việc này được duy trì thông qua việc câp nhật giá trị <code>dist</code>:
+khoảng cách của node hiện tại tới node <code>NULL</code> gần nhất.</p>
+
+<p>Chi tiết về thuật toán và cài đặt:</p>
+
+<ol>
+<li>TAoCP, Vol 3, Section 5.2.3: A linked representation for priority queues.</li>
+<li><a href="https://www.geeksforgeeks.org/leftist-tree-leftist-heap/">Geeksforgeeks</a></li>
+</ol>
+
+<p>Ưu điểm của CTDL này chính là việc nó có khả năng gộp 2 priority queues lại với
+độ phức tạp khá nhỏ. Tuy nhiên, CTDL này thực sự không còn phổ biến.</p>
+
+<h2 id="cây-cân-bằng">Cây cân bằng</h2>
+
+<h2 id="stratified-tree">Stratified tree</h2>
+
+<p>Cấu trúc dữ liệu này có một cái tên phổ biến hơn: <strong>van Emde boas tree</strong> [Rất
+tiếc trên Wikipedia, phần
+<a href="https://en.wikipedia.org/wiki/Van_Emde_Boas_tree">van Emde Boas tre</a>
+lại không đề cập đến tên gọi gốc của CTDL này].</p>
+
+<blockquote>
+<p>Beware of bugs in the above code; I have only proved it correct, not tried it</p>
+</blockquote>
+
+<p>Câu nói kinh điển này của Don Knuth xuất phát từ việc ông trao đổi với tác giả
+của cấu trúc này <a href="http://www-cs-faculty.stanford.edu/~knuth/faq.html">[link 1]</a>,
+<a href="http://www.illc.uva.nl/Research/Publications/Reports/PP-2013-16.text.pdf">[link 2]</a>.</p>
+
+<h2 id="binomial-queues">Binomial Queues</h2>
+
+<p>Tác giả: J. Vuillemin (1978).</p>
+
+<h2 id="pagodas">Pagodas</h2>
+
+<p>Tác giả: J. Francon, G. Viennot, and J. Vuillemin (1978).</p>
+
+<h2 id="pairing-heaps">Pairing heaps</h2>
+
+<p>Tác giả: Micheal Fredman, Robert Sedgewick, Daniel Sleator, Robert Tarjan (1986).</p>
+
+<h2 id="skew-heaps">Skew heaps</h2>
+
+<h2 id="fibonacci-heaps-và-dạng-tổng-quát-af-heaps">Fibonacci heaps và dạng tổng quát: AF heaps</h2>
+
+<p>Một trong những ví dụ kinh điển về những thuật toán/CTDL có tính chất rất tốt
+về mặt lý thuyết nhưng lại thất bại trong ứng dụng thực tiễn.</p>
+
+<h2 id="calendar-queues">Calendar queues</h2>
+
+<h2 id="relaxed-heaps">Relaxed heaps</h2>
+
+<h2 id="fishspear">Fishspear</h2>
+
+<h2 id="hot-queues">Hot queues</h2>
+
+<h1 id="so-sánh">So sánh</h1>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

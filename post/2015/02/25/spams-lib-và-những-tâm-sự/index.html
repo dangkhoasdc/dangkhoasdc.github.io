@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spams Lib và Những Tâm Sự | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Spams Lib và Những Tâm Sự</span></h1>
+
+<h2 class="date">2015/02/25</h2>
+</div>
+
+<main>
+<p>Không còn gì sung sướng hơn sau 2 ngày ngồi cài cái khỉ gió <em>sparse coding lib cho python</em>, link cái thằng khỉ gió nó ở đây: <a href="http://spams-devel.gforge.inria.fr/downloads.html">Spams lib</a>. Mặc dù đã cố gắng nhưng phải mất mấy tiếng đồng hồ mình mới xong được cu cậu này.</p>
+
+<p>Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như sau:</p>
+
+<ol>
+<li><p>Không giống như cu Linux hay các bản distro của nó. Trên Mac có 2 cái package manager: MacPorts và HomeBrew. Mà 2 cái này nó lại đẻ ra một số chuyện linh ta linh tinh:</p>
+
+<ul>
+<li><p>Chúng cài đặt các phần mềm ở những chỗ khác nhau, như cu MacPorts nhét trong <em>/opt/local/bin/</em>, cu kia thì kinh dị hơn, nhét trong <em>/usr/local/Cellar/</em> làm mình chả biết đường nào mà lần.</p></li>
+
+<li><p>Tất cả các đồng chí trên đều đưa đường dẫn đến $PATH, và rồi hầm bà lằng các conflict xuất hiện khiến mình muốn điên đầu.</p></li>
+
+<li><p><strong>Bài học tổng kết: chỉ nên xài 1 trong 2 cu</strong></p></li>
+</ul></li>
+
+<li><p>Không nên tin tưởng hàng của Apple cho lắm, cu cậu chế ra các thứ quá là điên:</p>
+
+<ul>
+<li><p>Trình biên dịch của Apple chế ra một số options mà ta phải kể đến như cái <code>-arch</code> chết dịch, ngoài ra còn có cu warning <code>-Wshorten64-to-32</code>. Python tự generate ra những option dựa trên hệ điều hành đang dùng, khổ một cái, cái compiler mình dùng lại không support cho mấy cái chuyện đó.</p></li>
+
+<li><p>Ngoài ra, clang của Apple còn không hỗ trợ cả OpenMP, mà cái này bắt buộc phải có trong cái sparse coding lib này. Đại khái nó cứ luẩn quẩn.</p></li>
+
+<li><p>Chưa hết, trong <code>setup.py</code> cu này để option mặc định là <code>-m32</code>, tức là sử dụng kiến trúc 32bit. Máy mình lại là 64bit. Sửa lại thì được nhưng lại phải chọn kiến trúc trong file thực thi của python.</p></li>
+</ul></li>
+</ol>
+
+<p>Đại khái là xoắn. Giờ thì mình đã biết cách giải quyết:</p>
+
+<ol>
+<li><p>Cài <strong>python</strong> từ trang chủ.</p></li>
+
+<li><p>Xác định đường dẫn chính thức của nó, mò xem nó ở đâu và add vô trong $PATH.</p></li>
+
+<li><p>Sử dụng <strong>Superpack</strong> để cài các gói liên quan trong scipy. <a href="https://github.com/fonnesbeck/ScipySuperpack">link nó đây</a>. Trong này thì lưu ý cái biên $PIP, sửa lại cho phù hợp với cái máy của mình.</p></li>
+
+<li><p>Đối với cu numpy và scipy thì cài đặt thông qua pip.</p></li>
+</ol>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

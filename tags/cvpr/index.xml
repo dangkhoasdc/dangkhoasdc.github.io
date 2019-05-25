@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cvpr on My blog</title>
+    <link>http://dangkhoasdc.github.io/tags/cvpr/</link>
+    <description>Recent content in cvpr on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Sun, 23 Oct 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/cvpr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Một chút thống kê về các bài báo CVPR16</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/</guid>
+      <description>Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+ Số bài báo được accept: 643 bài. Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài. Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.</description>
+    </item>
+    
+  </channel>
+</rss>

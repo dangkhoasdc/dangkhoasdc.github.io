@@ -1,63 +1,153 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>programming on Dang-Khoa&#39;s blog </title>
+    <title>programming on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/programming/</link>
-    <description>Recent content in programming on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in programming on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Install OpenCV 3 non-free module on Ubuntu</title>
-      <link>http://dangkhoasdc.github.io/post/opencv3_nonfree/</link>
-      <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/opencv3_nonfree/</guid>
-      <description>The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
-Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.</description>
-    </item>
-    
-    <item>
-      <title>OpenCV on Android: practices and tips</title>
-      <link>http://dangkhoasdc.github.io/post/opencv_android_practices/</link>
-      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/opencv_android_practices/</guid>
-      <description>Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
-Basically, we have a function playing as a bridge between Java APIs and NDK:
-public native void function_name(long matAddress); To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
-    </item>
-    
-    <item>
-      <title>Setup OpenCV and Android Studio with NDK support</title>
-      <link>http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/</link>
+      <title>Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</title>
+      <link>http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/</guid>
-      <description>In this tutorial, I will demonstrate how to configurate the renowned computer vision libary, OpenCV, with the current Android Studio version (3.0.1). Let get started. The compiled version of OpenCV which supports Android is available at OpenCV Homepage. Download and extract it. Please note that to test the application properly on the mobile devices, the OpenCV Manager has to be installed.
-In another tutorial, I will talk about how to compile our own OpenCV library and put it to Android Studio since the pre-compiled library misses some interesting and important components, e.</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/</guid>
+      <description>Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có hỗ trợ Android được cung cấp sẵn ở OpenCV Homepage. Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì điện thoại phải cài đặt ứng dụng OpenCV Manager.
+Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên bản OpenCV với các tùy chỉnh của riêng cho từng yêu cầu, ví dụ như sử dụng đặc trưng SIFT hoặc các thuật toán có bản quyền.</description>
     </item>
     
     <item>
-      <title>Matlab</title>
-      <link>http://dangkhoasdc.github.io/post/matlab/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</title>
+      <link>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/matlab/</guid>
-      <description>General  Show the information of a variable. It is very useful when we the code takes so much memory: whos &amp;lt;variable name&amp;gt;. Sum of squared of elements: sumsqr(X). Use sum(sum(A.^2, 1)) instead if you want to use less memory. Memory optimizations tips and tricks: [Undocumented Matlab] Use column-based representation instead of the row-based one. For example, to represent a list of items from 1 to 5, use [1 2 3 4 5] (not [1; 2; 3; 4; 5]).</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</guid>
+      <description>Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
+ CTDL quan trọng cho các thuật toán khác như Dijkstra&amp;rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.</description>
     </item>
     
     <item>
-      <title>Install the OpenCV library on Visual Studio</title>
-      <link>http://dangkhoasdc.github.io/post/install_opencv_vs/</link>
+      <title>Một số biến thể Quicksort</title>
+      <link>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</guid>
+      <description>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
+    </item>
+    
+    <item>
+      <title>Cài đặt quan hệ thứ tự trong C&#43;&#43;</title>
+      <link>http://dangkhoasdc.github.io/post/2018/01/03/c%C3%A0i-%C4%91%E1%BA%B7t-quan-h%E1%BB%87-th%E1%BB%A9-t%E1%BB%B1-trong-c-/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2018/01/03/c%C3%A0i-%C4%91%E1%BA%B7t-quan-h%E1%BB%87-th%E1%BB%A9-t%E1%BB%B1-trong-c-/</guid>
+      <description>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
+ Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.</description>
+    </item>
+    
+    <item>
+      <title>Giải thuật tìm kiếm Fibonacci</title>
+      <link>http://dangkhoasdc.github.io/post/2017/12/19/gi%E1%BA%A3i-thu%E1%BA%ADt-t%C3%ACm-ki%E1%BA%BFm-fibonacci/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2017/12/19/gi%E1%BA%A3i-thu%E1%BA%ADt-t%C3%ACm-ki%E1%BA%BFm-fibonacci/</guid>
+      <description>Mình không tìm được từ nào tiếng Việt có thể dịch được từ &amp;ldquo;Fibonaccian Searching&amp;rdquo;, nếu &amp;ldquo;binary searching&amp;rdquo; có thể dịch là &amp;ldquo;tìm kiếm nhị phân&amp;rdquo;, thì &amp;ldquo;Fibonaccian Searching&amp;rdquo; không có ngữ nghĩa gì nhiều.
+Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.
+Lịch sử Thuật toán được để xuất bởi Devid E.</description>
+    </item>
+    
+    <item>
+      <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
+      <link>http://dangkhoasdc.github.io/post/2017/09/25/%C4%91%E1%BB%8Dc-ngh%E1%BB%87-thu%E1%BA%ADt-l%E1%BA%ADp-tr%C3%ACnh-taocp/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2017/09/25/%C4%91%E1%BB%8Dc-ngh%E1%BB%87-thu%E1%BA%ADt-l%E1%BA%ADp-tr%C3%ACnh-taocp/</guid>
+      <description>Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &amp;ldquo;cuồng&amp;rdquo; như Donald Knuth.</description>
+    </item>
+    
+    <item>
+      <title>Bài toán chuyển ngày sang thứ</title>
+      <link>http://dangkhoasdc.github.io/post/2017/09/16/b%C3%A0i-to%C3%A1n-chuy%E1%BB%83n-ng%C3%A0y-sang-th%E1%BB%A9/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2017/09/16/b%C3%A0i-to%C3%A1n-chuy%E1%BB%83n-ng%C3%A0y-sang-th%E1%BB%A9/</guid>
+      <description>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&amp;gt; Chủ Nhật, 1 -&amp;gt; Thứ Hai &amp;hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;amp;R C).</description>
+    </item>
+    
+    <item>
+      <title>rand() is harmful</title>
+      <link>http://dangkhoasdc.github.io/post/2017/09/06/rand-is-harmful/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2017/09/06/rand-is-harmful/</guid>
+      <description>rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &amp;ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&amp;rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng .</description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn cài đặt OpenCV trên Windows</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/install_opencv_vs/</guid>
-      <description>Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
- Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here.</description>
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/</guid>
+      <description>Biên dịch thư viện OpenCV Điểm thuận lợi của việc tự cài đặt và biên dịch thư viện có thể kể đến như sau:
+ Hỗ trợ IDE mới nhất, như trong bản OpenCV 3.0 (22/11/2015) thì chưa có bản biên dịch sẵn dành cho VS 2015. Customize được các thư viện khác liên quan như Kinect, OpenCL, Python…  Link Download thư viện OpenCV cho HĐH Windows
+Bước 1: Giải nén thư viện vào thư mục được định sẵn.</description>
+    </item>
+    
+    <item>
+      <title>Review: The C&#43;&#43; Programming Languages</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</guid>
+      <description>Hồi năm 1 đại học, mình rất thích cuốn C Programming Language của K&amp;amp;C, dù cuốn sách khá là ít trang nhưng đầy tinh tuý và rất hấp dẫn. Đến tận bây giờ, khi đã tốt nghiệp ra trường, tức đã 4 năm được biết cuốn sách, đôi lúc mình vẫn muốn đọc lại. Một thời gian sau mình có đọc thêm một số sách có tựa: The XXX Programming Language nhưng chỉ thấy C++ là hay.</description>
+    </item>
+    
+    <item>
+      <title>Lập Trình Hướng Đối Tượng Trong Python</title>
+      <link>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</link>
+      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</guid>
+      <description>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &amp;hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.
+Enum trong python Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</description>
+    </item>
+    
+    <item>
+      <title>Kinh Nghiệm Viết Tài Liệu Khoa Học</title>
+      <link>http://dangkhoasdc.github.io/post/2015/07/09/kinh-nghi%E1%BB%87m-vi%E1%BA%BFt-t%C3%A0i-li%E1%BB%87u-khoa-h%E1%BB%8Dc/</link>
+      <pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2015/07/09/kinh-nghi%E1%BB%87m-vi%E1%BA%BFt-t%C3%A0i-li%E1%BB%87u-khoa-h%E1%BB%8Dc/</guid>
+      <description>Sau thời gian đắng lòng vì cái luận văn và phải lên bờ xuống ruộng với nhiều tình huống éo le cây me. Cũng thêm vào đó, sau cái sự vụ này rút ra được nhiều kinh nghiệm xương máu hơn bao giờ hết. Hiện giờ công việc dù vấn đang ngập mặt, nhưng có vẻ thư thả hơn, kèm theo đó kết quả thực nghiệm khá tốt, công việc trên lab cũng dần ổn định khiến tinh thần phấn chấn và có nhiều kế hoạch loạn xị ngầu hơn trong thời gian tới.</description>
+    </item>
+    
+    <item>
+      <title>Ghi chú hướng dẫn cài đặt OpenCV</title>
+      <link>http://dangkhoasdc.github.io/post/2015/06/01/ghi-ch%C3%BA-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv/</link>
+      <pubDate>Mon, 01 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2015/06/01/ghi-ch%C3%BA-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv/</guid>
+      <description>I don&amp;rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.
+ Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C++, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.
+Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style step by step nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn.</description>
+    </item>
+    
+    <item>
+      <title>Spams Lib và Những Tâm Sự</title>
+      <link>http://dangkhoasdc.github.io/post/2015/02/25/spams-lib-v%C3%A0-nh%E1%BB%AFng-t%C3%A2m-s%E1%BB%B1/</link>
+      <pubDate>Wed, 25 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2015/02/25/spams-lib-v%C3%A0-nh%E1%BB%AFng-t%C3%A2m-s%E1%BB%B1/</guid>
+      <description>Không còn gì sung sướng hơn sau 2 ngày ngồi cài cái khỉ gió sparse coding lib cho python, link cái thằng khỉ gió nó ở đây: Spams lib. Mặc dù đã cố gắng nhưng phải mất mấy tiếng đồng hồ mình mới xong được cu cậu này.
+Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như sau:
+ Không giống như cu Linux hay các bản distro của nó.</description>
     </item>
     
   </channel>

@@ -1,44 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>android on Dang-Khoa&#39;s blog </title>
+    <title>android on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/android/</link>
-    <description>Recent content in android on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in android on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Install OpenCV 3 non-free module on Ubuntu</title>
-      <link>http://dangkhoasdc.github.io/post/opencv3_nonfree/</link>
-      <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/opencv3_nonfree/</guid>
-      <description>The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
-Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.</description>
-    </item>
-    
-    <item>
-      <title>OpenCV on Android: practices and tips</title>
-      <link>http://dangkhoasdc.github.io/post/opencv_android_practices/</link>
-      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/opencv_android_practices/</guid>
-      <description>Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
-Basically, we have a function playing as a bridge between Java APIs and NDK:
-public native void function_name(long matAddress); To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
-    </item>
-    
-    <item>
-      <title>Setup OpenCV and Android Studio with NDK support</title>
-      <link>http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/</link>
+      <title>Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</title>
+      <link>http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/</guid>
-      <description>In this tutorial, I will demonstrate how to configurate the renowned computer vision libary, OpenCV, with the current Android Studio version (3.0.1). Let get started. The compiled version of OpenCV which supports Android is available at OpenCV Homepage. Download and extract it. Please note that to test the application properly on the mobile devices, the OpenCV Manager has to be installed.
-In another tutorial, I will talk about how to compile our own OpenCV library and put it to Android Studio since the pre-compiled library misses some interesting and important components, e.</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/</guid>
+      <description>Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có hỗ trợ Android được cung cấp sẵn ở OpenCV Homepage. Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì điện thoại phải cài đặt ứng dụng OpenCV Manager.
+Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên bản OpenCV với các tùy chỉnh của riêng cho từng yêu cầu, ví dụ như sử dụng đặc trưng SIFT hoặc các thuật toán có bản quyền.</description>
     </item>
     
   </channel>

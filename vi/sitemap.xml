@@ -3,803 +3,713 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/</loc>
+    <loc>http://dangkhoasdc.github.io/</loc>
     <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="http://dangkhoasdc.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
                 href="http://dangkhoasdc.github.io/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/"
-                />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/</loc>
+    <loc>http://dangkhoasdc.github.io/post/</loc>
     <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="http://dangkhoasdc.github.io/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
                 href="http://dangkhoasdc.github.io/post/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/post/"
-                />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/dangkhoasdc/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/</loc>
+    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/about-me/"
+                href="http://dangkhoasdc.github.io/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/dangkhoasdc/"
+                href="http://dangkhoasdc.github.io/tags/"
                 />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/zeus_and_poseidon/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2019/02/04/zeus-and-poseidon-k%C3%AD-%E1%BB%A9c-g%E1%BB%8Di-v%E1%BB%81/</loc>
     <lastmod>2019-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/thinkpad_x1e/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/gaming/</loc>
+    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2019/01/12/review-thinkpad-x1-extreme/</loc>
     <lastmod>2019-01-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/zalo_landmark/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/laptop/</loc>
+    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/09/07/ai-challenge-landmark-k%E1%BB%B9-thu%E1%BA%ADt-v%C3%A0-%C3%BD-t%C6%B0%E1%BB%9Fng/</loc>
     <lastmod>2018-09-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/nha_trang_summer18/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/computer-vision/</loc>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/computer-vision/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/computer-vision/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/machine-learning/</loc>
+    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/09/04/hello-world-with-literate-programming/</loc>
+    <lastmod>2018-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/07/07/kinh-nghi%E1%BB%87m-du-l%E1%BB%8Bch-nha-trang/</loc>
     <lastmod>2018-07-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/passport_renewal/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/review/</loc>
+    <lastmod>2018-07-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/travel/</loc>
+    <lastmod>2018-07-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/vietnam/</loc>
+    <lastmod>2018-07-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/06/05/kinh-nghi%E1%BB%87m-xin-l%C3%A0m-passport-m%E1%BB%9Bi-%E1%BB%9F-singapore/</loc>
     <lastmod>2018-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/research_agile_method/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2018/05/23/l%C3%A0m-nghi%C3%AAn-c%E1%BB%A9u-theo-phong-c%C3%A1ch-agile/</loc>
     <lastmod>2018-05-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/bioshock_infinite/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/research/</loc>
+    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/05/01/bioshock-elizabeth-hay-h%E1%BB%8Dc-t%C4%83ng-c%C6%B0%E1%BB%9Dng-reinforcement-learning/</loc>
     <lastmod>2018-05-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/overfitting/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2018/03/29/overfitting-l%C3%A0-c%C3%A1i-qu%C3%A1i-g%C3%AC/</loc>
     <lastmod>2018-03-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/opencv_android_studio_ndk/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/</loc>
     <lastmod>2018-02-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/"
+                href="http://dangkhoasdc.github.io/en/post/2018/02/25/setup-opencv-and-android-studio-with-ndk-support/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/post/opencv_android_studio_ndk/"
+                href="http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/"
                 />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/story_telling_witcher3/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/android/</loc>
+    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/android/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/android/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/opencv/</loc>
+    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/opencv/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/opencv/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/programming/</loc>
+    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/programming/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/02/13/witcher-3-x%C3%A2y-d%E1%BB%B1ng-nh%C3%A2n-v%E1%BA%ADt-v%C3%A0-ph%C6%B0%C6%A1ng-ph%C3%A1p-ph%C3%A1t-tri%E1%BB%83n-c%E1%BB%91t-truy%E1%BB%87n/</loc>
     <lastmod>2018-02-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/programming_pearls/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/games/</loc>
+    <lastmod>2018-02-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/02/07/programming-pearls/</loc>
     <lastmod>2018-02-07T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/post/programming_pearls/"
+                href="http://dangkhoasdc.github.io/en/post/2018/02/07/programming-pearls/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/post/programming_pearls/"
+                href="http://dangkhoasdc.github.io/post/2018/02/07/programming-pearls/"
                 />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/latin_square/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/algorithms/</loc>
+    <lastmod>2018-02-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/algorithms/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/algorithms/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/books/</loc>
+    <lastmod>2018-02-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/books/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/books/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/02/01/kh%E1%BB%91i-latin-v%C3%A0-c%C3%A2u-chuy%E1%BB%87n-to%C3%A1n-h%E1%BB%8Dc-v%C3%A0-l%E1%BB%8Bch-s%E1%BB%AD-m%C3%A1y-t%C3%ADnh/</loc>
     <lastmod>2018-02-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/post/latin_square/"
+                href="http://dangkhoasdc.github.io/en/post/2018/02/01/latin-squares-and-a-story-of-computer-science-history/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/post/latin_square/"
+                href="http://dangkhoasdc.github.io/post/2018/02/01/kh%E1%BB%91i-latin-v%C3%A0-c%C3%A2u-chuy%E1%BB%87n-to%C3%A1n-h%E1%BB%8Dc-v%C3%A0-l%E1%BB%8Bch-s%E1%BB%AD-m%C3%A1y-t%C3%ADnh/"
                 />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/who_am_i/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/taocp/</loc>
+    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/taocp/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/taocp/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/01/30/t%C3%B4i-l%C3%A0-ai/</loc>
     <lastmod>2018-01-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/compvision_hist/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+    <loc>http://dangkhoasdc.github.io/tags/misc/</loc>
+    <lastmod>2018-01-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/post/compvision_hist/"
+                href="http://dangkhoasdc.github.io/en/tags/misc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/post/compvision_hist/"
+                href="http://dangkhoasdc.github.io/tags/misc/"
                 />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2018/01/17/l%E1%BB%8Bch-s%E1%BB%AD-th%E1%BB%8B-gi%C3%A1c-m%C3%A1y-t%C3%ADnh-ph%E1%BA%A7n-1/</loc>
+    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/post/2018/01/17/history-of-computer-vision-part-1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/post/2018/01/17/l%E1%BB%8Bch-s%E1%BB%AD-th%E1%BB%8B-gi%C3%A1c-m%C3%A1y-t%C3%ADnh-ph%E1%BA%A7n-1/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/history/</loc>
+    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/history/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/history/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/01/15/s%C3%A1ch-selected-papers-on-computer-science/</loc>
     <lastmod>2018-01-15T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/post/selectedpapers_cs/"
+                href="http://dangkhoasdc.github.io/en/post/2018/01/15/selected-papers-on-computer-science-don-knuth-and-the-current-state-of-deep-learning/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/post/selectedpapers_cs/"
+                href="http://dangkhoasdc.github.io/post/2018/01/15/s%C3%A1ch-selected-papers-on-computer-science/"
                 />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/impl_priority_queues/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</loc>
     <lastmod>2018-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/improved_qsort/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</loc>
     <lastmod>2018-01-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/total_order/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/c&#43;&#43;/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2018/01/03/c%C3%A0i-%C4%91%E1%BA%B7t-quan-h%E1%BB%87-th%E1%BB%A9-t%E1%BB%B1-trong-c-/</loc>
     <lastmod>2018-01-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/vietcs/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2017/12/27/ng%C6%B0%E1%BB%9Di-vi%E1%BB%87t-trong-khoa-h%E1%BB%8Dc-m%C3%A1y-t%C3%ADnh/</loc>
     <lastmod>2017-12-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/fibsearch/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/computer-science/</loc>
+    <lastmod>2017-12-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/notes/</loc>
+    <lastmod>2017-12-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/notes/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/notes/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2017/12/19/gi%E1%BA%A3i-thu%E1%BA%ADt-t%C3%ACm-ki%E1%BA%BFm-fibonacci/</loc>
     <lastmod>2017-12-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/amazon_replacement_policy/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2017/11/08/ch%C3%ADnh-s%C3%A1ch-g%E1%BB%ADi-tr%E1%BA%A3-h%C3%A0ng-c%E1%BB%A7a-amazon/</loc>
     <lastmod>2017-11-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/dung_hi_em-font/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2017/10/16/font-m%E1%BB%99t-l%E1%BB%97i-nh%E1%BB%8F-trong-%C4%91%E1%BB%ABng-h%E1%BB%8Fi-em/</loc>
     <lastmod>2017-10-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/taocp/howto/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/font/</loc>
+    <lastmod>2017-10-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/25/%C4%91%E1%BB%8Dc-ngh%E1%BB%87-thu%E1%BA%ADt-l%E1%BA%ADp-tr%C3%ACnh-taocp/</loc>
     <lastmod>2017-12-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/headphones/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/24/tai-nghe-d%C3%A0nh-programmer/</loc>
     <lastmod>2017-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/vietnam_war-dejavu/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/18/the-vietnam-war-dejavu/</loc>
     <lastmod>2017-09-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/henderson_waves-haw_par_villa/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/documentary/</loc>
+    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/17/m%E1%BB%99t-v%C3%B2ng-henderson-waves-v%C3%A0-haw-par-villa/</loc>
     <lastmod>2017-09-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/sakamoto_method/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/singapore/</loc>
+    <lastmod>2017-09-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/16/b%C3%A0i-to%C3%A1n-chuy%E1%BB%83n-ng%C3%A0y-sang-th%E1%BB%A9/</loc>
     <lastmod>2017-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/hau_tay_du_ky/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/16/h%E1%BA%ADu-t%C3%A2y-du-k%C3%AD/</loc>
     <lastmod>2017-09-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/review_good_will_hunting/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/memories/</loc>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/movies/</loc>
+    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/10/good-will-hunting-v%C3%A0-nh%E1%BB%AFng-b%C3%A0i-to%C3%A1n-%C4%91%E1%BB%93-th%E1%BB%8B/</loc>
     <lastmod>2017-09-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/la_la_land/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/10/la-la-land/</loc>
     <lastmod>2017-09-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/rand/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/cpp/</loc>
+    <lastmod>2017-09-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2017/09/06/rand-is-harmful/</loc>
     <lastmod>2017-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/randalgs_ex/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/startwars-vii-review/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/c%E1%BA%A3m-nh%E1%BA%ADn-star-wars-vii-the-force-awakens/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/diablo3-review/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/diablo-iii/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/intro_randalgs/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/d%E1%BA%ABn-nh%E1%BA%ADp-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/install_opencv_vs/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/post/install_opencv_vs/"
+                href="http://dangkhoasdc.github.io/en/post/2016/10/23/install-the-opencv-library-on-visual-studio/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/post/install_opencv_vs/"
+                href="http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/"
                 />
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/cvpr16-stat/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/it_news/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/nh%E1%BB%AFng-k%C3%AAnh-th%C3%B4ng-tin-c%C3%B4ng-ngh%E1%BB%87/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/nafosted_travel_fund/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/quy-tr%C3%ACnh-xin-t%C3%A0i-tr%E1%BB%A3-nafosted/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/refactoring-review/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/review-refactoring/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/startwars-series-review/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/review-start-wars-series/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/protocol-buffers-caffe/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/s%E1%BB%AD-d%E1%BB%A5ng-protocol-buffers-trong-c-v%C3%A0-caffe/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/constexpr/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/review_cpp_proglang_book/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/cvpr/</loc>
+    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/deep-learning/</loc>
+    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/software-engineer/</loc>
+    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/visual-studio/</loc>
+    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/visual-studio/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/visual-studio/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</loc>
     <lastmod>2016-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/review_algs_princeton_coursera/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</loc>
     <lastmod>2016-08-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/oop-python/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/courses/</loc>
+    <lastmod>2016-08-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/courses/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/courses/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</loc>
     <lastmod>2015-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/em-laptop-yeu-dau/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/python/</loc>
+    <lastmod>2015-07-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2015/07/19/th%C3%B4i-%C4%91%C3%A0nh-chia-tay/</loc>
     <lastmod>2015-07-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/viet-luan-van/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2015/07/09/kinh-nghi%E1%BB%87m-vi%E1%BA%BFt-t%C3%A0i-li%E1%BB%87u-khoa-h%E1%BB%8Dc/</loc>
     <lastmod>2015-07-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/mua-van-hay-mua/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2015/06/13/m%C6%B0a-v%E1%BA%ABn-hay-m%C6%B0a/</loc>
     <lastmod>2015-06-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/opencv-tips/</loc>
+    <loc>http://dangkhoasdc.github.io/post/2015/06/01/ghi-ch%C3%BA-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv/</loc>
     <lastmod>2015-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/post/spams-lib/</loc>
+    <loc>http://dangkhoasdc.github.io/tags/computer-vison/</loc>
+    <lastmod>2015-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/tutorial/</loc>
+    <lastmod>2015-06-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2015/02/25/spams-lib-v%C3%A0-nh%E1%BB%AFng-t%C3%A2m-s%E1%BB%B1/</loc>
     <lastmod>2015-02-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/vi/authors/</loc>
+    <loc>http://dangkhoasdc.github.io/about/</loc>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/categories/</loc>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://dangkhoasdc.github.io/authors/"
+                href="http://dangkhoasdc.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/authors/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/c&#43;&#43;/</loc>
-    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/categories/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
                 href="http://dangkhoasdc.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/computer-vision/</loc>
-    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/machine-learning/</loc>
-    <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/page/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/page/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/page/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/search/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/search/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/search/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/series/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/series/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/</loc>
-    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/algorithms/</loc>
-    <lastmod>2018-02-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/algorithms/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/algorithms/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/android/</loc>
-    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/android/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/android/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/books/</loc>
-    <lastmod>2018-02-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/books/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/books/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/computer-science/</loc>
-    <lastmod>2017-12-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/computer-vision/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/computer-vision/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/computer-vision/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/computer-vison/</loc>
-    <lastmod>2015-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/courses/</loc>
-    <lastmod>2016-08-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/courses/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/courses/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/cpp/</loc>
-    <lastmod>2017-09-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/cvpr/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/deep-learning/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/documentary/</loc>
-    <lastmod>2017-09-18T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/font/</loc>
-    <lastmod>2017-10-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/games/</loc>
-    <lastmod>2018-02-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/gaming/</loc>
-    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/history/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/history/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/history/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/authors/khoa/</loc>
-    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/authors/khoa/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/authors/khoa/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/laptop/</loc>
-    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/machine-learning/</loc>
-    <lastmod>2018-03-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/memories/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/misc/</loc>
-    <lastmod>2018-01-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/misc/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/misc/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/movies/</loc>
-    <lastmod>2017-09-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/notes/</loc>
-    <lastmod>2017-12-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/notes/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/notes/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/opencv/</loc>
-    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/opencv/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/opencv/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/programming/</loc>
-    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/programming/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/python/</loc>
-    <lastmod>2015-07-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/research/</loc>
-    <lastmod>2018-05-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/review/</loc>
-    <lastmod>2018-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/singapore/</loc>
-    <lastmod>2017-09-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/software-engineer/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/taocp/</loc>
-    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/taocp/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/taocp/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/travel/</loc>
-    <lastmod>2018-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/tutorial/</loc>
-    <lastmod>2015-06-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/vietnam/</loc>
-    <lastmod>2018-07-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/vi/tags/visual-studio/</loc>
-    <lastmod>2016-10-23T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/tags/visual-studio/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/vi/tags/visual-studio/"
                 />
   </url>
   

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on Dang-Khoa&#39;s blog</title>
+    <link>http://dangkhoasdc.github.io/en/tags/windows/</link>
+    <description>Recent content in windows on Dang-Khoa&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/en/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why Ubuntu on Windows?</title>
+      <link>http://dangkhoasdc.github.io/en/post/2017/09/26/why-ubuntu-on-windows/</link>
+      <pubDate>Tue, 26 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/en/post/2017/09/26/why-ubuntu-on-windows/</guid>
+      <description>For programming purposes, I prefer Linux to Windows. However, Windows is really good at entertaining and office works. Beside, Microsoft Office is the best office suit I ever have experienced, and OneNote is one of my favorite note-taking software. Not to mention my beloved Bilizzard games such as Diablo, Starcraft and other video games.
+A solution to integrate Windows and Linux in one machine is to install dual-boot. However, I am tired of switching between 2 OSs.</description>
+    </item>
+    
+  </channel>
+</rss>

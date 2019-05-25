@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>algorithms on Dang-Khoa&#39;s blog </title>
+    <title>algorithms on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/algorithms/</link>
-    <description>Recent content in algorithms on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in algorithms on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
     <lastBuildDate>Wed, 07 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
@@ -12,26 +13,94 @@
     
     <item>
       <title>Programming Pearls</title>
-      <link>http://dangkhoasdc.github.io/post/programming_pearls/</link>
+      <link>http://dangkhoasdc.github.io/post/2018/02/07/programming-pearls/</link>
       <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/programming_pearls/</guid>
+      <guid>http://dangkhoasdc.github.io/post/2018/02/07/programming-pearls/</guid>
       <description>Programing Pearls - Jon Bentley
-Excellent.
-Until now, there is no such book which makes me shout out like this after receiving from Amazon. Let brieftly review some favoriate books:
- CLRS: theoretically, this really is an &amp;ldquo;introduction&amp;rdquo; textbook about algorithms. Nonetheless, it still is an extensive reference and full of details. However, I am not impressed by the writing style and the pseudo-code.
- Algorithms, Sedgewick: one of the best textbooks ever.</description>
+Xuất sắc.
+Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thùng của Amazon ra và lượn 1, 2 trang để thốt lên 1 từ &amp;ldquo;xuất sắc&amp;rdquo; cả. Điểm qua một số sách về &amp;ldquo;Algorithms&amp;rdquo; mà tôi từng đọc và tìm hiểu:
+ CLRS: về mặt lý thuyết, đây thực sự là &amp;ldquo;introduction&amp;rdquo; nhưng đầy đủ và chi tiết. Tôi không quá ấn tượng bởi cách viết và mã giả.</description>
     </item>
     
     <item>
-      <title>Generate the inversion table from an integer sequence</title>
-      <link>http://dangkhoasdc.github.io/post/gen_inversion_table/</link>
-      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
+      <title>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</title>
+      <link>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/gen_inversion_table/</guid>
-      <description>The programming exercise is from TAoCP, Vol3, 5.1.1-6:
- Design an algorithm that computes the inversion table $b_1, b_2 \cdots b_n$ corresponding to a given permutation $a_1a_2 \cdots a_n$ of ${1, 2, \cdots , n}$, where the running time is essentially proportional to $n\ log n$ on typical computers.
- I was really stuck on the solution Knuth given in the book. The author also mentioned another approach which actually is a modifination of merge sort.</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</guid>
+      <description>Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
+ CTDL quan trọng cho các thuật toán khác như Dijkstra&amp;rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.</description>
+    </item>
+    
+    <item>
+      <title>Một số biến thể Quicksort</title>
+      <link>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</guid>
+      <description>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
+    </item>
+    
+    <item>
+      <title>Giải thuật tìm kiếm Fibonacci</title>
+      <link>http://dangkhoasdc.github.io/post/2017/12/19/gi%E1%BA%A3i-thu%E1%BA%ADt-t%C3%ACm-ki%E1%BA%BFm-fibonacci/</link>
+      <pubDate>Tue, 19 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2017/12/19/gi%E1%BA%A3i-thu%E1%BA%ADt-t%C3%ACm-ki%E1%BA%BFm-fibonacci/</guid>
+      <description>Mình không tìm được từ nào tiếng Việt có thể dịch được từ &amp;ldquo;Fibonaccian Searching&amp;rdquo;, nếu &amp;ldquo;binary searching&amp;rdquo; có thể dịch là &amp;ldquo;tìm kiếm nhị phân&amp;rdquo;, thì &amp;ldquo;Fibonaccian Searching&amp;rdquo; không có ngữ nghĩa gì nhiều.
+Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.
+Lịch sử Thuật toán được để xuất bởi Devid E.</description>
+    </item>
+    
+    <item>
+      <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
+      <link>http://dangkhoasdc.github.io/post/2017/09/25/%C4%91%E1%BB%8Dc-ngh%E1%BB%87-thu%E1%BA%ADt-l%E1%BA%ADp-tr%C3%ACnh-taocp/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2017/09/25/%C4%91%E1%BB%8Dc-ngh%E1%BB%87-thu%E1%BA%ADt-l%E1%BA%ADp-tr%C3%ACnh-taocp/</guid>
+      <description>Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &amp;ldquo;cuồng&amp;rdquo; như Donald Knuth.</description>
+    </item>
+    
+    <item>
+      <title>Bài toán chuyển ngày sang thứ</title>
+      <link>http://dangkhoasdc.github.io/post/2017/09/16/b%C3%A0i-to%C3%A1n-chuy%E1%BB%83n-ng%C3%A0y-sang-th%E1%BB%A9/</link>
+      <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2017/09/16/b%C3%A0i-to%C3%A1n-chuy%E1%BB%83n-ng%C3%A0y-sang-th%E1%BB%A9/</guid>
+      <description>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &amp;ldquo;xuất sắc, thông minh vãi cả đxx&amp;rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&amp;gt; Chủ Nhật, 1 -&amp;gt; Thứ Hai &amp;hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;amp;R C).</description>
+    </item>
+    
+    <item>
+      <title>Các thuật toán ngẫu nhiên</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</guid>
+      <description>Các ví dụ về thuật toán ngẫu nhiên Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách Randomized Algorithms
+Randomized Quicksort Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên.</description>
+    </item>
+    
+    <item>
+      <title>Dẫn nhập thuật toán ngẫu nhiên</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/d%E1%BA%ABn-nh%E1%BA%ADp-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/d%E1%BA%ABn-nh%E1%BA%ADp-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</guid>
+      <description>Hôm rồi học course Introduction to Algorithm (2006-MIT) mình được biết qua khái niệm Randomized Algorithms, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.
+Định nghĩa Randomized Algorithms (viết gọn là randalgs) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.
+Điểm thú vị của randalgs chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến kì vọng trong trường hợp xấu nhất.</description>
+    </item>
+    
+    <item>
+      <title>Review Algorithms (Princeton) - Coursera</title>
+      <link>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</link>
+      <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</guid>
+      <description>Đây là một trong những khoá rất đỉnh về lập trình, vì sao ư?
+ Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.</description>
     </item>
     
   </channel>

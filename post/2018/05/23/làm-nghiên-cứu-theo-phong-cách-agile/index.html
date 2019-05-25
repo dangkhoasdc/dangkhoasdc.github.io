@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Làm nghiên cứu theo phong cách Agile | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Làm nghiên cứu theo phong cách Agile</span></h1>
+
+<h2 class="date">2018/05/23</h2>
+</div>
+
+<main>
+
+
+<p>Bài viết xoay quanh một số mẹo vặt về làm nghiên cứu trong Khoa Học Máy Tính (KHMT), đặc biệt là hướng Machine Learning của một thanh niên mới tập tành làm research.</p>
+
+<h2 id="lên-kế-hoạch">Lên kế hoạch</h2>
+
+<p>Không giống như PhD khi học có kha khá nhiều thời gian để tìm hiểu bài toán nghiên cứu, thông thường nhóm mình chỉ có 2-3 tháng để tập trung cho 1 nghiêu cứu và phải hoàn thành bằng 1, 2 submission và các hội nghị. Dĩ nhiên, sau đó các công trình này có thể được mở rộng và nộp cho các tạp chí, công đoạn này nếu làm liền mạch thì có thể mất thêm 1, 2 tháng nữa. Bởi vậy, điều quan trọng là phân phối thời gian giữa các công việc, theo mình việc làm nghiên cứu theo hướng machine learning gồm 3 công đoạn chính:</p>
+
+<ul>
+<li>Lên ý tưởng, đề xuất model và  phương pháp giải.</li>
+<li>Cài đặt và chạy thí nghiệm.</li>
+<li>Viết bài báo, dọn dẹp code và đăng tải.</li>
+</ul>
+
+<p>Nếu như theo phương pháp waterfall trong công nghệ phần mềm, thì mỗi công đoạn được thực hiện riêng lẽ và tách biệt nhau. Tuy nhiên điều đó chỉ xuât hiện khi ta đề xuất được một model &ldquo;lý tưởng&rdquo;: chạy tốt trên các tập dữ liệu và hầu như không có trở ngại gì khi cài đặt. Điều này không phải lúc nào cũng có thể đạt được. Ví dụ, đôi khi dữ liệu chạy rất tốt trên MNIST hay Cifar10, nhưng lại chạy rất tệ trên SUN397. Điều đó khiến ta phải quay lại bước đầu tiên để xem xét lại model, bởi có lẽ nguyên nhân là do model không chạy tốt cho tập dữ liệu lớn và ta cần xây dựng một model mới tốt hơn.</p>
+
+<p>Vì vậy, đề xuất của mình đó là tận dụng Agile trong research, 3 công đoạn có thể thực hiện trong 5 ngày rồi sau đó lặp lại liên tục cho đến khi &ldquo;hội tụ&rdquo; (đến deadline, hết idea để làm model, &hellip;):</p>
+
+<ul>
+<li>1-2 ngày lên model.</li>
+<li>1-2 ngày cài đặt.</li>
+<li>1 ngày chạy thí nghiệm và finetune.</li>
+</ul>
+
+<figure>
+    <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.0-9/p720x720/33189391_10209095820752477_4842766812414214144_o.jpg?_nc_cat=0&amp;oh=718389b8b518a7fa56ecc7fb41670b22&amp;oe=5B7D1CA6"/> <figcaption>
+            <h4>Đôi khi đời không như mơ (Nguồn: http://amid.fish/reproducing-deep-rl)</h4>
+        </figcaption>
+</figure>
+
+
+<p>Việc lên model là team-work. Công cụ tốt nhất đó là bảng, 1 phòng họp và liên tục brainstorm. Trong trường hợp phải làm remote, thì Slack và Paper Dropbox là 2 phương tiện rất tốt để ghi chú và trao đổi. Trên Slack ta có thể chia thành các channel khác nhau với từng task, model, conference khác nhau. Điểm mạnh của Paper Dropbox ở chỗ hỗ trợ comment, minh họa trên hình, và render công thức bằng Latex rất tốt.</p>
+
+<p><strong>Điều mình nhấn mạnh đó là chỉ nên dành 1 ngày để finetune</strong>. Bởi theo quan điểm của mình, finetuning model là một việc <strong>siêu chán</strong>, <strong>rất mệt</strong> và <strong>dễ làm tụt cảm xúc</strong> của người làm nghiên cứu. Giới hạn bản thân 1 ngày để finetune giúp ta ko quá sa đà vào việc cắm mắt lên màn hình finetune, hoặc phải đặt nải chuối cúng ông địa để mong có kết quả tốt. Việc giới hạn về thời gian còn giúp ta đề xuất ra được nhiều phương pháp đánh giá model nhanh hơn, có bộ tham số chuẩn và không finetune nhưng tham số quá tào lao.</p>
+
+<p>Trong khoảng thời gian xen lẫn các công đoạn, ta có thể cập nhật các bài báo mới, học các kỹ thuật mới hoặc tìm hiểu kỹ hơn về bài toán mình đang làm. Công cụ tốt nhất cho giai đoạn này chính là textbooks, <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.arxiv-sanity.com%2F&amp;h=ATP_-1clxNTmljbJOL-x88z6PN9CfxbhSBRX3DfJLbxJLaZcWA2Mqo-tDSmKne-_T-190TNYOrnJB1WneayI8DLd78poPEpu3klPSf-PrbgBRIAOLks">arxiv-sanity</a>, Google Scholar [với chế độ recommendation], reddit (/r/MachineLearning, /r/compsci, /r/compvision), twitter [Follow các giáo sư đầu ngành, các conference hay mấy con bot trên reddit]).</p>
+
+<p>Công đoạn cuối: viết paper có thể đổi tên thành &ldquo;ghi chú, nhật ký&rdquo;. Bằng cách sử dụng <a href="https://l.facebook.com/l.php?u=http%3A%2F%2Foverleaf.com%2F&amp;h=ATMnL7xdS0UudHFuzeyPdzKAuQOOj7RDPrG_Mdi7NyDOfr2L_mjtxCHlOot22ErTA-qlmt_ApNnANwgZYpshDEJBkeEEK-cLlLnqrNBTSJSm1HQH-z8">overleaf</a>, và liên tục cập nhật tiến độ, công thức, model thông qua Latex, ta hầu như có được nội dung cho cả paper. Trong khi Paper Dropbox phục vụ cho việc ghi chú tào lao [làm thế nào finetune model, những idea lạ hay những thứ mình không muốn đưa vào paper] thì overleaf là nơi ghi chú theo chính quy với các viết formal và được coi như mình đang viết 1 paper thực sự. Dĩ nhiên, một bước tiến hóa của phương pháp này <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FLiterate_programming&amp;h=ATO0mwu3Bamc8AOGNitnYbc4ZKxu-Etwrn4Bxeb_zjBqrYabXAle54Q75y39ZHYDpu85BFz1aK2rkmq6vkAVFhxCntsmFfUAER7WgiR44DkyvUEL-Ck">Literate Programming</a>, mà hiện nay Jupyter là một ví dụ tiêu biểu. Đến khi cần phải submit 1 conference nào thì hầu như toàn bộ nội dung đã có sẵn, chỉ cần việc apply style của conference đó, đồng thời revise, proofread lại nội dung paper.</p>
+
+<h2 id="cài-đặt-môi-trường">Cài đặt môi trường</h2>
+
+<p>Mỗi người có một môi trường cài đặt khác nhau, trong khi đó setup của mình bao gồm:</p>
+
+<ul>
+<li>Keyboard: <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fcodekeyboards.com%2F&amp;h=ATNVLEiV6NoZZf_lP8OCu6b6nuodz4BYIxdU-Ia1htQUypfWAhyugIv9ZicI7seLd4NDTH3IFp4gdiu3ZKWlqztLH0I8FelX4vXCgezGY05YQWUfvCg">Code Keyboard</a>, thiết kế bởi Jeff Atwood, founder của StackOverflow.</li>
+<li>Mouse: <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.logitech.com%2Fen-sg%2Fproduct%2Fmx-master-2s-flow&amp;h=ATNiHt8cnZAfOylZ02uXZSaeccaW4Y-Q98IcALlmQZhdFp699DsDzZIsCGlSDDVUPGFc8X2hHiRGpsYw-OO0eKwY9gIDRQRzgUUkH9p1BApiNriT7pE">MX Master.</a></li>
+<li>Màn hình và workstation của lab.</li>
+</ul>
+
+<p>Về software:</p>
+
+<ul>
+<li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fneovim.io%2F&amp;h=ATOfsqdmpFVmomds0bjvBwS6lmKr_BsczFJItb_S0g32MtNePqU9xji6hmEYBZ8NSj0bNNYGJncBXO7N0ExiuR2Moer7v0l910dpOGw5zwG2ytzCNGM">NeoVim</a>: mình không thích dùng IDE. Và  vim rất tiện khi phải edit file remote, dường như mình không gặp trở ngại      khi ssh và edit file, trừ mỗi chuyện đường truyền chậm. Ngoài ra việc lưu các config hệ thống trên git/github giúp thống nhất cài đặt giữa các máy với nhau.</li>
+<li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fsymless.com%2Fsynergy&amp;h=ATPjIzOVwyhx76q6NbcNG3RFESb_61ETKbIHTKVNBKD_xlt29JNHB59HCAqbk4hb4HA-LAc96CpnC_RNUw787eUXHfywzutv8P9O11jruQHIO4nL2tg">Synergy</a>: thống nhất input của hệ thống, mình có thể điều khiển      2 workstations và 1 laptop chỉ với 1 bộ keyboard và mouse.</li>
+<li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fmobaxterm.mobatek.net%2F&amp;h=ATPWBHxZPt7eUC2w-VX6IEo-MuwYjkXd6AsyCTyI-57GNRq1cTwmHsfBxAZMXhhLAjYnxSq359eIiDkxyFs2bt8s2G8-BBIIUbfP-bAmfsraul7WU3E">Mobaxterm</a>: ssh trên Windows.</li>
+<li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.logmein.com%2F&amp;h=ATMFx78ErGKlSDPr3xsTY-7a16uC4NNMtDR_gvDXFGFeQ7GVbloiyQjlEUK_WXShmMgE2Fna3evvHC4Fgr0K4AoW_VxElOO60GR3RTYjRs6hRu0R2X4">LogMeIn</a>:  remote máy tính.</li>
+<li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fchrome-remote-desktop%2Fgbchcmhmhahfdphkhkmpfmihenigjmpp%3Fhl%3Den&amp;h=ATPt8r3llS7WSMHbpn-l3yYLVRXaM6fUQhfspQk65xsguG4PcDqAjCKKrAddUT0RRPcwgnVZM5t6Zysxpr5Y5YexQRGQ-tq6WWE_8dh0hIDyYvm1RmE">Google Chrome Remote</a>: remote máy tính có giao diện.</li>
+<li>Git: version control. <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fgithub.com%2F&amp;h=ATNv733lWDUjopEDLUcUp6PfrCtpXIbdF7MrOab5izmTz18BR9PJopTY4BwvgOxRevy8PWNkSDhLSzZf9S3t1Q2gPeMvp99Q4WaSzSRIRLhiWbbe6SI">Github</a> để share code, tuy nhiên nếu muốn private thì <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fgitlab.com%2F&amp;h=ATNj7U1zqNSIvW5gNgDZHwPKLepvJoAIuzuhi_-hjPHmXTmdoGVUVktF5Ef-hpPDNUnb3JJcGAyA2NWhIcFuxvv2ESmPjfBN3Kcfq6YC6LijCwnoOUQ">GitLab</a> có vẻ tiện hơn, tuy nhiên GitLab lại có nhiều tính năng hơi thừa.</li>
+</ul>
+
+<p>[Một bài tạp nham sau khi nộp xong NIPS, tự hứa với lòng không viết thêm bài tạp nham như thế này nữa]</p>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

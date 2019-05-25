@@ -1,166 +1,122 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Review on Dang-Khoa&#39;s blog </title>
+    <title>review on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/review/</link>
-    <description>Recent content in Review on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in review on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Mon, 18 Sep 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/review/" rel="self" type="application/rss+xml" />
+    <language>vi</language>
+    <lastBuildDate>Sat, 07 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kinh nghiệm du lịch Nha Trang</title>
+      <link>http://dangkhoasdc.github.io/post/2018/07/07/kinh-nghi%E1%BB%87m-du-l%E1%BB%8Bch-nha-trang/</link>
+      <pubDate>Sat, 07 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2018/07/07/kinh-nghi%E1%BB%87m-du-l%E1%BB%8Bch-nha-trang/</guid>
+      <description>Một vài kinh nghiệm cá nhân sau 1 chuyến đi du lịch Nha Trang tự túc từ HCM.
+Phương tiện đi lại Từ Hồ Chí Minh ta có nhiều lựa chọn để đi Nha Trang:
+ Đi xe khách: 400K/ 1 vé xe chất lượng cao, xuất phát từ 9h40pm đến 6h sáng hôm sau sẽ tới bến. Đi trong đêm và sáng sớm tới Nha Trang để có thể tiết kiệm được nửa ngày.</description>
+    </item>
     
     <item>
       <title>The Vietnam War - Dejavu</title>
-      <link>http://dangkhoasdc.github.io/post/vietnam_war-dejavu/</link>
+      <link>http://dangkhoasdc.github.io/post/2017/09/18/the-vietnam-war-dejavu/</link>
       <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/vietnam_war-dejavu/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.pbs.org/kenburns/the-vietnam-war/watch/episode-1/&#34; target=&#34;_blank&#34;&gt;[Link from PBS]&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Một bộ phim tài liệu lịch sử xuất sắc về chiến Tranh Việt Nam. Với sự tham gia phỏng vấn của nhà văn Bảo Ninh, nhà báo Huy Đức.
-Điều làm nên bộ phim chính là tính chân thực và nhìn nhận đa chiều ở tất cả các bên tham gia vào cuộc chiến. Khác với &amp;ldquo;cuộc chiến 10k ngày&amp;rdquo;, bộ phim tài liệu trước đó &amp;ldquo;tránh&amp;rdquo; nói nhiều đến nội bộ việt nam cũng như quan hệ với Pháp. Ở seri phim này, ta có một cái nhìn rộng hơn, trung lập hơn.&lt;/p&gt;
-
-&lt;p&gt;Tập 1 với tên Deja vu (bóng ma quá khứ) được xây dựng với hai mốc thời gian đan xen, như sự ẩn dụ đoán trước được sự thất bại của người Mỹ cũng sẽ giống những gì đã diễn ra ở Pháp. Deja vu, là hiện tượng tâm lý về ảo giác một trải nghiệm tưởng như bản thân từng trải qua ở một môi trường và hoàn cảnh hoàn toàn khác được nhà biên kịch khéo léo đặt cho tượng đề của tập 1: nước Mỹ chưa từng trải qua chiến tranh với Việt Nam, nhưng sau mấy chục năm nhìn lại, họ đáng ra đã &amp;ldquo;cảm nhận&amp;rdquo; được kết cục đó.&lt;/p&gt;
-
-&lt;p&gt;Ngoài những thước phim đáng giá và những nhận định chi tiết cả hai phía, điều làm tôi cực kì ấn tượng là âm nhạc. Không chỉ thể hiện nội dung truyền tải, âm nhạc trong phim mang đến hơi thở văn hóa và xã hội những năm đó. Tôi rất thích các bản của Bob Dylan vầ Rosemary Clooney. Làm tôi nhớ đến cái đài radio quen thuộc của Fallout trong một &amp;ldquo;alternative history&amp;rdquo;.&lt;/p&gt;
-
-&lt;p&gt;Điều có tôi thích nhất chính là những diễn biến leo thang về chính trị và phản ứng của hai bên trong bối cảnh thế giới. Thêm vào đó, có những diễn biến chưa bao giờ được hai bên kể trước đó, ít nhất là theo trí nhớ của tôi. Đó là câu chuyện bức thư chưa bao giờ được gửi đến Tổng Thống Truman của Cụ Hồ. Đó là những động thái chính trị cực đoan của cả hai phía. Tôi thích nhất là giai đoạn ông Diệm thành lập chính quyền, Lê Duẩn thành Bí Thư Thứ Nhất và sự phức tạp về chính trị trên thế giới. Cảm giác bạn được xem Game Of Thrones phiên bản lịch sử vậy.&lt;/p&gt;
-
-&lt;p&gt;Những hình ảnh thì khỏi phải nói, giàu tính lịch sử và biểu tượng. Tôi phải thốt lên vậy khi xem những bức hình đầy ám ảnh.
-&lt;div&gt;
-&lt;blockquote class=&#34;imgur-embed-pub&#34; lang=&#34;en&#34; data-id=&#34;a/DXTC1&#34;&gt;&lt;a href=&#34;//imgur.com/DXTC1&#34;&gt;&lt;/a&gt;&lt;/blockquote&gt;&lt;script async src=&#34;//s.imgur.com/min/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;/div&gt;
-Tập 1 đầy hấp dẫn, từ biên kịch phim, lối dẫn chuyện, hình ảnh và âm thanh.&lt;/p&gt;
-</description>
+      <guid>http://dangkhoasdc.github.io/post/2017/09/18/the-vietnam-war-dejavu/</guid>
+      <description>[Link from PBS]
+Một bộ phim tài liệu lịch sử xuất sắc về chiến Tranh Việt Nam. Với sự tham gia phỏng vấn của nhà văn Bảo Ninh, nhà báo Huy Đức. Điều làm nên bộ phim chính là tính chân thực và nhìn nhận đa chiều ở tất cả các bên tham gia vào cuộc chiến. Khác với &amp;ldquo;cuộc chiến 10k ngày&amp;rdquo;, bộ phim tài liệu trước đó &amp;ldquo;tránh&amp;rdquo; nói nhiều đến nội bộ việt nam cũng như quan hệ với Pháp.</description>
     </item>
     
     <item>
       <title>Hậu Tây Du Kí</title>
-      <link>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</link>
+      <link>http://dangkhoasdc.github.io/post/2017/09/16/h%E1%BA%ADu-t%C3%A2y-du-k%C3%AD/</link>
       <pubDate>Sat, 16 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/hau_tay_du_ky/</guid>
-      <description>&lt;p&gt;Ngày xưa mình mê coi phim này cực kì. Cứ mỗi lần đài lên sóng là rống họng lên hát: &amp;ldquo;quoài oa xinh xiên&amp;rdquo;. Đoạn nhạc phim mở đầu phải nói rất ấn tượng và mình nhớ mãi đến bây giờ. Hôm nay tình cờ được nghe bản lời Việt của 1 bài trong Hậu Tây Du Kí từ chế Bích Phương, tuổi thơ bỗng nhiên trào về.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/bkrhB-KyC6s&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Mới nghe là mình đã biết ngay rằng đây là bài nhạc phim bất hủ hôm nào. Thế là hứng chí lên tìm bản mở đầu, cái bản &amp;ldquo;quoài oa xinh xiên&amp;rdquo; đó&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/WujVQocNprY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Lúc nhỏ coi phim này khá là vui. Chuyện đầu tiên là mấy viên xá lợi, mình thì cứ nghĩ là &amp;ldquo;xí lị&amp;rdquo;, hoặc &amp;ldquo;xá xị&amp;rdquo; gì đó. Phim này thì đánh đấm quá ảo, chưa kể là câu chuyện tam giới phức tạp hơn trong Tây Du Kí bản gốc. Mình vẫn còn nhớ có những chi tiết liên kết với phần trước như vụ &amp;ldquo;Tôn Hành Giả - Giả Hành Tôn&amp;rdquo;, &amp;ldquo;Vô Thiên&amp;rdquo;, rồi cả chuyện hồi sinh của Phật Tổ, các yếu tố thần thoại và fantasy được đề cập nhiều hơn. Mặc dù tạo hình không thân quen như trước nhưng cũng rất đáng xem nếu xét những phim ra sau bộ kinh điển 1986.&lt;/p&gt;
-</description>
+      <guid>http://dangkhoasdc.github.io/post/2017/09/16/h%E1%BA%ADu-t%C3%A2y-du-k%C3%AD/</guid>
+      <description>Ngày xưa mình mê coi phim này cực kì. Cứ mỗi lần đài lên sóng là rống họng lên hát: &amp;ldquo;quoài oa xinh xiên&amp;rdquo;. Đoạn nhạc phim mở đầu phải nói rất ấn tượng và mình nhớ mãi đến bây giờ. Hôm nay tình cờ được nghe bản lời Việt của 1 bài trong Hậu Tây Du Kí từ chế Bích Phương, tuổi thơ bỗng nhiên trào về.
+  Mới nghe là mình đã biết ngay rằng đây là bài nhạc phim bất hủ hôm nào.</description>
     </item>
     
     <item>
       <title>Good Will Hunting và những bài toán đồ thị </title>
-      <link>http://dangkhoasdc.github.io/post/review_good_will_hunting/</link>
+      <link>http://dangkhoasdc.github.io/post/2017/09/10/good-will-hunting-v%C3%A0-nh%E1%BB%AFng-b%C3%A0i-to%C3%A1n-%C4%91%E1%BB%93-th%E1%BB%8B/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/review_good_will_hunting/</guid>
-      <description>&lt;p&gt;Lâu lắm rồi tôi mới được xem một bộ phim hay đến vậy, có lẽ từ khi xem La La Land, đó là những bộ phim buộc bạn phải ngẩn ngơ một lồi lâu và không ngừng suy nghĩ về nhân vật và những lời thoại. Không có những kĩ xảo tráng lệ hay cốt truyện hại não, bộ phim đơn giản chỉ là câu chuyện của một thanh niên với bộ óc thiên tài trải nghiệm những thay đổi trong cuộc đời. Điều hại não nhất chăng chính là những bài toán được đề cập trong bộ phim, một phần làm tôi rất thích thú.&lt;/p&gt;
-
-&lt;p&gt;Có lẽ nhiều người sẽ quan tâm nhiều hơn về những biến đổi của nhân vật Will, còn với tôi, tôi lại thích hình tượng hai giáo sư Sean và Lambeau. Cả hai là sự nhân cách hóa lựa chọn của Will. Khi cả hai giáo sư nói chuyện với nhau, mà đa phần cãi nhau vì bất đồng quan điểm, những gì thảo luận cho thấy họ từng là những gã thiên tài với đam mê toán học, nhưng Lambeau trở thành một “mathematical god” - với giải Field danh giá, còn Sean thì chọn một hướng đi hoàn toàn khác. Cả hai đều dù trái ngược nhau nhưng lại là phần bù của nhau. Hình ảnh hai người, và cả Will khiến tôi ám ảnh. Một phần trong con người tôi giống Lambeau: Lambeau ám ảnh bởi sự thành công, ám ảnh bởi Field danh giá, ám ảnh bởi vinh quang trong nghiên cứu. Tôi từng, và có lẽ cũng đang có những suy nghĩ tương tự, nỗi ám ảnh phải làm mọi thứ để trở thành “expert” trong lĩnh vực mình làm và lúc nào cũng ép bản thân tới hạn của công việc, như cách mà Lambeau nói về chính mình:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I am what I am today because I was pushed and because I learned to push myself&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Nhưng ấn tượng hơn cả là Sean, Sean đã đưa tôi một bài học khi nói: “There&amp;rsquo;s more to life
-than a fuckin&amp;rsquo; Field&amp;rsquo;s medal.” Chính Lambeau thừa nhận Sean thông minh hơn ông, chính Lambeau cũng thừa nhận Sean từng có thể có Field, nhưng ông đã không làm, ông đã không hối hận về quyết định của mình.&lt;/p&gt;
-
-&lt;p&gt;Bộ phim có rất nhiều đoạn hội thoại rất ý nghĩa, nhưng có lẽ đoạn hay nhất là khi Sean nói chuyện với Will, về sự khác nhau giữa kiến thức và sự thông thái: bạn có thể có được kiến thức bằng cách đọc rất nhiều sách và sở hữu một bộ óc của thiên tài; nhưng bạn không có được sự thông thái nếu không thực sự cảm nhận.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/qM-gZintWDc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Điều đặc biệt ấn tượng với tôi là khi Sean liên tục hỏi Will: “What do you wanna do?” được lặp đi lặp lại, như sự ẩn dụ của bộ phim dành cho người xem, đó chính là câu hỏi dành cho người xem. Đoạn cãi nhau của Sean và Lambeau và chính câu hỏi : “What do you wanna do?” khiến tôi luôn bần thần sau bộ phim, rốt cuộc, điều gì là điều tôi thực sự muốn làm?&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/zKQBHkzOYvw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Mỗi phân cảnh trong phim có lẽ là một câu chuyện đầy ý nghĩa về cuộc sống. Và những đoạn hội thoại ấy sẽ còn lưu lại trong tâm trí người xem thời gian dài.&lt;/p&gt;
-
-&lt;p&gt;Một bộ phim quá hay, và thật không ngờ là Matt Demon và Ben Affleck viết kịch bản xuất sắc đến vậy, đồng thời diễn xuất của các diễn viên hết sức thuyết phục. Từ bối cảnh, kịch bản, biên kịch, tất cả tạo nên một bộ phim giàu tính nghệ thuật và ý nghĩa, đó cũng chính là lí do mà bộ phim có 9 đề cừ Oscar và giành được tượng vàng cho hạng mục Nam Diễn Viên Phụ Xuất Sắc (Robin William) và Kịch Bản Gốc Hay Nhất (Matt và Ben).&lt;/p&gt;
-
-&lt;p&gt;Về những câu hỏi toán trong bộ phim, điều thú vị là Lambeau đạt giải Field trong toán tổ hợp, và đó là lí do mà mấy câu hỏi thách thức để tìm ra thiên tài toán học mới đều liên quan đến mảng này. Các câu hỏi khá hay về đồ thị: từ ma trận cạnh kề và tính chất của nó, từ hàm sinh đến phương pháp đếm đến bài toán tô màu đồ thị. Câu chuyện về các nhà toán học được đề cập trong phim cũng rất thú vị: Ranamujan (có lẽ cuộc đời và trí tuệ của ông thú vị đến nỗi tôi thường xuyên thấy bóng dáng của ông trong các lĩnh vực mình tìm hiểu: trong Hỗn Độn và Hài Hòa của gs. Trịnh Xuân Thuận, trong Volume 1 của The art of computer programming đến bộ phim The Man Who Knew Infinity trên chuyến bay đi Hawaii), Ted Kaczynki: một giáo sư toán học Berkeley, đồng thời cũng là một tên khủng bố. Có lẽ cần đến một post hàng toàn khác để có thể nói về lịch sử thú vị của những bài toán trong phim này.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/N7b0cLn-wHU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-</description>
+      <guid>http://dangkhoasdc.github.io/post/2017/09/10/good-will-hunting-v%C3%A0-nh%E1%BB%AFng-b%C3%A0i-to%C3%A1n-%C4%91%E1%BB%93-th%E1%BB%8B/</guid>
+      <description>Lâu lắm rồi tôi mới được xem một bộ phim hay đến vậy, có lẽ từ khi xem La La Land, đó là những bộ phim buộc bạn phải ngẩn ngơ một lồi lâu và không ngừng suy nghĩ về nhân vật và những lời thoại. Không có những kĩ xảo tráng lệ hay cốt truyện hại não, bộ phim đơn giản chỉ là câu chuyện của một thanh niên với bộ óc thiên tài trải nghiệm những thay đổi trong cuộc đời.</description>
     </item>
     
     <item>
       <title>La La Land</title>
-      <link>http://dangkhoasdc.github.io/post/la_la_land/</link>
+      <link>http://dangkhoasdc.github.io/post/2017/09/10/la-la-land/</link>
       <pubDate>Sun, 10 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/la_la_land/</guid>
-      <description>&lt;p&gt;Tuổi trẻ, tình yêu và khát vọng. Đó là La La Land. Một tựa phim đầy mơ hồ. Nhưng không phải, có lẽ âm &amp;ldquo;La La Land&amp;rdquo; vang lên như một thứ âm nhạc của tuổi trẻ, vượt qua những rào cản của ngôn ngữ, đó là chốn thiên đường mà những kẻ khao khát từng chìm đắm và mơ mộng.&lt;/p&gt;
-
-&lt;p&gt;Xem La La Land tôi nhớ đến &lt;a href=&#34;http://www.imdb.com/title/tt0947798/?ref_=nv_sr_1&#34; target=&#34;_blank&#34;&gt;Black Swan&lt;/a&gt; và &lt;a href=&#34;http://www.imdb.com/title/tt0947798/?ref_=nv_sr_1&#34; target=&#34;_blank&#34;&gt;Whiplash&lt;/a&gt;, cũng là câu chuyện về những người trẻ với khát vọng và niềm đam mê của mình.&lt;/p&gt;
-
-&lt;p&gt;Black Swan nói về đam mê đến ám ảnh, đến những vũ điệu balê và tác phẩm Hồ Thiên Nga nổi tiếng. Đó là câu chuyện về nghệ thuật, về bản ngã và cái giá của nghệ thuật. Cô gái (Nina - Natalie Portman) trong phim ám ảnh vai diễn đến nỗi trong tưởng tượng đã giết chết bạn diễn của mình, thoát khỏi vỏ bọc bé bỏng mỏng manh của thiên nga trắng đến hoàn toàn hóa thân thành Thiên Nga Đen với sự lôi cuốn và khao khát mãnh liệt. Nina Thoát khỏi giới hạn và khuôn khổ của bản thân để đạt đến sự hoàn hảo.&lt;/p&gt;
-
-&lt;p&gt;Whiplash lại là câu chuyện về chàng trai Andrew đam mê chơi trống. Giống Black Swan, chàng trai khi muốn vượt đến một tầm cao mới phải trả giá bằng tổn thương cả thể xác và tinh thần và cố gắng thoát khỏi vùng an toàn của chính bản thân. Tôi nghĩ hai bộ phim trên bao giờ cũng mang lại động lực cho người trẻ tìm đến sự toàn mỹ, cái đích đến của một tài năng được công nhận không bao giờ là dễ dàng.&lt;/p&gt;
-
-&lt;p&gt;La La Land chính là thành quả của tuổi trẻ và đam mê của &lt;a href=&#34;https://en.wikipedia.org/wiki/Damien_Chazelle&#34; target=&#34;_blank&#34;&gt;Damien Chazelle&lt;/a&gt;.
-La La Land là jazz, La La Land là sự tri ân của chàng sinh viên Harvard với khát vọng điện ảnh đã viết nên trong suốt thời gian ở trường. Đó là câu chuyện của chính chàng trai, gói gém trong những bản nhạc jazz trữ tình, kể về thổn thức của tuổi trẻ của anh.&lt;/p&gt;
-
-&lt;p&gt;Đó cũng là thổn thức của những người trẻ.&lt;/p&gt;
-
-&lt;p&gt;Jazz là phương tiện để chàng mang đến nỗi khắc khoải về tuổi trẻ. Như chính nhân vật Sebastian trong phim khi kể về nguồn gốc của jazz, jazz là sự tương tác của những con người ở các tầng lớp với nhau với ngôn ngữ khác biệt, họ có câu chuyện của riêng họ. Chính sự tương tác của những cảnh đời vậy tạo nên jazz. Còn phương tiện nào tuyệt hơn để nhà biên kịch truyền tải về tuổi trẻ của mình.&lt;/p&gt;
-
-&lt;p&gt;La La Land rất đẹp, đẹp từ dựng hình, từ âm thanh đến trang phục. Đó cũng chính là con mắt của người trẻ với cuộc đời, đầy ước mơ. Và đó chính là những gì đẹp đẽ nhất mà tuổi trẻ mong có được. Rất khó để diễn tả gam màu chủ đạo của bộ phim. Rực rỡ, tươi tắn. Jazz. Hollywood. Bồng bột và nhiệt huyết. Ồ, đó là màu sắc của điện ảnh.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://cdn.empireonline.com/jpg/80/0/0/1000/563/0/north/0/0/0/0/0/t/films/313369/images/nadTlnTE6DdgmYsN4iWc2a2wiaI.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Với tôi La La Land không phải là cả bộ phim, La La Land thực sự chính là trường đoạn kết thúc phim. Mọi thứ đều đẹp, mọi giấc mơ đều chạm tới, và hạnh phúc tràn ngập. Tất cả cuộn trong chất nhạc, gam màu sắc tươi tắng và lãng mạn. Và đúng như những gì dự tính, La La Land được miêu tả bằng jazz, bằng hình ảnh và tuyệt nhiên không một lời thoại. Bởi trong giấc mơ nào, đó là lời tự tình của đạo diễn, của người xem với chính họ. Đạo diễn đưa bàn tay đễn dẫn lối người xem đến La La Land của riêng họ.&lt;/p&gt;
-
-&lt;p&gt;Nhưng cái tài của đạo diễn chính là khiến người xem thổn thức với La La Land, họ cay đắng nhận ra, rốt cuộc, tên tác giả láo cá  đã kể 1 câu chuyện khác suốt hai tiếng đồng hồ. Ở đó nhân vật của chúng ta luôn hoài nghi về năng lực của mình, và họ buộc phải làm những việc họ không muốn làm, phải chọn con đường thực tâm không muốn đi. Tôi rất thích hai nhân vật chính, hoàn cảnh của họ, động lực của họ phần nào giống bản thân tôi: lạc lõng giữa những quyết định, với mục tiêu và hoài bão của bản thân. Đó là lí do tôi không chê trách gì quyết định của Mia lẫn Sebastian, tấm vé đến La La Land không dành cho mọi người. Vé đôi lại càng kham hiếm.&lt;/p&gt;
-
-&lt;p&gt;Giấc mơ tuyệt mỹ năm nào dần dần rời xa như cái ánh sáng xanh phía bên kia hồ dần rời xa Gatsby.  Phải chăng, tất cả cũng đều là giấc mơ. Gatsby chạy theo giấc mơ về sự vương giả và tình yêu, mà không gì khác là hình tượng của giấc mơ Mỹ. Mia và Sebastian cũng đuổi bám theo giấc mơ nghệ thuật riêng mình, chính là hình tượng của kinh đô Hollywood mà Sebastian nói:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;L.A. worships everything and values nothing&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Để rồi đọng lại, La La Land tuy rất đẹp, nhưng rất buồn. Bởi vùng đất ấy mãi mãi chỉ nằm trong hồi ức một thời xa lắm.&lt;/p&gt;
-
-&lt;p&gt;Có lẽ tôi không nói nhiều về sự thành công của phim. 11 đề cử giải Oscar và 5 giải thưởng được trao đã nói lên điều đó. Nhưng điều tôi đặc biệt thích, đó có lẽ là âm nhạc và hình ảnh. Hơn hết hai yếu tố trên đã trở thành một người kể chuyện trong phim. Và sự kiện trao nhầm giải ở Oscar có lẽ cũng là điều thú vị cho bộ phim. Dù rằng tình huống này thạt oái ăm cho cả đoàn phim của La La Land lẫn Moonlight.&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/rvK-g1rehpU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-
-&lt;p&gt;Honest Trailer có một video xuất sắc về vụ này :lol:&lt;/p&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/C39YJymGp3Q&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34; title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-
-</description>
+      <guid>http://dangkhoasdc.github.io/post/2017/09/10/la-la-land/</guid>
+      <description>Tuổi trẻ, tình yêu và khát vọng. Đó là La La Land. Một tựa phim đầy mơ hồ. Nhưng không phải, có lẽ âm &amp;ldquo;La La Land&amp;rdquo; vang lên như một thứ âm nhạc của tuổi trẻ, vượt qua những rào cản của ngôn ngữ, đó là chốn thiên đường mà những kẻ khao khát từng chìm đắm và mơ mộng.
+Xem La La Land tôi nhớ đến Black Swan và Whiplash, cũng là câu chuyện về những người trẻ với khát vọng và niềm đam mê của mình.</description>
+    </item>
+    
+    <item>
+      <title>Cảm nhận Star Wars VII: The Force Awakens</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/c%E1%BA%A3m-nh%E1%BA%ADn-star-wars-vii-the-force-awakens/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/c%E1%BA%A3m-nh%E1%BA%ADn-star-wars-vii-the-force-awakens/</guid>
+      <description>Từ nhỏ, tôi luôn thích những cuộc phiêu lưu và những câu chuyện giả tưởng. Từ cuộc phiêu lưu của Robinson đến con tàu chu du hai mươi ngàn dặm dưới đáy biển của Jules Verne hay cuộc chiến ngoài vũ trụ trong Starcraft. Star Wars cũng không phải là ngoại lệ, dĩ nhiên tôi không phải fan cuồng đến mức đọc từng trang wiki về từng nhân vật, thậm chí đến những nhân vật xuất hiện trong phim có vài giây cũng có hẳn [trang wiki riêng cơ mà](https://www.</description>
+    </item>
+    
+    <item>
+      <title>Diablo III</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/diablo-iii/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/diablo-iii/</guid>
+      <description>Sau gần 4 năm kể từ khi phát hành, mình mới được chơi cái game này. Thực ra do một cách tình cờ mà thấy được cái giá rẻ bất ngờ của em ý, tính ra là 20 USD cho bản Standard. Hoá ra là do đã có bản Expansion nên bản cũ mới rẻ vậy. Thôi thì lượm về chơi vậy.
+Lần đầu tiên chơi game Diablo là bản Diablo 2 Fury Within hồi lớp 6 lớp 7 gì đó.</description>
+    </item>
+    
+    <item>
+      <title>Review Refactoring</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/review-refactoring/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/review-refactoring/</guid>
+      <description>Mình quyết định đọc cuốn Refactoring: Improving the Design of Existing Code sau khi đọc xong cuốn Design Pattern.
+Sơ lược Mặc dù đã được nghe đến khái niệm này rất nhiều lần, tuy nhiên sau khi đọc xong cuốn sách, đối chiếu với những trải nghiệm của bản thân về các project trước đây. Mình hiểu:
+ Refactor là quá trình thao tác trên mã nguồn có sẵn nhằm gia tăng chất lượng mã nguồn nhưng vẫn giữ lại được các ràng buộc của hệ thống.</description>
+    </item>
+    
+    <item>
+      <title>Review Start Wars series</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/review-start-wars-series/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/review-start-wars-series/</guid>
+      <description>Mình đã giành một ngày cuối tuần và dịp nghỉ lễ để ngồi xem 3 phần của Star Wars: 4, 5 và 6. Đánh giá sơ bộ về bộ phim thì nếu đặt bản thân vào thời điểm bộ phim được ra mắt thì đúng là một kiệt tác. Giờ mình xem vẫn còn rất ấn tượng với kĩ xảo được thực hiện trong phim. Theo như mình biết về 3D và các hiệu ứng hình ảnh vào thời điểm đó để dựng nên những mô hình 3D phi thuyền hay các loài ở các hành tinh là điều không thể.</description>
+    </item>
+    
+    <item>
+      <title>Review: The C&#43;&#43; Programming Languages</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</link>
+      <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</guid>
+      <description>Hồi năm 1 đại học, mình rất thích cuốn C Programming Language của K&amp;amp;C, dù cuốn sách khá là ít trang nhưng đầy tinh tuý và rất hấp dẫn. Đến tận bây giờ, khi đã tốt nghiệp ra trường, tức đã 4 năm được biết cuốn sách, đôi lúc mình vẫn muốn đọc lại. Một thời gian sau mình có đọc thêm một số sách có tựa: The XXX Programming Language nhưng chỉ thấy C++ là hay.</description>
+    </item>
+    
+    <item>
+      <title>Review Algorithms (Princeton) - Coursera</title>
+      <link>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</link>
+      <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</guid>
+      <description>Đây là một trong những khoá rất đỉnh về lập trình, vì sao ư?
+ Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.</description>
     </item>
     
   </channel>

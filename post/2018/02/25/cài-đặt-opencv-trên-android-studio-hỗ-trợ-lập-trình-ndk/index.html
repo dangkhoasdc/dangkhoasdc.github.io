@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+    
+    
+    <li><a href="http://dangkhoasdc.github.io/en/post/2018/02/25/setup-opencv-and-android-studio-with-ndk-support/">en</a></li>
+    
+
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</span></h1>
+
+<h2 class="date">2018/02/25</h2>
+</div>
+
+<main>
+
+
+<p>Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE
+Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có
+hỗ trợ Android được cung cấp sẵn ở <a href="https://opencv.org/releases.html">OpenCV Homepage</a>.
+Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì
+điện thoại phải cài đặt ứng dụng <a href="https://play.google.com/store/apps/details?id=org.opencv.engine&amp;hl=en">OpenCV Manager</a>.</p>
+
+<p>Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên bản OpenCV với
+các tùy chỉnh của riêng cho từng yêu cầu, ví dụ như sử dụng đặc trưng SIFT hoặc
+các thuật toán có bản quyền.</p>
+
+<h2 id="tạo-ứng-dụng-android-với-hỗ-trợ-ndk">Tạo ứng dụng Android với hỗ trợ NDK</h2>
+
+<p>Trong menu, <code>File-&gt;New-&gt;New Project</code>, và chọn <code>Include C++ support</code> trong cửa
+sổ <code>Create New Project</code>.</p>
+
+<figure>
+    <img src="https://i.imgur.com/vgMNEYg.png"/> <figcaption>
+            <h4>Step 1</h4>
+        </figcaption>
+</figure>
+
+
+<p>Hai bước tiếp theo tương tự như cấu hình ứng dụng thông thường, nên mình sẽ bỏ
+qua phần này. Sau đó, IDE sẽ hỏi cấu hình C++ cho ứng dụng, thoe mình thì nên
+chọn C++14 và 2 tùy chọn Exception Support và  Runtime Type
+Information Support.</p>
+
+<ol>
+<li><p>Từ cửa sổ Project Structure (<code>File -&gt; Project Structure</code>), ta thêm OpenCV module
+bằng cách click vào dấu <code>+</code>, chọn <code>Import Eclipse ADT Project</code>
+và trỏ đến thư mục <code>/path/to/OpenCV4Android/sdk/java</code>.</p></li>
+
+<li><p>Chọn <code>Modules -&gt; app</code>.  Trong tab <code>Dependencies</code> , thêm OpenCV module
+bằng cách nhấn vào dấu <code>+</code></p>
+
+<ol>
+<li><code>Module Dependency</code>.</li>
+<li>Chọn <code>:openCVLibrary340</code>.</li>
+</ol></li>
+</ol>
+
+<figure>
+    <img src="https://i.imgur.com/CSHlsF7.png"/> <figcaption>
+            <h4>Add openCVLibrary340</h4>
+        </figcaption>
+</figure>
+
+
+<h2 id="cấu-hình-cmake-và-ndk">Cấu hình CMAKE và NDK</h2>
+
+<p>Để CMAKE có thể nhận ra được OpenCV, ta thêm đoạn code sau vào trong <code>CMakeLists.txt</code></p>
+
+<ol>
+<li><p>Thêm thư viện:</p>
+
+<pre><code>include_directories(/path/to/OpenCV4Android/sdk/native/jni/include)
+add_library( lib_opencv SHARED IMPORTED )
+set_target_properties(lib_opencv PROPERTIES IMPORTED_LOCATION /path/to/OpenCV4Android/sdk/native/libs/${ANDROID_ABI}/libopencv_java3.so)
+</code></pre></li>
+
+<li><p>Thêm <code>lib_opencv</code> vào tham số của <code>target_link_libraries</code> ( câu lệnh cuối cùng
+trong <code>CMakeLists.txt</code>).</p></li>
+</ol>
+
+<p>Lưu ý rằng Cmake sử dụng <code>/</code> cho đường dẫn trong cả Windows và Linux.</p>
+
+<h2 id="cấu-hình-gradle">Cấu hình Gradle</h2>
+
+<ol>
+<li><p>Thêm <code>abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'</code>
+vào <code>cmake</code>.</p></li>
+
+<li><p>Đặt đoạn code sau vào bên trong phần <code>android</code>:</p>
+
+<pre><code>sourceSets {
+main {
+    jni.srcDirs = ['src/main/cpp']
+    jniLibs.srcDirs = ['\path\to\OpenCV-android-sdk\\sdk\\native\\libs']
+}
+
+}
+</code></pre></li>
+</ol>
+
+<p>Build lại ứng dụng và coi như ta đã config xong. Trong các bài viết tới, mình
+sẽ giới thiệu một số kỹ thuật OpenCV với Android:</p>
+
+<ul>
+<li>Trao đổi đối tượng Mat giữa Java và NDK.</li>
+<li>Tổ chức dự án và mã nguồn.</li>
+</ul>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

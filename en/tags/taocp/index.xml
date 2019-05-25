@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>taocp on Dang-Khoa&#39;s blog</title>
+    <link>http://dangkhoasdc.github.io/en/tags/taocp/</link>
+    <description>Recent content in taocp on Dang-Khoa&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/en/tags/taocp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Latin squares and a story of computer science history</title>
+      <link>http://dangkhoasdc.github.io/en/post/2018/02/01/latin-squares-and-a-story-of-computer-science-history/</link>
+      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/en/post/2018/02/01/latin-squares-and-a-story-of-computer-science-history/</guid>
+      <description>The content of this note mostly belongs to the first section of TAoCP, Vol4A.
+Definition Given a square matrix of size $M$ and each element is $\{0, 1, \cdots, M-1 \}$, we construct a matrix such that for the element $i$ in the set $\{0, 1, \cdots, M-1\}$ only appears exactly 1 time on every row and column.
+Examples We have 16 cards which comprises a combination of 4 ranks, i.</description>
+    </item>
+    
+    <item>
+      <title>Generate the inversion table from an integer sequence</title>
+      <link>http://dangkhoasdc.github.io/en/post/2018/01/16/generate-the-inversion-table-from-an-integer-sequence/</link>
+      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/en/post/2018/01/16/generate-the-inversion-table-from-an-integer-sequence/</guid>
+      <description>The programming exercise is from TAoCP, Vol3, 5.1.1-6:
+ Design an algorithm that computes the inversion table $b_1, b_2 \cdots b_n$ corresponding to a given permutation $a_1a_2 \cdots a_n$ of ${1, 2, \cdots , n}$, where the running time is essentially proportional to $n\ log n$ on typical computers.
+ I was really stuck on the solution Knuth given in the book. The author also mentioned another approach which actually is a modifination of merge sort.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lập Trình Hướng Đối Tượng Trong Python | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Lập Trình Hướng Đối Tượng Trong Python</span></h1>
+
+<h2 class="date">2015/07/20</h2>
+</div>
+
+<main>
+
+
+<p>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.</p>
+
+<h1 id="enum-trong-python">Enum trong python</h1>
+
+<p>Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</p>
+
+<pre><code class="language-python">from enum import Enum
+
+class Color(Enum):
+    RED     = 1
+    GREEN   = 2
+    BLUE    = 3
+
+</code></pre>
+
+<h2 id="không-multiple-constructors">Không multiple constructors</h2>
+
+<p>Nhưng ta có thể sử dụng <code>optical argument</code> như một thế mạnh và thay thế cho multiple constructor.</p>
+
+<h2 id="không-access-modifier">Không access modifier</h2>
+
+<p>Đồng nghĩa với việc không có <code>public</code>, <code>private</code> hay là <code>protected</code> gì cả. Ngay cả việc thêm <code>__</code> vào trước properties hay method cũng không giải quyết được vấn đề. Với mỗi thuộc tính <code>__p</code> của lớp <code>A</code> đơn giản là được đổi tên thành <code>_A__p</code>.</p>
+
+<h3 id="private-methods">Private methods</h3>
+
+<p>Sử dụng tiền tố <code>__</code> khác các phương thức muốn đặt <code>private</code>.</p>
+
+<h2 id="tạo-property">Tạo property</h2>
+
+<p>Nếu được, tạo thành method thay thế. Còn không có thể sử dụng decorator <code>@property</code> trước method để đổi thành property.</p>
+
+<h2 id="đa-kế-thừa">Đa kế thừa</h2>
+
+<p>Tránh vấn đề này càng tốt. Tham khảo <a href="https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem">tại đây</a>.</p>
+
+<h2 id="các-thuộc-tính-và-method-static">Các thuộc tính và method static</h2>
+
+<p>Mình không nghĩ là cần thuộc tính hay method static cho lắm. Nếu có thể cài thuộc tính/method static thì thay vào đó có thể đặt bên ngoài class và xếp trong cùng module. Nhưng vậy có thể truy cập các thuộc tính, hàm thông qua module thay vì class, và mình thấy hầu như không khác nhau là mấy.</p>
+
+<h2 id="gọi-constructor-từ-lớp-cha">Gọi constructor từ lớp cha</h2>
+
+<p>Đây là một vấn đề khá nan giải trong trường hợp đa kế thừa. Giả sử ta có lớp A, lớp B và C. Trong đó lớp C kế thừa vừa lớp A và lớp B. Vấn đề là làm thế nào để gọi A, B trong hàm khởi tạo, và làm thế nào để biết lớp cha nào được gọi trước.</p>
+
+<pre><code class="language-python">class A(object):
+    def __init__(self):
+        super(A, self).__init__()
+        print &quot;entering A&quot;
+        print &quot;leaving A&quot;
+
+class B(object):
+    def __init__(self):
+        super(B, self).__init__()
+        print &quot;entering B&quot;
+        print &quot;leaving B&quot;
+
+class C(A,B):
+    def __init__(self):
+        print &quot;entering c&quot;
+        super(C, self).__init__()
+        print &quot;leaving c&quot;
+
+
+if __name__ == '__main__':
+    c = C()
+
+</code></pre>
+
+<p>Có một số điều khá thú vị xoay quanh điều này sau khi ta thử nghiệm hoán vị trình tự kế thừa, trình tự định nghĩa lớp:</p>
+
+<ol>
+<li>Trong mỗi hàm phải khai báo <code>super(ClassName, self).__init__()</code> thì việc gọi các hàm khởi tạo từ các lớp cha mới thực hiện được.</li>
+<li>Không phụ thuộc vào trình tự kế thừa.</li>
+<li>Trình tự hàm khởi tạo được gọi dựa them alphabet.</li>
+</ol>
+
+<h2 id="practices">Practices</h2>
+
+<ol>
+<li>Để kiểm tra một biến có phải là 1 thể hiện của lớp không, sử dụng hàm <code>isinstance</code>, tuy nhiên khuyến khích không xài. Vì Python là Duck Type mà.</li>
+<li>Khai báo một thứ na ná struct trong C/C++:
+{% highlight python %}
+class ClassName:
+pass
+{% endhighlight%}</li>
+</ol>
+
+<p>Sau đó thì có thể tha hồ thêm thuộc tính nào vào cũng được.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+<li><a href="https://docs.python.org/2/tutorial/classes.html">https://docs.python.org/2/tutorial/classes.html</a></li>
+</ol>
+
+<p>P.s: Các chủ đề hại não và nâng cao có thể được đề cập là Iterators, Generators, &hellip;</p>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

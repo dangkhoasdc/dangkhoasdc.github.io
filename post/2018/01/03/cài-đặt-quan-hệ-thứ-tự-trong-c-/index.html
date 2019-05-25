@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cài đặt quan hệ thứ tự trong C&#43;&#43; | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Cài đặt quan hệ thứ tự trong C++</span></h1>
+
+<h2 class="date">2018/01/03</h2>
+</div>
+
+<main>
+
+
+<p>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc
+dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai
+trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:</p>
+
+<ul>
+<li>Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất,
+có vai trò quan trọng trong các thuật toán sắp xếp.</li>
+<li>Equivalence relation (Quan hệ tương đương): được sử dụng trong các thuật toán
+hashing.</li>
+</ul>
+
+<p>Tuy nhiên trong bài này thay vì đề cập trực tiếp đến quan hệ thứ tự (Total Order),
+ta thử sử dụng quan hệ tổng quát hơn chút <strong>weak order</strong>. Điều khác biệt duy nhất
+của Weak Order so với Total Order nằm ở chỗ weak order không có tính đối xứng.
+Và trong &ldquo;thực tế đời sống&rdquo;, Weak Order chính là dấu <code>&lt;</code>.</p>
+
+<p>Vậy có điều gì khó khăn khi phải cài đặt dấu <code>&lt;</code> này? Giả sử ta có một hàm như
+sau:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt; bool f(const T&amp; lhs, const T&amp; rhs) { return lsh&lt;rhs; }
+
+</code></pre>
+
+<p>Giả sử ta viết một thư viện trong đó chứa hàm <code>f</code> và mong muốn bất kì ai sử
+dụng cũng phải cài đặt dấu <code>&lt;</code> cho CTDL của mình. Bởi đôi khi, dấu <code>&lt;</code> mặc
+định của C++ chưa chắc mang ngữ nghĩa đúng, hay bất kì một CTDL tự tạo nào
+không chứa dấu <code>&lt;</code> cũng gặp lỗi. Vậy nếu có cơ chế nào giúp trình biên dịch
+phát hiện được LTV quên cài đặt dấu này. Cụ thể hơn ta, muốn có:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+bool f(const T&amp; lhs, const T&amp; rhs) {
+    // Error if T does not have `&lt;` operator
+    // otherwise
+    return lsh&lt;rhs;
+}
+
+</code></pre>
+
+<p>Trong C++11, ta có 1 cơ chế khá giống như vậy:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+bool f(const T&amp; lhs, const T&amp; rhs) {
+    static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt; operator&quot;);
+    return lsh&lt;rhs;
+}
+
+</code></pre>
+
+<p>Kỹ thuật sử dụng <code>struct&lt;T&gt;::value</code> được gọi là <a href="https://accu.org/index.php/journals/442">type traits</a>,
+được sử dụng rất
+phổ biến trong STL, metaprogramming, các thư viện như BOOST, dlib. Tiếp, <code>::value</code>
+ở đây phải là static, không có gì phải bàn. Đồng thời, <code>::value</code> trả về yes/no
+khi lớp T chứa/ hoặc không chứa <code>&lt;</code>, nên kiểu phải là <code>bool</code>. Do giá trị này được
+kiểm tra lúc trình biên
+dịch thực thi, nên hẳn là <code>constexpr</code>. Xong tạm thời ta có 1 cài đặt:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+class has_less_operator{
+    private:
+        // stuff
+    public:
+        static constexpr bool value = // and other stuff;
+};
+</code></pre>
+
+<p>Và giờ đến phần khoai nhất khi cài đặt. Ta buộc phải gán &ldquo;cái gì đó&rdquo; vào <code>value</code>,
+nhưng ngay tại thời điểm cài đặt ta còn không biết nó có giá trị gì, và hoàn toàn
+phụ thuật vào CTDL <code>T</code> nào đó do LTV khác viết. Hay nói một cách khác, chính giá
+trị boolean cũng bị tham số hóa theo kiểu. May mắn thay, STL có hỗ trợ vụ này:</p>
+
+<pre><code class="language-cpp">#include &lt;type_traits&gt;
+
+using namespace std;
+
+typedef true_type yes;
+typedef false_type no;
+
+</code></pre>
+
+<p>Lúc này ta có thể viết :</p>
+
+<pre><code class="language-cpp">static constexpr bool value = is_same&lt;yes, /* X */&gt;::value;
+</code></pre>
+
+<p>Như vậy <code>value</code> sẽ phụ thuộc vào <code>is_same&lt;yes, X&gt;::value</code>. Vấn đề X ở đây là gì?
+Ta xem trong STL, <code>is_same</code> nhận 2 datatype làm input. Vậy X chính là 1 datatype
+khác. Nhưng cụ thể hơn nó có thể là yes/no để <code>value</code> trở thành yes/no.</p>
+
+<p>Tới đây là một đoạn cực kì fancy, nhưng mình không biết giải thích trước thế nào
+nhưng trước hết cứ viết ra đã:</p>
+
+<pre><code class="language-cpp">static constexpr bool value = is_same&lt;yes,
+                                    decltype(test&lt;T&gt;(nullptr))
+                                    &gt;::value;
+</code></pre>
+
+<p><code>decltype</code> trả về kiểu dữ liệu <code>return type</code> của hàm <code>test</code> và ta cố tình đưa
+toàn bộ cài đặt vào trong <code>test</code> này. Bởi toán tử <code>&lt;</code> trong C++ yêu cầu 1 tham
+số đầu vào nên ta để 1 tham số hàm <code>test</code> làm dummy. Như vậy ta biết chắc chắn
+<code>test&lt;T&gt;</code> trả về 1 trong 2 kiểu dữ liệu : <code>yes</code> hoặc <code>no</code> như được typedef phía
+trên. Đồng thời, ta biết rằng mặc định mọi kiểu dữ liệu <code>T</code> sẽ trả về <code>no</code>.</p>
+
+<p>Tức ta có :</p>
+
+<pre><code class="language-cpp">template&lt;typename&gt; static no test(...);
+</code></pre>
+
+<p>Xong cho phần sai. Giờ làm thế nào để trả về <code>yes</code> khi dữ liệu thực sự đã cài
+đặt <code>&lt;</code>. Ta có 1 hàm test thứ 2:</p>
+
+<pre><code class="language-cpp">template&lt;typename P&gt; static auto test (P *p)
+    -&gt; decltype(declval&lt;T&gt;()&lt;(*p), yes());
+</code></pre>
+
+<p>WTF =))) Điều gì đang xảy ra ở đây? Nhờ một khái niệm <a href="https://en.wikipedia.org/wiki/Substitution_failure_is_not_an_error">SFINAE</a>,
+chúng ta được chứng kiến sự điên rồ của C++.</p>
+
+<p>Hãy phân tích câu lệnh trên.
+Phần <code>template&lt;typename T&gt; static</code> không có gì khác với <code>test</code> của <code>no</code>. Kết
+quả trả về là <code>auto</code> để &ldquo;nhường&rdquo; phần quyết định cho <code>decltype</code>. <code>decltype</code> làm
+chuyện như sau, nếu biểu thức <code>declval&lt;T&gt;()&lt;(*p), yes()</code> biên dịch được thì
+<code>auto</code> sẽ trở thành <code>yes</code> nhờ vào &ldquo;comma-separated list&rdquo;: trả về kết quả của term
+cuối cùng trong list. Vậy vấn đề nằm ở <code>declval</code>. Hàm nào giúp ta gọi được
+<code>&lt;</code> mà không cần thông qua constructor. Chính xác hơn <code>declval&lt;T&gt;()</code> là
+template function với tham số kiểu dữ liệu <code>T</code>, trả về kiểu reference X nào đó,
+nhờ đó ta gọi được <code>&lt;(*p)</code>: chính là phép <code>&lt;</code> thần thánh của chúng ta. Nếu như
+không tồn tại <code>&lt;</code>, biểu thức này fail nhưng sẽ không bị báo lỗi biên dịch mà thay
+vào đó trình biên dịch gán <code>test</code> cho <code>static no test(...)</code>.</p>
+
+<p>Tổng kết lại ta có code như sau:</p>
+
+<pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;type_traits&gt;
+
+using namespace std;
+typedef std::true_type yes;
+typedef std::false_type no;
+
+template&lt;typename T&gt;
+class has_less_operator {
+    private:
+    template&lt;typename P&gt; static auto test(P *p) -&gt; decltype(std::declval&lt;P&gt;()&lt;(*p), yes());
+    template&lt;typename&gt; static no test(...);
+
+
+    public:
+    static constexpr bool value = is_same&lt;
+                                    yes,
+                                    decltype(test&lt;T&gt;(nullptr))
+                               &gt;::value;
+};
+
+template&lt;typename T&gt;
+bool f(const T&amp; lsh, const T&amp; rhs) {
+    static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt;&quot;);
+    return lsh&lt;rhs;
+}
+
+struct s1 {
+    int i;
+    s1(int _i): i(_i) {  }
+    inline bool operator&lt;(const s1&amp; other) const {
+        return i &lt; other.i;
+    }
+};
+
+struct s2 {
+    int i;
+    s2(int _i): i(_i) {  }
+};
+
+int main(int argc, char const* argv[])
+{
+    s1 a(10);
+    s1 b(20);
+    f(a, b);
+    /* s2 c(10), d(20); */
+    /* f(c, d); */
+    return 0;
+}
+
+</code></pre>
+
+<p>Nếu ta uncomment s2 và f bên dưới, ta có thông báo lỗi như sau:</p>
+
+<pre><code>a.cpp: In instantiation of ‘bool f(const T&amp;, const T&amp;) [with T = s2]’:
+a.cpp:47:11:   required from here
+a.cpp:24:5: error: static assertion failed: Please implement &lt;
+     static_assert(has_less_operator&lt;T&gt;::value, &quot;Please implement &lt;&quot;);
+     ^~~~~~~~~~~~~
+</code></pre>
+
+<p>Thông báo cực kì dễ hiểu. Với việc sử dụng một số IDE thông minh, thậm chí thông
+báo lỗi sẽ được thông báo ngay lúc cài đặt <code>s2</code> và gọi <code>f</code>. Quan trọng hơn,
+nhờ đó ta có thể viết mã theo &ldquo;Design by Contract&rdquo; hay theo phong cách interface
+của Java và C++. Sắp tới C++ sẽ giới thiệu khái niệm <code>concept</code> và theo tác
+giả của C++ là sẽ giải quyết vấn đề suốt 35 năm qua của Generic Programming
+(<a href="https://developers.slashdot.org/story/17/01/23/003247/c-creator-wants-to-solve-35-year-old-generic-programming-issues-with-concepts">link</a>).</p>
+
+<h1 id="các-toán-tử-khác">Các toán tử khác</h1>
+
+<p>Sau khi cài đặt toán tử <code>&lt;</code>, thông thường ta sẽ có nhu cầu cài đặt các toán
+tử so sánh khác như <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code>. May mắn thay ta có thể quy đổi các toán tử
+này dễ dàng thông qua <code>&lt;</code>:</p>
+
+<ul>
+<li><code>&gt;</code>: chính là <code>rhs&lt;lsh</code>.</li>
+<li><code>&lt;=</code>: là <code>!(rhs&lt;lsh)</code>.</li>
+<li><code>&gt;=</code>: <code>!(lhs&lt;rhs)</code>.</li>
+</ul>
+
+<p>Trong thâm ta ta có cảm giác rằng thể nào cũng có rất nhiều CTDL ta cài đặt
+kiểu này: chỉ cần định nghĩa <code>&lt;</code> và 3 toán tử còn lại tự nội suy. Nhờ vào kỹ
+thuật <a href="https://en.wikipedia.org/wiki/Curiously_recurring_template_pattern">Curiously recurring template pattern</a>,
+ta có một code khá gọn:</p>
+
+<pre><code class="language-cpp">template&lt;typename T&gt;
+struct order {
+    virtual bool operator&lt;( const T&amp; rhs) const = 0;
+    bool operator&gt;( const T&amp; rhs) const
+        {return rhs&lt;static_cast&lt;const T&amp;&gt;(*this);}
+    bool operator&gt;=( const T&amp; rhs) const
+        {return !((*this)&lt;rhs); }
+    bool operator&lt;=( const T&amp; rhs) const
+        {return !(rhs&lt; static_cast&lt;const T&amp;&gt;(*this));}
+};
+</code></pre>
+
+<p>Như vậy chỉ cần kế thừa <code>order</code> và cài đặt <code>&lt;</code>, ta sẽ có luôn 3 toán tử còn lại.
+Điều duy nhất mình ức chê là phải sử dụng <code>static_cast</code>.</p>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

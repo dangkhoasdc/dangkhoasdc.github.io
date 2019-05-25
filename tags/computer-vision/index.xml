@@ -1,34 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>computer vision on Dang-Khoa&#39;s blog </title>
+    <title>computer vision on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/computer-vision/</link>
-    <description>Recent content in computer vision on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in computer vision on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Mar 2018 00:00:00 +0000</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>OpenCV on Android: practices and tips</title>
-      <link>http://dangkhoasdc.github.io/post/opencv_android_practices/</link>
-      <pubDate>Thu, 08 Mar 2018 00:00:00 +0000</pubDate>
+      <title>AI Challenge - Landmark: Kỹ thuật và ý tưởng</title>
+      <link>http://dangkhoasdc.github.io/post/2018/09/07/ai-challenge-landmark-k%E1%BB%B9-thu%E1%BA%ADt-v%C3%A0-%C3%BD-t%C6%B0%E1%BB%9Fng/</link>
+      <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/opencv_android_practices/</guid>
-      <description>Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
-Basically, we have a function playing as a bridge between Java APIs and NDK:
-public native void function_name(long matAddress); To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/09/07/ai-challenge-landmark-k%E1%BB%B9-thu%E1%BA%ADt-v%C3%A0-%C3%BD-t%C6%B0%E1%BB%9Fng/</guid>
+      <description>Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.
+Dữ Liệu Dưới đây là phân phối số lượng ảnh trên mỗi label.
+  Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.   Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.</description>
     </item>
     
     <item>
-      <title>History of Computer Vision - Part 1</title>
-      <link>http://dangkhoasdc.github.io/post/compvision_hist/</link>
+      <title>Lịch sử Thị Giác Máy Tính - Phần 1</title>
+      <link>http://dangkhoasdc.github.io/post/2018/01/17/l%E1%BB%8Bch-s%E1%BB%AD-th%E1%BB%8B-gi%C3%A1c-m%C3%A1y-t%C3%ADnh-ph%E1%BA%A7n-1/</link>
       <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/compvision_hist/</guid>
-      <description>[It is such a long time since I wrote a dedicated technical post about computer vision.]
-Introduction Since Computer Vision is an interdisciplinary research which involves different fields such as physics, biology, computer science, neuroscience, etc. For this reason, there are different approaches when people consider about the history of computer science. In this post, I summarize two viewpoints of Prof. Fei-Fei Li, and Prof. Richard Szeliski from their courses [1] and textbooks [1].</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/01/17/l%E1%BB%8Bch-s%E1%BB%AD-th%E1%BB%8B-gi%C3%A1c-m%C3%A1y-t%C3%ADnh-ph%E1%BA%A7n-1/</guid>
+      <description>Edition: Pre-fascicle 1A (Revision -99).
+[Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT - hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông tin về một hướng nghiên cứu khá hấp dẫn này.</description>
     </item>
     
   </channel>

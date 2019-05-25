@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giải thuật tìm kiếm Fibonacci | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Giải thuật tìm kiếm Fibonacci</span></h1>
+
+<h2 class="date">2017/12/19</h2>
+</div>
+
+<main>
+
+
+<p>Mình không tìm được từ nào tiếng Việt có thể dịch được từ &ldquo;Fibonaccian Searching&rdquo;,
+nếu &ldquo;binary searching&rdquo; có thể dịch là &ldquo;tìm kiếm nhị phân&rdquo;, thì &ldquo;Fibonaccian Searching&rdquo;
+không có ngữ nghĩa gì nhiều.</p>
+
+<p>Nguồn gốc thuật toán này xuất phát từ bài tập 1.4.22 (Algorithms, Fourth Edition, Sedgewick). Ngoài
+ra đây cũng là một nội dung được đề cập trong TAoCP - Vol 3.</p>
+
+<h1 id="lịch-sử">Lịch sử</h1>
+
+<p>Thuật toán được để xuất bởi Devid E. Ferguson (CACM-1960, <a href="https://dl.acm.org/citation.cfm?id=367496">link</a>).
+Một số phát hiện liên quan, chủ yếu về nguồn gốc cây Fibonacci có thể tham khảo tại TAoCP - Vol 3 (Mục 6.2.1).</p>
+
+<h1 id="thuật-toán">Thuật toán</h1>
+
+<p>Điểm thú vị của thuật toán này nằm ở chỗ thuật toán không sử dụng phép chia, nhưng vẫn đạt được
+độ hiệu quả của binary search. Tuy nhiên, ưu điểm này thực sự có tác dụng
+vào thời điểm thuật toán này được đề xuất (1960) khi mà các chép chia, hay
+shift bit tốn nhiều chi phí hơn so với phép cộng trừ. Tuy nhiên, <code>fibsearch</code>
+còn được sử dụng khi tốn ưu thời gian tìm kiếm khi mà dữ liệu quá lớn không
+thể đọc lên được toàn bộ lên RAM hoặc cache, khi đó thời gian đọc trên bộ
+lưu trữ ngoại vi trở nên tốn kém ( <a href="https://stackoverflow.com/a/22877947/1629214">link </a>).
+Tuy nhiên mình nghĩ <code>fibsearch</code>
+sẽ là một câu hỏi phỏng vấn cực kì thú vị.</p>
+
+<blockquote>
+<p>Thiết kế một thuật toán tìm kiếm nhị phân không sử dụng phép nhân, chia hoặc
+dịch bit với độ phức tạp $\mathcal{O}(\lg N)$</p>
+</blockquote>
+
+<h3 id="cài-đặt">Cài đặt</h3>
+
+<p>Phần dưới đây là giải thuật lấy từ TAoCP, mình nghĩ là cực kì dễ hiểu, tạm thời
+mình chỉ trình bày mã giả. Có thể tham khảo phần cài đặt bằng C, trong phần
+<a href="#references">References</a>. Một phiên bản cải tiến với kích thức mảng $N$ bất
+kì sẽ được update sau.</p>
+
+<pre><code>Input: mảng $K_1, K_2, ..., K_N$ được sắp xếp và phần tử $K$ cần tìm. Giả sử
+$N+1 = F_{k+1}. Lưu ý index của mảng bắt đầu 1$
+
+P1. [Khởi tạo] i = F[k], p = F[k-1], q = F[k-2]
+P2. [So sánh].
+    if K[i] &lt; K: go to P3.
+    else if K[i] &gt; K: go to P4.
+    else: return i;
+P3. [Xét cây con Fibonacci bên trái]
+    if q = 0: return -1
+    else:
+        i -= q
+        (p, q) = (q, p-q)
+        go to P2
+P4. [Xét cây con Fibonacci bên phải]
+    if p = 1: return -1
+    else:
+        i += q
+        p -= q
+        q -= p
+        go to P2
+</code></pre>
+
+<h2 id="bài-tập">Bài tập</h2>
+
+<ul>
+<li>Thiết kế thuật toán cho trường hợp $N \geq 0$.</li>
+<li>Thiết kế thuật toán với index bắt đầu bằng 0. Về mặt kĩ thuật chỉ có 1 thay đổi
+nhỏ trong code, nhưng cây Fibonacci sẽ tương đối khác.</li>
+</ul>
+
+<h1 id="phân-tích">Phân tích</h1>
+
+<figure>
+    <img src="https://imgur.com/download/iCyGe2U"/> <figcaption>
+            <h4>Cây tìm kiếm Fibonacci với k=6. Source: TAoCP, Vol 3, P417.</h4>
+        </figcaption>
+</figure>
+
+
+<p>Phần dưới đây là mô tả ngắn gọn cách mà thuật toán này thực thi. Khác với tìm
+kiếm nhị phân chia các nhánh tìm kiếm thành các cây nhị phân, <code>fibsearch</code> thay
+vào đó xây dựng cây Fibonacci. <em>Cây Fibonacci bậc $k$</em> được định nghĩa là &ldquo;cây&rdquo; với
+$F_{k+1}-1$ internal nodes (vòng tròn) và $F_{k+1}$ external nodes (hình vuông),<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>
+cây Fibonacci được xây dựng như sau:</p>
+
+<ol>
+<li>$k=0$ hoặc $k=1$, cây chỉ có 1 external node là 0.</li>
+<li>$k \geq 2$, root là có giá trị $F_k$, cây con bên trái là cây fibonacci
+bậc $k-1$ và cây con bên phải là cây fibonacci bậc $k-2$ với tất cả các nodes
+tăng $F_k$ đơn vị.</li>
+</ol>
+
+<p>Thuật toán <code>fibsearch</code> chính là việc xây dựng cây fibonacci bậc $k$ với $N=F_{k+1}$.</p>
+
+<p>Trong Figure 1, cây có bậc $k=6$ (tương đương với tìm mảng có $N=12$ phần tử
+($N+1=F_{k+1} = F_7 = 13$)), số internal nodes
+$F_{k+1}-1=12$ và $F_{k+1}=13$ external nodes. Ngoài ra,
+ta có thể thấy root = $F_6 = 8$, phần nhánh bên trái của 8 có
+$F_6-1=7$ internal nodes, và bên phải gồm $F_5-1 = 4$ internal
+nodes. Tiếp tục xuống các level thấp hơn là các giá trị $F$ nhỏ hơn và theo
+đúng quy luật đã nêu. Nhìn hình ta có thể hình dung phần nào, với cách tiếp cận
+chia để trị tương đồng với tìm kiếm nhị phân, tìm kiếm fibonaci &ldquo;có thể&rdquo;
+có độ phức tạp tương tự.</p>
+
+<p>Một chứng minh cụ thể và chi tiết hơn sẽ được cập nhật sau, kèm theo đó là mã
+nguồn C++ của thuật toán.</p>
+
+<h1 id="dạng-tổng-quát">Dạng tổng quát</h1>
+
+<p>Cả tìm kiếm nhị phân lẫn Fibonacci search thực ra cũng thuộc một dạng tổng quát
+của một chiến lược chia để trị trong tìm kiếm chuỗi đã được sắp xếp.</p>
+
+<p>Gọi $p$ và $q$ thỏa $p+q=1$, gọi $C(N)$ là số phép so sánh cần thực hiện của
+giải thuật. Chiến lược ở đây đó là chia mảng thành 2 phần với số lượng phần
+tử lần lượt là $pN$ và $qN$. Ta có dãy truy hồi số phép so sánh trong thuật toán:</p>
+
+<p>$$ C(N) = 1 + pC(pN) + qC(qN) $$</p>
+
+<p>Công thức này có dạng close form là $C(N) = \log_bN$ trong đó $b$ là hằng số
+cần tìm. Dễ dàng thấy được với tìm kiếm nhị phần $p=q={1 \over 2}$, còn với
+<code>fibsearch</code> thì $p={1 \over \phi}$ và $q= {1 \over \phi^2}$. Cụm $pC(pN)$ ở
+đây có nghĩa là xác suất $p$ phần tử cần tìm nằm trong khoảng $pN$ phần tử
+đã được chia, tương tự với $qC(qN)$.</p>
+
+<p>[$b = p^{-p}q^{-q}$
+nhưng hiện giờ vẫn chưa biết giải như thế nào. Đây là dạng divide-and-conquer
+recurrence. Nếu sử dụng <a href="https://courses.csail.mit.edu/6.046/spring04/handouts/akrabazzi.pdf">Akra-Bazzi method</a>
+thì ta chỉ mới tìm được $\Theta(1 + \ln N)$ của nó nhưng vẫn chưa xác định được $b$].</p>
+
+<h1 id="references">References</h1>
+
+<ul>
+<li><a href="http://users.ics.forth.gr/~lourakis/fibsrch/">C implementation</a>: cá nhân mình
+nghĩ đây là bản cài đặt khá chuẩn rồi.</li>
+<li>Knuth, Donald Ervin. The art of computer programming. Vol. 3. Pearson Education, 1997.[ aka TAoCP in my blog]</li>
+<li>Sedgewick, Robert, and Kevin Wayne. Algorithms. Addison-Wesley Professional, 2011.</li>
+<li><a href="http://www.geeksforgeeks.org/fibonacci-search/">GeeksforGeeks&rsquo;s Fibonaccian Searching</a>.</li>
+<li><a href="https://en.wikipedia.org/wiki/Fibonacci_search_technique">Wiki</a>.</li>
+</ul>
+
+<h1 id="todo">TODO</h1>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Minh họa cây Fibonacci.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Phiên bản C++.</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> So sánh độ phức tạp với tìm kiếm nhị phân, tổng quát hóa bài toán.
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> Hằng số $b$.</label></li>
+</ul></label></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">cũng không biết nên dịch internal nodes với external nodes thế nào cho hợp (node trong và node ngoài?).
+ <a class="footnote-return" href="#fnref:1">↩</a></li>
+</ol>
+</div>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

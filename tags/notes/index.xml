@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>notes on Dang-Khoa&#39;s blog </title>
+    <title>notes on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/notes/</link>
-    <description>Recent content in notes on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in notes on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Wed, 27 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Miscellaneous notes</title>
-      <link>http://dangkhoasdc.github.io/post/why_so_serious/</link>
-      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
+      <title>Người Việt trong Khoa học Máy Tính</title>
+      <link>http://dangkhoasdc.github.io/post/2017/12/27/ng%C6%B0%E1%BB%9Di-vi%E1%BB%87t-trong-khoa-h%E1%BB%8Dc-m%C3%A1y-t%C3%ADnh/</link>
+      <pubDate>Wed, 27 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/why_so_serious/</guid>
-      <description>Therer are some not-so-serious miscellaneous thoughts, comments of mine about everything in an informal format using Vietnamese and English.
-Deep Learning and truely science researching    &amp;ldquo;too often where people will something against their own gut instincts because they think the community wants them to do it that way, so people will work on a certain subject even though they aren&amp;rsquo;t terribly interested in it because they think that they&amp;rsquo;ll get more prestige by working on it.</description>
+      <guid>http://dangkhoasdc.github.io/post/2017/12/27/ng%C6%B0%E1%BB%9Di-vi%E1%BB%87t-trong-khoa-h%E1%BB%8Dc-m%C3%A1y-t%C3%ADnh/</guid>
+      <description>Dưới đây là ghi chép/ sưu tầm của bản thân về những người Việt đã ảnh hưởng đến sự lịch sử và sự phát triển của Khoa học Máy Tính. Đây là thống kê cá nhân và nếu có bạn nào có phát hành lại thì nhớ ghi nguồn nhé :) [Một số nhân vật mình không rõ tên cụ thể trong tiếng Việt nên sẽ ghi bằng tên ghi trên wiki hoặc trang cá nhân.</description>
     </item>
     
     <item>
-      <title>Matlab</title>
-      <link>http://dangkhoasdc.github.io/post/matlab/</link>
-      <pubDate>Mon, 18 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Những kênh thông tin công nghệ</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/nh%E1%BB%AFng-k%C3%AAnh-th%C3%B4ng-tin-c%C3%B4ng-ngh%E1%BB%87/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/matlab/</guid>
-      <description>General  Show the information of a variable. It is very useful when we the code takes so much memory: whos &amp;lt;variable name&amp;gt;. Sum of squared of elements: sumsqr(X). Use sum(sum(A.^2, 1)) instead if you want to use less memory. Memory optimizations tips and tricks: [Undocumented Matlab] Use column-based representation instead of the row-based one. For example, to represent a list of items from 1 to 5, use [1 2 3 4 5] (not [1; 2; 3; 4; 5]).</description>
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/nh%E1%BB%AFng-k%C3%AAnh-th%C3%B4ng-tin-c%C3%B4ng-ngh%E1%BB%87/</guid>
+      <description>Đây là một chủ đề được mình nói kha khá nhiều lần tại Open Talk ở trường ĐH Tự Nhiên (nói quá thôi chứ đi có 2 lần). Một trong những thiếu sót lớn của sinh viên CNTT đó là không nắm kịp tin tức công nghệ cũng như không biết thế giới đang chạy tới đâu rồi. Chia sẻ dưới đây của mình chỉ tập trung vào các mảng mình quan tâm nên dĩ nhiên còn rất nhiều thiếu sót những lĩnh vực khá.</description>
     </item>
     
   </channel>

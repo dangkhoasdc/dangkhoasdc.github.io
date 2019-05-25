@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Machine Learning on Dang-Khoa&#39;s blog </title>
+    <title>machine learning on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/machine-learning/</link>
-    <description>Recent content in Machine Learning on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in machine learning on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
+    <language>vi</language>
     <lastBuildDate>Fri, 07 Sep 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
@@ -14,13 +13,24 @@
     
     <item>
       <title>AI Challenge - Landmark: Kỹ thuật và ý tưởng</title>
-      <link>http://dangkhoasdc.github.io/post/zalo_landmark/</link>
+      <link>http://dangkhoasdc.github.io/post/2018/09/07/ai-challenge-landmark-k%E1%BB%B9-thu%E1%BA%ADt-v%C3%A0-%C3%BD-t%C6%B0%E1%BB%9Fng/</link>
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/zalo_landmark/</guid>
+      <guid>http://dangkhoasdc.github.io/post/2018/09/07/ai-challenge-landmark-k%E1%BB%B9-thu%E1%BA%ADt-v%C3%A0-%C3%BD-t%C6%B0%E1%BB%9Fng/</guid>
       <description>Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.
 Dữ Liệu Dưới đây là phân phối số lượng ảnh trên mỗi label.
   Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.   Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.</description>
+    </item>
+    
+    <item>
+      <title>Overfitting là cái quái gì</title>
+      <link>http://dangkhoasdc.github.io/post/2018/03/29/overfitting-l%C3%A0-c%C3%A1i-qu%C3%A1i-g%C3%AC/</link>
+      <pubDate>Thu, 29 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2018/03/29/overfitting-l%C3%A0-c%C3%A1i-qu%C3%A1i-g%C3%AC/</guid>
+      <description>Đây là cuộc hành trình của mình tìm về bản chất của câu chuyện overfiting, underfitting và các khái niệm lung tung xung quanh như bias-variance tradeoff.
+Tài liệu tham khảo chính được lấy từ 2 cuốn sách:
+ Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. Learning from data. Vol. 4. New York, NY, USA:: AMLBook, 2012. Friedman, Jerome, Trevor Hastie, and Robert Tibshirani. The elements of statistical learning. Vol.</description>
     </item>
     
   </channel>

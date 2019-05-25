@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Một số biến thể Quicksort | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Một số biến thể Quicksort</span></h1>
+
+<h2 class="date">2018/01/04</h2>
+</div>
+
+<main>
+
+
+<p>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:</p>
+
+<pre><code class="language-cpp">// quicksort implement
+template&lt;typename T&gt;
+int partition(vector&lt;T&gt;&amp; a, int lo, int hi) {
+    int i = lo, j = hi;
+    T v = a[lo];
+    while (true) {
+        while (a[++i]&lt;=v) if (i == hi) break;
+        while (v&lt;=a[--j]) if (j == lo) break;
+        if (i &gt;= j)  break;
+        swap(a[i], a[j]);
+    }
+    swap(a[lo], a[j]);
+    return j;
+}
+
+template&lt;typename T&gt;
+void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) {
+    if (lo &gt;= hi-1) return;
+    int j = partition(a, lo, hi);
+
+    quicksort(a, lo, j);
+    quicksort(a, j+1, hi);
+}
+</code></pre>
+
+<h3 id="phân-tích">Phân tích</h3>
+
+<p>Độ phức tạp được đánh giá thông qua hàm:</p>
+
+<p>$$ C(N) = n-1 + {1\over n}\sum_{i=0}^{n-1} ( C(i) + C(n-i-1)) $$</p>
+
+<p>Trong phần <code>partition</code> thực hiện $n-1$ phép so sánh, sau đó gọi 2 lần quicksort với kích thước lần lượt là $i$ và $n-i-1$, xác suất cho mỗi phần tử trong mảng theo phân phối đều là ${1\over n}$ vậy nên ta được biểu thức như trên.</p>
+
+<p>Cách giải được đề cập chi tiết trong các sách như Introduction to Algorithms, Concrete Mathematics, Introduction to Analysis of Algorithms. Sơ qua cách giải:</p>
+
+<ol>
+<li>Nhân hai vế cho $n$.</li>
+<li>Viết biểu thức cho $n-1$.</li>
+<li>Tính $C(n) - C(n-1)$ ta được 1 quan hệ đệ quy tuyến tính, giải một chút sẽ ra.</li>
+</ol>
+
+<h2 id="hạn-chế-trường-hợp-worst-case">Hạn chế trường hợp worst-case</h2>
+
+<p>Một trong những phương pháp chống worst-case nổi tiếng của quicksort là xáo trộn mảng input trước khi dùng quicksort. Dùng <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">Knuth shuffle</a> với độ phức tạp $\mathcal{O}(N)$ ta có thể đảm bảo hiệu quả của thuật toán. Ngoài ra, việc xáo trộn mảng input khiến cải tiến này, thường được gọi với cái tên randomized quicksort, trở thành ví dự kinh điển trong việc phân tích các thuật toán ngẫu nhiên. Mình có một <a href="http://dkhoa.me/post/randalgs_ex/">bài viết</a> đề cập tới phân tích randomized quicksort.</p>
+
+<p>Ngoài cách xáo trộn mảng ra, còn có một số cách tiếp cận khác:</p>
+
+<ul>
+<li>Thay vì chọn pivot ở đầu hoặc cuối dãy, chọn giá trị median.</li>
+<li>Một trường hợp worst-case khác là khi tất cả các giá trị giống nhau, lúc nay ta dùng 3way-quicksort để giải quyết.</li>
+</ul>
+
+<h2 id="khử-đệ-quy-với-mảng-nhỏ">Khử đệ quy với mảng nhỏ</h2>
+
+<p>Đây là 1 chiêu có thể dùng được với mọi thuật toán sử dụng chia để trị: khi vòng đề quy đủ nhỏ khiến cho mảng input của hàm đó nhỏ hơn 1 ngưỡng cho phép (10-15 phần tử), sử dụng <code>insertion sort</code> sẽ cải thiện hiệu năng đáng kể. Chỉ cần thêm vào trong hàm quicksort</p>
+
+<pre><code class="language-cpp">///...
+if (hi-lo &lt; CUTOFF) {
+	insertion_sort(a, lo, hi);
+	return;
+}
+///...
+</code></pre>
+
+<h2 id="khử-phép-so-sánh-giá-trị-2-đầu-dãy">Khử phép so sánh giá trị 2 đầu dãy</h2>
+
+<p>Với phiên bản được implement bên trên, ta có thể bỏ đi câu lệnh <code>if</code> trong  <code>while</code> như sau:</p>
+
+<ul>
+<li>Ta có thể bỏ <code>if</code> khi kiểm tra <code>j</code> bởi a[lo] &lt; a[lo] không bao giờ xảy ra.</li>
+<li>Để bỏ <code>if</code> trong <code>i</code>. Trước khi gọi quicksort, ta đặt 1 giá trị cờ là <code>MAX_INT</code> chẳng hạn. Như vậy luôn đảm bảo tồn tại 1 giá trị lớn hơn a[lo].</li>
+</ul>
+
+<h2 id="median-of-three-và-median-of-five">Median-of-three và median-of-five</h2>
+
+<p>Thủ thuật khá kinh điển để tránh worst-case: sample 3 hay 5 phần tử, lấy giá trị median và lấy median đó làm pivot.</p>
+
+<h3 id="tukey-ninther-quicksort">Tukey ninther quicksort.</h3>
+
+<p>Dùng 9 phần tử thay cho <sup>3</sup>&frasl;<sub>5</sub> phần tử.</p>
+
+<h2 id="3way-quicksort">3way Quicksort</h2>
+
+<p>Đây là thuật toán nổi tiếng do Dijkstra đề xuất cùng với <a href="https://en.wikipedia.org/wiki/Dutch_national_flag_problem">Dutch flag problem</a>. Dùng để tránh trường hợp có quá nhiều giá trị trùng nhau trong dãy. Điểm thú vị là phiên bản quicksort này được chính mình là tối ưu về mặt entropy. Một chứng minh sơ lược có được đề cập trong Algorithms, R. Sedgewick.</p>
+
+<p>Nếu có ai đó hỏi vì sao trong post này nhắc đến Sedgewick nhiều quá vậy, thì đơn giản là luận văn tiến sĩ của ông có tiêu đề: &ldquo;<a href="http://searchworks.stanford.edu/view/870273">Quicksort</a>&rdquo;.</p>
+
+<p>Một phiên bản khá ảo diệu của Jon Bentley (tác giả Programming Pearls, cộng tác với Sedgewick để chứng minh phiên bản tối ưu entropy của quicksort):</p>
+
+<pre><code class="language-c">void quicksort(int l, int u){
+    int i, m;
+    if(l &gt;= u) return;
+    m = l;
+    for(i = l+1; i&lt;= u; i++)
+        if(x[i] &lt; x[l])
+            swap(++m, i); //this is where I'm lost. Why the heck does it preincrement?
+
+    swap(l, m);
+
+    quicksort(l, m-1);
+    quicksort(m+1, u);
+}
+</code></pre>
+
+<h2 id="phiên-bản-khử-đệ-quy">Phiên bản khử đệ quy</h2>
+
+<p>Cũng là một cải tiến được đề xuất bởi Sedgewick khi dùng stack thay cho gọi recursive. Một phiên bản cài đặt bằng C cực kì chi tiết được mô tả <a href="http://www.cs.columbia.edu/~hgs/teaching/isp/hw/qsort.c">đây</a>.  Trong phiên bản này gồm có các cải tiến được đề cập phía trên:</p>
+
+<ul>
+<li>CUTOFF</li>
+<li>Median-of-three</li>
+<li>Khử đệ quy đồng thời optimize kích thước stack.</li>
+</ul>
+
+<p>Phiên bản này cũng chính là phiên bản <code>qsort</code> trong GNU C.</p>
+
+<p>Phiên bản Java của Sedgewick cũng rất đáng để tìm hiểu: <a href="https://algs4.cs.princeton.edu/23quicksort/QuickX.java.html">source code QuickX</a>.</p>
+
+<h2 id="samplesort">Samplesort</h2>
+
+<p>Đây là một bản chế lại của quicksort để chạy được trong các thuật toán song song. Tư tưởng ở đây là sử dụng quicksort để tìm các pivot cho từng process. Rồi sau đó chạy quicksort trên từng pivot được phân phối đó. <a href="http://parallelcomp.uw.hu/ch09lev1sec5.html">Bài viết này</a> mô tả cụ thể và phân tích độ phức tạp của thuật toán.</p>
+
+<h1 id="tham-khảo">Tham khảo</h1>
+
+<ol>
+<li>Cormen, Thomas H. Introduction to algorithms. MIT press, 2009.</li>
+<li>Graham, Ronald L., et al. &ldquo;Concrete mathematics: a foundation for computer science.&rdquo; Computers in Physics 3.5 (1989): 106-107.</li>
+<li>Sedgewick, Robert, and Philippe Flajolet. An introduction to the analysis of algorithms. Pearson Education India, 1996.</li>
+<li>Sedgewick, Robert, and Kevin Wayne. Algorithms. Addison-Wesley Professional, 2011.</li>
+<li>Bentley, Jon. Programming pearls. ACM, 1986.</li>
+</ol>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

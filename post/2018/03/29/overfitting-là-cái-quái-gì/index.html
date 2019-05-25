@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Overfitting là cái quái gì | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Overfitting là cái quái gì</span></h1>
+
+<h2 class="date">2018/03/29</h2>
+</div>
+
+<main>
+<p>Đây là cuộc hành trình của mình tìm về bản chất của câu chuyện overfiting,
+underfitting và các khái niệm lung tung xung quanh như bias-variance tradeoff.</p>
+
+<p>Tài liệu tham khảo chính được lấy từ 2 cuốn sách:</p>
+
+<ul>
+<li>Abu-Mostafa, Yaser S., Malik Magdon-Ismail, and Hsuan-Tien Lin. Learning from
+data. Vol. 4. New York, NY, USA:: AMLBook, 2012.</li>
+<li>Friedman, Jerome, Trevor Hastie, and Robert Tibshirani. The elements of
+statistical learning. Vol. 1. New York: Springer series in statistics, 2001.</li>
+</ul>
+
+<p>Nếu ai đó nói về hiện tượng overfitting, người nào học machine learning nghiêm
+chỉnh sẽ nói overfitting là khi mô hình có low bias và high variance. Trong khi
+đó thì underfitting là khi mà mô hình có high bias và low variance. Tuy nhiên,
+2 khái niệm quái quỷ này xuất phát từ đâu.</p>
+
+<p>Ta quay trở lại với câu chuyện về machine learning, mà theo bản thân mình, đây
+chính là &ldquo;thống kê hiện đại&rdquo;. Nào bắt đầu.</p>
+
+<p>Đặt bối cảnh là học có giám sát (supervised learning), ta có một tập dữ liệu
+input và đồng thời thông tin được gán nhãn $(x, y)$. Trong đa số các thuật toán
+học giám sát, bản chất của các mô hình chính là việc tìm ta hàm $f(x)$ sao cho
+hàm này có thể xấp xỉ được y. Bởi ta không thể lấy toàn bộ mẫu của không gian
+x, nên ta không thể xây dựng chính xác được $f(x)$, đó là lí do ta gọi $f(x)$ là
+xấp xỉ.</p>
+
+<p>Tuy nhiên, nếu giả sử vì 1 điều nhiệm màu nào đó, và với 1 mô hình huyền bí nào
+đó, ta thực sự có được $F(x)$, tức với mọi $x$, $F(x)$ tính chính xác được $y$. Tuy
+nhiên ta có 1 điều cần lưu ý, bởi sự gán nhãn, hay y, không phải luôn luôn
+đúng, nên thay vì $y = F(x)$, ta có:</p>
+
+<p>$$y = F(x) + eps$$</p>
+
+<p>Với eps là nhiễu với mean = 0, variance = $\sigma^2$.</p>
+
+<p>Và giờ đây là lúc điều kì diệu bắt đầu xuất hiện. Trong đa số các mô hình giám
+sát, ta muốn tối thiểu độ lỗi của hàm xấp xỉ $f(x)$ và nhãn của dữ liệu. Một độ
+lỗi phổ biến chính là MSE, ta muốn tối ưu kỳ vọng của MSE này (lý do dùng kỳ
+vọng bởi ta tính MSE thông qua tập dữ liệu có trong tay):</p>
+
+<p>$MSE = E[ (y - f(x)) ^ 2]$ , giờ là lúc trò mèo khai triển bắt đầu, để cho gọn
+thì $f(x) = f$, và $F(x) = F$. Bởi $F$ xác định (bởi đây là hàm duy nhất và tính
+chính xác quan hệ của x, y), nên $E[F] = F$. Đồng thời ta có $E[y] = E[F(x) + eps]
+= E[F(x)] + E[eps] = F + 0 = F$.</p>
+
+<p>Công thức quan trọng nhất trong các khai triển sau: $Var[A] = E[A^2] - E[A]^2$. (*)</p>
+
+<p>Ta cũng có biểu thức sau:</p>
+
+<p>$$ Var[y] = E[(y -  E[y])^2] = E[(F + eps - F)^2] = E[eps^2] = Var[eps] +E[eps]^2 = Var[eps] = \sigma^2 $$</p>
+
+<p>$$ MSE = E[ y^2 - 2yf + f^2] = E[y^2] + E[f^2] - E[2yf] $$</p>
+
+<p>$$ = Var[y] + E[y]^2 + Var[f] + E[f]^2 - 2yE[f]$$  (Công thức * và y deterministic).
+$$= \sigma^2 + Var[f] + E[f]^2 - 2FE[f] + F^2$$ (bình tĩnh khai triển)
+$$= \sigma^2 + Var[f] + (F - E[f])^2$$
+$$= \sigma^2 + Var[f] + Bias^2$$</p>
+
+<p>Tạm thời bỏ qua nhiễu của nhãn, ta có 2 hạng tử:</p>
+
+<ul>
+<li><p>Variance: độ biến thiên của mô hình đề xuất, hay trực quan hơn là độ  di chuyển
+của mô hình đề xuất xoay quanh kỳ vọng của nó. Nếu ta có rất nhiều data, và cố
+gắng fit toàn bộ data đó, một cách nào đó f của ta phải di chuyển rất nhiều
+dẫn đến variance cao.</p></li>
+
+<li><p>Bias: khoảng cách giữa kì vọng của mô hình đề xuất và mô hình
+&ldquo;thật sự&rdquo;. Đây chính là chi phí của việc ta đã &ldquo;đơn giản hóa&rdquo; mô hình thực sự
+F.</p></li>
+</ul>
+
+<p>Và giờ ta có thể thực sự hình dung một cách &ldquo;trực quan&rdquo; mô hình của mình thực
+sự tốt thế nào.</p>
+
+<p>Nếu ta cố gắng fit mọi điểm trong data đang có, ta sẽ khiến bias nó thực sự
+thấp (bởi dùng rất điểm ra kq chính xác, nó sẽ rất gần với F &ldquo;thực sự&rdquo;), nhưng
+đồng thời đây variance lên cao, hiện tượng overfitting xuất hiện. Điều ngược lại của sẽ
+dễ thấy, nếu ta dùng quá ít data, f sẽ di chuyển ít (variance thấp), tuy nhiên
+f ta ước tính sẽ rất xa F thực sự (bias cao).</p>
+
+<p>Điều này giúp ta trực quan hơn về các mô hình học:</p>
+
+<ul>
+<li>Linear Regression: ta đã &ldquo;giả sử&rdquo; F thần bí là linear, 1 giả sử quá phiêu và
+đơn giản, và do đó &ldquo;chi phí&rdquo; nó sẽ rất cao dẫn đến bias của linear regression sẽ
+cao. Tuy nhiên, vì ta không cố fit chính xác toàn bộ data point dẫn đến variance
+sẽ thấp.</li>
+<li>KNN: kNN cố gắng fit toàn bộ data nó đang có (với k càng lớn) dẫn đến bias nó sẽ
+về 0, nhưng càng lấy nhiều k, độ biến động của f càng cao dẫn đến variance cao.</li>
+</ul>
+
+<p>Biết được bản chất của bias và variance, ta có thể phân tích &ldquo;trực quan&rdquo; mô
+hình đề xuất, qua đó có cái nhìn chính xác hơn với mô hình.</p>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

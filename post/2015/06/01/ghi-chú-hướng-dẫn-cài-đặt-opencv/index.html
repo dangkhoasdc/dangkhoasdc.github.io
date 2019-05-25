@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ghi chú hướng dẫn cài đặt OpenCV | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Ghi chú hướng dẫn cài đặt OpenCV</span></h1>
+
+<h2 class="date">2015/06/01</h2>
+</div>
+
+<main>
+
+
+<blockquote>
+<p>I don&rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.</p>
+</blockquote>
+
+<p>Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C++, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.</p>
+
+<p>Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style <em>step by step</em> nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn. Và lần này là hướng dẫn cài cho cross-platform. Để sure rằng đụng trên OS nào mình sẽ không còn bị ngán. (Yeah!!)</p>
+
+<h1 id="ghi-chú">Ghi chú</h1>
+
+<p>Một số ghi chú mà mình đã rút được một cách đầy xương máu, đầy kinh dị. Theo mình nhớ, cách đây 4 năm lần đầu cài OpenCV mình cũng đã mất gần 2 ngày, giờ cài trên MAC OSX mất tầm 1 ngày. Hú hồn.</p>
+
+<ol>
+<li><p>Best pratice: Tập sử dụng CMAKE hoặc Makefile. Cả 2 đều rất được việc khi config lúc build opencv hay lúc chạy chương trình. Dù muốn hay không, thì CMake vẫn là interface trên cả 3 nền tảng. Chính vì điều đó nên phải biết &hellip; tập mà xài. Ưu điểm có thể kể đến như sau:</p>
+
+<ul>
+<li>Config được cấu hình của OpenCV. Điều này những bản build sẵn không làm được.</li>
+<li>Cấu hình phù hợp với máy. CMake sẽ tự động tìm các package và cố gắng config khi có thể.</li>
+<li>Dễ sử dụng, nếu dùng CMake GUI thì rất dễ dùng.</li>
+</ul></li>
+
+<li><p>Sau mỗi lẫn thay đổi cấu hình trên CMake thì nhấn Configure lại để CMake cập nhật.</p></li>
+
+<li><p>Với bản MAC OSX, nên chọn compiler là Unix Makefile, mọi lựa chọn khác tớ đều không chịu trách nhiệm.</p>
+
+<blockquote>
+<p>Chuyện kinh dị đêm khuya, chọn compiler là XCode. Khi build các source khác ( 1 tool rút trích đặc trưng chẳng hạn), thế là nó
+dính ngay lỗi <code>undefined symbols for architecture x86_64</code>, lỗi này khắc phục bằng cách thêm flags <em>-lstdc++</em> vô trình biên dịch,
+nhưng đắng lòng tiếp theo là sau khi compile thì hàng mớ lỗi xảy đến vì sự khác nhau trong hệ thống standard library của XCode và
+GNU. Lúc đó, chắc chắn chả ai còn hứng thú để mà sửa lỗi tiếp.</p>
+</blockquote></li>
+
+<li><p>Nên có 1 sổ ghi chú, hoặc note ghi lại quá trình cài đặt, không là fail dài dài. Mà thậm chí là cứ làm lặp đi lặp lại mọi thứ.</p></li>
+</ol>
+
+<h1 id="cài-đặt">Cài đặt</h1>
+
+<p>Trong phần này gồm các bước cài đặt OpenCV sử dụng CMake. Dùng mà thấy mình cứ như là <em>hacker</em></p>
+
+<ol>
+<li>Tải source OpenCV về.
+a. Tải từ website.
+b. Tải từ github.</li>
+
+<li><p>Giải nén và tạo thư mục <code>build</code></p>
+
+<pre><code class="language-bash">mkdir build
+</code></pre>
+
+<ol>
+<li>Mở CMake, chọn đường dẫn đến.</li>
+<li>Nhấn Configure và chọn compiler tương ứng.</li>
+<li>Bên Linux, theo mình nhớ là GNU.</li>
+<li>Bên Windows, khuyến khích chọn Visual Studio. Tuy nhiên, số phiên bản của VS khác với số năm của Visual Studio (Tức là Visual Studio 2013 thì không phải có v13).</li>
+<li>Sau bao đau thương, MAC OS X thì chọn Unix Makefile.</li>
+<li>Trong lúc nó run, thì tranh thủ đọc về sự khác nhau của <a href="http://stackoverflow.com/questions/2649334/difference-between-static-and-shared-libraries">static lib và shared lib</a></li>
+<li>Config các tham số cấu hình, mình thì quan tâm đến vài thứ sau: Qt, Python, Cuda. <em>Vì hôm nữa chắc sẽ có 1 tut khác liên quan đến mấy cái này</em>. Để ý output coi có báo lõi gì không.</li>
+<li>Nhấn <code>Configure</code> đến bao giờ trên phần tham số không còn đỏ nữa thì thôi. Lúc đó nhấn <code>build</code>.</li>
+<li>Build OpenCV thôi.
+a. Với các bé họ nhà Unix (Mac OSX, Linux &hellip;):</li>
+</ol>
+
+<pre><code class="language-bash">cd path/to/build/dir
+make -j4 # jk với k là số thread để chạy
+sudo make install
+</code></pre>
+
+<p>b. Với các bé nhà Windows:</p>
+
+<p><a href="http://dangkhoahome.blogspot.sg/2012/03/huong-dan-cai-at-opencv-23-231-trong.html">Chịu khó xem lại bài post cũ của mình, mình sẽ update bản mới trong thời gian đến</a></p></li>
+</ol>
+
+<p><em>UPDATE 1</em>: Vẫn chưa cài được Opencv 3 lên trên python sau bao nhiêu nỗ lực thực hiện với MAC OS X. Mình sẽ cài đặt nó lên trên Linux để test xem sao.</p>
+
+<p><em>UPDATE 2</em>: Chắc hôm nào sẽ viết tutorial trên cả 3 nền tảng step-by-step.</p>
+
+<p>P/S: Bạn nào muốn share bài của mình thì vô tư, nhưng nhớ ghi rõ nguồn.</p>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

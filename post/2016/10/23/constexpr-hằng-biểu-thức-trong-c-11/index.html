@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>constexpr: Hằng biểu thức trong C&#43;&#43;11 | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">constexpr: Hằng biểu thức trong C++11</span></h1>
+
+<h2 class="date">2016/10/23</h2>
+</div>
+
+<main>
+
+
+<h2 id="constexpr">constexpr</h2>
+
+<p>Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là <strong>tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này</strong>. Ta quay một chút về cú pháp <code>define</code> bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm. C++ cũng có tham vọng vậy, và mục tiêu của C++ chính là nếu một biến/hàm có thể tính toán được trong thời gian biên dịch thì tính luôn tại thời điểm đó. Và như vậy trong quá trình chạy chương trình sẽ không mất thêm thời gian tính toán hàm/biến này. Done! Thời gian thực thi chương trình được nhanh hơn.</p>
+
+<div class="panel-body">Nhìn đi nhìn lại mới thấy ngôn ngữ C được thiết kế rất hay, tinh giản nhưng mạnh mẽ. Để giải quyết vấn đề loại bỏ define trong C mà C++ đã chế ra const, inline và tá lả tùng xèn các thứ khác. Tuy nhiên cái gì cũng có hai mặt của vấn đề, với các từ khoá const, inline, ... thì việc người lập trình đỡ nhọc hơn về phần code (hạn chế được các lệnh define) nhưng để sử dụng tốt các tính năng của C++ khiến người lập trình phải hiểu rõ tính năng mà ngôn ngữ đó cung cấp.</div>
+
+<h2 id="tầm-hoạt-động">Tầm hoạt động</h2>
+
+<p>Từ khoá <code>constexpr</code> được sử dụng cho 3 đối tượng như sau:</p>
+
+<ol>
+<li>Hàm.</li>
+<li>Biến.</li>
+<li>Hàm khởi tạo.</li>
+</ol>
+
+<p>Trong đó, nếu từ khoá này được dùng cho khai báo đối tượng hoặc biến thì đối tượng hoặc biến đó được ngầm hiểu là <code>const</code>. Trong trường hợp là hàm, thì hàm đó được ngầm hiểu là 1 hàm <code>inline</code>.</p>
+
+<p>Quay lại câu chuyện vì sao có 3 ẻm này.</p>
+
+<p>Từ khoá <code>constexpr</code> có hàm nghĩa hoàn toàn khác với <code>const</code>:</p>
+
+<ul>
+<li><code>const</code>: không được thay đổi giá trị.</li>
+<li><code>constexpr</code>: thực thi tại thời điểm biên dịch.</li>
+</ul>
+
+<p><code>constexpr</code> là từ khoá yêu cầu trình biên dịch tính toán phép tính hay biểu thức tại thời điểm biên dịch, trong khi đó <code>const</code> là công cụ giúp trình biên dịch nhắc nhở người dùng những biến nào không được thay đổi giá trị (nó chỉ nhắc nhở, có nghĩa là nếu ta muốn đổi cũng ok). <code>constexpr</code> liên quan mật thiết tới khái niệm <em>biểu thức hằng</em> (constant expression). Vậy constant expression là gì?</p>
+
+<p><em>Biểu thức hằng là biểu thức mà trình biên dịch có thể tính toán được</em>. Điều đó có nghĩa biểu thức hằng không thể thực thi nếu các biến/ toán tử trong biểu thức chưa được biết trong thời gian biên dịch, và biểu thức này không gây ra tác dụng phụ (<a href="http://programmers.stackexchange.com/a/40314">side effect</a>). Thêm vào đó, biểu thức hằng phải được cấu thành từ các giá trị nguyên, các số thực và kiểu liệt kê (enumerator), hay các tổ hợp của 3 kiểu dữ liệu này (một trong những cách tổ hợp là tạo ra 1 đối tượng giữ các giá trị này: <code>constexpr constructor</code> ra đời là vì lí do này).</p>
+
+<p>Trong quá trình viết mã, người lập trình sẽ có yêu cầu đặt tên biến cho giá trị của biểu thức hằng (<code>constexpr function</code> ra đời) hoặc các dữ liệu có trong biểu thức, và đây chính là lí do mà <code>constexpr variable</code> ra đời. Ngoài việc đặt tên, biểu thức hằng còn có kha khá công dụng khác nhau như:</p>
+
+<ol>
+<li>Sử dụng trong khai báo kích thước mảng, nhãn trong lệnh switch, tham số trong <code>template</code>.</li>
+<li>Trong các hệ thống nhúng, các giá trị <em>chỉ đọc</em> các chi phí thấp hơn so với giá trị dữ liệu động. Ngoài ra dữ liệu chỉ đọc tránh được các lỗi trong hệ thống.</li>
+<li>Trong các hệ thống đa luồng, biểu thức hằng tránh được hiện tượng <a href="http://docs.oracle.com/cd/E19205-01/820-0619/geojs/index.html">data race</a>.</li>
+<li>Tăng hiệu suất chương trình.</li>
+</ol>
+
+<h2 id="constexpr-variable">constexpr variable</h2>
+
+<p>Khi khai báo constexpr thì biến đó được hiểu là const - tức không thể thay đổi nội dung trong quá trình thực thi chương trình. Nhưng khác với const ở chỗ: constexpr là hằng ở quá trình biên dịch, và còn const thì được qui định trong quá trình thực thi.</p>
+
+<p>Để trở khai báo một biến là <em>constexpr</em>, biến đó phải thoả mãn một số điều kiện sau:</p>
+
+<ol>
+<li>Kiểu của biến phải thuộc <a href="http://en.cppreference.com/w/cpp/concept/LiteralType">kiểu Literal</a>.</li>
+<li>Khi khai báo là biến <em>constexpr</em>, biến đó phải được định nghĩa ngay trong thời điểm đó.</li>
+<li>Tham số của hàm khởi tạo trong kiểu của biến này phải chứa: (1) kiểu literal, (2) biến <em>constexpr</em>, (3) hàm.</li>
+<li>Hàm khởi tạo của biến được khai báo phải thoả các điều kiện của <strong>constexpr constructor</strong> và trong Kiểu/Lớp đó phải có hàm khởi tạo là <strong>constexpr constructor</strong>.</li>
+</ol>
+
+<h2 id="constexpr-function">constexpr function</h2>
+
+<p>Để khai báo là một <strong>constexpr function</strong>, hàm này phải thoả những điều kiện sau:</p>
+
+<ol>
+<li>Không phải là hàm ảo (<a href="http://stackoverflow.com/questions/2391679/why-do-we-need-virtual-methods-in-c">virtual funciton</a>).</li>
+<li>Kiểu trả về phải là LiteralType.</li>
+<li>Mỗi tham số đầu vào của hàm phải thuộc kiểu LiteralType.</li>
+</ol>
+
+<p>Hàm chỉ được chứa các lệnh sau:</p>
+
+<ol>
+<li>state_assert.</li>
+<li>Chỉ có duy nhất 1 lệnh <code>return</code>.</li>
+<li>Lệnh Null, lệnh không thực hiện gì.</li>
+<li>Lệnh khai báo <code>typedef</code>.</li>
+<li>Khai báo sử dụng <code>using</code>.</li>
+</ol>
+
+<h2 id="constexpr-constructor">constexpr constructor</h2>
+
+<p>Hàm khởi tạo <em>constexpr</em> được xây dựng nhằm phục vụ cho các biến <em>constexpr</em>, vì hàm khởi tạo cũng là hàm nên nó có những yêu cầu buộc thoả mãn giống như <em>constexpr function</em>, ngoài ra <em>constexpr constructor</em> còn phải thoả mãn một số điều kiện:</p>
+
+<ol>
+<li>Lớp chứa hàm khởi tạo <em>constexpr</em> có hàm cha không phải là Lớp ảo.</li>
+<li>Không phải hàm khởi tạo function-try-block.</li>
+</ol>
+
+<h2 id="ghi-chú">Ghi chú</h2>
+
+<p>Các thông tin trên được lấy từ chuẩn C++11, tuy nhiên trong C++14 có những thay đổi lớn sẽ được cập nhật sau.</p>
+
+<h2 id="tham-khảo">Tham khảo</h2>
+
+<ol>
+<li><a href="http://en.cppreference.com/w/cpp/language/constexpr">C++ Programm Language</a>.</li>
+<li><a href="http://www.amazon.com/C-Programming-Language-4th/dp/0321563840/ref=sr_1_3?ie=UTF8&amp;qid=1441600777&amp;sr=8-3&amp;keywords=c+programming+language">Book: C++ Programming Language</a>.</li>
+</ol>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

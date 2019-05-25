@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bài toán chuyển ngày sang thứ | My blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Bài toán chuyển ngày sang thứ</span></h1>
+
+<h2 class="date">2017/09/16</h2>
+</div>
+
+<main>
+
+
+<p>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo;
+Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip;
+Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).</p>
+
+<pre><code class="language-c">dayofweek(y, m, d) {
+    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
+    y -= m &lt; 3;
+    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
+}
+</code></pre>
+
+<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với <sup>1</sup>&frasl;<sub>1</sub> (Nếu ngày <sup>1</sup>&frasl;<sub>1</sub> là thứ Hai thì <sup>1</sup>&frasl;<sub>2</sub> sẽ là thứ 5). <code>t[]</code> chính là offset cho ngày đầu tiên của tháng so với ngày <sup>1</sup>&frasl;<sub>1</sub>, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
+
+<p>Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm <code>y</code>, ta phải cộng thêm <code>y</code> ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.</p>
+
+<p>Những năm nhuận, ta lại phải thêm cái ngày <sup>29</sup>&frasl;<sub>2</sub> vào trong, tức là nó sẽ thêm 1 ngày nữa, trong <code>y</code> năm? nếu có <code>y</code> năm nhuận thì sẽ có thêm <code>x</code> ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.</p>
+
+<p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày <sup>29</sup>&frasl;<sub>2</sub>, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
+
+<p>Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng <code>t[]</code> lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào <code>t[0]</code> và <code>t[1]</code> và giữ nguyên các <code>t[]</code> còn lại Sau đó chuyển -1 trong <code>d-1</code> vào offset, lúc đó ta sẽ được mảng <code>t[]</code> như trong code gốc.</p>
+
+<p>Ta còn một vấn đề là xác định ngày ban đầu để làm mốc và độ lệch <code>c</code> của ngày gốc đó so với ngày Chủ Nhật với <code>index = 0</code>. Nhưng bằng kiểm chứng, người ta phát hiện ra <code>c = 0</code>. Wow. :astonished:</p>
+
+<p>Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.</p>
+
+<p>Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.</p>
+
+<h3 id="references">References</h3>
+
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week">Wiki: Determination of the day of the week</a></li>
+<li><a href="https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ">Source</a></li>
+</ol>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gaming on My blog</title>
+    <link>http://dangkhoasdc.github.io/tags/gaming/</link>
+    <description>Recent content in gaming on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/gaming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Zeus and Poseidon: Kí ức gọi về</title>
+      <link>http://dangkhoasdc.github.io/post/2019/02/04/zeus-and-poseidon-k%C3%AD-%E1%BB%A9c-g%E1%BB%8Di-v%E1%BB%81/</link>
+      <pubDate>Mon, 04 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2019/02/04/zeus-and-poseidon-k%C3%AD-%E1%BB%A9c-g%E1%BB%8Di-v%E1%BB%81/</guid>
+      <description>Zeus and Poseidon là một trong những trò mình thích nhất khi còn nhỏ. Thời xa xưa đó máy mình không đủ mạnh để có thể chơi các trò với đồ họa 3D. Lại thêm mọt chuyện là ngày xưa hơi ngu tiếng Anh, thành thử ra lười chơi những game có cốt truyện phức tạp hoặc những game có nhiệm vụ yêu cầu đọc hiểu. Thành ra, hồi đó đối với mình những game xây dựng lại khá phù hợp.</description>
+    </item>
+    
+    <item>
+      <title>Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning]</title>
+      <link>http://dangkhoasdc.github.io/post/2018/05/01/bioshock-elizabeth-hay-h%E1%BB%8Dc-t%C4%83ng-c%C6%B0%E1%BB%9Dng-reinforcement-learning/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2018/05/01/bioshock-elizabeth-hay-h%E1%BB%8Dc-t%C4%83ng-c%C6%B0%E1%BB%9Dng-reinforcement-learning/</guid>
+      <description>Trong một ngày rảnh rỗi giữa hai đợt deadlines và trong cái không khí ảm đạm do mùa mưa sắp tới của Singapore, tôi đã quyết định ngồi chơi cái game mà hồi nhỏ mà không hiểu gì: Bioshock. Tuy nhiên lần này tôi lại chơi bản Bioshock Infinite. Để nói về game này, tôi không gọi đó là chơi game, đó là một trải nghiệm.
+  Với cốt truyện lôi cuốn cùng với những chủ đề lồng vào nhau nhuần nhuyễn, Bioshock Infinite mang đến người chơi một thành phố Columbia steampunk với bề ngoài hào nhoáng, sung túc, và hạnh phúc.</description>
+    </item>
+    
+  </channel>
+</rss>

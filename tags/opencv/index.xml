@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>opencv on Dang-Khoa&#39;s blog </title>
+    <title>opencv on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/opencv/</link>
-    <description>Recent content in opencv on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in opencv on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/opencv/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Install OpenCV 3 non-free module on Ubuntu</title>
-      <link>http://dangkhoasdc.github.io/post/opencv3_nonfree/</link>
-      <pubDate>Fri, 15 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/opencv3_nonfree/</guid>
-      <description>The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
-Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.</description>
-    </item>
-    
-    <item>
-      <title>Setup OpenCV and Android Studio with NDK support</title>
-      <link>http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/</link>
+      <title>Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</title>
+      <link>http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/</link>
       <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/opencv_android_studio_ndk/</guid>
-      <description>In this tutorial, I will demonstrate how to configurate the renowned computer vision libary, OpenCV, with the current Android Studio version (3.0.1). Let get started. The compiled version of OpenCV which supports Android is available at OpenCV Homepage. Download and extract it. Please note that to test the application properly on the mobile devices, the OpenCV Manager has to be installed.
-In another tutorial, I will talk about how to compile our own OpenCV library and put it to Android Studio since the pre-compiled library misses some interesting and important components, e.</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/</guid>
+      <description>Trong bài viết này, mình sẽ trình bày cách cấu hình thư viện OpenCV với IDE Android Studio phiên bản mới nhất (3.0.1). Phiên bản được biên dịch sẵn có hỗ trợ Android được cung cấp sẵn ở OpenCV Homepage. Tải và extract thư viện. Đồng thời, để có thể debug trên thiết bị thực thì điện thoại phải cài đặt ứng dụng OpenCV Manager.
+Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên bản OpenCV với các tùy chỉnh của riêng cho từng yêu cầu, ví dụ như sử dụng đặc trưng SIFT hoặc các thuật toán có bản quyền.</description>
     </item>
     
     <item>
-      <title>Install the OpenCV library on Visual Studio</title>
-      <link>http://dangkhoasdc.github.io/post/install_opencv_vs/</link>
+      <title>Hướng dẫn cài đặt OpenCV trên Windows</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/install_opencv_vs/</guid>
-      <description>Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
- Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here.</description>
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/</guid>
+      <description>Biên dịch thư viện OpenCV Điểm thuận lợi của việc tự cài đặt và biên dịch thư viện có thể kể đến như sau:
+ Hỗ trợ IDE mới nhất, như trong bản OpenCV 3.0 (22/11/2015) thì chưa có bản biên dịch sẵn dành cho VS 2015. Customize được các thư viện khác liên quan như Kinect, OpenCL, Python…  Link Download thư viện OpenCV cho HĐH Windows
+Bước 1: Giải nén thư viện vào thư mục được định sẵn.</description>
     </item>
     
   </channel>

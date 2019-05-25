@@ -1,35 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>courses on Dang-Khoa&#39;s blog </title>
+    <title>courses on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/courses/</link>
-    <description>Recent content in courses on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in courses on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 12 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Mon, 08 Aug 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/courses/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Introduction to Model Thinking</title>
-      <link>http://dangkhoasdc.github.io/post/thinking/why/</link>
-      <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
+      <title>Review Algorithms (Princeton) - Coursera</title>
+      <link>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</link>
+      <pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/thinking/why/</guid>
-      <description>Why model? As I understood, using models is actually to apply mathematic into different problems in a unified framework.
-Intelligent Citizen of the world  Essentially, all models are wrong, but some are useful
- Model is the new &amp;ldquo;lingua franca&amp;rdquo;.
- Every one should know. All knowledge which human has known has models in it. It is everywhere, at any disciplines: economics (maximize payoff), biology (brain model, gene, species), political science, linguistics, law, game theory.</description>
-    </item>
-    
-    <item>
-      <title>Learn How to Learn</title>
-      <link>http://dangkhoasdc.github.io/post/learn_howto_learn/</link>
-      <pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/learn_howto_learn/</guid>
-      <description>The reasons why I want to learn this course:
- Deeply understand the material from my favorite fields such as mathematics, computer sciences, etc. Learn quickly and more effectively. Avoid procastination.  Focused and Diffuse Modes  Focused mode: concentration, when we focus on particular subjects, deeply lookinto the detail. The example from the lecture gives me a sense that this mode is the optimization methods being trapped at local region.</description>
+      <guid>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</guid>
+      <description>Đây là một trong những khoá rất đỉnh về lập trình, vì sao ư?
+ Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.</description>
     </item>
     
   </channel>

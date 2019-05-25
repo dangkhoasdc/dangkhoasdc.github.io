@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>taocp on Dang-Khoa&#39;s blog </title>
+    <title>taocp on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/taocp/</link>
-    <description>Recent content in taocp on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in taocp on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
     <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/taocp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Latin squares and a story of computer science history</title>
-      <link>http://dangkhoasdc.github.io/post/latin_square/</link>
+      <title>Khối Latin và câu chuyện toán học và lịch sử máy tính</title>
+      <link>http://dangkhoasdc.github.io/post/2018/02/01/kh%E1%BB%91i-latin-v%C3%A0-c%C3%A2u-chuy%E1%BB%87n-to%C3%A1n-h%E1%BB%8Dc-v%C3%A0-l%E1%BB%8Bch-s%E1%BB%AD-m%C3%A1y-t%C3%ADnh/</link>
       <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/latin_square/</guid>
-      <description>The content of this note mostly belongs to the first section of TAoCP, Vol4A.
-Definition Given a square matrix of size $M$ and each element is $\{0, 1, \cdots, M-1 \}$, we construct a matrix such that for the element $i$ in the set $\{0, 1, \cdots, M-1\}$ only appears exactly 1 time on every row and column.
-Examples We have 16 cards which comprises a combination of 4 ranks, i.</description>
+      <guid>http://dangkhoasdc.github.io/post/2018/02/01/kh%E1%BB%91i-latin-v%C3%A0-c%C3%A2u-chuy%E1%BB%87n-to%C3%A1n-h%E1%BB%8Dc-v%C3%A0-l%E1%BB%8Bch-s%E1%BB%AD-m%C3%A1y-t%C3%ADnh/</guid>
+      <description>Trong dự án dài hơi về TAoCP, những phần đầu của Vol 4A.
+Định nghĩa Cho một ma trận vuông có kích thước M và các phần tử thuộc $\{0, 1, \cdots, M-1 \}$, ta xây dựng ma trận sao cho mỗi phần tử $i$ trong tập $\{0, 1, \cdots, M-1\}$ chỉ xuất hiện đúng 1 lần trong mỗi cột và mỗi dòng.
+Ví dụ Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 4 loại $\heartsuit, \diamondsuit, \clubsuit, \spadesuit$, ta sắp xếp sao cho mỗi dòng/cột có đủ 4 chất và 4 quân (Jacques Ozaman, mathematiques et physiques, Paris 1725).</description>
     </item>
     
     <item>
-      <title>Generate the inversion table from an integer sequence</title>
-      <link>http://dangkhoasdc.github.io/post/gen_inversion_table/</link>
-      <pubDate>Tue, 16 Jan 2018 00:00:00 +0000</pubDate>
+      <title>Đọc &#34;Nghệ Thuật Lập Trình&#34; (TAoCP)</title>
+      <link>http://dangkhoasdc.github.io/post/2017/09/25/%C4%91%E1%BB%8Dc-ngh%E1%BB%87-thu%E1%BA%ADt-l%E1%BA%ADp-tr%C3%ACnh-taocp/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/gen_inversion_table/</guid>
-      <description>The programming exercise is from TAoCP, Vol3, 5.1.1-6:
- Design an algorithm that computes the inversion table $b_1, b_2 \cdots b_n$ corresponding to a given permutation $a_1a_2 \cdots a_n$ of ${1, 2, \cdots , n}$, where the running time is essentially proportional to $n\ log n$ on typical computers.
- I was really stuck on the solution Knuth given in the book. The author also mentioned another approach which actually is a modifination of merge sort.</description>
+      <guid>http://dangkhoasdc.github.io/post/2017/09/25/%C4%91%E1%BB%8Dc-ngh%E1%BB%87-thu%E1%BA%ADt-l%E1%BA%ADp-tr%C3%ACnh-taocp/</guid>
+      <description>Phải thành thật, mình là fanboy của Donald Knuth. Có thể có rất nhiều giáo sư có tầm ảnh hưởng lớn đến các hướng mà mình quan tâm (khoa học máy tính/ trí tuệ nhân tạo hay thị giác máy tính) như Hinton, Li Fei-Fei, Zisserman, Pascal Fua. Nhưng có rất ít nhà khoa học mà mình dành trọn thời gian để có thể tìm hiểu và &amp;ldquo;cuồng&amp;rdquo; như Donald Knuth.</description>
     </item>
     
   </channel>

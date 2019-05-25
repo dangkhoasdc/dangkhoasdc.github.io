@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>deep-learning on Dang-Khoa&#39;s blog </title>
+    <title>deep learning on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/deep-learning/</link>
-    <description>Recent content in deep-learning on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in deep learning on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2017 Dang-Khoa</copyright>
-    <lastBuildDate>Tue, 12 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <language>vi</language>
+    <lastBuildDate>Sun, 23 Oct 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Hashing in content-based image retrieval</title>
-      <link>http://dangkhoasdc.github.io/project/deep_hashing/</link>
-      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Sử dụng Protocol Buffers trong C&#43;&#43; và Caffe</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/s%E1%BB%AD-d%E1%BB%A5ng-protocol-buffers-trong-c-v%C3%A0-caffe/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/project/deep_hashing/</guid>
-      <description>Since I worked at SUTD, I have been working on the content-based image retrieval. It is very active in academia and industry. Actually, there are some works I have accomplished:
- Image hasing: a joint optimization for image embedding and hashing (CVPR17 paper). Deep Image Retrieval: a scheme for unified deep learning and image retrieval (ACM MM17 paper). Mobile version of Triangulation Embedding. Deep Hashing Image (In progress).  </description>
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/s%E1%BB%AD-d%E1%BB%A5ng-protocol-buffers-trong-c-v%C3%A0-caffe/</guid>
+      <description>Protocol Buffers (ProtoBuf hay PB) là một trong những thành phần quan trọng trong thư viện Caffe. Bài viết dưới đây là một số note và cách sử dụng Protocol Buffers trong ngôn ngữ C++. Mục tiêu ban đầu chủ yếu tìm hiểu xem khả năng tuỳ chỉnh của Caffe đến đâu. Giới thiệu Protocol Buffers là một cơ chế lưu trữ và thao tác dành cho dữ liệu có cấu trúc do Google phát triển.</description>
     </item>
     
   </channel>

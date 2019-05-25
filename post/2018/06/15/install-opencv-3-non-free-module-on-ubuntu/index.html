@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Install OpenCV 3 non-free module on Ubuntu | Dang-Khoa&#39;s blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/_index.vi/">Trang chủ</a></li>
+      
+      <li><a href="/post/1/01/01/docs/">Docs</a></li>
+      
+      <li><a href="/page/about/">About Me</a></li>
+      
+      <li><a href="/page/about.vi/">dangkhoasdc</a></li>
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Install OpenCV 3 non-free module on Ubuntu</span></h1>
+
+<h2 class="date">2018/06/15</h2>
+</div>
+
+<main>
+
+
+<p>The <code>opencv_nonfree</code> module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.</p>
+
+<h1 id="prerequisites">Prerequisites</h1>
+
+<ul>
+<li>Remove the old version which has been installed in the system.</li>
+<li>Do not install <code>opencv</code> via <code>apt-get</code></li>
+<li>Install <code>cmake</code> : <code>sudo apt-get install cmake</code></li>
+</ul>
+
+<h1 id="installation">Installation</h1>
+
+<ol>
+<li>Download opencv <code>git clone https://github.com/opencv/opencv</code>
+
+<ol>
+<li>Do not download the source from homepage.</li>
+</ol></li>
+<li>Download the <code>opencv_contrib</code> : <code>git clone https://github.com/opencv/opencv_contrib</code>
+
+<ol>
+<li>Check both <code>opencv</code> and <code>opencv_contrib</code> are the latest versions otherwise we can not compile them.</li>
+</ol></li>
+<li>Extract the source.</li>
+<li><code>cd path/to/opencv-source</code></li>
+<li><code>Run Cmake: cmake-gui</code></li>
+<li>In the textbox <code>Where is the source code</code>, it should be the path of OpenCV</li>
+<li><code>Where to build the binaries</code> : path to your build directory, e.g, <code>~/opencv/build</code></li>
+<li>Select <code>Configure</code></li>
+<li>When the dialog <code>CMakeSetup</code> pops up, configure the compiler according to your system.  (Most of the time is to select <code>Unix Makefiles</code>  as the generator and <code>Use default native compilers</code> as well.)</li>
+
+<li><p>After automatically generating Makefiles, CMake will show all available settings.
+<img src="https://d2mxuefqeaa7sj.cloudfront.net/s_523E39E4ECA35EB029767FC1B7193005C2F8774AAA68534E53805B9B19325704_1492980683137_file.png" alt="" /></p></li>
+
+<li><p>Select <code>OPENCV&gt;OPENCV_ENALBLE_NONFREE</code></p></li>
+
+<li><p>On <code>OPENCV&gt;OPENCV_EXTRA_MODULES_PATH</code> , give the path to folder <code>modules</code> inside <code>opencv_contrib</code></p></li>
+
+<li><p>Select <code>Configure</code> the project again. On the output window, check whether it produces <code>Non-free algorithms are enabled</code> .</p></li>
+
+<li><p>On <code>BUILD</code> , make sure that you have selected the appropriate modules for features extraction, e.g, <code>BUILD_opencv_xfeatures2d</code>.</p></li>
+
+<li><p><code>Configure</code> the project again.</p></li>
+
+<li><p>Select <code>Generate</code></p></li>
+
+<li><p><code>cd /path/to/opencv/build</code></p></li>
+
+<li><p><code>make all</code> (To speed up : <code>make all -j8</code> )</p></li>
+
+<li><p><code>make install</code></p></li>
+</ol>
+
+<p>Done.</p>
+
+</main>
+
+  <footer>
+  
+  
+  <hr/>
+  &copy; [Dang-Khoa]() 2017 &ndash; 2019 | [Github]() | [Twitter]()
+  
+  </footer>
+  </body>
+</html>
+

@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>visual studio on Dang-Khoa&#39;s blog </title>
+    <title>visual studio on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/visual-studio/</link>
-    <description>Recent content in visual studio on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in visual studio on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
     <lastBuildDate>Sun, 23 Oct 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Install the OpenCV library on Visual Studio</title>
-      <link>http://dangkhoasdc.github.io/post/install_opencv_vs/</link>
+      <title>Hướng dẫn cài đặt OpenCV trên Windows</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/post/install_opencv_vs/</guid>
-      <description>Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
- Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here.</description>
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/</guid>
+      <description>Biên dịch thư viện OpenCV Điểm thuận lợi của việc tự cài đặt và biên dịch thư viện có thể kể đến như sau:
+ Hỗ trợ IDE mới nhất, như trong bản OpenCV 3.0 (22/11/2015) thì chưa có bản biên dịch sẵn dành cho VS 2015. Customize được các thư viện khác liên quan như Kinect, OpenCL, Python…  Link Download thư viện OpenCV cho HĐH Windows
+Bước 1: Giải nén thư viện vào thư mục được định sẵn.</description>
     </item>
     
   </channel>

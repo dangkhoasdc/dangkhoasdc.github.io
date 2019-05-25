@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on Dang-Khoa&#39;s blog </title>
+    <title>Pages on Dang-Khoa&#39;s blog</title>
     <link>http://dangkhoasdc.github.io/page/</link>
-    <description>Recent content in Pages on Dang-Khoa&#39;s blog </description>
+    <description>Recent content in Pages on Dang-Khoa&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     
 	<atom:link href="http://dangkhoasdc.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About Me</title>
-      <link>http://dangkhoasdc.github.io/about-me/</link>
+      <link>http://dangkhoasdc.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/about-me/</guid>
+      <guid>http://dangkhoasdc.github.io/page/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dangkhoasdc</title>
+      <link>http://dangkhoasdc.github.io/page/about.vi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/page/about.vi/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Search</title>
-      <link>http://dangkhoasdc.github.io/search/</link>
+      <link>http://dangkhoasdc.github.io/page/search/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/search/</guid>
+      <guid>http://dangkhoasdc.github.io/page/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>http://dangkhoasdc.github.io/page/search.vi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/page/search.vi/</guid>
       <description></description>
     </item>
     

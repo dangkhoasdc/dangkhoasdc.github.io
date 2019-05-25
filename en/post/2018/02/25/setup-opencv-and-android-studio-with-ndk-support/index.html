@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Setup OpenCV and Android Studio with NDK support | Dang-Khoa&#39;s blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+    
+    
+    <li><a href="http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/">vi</a></li>
+    
+
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Setup OpenCV and Android Studio with NDK support</span></h1>
+
+<h2 class="date">2018/02/25</h2>
+</div>
+
+<main>
+
+
+<p>In this tutorial, I will demonstrate how to configurate the renowned computer
+vision libary, OpenCV, with the current Android Studio version (3.0.1). Let get started.
+The compiled version of OpenCV which supports Android is available at <a href="https://opencv.org/releases.html">OpenCV Homepage</a>. Download
+and extract it. Please note that to test the application properly on the mobile
+devices, the <a href="https://play.google.com/store/apps/details?id=org.opencv.engine&amp;hl=en">OpenCV Manager</a> has to be installed.</p>
+
+<p>In another tutorial, I will talk about how to compile our own OpenCV library
+and put it to Android Studio since the pre-compiled library misses some
+interesting and important components, e.g, the SIFT features and other licensed
+algorithms.</p>
+
+<h2 id="creating-a-new-android-project-with-ndk-support">Creating a new Android project with NDK support</h2>
+
+<p>From the menu, select <code>File-&gt;New-&gt;New Project</code> and select <code>Include C++ support</code>
+in the Create New Project dialog.</p>
+
+<figure>
+    <img src="https://i.imgur.com/vgMNEYg.png"/> <figcaption>
+            <h4>Step 1</h4>
+        </figcaption>
+</figure>
+
+
+<p>The next two steps are similar to the setup for normal applications, so I skip
+it. Later, the IDE asks the C++ settings for the project, I prefer C++14 over
+C++11 and also add two options, namely Exception Support and Runtime Type
+Information Support, for the project.</p>
+
+<ol>
+<li><p>From the Project Structure windows (<code>File -&gt; Project Structure</code>), we add the
+OpenCV module by clicking on the plus sign, selecting the <code>Import Eclipse ADT Project</code>
+and pointing to the <code>/path/to/OpenCV4Android/sdk/java</code> directory.</p></li>
+
+<li><p>Select <code>Modules -&gt; app</code>.  In the <code>Dependencies</code> tab, add the OpenCV module
+by selecting the plus sign.</p>
+
+<ol>
+<li><code>Module Dependency</code>.</li>
+<li>Select <code>:openCVLibrary340</code>.</li>
+</ol></li>
+</ol>
+
+<figure>
+    <img src="https://i.imgur.com/CSHlsF7.png"/> <figcaption>
+            <h4>Add openCVLibrary340</h4>
+        </figcaption>
+</figure>
+
+
+<h2 id="configurate-cmake-and-ndk">Configurate CMAKE and NDK</h2>
+
+<p>In order to get CMAKE properly detect OpenCV, we add the following configuration
+to CMAKELists.txt:</p>
+
+<ol>
+<li><p>Add a new library:</p>
+
+<pre><code>include_directories(/path/to/OpenCV4Android/sdk/native/jni/include)
+add_library( lib_opencv SHARED IMPORTED )
+set_target_properties(lib_opencv PROPERTIES IMPORTED_LOCATION /path/to/OpenCV4Android/sdk/native/libs/${ANDROID_ABI}/libopencv_java3.so)
+</code></pre></li>
+
+<li><p>Put <code>lib_opencv</code> to the arguments of <code>target_link_libraries</code> (the last command
+in <code>CMakeLists.txt</code>).</p></li>
+</ol>
+
+<p>Beware that the path in CMAKE use <code>/</code> in both Windows and Linux.</p>
+
+<h2 id="configurate-gradle">Configurate Gradle</h2>
+
+<ol>
+<li><p>Put <code>abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'mips', 'mips64'</code>
+in the <code>cmake</code> setting.</p></li>
+
+<li><p>Put the following text inside <code>android</code>:</p>
+
+<pre><code>sourceSets {
+main {
+    jni.srcDirs = ['src/main/cpp']
+    jniLibs.srcDirs = ['\path\to\OpenCV-android-sdk\\sdk\\native\\libs']
+}
+
+}
+</code></pre></li>
+</ol>
+
+<p>Build the project again and we are done. In the the couple tutorials I will
+demonstate several techniques to manipulate the libary on Android:</p>
+
+<ul>
+<li>Transfer OpenCV MAT from Android to NDK code.</li>
+<li>Organize the project and source code.
+-</li>
+</ul>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+
