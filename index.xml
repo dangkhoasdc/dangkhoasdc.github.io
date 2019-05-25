@@ -542,5 +542,14 @@ Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như
       <description>Sau nhiều lần chuyển nhà và reset lại vũ trụ thì cuối cùng mình đã cho ra được phiên bản cuối cùng của blog. Nếu chưa nói đến đặc thù về bài viết công nghệ thì đây là blog thứ 4 của mình, sau Yahoo 360, Opera, Blogspot và giờ là Github (Tuy nhiên engine thì có một sự thay đổi nhẹ từ jekyll sang hugo). Cũng là một thời gian khá là dài rồi.</description>
     </item>
     
+    <item>
+      <title>Logs</title>
+      <link>http://dangkhoasdc.github.io/logs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/logs/</guid>
+      <description> 2019 25/05/19  Vọc một tí với Hugo theme và đi 1 buổi chiều. Nhưng cuối cùng mình cũng tìm được một theme ưng ý, không quá phức tạp như hugo-academic, và cũng không quá tối giản nhưng một trang blank.  </description>
+    </item>
+    
   </channel>
 </rss>
