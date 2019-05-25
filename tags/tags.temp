@@ -4437,6 +4437,10 @@ $z	assets/js/viz-lite.js	/^function nx(d,f,g){d=d|0;f=f|0;g=g|0;var i=0,j=0,k=0,
 2018/07/07	post/2018/07/07/kinh-nghiệm-du-lịch-nha-trang/index.html	/^<h2 class="date">2018\/07\/07<\/h2>$/;"	i
 2018/09/04	post/2018/09/04/hello-world-with-literate-programming/index.html	/^<h2 class="date">2018\/09\/04<\/h2>$/;"	i
 2018/09/07	post/2018/09/07/ai-challenge-landmark-kỹ-thuật-và-ý-tưởng/index.html	/^<h2 class="date">2018\/09\/07<\/h2>$/;"	i
+2019	about/index.html	/^<h3 id="2019">2019<\/h3>$/;"	I
+2019	about/index.html	/^<h3 id="2019">2019<\/h3>$/;"	j
+2019	logs/index.html	/^<h1 id="2019">2019<\/h1>$/;"	I
+2019	logs/index.html	/^<h1 id="2019">2019<\/h1>$/;"	h
 2019/01/05	en/post/2019/01/05/learn-how-to-learn/index.html	/^<h2 class="date">2019\/01\/05<\/h2>$/;"	i
 2019/01/05	post/2019/01/05/learn-how-to-learn/index.html	/^<h2 class="date">2019\/01\/05<\/h2>$/;"	i
 2019/01/12	en/post/2019/01/12/introduction-to-model-thinking/index.html	/^<h2 class="date">2019\/01\/12<\/h2>$/;"	i
@@ -4475,6 +4479,8 @@ $z	assets/js/viz-lite.js	/^function nx(d,f,g){d=d|0;f=f|0;g=g|0;var i=0,j=0,k=0,
 25	search/index.json	/^[{"content":"","href":"\/","title":"Home"},{"content":"","href":"\/post\/","title":"Documentatio/;"	o
 25	vi/page/search/index.json	/^[{"content":"","href":"\/vi\/","title":"Trang chủ"},{"content":"","href":"\/vi\/docs\/","title/;"	o
 25	vi/search/index.json	/^[{"content":"","href":"\/vi\/","title":"Trang chủ"},{"content":"","href":"\/vi\/post\/","title/;"	o
+25-05-19	logs/index.html	/^<h3 id="25-05-19">25\/05\/19<\/h3>$/;"	I
+25/05/19	logs/index.html	/^<h3 id="25-05-19">25\/05\/19<\/h3>$/;"	j
 26	assets/js/viz-lite.js	/^var Module=typeof Module!=="undefined"?Module:{};var moduleOverrides={};var key;for(key in Modul/;"	p	class:ERRNO_MESSAGES
 26	page/search/index.json	/^[{"content":"","href":"\/","title":"Home"},{"content":"","href":"\/docs\/","title":"Documentatio/;"	o
 26	search/index.json	/^[{"content":"","href":"\/","title":"Home"},{"content":"","href":"\/post\/","title":"Documentatio/;"	o
@@ -4946,7 +4952,6 @@ Analysis	en/post/2018/01/16/generate-the-inversion-table-from-an-integer-sequenc
 Analysis	post/2018/01/16/generate-the-inversion-table-from-an-integer-sequence/index.html	/^<h1 id="analysis">Analysis<\/h1>$/;"	h
 Analysis	post/gen_inversion_table/index.html	/^<h1 id="analysis">Analysis<\/h1>$/;"	h
 Analysis of Algorithms	logs/aofalgs/index.html	/^    <h1 itemprop="name">Analysis of Algorithms<\/h1>$/;"	h
-Analysis of Algorithms	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/aofalgs\/">Analysis of Algorithms<\/a><\//;"	i
 Analysis of Algorithms	tags/logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/aofalgs\/">Analysis of Algorithms<\/a><\//;"	i
 AnonymousClassbae582043901	js/fontawesome.js	/^!function(){"use strict";var c={};try{"undefined"!=typeof window&&(c=window)}catch(c){}var l=(c./;"	c	class:al.layer.AnonymousFunctionbae582043600
 AnonymousFunction03cdc2fe0100	js/jquery-1.12.3.min.js	/^!function(a,b){"object"==typeof module&&"object"==typeof module.exports?module.exports=a.documen/;"	f
@@ -6973,10 +6978,8 @@ C	assets/js/webfont.js	/^function x(a,b,c,d){var f=a.F.getElementsByTagName("hea
 C&#43;&#43;	post/cpp/index.html	/^    <h1 itemprop="name">C&#43;&#43;<\/h1>$/;"	h
 C&#43;&#43;	tags/programming-languages/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/post\/cpp\/">C&#43;&#43;<\/a><\/h2>$/;"	i
 C&#43;&#43; is better than C	logs/cpp_better_c/index.html	/^    <h1 itemprop="name">C&#43;&#43; is better than C<\/h1>$/;"	h
-C&#43;&#43; is better than C	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/cpp_better_c\/">C&#43;&#43; is better tha/;"	i
 C&#43;&#43; is better than C	tags/logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/cpp_better_c\/">C&#43;&#43; is better tha/;"	i
 C&#43;&#43;20 news	logs/cpp20/index.html	/^    <h1 itemprop="name">C&#43;&#43;20 news<\/h1>$/;"	h
-C&#43;&#43;20 news	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/cpp20\/">C&#43;&#43;20 news<\/a><\/h2>$/;"	i
 C++	logs/cpp_better_c/index.html	/^<h1 id="c">C++<\/h1>$/;"	h
 C++	logs/index.old/index.html	/^<h2 id="c">C++<\/h2>$/;"	i
 C++	tags/c++/index.html	/^<h1>C++<\/h1>$/;"	h
@@ -7138,7 +7141,6 @@ Creating training dataset	logs/face-recognition-experiments/index.html	/^<h2 id=
 Cryto	tags/cryto/index.html	/^  <h1>Cryto<\/h1>$/;"	h
 Crytocurrency	logs/index.old/index.html	/^<h2 id="crytocurrency">Crytocurrency<\/h2>$/;"	i
 Crytocurrency Technology	logs/cryto_tech/index.html	/^    <h1 itemprop="name">Crytocurrency Technology<\/h1>$/;"	h
-Crytocurrency Technology	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/cryto_tech\/">Crytocurrency Technology<\//;"	i
 Crytocurrency Technology	tags/cryto/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/cryto_tech\/">Crytocurrency Technology<\//;"	i
 Crytocurrency Technology	tags/logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/cryto_tech\/">Crytocurrency Technology<\//;"	i
 Crytographic Hash Function	logs/cryto_tech/index.html	/^<h1 id="crytographic-hash-function">Crytographic Hash Function<\/h1>$/;"	h
@@ -7858,7 +7860,6 @@ ErrnoError	assets/js/viz-lite.js	/^var Module=typeof Module!=="undefined"?Module
 Error Handling	logs/cpp_better_c/index.html	/^<h2 id="error-handling">Error Handling<\/h2>$/;"	i
 Es	assets/js/viz-lite.js	/^function Rq(){var a=0;a=l;l=l+16|0;Zl(0,83093,a)|0;l=a;return}function Sq(b){b=b|0;var d=0,e=0,f/;"	f	function:asm
 Estimate object size from a reference object	logs/estimate_size/index.html	/^    <h1 itemprop="name">Estimate object size from a reference object<\/h1>$/;"	h
-Estimate object size from a reference object	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/estimate_size\/">Estimate object size fro/;"	i
 Estimate object size from a reference object	tags/logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/estimate_size\/">Estimate object size fro/;"	i
 Estimating object&rsquo;s area by multiple images	logs/estimate_size/index.html	/^<h1 id="estimating-object-s-area-by-multiple-images">Estimating object&rsquo;s area by multiple /;"	h
 Et	assets/js/viz-lite.js	/^function Rq(){var a=0;a=l;l=l+16|0;Zl(0,83093,a)|0;l=a;return}function Sq(b){b=b|0;var d=0,e=0,f/;"	f	function:asm
@@ -7895,7 +7896,6 @@ Experiments	logs/extend_cvpr17/index.html	/^<h1 id="experiments">Experiments<\/h
 Experiments	logs/icassp18-paper/index.html	/^<h1 id="experiments">Experiments<\/h1>$/;"	h
 Exploration-exploitation dilemma	logs/reinforcement-learning/index.html	/^<h2 id="exploration-exploitation-dilemma">Exploration-exploitation dilemma<\/h2>$/;"	i
 Extend CVPR17 paper to the journal version	logs/extend_cvpr17/index.html	/^    <h1 itemprop="name">Extend CVPR17 paper to the journal version<\/h1>$/;"	h
-Extend CVPR17 paper to the journal version	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/extend_cvpr17\/">Extend CVPR17 paper to t/;"	i
 Extend CVPR17 paper to the journal version	tags/logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/extend_cvpr17\/">Extend CVPR17 paper to t/;"	i
 Extend CVPR17 paper to the journal version	tags/working/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/extend_cvpr17\/">Extend CVPR17 paper to t/;"	i
 External Project	project/example-external-project/index.html	/^    <h1 itemprop="name">External Project<\/h1>$/;"	h
@@ -8369,7 +8369,6 @@ Introduction	logs/icassp18-paper/index.html	/^<h2 id="introduction">Introduction
 Introduction	logs/reinforcement-learning/index.html	/^<h1 id="introduction">Introduction<\/h1>$/;"	h
 Introduction	post/2018/01/17/history-of-computer-vision-part-1/index.html	/^<h1 id="introduction">Introduction<\/h1>$/;"	h
 Introduction	post/compvision_hist/index.html	/^<h1 id="introduction">Introduction<\/h1>$/;"	h
-Introduction to Java Memory	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/java_mem\/">Introduction to Java Memory<\//;"	i
 Introduction to Java Memory	logs/java_mem/index.html	/^    <h1 itemprop="name">Introduction to Java Memory<\/h1>$/;"	h
 Introduction to Java Memory	tags/java/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/java_mem\/">Introduction to Java Memory<\//;"	i
 Introduction to Model Thinking	authors/khoa/index.html	/^    <\/h3>$/;"	j
@@ -8666,6 +8665,7 @@ Log: Rust and OOP in Python	tags/rust/index.html	/^    <h2><a href="http:\/\/dan
 Log: Using Scipy&#39;s Optimization for constrained function	post/lp_120418/index.html	/^      <h1 itemprop="name">Log: Using Scipy&#39;s Optimization for constrained function<\/h1>$/;"	h
 Logs	logs/cvpr18/index.html	/^<h1 id="logs">Logs<\/h1>$/;"	h
 Logs	logs/extend_cvpr17/index.html	/^<h1 id="logs">Logs<\/h1>$/;"	h
+Logs	logs/index.html	/^<h1><span class="title">Logs<\/span><\/h1>$/;"	h
 Logs	tags/logs/index.html	/^  <h1>Logs<\/h1>$/;"	h
 Long-term memory	en/post/2019/01/05/learn-how-to-learn/index.html	/^<h2 id="long-term-memory">Long-term memory<\/h2>$/;"	i
 Long-term memory	post/2019/01/05/learn-how-to-learn/index.html	/^<h2 id="long-term-memory">Long-term memory<\/h2>$/;"	i
@@ -9252,6 +9252,7 @@ Practices	post/2015/07/20/lập-trình-hướng-đối-tượng-trong-python/ind
 Practices	post/oop-python/index.html	/^<h2 id="practices">Practices<\/h2>$/;"	i
 Practices	vi/docs/oop-python/index.html	/^<h2 id="practices">Practices<\/h2>$/;"	i
 Practices	vi/post/oop-python/index.html	/^<h2 id="practices">Practices<\/h2>$/;"	i
+Pre-2019	about/index.html	/^<h3 id="pre-2019">Pre-2019<\/h3>$/;"	j
 Pre-computer vision	post/2018/01/17/lịch-sử-thị-giác-máy-tính-phần-1/index.html	/^<h1 id="pre-computer-vision">Pre-computer vision<\/h1>$/;"	h
 Pre-computer vision	vi/docs/compvision_hist/index.html	/^<h1 id="pre-computer-vision">Pre-computer vision<\/h1>$/;"	h
 Pre-computer vision	vi/post/compvision_hist/index.html	/^<h1 id="pre-computer-vision">Pre-computer vision<\/h1>$/;"	h
@@ -9298,7 +9299,6 @@ Pu	assets/js/viz-lite.js	/^function Rq(){var a=0;a=l;l=l+16|0;Zl(0,83093,a)|0;l=
 Public keys as Identities	logs/cryto_tech/index.html	/^<h1 id="public-keys-as-identities">Public keys as Identities<\/h1>$/;"	h
 Publication_types	publication_types/index.html	/^      <h1 class='title'>Publication_types<\/h1>$/;"	h
 Publication_types	vi/publication_types/index.html	/^      <h1 class='title'>Publication_types<\/h1>$/;"	h
-Publications	logs/index.html	/^  <h1>Publications<\/h1>$/;"	h
 Publications	logs/page/2/index.html	/^  <h1>Publications<\/h1>$/;"	h
 Publications	logs/page/3/index.html	/^  <h1>Publications<\/h1>$/;"	h
 Publications	logs/page/4/index.html	/^  <h1>Publications<\/h1>$/;"	h
@@ -9782,7 +9782,6 @@ Standing Ovation Model	post/2019/01/12/introduction-to-model-thinking/index.html
 Standing Ovation Model	post/model_thinking/why/index.html	/^<h3 id="standing-ovation-model">Standing Ovation Model<\/h3>$/;"	j
 Standing Ovation Model	post/thinking/why/index.html	/^<h3 id="standing-ovation-model">Standing Ovation Model<\/h3>$/;"	j
 Start	assets/js/flowchart-latest.js	/^        function Start(chart, options) {$/;"	f	function:AnonymousFunctionc2aaedc23300
-StayingFit	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/stayingfit\/">StayingFit<\/a><\/h2>$/;"	i
 StayingFit	logs/stayingfit/index.html	/^    <h1 itemprop="name">StayingFit<\/h1>$/;"	h
 StayingFit	tags/logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/stayingfit\/">StayingFit<\/a><\/h2>$/;"	i
 Store on local devices (computers or phones).	logs/cryto_tech/index.html	/^<h3 id="store-on-local-devices-computers-or-phones">Store on local devices (computers or phones)/;"	j
@@ -9954,7 +9953,6 @@ Tham khảo	vi/docs/improved_qsort/index.html	/^<h1 id="tham-khảo">Tham khảo
 Tham khảo	vi/post/constexpr/index.html	/^<h2 id="tham-khảo">Tham khảo<\/h2>$/;"	i
 Tham khảo	vi/post/improved_qsort/index.html	/^<h1 id="tham-khảo">Tham khảo<\/h1>$/;"	h
 The Bitcoin network	logs/cryto_tech/index.html	/^<h2 id="the-bitcoin-network">The Bitcoin network<\/h2>$/;"	i
-The Josephus problem	logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/josephus_problem\/">The Josephus problem</;"	i
 The Josephus problem	logs/josephus_problem/index.html	/^    <h1 itemprop="name">The Josephus problem<\/h1>$/;"	h
 The Josephus problem	tags/logs/index.html	/^    <h2><a href="http:\/\/dangkhoasdc.github.io\/logs\/josephus_problem\/">The Josephus problem</;"	i
 The TIP17 journal	logs/diary/2017-12-05/index.html	/^<h1 id="the-tip17-journal">The TIP17 journal<\/h1>$/;"	h
@@ -11269,7 +11267,6 @@ back_to_top	logs/extend_cvpr17/index.html	/^        <a href="#" id="back_to_top"
 back_to_top	logs/face-recognition-experiments/index.html	/^        <a href="#" id="back_to_top">$/;"	I
 back_to_top	logs/fibonaccian-searching/index.html	/^        <a href="#" id="back_to_top">$/;"	I
 back_to_top	logs/icassp18-paper/index.html	/^        <a href="#" id="back_to_top">$/;"	I
-back_to_top	logs/index.html	/^        <a href="#" id="back_to_top">$/;"	I
 back_to_top	logs/index.old/index.html	/^        <a href="#" id="back_to_top">$/;"	I
 back_to_top	logs/java_mem/index.html	/^        <a href="#" id="back_to_top">$/;"	I
 back_to_top	logs/josephus_problem/index.html	/^        <a href="#" id="back_to_top">$/;"	I
@@ -12978,6 +12975,7 @@ cấu-hình-thư-viện-cho-quá-trình-thực-thi	post/2016/10/23/hướng-dẫ
 cấu-hình-thư-viện-cho-quá-trình-thực-thi	post/blog/install_opencv_vs/index.html	/^<h3 id="cấu-hình-thư-viện-cho-quá-trình-thực-thi">Cấu hình thư viện cho quá trì/;"	I
 cấu-hình-thư-viện-cho-quá-trình-thực-thi	vi/docs/install_opencv_vs/index.html	/^<h3 id="cấu-hình-thư-viện-cho-quá-trình-thực-thi">Cấu hình thư viện cho quá trì/;"	I
 cấu-hình-thư-viện-cho-quá-trình-thực-thi	vi/post/install_opencv_vs/index.html	/^<h3 id="cấu-hình-thư-viện-cho-quá-trình-thực-thi">Cấu hình thư viện cho quá trì/;"	I
+cập-nhật-2019	about/index.html	/^<h4 id="cập-nhật-2019">Cập nhật 2019<\/h4>$/;"	I
 cốt-truyện	post/2016/10/23/diablo-iii/index.html	/^<h2 id="cốt-truyện">Cốt truyện<\/h2>$/;"	I
 cốt-truyện	post/2016/10/23/review-start-wars-series/index.html	/^<h1 id="cốt-truyện">Cốt truyện<\/h1>$/;"	I
 cốt-truyện	post/2019/02/04/zeus-and-poseidon-kí-ức-gọi-về/index.html	/^<h1 id="cốt-truyện">Cốt truyện<\/h1>$/;"	I
@@ -13179,8 +13177,11 @@ disable	js/bootstrap.min.js	/^if("undefined"==typeof jQuery)throw new Error("Boo
 disabled	css/bootstrap.min.css	/^ *\/\/*! normalize.css v3.0.3 | MIT License | github.com\/necolas\/normalize.css *\/html{font-fa/;"	s
 discord	js/fontawesome.js	/^!function(){"use strict";var c={};try{"undefined"!=typeof window&&(c=window)}catch(c){}var l=(c./;"	p	class:r
 discourse	js/fontawesome.js	/^!function(){"use strict";var c={};try{"undefined"!=typeof window&&(c=window)}catch(c){}var l=(c./;"	p	class:r
+disqus_thread	404.html	/^<div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	about-me/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	about/_index.vi/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	about/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	categories/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	deep/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	docs/a/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	docs/compvision_hist/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
@@ -13196,6 +13197,44 @@ disqus_thread	docs/repertoire/index.html	/^    <div class='comments-area'><div i
 disqus_thread	docs/selectedpapers_cs/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	docs/ubuntu_on_windows/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	docs/why_so_serious/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/404.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/categories/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/page/2/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2016/10/23/install-the-opencv-library-on-visual-studio/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2017/09/18/matlab/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2017/09/26/why-ubuntu-on-windows/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2017/11/15/miscellaneous-notes/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2017/12/26/the-repertoire-method/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2018/01/15/selected-papers-on-computer-science-don-knuth-and-the-current-state-of-deep-learning/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2018/01/16/generate-the-inversion-table-from-an-integer-sequence/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2018/01/17/history-of-computer-vision-part-1/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2018/02/01/latin-squares-and-a-story-of-computer-science-history/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2018/02/07/programming-pearls/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2018/02/25/setup-opencv-and-android-studio-with-ndk-support/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2018/03/08/opencv-on-android-practices-and-tips/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2018/06/15/install-opencv-3-non-free-module-on-ubuntu/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2019/01/05/learn-how-to-learn/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/2019/01/12/introduction-to-model-thinking/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/post/page/2/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/algorithms/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/android/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/books/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/computer-vision/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/courses/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/history/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/math/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/matlab/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/misc/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/notes/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/opencv/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/programming/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/taocp/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/visual-studio/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	en/tags/windows/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	index.html	/^<div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/aofalgs/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/cpp20/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/cpp_better_c/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
@@ -13231,6 +13270,7 @@ disqus_thread	logs/extend_cvpr17/index.html	/^  <div id="disqus_thread"><\/div>$
 disqus_thread	logs/face-recognition-experiments/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/fibonaccian-searching/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/icassp18-paper/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	logs/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/index.old/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/java_mem/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/josephus_problem/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
@@ -13248,6 +13288,63 @@ disqus_thread	logs/sun397-parameters/index.html	/^  <div id="disqus_thread"><\/d
 disqus_thread	logs/sun397-sh-bdnn-parameters/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/the-reportore-method/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	logs/tip-journal-2017/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	page/2/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	page/3/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	page/4/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	page/5/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	page/6/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2015/02/25/spams-lib-và-những-tâm-sự/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2015/06/01/ghi-chú-hướng-dẫn-cài-đặt-opencv/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2015/06/13/mưa-vẫn-hay-mưa/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2015/07/09/kinh-nghiệm-viết-tài-liệu-khoa-học/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2015/07/19/thôi-đành-chia-tay/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2015/07/20/lập-trình-hướng-đối-tượng-trong-python/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/08/08/review-algorithms-princeton-coursera/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/10/review-the-c-programming-languages/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/constexpr-hằng-biểu-thức-trong-c-11/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/các-thuật-toán-ngẫu-nhiên/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/cảm-nhận-star-wars-vii-the-force-awakens/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/diablo-iii/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/dẫn-nhập-thuật-toán-ngẫu-nhiên/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/hướng-dẫn-cài-đặt-opencv-trên-windows/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/một-chút-thống-kê-về-các-bài-báo-cvpr16/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/những-kênh-thông-tin-công-nghệ/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/quy-trình-xin-tài-trợ-nafosted/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/review-refactoring/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/review-start-wars-series/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2016/10/23/sử-dụng-protocol-buffers-trong-c-và-caffe/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/06/rand-is-harmful/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/10/good-will-hunting-và-những-bài-toán-đồ-thị/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/10/la-la-land/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/16/bài-toán-chuyển-ngày-sang-thứ/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/16/hậu-tây-du-kí/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/17/một-vòng-henderson-waves-và-haw-par-villa/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/18/the-vietnam-war-dejavu/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/24/tai-nghe-dành-programmer/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/09/25/đọc-nghệ-thuật-lập-trình-taocp/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/10/16/font-một-lỗi-nhỏ-trong-đừng-hỏi-em/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/11/08/chính-sách-gửi-trả-hàng-của-amazon/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/12/19/giải-thuật-tìm-kiếm-fibonacci/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2017/12/27/người-việt-trong-khoa-học-máy-tính/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/01/03/cài-đặt-quan-hệ-thứ-tự-trong-c-/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/01/04/một-số-biến-thể-quicksort/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/01/10/có-bao-nhiêu-cách-cài-đặt-hàng-đợi-ưu-tiên/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/01/15/sách-selected-papers-on-computer-science/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/01/17/lịch-sử-thị-giác-máy-tính-phần-1/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/01/30/tôi-là-ai/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/02/01/khối-latin-và-câu-chuyện-toán-học-và-lịch-sử-máy-tính/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/02/07/programming-pearls/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/02/13/witcher-3-xây-dựng-nhân-vật-và-phương-pháp-phát-triển-cốt-truyện/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/02/25/cài-đặt-opencv-trên-android-studio-hỗ-trợ-lập-trình-ndk/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/03/29/overfitting-là-cái-quái-gì/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/05/01/bioshock-elizabeth-hay-học-tăng-cường-reinforcement-learning/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/05/23/làm-nghiên-cứu-theo-phong-cách-agile/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/06/05/kinh-nghiệm-xin-làm-passport-mới-ở-singapore/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/07/07/kinh-nghiệm-du-lịch-nha-trang/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/09/04/hello-world-with-literate-programming/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2018/09/07/ai-challenge-landmark-kỹ-thuật-và-ý-tưởng/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2019/01/12/review-thinkpad-x1-extreme/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/2019/02/04/zeus-and-poseidon-kí-ức-gọi-về/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/a/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/advmatlab/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/amazon_replacement_policy/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
@@ -13300,6 +13397,7 @@ disqus_thread	post/headphones/index.html	/^  <div id="disqus_thread"><\/div>$/;"
 disqus_thread	post/henderson_waves-haw_par_villa/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/impl_priority_queues/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/improved_qsort/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/install_opencv_vs/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/intro_randalgs/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/it_news/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
@@ -13322,6 +13420,11 @@ disqus_thread	post/opencv_android_practice/index.html	/^  <div id="disqus_thread
 disqus_thread	post/opencv_android_practices/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/opencv_android_studio_ndk.vi/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/opencv_android_studio_ndk/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/page/2/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/page/3/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/page/4/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/page/5/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	post/page/6/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/programming_pearls/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/protocol-buffers-caffe/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	post/rand/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
@@ -13350,6 +13453,43 @@ disqus_thread	post/why_so_serious/index.html	/^    <div class='comments-area'><d
 disqus_thread	post/zalo_landmark/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	programming/index.html	/^  <div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	programming/randomized-algs/index.html	/^	<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/algorithms/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/android/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/books/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/c++/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/computer-science/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/computer-vision/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/computer-vison/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/courses/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/cpp/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/cvpr/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/deep-learning/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/documentary/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/font/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/games/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/gaming/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/history/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/laptop/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/machine-learning/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/memories/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/misc/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/movies/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/notes/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/opencv/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/programming/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/programming/page/2/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/python/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/research/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/review/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/review/page/2/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/singapore/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/software-engineer/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/taocp/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/travel/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/tutorial/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/vietnam/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
+disqus_thread	tags/visual-studio/index.html	/^<div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	vi/dangkhoasdc/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	vi/docs/amazon_replacement_policy/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
 disqus_thread	vi/docs/bioshock_infinite/index.html	/^    <div class='comments-area'><div id="disqus_thread"><\/div>$/;"	I
@@ -16759,7 +16899,6 @@ navbar-main	logs/extend_cvpr17/index.html	/^<nav class="navbar navbar-default na
 navbar-main	logs/face-recognition-experiments/index.html	/^<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">$/;"	I
 navbar-main	logs/fibonaccian-searching/index.html	/^<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">$/;"	I
 navbar-main	logs/icassp18-paper/index.html	/^<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">$/;"	I
-navbar-main	logs/index.html	/^<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">$/;"	I
 navbar-main	logs/index.old/index.html	/^<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">$/;"	I
 navbar-main	logs/java_mem/index.html	/^<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">$/;"	I
 navbar-main	logs/josephus_problem/index.html	/^<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">$/;"	I
@@ -17923,6 +18062,7 @@ pre samp	assets/css/khoa.css	/^ *\/.deprecated{color:#455a64;margin-top:1em;padd
 pre samp	assets/css/main.809149b6.css	/^pre samp {$/;"	s
 pre var	assets/css/khoa.css	/^ *\/.deprecated{color:#455a64;margin-top:1em;padding:1em;background-color:transparent;border:1px/;"	s
 pre var	assets/css/main.809149b6.css	/^pre var,$/;"	s
+pre-2019	about/index.html	/^<h3 id="pre-2019">Pre-2019<\/h3>$/;"	I
 pre-computer-vision	post/2018/01/17/lịch-sử-thị-giác-máy-tính-phần-1/index.html	/^<h1 id="pre-computer-vision">Pre-computer vision<\/h1>$/;"	I
 pre-computer-vision	vi/docs/compvision_hist/index.html	/^<h1 id="pre-computer-vision">Pre-computer vision<\/h1>$/;"	I
 pre-computer-vision	vi/post/compvision_hist/index.html	/^<h1 id="pre-computer-vision">Pre-computer vision<\/h1>$/;"	I
@@ -20511,7 +20651,6 @@ top	logs/extend_cvpr17/index.html	/^<body id="top" data-spy="scroll" data-target
 top	logs/face-recognition-experiments/index.html	/^<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">$/;"	I
 top	logs/fibonaccian-searching/index.html	/^<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">$/;"	I
 top	logs/icassp18-paper/index.html	/^<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">$/;"	I
-top	logs/index.html	/^<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">$/;"	I
 top	logs/index.old/index.html	/^<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">$/;"	I
 top	logs/java_mem/index.html	/^<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">$/;"	I
 top	logs/josephus_problem/index.html	/^<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">$/;"	I
