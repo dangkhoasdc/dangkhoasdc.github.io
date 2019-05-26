@@ -32,5 +32,16 @@ Dữ Liệu Dưới đây là phân phối số lượng ảnh trên mỗi label
 [Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT - hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông tin về một hướng nghiên cứu khá hấp dẫn này.</description>
     </item>
     
+    <item>
+      <title>Một chút thống kê về các bài báo CVPR16</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/</guid>
+      <description>Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+ Số bài báo được accept: 643 bài. Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài. Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.</description>
+    </item>
+    
   </channel>
 </rss>

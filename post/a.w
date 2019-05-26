@@ -4,7 +4,6 @@
 title = "Hello world with Literate Programming"
 date = "2018-09-04"
 
-authors = ["khoa"]
 
 +++
 

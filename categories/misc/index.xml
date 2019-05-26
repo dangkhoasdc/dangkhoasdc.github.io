@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc on My blog</title>
+    <link>http://dangkhoasdc.github.io/categories/misc/</link>
+    <description>Recent content in Misc on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Wed, 08 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Chính sách gửi trả hàng của Amazon</title>
+      <link>http://dangkhoasdc.github.io/post/2017/11/08/ch%C3%ADnh-s%C3%A1ch-g%E1%BB%ADi-tr%E1%BA%A3-h%C3%A0ng-c%E1%BB%A7a-amazon/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2017/11/08/ch%C3%ADnh-s%C3%A1ch-g%E1%BB%ADi-tr%E1%BA%A3-h%C3%A0ng-c%E1%BB%A7a-amazon/</guid>
+      <description>Quy trình này mình tìm hiểu khi mua những hàng sử dụng International Shipping, lí do nó khiến mình quan ngại là vì:
+ Chính sách đổi trả của Amazon thế nào với hàng được chuyển quốc tế. Nếu mình phải trả lại hàng (ví dụ gửi từ Singapore lại qua bên Mỹ) thì phía Amazon có chịu trả chi phí cho mình không? Hàng đổi được gửi như thế nào.</description>
+    </item>
+    
+  </channel>
+</rss>

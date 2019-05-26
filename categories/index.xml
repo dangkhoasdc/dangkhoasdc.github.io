@@ -6,9 +6,64 @@
     <description>Recent content in Categories on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
+    <lastBuildDate>Sat, 07 Jul 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Du Lịch</title>
+      <link>http://dangkhoasdc.github.io/categories/du-l%E1%BB%8Bch/</link>
+      <pubDate>Sat, 07 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/du-l%E1%BB%8Bch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Video Games</title>
+      <link>http://dangkhoasdc.github.io/categories/video-games/</link>
+      <pubDate>Tue, 01 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/video-games/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computer Vision</title>
+      <link>http://dangkhoasdc.github.io/categories/computer-vision/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/computer-vision/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Misc</title>
+      <link>http://dangkhoasdc.github.io/categories/misc/</link>
+      <pubDate>Wed, 08 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/misc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>http://dangkhoasdc.github.io/categories/c&#43;&#43;/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>http://dangkhoasdc.github.io/categories/research/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/research/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

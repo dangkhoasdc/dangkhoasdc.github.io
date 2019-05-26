@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>C&#43;&#43; on My blog</title>
+    <title>c&#43;&#43; on My blog</title>
     <link>http://dangkhoasdc.github.io/tags/c&#43;&#43;/</link>
-    <description>Recent content in C&#43;&#43; on My blog</description>
+    <description>Recent content in c&#43;&#43; on My blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Wed, 03 Jan 2018 00:00:00 +0000</lastBuildDate>
@@ -19,6 +19,15 @@
       <guid>http://dangkhoasdc.github.io/post/2018/01/03/c%C3%A0i-%C4%91%E1%BA%B7t-quan-h%E1%BB%87-th%E1%BB%A9-t%E1%BB%B1-trong-c-/</guid>
       <description>Bài viết dưới đây mô tả một giải pháp để cài đặt các quan hệ giữa các cấu trúc dữ liệu (CTDL) khác nhau trong C++. Ứng dụng của quan hệ giữa các đối tượng đóng vai trò quan trọng trong các thuật toán, dưới đây có thể nêu lên 1 số ví dụ:
  Total Order (Quan hệ thứ tự): Đây là một trong những quan hệ quen thuộc nhất, có vai trò quan trọng trong các thuật toán sắp xếp.</description>
+    </item>
+    
+    <item>
+      <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</guid>
+      <description>constexpr Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này. Ta quay một chút về cú pháp define bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm.</description>
     </item>
     
   </channel>
