@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>review on Dang-Khoa&#39;s blog</title>
+    <link>http://dangkhoasdc.github.io/en/tags/review/</link>
+    <description>Recent content in review on Dang-Khoa&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/en/tags/review/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Groupnorm: Paper, review and implementations</title>
+      <link>http://dangkhoasdc.github.io/en/post/2019/05/28/groupnorm-paper-review-and-implementations/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/en/post/2019/05/28/groupnorm-paper-review-and-implementations/</guid>
+      <description>After several tries, I have found out that GroupNorm works suprisingly well on detection models. Just turn on the GroupNorm of FPN and I can get an improvement with a large margin. Going further, I want to replace Batchnorm of the backbone with GroupNorm and see how I can utilize this layer in other networks.
+Paper: overview and comments Criticism about BatchNorm It does not work well on models trained with small batches.</description>
+    </item>
+    
+  </channel>
+</rss>

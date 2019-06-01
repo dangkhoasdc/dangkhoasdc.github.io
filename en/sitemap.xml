@@ -3,8 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://dangkhoasdc.github.io/en/categories/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/categories/"
+                />
+  </url>
+  
+  <url>
     <loc>http://dangkhoasdc.github.io/en/</loc>
-    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -19,13 +35,19 @@
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/en/post/2019/01/12/introduction-to-model-thinking/</loc>
-    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+    <loc>http://dangkhoasdc.github.io/en/post/2019/05/28/groupnorm-paper-review-and-implementations/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/en/categories/machine-learning/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>http://dangkhoasdc.github.io/en/post/</loc>
-    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -41,7 +63,7 @@
   
   <url>
     <loc>http://dangkhoasdc.github.io/en/tags/</loc>
-    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -53,6 +75,43 @@
                 hreflang="en"
                 href="http://dangkhoasdc.github.io/en/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/en/tags/deep-learning/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/deep-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/deep-learning/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/en/tags/review/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/review/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/review/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/en/post/2019/01/12/introduction-to-model-thinking/</loc>
+    <lastmod>2019-01-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -392,21 +451,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="http://dangkhoasdc.github.io/en/tags/visual-studio/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/en/categories/</loc>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/en/categories/"
                 />
   </url>
   

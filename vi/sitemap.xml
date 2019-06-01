@@ -135,6 +135,16 @@
     <loc>http://dangkhoasdc.github.io/tags/review/</loc>
     <lastmod>2018-07-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/review/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/review/"
+                />
   </url>
   
   <url>
@@ -661,6 +671,16 @@
     <loc>http://dangkhoasdc.github.io/tags/deep-learning/</loc>
     <lastmod>2016-10-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/deep-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/deep-learning/"
+                />
   </url>
   
   <url>

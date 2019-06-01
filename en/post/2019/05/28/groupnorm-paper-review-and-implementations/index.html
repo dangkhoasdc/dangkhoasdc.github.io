@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Groupnorm: Paper, review and implementations | Dang-Khoa&#39;s blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Groupnorm: Paper, review and implementations</span></h1>
+
+<h2 class="date">2019/05/28</h2>
+</div>
+
+
+
+<main>
+
+
+<p>After several tries, I have found out that GroupNorm works suprisingly well
+on detection models. Just turn on the GroupNorm of FPN and I can get an
+improvement with a large margin. Going further, I want to replace Batchnorm
+of the backbone with GroupNorm and see how I can utilize this layer in
+other networks.</p>
+
+<h1 id="paper-overview-and-comments">Paper: overview and comments</h1>
+
+<h2 id="criticism-about-batchnorm">Criticism about BatchNorm</h2>
+
+<p>It does not work well on models trained with small batches. Some papers showed that BatchNorm is mainly to get the activation distribution in control to help the training convergence. Therefore, if we already have good initialization, we don&rsquo;t even need to use BatchNorm.</p>
+
+<h2 id="related-works">Related works</h2>
+
+<ul>
+<li>Local Response Normalization.</li>
+<li>Batch Normalization (or Spatial Batch Norm in some frameworks).</li>
+<li>Layer Normalization.</li>
+<li>Weight Normalization.</li>
+<li>Batch Renormalization.</li>
+<li>Synchronized Batchnorm: [<a href="https://arxiv.org/abs/1902.04103">Bag of Freebies for Training Object Detection Neural Networks</a>] use this technique instead of <em>GroupNorm</em> for Yolov3, I wonder why.</li>
+<li>Instance Normalization.</li>
+</ul>
+
+<h3 id="group-wise-computation">Group-wise computation</h3>
+
+<ul>
+<li>ResNext.</li>
+<li>MobileNet. Note to self: after several weeks working on detection, we found out that MobileNet does not work well for detection. One paper support this observation [<a href="https://arxiv.org/pdf/1905.10011.pdf">Light-Weight RetinaNet for Object Detection</a>] . Their observation is also consistent with my experiment results, especially about the low confidence scores of the model.</li>
+<li>Xception.</li>
+</ul>
+
+<h2 id="normalization-revisiting-and-formulation">Normalization Revisiting and Formulation</h2>
+
+<p>The authors did a nice which is to unify the formula of popular normalization
+techniques as well as the figure. Take a look the figure, in some extends,
+we can say that GroupNorm is and variant of LayerNorm and Instance Norm.</p>
+
+<figure>
+    <img src="/groupnorm/normalization_methods.jpg"
+         alt="Normalization Methods"/> <figcaption>
+            <p>Normalization Methods</p>
+        </figcaption>
+</figure>
+
+<p>Interestingly, <em>Layer Norm</em> looks oddly like the pooling method in Triangulation Embedding, or other higher-level features. Based on the figure, we also figure out why <em>Batch Norm</em> is not effective on small batch size, namely N is small and there are not enough sample to compute the good approximation for two moments (mean and standard deviation). So how do other methods try to overcome that problem? They try to compute the statistics on the channel itself. Most of the lingua franca CNN models use 64, 128 or 256 channels in the conv layer, hence we have relatively samples in order to compensate the lack of samples in each batch.</p>
+
+<p>Regarding the computation, the family of normalization layers are composed of two steps:</p>
+
+<ol>
+<li>Compute the statistics and normalize the input:</li>
+</ol>
+
+<p>$$ \hat{x_i} = \frac{1}{\sigma_i} (x_i - \mu_i) $$</p>
+
+<p>where $\mu_i$ and $\sigma_i$ are computed for a subset $S_i$ of feature maps from a batch of input. The art of creating a new normalization layer is how to design a new subset which is able to overcome some shortcomings of previous methods.</p>
+
+<ol>
+<li>For each channel, learn a linear transformation to compensate for the possible lost of representational ability:</li>
+</ol>
+
+<p>$$ y_i = \gamma \hat{x_i} + \beta $$</p>
+
+<p>where $\gamma$ and $\beta$ are trainable scale and shift.</p>
+
+<h1 id="implementation">Implementation</h1>
+
+<p>The paper also mentioned the Tensorflow implementation, I don&rsquo;t want to take about it much. However, <a href="https://github.com/pytorch/pytorch/blob/f4b434a6a53d9fe45283aee8572174f94a79f558/caffe2/operators/group_norm_op.h#L94">the C++ implementation</a> from caffe2 is worth reading. Why? Since it compute 2 moments in the inference time, hence I thought there is no way to integrate the layer into the penultimate Conv Layer, which is kind of disappointed since I want to optimize the inference model on mobile.</p>
+
+<p>Interestingly, I also found that there are <a href="https://github.com/pytorch/pytorch/issues/1410">different implementations</a> for BatchNorm and there is no agreement across all popular deep learning frameworks about whether or not using Bessel&rsquo;s corrections.</p>
+
+<p>Surprisingly enough, by using running standard deviations, we can avoid some serious numerical errors and get better approximation compared to the textbook formula of standard deviation. Some discussions are the problem and how to compute std can be found in The Art of Computer Programming, Volume 2, Section 4.2.2 or <a href="https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Example">wiki page of calculating variance</a>.</p>
+
+<h1 id="experiments">Experiments</h1>
+
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Label Recall</th>
+<th>Label Precision</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Dataset 1 (AffineChannel)</td>
+<td>0.2464</td>
+<td>0.3310</td>
+</tr>
+
+<tr>
+<td>Dataset 1 (GroupNorm)</td>
+<td>0.2676</td>
+<td>0.3615</td>
+</tr>
+
+<tr>
+<td>Dataset 2 (AffineChannel)</td>
+<td>0.2492</td>
+<td>0.3400</td>
+</tr>
+
+<tr>
+<td>Dataset 2 (GroupNorm)</td>
+<td>0.2620</td>
+<td>0.3761</td>
+</tr>
+</tbody>
+</table>
+
+<p>From my own experiments, GroupNorm indeed helps to improve the performance of detection models (+8% on recall and precision, of course, after setting the corresponding thresholds) on two COCOesque datasets. But adapting GroupNorm to mobile frameworks may be difficult, some don&rsquo;t support this layer and we have to write our own CPU/CUDA code. Another workaround is to stick to BatchNorm, use smaller image size to train and increase the batch size. AffineChannel is another choice. It is relatively good and easily to merge into the conv layer in order to save the memory.</p>
+
+<p>Nonetheless, the setting using GroupNorm only apply for the FPN layers. I wonder what happen if I replace all AffineChannel or Spatial BatchNorm by GroupNorm, even on the backbone. Will put the results soon (If I have time to do such experiments).</p>
+
+<p>In conclusion, <em>GroupNorm</em> is simple yet effective normalization methods to use in case you have to train models with small batch size.</p>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+
