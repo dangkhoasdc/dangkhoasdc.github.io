@@ -86,7 +86,7 @@ techniques. Take a look the figure, in some extends, we can say that GroupNorm i
         </figcaption>
 </figure>
 
-<p>Interestingly, <em>Layer Norm</em> looks oddly like the pooling method in Triangulation Embedding, or other higher-level features. Based on the figure, we also figure out why <em>Batch Norm</em> is not effective on small batch size, namely N is small and there are not enough sample to compute the good approximation for two moments (mean and variance). So how do other methods try to overcome that problem? They try to compute the statistics on the channel itself. Most of the lingua franca CNN models use 64, 128 or 256 channels in the conv layer, hence we have relatively enough values in order to compensate the lack of samples in each batch.</p>
+<p>Interestingly, <em>Layer Norm</em> looks oddly like the pooling method in Triangulation Embedding, or other higher-level features. Based on the figure, we also figure out why <em>Batch Norm</em> is not effective on small batch size, namely N is small and there are not enough sample to compute the good approximation for two moments (mean and variance). So how do other methods try to overcome that problem? They try to compute the statistics on the channel itself. Most of the common CNN models use 64, 128 or 256 channels in the conv layer, hence we have relatively enough values in order to compensate the lack of samples in each batch.</p>
 
 <p>Regarding the computation, the family of normalization layers are composed of two steps:</p>
 

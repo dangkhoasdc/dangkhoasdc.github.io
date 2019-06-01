@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mobile devices on My blog</title>
+    <link>http://dangkhoasdc.github.io/tags/mobile-devices/</link>
+    <description>Recent content in mobile devices on My blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi</language>
+    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://dangkhoasdc.github.io/tags/mobile-devices/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Image detections on mobile devices</title>
+      <link>http://dangkhoasdc.github.io/post/2019/05/28/image-detections-on-mobile-devices/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2019/05/28/image-detections-on-mobile-devices/</guid>
+      <description>I have been working on image detection on mobile devices for the last 6 weeks, which is not long enough to delve into some research paper on model compression or pruning techniques but adequate to get into and conduct some experiments on some detection models.
+Firstly, let look at the detection model and make some terms. A detection usually (and from some of the state-of-the-art model: RetinaNet) is composed of 3 components, from bottom to top:</description>
+    </item>
+    
+  </channel>
+</rss>
