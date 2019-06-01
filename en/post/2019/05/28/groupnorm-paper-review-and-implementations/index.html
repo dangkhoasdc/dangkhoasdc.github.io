@@ -109,9 +109,9 @@ we can say that GroupNorm is and variant of LayerNorm and Instance Norm.</p>
 
 <h1 id="implementation">Implementation</h1>
 
-<p>The paper also mentioned the Tensorflow implementation, I don&rsquo;t want to take about it much. However, <a href="https://github.com/pytorch/pytorch/blob/f4b434a6a53d9fe45283aee8572174f94a79f558/caffe2/operators/group_norm_op.h#L94">the C++ implementation</a> from caffe2 is worth reading. Why? Since it compute 2 moments in the inference time, hence I thought there is no way to integrate the layer into the penultimate Conv Layer, which is kind of disappointed since I want to optimize the inference model on mobile.</p>
+<p>The paper also mentioned the Tensorflow implementation, I don&rsquo;t want to talk about it much. However, <a href="https://github.com/pytorch/pytorch/blob/f4b434a6a53d9fe45283aee8572174f94a79f558/caffe2/operators/group_norm_op.h#L94">the C++ implementation</a> from caffe2 is worth reading. Why? Since it computes 2 moments in the inference time, hence I thought there is no way to integrate the layer into the penultimate Conv Layer, which is kind of disappointed since I want to optimize the inference model on mobile.</p>
 
-<p>Interestingly, I also found that there are <a href="https://github.com/pytorch/pytorch/issues/1410">different implementations</a> for BatchNorm and there is no agreement across all popular deep learning frameworks about whether or not using Bessel&rsquo;s corrections.</p>
+<p>Interestingly, I&rsquo;ve also found that there are <a href="https://github.com/pytorch/pytorch/issues/1410">different implementations</a> for BatchNorm and there is no agreement across all popular deep learning frameworks about whether or not Bessel&rsquo;s corrections are applied.</p>
 
 <p>Surprisingly enough, by using running standard deviations, we can avoid some serious numerical errors and get better approximation compared to the textbook formula of standard deviation. Some discussions are the problem and how to compute std can be found in The Art of Computer Programming, Volume 2, Section 4.2.2 or <a href="https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Example">wiki page of calculating variance</a>.</p>
 
@@ -153,7 +153,7 @@ we can say that GroupNorm is and variant of LayerNorm and Instance Norm.</p>
 </tbody>
 </table>
 
-<p>From my own experiments, GroupNorm indeed helps to improve the performance of detection models (+8% on recall and precision, of course, after setting the corresponding thresholds) on two COCOesque datasets. But adapting GroupNorm to mobile frameworks may be difficult, some don&rsquo;t support this layer and we have to write our own CPU/CUDA code. Another workaround is to stick to BatchNorm, use smaller image size to train and increase the batch size. AffineChannel is another choice. It is relatively good and easily to merge into the conv layer in order to save the memory.</p>
+<p>From my own experiments whose model essentially are RetinaNet from Detectron library, GroupNorm indeed helps to improve the performance of detection models (+8% on recall and precision, of course, after setting the corresponding thresholds) on two COCOesque datasets. But adapting GroupNorm to mobile frameworks may be difficult, some don&rsquo;t support this layer and we have to write our own CPU/CUDA code. Another workaround is to stick to BatchNorm, use smaller image size to train and increase the batch size. AffineChannel is another choice. It is relatively good and easily to merge into the conv layer in order to save the memory.</p>
 
 <p>Nonetheless, the setting using GroupNorm only apply for the FPN layers. I wonder what happen if I replace all AffineChannel or Spatial BatchNorm by GroupNorm, even on the backbone. Will put the results soon (If I have time to do such experiments).</p>
 
