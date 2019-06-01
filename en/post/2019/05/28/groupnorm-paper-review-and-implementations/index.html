@@ -70,15 +70,14 @@ other networks.</p>
 
 <ul>
 <li>ResNext.</li>
-<li>MobileNet. Note to self: after several weeks working on detection, we found out that MobileNet does not work well for detection. One paper support this observation [<a href="https://arxiv.org/pdf/1905.10011.pdf">Light-Weight RetinaNet for Object Detection</a>] . Their observation is also consistent with my experiment results, especially about the low confidence scores of the model.</li>
+<li>MobileNet. Note to self: after several weeks working on detection, we found out that MobileNet does not work well for detection. One paper supports this observation [<a href="https://arxiv.org/pdf/1905.10011.pdf">Light-Weight RetinaNet for Object Detection</a>] . Their observation is also consistent with my experiment results, especially about the low confidence scores of the model.</li>
 <li>Xception.</li>
 </ul>
 
 <h2 id="normalization-revisiting-and-formulation">Normalization Revisiting and Formulation</h2>
 
-<p>The authors did a nice which is to unify the formula of popular normalization
-techniques as well as the figure. Take a look the figure, in some extends,
-we can say that GroupNorm is and variant of LayerNorm and Instance Norm.</p>
+<p>The authors did a nice job which is to unify the formula of popular normalization
+techniques. Take a look the figure, in some extends, we can say that GroupNorm is a variant of LayerNorm and Instance Norm.</p>
 
 <figure>
     <img src="/groupnorm/normalization_methods.jpg"
@@ -87,7 +86,7 @@ we can say that GroupNorm is and variant of LayerNorm and Instance Norm.</p>
         </figcaption>
 </figure>
 
-<p>Interestingly, <em>Layer Norm</em> looks oddly like the pooling method in Triangulation Embedding, or other higher-level features. Based on the figure, we also figure out why <em>Batch Norm</em> is not effective on small batch size, namely N is small and there are not enough sample to compute the good approximation for two moments (mean and standard deviation). So how do other methods try to overcome that problem? They try to compute the statistics on the channel itself. Most of the lingua franca CNN models use 64, 128 or 256 channels in the conv layer, hence we have relatively samples in order to compensate the lack of samples in each batch.</p>
+<p>Interestingly, <em>Layer Norm</em> looks oddly like the pooling method in Triangulation Embedding, or other higher-level features. Based on the figure, we also figure out why <em>Batch Norm</em> is not effective on small batch size, namely N is small and there are not enough sample to compute the good approximation for two moments (mean and variance). So how do other methods try to overcome that problem? They try to compute the statistics on the channel itself. Most of the lingua franca CNN models use 64, 128 or 256 channels in the conv layer, hence we have relatively enough values in order to compensate the lack of samples in each batch.</p>
 
 <p>Regarding the computation, the family of normalization layers are composed of two steps:</p>
 
@@ -153,11 +152,11 @@ we can say that GroupNorm is and variant of LayerNorm and Instance Norm.</p>
 </tbody>
 </table>
 
-<p>From my own experiments whose model essentially are RetinaNet from Detectron library, GroupNorm indeed helps to improve the performance of detection models (+8% on recall and precision, of course, after setting the corresponding thresholds) on two COCOesque datasets. But adapting GroupNorm to mobile frameworks may be difficult, some don&rsquo;t support this layer and we have to write our own CPU/CUDA code. Another workaround is to stick to BatchNorm, use smaller image size to train and increase the batch size. AffineChannel is another choice. It is relatively good and easily to merge into the conv layer in order to save the memory.</p>
+<p>From my own experiments whose model essentially are RetinaNet from Detectron library, GroupNorm indeed helps to improve the performance of detection models (+8% on recall and precision, of course, after setting the corresponding thresholds) on two COCOesque datasets. However, adapting GroupNorm to mobile frameworks may be difficult, some don&rsquo;t support this layer and we have to write our own CPU/CUDA code. Another workaround is to stick to BatchNorm, use smaller image size to train and increase the batch size. AffineChannel is another choice. It is relatively good and easily to merge into the conv layer in order to save the memory.</p>
 
-<p>Nonetheless, the setting using GroupNorm only apply for the FPN layers. I wonder what happen if I replace all AffineChannel or Spatial BatchNorm by GroupNorm, even on the backbone. Will put the results soon (If I have time to do such experiments).</p>
+<p>Nonetheless, GroupNorm are only used in the FPN layers in all settings. I wonder what happens if I replace all AffineChannel or Spatial BatchNorm by GroupNorm, even on the backbone. I will put the results soon (If I have time to do such experiments).</p>
 
-<p>In conclusion, <em>GroupNorm</em> is simple yet effective normalization methods to use in case you have to train models with small batch size.</p>
+<p>In conclusion, <em>GroupNorm</em> is simple yet effective normalization method to use in case you have to train models with small batch size.</p>
 
 </main>
 
