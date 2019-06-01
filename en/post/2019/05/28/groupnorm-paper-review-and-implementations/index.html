@@ -154,7 +154,7 @@ techniques. Take a look the figure, in some extends, we can say that GroupNorm i
 
 <p>From my own experiments whose model essentially are RetinaNet from Detectron library, GroupNorm indeed helps to improve the performance of detection models (+8% on recall and precision, of course, after setting the corresponding thresholds) on two COCOesque datasets. However, adapting GroupNorm to mobile frameworks may be difficult, some don&rsquo;t support this layer and we have to write our own CPU/CUDA code. Another workaround is to stick to BatchNorm, use smaller image size to train and increase the batch size. AffineChannel is another choice. It is relatively good and easily to merge into the conv layer in order to save the memory.</p>
 
-<p>Nonetheless, GroupNorm are only used in the FPN layers in all settings. I wonder what happens if I replace all AffineChannel or Spatial BatchNorm by GroupNorm, even on the backbone. I will put the results soon (If I have time to do such experiments).</p>
+<p>Nonetheless, GroupNorm is only used in the FPN layers in all settings. I wonder what happens if I replace all AffineChannel or Spatial BatchNorm by GroupNorm, even on the backbone. I will put the results soon (If I have time to do such experiments).</p>
 
 <p>In conclusion, <em>GroupNorm</em> is simple yet effective normalization method to use in case you have to train models with small batch size.</p>
 
