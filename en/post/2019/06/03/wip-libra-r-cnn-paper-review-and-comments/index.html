@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>[WIP] Libra R-CNN: Paper review and comments | Dang-Khoa&#39;s blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/books/">Books</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+      
+
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">[WIP] Libra R-CNN: Paper review and comments</span></h1>
+
+<h2 class="date">2019/06/03</h2>
+</div>
+
+
+
+<main>
+
+
+<p>Regarding the object detection problem, it seems like the community pays less
+attention to training pipeline than other tasks such as network design,
+inference improvement. This paper investigates the current problem of the
+CNN detection models. They consider the imbalance phenomenon, which is composed
+of 3 levels:</p>
+
+<ol>
+<li>Sample level.</li>
+<li>Feature level.</li>
+<li>Objective level.</li>
+</ol>
+
+<p>They basically are 3 corresponding major components of a detection model:
+feature extraction, region proposals, and predictors. Based on such categorization,
+they propose the following improvements:</p>
+
+<ol>
+<li>IoU-balanced sampling.</li>
+<li>Balanced feature pyramid.</li>
+<li>Balanced L1 loss.</li>
+</ol>
+
+<p>So, everything is balanced now.</p>
+
+<figure>
+    <img src="/libra_rcnn/balance_force.jpg"/> 
+</figure>
+
+<p>The authors draw a pretty nice figure to demonstrate their points.</p>
+
+<figure>
+    <img src="/libra_rcnn/imbalance_level.jpg"/> 
+</figure>
+
+<h1 id="review-and-analysis">Review and Analysis</h1>
+
+<figure>
+    <img src="/libra_rcnn/libra_rcnn.jpg"/> 
+</figure>
+
+<p>Now, let take a look at 3 aspects of imbalance training from the point of view
+of this paper.</p>
+
+<h2 id="sample-level-imbalance">Sample level Imbalance</h2>
+
+<p>There are many circumstances in which the training data, especially the easy samples,
+becomes imbalance:</p>
+
+<ul>
+<li><p>Data distribution: it becomes severe if the training data is bias to certain
+viewpoints, pose or object shape. The model needs to focus on the hard positive
+samples in order to gain more gradient, and thus it is able to learn and
+generalize. Otherwise, it keeps learning from easy samples, which make the
+gradient is almost 0. These cases are considered as <em>hard positives</em>, which
+is not examined in this paper.</p></li>
+
+<li><p>Data sampling: two-stage detectors use data sampling in order to train the
+model. Even though the number of images is small (2 or 4) and the number of
+grouthtruth is also relatively small. Considering the COCO dataset, even though
+we have 80 labels, not all of the images has a large number of boxes. Meanwhile,
+the sampler usually generates thousands of regions, hence the easy negative samples
+dominate the whole set.</p></li>
+
+<li><p>This is the well-known problem in object detection, hence many papers tried to
+tackle this problem. There are 2 methods worth mentioning:</p>
+
+<ul>
+<li><p>OHEM: Instead of freezing the network, computing the hard negative examples,
+adding them to the training set and continuing training the model, OHEM directly
+computes all the ROIs in a batch and selects the hard negatives from them.</p></li>
+
+<li><p>Focal loss takes a whole different approach. It reshapes the standard
+cross entropy loss such that it down-weights the loss assigned to
+well-classified examples. The authors argue that Focal Loss shows little
+improvement in R-CNN. It may be true, I only tested this loss on one-stage
+detection models. However, Yolov3&rsquo;s authors also mentioned Focal Loss does
+not work well on their model.</p></li>
+</ul></li>
+</ul>
+
+<h2 id="feature-level-imbalance">Feature level imbalance</h2>
+
+<p>This quote is interesting when they talk about FPN and PANet - region proposal
+methods that use multi-scale feature mapping:</p>
+
+<blockquote>
+<p>The methods inspire us that the low-level and high-level information are complementary
+for object detection. The approach that how they are utilized to integrate
+the pyramidal representations determines the detection performance. &hellip;
+Our study reveals that the integrated features should possess balanced information from each resolution.
+But the sequential manner in the aforementioned methods will make integrated feature focus more on adjacent resolution but less on others.
+The semantic information contained in non-adjacent levels would be diluted once per fusion during the information flow.</p>
+</blockquote>
+
+<p>This section of the paper is quite weak and not convincing. They do not mention
+any experiments to justify their arguments. In addition, they said they inspired
+from the aforementioned methods but did not elaborate on how they come up with
+the proposed method.</p>
+
+<h2 id="objective-level-imbalance">Objective level imbalance</h2>
+
+<p>Nowadays, a typical object detection model carries two tasks: label classification
+and box regression. Depend on the difficulty and the distribution of training data,
+the ultimate objective may not be integrated well from two separate losses.
+For example, the box regression is compromised, hence it leads to the high
+performance on box results but poor on concept results.</p>
+
+<p>Imbalance easy-hard samples also affect the gradient of the model. If the easy
+samples make up the majority of the batch, the gradient is dominated by
+the hard examples and thus the model learns nothing from the easy samples.
+Despite being called &ldquo;easy samples&rdquo;, it does not mean that there is nothing
+to learn from the easy samples. The reason is that once the model is able
+to spot the &ldquo;easy&rdquo; feature in the image, it discards the remaining visual
+features remaining in the image. In other words, it only looks at some
+particular position/feature in the image which makes it easy to learn.</p>
+
+<hr />
+
+<p>In my opinion, sample imbalance and feature imbalance are the most important
+aspects we have to deal with. It seems like CNN can learn different viewpoints
+as long as we provide proper training data. Nonetheless, we can not feed
+a huge amount of data of every object of every single angle. Secondly, the
+annotation quality dramatically changes because of the quality, characteristic
+of the image. For example, stock images, product images get clear, accurate
+bounding box label. Photos the are taken from smartphones, random images on Internet,
+on the other hand, are completely different story. By looking at the annotation
+of COCO dataset, you know what I mean.</p>
+
+<h1 id="proposed-methods">Proposed Methods</h1>
+
+<h2 id="iou-balanced-sampling">IoU-balanced Sampling</h2>
+
+<p>I really don&rsquo;t understand Figure 3 in the paper. What is the setting of the
+experiment? How do they identify the overlap between the sample and its
+corresponding ground truth?</p>
+
+<figure>
+    <img src="/libra_rcnn/confused.jpg"/> 
+</figure>
+
+<p>Turn out the figure is not difficult to interpret. The IoU in the figure means
+the overlap between the ground truths and the generated regions from samplers.
+So, the experiment points out that hard samples has higher IoU with the ground truths
+than that of random samples. Therefore, the authors propose a new sampling
+scheme that conforms with the IoU distribution of hard examples.</p>
+
+<h2 id="balanced-feature-pyramid">Balanced Feature Pyramid</h2>
+
+<figure>
+    <img src="/libra_rcnn/balance_fpn.jpg"
+         alt="Balance Feature Proposals"/> <figcaption>
+            <p>Balance Feature Proposals</p>
+        </figcaption>
+</figure>
+
+<p>The algorithm for this method is described as the following:</p>
+
+<pre><code>1. [Rescaling]: Resize all feature map into 1 size (intermediate size) using interpolation and max-pooling.
+2. [Integrating]: Sum all rescaled feature and normalize it.
+3. [Strengthening]: Rescale the obtained feature to the original resolutions.
+4. [Refining]: Directly use convolutions or use non-local module such as Gaussian non-local attention.
+</code></pre>
+
+<p>We can interpret those steps as applying a Pooling layer to form high-level
+feature, which resembles the final pooling of image retrieval. Hence, it means
+to improve the abstract level of the feature.</p>
+
+<h2 id="balanced-l1-loss">Balanced L1 Loss</h2>
+
+<p>The whole formulation of the loss can be seen in the paper. In summary, the authors
+want to: (1) cap the gradient of the box regression in order to balance with
+the classification gradient and (2) improve the gradient of the easy samples.</p>
+
+<h1 id="experiment-results">Experiment results</h1>
+
+<p>From the result of ablation experiments in Table 2, there is some interesting
+stuff I have observed:</p>
+
+<ul>
+<li>In general, combining 3 methods dramatically improves the average precision
+of large objects. However, there is not much effect shown in the small objects.
+In my opinion, small objects still are the most difficult aspect to improve detection models.</li>
+<li>IoU balanced Sampling and Balanced L1 Loss clearly help to improve the Average
+Precision at IoU=0.75. It means they produce boxes closer to the ground truth.</li>
+<li>The same trend also can be seen on RetinaNet in which the authors only two
+methods (Balanced Feature Pyramid and Balanced L1 Loss). Again, the proposed methods
+improve the overall performance with quite a large margin (+5%), especially on
+the large objects.</li>
+</ul>
+
+<h2 id="implementation">Implementation</h2>
+
+<p>In the next two weeks, I will implement the balanced feature pyramid and
+the balanced L1 loss. I am not sure if I have time for IoU sampler since my
+focus is on RetinaNet which naturally does not use sampler (but we can trick it
+a bit and utilize the component). Even though the authors have already released
+source code using Pytorch, I have to rewrite the whole things through caffe2
+and Detectron. It may take a while.</p>
+
+</main>
+
+  <footer>
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-2381283-3', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  
+  <hr/>
+  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
+  
+  </footer>
+  </body>
+</html>
+

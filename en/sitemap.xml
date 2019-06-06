@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://dangkhoasdc.github.io/en/categories/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -20,7 +20,7 @@
   
   <url>
     <loc>http://dangkhoasdc.github.io/en/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -35,13 +35,8 @@
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/en/post/2019/05/28/groupnorm-paper-review-and-implementations/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://dangkhoasdc.github.io/en/categories/machine-learning/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -57,7 +52,7 @@
   
   <url>
     <loc>http://dangkhoasdc.github.io/en/post/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -73,7 +68,7 @@
   
   <url>
     <loc>http://dangkhoasdc.github.io/en/tags/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -88,8 +83,13 @@
   </url>
   
   <url>
+    <loc>http://dangkhoasdc.github.io/en/post/2019/06/03/wip-libra-r-cnn-paper-review-and-comments/</loc>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dangkhoasdc.github.io/en/tags/deep-learning/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -104,8 +104,14 @@
   </url>
   
   <url>
+    <loc>http://dangkhoasdc.github.io/en/tags/object-detection/</loc>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://dangkhoasdc.github.io/en/tags/review/</loc>
-    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -120,14 +126,8 @@
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/en/post/2019/03/06/wip-libra-r-cnn-paper-review-and-comments/</loc>
-    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/en/tags/object-detection/</loc>
-    <lastmod>2019-03-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>http://dangkhoasdc.github.io/en/post/2019/05/28/groupnorm-paper-review-and-implementations/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>

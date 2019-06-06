@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Dang-Khoa&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,27 +14,27 @@
     <item>
       <title>deep learning</title>
       <link>http://dangkhoasdc.github.io/en/tags/deep-learning/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/en/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>review</title>
-      <link>http://dangkhoasdc.github.io/en/tags/review/</link>
-      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      <title>object detection</title>
+      <link>http://dangkhoasdc.github.io/en/tags/object-detection/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/en/tags/review/</guid>
+      <guid>http://dangkhoasdc.github.io/en/tags/object-detection/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>object detection</title>
-      <link>http://dangkhoasdc.github.io/en/tags/object-detection/</link>
-      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <title>review</title>
+      <link>http://dangkhoasdc.github.io/en/tags/review/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/en/tags/object-detection/</guid>
+      <guid>http://dangkhoasdc.github.io/en/tags/review/</guid>
       <description></description>
     </item>
     
