@@ -6,10 +6,19 @@
     <description>Recent content in object detection on Dang-Khoa&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Mon, 03 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/en/tags/object-detection/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sampling techniques for Partially Annotated Detection</title>
+      <link>http://dangkhoasdc.github.io/en/post/2019/06/11/sampling-techniques-for-partially-annotated-detection/</link>
+      <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/en/post/2019/06/11/sampling-techniques-for-partially-annotated-detection/</guid>
+      <description>In this post, I will discuss two papers that try to handle the partially annotated datasets. Let talk a bit about why we care about missing annotations in detection. Firstly, labelling box is difficult. Increasing the size of taxonomy also exponentially increase the difficulty of the task. Secondly, Suppose that originally we have a training dataset with 20 categories, later, we want to add 10 more new categories into the model.</description>
+    </item>
     
     <item>
       <title>[WIP] Libra R-CNN: Paper review and comments</title>

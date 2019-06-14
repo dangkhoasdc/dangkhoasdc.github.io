@@ -201,8 +201,8 @@ scheme that conforms with the IoU distribution of hard examples.</p>
 
 <pre><code>1. [Rescaling]: Resize all feature map into 1 size (intermediate size) using interpolation and max-pooling.
 2. [Integrating]: Sum all rescaled feature and normalize it.
-3. [Strengthening]: Rescale the obtained feature to the original resolutions.
-4. [Refining]: Directly use convolutions or use non-local module such as Gaussian non-local attention.
+3. [Refining]: Directly use convolutions or use non-local module such as Gaussian non-local attention.
+4. [Strengthening]: Rescale the obtained feature to the original resolutions.
 </code></pre>
 
 <p>We can interpret those steps as applying a Pooling layer to form high-level
@@ -240,6 +240,53 @@ focus is on RetinaNet which naturally does not use sampler (but we can trick it
 a bit and utilize the component). Even though the authors have already released
 source code using Pytorch, I have to rewrite the whole things through caffe2
 and Detectron. It may take a while.</p>
+
+<hr />
+
+<h3 id="weighted-component-loss">Weighted Component Loss</h3>
+
+<p>In couple of experiments, I have found that there is a big gap betwwen box
+precision and concept precision. So, my hypothesis is that the box regression
+loss actually dominate the whole loss of the model. From the that, I half
+the weight of the box regression and train the model. Here is the results:</p>
+
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Concept Recall</th>
+<th>Concept Precision</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>resnet_36_tiny12_v0800 (baseline, size 256)</td>
+<td>0.4000</td>
+<td>0.4445</td>
+</tr>
+
+<tr>
+<td>resnet36_tiny15_v0900</td>
+<td>0.4122 (+3.05%)</td>
+<td>0.4685 (+5.40%)</td>
+</tr>
+
+<tr>
+<td>resnet36_tiny14_v0800 (baseline, size 320)</td>
+<td>0.4194</td>
+<td>0.4651</td>
+</tr>
+
+<tr>
+<td>resnet36_tiny16_v0800</td>
+<td>0.3906 (-6.8%)</td>
+<td>0.4984 (+7.16)</td>
+</tr>
+</tbody>
+</table>
+
+<p><code>tiny12</code> and <code>tiny15</code> are basically the same except <code>tiny15</code> use smaller loss weight for box regression (0.5 insteadof 1.0). The same settings are applied for <code>tiny14</code> and <code>tiny16</code>. From the result, we can see by balancing the loss component, even with the naive approach, it indeed helps the overall performance. However, the second setting is difficult to observe the performance gain. I better use the mAP instead.</p>
 
 </main>
 
