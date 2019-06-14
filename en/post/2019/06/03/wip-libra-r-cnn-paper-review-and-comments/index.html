@@ -247,7 +247,7 @@ and Detectron. It may take a while.</p>
 
 <p>In couple of experiments, I have found that there is a big gap betwwen box
 precision and concept precision. So, my hypothesis is that the box regression
-loss actually dominate the whole loss of the model. From the that, I half
+loss actually dominates the whole loss of the model. From the that, I halve
 the weight of the box regression and train the model. Here is the results:</p>
 
 <table>
@@ -286,7 +286,7 @@ the weight of the box regression and train the model. Here is the results:</p>
 </tbody>
 </table>
 
-<p><code>tiny12</code> and <code>tiny15</code> are basically the same except <code>tiny15</code> use smaller loss weight for box regression (0.5 insteadof 1.0). The same settings are applied for <code>tiny14</code> and <code>tiny16</code>. From the result, we can see by balancing the loss component, even with the naive approach, it indeed helps the overall performance. However, the second setting is difficult to observe the performance gain. I better use the mAP instead.</p>
+<p><code>tiny12</code> and <code>tiny15</code> are basically the same except <code>tiny15</code> uses smaller loss weight for box regression (0.5 insteadof 1.0). The same settings are applied for <code>tiny14</code> and <code>tiny16</code>, respectively. From the result, we can see by balancing the loss component, even with the naive approach, it indeed helps the overall performance. However, the second setting is difficult to observe the performance gain. I better use the mAP instead.</p>
 
 </main>
 
