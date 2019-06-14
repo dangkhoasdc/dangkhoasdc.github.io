@@ -44,14 +44,14 @@
 
 <p>In this post, I will discuss two papers that try to handle the partially
 annotated datasets. Let talk a bit about why we care about missing annotations
-in detection. Firstly, labelling box is difficult. Increasing the size of
+in detection. Firstly, labeling box is difficult and tedious. Increasing the size of
 taxonomy also exponentially increase the difficulty of the task. Secondly,
 Suppose that originally we have a training dataset with 20 categories, later,
 we want to add 10 more new categories into the model. The question is: do we
 need to reannotate the training dataset? Or do we have any techniques that
 automatically solve the problem? Recently, we have the Open Images Dataset
 with a huge number of images and annotations, hence, the community also
-becames interested in this problem. I found two papers that are interesting:</p>
+becomes interested in this problem. I found two papers that are interesting:</p>
 
 <ol>
 <li>Wu, Zhe, et al. &ldquo;Soft sampling for robust object detection.&rdquo; arXiv preprint arXiv:1806.06986 (2018).</li>
@@ -62,20 +62,20 @@ becames interested in this problem. I found two papers that are interesting:</p>
 system under the presence of mission annotations. I have done this one before
 with COCO-like datasets. However, the authors have a systematic way to
 conduct experiments than me. Their conclusion is also interesting:
-&gt; we observe that after droppping 30% of the annotations (and labeling them
+&gt; we observe that after dropping 30% of the annotations (and labeling them
 &gt; as background), the performance of CNN-based object detectors like
-&gt; Faster-RCNN only drops by 5% on the PASCAL VOC datasset.</p>
+&gt; Faster-RCNN only drops by 5% on the PASCAL VOC dataset.</p>
 
 <p>The thing is: the conclusion is drawn when you set the detection threshold at 0.
 It is not possible for any real object detections. You have to set higher
 thresholds in order to maintain certain precision/recall. I believe that
 any commercial object detection systems do that. For that reason, if we look at
-the result at threshold larger than 0.4, we can observe a significant drop
+the result at a threshold larger than 0.4, we can observe a significant drop
 in term of mAP, which makes sense. That being said, the authors also mentioned
 in section 4 that &ldquo;it is important for practitioners to tune the detection
-threshold per class, when using detectors trained on missing labels&rdquo;.</p>
+threshold per class when using detectors trained on missing labels&rdquo;.</p>
 
-<p>The little game is the second figure of the paper in which they shows the
+<p>The little game is the second figure of the paper in which they show the
 performance changes on <code>trainval</code> and <code>test</code> set of VOC2007 with different
 detection thresholds.</p>
 
@@ -101,7 +101,7 @@ another form of <a href="http://dangkhoasdc.github.io/en/post/2019/06/03/wip-lib
 <p>So, there is nothing surprising here.</p>
 
 <p>The authors also propose another approach (otherwise, the paper is just too
-short to be appeared in any conferences). This time they want to weight
+short to appear in any conferences). This time they want to weight
 the gradient of ROIs that are <strong>not</strong> positives or hard negatives. The weight
 function is akin to the aforementioned weight function. So basically, they
 believe their model, hoping that it relatively predict the correct objects.
@@ -112,10 +112,10 @@ is quite weak, hence this approach does not work well. The experiment results
 clearly support the observation.</p>
 
 <p>Now, let talk about the second paper. The proposed method is named as <em>pseudo
-label-guided</em>. Their observation is that if an object presence in the image,
+label-guided</em>. Their observation is that if an object presents in the image,
 some parts of the object should be included as well. Say you have a car in a
 photo, it probably also has tires in that photo as well. In other words, this
-kind of approach is only suitable for hierachical taxonomies.</p>
+kind of approach is only suitable for hierarchical taxonomies.</p>
 
 <p>The proposed method is composed of two components:</p>
 
@@ -127,14 +127,14 @@ subject categories.</p></li>
 <li><p><strong>pseudo labels</strong>: to exclude regions that are likely not to be annotated.</p></li>
 </ol>
 
-<p>So, basically they want to ignore those regions they think are missed annotated.</p>
+<p>So, basically, they want to ignore those regions they think are missed annotated.</p>
 
 <p>Table 1. in the paper is interesting. There are two notions here:</p>
 
 <ol>
-<li>Included: ratio between a set of part component and subject category in the
-same instance and totol bounding boxes of the part component.</li>
-<li>Co-occur: ratio between images obtains both part and subject categories and
+<li>Included: the ratio between a set of part component and subject category in the
+same instance and total bounding boxes of the part component.</li>
+<li>Co-occur: the ratio between images obtains both part and subject categories and
 total images having subject categories.</li>
 </ol>
 
@@ -164,8 +164,8 @@ the RoI is high enough (Line 10).</p></li>
 <h1 id="experiments">Experiments</h1>
 
 <p>Nothing special here, they just show off their experiment. However, I will
-implement <strong>soft sampling</strong> and <strong>psedo label-guided sampling</strong> in the next
-couple of weeks. Let see if these methods can actually helpsmy work or not.</p>
+implement <strong>soft sampling</strong> and <strong>pseudo label-guided sampling</strong> in the next
+couple of weeks. Let see if these methods can actually help my work or not.</p>
 
 </main>
 

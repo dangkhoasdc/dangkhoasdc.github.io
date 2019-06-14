@@ -17,7 +17,7 @@
       <pubDate>Tue, 11 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/en/post/2019/06/11/sampling-techniques-for-partially-annotated-detection/</guid>
-      <description>In this post, I will discuss two papers that try to handle the partially annotated datasets. Let talk a bit about why we care about missing annotations in detection. Firstly, labelling box is difficult. Increasing the size of taxonomy also exponentially increase the difficulty of the task. Secondly, Suppose that originally we have a training dataset with 20 categories, later, we want to add 10 more new categories into the model.</description>
+      <description>In this post, I will discuss two papers that try to handle the partially annotated datasets. Let talk a bit about why we care about missing annotations in detection. Firstly, labeling box is difficult and tedious. Increasing the size of taxonomy also exponentially increase the difficulty of the task. Secondly, Suppose that originally we have a training dataset with 20 categories, later, we want to add 10 more new categories into the model.</description>
     </item>
     
     <item>
