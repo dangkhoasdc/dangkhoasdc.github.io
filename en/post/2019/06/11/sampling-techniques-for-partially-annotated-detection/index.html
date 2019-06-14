@@ -61,10 +61,13 @@ becomes interested in this problem. I found two papers that are interesting:</p>
 <p>In the first paper, the authors try to study the robustness of the object detection
 system under the presence of mission annotations. I have done this one before
 with COCO-like datasets. However, the authors have a systematic way to
-conduct experiments than me. Their conclusion is also interesting:
-&gt; we observe that after dropping 30% of the annotations (and labeling them
-&gt; as background), the performance of CNN-based object detectors like
-&gt; Faster-RCNN only drops by 5% on the PASCAL VOC dataset.</p>
+conduct experiments than me. Their conclusion is also interesting:</p>
+
+<blockquote>
+<p>we observe that after dropping 30% of the annotations (and labeling them
+as background), the performance of CNN-based object detectors like
+Faster-RCNN only drops by 5% on the PASCAL VOC dataset.</p>
+</blockquote>
 
 <p>The thing is: the conclusion is drawn when you set the detection threshold at 0.
 It is not possible for any real object detections. You have to set higher
