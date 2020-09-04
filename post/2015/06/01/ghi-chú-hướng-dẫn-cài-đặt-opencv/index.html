@@ -1,130 +1,237 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ghi chú hướng dẫn cài đặt OpenCV | My blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="programming,
+computer vison,
+tutorial,
+">
+
+<meta property="og:title" content="Ghi chú hướng dẫn cài đặt OpenCV" />
+<meta property="og:description" content="I don&rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.
+ Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C&#43;&#43;, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.
+Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style step by step nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2015/06/01/ghi-ch%C3%BA-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv/" />
+<meta property="article:published_time" content="2015-06-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-06-01T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ghi chú hướng dẫn cài đặt OpenCV"/>
+<meta name="twitter:description" content="I don&rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.
+ Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C&#43;&#43;, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.
+Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style step by step nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn."/>
+
+
+<meta itemprop="name" content="Ghi chú hướng dẫn cài đặt OpenCV">
+<meta itemprop="description" content="I don&rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.
+ Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C&#43;&#43;, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.
+Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style step by step nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn.">
+<meta itemprop="datePublished" content="2015-06-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2015-06-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="726">
+
+
+
+<meta itemprop="keywords" content="programming,computer vison,tutorial," />
+
+
+
+    <title>Ghi chú hướng dẫn cài đặt OpenCV || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2015/06/01/ghi-ch%C3%BA-h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Ghi chú hướng dẫn cài đặt OpenCV</span></h1>
-
-<h2 class="date">2015/06/01</h2>
-</div>
-
-
-
-<main>
-
-
-<blockquote>
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Ghi chú hướng dẫn cài đặt OpenCV</h1>
+  <meta itemprop="headline" content="Ghi chú hướng dẫn cài đặt OpenCV" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/programming/">#programming</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/computer-vison/">#computer vison</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/tutorial/">#tutorial</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">June 1, 2015</span></div>
+      <meta itemprop="dateModified" content="June 1, 2015"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <blockquote>
 <p>I don&rsquo;t need sex, because OpenCV and XCode (LLVM) f*ck me whole day.</p>
 </blockquote>
-
 <p>Một ngày đầy kinh khủng với OpenCV cài trên MAC OSX, đây là mới cài để xài cho Python, Qt và C++, chưa đá động đến CUDA hay OpenNI hay trên iOS nữa, vậy mà nó đã khiến mình tốn nguyên 1 ngày kinh khủng.</p>
-
 <p>Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn style <em>step by step</em> nữa, thay vào đó chỉ hướng dẫn sơ lược cũng như các trick cần nhớ để dễ cài hơn. Và lần này là hướng dẫn cài cho cross-platform. Để sure rằng đụng trên OS nào mình sẽ không còn bị ngán. (Yeah!!)</p>
-
 <h1 id="ghi-chú">Ghi chú</h1>
-
 <p>Một số ghi chú mà mình đã rút được một cách đầy xương máu, đầy kinh dị. Theo mình nhớ, cách đây 4 năm lần đầu cài OpenCV mình cũng đã mất gần 2 ngày, giờ cài trên MAC OSX mất tầm 1 ngày. Hú hồn.</p>
-
 <ol>
-<li><p>Best pratice: Tập sử dụng CMAKE hoặc Makefile. Cả 2 đều rất được việc khi config lúc build opencv hay lúc chạy chương trình. Dù muốn hay không, thì CMake vẫn là interface trên cả 3 nền tảng. Chính vì điều đó nên phải biết &hellip; tập mà xài. Ưu điểm có thể kể đến như sau:</p>
-
+<li>
+<p>Best pratice: Tập sử dụng CMAKE hoặc Makefile. Cả 2 đều rất được việc khi config lúc build opencv hay lúc chạy chương trình. Dù muốn hay không, thì CMake vẫn là interface trên cả 3 nền tảng. Chính vì điều đó nên phải biết &hellip; tập mà xài. Ưu điểm có thể kể đến như sau:</p>
 <ul>
 <li>Config được cấu hình của OpenCV. Điều này những bản build sẵn không làm được.</li>
 <li>Cấu hình phù hợp với máy. CMake sẽ tự động tìm các package và cố gắng config khi có thể.</li>
 <li>Dễ sử dụng, nếu dùng CMake GUI thì rất dễ dùng.</li>
-</ul></li>
-
-<li><p>Sau mỗi lẫn thay đổi cấu hình trên CMake thì nhấn Configure lại để CMake cập nhật.</p></li>
-
-<li><p>Với bản MAC OSX, nên chọn compiler là Unix Makefile, mọi lựa chọn khác tớ đều không chịu trách nhiệm.</p>
-
+</ul>
+</li>
+<li>
+<p>Sau mỗi lẫn thay đổi cấu hình trên CMake thì nhấn Configure lại để CMake cập nhật.</p>
+</li>
+<li>
+<p>Với bản MAC OSX, nên chọn compiler là Unix Makefile, mọi lựa chọn khác tớ đều không chịu trách nhiệm.</p>
 <blockquote>
 <p>Chuyện kinh dị đêm khuya, chọn compiler là XCode. Khi build các source khác ( 1 tool rút trích đặc trưng chẳng hạn), thế là nó
 dính ngay lỗi <code>undefined symbols for architecture x86_64</code>, lỗi này khắc phục bằng cách thêm flags <em>-lstdc++</em> vô trình biên dịch,
 nhưng đắng lòng tiếp theo là sau khi compile thì hàng mớ lỗi xảy đến vì sự khác nhau trong hệ thống standard library của XCode và
 GNU. Lúc đó, chắc chắn chả ai còn hứng thú để mà sửa lỗi tiếp.</p>
-</blockquote></li>
-
-<li><p>Nên có 1 sổ ghi chú, hoặc note ghi lại quá trình cài đặt, không là fail dài dài. Mà thậm chí là cứ làm lặp đi lặp lại mọi thứ.</p></li>
+</blockquote>
+</li>
+<li>
+<p>Nên có 1 sổ ghi chú, hoặc note ghi lại quá trình cài đặt, không là fail dài dài. Mà thậm chí là cứ làm lặp đi lặp lại mọi thứ.</p>
+</li>
 </ol>
-
 <h1 id="cài-đặt">Cài đặt</h1>
-
 <p>Trong phần này gồm các bước cài đặt OpenCV sử dụng CMake. Dùng mà thấy mình cứ như là <em>hacker</em></p>
-
 <ol>
-<li>Tải source OpenCV về.
+<li>
+<p>Tải source OpenCV về.
 a. Tải từ website.
-b. Tải từ github.</li>
-
-<li><p>Giải nén và tạo thư mục <code>build</code></p>
-
-<pre><code class="language-bash">mkdir build
-</code></pre>
-
-<ol>
-<li>Mở CMake, chọn đường dẫn đến.</li>
-<li>Nhấn Configure và chọn compiler tương ứng.</li>
+b. Tải từ github.</p>
+</li>
+<li>
+<p>Giải nén và tạo thư mục <code>build</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir build
+</code></pre></div></li>
+<li>
+<p>Mở CMake, chọn đường dẫn đến.</p>
+</li>
+<li>
+<p>Nhấn Configure và chọn compiler tương ứng.</p>
+<ul>
 <li>Bên Linux, theo mình nhớ là GNU.</li>
 <li>Bên Windows, khuyến khích chọn Visual Studio. Tuy nhiên, số phiên bản của VS khác với số năm của Visual Studio (Tức là Visual Studio 2013 thì không phải có v13).</li>
 <li>Sau bao đau thương, MAC OS X thì chọn Unix Makefile.</li>
-<li>Trong lúc nó run, thì tranh thủ đọc về sự khác nhau của <a href="http://stackoverflow.com/questions/2649334/difference-between-static-and-shared-libraries">static lib và shared lib</a></li>
-<li>Config các tham số cấu hình, mình thì quan tâm đến vài thứ sau: Qt, Python, Cuda. <em>Vì hôm nữa chắc sẽ có 1 tut khác liên quan đến mấy cái này</em>. Để ý output coi có báo lõi gì không.</li>
-<li>Nhấn <code>Configure</code> đến bao giờ trên phần tham số không còn đỏ nữa thì thôi. Lúc đó nhấn <code>build</code>.</li>
-<li>Build OpenCV thôi.
-a. Với các bé họ nhà Unix (Mac OSX, Linux &hellip;):</li>
-</ol>
-
-<pre><code class="language-bash">cd path/to/build/dir
-make -j4 # jk với k là số thread để chạy
+</ul>
+</li>
+<li>
+<p>Trong lúc nó run, thì tranh thủ đọc về sự khác nhau của <a href="http://stackoverflow.com/questions/2649334/difference-between-static-and-shared-libraries">static lib và shared lib</a></p>
+</li>
+<li>
+<p>Config các tham số cấu hình, mình thì quan tâm đến vài thứ sau: Qt, Python, Cuda. <em>Vì hôm nữa chắc sẽ có 1 tut khác liên quan đến mấy cái này</em>. Để ý output coi có báo lõi gì không.</p>
+</li>
+<li>
+<p>Nhấn <code>Configure</code> đến bao giờ trên phần tham số không còn đỏ nữa thì thôi. Lúc đó nhấn <code>build</code>.</p>
+</li>
+<li>
+<p>Build OpenCV thôi.
+a. Với các bé họ nhà Unix (Mac OSX, Linux &hellip;):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd path/to/build/dir
+make -j4 <span style="color:#75715e"># jk với k là số thread để chạy</span>
 sudo make install
-</code></pre>
-
-<p>b. Với các bé nhà Windows:</p>
-
-<p><a href="http://dangkhoahome.blogspot.sg/2012/03/huong-dan-cai-at-opencv-23-231-trong.html">Chịu khó xem lại bài post cũ của mình, mình sẽ update bản mới trong thời gian đến</a></p></li>
+</code></pre></div><p>b. Với các bé nhà Windows:</p>
+<p><a href="http://dangkhoahome.blogspot.sg/2012/03/huong-dan-cai-at-opencv-23-231-trong.html">Chịu khó xem lại bài post cũ của mình, mình sẽ update bản mới trong thời gian đến</a></p>
+</li>
 </ol>
-
 <p><em>UPDATE 1</em>: Vẫn chưa cài được Opencv 3 lên trên python sau bao nhiêu nỗ lực thực hiện với MAC OS X. Mình sẽ cài đặt nó lên trên Linux để test xem sao.</p>
-
 <p><em>UPDATE 2</em>: Chắc hôm nào sẽ viết tutorial trên cả 3 nền tảng step-by-step.</p>
-
 <p>P/S: Bạn nào muốn share bài của mình thì vô tư, nhưng nhớ ghi rõ nguồn.</p>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2015/02/25/spams-lib-v%C3%A0-nh%E1%BB%AFng-t%C3%A2m-s%E1%BB%B1/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Spams Lib và Những Tâm Sự</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2015/06/13/m%C6%B0a-v%E1%BA%ABn-hay-m%C6%B0a/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Mưa Vẫn Hay Mưa</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -135,46 +242,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

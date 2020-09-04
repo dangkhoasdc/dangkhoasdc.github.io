@@ -1,100 +1,190 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning] | My blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="video games,
+bioshock,
+AI,
+">
+
+<meta property="og:title" content="Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning]" />
+<meta property="og:description" content="Trong một ngày rảnh rỗi giữa hai đợt deadlines và trong cái không khí ảm đạm do mùa mưa sắp tới của Singapore, tôi đã quyết định ngồi chơi cái game mà hồi nhỏ mà không hiểu gì: Bioshock. Tuy nhiên lần này tôi lại chơi bản Bioshock Infinite. Để nói về game này, tôi không gọi đó là chơi game, đó là một trải nghiệm.
+  Với cốt truyện lôi cuốn cùng với những chủ đề lồng vào nhau nhuần nhuyễn, Bioshock Infinite mang đến người chơi một thành phố Columbia steampunk với bề ngoài hào nhoáng, sung túc, và hạnh phúc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2018/05/01/bioshock-elizabeth-hay-h%E1%BB%8Dc-t%C4%83ng-c%C6%B0%E1%BB%9Dng-reinforcement-learning/" />
+<meta property="article:published_time" content="2018-05-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-05-01T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning]"/>
+<meta name="twitter:description" content="Trong một ngày rảnh rỗi giữa hai đợt deadlines và trong cái không khí ảm đạm do mùa mưa sắp tới của Singapore, tôi đã quyết định ngồi chơi cái game mà hồi nhỏ mà không hiểu gì: Bioshock. Tuy nhiên lần này tôi lại chơi bản Bioshock Infinite. Để nói về game này, tôi không gọi đó là chơi game, đó là một trải nghiệm.
+  Với cốt truyện lôi cuốn cùng với những chủ đề lồng vào nhau nhuần nhuyễn, Bioshock Infinite mang đến người chơi một thành phố Columbia steampunk với bề ngoài hào nhoáng, sung túc, và hạnh phúc."/>
+
+
+<meta itemprop="name" content="Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning]">
+<meta itemprop="description" content="Trong một ngày rảnh rỗi giữa hai đợt deadlines và trong cái không khí ảm đạm do mùa mưa sắp tới của Singapore, tôi đã quyết định ngồi chơi cái game mà hồi nhỏ mà không hiểu gì: Bioshock. Tuy nhiên lần này tôi lại chơi bản Bioshock Infinite. Để nói về game này, tôi không gọi đó là chơi game, đó là một trải nghiệm.
+  Với cốt truyện lôi cuốn cùng với những chủ đề lồng vào nhau nhuần nhuyễn, Bioshock Infinite mang đến người chơi một thành phố Columbia steampunk với bề ngoài hào nhoáng, sung túc, và hạnh phúc.">
+<meta itemprop="datePublished" content="2018-05-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-05-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1227">
+
+
+
+<meta itemprop="keywords" content="video games,bioshock,AI," />
+
+
+
+    <title>Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning] || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2018/05/01/bioshock-elizabeth-hay-h%E1%BB%8Dc-t%C4%83ng-c%C6%B0%E1%BB%9Dng-reinforcement-learning/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning]</span></h1>
-
-<h2 class="date">2018/05/01</h2>
-</div>
-
-
-
-<main>
-<p>Trong một ngày rảnh rỗi giữa hai đợt deadlines và trong cái không khí ảm đạm do mùa mưa sắp tới của Singapore, tôi đã quyết định ngồi chơi cái game mà hồi nhỏ mà không hiểu gì: Bioshock. Tuy nhiên lần này tôi lại chơi bản Bioshock Infinite. Để nói về game này, tôi không gọi đó là chơi game, đó là một trải nghiệm.</p>
-
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning]</h1>
+  <meta itemprop="headline" content="Bioshock: Elizabeth hay học tăng cường [Reinforcement Learning]" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/video-games/">#video games</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/bioshock/">#bioshock</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/ai/">#AI</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">May 1, 2018</span></div>
+      <meta itemprop="dateModified" content="May 1, 2018"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Trong một ngày rảnh rỗi giữa hai đợt deadlines và trong cái không khí ảm đạm do mùa mưa sắp tới của Singapore, tôi đã quyết định ngồi chơi cái game mà hồi nhỏ mà không hiểu gì: Bioshock. Tuy nhiên lần này tôi lại chơi bản Bioshock Infinite. Để nói về game này, tôi không gọi đó là chơi game, đó là một trải nghiệm.</p>
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/31-NAkq8YEY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/31-NAkq8YEY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
-
 <p>Với cốt truyện lôi cuốn cùng với những chủ đề lồng vào nhau nhuần nhuyễn, Bioshock Infinite mang đến người chơi một thành phố Columbia steampunk với bề ngoài hào nhoáng, sung túc, và hạnh phúc. Nhưng đằng sau đó là sự phân biệt chủ tộc, chủ nghĩa da trắng cực đoan, chủ nghĩa cộng sản và một xã hội bị thao tóm bởi sự cai trị tập trung lẫn về chính trị lẫn tôn giáo. Chưa dừng lại ở đó, Bioshock Infinite còn kết hợp với yếu tố khoa học viễn tưởng như vật lý lượng tử, du hành đa vũ trụ và du hành thời gian. Điều tạo nên Bioshock đặc biệt, mặc dù mang trong miình rất nhiều chủ đề khác nhau, là cùng với rất nhiều cao trào, thắt nút, lẫn những vấn đề xã hội phức tạp, các nhà làm game vẫn cho ra được một cốt truyện mạch lạc và đầy hấp dẫn. Nếu bạn yêu thích những bộ phim xoắn não như Memento, Inception, Donnie Darko, Mr.Nobody và đặc biệt là Predestination, thì Bioshock là một trải nghiệm hoàn toàn xứng đáng.</p>
-
-<p><img src="https://i.imgur.com/b9vucB7.png" alt="Imgur" /></p>
-
+<p><img src="https://i.imgur.com/b9vucB7.png" alt="Imgur"></p>
 <p>Tôi từng nhận định rằng, game không chỉ là phương tiện giải trí, mà đó còn là phương tiện nghệ thuật. Nếu ta theo dõi các nhà đạo diễn game như Hideo Kojima, Ken Levine, ta sẽ cảm nhận rõ ràng cảm hứng nghệ thuật, chủ đề lẫn cách tiếp cận người chơi để mang đến một câu chuyện lôi cuốn. Với cách nhìn nhận này, video game trở thành bước tiến của điện ảnh truyền thống. Đó chính xác là điều mà Hideo Kojima đã tạo ra với bộ Metal Gear. Và đồng thời, ta cũng thấy một xu hướng gần đây rằng rất nhiều game có sự tham gia của các đạo diễn, biên kịch nổi tiếng từ Hollywood.</p>
-
 <p>Nhưng trái tim của cả Bioshock Infinite là Elizabeth, là cách xây dựng trí tuệ nhân tạo (AI) lồng vào trong một cốt truyện, là cách mà developer tạo ra sự tương tác giữa AI và người chơi và cách AI tương tác với môi trường. AI, đó cũng chính là một trong những yếu tố phân biệt video game với các loại hình nghệ thuật khác. Chỉ cần Irrational Games tạo ra 1 Elizabeth với 1 tương tác AI ngượng ngùng, và cứng ngắt, họ đơn giản là phá hỏng toàn bộ công sức với game của mình.</p>
-
-<p><img src="https://i.imgur.com/CoCQUwJ.png" alt="Imgur" /></p>
-
+<p><img src="https://i.imgur.com/CoCQUwJ.png" alt="Imgur"></p>
 <p>Tôi đánh giá rất cao AI của nhân vật trong Bioshock Infinite hơn hẳn những game có cốt truyện hấp dẫn tương đương. Ví dụ là Witcher, mặc dù Witcher có cốt truyện lôi cuốn, nhưng tương tác giữa người chơi và các nhân vật chính khá đơn điệu, tất cả bị đơn giản hóa thành các đoạn đối thoại. Trong khi đó nhân vật Elizabeth không chỉ đồng hành cùng người chơi, mà còn tạo ra các chiến lược hoàn toàn khác nhau, đồng thời hỗ trợ người chơi trong quá trình combat. Nhưng thực ra, ta không thể trách các game thế giới mở có tương tác AI nghèo nàn, vì có quá nhiều tác nhân [agent] mà AI cần phải tương tác, và developer không thể if else cho từng trường hợp.
 Đó là lúc ta cần reinforcement learning =]] LOL. Nghiêm túc nào,</p>
-
 <p>Học tăng cường là gì?, Theo wiki tiếng Việt, ta có:</p>
-
 <blockquote>
 <p>&ldquo;là một lĩnh vực con của học máy, nghiên cứu cách thức một agent trong một môi trường nên chọn thực hiện các hành động nào để cực đại hóa một khoản reward nào đó về lâu dài. Các thuật toán học tăng cường cố gắng tìm một chiến lược ánh xạ các trạng thái của thế giới tới các hành động mà agent nên chọn trong các trạng thái đó.&rdquo;</p>
 </blockquote>
-
 <p>Vâng chính xác đó là điều ta cần làm để có thể có AI tốt trong game thế giới mở. Mỗi AI cho học 1 thuật toán reinforcement learning để có thể tương tác tốt hơn với môi trường.</p>
-
 <p>Thực ra mấy đoạn xàm kia để cho khớp với cái tiêu đề đầy tính clickbait.
 Hết câu chuyện về reinforcement learning.</p>
-
 <p>Ta quay trở lại với vấn đề làm thế nào để tạo sự liên kết giữa AI và người chơi lẫn môi trường. Một cách để giải quyết đó là định nghĩa các primitive elements trong game, và cho NPC tương tác thông qua yếu tố đó thay vì trực tiếp với từng agent trong game. Thay vì cho NPC tương tác trực tiếp với đơn vị X trong game, ta cho NPC tương tác khi NPC thấy có nổ súng, thấy có cháy, hoặc các yếu tố liên quan.
 [Dĩ nhiên, ta có thể làm chiều ngược lại, apply các kĩ thuật phát triển AI trong gaming sang machine learing, ví dụ như kỹ thuật Goal Oriented Action Planning hay Behaviour Trees chẳng hạn. Dù sau, những giới hạn AI trong game về data, tính toán xử lý nghiêm ngặt hơn nhiều trong machine learning]</p>
-
 <p>Video của Mark Brown giải thích rõ về các tương tác AI trong game, và nếu xem kỹ, thì đó cũng chính là các vấn đề trong reinforcement learning</p>
 
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/9bbhJi0NBkk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/9bbhJi0NBkk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 
 <p>Nhưng còn một yếu tố còn quan trọng hơn, đó là tạo ra một AI với cốt truyện, có tính cách và có sự độc nhất. Nếu không có một cốt truyện, hay backstory liên kết với người chơi, cho dù AI có rất thông minh, thì người chơi cũng không đặt cảm xúc vào AI đó. Đó là lí do Elizabeth là một điển hình của AI xuất sắc. Cốt truyện được xây dựng để bạn càng ngày càng quan tâm đến hành trình của Elizabeth, đồng thời tìm hiểu mối quan hệ của cô với phần còn lại của câu chuyện.
 Tính độc đáo tạo nên kí ức về AI cho người chơi. Elizabeth có một sức mạnh phi thường: du hành giữa các vũ trụ, điều khiển thời gian [giống Ciri phết =]] ] nhưng cô cũng vô cùng ngây thơ và đầy cảm xúc [vì bị nhốt trong tòa tháp gần 20 năm và không biết gì ngoài đọc sách và học cách mở khóa, và một ước mơ được đến Paris]. Thông qua đó ta thấy các yếu tố có mối quan hệ hữu cơ với nhau: một nhân vật độc đáo tạo nên kí ức với người chơi, một cốt truyện đi kèm tạo nên mối quan tâm về AI, và tương tác AI tốt tạo sự gắng bó với người chơi.  Thông qua các yếu tố trên người chơi lại càng ấn tượng với AI trong tựa game mình trải nghiệm.</p>
-
 <p>Đó là điều tạo nên AI.
-Game: <sup>9</sup>&frasl;<sub>10</sub>. Điểm trừ ở mặt combat, mình phải config lại keyboard giống với Doom. Và đồng thời không có sự balance giữa các vũ khí.
-Cốt truyện, nhân vật, graphics optimization: <sup>10</sup>&frasl;<sub>10</sub>.</p>
+Game: 9/10. Điểm trừ ở mặt combat, mình phải config lại keyboard giống với Doom. Và đồng thời không có sự balance giữa các vũ khí.
+Cốt truyện, nhân vật, graphics optimization: 10/10.</p>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2018/03/29/overfitting-l%C3%A0-c%C3%A1i-qu%C3%A1i-g%C3%AC/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Overfitting là cái quái gì</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2018/05/23/l%C3%A0m-nghi%C3%AAn-c%E1%BB%A9u-theo-phong-c%C3%A1ch-agile/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Làm nghiên cứu theo phong cách Agile</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -105,46 +195,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

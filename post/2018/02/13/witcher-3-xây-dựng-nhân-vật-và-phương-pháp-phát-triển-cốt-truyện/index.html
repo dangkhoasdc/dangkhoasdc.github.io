@@ -1,105 +1,186 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện | My blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="games,
+">
+
+<meta property="og:title" content="Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện" />
+<meta property="og:description" content="Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.
+  Không bàn đến việc yếu tố điện ảnh, kỹ thuật cắt cảnh đã giúp phân đoạn này đáng nhớ và xuất sắc, thì một yếu tố làm nên chi tiết Geralt và Ciri hội ngộ thêm phần xúc động đó là xây dựng nhân vật trong game." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2018/02/13/witcher-3-x%C3%A2y-d%E1%BB%B1ng-nh%C3%A2n-v%E1%BA%ADt-v%C3%A0-ph%C6%B0%C6%A1ng-ph%C3%A1p-ph%C3%A1t-tri%E1%BB%83n-c%E1%BB%91t-truy%E1%BB%87n/" />
+<meta property="article:published_time" content="2018-02-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-02-13T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện"/>
+<meta name="twitter:description" content="Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.
+  Không bàn đến việc yếu tố điện ảnh, kỹ thuật cắt cảnh đã giúp phân đoạn này đáng nhớ và xuất sắc, thì một yếu tố làm nên chi tiết Geralt và Ciri hội ngộ thêm phần xúc động đó là xây dựng nhân vật trong game."/>
+
+
+<meta itemprop="name" content="Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện">
+<meta itemprop="description" content="Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.
+  Không bàn đến việc yếu tố điện ảnh, kỹ thuật cắt cảnh đã giúp phân đoạn này đáng nhớ và xuất sắc, thì một yếu tố làm nên chi tiết Geralt và Ciri hội ngộ thêm phần xúc động đó là xây dựng nhân vật trong game.">
+<meta itemprop="datePublished" content="2018-02-13T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-02-13T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1359">
+
+
+
+<meta itemprop="keywords" content="games," />
+
+
+
+    <title>Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2018/02/13/witcher-3-x%C3%A2y-d%E1%BB%B1ng-nh%C3%A2n-v%E1%BA%ADt-v%C3%A0-ph%C6%B0%C6%A1ng-ph%C3%A1p-ph%C3%A1t-tri%E1%BB%83n-c%E1%BB%91t-truy%E1%BB%87n/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện</span></h1>
-
-<h2 class="date">2018/02/13</h2>
-</div>
-
-
-
-<main>
-<p>Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.</p>
-
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện</h1>
+  <meta itemprop="headline" content="Witcher 3: xây dựng nhân vật và phương pháp phát triển cốt truyện" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/games/">#games</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">February 13, 2018</span></div>
+      <meta itemprop="dateModified" content="February 13, 2018"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Nhiều khi tôi chỉ muốn xem đi xem lại phân cảnh Geralt gặp lại Ciri. Ít có khi nào một video game lại khiến bản thân nhập tâm vào nhân vật đến vậy. Cách mà CDPR đã tiếp cận với thế giới của Witcher khiến người chơi cảm thông và đi sâu vào tâm lý nhân vật.</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/zjZlQpbT58I" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/zjZlQpbT58I" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 <p>Không bàn đến việc yếu tố điện ảnh, kỹ thuật cắt cảnh đã giúp phân đoạn này đáng nhớ và xuất sắc, thì một yếu tố làm nên chi tiết Geralt và Ciri hội ngộ thêm phần xúc động đó là xây dựng nhân vật trong game.</p>
-
 <p>Cách CDPR làm là gì? Họ xây dựng thế giới fantasy đẹp lộng lẫy với chủ đề xoay quanh quái vật với thế giới Trung Cổ nơi mà yếu tố đạo đức không phân định. Và rồi họ đặt Geralt vào trong đó. Khác với cách mà Fallout từng làm, Fallout 4 thì cốt truyện được xây dựng trước với thế giới của một lịch sử thay thế, điều đó khiến cho người chơi Fallout không có nhiều động lực để xây dựng cho họ &ldquo;nhân vật&rdquo; có cốt truyện mà thay vào đó là tìm hiểu thế giới xung quanh bởi hầu như cốt truyện bị cố định và không có nhiều không gian để khám phá nhân vật. Điều mà dòng Fallout, cùng với Skyrim làm cực kì tốt. Đội ngũ thiết kế Witcher đưa ra 1 câu hỏi rất cụ thể: &ldquo;trong thế giới fantasy này, người chơi muốn họ trở thành một Geralt như thế nào?&rdquo;. Một chi tiết thú vị là việc xây dựng Geralt không tới mức mạnh khủng khiếp và late game trở nên bất khả chiến bại muốn làm gì thì làm, rốt cuộc Geralt chỉ là 1 witcher - một kẻ săn quái vật, một ngành nghề như bao người khác, và vẫn bị lính trong thành chém không thương như những dân thường khác.</p>
-
 <p>Hơn hết, nếu so sánh về độ &ldquo;bá đạo&rdquo; trong trong cốt truyện. Tôi đánh giá cao Witcher 2 hơn, khi mà nội dung có sự tham gia của các thế lực chính trị, thuyết âm mưu và sự can thiệp của Geralt ảnh hưởng đến kết cục của cuộc chiến. Đồng thời, ta cảm nhận sâu sắc hơn cái không khí chiến tranh Trung Cổ trong phần này.</p>
-
 <p>Witcher 3 đào sâu vào phát triển nhân vật, mà cụ thể hơn là cuộc hành trình để người chơi hiểu được mối quan hệ của Geralt và Ciri để sau đó cho người chơi sử dụng ngòi bút của chính mình để quyết định đoạn kết của câu chuyện.</p>
-
 <p>Điều thú vị là quá trình phát triển nhân vật và cốt truyện người chơi lại được đúc kết thành tinh hoa bởi một nhân vật giả tưởng: tiến sĩ Robert Ford trong phim Westworld.</p>
-
 <blockquote>
 <p>“It’s not about giving the guests what you think they want. No that’s simple. The titillation, horror, elation—they’re parlor tricks. The guests don’t return for the obvious things we do, the garish things. They come back because of the subtleties, the details. They come back because they discover something they imagine no one had ever noticed before… something they’ve fallen in love with. They’re not looking for a story that tells them who they are. They already know who they are. They’re here because they want a glimpse of who they could be.&rdquo; - Dr. Robert Ford</p>
 </blockquote>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/s9pPtaoQcUI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/s9pPtaoQcUI" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 <p>Người chơi cảm thấy hứng thú bởi vì bởi vì thông qua nhân vật Geralt và các mối quan hệ xung quanh, họ thấy được một con người khác mà họ có thể trở thành trong một thế giới huyền ảo. Đó là đỉnh cao của xây dựng một trò chơi open world. Người chơi không cần số lượng vô hạn các lựa chọn, cái họ cần đôi khi chỉ là 2 lựa chọn đủ để định hình một con người. Trong Witcher, ta thấy rõ nhất là sự lựa chọn tình cảm giữa Yennefer và Triss. Không có lựa chọn nào sai, và không có lựa chọn nào tốt hơn hay xấu hơn lựa chọn nào, chỉ đơn giản sự lựa chọn ánh xạ quan điểm của người chơi. Trong clip phân tích của Extra Credits cho ta thấy cái nhìn cụ thể hơn.</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/A6PUReOuHVw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/A6PUReOuHVw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 <p>Nhân vật Geralt không chỉ phát triển thông qua cốt truyện chính hay phần romance mà còn được xây dựng thông qua việc tương tác với các vấn đề xung quanh: yếu tố chính trị (mặc dù không còn quá nhấn mạnh như trong Witcher 2), các quyết định với các nhân vật phụ xung quanh. Điểm thú vị trong 1 game open world nằm ở 2 điều:</p>
-
 <ol>
 <li>Cung cấp cho người chơi một thế giới giả tưởng.</li>
 <li>Cung cấp cho người chơi một tuyến nhân vật do họ tự xây dựng.</li>
 </ol>
-
 <p>Điều 1, Bethesda làm rất tốt, điều 2, Bioware là tiên phong. Nhưng với CDPR, họ đã gây dựng nên yếu tố cốt truyện thú vị hòa quyện vào một thế giới mở. Họ chắc chắn không phải là tiên phong, nhưng lại là studio sử dụng hiệu quả nhất yếu tố xây dựng nhân vật.</p>
-
 <p>Một điểm thú vị trong Witcher 3 đó là, bản đồ trong phần này lớn gấp 40 lần so với bản Witcher 2 và đồng thời lớn hơn thế giới trong Skyrim 15%, làm sao họ có thể lấp đầy thế giới này với thiên hướng &ldquo;kể truyện&rdquo; hơn là &ldquo;khám phá&rdquo;. Ở đây Witcher có lợi thế hơn dòng Skyrim hay Fallout, họ đã có sẵn một thế giới do nhà văn Andrzej Sapkowski tạo ra, đồng thời, với bối cảnh trung cổ tại Scandinavian họ dư sức thả vào đó rất nhiều egg easter từ thần thoại Bắc Âu (trong đảo Skellige), Game Of Throne (rải rác khắp các maps), hay các biểu tượng văn học, văn hóa đại chúng.</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/y5H0STJ9nmk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/y5H0STJ9nmk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 <p>Witcher 3 đối xử người chơi trưởng thành một cách &ldquo;trưởng thành&rdquo;. Họ không ngại cho các yếu tố gai góc, &ldquo;người lớn&rdquo; vào trong game, mà hơn hết là lồng ghép để người chơi được thể hiện quan điểm của họ thông qua nhân vật. Đó chính là quan hệ tình cảm, là phân biệt chủng tộc, là chính trị, là những giá trị đạo đức. Tôi đã rất trượng nghĩa khi cứu 1 she-elf không bị bắt nạt, và cuối cùng là sao, con nhỏ sang chửi tôi và nói rằng &ldquo;chị éo cần mày&rdquo; (dù chỉ là 1 quest tình cờ tôi chạm phải). Hay giữa việc cứu những đứa trở vô tội hay cứu gia đình Baron, hay giữa việc cứu hay không cứu Mirka. Có đến hàng chục tình huống được thể hiện trong game, dần dần xây dựng để cuối cùng, người chơi là người viết nên hồi kết.</p>
-
 <p>Sự tinh tế làm nên tính thu hút của cốt truyện. Người chơi không cần phải trưng ra những điều rõ ràng để hiểu vấn đề trong cốt truyện. Nếu trong một game đã đề cập đến những thứ gai góc, thì người thiết kế hiểu rõ rằng người chơi có một trình độ, sự cảm nhận nhất định và họ tự tin đặt những chi tiết tinh tế đó trong game. Đó là lí do mà tôi luôn thẩn thờ khi nghe Priscilla hát Wolven Storm, bởi bài hát nói về Geralt và Yen. Trong từng lời ca, trong tiếng hát du dương nhưng đẫm buồn về mối tình mãnh liệt của hai người. Và đặc biệt hơn, đến quest &ldquo;Last Wish&rdquo;, ta càng hiểu thêm về tình cảm của hai người [Dù sao thì mình chọn Triss].</p>
-
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="//www.youtube.com/embed/2bSk-8C76dc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/2bSk-8C76dc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
-
 <p>Tổng kết, phương pháp xây dựng nhân vật của CDPR xứng đáng cho các studio khác học hỏi và thực sự là một chuẩn mực mới cho dòng Action RPG, đồng thời cũng là một use-case thú vị cho thấy một video game có thể đạt chuẩn mực nào đó với văn học. Bởi rốt cuộc, cả hai đều là phương tiện để tác giả kể về câu chuyện của mình.</p>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2018/02/07/programming-pearls/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Programming Pearls</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2018/02/25/c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-android-studio-h%E1%BB%97-tr%E1%BB%A3-l%E1%BA%ADp-tr%C3%ACnh-ndk/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -110,46 +191,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

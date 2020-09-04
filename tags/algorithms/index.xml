@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>algorithms on My blog</title>
+    <title>algorithms on Blog</title>
     <link>http://dangkhoasdc.github.io/tags/algorithms/</link>
-    <description>Recent content in algorithms on My blog</description>
+    <description>Recent content in algorithms on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Wed, 07 Feb 2018 00:00:00 +0000</lastBuildDate>
@@ -24,23 +24,13 @@ Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thù
     </item>
     
     <item>
-      <title>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</title>
-      <link>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</guid>
-      <description>Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
- CTDL quan trọng cho các thuật toán khác như Dijkstra&amp;rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.</description>
-    </item>
-    
-    <item>
       <title>Một số biến thể Quicksort</title>
       <link>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</guid>
       <description>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
-// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
+// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); } Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
     </item>
     
     <item>
@@ -79,7 +69,7 @@ Lịch sử Thuật toán được để xuất bởi Devid E.</description>
       
       <guid>http://dangkhoasdc.github.io/post/2016/10/23/c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</guid>
       <description>Các ví dụ về thuật toán ngẫu nhiên Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách Randomized Algorithms
-Randomized Quicksort Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên.</description>
+Randomized Quicksort Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên. Thử tưởng tượng ta cho quicksort thông thường chạy 10 lần với dữ liệu đã sắp xếp với randomized-quicksort cũng với cấu hình như vậy, ta sẽ thấy sự khác biệt lớn.</description>
     </item>
     
     <item>
@@ -100,7 +90,7 @@ Randomized Quicksort Thuật toán quicksort có lẽ là một trong những th
       
       <guid>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</guid>
       <description>Đây là một trong những khoá rất đỉnh về lập trình, vì sao ư?
- Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.</description>
+ Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.  Part 1 của khoá học cover các phần sau:</description>
     </item>
     
   </channel>

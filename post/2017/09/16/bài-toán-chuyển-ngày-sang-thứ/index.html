@@ -1,86 +1,172 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bài toán chuyển ngày sang thứ | My blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="programming,
+algorithms,
+">
+
+<meta property="og:title" content="Bài toán chuyển ngày sang thứ" />
+<meta property="og:description" content="Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2017/09/16/b%C3%A0i-to%C3%A1n-chuy%E1%BB%83n-ng%C3%A0y-sang-th%E1%BB%A9/" />
+<meta property="article:published_time" content="2017-09-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-09-16T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Bài toán chuyển ngày sang thứ"/>
+<meta name="twitter:description" content="Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C)."/>
+
+
+<meta itemprop="name" content="Bài toán chuyển ngày sang thứ">
+<meta itemprop="description" content="Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo; Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip; Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).">
+<meta itemprop="datePublished" content="2017-09-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-09-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="644">
+
+
+
+<meta itemprop="keywords" content="programming,algorithms," />
+
+
+
+    <title>Bài toán chuyển ngày sang thứ || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2017/09/16/b%C3%A0i-to%C3%A1n-chuy%E1%BB%83n-ng%C3%A0y-sang-th%E1%BB%A9/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Bài toán chuyển ngày sang thứ</span></h1>
-
-<h2 class="date">2017/09/16</h2>
-</div>
-
-
-
-<main>
-
-
-<p>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo;
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Bài toán chuyển ngày sang thứ</h1>
+  <meta itemprop="headline" content="Bài toán chuyển ngày sang thứ" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/programming/">#programming</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/algorithms/">#algorithms</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">September 16, 2017</span></div>
+      <meta itemprop="dateModified" content="September 16, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Đôi khi có những thuật toán chỉ khiến bạn thốt lên: &ldquo;xuất sắc, thông minh vãi cả đxx&rdquo;
 Bài toán: Cho ngày, tháng, năm bất kì theo lịch Gregorian (lịch hiện nay), cho biết hôm đó rơi vào thứ mấy, tương ứng 0 -&gt; Chủ Nhật, 1 -&gt; Thứ Hai &hellip;
 Tôi đang muốn nói tới phương pháp của Sakamoto được đề xuất năm 1992. (Code theo chuẩn K&amp;R C).</p>
-
-<pre><code class="language-c">dayofweek(y, m, d) {
-    static int t[] = {0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4};
-    y -= m &lt; 3;
-    return (y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">dayofweek(y, m, d) {
+    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> t[] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">4</span>};
+    y <span style="color:#f92672">-=</span> m <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>;
+    <span style="color:#66d9ef">return</span> (y <span style="color:#f92672">+</span> y<span style="color:#f92672">/</span><span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> y<span style="color:#f92672">/</span><span style="color:#ae81ff">100</span> <span style="color:#f92672">+</span> y<span style="color:#f92672">/</span><span style="color:#ae81ff">400</span> <span style="color:#f92672">+</span> t[m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> d) <span style="color:#f92672">%</span> <span style="color:#ae81ff">7</span>;
 }
-</code></pre>
-
-<p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với <sup>1</sup>&frasl;<sub>1</sub> (Nếu ngày <sup>1</sup>&frasl;<sub>1</sub> là thứ Hai thì <sup>1</sup>&frasl;<sub>2</sub> sẽ là thứ 5). <code>t[]</code> chính là offset cho ngày đầu tiên của tháng so với ngày <sup>1</sup>&frasl;<sub>1</sub>, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
-
+</code></pre></div><p>Quá đơn giản, quá thông minh. Nhưng hiểu được 3 dòng code này ta mới cảm nhận được tác giả &ldquo;ranh&rdquo; đến mức nào. Giả sử gọi ngày 1 tháng 1 trong 1 năm bất kì làm mốc, để biết được ngày 1 tháng tiếp theo rơi vào đâu, ta có 31 = 7*4+3. Tức là ngày 1 tháng 2 rơi sau 3 ngày so với 1/1 (Nếu ngày 1/1 là thứ Hai thì 1/2 sẽ là thứ 5). <code>t[]</code> chính là offset cho ngày đầu tiên của tháng so với ngày 1/1, như vậy ta có <code>t[] = {0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5}</code> (Hơi khác so với code). Chuyện tiếp theo là cộng offset đó với ngày (d-1) - khoảng cách từ ngày muốn tính đến đầu tháng , xong module cho 7 là ra được.</p>
 <p>Tuy nhiên đây mới là trong 1 năm. Bởi vì 1 năm (ko nhuận) có 365 = 52*7+1. Tức là cứ mỗi năm trôi qua là có thêm 1 ngày dôi ra, vậy ta có năm <code>y</code>, ta phải cộng thêm <code>y</code> ngày dôi ra đó. Nhưng đây mới là tính những năm không nhuận.</p>
-
-<p>Những năm nhuận, ta lại phải thêm cái ngày <sup>29</sup>&frasl;<sub>2</sub> vào trong, tức là nó sẽ thêm 1 ngày nữa, trong <code>y</code> năm? nếu có <code>y</code> năm nhuận thì sẽ có thêm <code>x</code> ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.</p>
-
-<p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày <sup>29</sup>&frasl;<sub>2</sub>, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
-
+<p>Những năm nhuận, ta lại phải thêm cái ngày 29/2 vào trong, tức là nó sẽ thêm 1 ngày nữa, trong <code>y</code> năm? nếu có <code>y</code> năm nhuận thì sẽ có thêm <code>x</code> ngày được dồn vậy, $x = y/4 - y/100 + y/400$ (công thức tuy nhìn giống Inclusion-Exclusion Principle nhưng rốt cuộc ứ phải). Đơn giản là: những năm nhuận là năm (1) chia hết cho 4 nhưng không chia hết cho 100 hoặc (2) chia hết cho 400.</p>
+<p>Nhưng vẫn còn vấn đề, cái ngày thêm vào của năm nhuận là ngày 29/2, tức là nếu năm đó là năm nhuận nhưng ngày và tháng thuộc tháng 1 hoặc 2 thì ta không được tính vào (ví dụ 10/1/2016). Tác giả giải quyết siêu đơn giản : <code>y -= m &lt; 3</code>. Cứ hễ input tháng 1, 2 thì đẩy về năm trước đó. Và lúc đó thì năm nhuận sẽ hết nhuận.</p>
 <p>Nhưng vẫn còn vấn đề, rốt cuộc toán tử đó áp dụng cho cả những năm không nhuận. Tức tháng 1, 2 năm nào cũng bị đẩy về trước đó 1 năm. Lúc này mảng <code>t[]</code> lại được dùng bằng cách bù cho tháng 1, 2, ta cộng 1 vào <code>t[0]</code> và <code>t[1]</code> và giữ nguyên các <code>t[]</code> còn lại Sau đó chuyển -1 trong <code>d-1</code> vào offset, lúc đó ta sẽ được mảng <code>t[]</code> như trong code gốc.</p>
-
 <p>Ta còn một vấn đề là xác định ngày ban đầu để làm mốc và độ lệch <code>c</code> của ngày gốc đó so với ngày Chủ Nhật với <code>index = 0</code>. Nhưng bằng kiểm chứng, người ta phát hiện ra <code>c = 0</code>. Wow. :astonished:</p>
-
 <p>Một thuật toán hay và đẹp, không chỉ tận dụng khả năng của ngôn ngữ lập trình, mà mỗi câu lệnh thể hiện được sự thông minh và khéo léo của tác giả.</p>
-
 <p>Bonus Problem: Chứng minh tính đúng của thuật toán bằng quy nạp.</p>
-
 <h3 id="references">References</h3>
-
 <ol>
 <li><a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week">Wiki: Determination of the day of the week</a></li>
 <li><a href="https://groups.google.com/forum/#!msg/comp.lang.c/GPA5wwrVnVw/hi2wB0TXGkAJ">Source</a></li>
 </ol>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2017/09/16/h%E1%BA%ADu-t%C3%A2y-du-k%C3%AD/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Hậu Tây Du Kí</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2017/09/17/m%E1%BB%99t-v%C3%B2ng-henderson-waves-v%C3%A0-haw-par-villa/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Một vòng Henderson Waves và Haw Par Villa</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -91,46 +177,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

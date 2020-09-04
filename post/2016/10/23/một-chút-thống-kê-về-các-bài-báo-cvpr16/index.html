@@ -1,78 +1,170 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Một chút thống kê về các bài báo CVPR16 | My blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="cvpr,
+research,
+computer vision,
+">
+
+<meta property="og:title" content="Một chút thống kê về các bài báo CVPR16" />
+<meta property="og:description" content="Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+  Số bài báo được accept: 643 bài.
+  Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài.
+  Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/" />
+<meta property="article:published_time" content="2016-10-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-10-23T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Một chút thống kê về các bài báo CVPR16"/>
+<meta name="twitter:description" content="Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+  Số bài báo được accept: 643 bài.
+  Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài.
+  Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13."/>
+
+
+<meta itemprop="name" content="Một chút thống kê về các bài báo CVPR16">
+<meta itemprop="description" content="Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
+Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
+  Số bài báo được accept: 643 bài.
+  Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài.
+  Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.">
+<meta itemprop="datePublished" content="2016-10-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-10-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="792">
+
+
+
+<meta itemprop="keywords" content="cvpr,research,computer vision," />
+
+
+
+    <title>Một chút thống kê về các bài báo CVPR16 || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Một chút thống kê về các bài báo CVPR16</span></h1>
-
-<h2 class="date">2016/10/23</h2>
-</div>
-
-
-
-<main>
-
-
-<p>Hôm nay tình cờ thấy cái link liệt kê <a href="http://www.cv-foundation.org/openaccess/CVPR2016.py">các bài được accept ở CVPR16</a>, thế là mình ngồi thống kê vài cái cho vui</p>
-
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Một chút thống kê về các bài báo CVPR16</h1>
+  <meta itemprop="headline" content="Một chút thống kê về các bài báo CVPR16" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/cvpr/">#cvpr</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/research/">#research</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/computer-vision/">#computer vision</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">October 23, 2016</span></div>
+      <meta itemprop="dateModified" content="October 23, 2016"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Hôm nay tình cờ thấy cái link liệt kê <a href="http://www.cv-foundation.org/openaccess/CVPR2016.py">các bài được accept ở CVPR16</a>, thế là mình ngồi thống kê vài cái cho vui</p>
 <p>Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:</p>
-
 <ol>
-<li>Số bài báo được accept: 643 bài.</li>
-<li>Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài.</li>
-<li>Bài có chữ <em>deep</em> trong tiêu đề: 87 bài, chiếm 13.53% tổng số bài được accept.</li>
-<li>Bài có số tác giả nhiều nhất: <em>Multimodal Spontaneous Emotion Corpus for Human Behavior Analysis</em> với 13 tác giả đứng tên.</li>
-
-<li><p>Bài chỉ có 1 tác giả (một mình chống mafia):</p>
-
+<li>
+<p>Số bài báo được accept: 643 bài.</p>
+</li>
+<li>
+<p>Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài.</p>
+</li>
+<li>
+<p>Bài có chữ <em>deep</em> trong tiêu đề: 87 bài, chiếm 13.53% tổng số bài được accept.</p>
+</li>
+<li>
+<p>Bài có số tác giả nhiều nhất: <em>Multimodal Spontaneous Emotion Corpus for Human Behavior Analysis</em> với 13 tác giả đứng tên.</p>
+</li>
+<li>
+<p>Bài chỉ có 1 tác giả (một mình chống mafia):</p>
 <ul>
 <li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Kobayashi_Structured_Feature_Similarity_CVPR_2016_paper.pdf">Structured Feature Similarity With Explicit Feature Map</a></li>
 <li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Qi_Hierarchically_Gated_Deep_CVPR_2016_paper.pdf">Hierarchically Gated Deep Networks for Semantic Segmentation</a></li>
 <li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Sekii_Robust_Real-Time_3D_CVPR_2016_paper.pdf">Robust, Real-Time 3D Tracking of Multiple Objects With Similar Appearances</a></li>
 <li><a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Yang_Semantic_Filtering_CVPR_2016_paper.pdf">Semantic Filtering</a></li>
 <li><a href="http://arxiv.org/abs/1603.00560">Learnt Quasi-Transitive Similarity for Retrieval From Large Collections of Faces</a></li>
-</ul></li>
+</ul>
+</li>
 </ol>
-
 <p>cv-foundation còn hào phóng đính kèm trong source link download các paper, đồng thời có cả bibtex của các bài, nếu kết hợp với arxiv api thì có thể thống kê được nhiều thứ hay ho hơn nữa =))</p>
-
 <h1 id="một-số-thống-kê-về-tác-giả">Một số thống kê về tác giả.</h1>
-
 <p>Thử xem phân phối số lượng tác giả trên đầu bài của CVPR16 thế nào. Theo như kết quả, số bài ở CVPR16 trung bình có từ 2, 3 hoặc 4 tác giả đứng tên. Nhiều nhất là các bài có 3 tác giả (186 bài). Ngoại trừ gã outlier 13 tác giả thì biểu đồ đã gần giống với <em>phân phối chuẩn</em> rồi.</p>
-
-<p><img src="http://i.imgur.com/gpHfOTW.png" alt="Biểu đồ phân bố số lượng tác giả trong một bài báo" /></p>
-
+<p><img src="http://i.imgur.com/gpHfOTW.png" alt="Biểu đồ phân bố số lượng tác giả trong một bài báo"></p>
 <p>Có <em>1843</em> tác giả có bài trong CVPR16. Ngoài <em>Ming-Hsuan Yang</em> bá đạo ở trên, trong danh sách tác giả nhiều bài còn có những cái tên nổi bật như: Pascal Fua, Li Fei-Fei. Dưới đây là danh sách các tác giả có nhiều bài nhất trong CVPR16:</p>
-
 <ol>
 <li>Lei Zhang [<a href="https://scholar.google.com/citations?user=tAK5l1IAAAAJ">scholar</a>] [<a href="http://www4.comp.polyu.edu.hk/~cslzhang/">homepage</a>]: 7 bài.</li>
 <li>In So Kweon [<a href="https://scholar.google.com.sg/citations?user=XA8EOlEAAAAJ&amp;hl=en">scholar</a>] [<a href="http://rcv.kaist.ac.kr/v2/bbs/member_detail.php?mb_id=%20iskweon">homepage</a>]: 7 bài.</li>
@@ -85,30 +177,19 @@
 <li>Xiaogang Wang [<a href="https://scholar.google.com.sg/citations?user=-B5JgjsAAAAJ&amp;hl=en">scholar</a>] [<a href="http://www.ee.cuhk.edu.hk/~xgwang/">homepage</a>]: 9 bài.</li>
 <li>Ming-Hsuan Yang [<a href="https://scholar.google.com/citations?user=p9-ohHsAAAAJ">scholar</a>] [<a href="http://faculty.ucmerced.edu/mhyang/">homepage</a>]: 11 bài.</li>
 </ol>
-
 <p>Một điểm mình quan tâm nữa là mối quan hệ giữa các tác giả với nhau <del>đó là lí do mình viết: một mình chống mafia ở đoạn trên</del>. Ở đây mình dùng <code>graph-tool</code> để minh hoạ data đã thu thập được. Cách xây dựng đồ thị khá đơn giản: những tác giả đứng chung bài với nhau sẽ có cạnh nối với nhau.</p>
-
 <p>Xưa kia nhà toán học Michael Gurevich đã từng thử điều này với các nhà toán học, và hiện nay bài toán <a href="https://research.facebook.com/blog/three-and-a-half-degrees-of-separation/">Six degree of Seperation</a> đã nổi tiếng và quan tâm nhiều.</p>
-
-<p><img src="http://i.imgur.com/QIiCNur.png" alt="Vision Gang" /></p>
-
+<p><img src="http://i.imgur.com/QIiCNur.png" alt="Vision Gang"></p>
 <p>Nhìn hình ta có thể hình dung có 1 hội mafia cực lớn dây mơ rễ má với nhau. Và các team lẻ lẻ hơn thì bị nằm ngoài rìa, có 1 số team hoạt động khá độc lập (nằm giữa vùng trung tâm và vành đai). Đồng thời những chấm đỏ mỏng manh nằm ngoài vùng vành đai chính là các thánh một mình chống mafia, xin hoan nghênh các anh.</p>
-
 <h1 id="chủ-đề-của-cvpr16">Chủ đề của <code>CVPR16</code></h1>
-
-<p><img src="http://i.imgur.com/9AxhgVP.png" alt="Main topics" /></p>
-
+<p><img src="http://i.imgur.com/9AxhgVP.png" alt="Main topics"></p>
 <p>Ban đầu mình dự định sử dụng <code>arvix-api</code> để lấy keywords từ Bibtex tuy nhiên vì có cơ số bài hiện chưa có trên Arvix (mình sample 5 bài và cả 5 bài đều không được tìm thấy trên đó) nên không có cách để lấy chính xác keywords.</p>
-
 <p>Có 2 cách tiếp cận:</p>
-
 <ol>
 <li>Dựa vào tiêu đề. Cách này sẽ nhanh hơn vì dữ liệu này đã có sẵn.</li>
 <li>Dựa vào nội dung. Cách làm tương đối đơn giản nhưng hơi mất thời gian: (1) download đống paper từ <code>cv-foundation</code>, (2) dùng <code>pdf2text</code> lưu text, (3) dùng 1 số thuật toán clustering để phân loại.</li>
 </ol>
-
 <p>Cách thứ (2) tương đối dài hơi nên mình ưu tiên dùng cách thứ (1) trước. Một thuật toán để rút trích keywords khá nổi tiếng là <a href="https://github.com/aneesha/RAKE/blob/master/rake.py">RAKE</a>. Dưới đây là kết quả.</p>
-
 <pre><code>    deep convolutional neural networks
     convolutional neural networks
     recurrent neural networks
@@ -132,17 +213,35 @@
     video
     learning
 
-</code></pre>
-
-<h1 id="future-works">Future Works</h1>
-
+</code></pre><h1 id="future-works">Future Works</h1>
 <p>Hiện giờ minh đang tìm cách download toàn bộ pdf của bài năm nay để làm clustering và phân tích nội dung, đồng thời làm 1 tool search nho nhỏ. Ngoài ra hiện giờ mình đang tìm kiếm danh sách các bài các năm trước để có thêm 1 số phân tích hay ho hơn nữa (về trending, các bài được cite nhiều,).</p>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2016/10/23/nh%E1%BB%AFng-k%C3%AAnh-th%C3%B4ng-tin-c%C3%B4ng-ngh%E1%BB%87/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Những kênh thông tin công nghệ</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Hướng dẫn cài đặt OpenCV trên Windows</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -153,46 +252,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My blog</title>
+    <title>Posts on Blog</title>
     <link>http://dangkhoasdc.github.io/post/</link>
-    <description>Recent content in Posts on My blog</description>
+    <description>Recent content in Posts on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
@@ -39,19 +39,6 @@ Lần đầu tiên mà mình chi ra số tiền kha khá cho một laptop đến
       <description>Trong bài viết này mình sẽ chia sẻ một số kỹ thuật cũng như ý tưởng có thể trong cuộc thi Zalo AI Challenge - Landmark data do team mình - VietAI - thực hiện.
 Dữ Liệu Dưới đây là phân phối số lượng ảnh trên mỗi label.
   Phân phối mẫu trên mỗi lớp, Landmark data. Có khoảng 8 lớp có dưới 250 mẫu/class.   Một số class có số sample tương đối thấp, ta có thể cần 1 số technique để khắc phục vấn đề này.</description>
-    </item>
-    
-    <item>
-      <title>Hello world with Literate Programming</title>
-      <link>http://dangkhoasdc.github.io/post/2018/09/04/hello-world-with-literate-programming/</link>
-      <pubDate>Tue, 04 Sep 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2018/09/04/hello-world-with-literate-programming/</guid>
-      <description>Hello world . Processed by unicode2rstsubs.py, part of Docutils: . -- . Processed by unicode2rstsubs.py, part of Docutils: . -- This is a demo for pyweb
-First, we have to define the program, let call it hello.cpp:
-hello.cpp (1) =
-→header files for program (2) int main(int argc, const char* [] argv) { →print the message (3) }   ◊ hello.cpp (1).
- Header Files Basically, we only need a header file which handles the output of the message, namely std::cout:</description>
     </item>
     
     <item>
@@ -139,27 +126,6 @@ Chưa có một cuốn sách nào về lập trình khi tôi mua về, khui thù
     </item>
     
     <item>
-      <title>Khối Latin và câu chuyện toán học và lịch sử máy tính</title>
-      <link>http://dangkhoasdc.github.io/post/2018/02/01/kh%E1%BB%91i-latin-v%C3%A0-c%C3%A2u-chuy%E1%BB%87n-to%C3%A1n-h%E1%BB%8Dc-v%C3%A0-l%E1%BB%8Bch-s%E1%BB%AD-m%C3%A1y-t%C3%ADnh/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2018/02/01/kh%E1%BB%91i-latin-v%C3%A0-c%C3%A2u-chuy%E1%BB%87n-to%C3%A1n-h%E1%BB%8Dc-v%C3%A0-l%E1%BB%8Bch-s%E1%BB%AD-m%C3%A1y-t%C3%ADnh/</guid>
-      <description>Trong dự án dài hơi về TAoCP, những phần đầu của Vol 4A.
-Định nghĩa Cho một ma trận vuông có kích thước M và các phần tử thuộc $\{0, 1, \cdots, M-1 \}$, ta xây dựng ma trận sao cho mỗi phần tử $i$ trong tập $\{0, 1, \cdots, M-1\}$ chỉ xuất hiện đúng 1 lần trong mỗi cột và mỗi dòng.
-Ví dụ Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 4 loại $\heartsuit, \diamondsuit, \clubsuit, \spadesuit$, ta sắp xếp sao cho mỗi dòng/cột có đủ 4 chất và 4 quân (Jacques Ozaman, mathematiques et physiques, Paris 1725).</description>
-    </item>
-    
-    <item>
-      <title>Lịch sử Thị Giác Máy Tính - Phần 1</title>
-      <link>http://dangkhoasdc.github.io/post/2018/01/17/l%E1%BB%8Bch-s%E1%BB%AD-th%E1%BB%8B-gi%C3%A1c-m%C3%A1y-t%C3%ADnh-ph%E1%BA%A7n-1/</link>
-      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2018/01/17/l%E1%BB%8Bch-s%E1%BB%AD-th%E1%BB%8B-gi%C3%A1c-m%C3%A1y-t%C3%ADnh-ph%E1%BA%A7n-1/</guid>
-      <description>Edition: Pre-fascicle 1A (Revision -99).
-[Đã lâu rồi mình không viết blog, nhưng phải chờ đợi đến một thời điểm chính muồi thì mình mới có thể viết được một bài tâm huyết với chất lượng cao. Hi vọng thông qua bài viết này, các bạn có hứng thú với Thị Giác Máy Tính (TGMT - hoặc CV - Computer Vision) sẽ có thêm động lực và biết được thêm nhiều thông tin về một hướng nghiên cứu khá hấp dẫn này.</description>
-    </item>
-    
-    <item>
       <title>Sách: Selected Papers on Computer Science</title>
       <link>http://dangkhoasdc.github.io/post/2018/01/15/s%C3%A1ch-selected-papers-on-computer-science/</link>
       <pubDate>Mon, 15 Jan 2018 00:00:00 +0000</pubDate>
@@ -170,23 +136,13 @@ Ví dụ Cho 16 quân bài bao gồm tổ hợp của các quân J, K, Q, A và 
     </item>
     
     <item>
-      <title>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</title>
-      <link>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</guid>
-      <description>Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
- CTDL quan trọng cho các thuật toán khác như Dijkstra&amp;rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.</description>
-    </item>
-    
-    <item>
       <title>Một số biến thể Quicksort</title>
       <link>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</guid>
       <description>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
-// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
+// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); } Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
     </item>
     
     <item>
@@ -324,13 +280,22 @@ Xem La La Land tôi nhớ đến Black Swan và Whiplash, cũng là câu chuyệ
     </item>
     
     <item>
+      <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</guid>
+      <description>constexpr Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này. Ta quay một chút về cú pháp define bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm.</description>
+    </item>
+    
+    <item>
       <title>Các thuật toán ngẫu nhiên</title>
       <link>http://dangkhoasdc.github.io/post/2016/10/23/c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/post/2016/10/23/c%C3%A1c-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/</guid>
       <description>Các ví dụ về thuật toán ngẫu nhiên Tiếp tục seri về thuật toán ngẫu nhiên, trong bài viết này mình ghi lại 3 ví dụ điển hình trong họ bài toán này. Tất cả các ví dụ đều nằm trong cuốn sách Randomized Algorithms
-Randomized Quicksort Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên.</description>
+Randomized Quicksort Thuật toán quicksort có lẽ là một trong những thuật toán khá dễ hiểu khi tìm hiểu về các thuật toán ngẫu nhiên. Thử tưởng tượng ta cho quicksort thông thường chạy 10 lần với dữ liệu đã sắp xếp với randomized-quicksort cũng với cấu hình như vậy, ta sẽ thấy sự khác biệt lớn.</description>
     </item>
     
     <item>
@@ -382,7 +347,9 @@ Bước 1: Giải nén thư viện vào thư mục được định sẵn.</desc
       <guid>http://dangkhoasdc.github.io/post/2016/10/23/m%E1%BB%99t-ch%C3%BAt-th%E1%BB%91ng-k%C3%AA-v%E1%BB%81-c%C3%A1c-b%C3%A0i-b%C3%A1o-cvpr16/</guid>
       <description>Hôm nay tình cờ thấy cái link liệt kê các bài được accept ở CVPR16, thế là mình ngồi thống kê vài cái cho vui
 Đầu tiên là parse đống html này, sau đó dùng python load một dữ liệu lên, ta có được:
- Số bài báo được accept: 643 bài. Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài. Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.</description>
+  Số bài báo được accept: 643 bài.
+  Người có nhiều bài được đăng nhất: Ming-Hsuan Yang với tổng cộng 11 bài.
+  Bài có chữ deep trong tiêu đề: 87 bài, chiếm 13.</description>
     </item>
     
     <item>
@@ -434,15 +401,6 @@ Sơ lược Mặc dù đã được nghe đến khái niệm này rất nhiều 
     </item>
     
     <item>
-      <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
-      <link>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</guid>
-      <description>constexpr Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này. Ta quay một chút về cú pháp define bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm.</description>
-    </item>
-    
-    <item>
       <title>Review: The C&#43;&#43; Programming Languages</title>
       <link>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</link>
       <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
@@ -458,17 +416,7 @@ Sơ lược Mặc dù đã được nghe đến khái niệm này rất nhiều 
       
       <guid>http://dangkhoasdc.github.io/post/2016/08/08/review-algorithms-princeton-coursera/</guid>
       <description>Đây là một trong những khoá rất đỉnh về lập trình, vì sao ư?
- Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.</description>
-    </item>
-    
-    <item>
-      <title>Lập Trình Hướng Đối Tượng Trong Python</title>
-      <link>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</link>
-      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</guid>
-      <description>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &amp;hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.
-Enum trong python Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</description>
+ Kiến thức được dạy vững chắc và có nhiều thông tin rất thú vị và bổ ích. Bài tập lập trình rất hay. Bài tập trắc nghiệm giúp người học hiểu rõ hơn về các thuật toán và cấu trúc dữ liệu trong bài giảng. Các câu hỏi phỏng vấn rất hay và sáng tạo.  Part 1 của khoá học cover các phần sau:</description>
     </item>
     
     <item>
@@ -520,7 +468,7 @@ Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn
       <guid>http://dangkhoasdc.github.io/post/2015/02/25/spams-lib-v%C3%A0-nh%E1%BB%AFng-t%C3%A2m-s%E1%BB%B1/</guid>
       <description>Không còn gì sung sướng hơn sau 2 ngày ngồi cài cái khỉ gió sparse coding lib cho python, link cái thằng khỉ gió nó ở đây: Spams lib. Mặc dù đã cố gắng nhưng phải mất mấy tiếng đồng hồ mình mới xong được cu cậu này.
 Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như sau:
- Không giống như cu Linux hay các bản distro của nó.</description>
+  Không giống như cu Linux hay các bản distro của nó.</description>
     </item>
     
   </channel>

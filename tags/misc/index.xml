@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>misc on My blog</title>
+    <title>misc on Blog</title>
     <link>http://dangkhoasdc.github.io/tags/misc/</link>
-    <description>Recent content in misc on My blog</description>
+    <description>Recent content in misc on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Wed, 27 Dec 2017 00:00:00 +0000</lastBuildDate>
@@ -87,7 +87,7 @@ Mùa này ở quê nhà, hẳn mưa mùa hè đang đến. Những lúc ngồi t
       <guid>http://dangkhoasdc.github.io/post/2015/02/25/spams-lib-v%C3%A0-nh%E1%BB%AFng-t%C3%A2m-s%E1%BB%B1/</guid>
       <description>Không còn gì sung sướng hơn sau 2 ngày ngồi cài cái khỉ gió sparse coding lib cho python, link cái thằng khỉ gió nó ở đây: Spams lib. Mặc dù đã cố gắng nhưng phải mất mấy tiếng đồng hồ mình mới xong được cu cậu này.
 Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như sau:
- Không giống như cu Linux hay các bản distro của nó.</description>
+  Không giống như cu Linux hay các bản distro của nó.</description>
     </item>
     
   </channel>

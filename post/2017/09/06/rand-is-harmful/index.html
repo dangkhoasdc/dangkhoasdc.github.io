@@ -1,63 +1,158 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>rand() is harmful | My blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="programming,
+cpp,
+">
+
+<meta property="og:title" content="rand() is harmful" />
+<meta property="og:description" content="rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C&#43;&#43;). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2017/09/06/rand-is-harmful/" />
+<meta property="article:published_time" content="2017-09-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2017-09-06T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="rand() is harmful"/>
+<meta name="twitter:description" content="rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C&#43;&#43;). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng ."/>
+
+
+<meta itemprop="name" content="rand() is harmful">
+<meta itemprop="description" content="rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C&#43;&#43;). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng .">
+<meta itemprop="datePublished" content="2017-09-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-09-06T00:00:00+00:00" />
+<meta itemprop="wordCount" content="212">
+
+
+
+<meta itemprop="keywords" content="programming,cpp," />
+
+
+
+    <title>rand() is harmful || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2017/09/06/rand-is-harmful/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">rand() is harmful</span></h1>
-
-<h2 class="date">2017/09/06</h2>
-</div>
-
-
-
-<main>
-
-
-<h1 id="rand">rand()</h1>
-
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">rand() is harmful</h1>
+  <meta itemprop="headline" content="rand() is harmful" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/programming/">#programming</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/cpp/">#cpp</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">September 6, 2017</span></div>
+      <meta itemprop="dateModified" content="September 6, 2017"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <h1 id="rand">rand()</h1>
 <p>Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&rdquo;
 Bài talk duy chỉ nói về việc dùng hàm <code>rand()</code> và đặc biệt sử dụng chung với <code>%</code> (mod) hay floating point scale là thực sự <em>sai lầm</em>  và <em>nghiêm trọng</em> . Đặc biệt, nó không hề tạo ra uniform distribution như ta thường nghĩ, thậm chí nó khiến cho 1 số giá trị đặc biệt hiếm khi xảy ra 😄</p>
-
 <p>Bản chất hàm <code>rand</code> được implement khá đơn giản <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator"> linear congruential </a> nhờ tận dụng tính chất của số căn nguyên thủy (xem <a href="https://en.wikipedia.org/wiki/Lehmer_random_number_generator">Lehmer random generator</a>). Điều thú vị nằm ở chỗ 1 tính chất không liên quan mấy bên lý thuyết số lại hỗ trợ cho việc sinh số ngẫu nhiên.
 Btw, TAOCP Vol 2 nói khá kĩ về vấn đề này. Một kỹ thuật để check xem empirical results có đúng với probabilities không (uniform distribution với biến ngẫu nhiên rời rạc), đó là dùng Chi squared test.</p>
-
 <p>Link:
 <a href="https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful">https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful</a></p>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: constexpr: Hằng biểu thức trong C&#43;&#43;11</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2017/09/10/la-la-land/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: La La Land</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -68,46 +163,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

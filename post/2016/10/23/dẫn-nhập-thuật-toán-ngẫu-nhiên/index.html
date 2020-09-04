@@ -1,189 +1,257 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dẫn nhập thuật toán ngẫu nhiên | My blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="algorithms,
+">
+
+<meta property="og:title" content="Dẫn nhập thuật toán ngẫu nhiên" />
+<meta property="og:description" content="Hôm rồi học course Introduction to Algorithm (2006-MIT) mình được biết qua khái niệm Randomized Algorithms, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.
+Định nghĩa Randomized Algorithms (viết gọn là randalgs) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.
+Điểm thú vị của randalgs chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến kì vọng trong trường hợp xấu nhất." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2016/10/23/d%E1%BA%ABn-nh%E1%BA%ADp-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/" />
+<meta property="article:published_time" content="2016-10-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-10-23T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dẫn nhập thuật toán ngẫu nhiên"/>
+<meta name="twitter:description" content="Hôm rồi học course Introduction to Algorithm (2006-MIT) mình được biết qua khái niệm Randomized Algorithms, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.
+Định nghĩa Randomized Algorithms (viết gọn là randalgs) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.
+Điểm thú vị của randalgs chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến kì vọng trong trường hợp xấu nhất."/>
+
+
+<meta itemprop="name" content="Dẫn nhập thuật toán ngẫu nhiên">
+<meta itemprop="description" content="Hôm rồi học course Introduction to Algorithm (2006-MIT) mình được biết qua khái niệm Randomized Algorithms, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.
+Định nghĩa Randomized Algorithms (viết gọn là randalgs) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.
+Điểm thú vị của randalgs chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến kì vọng trong trường hợp xấu nhất.">
+<meta itemprop="datePublished" content="2016-10-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-10-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="775">
+
+
+
+<meta itemprop="keywords" content="algorithms," />
+
+
+
+    <title>Dẫn nhập thuật toán ngẫu nhiên || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2016/10/23/d%E1%BA%ABn-nh%E1%BA%ADp-thu%E1%BA%ADt-to%C3%A1n-ng%E1%BA%ABu-nhi%C3%AAn/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Dẫn nhập thuật toán ngẫu nhiên</span></h1>
-
-<h2 class="date">2016/10/23</h2>
-</div>
-
-
-
-<main>
-
-
-<p>Hôm rồi học course <em>Introduction to Algorithm (2006-MIT)</em> mình được biết qua khái niệm <em>Randomized Algorithms</em>, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.</p>
-
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Dẫn nhập thuật toán ngẫu nhiên</h1>
+  <meta itemprop="headline" content="Dẫn nhập thuật toán ngẫu nhiên" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/algorithms/">#algorithms</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">October 23, 2016</span></div>
+      <meta itemprop="dateModified" content="October 23, 2016"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Hôm rồi học course <em>Introduction to Algorithm (2006-MIT)</em> mình được biết qua khái niệm <em>Randomized Algorithms</em>, dành một buổi tìm hiểu về họ thuật toán thú vị này vậy.</p>
 <h1 id="định-nghĩa">Định nghĩa</h1>
-
 <p><em>Randomized Algorithms</em> (viết gọn là <code>randalgs</code>) là những thuật toán mà trong các bước xử lý có sử dụng số ngẫu nhiên để quyết định cho các bước tính toán tiếp theo.</p>
-
 <p>Điểm thú vị của <code>randalgs</code> chính là nó không quan tâm đến trường hợp xấu nhất mà chỉ quan tâm đến <em>kì vọng trong trường hợp xấu nhất</em>.</p>
-
 <p>Tưởng tượng ta có một hệ thống nghiêm trọng, nếu như hệ thống đó bị crash thì sẽ kích hoạt <a href="https://en.wikipedia.org/wiki/Cheget">Cheget</a> và <a href="https://en.wikipedia.org/wiki/Nuclear_football">Nuclear football</a> cùng một lúc. Hệ thống quá lớn và phức tạp, quan trọng hơn, nó sẽ không hoạt động được khi liên tục phải chạy <code>quicksort</code> trong $\mathcal{O}(n^2)$ - dữ liệu đầu vào là mảng được sắp xếp sẵn.</p>
-
 <p>Hacker, bằng một cách nào đó biết được điều này và tấn công hệ thống bằng cách đưa vào hệ thống những mảng đã sắp xếp sẵn. Và bùm, apocalyptic diễn ra.</p>
-
 <p>Và để ngăn chặn thảm hoạ đó xảy đến, ta tạo ra một phiên bản gọi là <code>randomized quicksort</code>: trước khi được xử lý, mảng đầu vào sẽ được xáo trộn. Và cho dù hacker có cố tình tấn công bằng chuỗi đã sắp xếp thì sau bước tiền xử lý này , mảng được sắp xếp ngẫu nhiên.</p>
-
 <p>Nếu một input có trật tự ngẫu nhiên, sau khi xáo trộn trở thành một chuỗi thứ tự thì sao? <a href="https://en.wikipedia.org/wiki/Murphy%27s_law">Murphy’s law</a></p>
-
 <blockquote>
 <p>Nếu đã xui, thì hẳn phải xui nhất có thể.</p>
 </blockquote>
-
 <h1 id="ví-dụ">Ví dụ</h1>
-
 <p>Một biến thế nổi tiếng của <em>Quick sort</em> chính là <em>Randomized Quicksort</em>, có hai phiên bản chính:</p>
-
 <ol>
 <li>Chọn ngẫu nhiên pivot để xử lý.</li>
 <li>Xáo trộn mảng đầu vào trước khi sắp xếp.</li>
 </ol>
-
 <p><em>Randomized Quicksort</em> được tạo ra nhằm tránh trường hợp xấu nhất của thuật toán <em>quicksort</em> là $\mathcal{O}(n^2)$.</p>
-
 <h1 id="phân-loại">Phân loại</h1>
-
 <blockquote>
 <p>In Las Vegas, the dealer can tell you whether you’ve won or lost, but in Monte Carlo, le croupier ne parle que Français, so you have no idea what he’s saying</p>
 </blockquote>
-
 <h2 id="las-vegas-algorithm">Las Vegas algorithm</h2>
-
 <p>Thuật toán nằm trong họ <em>Las Vegas</em> <em>luôn luôn</em> đảm bảo kết quả trả ra đúng với mong muốn. Quicksort là một ví dụ điển hình.</p>
-
 <p>Nói cách khác, <em>Las Vegas</em> không chơi hên xui ở kết quả trả về, nó chỉ sử dụng yếu tố ngẫu nhiên trong các phép tính toán để cho ra kết quả đúng.</p>
-
 <h2 id="monte-carlo-algorithm">Monte Carlo algorithm</h2>
-
 <p>Khác với <em>Las Vegas</em>, <em>Monte Carlo</em> không đảm bảo kết quả sẽ luôn luôn đúng. Nhưng <em>Monto Carlo</em> có xác suất kết quả sai thấp có thể.</p>
-
 <p>Thay vì sử dụng xác suất như một trong những quá trình tính toán, <em>Monte Carlo</em> hên xui ngay cả kể quả trả về.</p>
-
 <h2 id="phân-biệt">Phân biệt</h2>
-
 <h3 id="bài-toán">Bài toán</h3>
-
 <p>Cho một chuỗi có độ dài <code>2n</code> trong đó có <code>n</code> kí tự <code>a</code> và <code>n</code> kí tự <code>b</code>. Nhiệm vụ là tìm ra một vị trí bất kì trong chuỗi chứa kí tự a</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">    <span style="color:#f92672">import</span> sys
+    <span style="color:#f92672">import</span> random
 
-<pre><code class="language-python">    import sys
-    import random
+    <span style="color:#75715e"># Las Vegas version</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_a_lv</span>(string):
+        <span style="color:#66d9ef">while</span> True:
+            pos <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">0</span>, len(string)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+            <span style="color:#66d9ef">if</span> string[pos] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;a&#39;</span>: <span style="color:#66d9ef">return</span> pos
 
-    # Las Vegas version
-    def find_a_lv(string):
-        while True:
-            pos = random.randint(0, len(string)-1)
-            if string[pos] == 'a': return pos
+    <span style="color:#75715e"># Monte Carlo version</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">find_a_mc</span>(string, k):
+        pos <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+        <span style="color:#66d9ef">while</span> k <span style="color:#f92672">and</span> string[pos] <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;a&#39;</span>:
+            k <span style="color:#f92672">=</span> k <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+            pos <span style="color:#f92672">=</span> random<span style="color:#f92672">.</span>randint(<span style="color:#ae81ff">0</span>, len(string)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
 
-    # Monte Carlo version
-    def find_a_mc(string, k):
-        pos = 0
-        while k and string[pos] != 'a':
-            k = k -1
-            pos = random.randint(0, len(string)-1)
+        <span style="color:#66d9ef">return</span> pos
 
-        return pos
+    <span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+        string <span style="color:#f92672">=</span> sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">1</span>]
+        <span style="color:#66d9ef">if</span> len(string) <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Wrong input&#34;</span>)
 
-    if __name__ == '__main__':
-        string = sys.argv[1]
-        if len(string) % 2 == 1:
-            raise ValueError(&quot;Wrong input&quot;)
-
-        print find_a_lv(string)
-        print find_a_mc(string, len(string)/2)
-</code></pre>
-
-<p>Ta dễ dàng nhận thấy <code>find_a_lv</code> luôn luôn cho ra kết quả, tuy nhiên đôi khi nó lại không thực sự hiệu quả. Ví dụ như nếu ta có chuỗi đầu vào là “ab” và <code>find_a_lv</code> mất 2 triệu vòng lặp mới pick đúng <code>pos=0</code>.Dĩ nhiên xác suất để xảy ra chuyện đó rất thấp, nhưng không có nghĩa là nó không xảy ra.</p>
-
+        <span style="color:#66d9ef">print</span> find_a_lv(string)
+        <span style="color:#66d9ef">print</span> find_a_mc(string, len(string)<span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)
+</code></pre></div><p>Ta dễ dàng nhận thấy <code>find_a_lv</code> luôn luôn cho ra kết quả, tuy nhiên đôi khi nó lại không thực sự hiệu quả. Ví dụ như nếu ta có chuỗi đầu vào là “ab” và <code>find_a_lv</code> mất 2 triệu vòng lặp mới pick đúng <code>pos=0</code>.Dĩ nhiên xác suất để xảy ra chuyện đó rất thấp, nhưng không có nghĩa là nó không xảy ra.</p>
 <p>Còn trong trường hợp <code>find_a_mc</code>, kết quả sẽ sai với xác suất khá dễ tính: $\frac{1}{2^k}$ - khi trong <code>k</code> lần thử để chọn đúng vị trí chứa <code>b</code>.</p>
-
 <h1 id="các-kĩ-thuật-cơ-bản">Các kĩ thuật cơ bản</h1>
-
-<p><img src="http://i.imgur.com/0YSlgjJ.png" alt="Methodologies" /></p>
-
+<p><img src="http://i.imgur.com/0YSlgjJ.png" alt="Methodologies"></p>
 <ol>
 <li>Avoiding adversarial inputs:
-
 <ul>
 <li>Trong các thuật toán online.</li>
 <li>Hashing.</li>
 <li>Trong các thuật toán sắp xếp.</li>
-</ul></li>
+</ul>
+</li>
 <li>Verification:
-
 <ul>
 <li>Phát sinh số ngẫu nhiên trong các bài toán kiểm thực.</li>
-</ul></li>
+</ul>
+</li>
 <li>Random sampling:
-
 <ul>
 <li>Trong các bài toán tìm kiếm (tìm median..)</li>
 <li>Trong các thuật toán geometry.</li>
-</ul></li>
+</ul>
+</li>
 <li>Load balancing:
-
 <ul>
 <li>Parallel algorithms.</li>
 <li>Hashing problems.</li>
-</ul></li>
+</ul>
+</li>
 <li>Symmetry breaking:
-
 <ul>
 <li>Dùng trong hệ thống distributed.</li>
-</ul></li>
+</ul>
+</li>
 <li>Probabilistic existence proofs:
-
 <ul>
 <li>Thông qua các thực nghiệm.</li>
 <li>Đảm bảo trong bài toán tìm kiếm đối tượng cần tìm tồn tại.</li>
-</ul></li>
+</ul>
+</li>
 </ol>
-
 <h1 id="tài-liệu">Tài liệu</h1>
-
 <h2 id="khoá-học">Khoá học</h2>
-
 <ol>
 <li><a href="https://courses.cs.washington.edu/courses/cse525/13sp/">Randomized Algorithms and Probabilistic Analysis - Washington</a></li>
 <li><a href="http://cs.brown.edu/courses/cs155/slides/slides.html">Probabilistic Methods in Computer Science</a></li>
 </ol>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Hướng dẫn cài đặt OpenCV trên Windows</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2016/10/23/diablo-iii/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Diablo III</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -194,46 +262,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

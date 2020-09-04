@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>misc on Dang-Khoa&#39;s blog</title>
@@ -6,20 +6,10 @@
     <description>Recent content in misc on Dang-Khoa&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Wed, 15 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/en/tags/misc/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Miscellaneous notes</title>
-      <link>http://dangkhoasdc.github.io/en/post/2017/11/15/miscellaneous-notes/</link>
-      <pubDate>Wed, 15 Nov 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/en/post/2017/11/15/miscellaneous-notes/</guid>
-      <description>Therer are some not-so-serious miscellaneous thoughts, comments of mine about everything in an informal format using Vietnamese and English.
-Deep Learning and truely science researching    &amp;ldquo;too often where people will something against their own gut instincts because they think the community wants them to do it that way, so people will work on a certain subject even though they aren&amp;rsquo;t terribly interested in it because they think that they&amp;rsquo;ll get more prestige by working on it.</description>
-    </item>
     
     <item>
       <title>Why Ubuntu on Windows?</title>

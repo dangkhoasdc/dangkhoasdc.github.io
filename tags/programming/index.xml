@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>programming on My blog</title>
+    <title>programming on Blog</title>
     <link>http://dangkhoasdc.github.io/tags/programming/</link>
-    <description>Recent content in programming on My blog</description>
+    <description>Recent content in programming on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
@@ -22,23 +22,13 @@ Trong bài viết khác, mình sẽ hướng dẫn cách biên dịch phiên b�
     </item>
     
     <item>
-      <title>Có bao nhiêu cách cài đặt Hàng đợi ưu tiên?</title>
-      <link>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2018/01/10/c%C3%B3-bao-nhi%C3%AAu-c%C3%A1ch-c%C3%A0i-%C4%91%E1%BA%B7t-h%C3%A0ng-%C4%91%E1%BB%A3i-%C6%B0u-ti%C3%AAn/</guid>
-      <description>Cấu trúc Hàng Đợi Ưu Tiên (priority queues) là một trong những CTDL kinh điển trong KHMT với rất nhiều ứng dụng khác nhau, có thể kể đến như:
- CTDL quan trọng cho các thuật toán khác như Dijkstra&amp;rsquo;s Algorithms. Numerical Optimization: một vài thuật toán optimization (đặc biệt là iterative optimization) phải chọn ra những biểu thức có sai số làm tròn cao nhất/thấp nhất để thực thi.</description>
-    </item>
-    
-    <item>
       <title>Một số biến thể Quicksort</title>
       <link>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</link>
       <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/</guid>
       <description>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
-// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); }  Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
+// quicksort implement template&amp;lt;typename T&amp;gt; int partition(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[++i]&amp;lt;=v) if (i == hi) break; while (v&amp;lt;=a[--j]) if (j == lo) break; if (i &amp;gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&amp;lt;typename T&amp;gt; void quicksort(vector&amp;lt;T&amp;gt;&amp;amp; a, int lo, int hi) { if (lo &amp;gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j+1, hi); } Phân tích Độ phức tạp được đánh giá thông qua hàm:</description>
     </item>
     
     <item>
@@ -90,6 +80,15 @@ Lịch sử Thuật toán được để xuất bởi Devid E.</description>
     </item>
     
     <item>
+      <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
+      <link>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</link>
+      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</guid>
+      <description>constexpr Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này. Ta quay một chút về cú pháp define bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm.</description>
+    </item>
+    
+    <item>
       <title>Hướng dẫn cài đặt OpenCV trên Windows</title>
       <link>http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/</link>
       <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
@@ -101,31 +100,12 @@ Bước 1: Giải nén thư viện vào thư mục được định sẵn.</desc
     </item>
     
     <item>
-      <title>constexpr: Hằng biểu thức trong C&#43;&#43;11</title>
-      <link>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</link>
-      <pubDate>Sun, 23 Oct 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2016/10/23/constexpr-h%E1%BA%B1ng-bi%E1%BB%83u-th%E1%BB%A9c-trong-c-11/</guid>
-      <description>constexpr Đầu tiên ta xem xét động lực của việc tạo ra từ khoá mới này. Điều mà C++11 muốn tạo ra chính là tăng tốc hiệu suất của chương trình viết bằng ngôn ngữ này. Ta quay một chút về cú pháp define bất hủ của C, ưu điểm của phương pháp tạo macro chính là hiệu suất nhanh, các hàm được tạo ra trong lúc biên dịch và không tốn bộ nhớ cũng như các lệnh nhảy trong hàm.</description>
-    </item>
-    
-    <item>
       <title>Review: The C&#43;&#43; Programming Languages</title>
       <link>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</link>
       <pubDate>Mon, 10 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/post/2016/10/10/review-the-c-programming-languages/</guid>
       <description>Hồi năm 1 đại học, mình rất thích cuốn C Programming Language của K&amp;amp;C, dù cuốn sách khá là ít trang nhưng đầy tinh tuý và rất hấp dẫn. Đến tận bây giờ, khi đã tốt nghiệp ra trường, tức đã 4 năm được biết cuốn sách, đôi lúc mình vẫn muốn đọc lại. Một thời gian sau mình có đọc thêm một số sách có tựa: The XXX Programming Language nhưng chỉ thấy C++ là hay.</description>
-    </item>
-    
-    <item>
-      <title>Lập Trình Hướng Đối Tượng Trong Python</title>
-      <link>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</link>
-      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</guid>
-      <description>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &amp;hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.
-Enum trong python Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</description>
     </item>
     
     <item>
@@ -156,7 +136,7 @@ Bài này, mình viết dưới dạng tutorial nâng cao. Tức là không còn
       <guid>http://dangkhoasdc.github.io/post/2015/02/25/spams-lib-v%C3%A0-nh%E1%BB%AFng-t%C3%A2m-s%E1%BB%B1/</guid>
       <description>Không còn gì sung sướng hơn sau 2 ngày ngồi cài cái khỉ gió sparse coding lib cho python, link cái thằng khỉ gió nó ở đây: Spams lib. Mặc dù đã cố gắng nhưng phải mất mấy tiếng đồng hồ mình mới xong được cu cậu này.
 Sau đây là một số kinh nghiệm xương máu mình có thể rút ra như sau:
- Không giống như cu Linux hay các bản distro của nó.</description>
+  Không giống như cu Linux hay các bản distro của nó.</description>
     </item>
     
   </channel>

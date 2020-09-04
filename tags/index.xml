@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My blog</title>
+    <title>Tags on Blog</title>
     <link>http://dangkhoasdc.github.io/tags/</link>
-    <description>Recent content in Tags on My blog</description>
+    <description>Recent content in Tags on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Mon, 04 Feb 2019 00:00:00 +0000</lastBuildDate>
@@ -165,24 +165,6 @@
     </item>
     
     <item>
-      <title>taocp</title>
-      <link>http://dangkhoasdc.github.io/tags/taocp/</link>
-      <pubDate>Thu, 01 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/tags/taocp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>history</title>
-      <link>http://dangkhoasdc.github.io/tags/history/</link>
-      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/tags/history/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>c&#43;&#43;</title>
       <link>http://dangkhoasdc.github.io/tags/c&#43;&#43;/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
@@ -224,6 +206,15 @@
       <pubDate>Mon, 16 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/tags/font/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>taocp</title>
+      <link>http://dangkhoasdc.github.io/tags/taocp/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/tags/taocp/</guid>
       <description></description>
     </item>
     
@@ -320,7 +311,7 @@
     <item>
       <title>python</title>
       <link>http://dangkhoasdc.github.io/tags/python/</link>
-      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>http://dangkhoasdc.github.io/tags/python/</guid>
       <description></description>

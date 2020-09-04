@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>android on Dang-Khoa&#39;s blog</title>
@@ -18,7 +18,7 @@
       
       <guid>http://dangkhoasdc.github.io/en/post/2018/06/15/install-opencv-3-non-free-module-on-ubuntu/</guid>
       <description>The opencv_nonfree module provides very useful features such as two prominent image features SIFT and SURF (including the CUDA’s implementation). In this tutorial, I demonstrate how to install this module into OpenCV 3 on Ubuntu.
-Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation  Download opencv git clone https://github.com/opencv/opencv  Do not download the source from homepage.</description>
+Prerequisites  Remove the old version which has been installed in the system. Do not install opencv via apt-get Install cmake : sudo apt-get install cmake  Installation   Download opencv git clone https://github.com/opencv/opencv</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@ Prerequisites  Remove the old version which has been installed in the system. Do
       <guid>http://dangkhoasdc.github.io/en/post/2018/03/08/opencv-on-android-practices-and-tips/</guid>
       <description>Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
 Basically, we have a function playing as a bridge between Java APIs and NDK:
-public native void function_name(long matAddress);  To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
+public native void function_name(long matAddress); To call the function, we use Mat&amp;rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.</description>
     </item>
     
     <item>

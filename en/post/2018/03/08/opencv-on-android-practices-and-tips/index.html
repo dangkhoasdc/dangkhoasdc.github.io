@@ -1,212 +1,271 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OpenCV on Android: practices and tips | Dang-Khoa&#39;s blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="computer vision,
+programming,
+android,
+">
+
+<meta property="og:title" content="OpenCV on Android: practices and tips" />
+<meta property="og:description" content="Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
+Basically, we have a function playing as a bridge between Java APIs and NDK:
+public native void function_name(long matAddress); To call the function, we use Mat&rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/en/post/2018/03/08/opencv-on-android-practices-and-tips/" />
+<meta property="article:published_time" content="2018-03-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-03-08T00:00:00+00:00" /><meta property="og:site_name" content="Dang-Khoa&#39;s blog" />
+
+<meta property="og:site_name" content="Dang-Khoa&#39;s blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="OpenCV on Android: practices and tips"/>
+<meta name="twitter:description" content="Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
+Basically, we have a function playing as a bridge between Java APIs and NDK:
+public native void function_name(long matAddress); To call the function, we use Mat&rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers."/>
+
+
+<meta itemprop="name" content="OpenCV on Android: practices and tips">
+<meta itemprop="description" content="Transfer MAT objects from Android to NDK The main idea is to use the address of an MAT object in order to manipulate the data.
+Basically, we have a function playing as a bridge between Java APIs and NDK:
+public native void function_name(long matAddress); To call the function, we use Mat&rsquo;s address by calling getNativeObjAddr(). All computations in NDK will affect the content of MAT in both Java and NDK layers.">
+<meta itemprop="datePublished" content="2018-03-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-03-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="554">
+
+
+
+<meta itemprop="keywords" content="computer vision,programming,android," />
+
+
+
+    <title>OpenCV on Android: practices and tips || Dang-Khoa&#39;s blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/en/post/2018/03/08/opencv-on-android-practices-and-tips/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Dang-Khoa&#39;s blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">OpenCV on Android: practices and tips</span></h1>
-
-<h2 class="date">2018/03/08</h2>
-</div>
-
-
-
-<main>
-
-
-<h1 id="transfer-mat-objects-from-android-to-ndk">Transfer MAT objects from Android to NDK</h1>
-
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">OpenCV on Android: practices and tips</h1>
+  <meta itemprop="headline" content="OpenCV on Android: practices and tips" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/en/tags/computer-vision/">#computer vision</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/en/tags/programming/">#programming</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/en/tags/android/">#android</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">March 8, 2018</span></div>
+      <meta itemprop="dateModified" content="March 8, 2018"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <h1 id="transfer-mat-objects-from-android-to-ndk">Transfer MAT objects from Android to NDK</h1>
 <p>The main idea is to use the address of an MAT object in order to manipulate
 the data.</p>
-
 <p>Basically, we have a function playing as a bridge between Java APIs and NDK:</p>
-
-<pre><code class="language-java">public native void function_name(long matAddress);
-</code></pre>
-
-<p>To call the function, we use Mat&rsquo;s address by calling <code>getNativeObjAddr()</code>.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">native</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">function_name</span><span style="color:#f92672">(</span><span style="color:#66d9ef">long</span> matAddress<span style="color:#f92672">);</span>
+</code></pre></div><p>To call the function, we use Mat&rsquo;s address by calling <code>getNativeObjAddr()</code>.
 All computations in NDK will affect the content of MAT in both Java and
 NDK layers.</p>
-
 <p>In the NDK code, to use <code>cv::Mat</code> object regarding <code>java Mat</code>, we can use
 <code>static_cast</code>:</p>
-
-<pre><code class="language-cpp">
-Mat&amp; im = *(static_cast&lt;Mat*&gt;(addrImg));
-</code></pre>
-
-<h2 id="notes">Notes</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">
+Mat<span style="color:#f92672">&amp;</span> im <span style="color:#f92672">=</span> <span style="color:#f92672">*</span>(<span style="color:#66d9ef">static_cast</span><span style="color:#f92672">&lt;</span>Mat<span style="color:#f92672">*&gt;</span>(addrImg));
+</code></pre></div><h2 id="notes">Notes</h2>
 <p>There is a huge different in image channels between <code>Java OpenCV</code> and <code>NDK OpenCV</code>.
 When we decode the path or file to a bitmap in Java, we have to convert
 the bitmap to <code>ARGB_8888</code> color channel, otherwise it does not work. Actually,
 it also can work on <code>RGB_565</code> but for some reasons I can not remember, I always
 use <code>ARGB_8888</code> in the project.</p>
-
-<pre><code class="language-java">Bitmap bm32_image = bm.copy(Bitmap.Config.ARGB_8888, true);
-</code></pre>
-
-<p>To manipulate the image correctly in NDK, we should covert it to the normal
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Bitmap bm32_image <span style="color:#f92672">=</span> bm<span style="color:#f92672">.</span><span style="color:#a6e22e">copy</span><span style="color:#f92672">(</span>Bitmap<span style="color:#f92672">.</span><span style="color:#a6e22e">Config</span><span style="color:#f92672">.</span><span style="color:#a6e22e">ARGB_8888</span><span style="color:#f92672">,</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
+</code></pre></div><p>To manipulate the image correctly in NDK, we should covert it to the normal
 RGB channel, otherwise sometimes we get some bugs making us frustrating.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// convert ARGB_8888 to RGB
+</span><span style="color:#75715e"></span>Mat im <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Mat<span style="color:#f92672">();</span>
+Mat rgb_im <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Mat<span style="color:#f92672">();</span>
+Utils<span style="color:#f92672">.</span><span style="color:#a6e22e">bitmapToMat</span><span style="color:#f92672">(</span>bm32_image<span style="color:#f92672">,</span> im<span style="color:#f92672">);</span>
+Imgproc<span style="color:#f92672">.</span><span style="color:#a6e22e">cvtcolor</span><span style="color:#f92672">(</span>im<span style="color:#f92672">,</span> rgb_im<span style="color:#f92672">,</span> Imgproc<span style="color:#f92672">.</span><span style="color:#a6e22e">COLOR_RGBA2RGB</span><span style="color:#f92672">,</span> 3<span style="color:#f92672">);</span>
 
-<pre><code class="language-java">// convert ARGB_8888 to RGB
-Mat im = new Mat();
-Mat rgb_im = new Mat();
-Utils.bitmapToMat(bm32_image, im);
-Imgproc.cvtcolor(im, rgb_im, Imgproc.COLOR_RGBA2RGB, 3);
-
-function_name(rgb_im.getNativeObjAddr());
-</code></pre>
-
-<p>Other practice is to put some assertions in NDK code to make sure that we the
+function_name<span style="color:#f92672">(</span>rgb_im<span style="color:#f92672">.</span><span style="color:#a6e22e">getNativeObjAddr</span><span style="color:#f92672">());</span>
+</code></pre></div><p>Other practice is to put some assertions in NDK code to make sure that we the
 use the correct format for the input.</p>
-
-<h1 id="opencv-s-camera">OpenCV&rsquo;s Camera</h1>
-
+<h1 id="opencvs-camera">OpenCV&rsquo;s Camera</h1>
 <p>OpenCV supports 3 types of camera:</p>
-
 <ul>
 <li><code>CameraBridgeViewBase</code>.</li>
 <li><code>JavaCameraView</code>.</li>
 <li><code>CameraSurfaceGLView</code>.</li>
 </ul>
-
 <h2 id="javacameraview">JavaCameraView</h2>
-
 <ol>
 <li>Create the layout of the camera. For example, we can put the following lines
 to the Activity xml file:</li>
 </ol>
-
-<pre><code class="language-xml">&lt;org.opencv.android.JavaCameraView
-    android:layout_width=&quot;fill_parent&quot;
-    android:layout_height=&quot;fill_parent&quot;
-    android:id=&quot;@+id/opencvcamera_view&quot;
-&gt;&lt;/org.opencv.android.JavaCameraView&gt;
-</code></pre>
-
-<ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;org.opencv.android.JavaCameraView</span>
+    <span style="color:#a6e22e">android:layout_width=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+    <span style="color:#a6e22e">android:layout_height=</span><span style="color:#e6db74">&#34;fill_parent&#34;</span>
+    <span style="color:#a6e22e">android:id=</span><span style="color:#e6db74">&#34;@+id/opencvcamera_view&#34;</span>
+<span style="color:#f92672">&gt;&lt;/org.opencv.android.JavaCameraView&gt;</span>
+</code></pre></div><ol start="2">
 <li>Next, in the activity which controls the camera, we have to implement
 required methods from the <code>CvCameraViewLisener2</code>. There 3 methods are:</li>
 </ol>
-
 <ul>
 <li><code>onCameraViewStarted</code>.</li>
 <li><code>onCameraViewStopped</code>.</li>
 <li><code>onCameraFrame</code>.</li>
 </ul>
-
 <p>Prior to processing the camera, we need to initialize the variable holding
 callbacks of three aforementioned methods:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> CameraBridgeViewBase mOpenCVCamera<span style="color:#f92672">;</span>
 
-<pre><code class="language-java">private CameraBridgeViewBase mOpenCVCamera;
+</code></pre></div><p>On the <code>onCreate</code> method:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+    mOpenCVCamera <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>CameraBridgeViewBase<span style="color:#f92672">)</span> findViewById<span style="color:#f92672">(</span>R<span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">.</span><span style="color:#a6e22e">opencvcamera_view</span><span style="color:#f92672">);</span>
+    mOpenCVCamera<span style="color:#f92672">.</span><span style="color:#a6e22e">setVisibility</span><span style="color:#f92672">(</span>CameraBridgeViewBase<span style="color:#f92672">.</span><span style="color:#a6e22e">VISIBLE</span><span style="color:#f92672">);</span>
+    mOpenCVCamera<span style="color:#f92672">.</span><span style="color:#a6e22e">setCvCameraViewListener</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+</code></pre></div><p>Next, we implement 3 required methods:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCameraViewStarted</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> width<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> height<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// initialize images, variables, settings
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
 
-</code></pre>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">onCameraViewStopped</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// release the resources
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
 
-<p>On the <code>onCreate</code> method:</p>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> Mat <span style="color:#a6e22e">onCameraFrame</span><span style="color:#f92672">(</span>CameraBridgeViewBase<span style="color:#f92672">.</span><span style="color:#a6e22e">CvCameraViewFrame</span> inputFrame<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// retrieve the frame from `inputFrame`
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// - the grayscale frame by imputFrame.gray()
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// - the RGBA frame by inputFrame.rgba()
+</span><span style="color:#75715e"></span>        Mat im <span style="color:#f92672">=</span> inputFrame<span style="color:#f92672">.</span><span style="color:#a6e22e">rgba</span><span style="color:#f92672">();</span>
 
-<pre><code class="language-java">
-    mOpenCVCamera = (CameraBridgeViewBase) findViewById(R.id.opencvcamera_view);
-    mOpenCVCamera.setVisibility(CameraBridgeViewBase.VISIBLE);
-    mOpenCVCamera.setCvCameraViewListener(this);
-</code></pre>
+        <span style="color:#75715e">// do things
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// postprocess: convert back to the RGBA image
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> im<span style="color:#f92672">;</span> <span style="color:#75715e">// `im` will show in the UI
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
 
-<p>Next, we implement 3 required methods:</p>
-
-<pre><code class="language-java">    @Override
-    public void onCameraViewStarted(int width, int height) {
-        // initialize images, variables, settings
-    }
-
-    @Override
-    public void onCameraViewStopped() {
-        // release the resources
-    }
-
-    @Override
-    public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        // retrieve the frame from `inputFrame`
-        // - the grayscale frame by imputFrame.gray()
-        // - the RGBA frame by inputFrame.rgba()
-        Mat im = inputFrame.rgba();
-
-        // do things
-        // postprocess: convert back to the RGBA image
-        return im; // `im` will show in the UI
-    }
-
-</code></pre>
-
-<p>Noting that OpenCV&rsquo;s Camera is not able to set the portrait mode. One workaround
+</code></pre></div><p>Noting that OpenCV&rsquo;s Camera is not able to set the portrait mode. One workaround
 is to turn the Activity to <code>landscape</code> by putting the following line inside tag <code>Activity</code>
 in <code>AndroidManifest.xml</code></p>
-
-<pre><code class="language-xml">android:screenOrientation=&quot;landscape&quot;
-</code></pre>
-
-<h1 id="data-manipulation">Data Manipulation</h1>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">android:screenOrientation=&#34;landscape&#34;
+</code></pre></div><h1 id="data-manipulation">Data Manipulation</h1>
 <h3 id="unsigned-char-mat"><code>unsigned char</code> Mat</h3>
-
 <p>It is troublesome when we want to assign a value of 255 to an <code>unsigned char</code> Mat
 because this language does not support <code>unsigned char</code> as a primitive type.
 One workaround is to allocate a <code>16S</code> Mat, manipulate on that matrix, and
 finally convert to <code>8U</code>.</p>
-
 <h3 id="point2f-and-point">Point2f and Point</h3>
-
 <p>To convert <code>MatOfPoint</code> to <code>MatOfPoint2f</code>, we use the constructor:</p>
-
-<pre><code class="language-java">MatOfPoint matofpoint = new MatOfPoint(matofpoint2f.toArray());
-</code></pre>
-
-<h2 id="accessing-the-pixel-values">Accessing the pixel values</h2>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">MatOfPoint matofpoint <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MatOfPoint<span style="color:#f92672">(</span>matofpoint2f<span style="color:#f92672">.</span><span style="color:#a6e22e">toArray</span><span style="color:#f92672">());</span>
+</code></pre></div><h2 id="accessing-the-pixel-values">Accessing the pixel values</h2>
 <p>In order to retrieve and assign pixel value, we use the getter/setter from <code>Mat</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">short</span><span style="color:#f92672">[]</span> pixel <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">short</span><span style="color:#f92672">[</span>nchannels<span style="color:#f92672">];</span>
 
-<pre><code class="language-java">short[] pixel = new short[nchannels];
+m<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">,</span> j<span style="color:#f92672">,</span> pixel<span style="color:#f92672">);</span> <span style="color:#75715e">// retrieve pixel values at (i, j)
+</span><span style="color:#75715e">// in this example, the pixel has 3 channels
+</span><span style="color:#75715e"></span>pixel<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 255<span style="color:#f92672">;</span>
+pixel<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+pixel<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> 125<span style="color:#f92672">;</span>
+m<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span>i<span style="color:#f92672">,</span> j<span style="color:#f92672">,</span> pixel<span style="color:#f92672">);</span>
+</code></pre></div>
+  </div>
+</article>
 
-m.get(i, j, pixel); // retrieve pixel values at (i, j)
-// in this example, the pixel has 3 channels
-pixel[0] = 255;
-pixel[1] = 0;
-pixel[2] = 125;
-m.set(i, j, pixel);
-</code></pre>
-
-</main>
-
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/en/post/2018/02/25/setup-opencv-and-android-studio-with-ndk-support/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Setup OpenCV and Android Studio with NDK support</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/en/post/2018/06/15/install-opencv-3-non-free-module-on-ubuntu/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Install OpenCV 3 non-free module on Ubuntu</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -217,46 +276,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

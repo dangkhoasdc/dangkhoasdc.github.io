@@ -1,105 +1,210 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Programming Pearls | Dang-Khoa&#39;s blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="books,
+algorithms,
+">
+
+<meta property="og:title" content="Programming Pearls" />
+<meta property="og:description" content="Programing Pearls - Jon Bentley
+Excellent.
+Until now, there is no such book which makes me shout out like this after receiving from Amazon. Let brieftly review some favoriate books:
+  CLRS: theoretically, this really is an &ldquo;introduction&rdquo; textbook about algorithms. Nonetheless, it still is an extensive reference and full of details. However, I am not impressed by the writing style and the pseudo-code.
+  Algorithms, Sedgewick: one of the best textbooks ever." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/en/post/2018/02/07/programming-pearls/" />
+<meta property="article:published_time" content="2018-02-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-02-07T00:00:00+00:00" /><meta property="og:site_name" content="Dang-Khoa&#39;s blog" />
+
+<meta property="og:site_name" content="Dang-Khoa&#39;s blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Programming Pearls"/>
+<meta name="twitter:description" content="Programing Pearls - Jon Bentley
+Excellent.
+Until now, there is no such book which makes me shout out like this after receiving from Amazon. Let brieftly review some favoriate books:
+  CLRS: theoretically, this really is an &ldquo;introduction&rdquo; textbook about algorithms. Nonetheless, it still is an extensive reference and full of details. However, I am not impressed by the writing style and the pseudo-code.
+  Algorithms, Sedgewick: one of the best textbooks ever."/>
+
+
+<meta itemprop="name" content="Programming Pearls">
+<meta itemprop="description" content="Programing Pearls - Jon Bentley
+Excellent.
+Until now, there is no such book which makes me shout out like this after receiving from Amazon. Let brieftly review some favoriate books:
+  CLRS: theoretically, this really is an &ldquo;introduction&rdquo; textbook about algorithms. Nonetheless, it still is an extensive reference and full of details. However, I am not impressed by the writing style and the pseudo-code.
+  Algorithms, Sedgewick: one of the best textbooks ever.">
+<meta itemprop="datePublished" content="2018-02-07T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-02-07T00:00:00+00:00" />
+<meta itemprop="wordCount" content="347">
+
+
+
+<meta itemprop="keywords" content="books,algorithms," />
+
+
+
+    <title>Programming Pearls || Dang-Khoa&#39;s blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/en/post/2018/02/07/programming-pearls/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Dang-Khoa&#39;s blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
-    
-    
-    <li><a href="http://dangkhoasdc.github.io/post/2018/02/07/programming-pearls/">vi</a></li>
-    
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
+</ul>
 
-    </ul>
-    <hr/>
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Programming Pearls</span></h1>
-
-<h2 class="date">2018/02/07</h2>
-</div>
-
-
-
-<main>
-<p>Programing Pearls - Jon Bentley</p>
-
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Programming Pearls</h1>
+  <meta itemprop="headline" content="Programming Pearls" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/en/tags/books/">#books</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/en/tags/algorithms/">#algorithms</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">February 7, 2018</span></div>
+      <meta itemprop="dateModified" content="February 7, 2018"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Programing Pearls - Jon Bentley</p>
 <p>Excellent.</p>
-
 <p>Until now, there is no such book which makes me shout out like this after
 receiving from Amazon. Let brieftly review some favoriate books:</p>
-
 <ul>
-<li><p><a href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?ie=UTF8&amp;qid=1519748427&amp;sr=8-1&amp;keywords=clrs">CLRS</a>:
+<li>
+<p><a href="https://www.amazon.com/Introduction-Algorithms-3rd-MIT-Press/dp/0262033844/ref=sr_1_1?ie=UTF8&amp;qid=1519748427&amp;sr=8-1&amp;keywords=clrs">CLRS</a>:
 theoretically, this really is an &ldquo;introduction&rdquo; textbook about algorithms.
 Nonetheless, it still is an extensive reference and full of details. However,
-I am not impressed by the writing style and the pseudo-code.</p></li>
-
-<li><p><a href="https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1519748651&amp;sr=1-1&amp;keywords=algorithms+sedgewick">Algorithms, Sedgewick</a>:
+I am not impressed by the writing style and the pseudo-code.</p>
+</li>
+<li>
+<p><a href="https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1519748651&amp;sr=1-1&amp;keywords=algorithms+sedgewick">Algorithms, Sedgewick</a>:
 one of the best textbooks ever. The code in the book is runnable, the analysis
 is interesting and rigorous (in contrast with CLRS uses Big-O, Sedgewick&rsquo;s
 approach is nearly exact analysis). The method to prove the correctness and
 complexity is accessible as well as illustations in the book are fascinating.
 A drawback is that the paper is too thin so that it easily tears apart while
-note-taking.</p></li>
-
-<li><p><a href="https://www.amazon.com/Computer-Programming-Volumes-1-4A-Boxed/dp/0321751043/ref=sr_1_3?s=books&amp;ie=UTF8&amp;qid=1519748767&amp;sr=1-3&amp;keywords=the+art+of+computer+programming">TAoCP</a>:
-completely classical style and heavily mathematical analysis.</p></li>
-
-<li><p><a href="https://www.amazon.com/Elements-Programming-Interviews-Insiders-Guide/dp/1479274836/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1519748890&amp;sr=1-1&amp;keywords=elements+of+interview+programming">Elements of Interview Programming</a>: Cookbook for practicing algorithms. I do not have
-any special impressions of the book.</p></li>
+note-taking.</p>
+</li>
+<li>
+<p><a href="https://www.amazon.com/Computer-Programming-Volumes-1-4A-Boxed/dp/0321751043/ref=sr_1_3?s=books&amp;ie=UTF8&amp;qid=1519748767&amp;sr=1-3&amp;keywords=the+art+of+computer+programming">TAoCP</a>:
+completely classical style and heavily mathematical analysis.</p>
+</li>
+<li>
+<p><a href="https://www.amazon.com/Elements-Programming-Interviews-Insiders-Guide/dp/1479274836/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1519748890&amp;sr=1-1&amp;keywords=elements+of+interview+programming">Elements of Interview Programming</a>: Cookbook for practicing algorithms. I do not have
+any special impressions of the book.</p>
+</li>
 </ul>
-
 <p>Programming Pearls is completely opposite to aforementioned books. This book
 is the perspective of an engineer on applying algorithms on work and solving
 other problems. More precisely, this is an adventure of Jon Bentley who is
 a renowned computer scientist known for kd-tree and Programming Pearls columns
 which are very famous during the period of 80s. [Don Knuth even send some
 literate programming code to Jon Bentley in order to introduce the concept].</p>
-
 <p>Although the book is quite thin compared to other &ldquo;programming&rdquo; or &ldquo;algorithms&rdquo;
 books, it possesses many &ldquo;pearls&rdquo; inside. The writing style is relaxing and engaging,
 intersperses the rigorous approach, extensive references and many intriguing
 puzzles which are worth giving a shot. What makes the book special is the
 way the author effiently uses scienctific approach to solve industrial problems
 as well as the viewpoint of an engineer about algorithms.</p>
-
 <p>Perhaps Steve McConnell already gave the best description about this book:</p>
-
 <blockquote>
 <p>&hellip; Programming Pearls was one of the most influential books I read early in
 my career, and many of the insights I first encountered in that book stayed
 with me long after I read it. &hellip;</p>
 </blockquote>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/en/post/2018/01/15/selected-papers-on-computer-science-don-knuth-and-the-current-state-of-deep-learning/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Selected Papers on Computer Science (Don Knuth) and the current state of Deep Learning</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/en/post/2018/02/25/setup-opencv-and-android-studio-with-ndk-support/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Setup OpenCV and Android Studio with NDK support</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -110,46 +215,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

@@ -1,97 +1,164 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Install the OpenCV library on Visual Studio | Dang-Khoa&#39;s blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="programming,
+opencv,
+visual studio,
+">
+
+<meta property="og:title" content="Install the OpenCV library on Visual Studio" />
+<meta property="og:description" content="Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
+ Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/en/post/2016/10/23/install-the-opencv-library-on-visual-studio/" />
+<meta property="article:published_time" content="2016-10-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-10-23T00:00:00+00:00" /><meta property="og:site_name" content="Dang-Khoa&#39;s blog" />
+
+<meta property="og:site_name" content="Dang-Khoa&#39;s blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install the OpenCV library on Visual Studio"/>
+<meta name="twitter:description" content="Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
+ Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here."/>
+
+
+<meta itemprop="name" content="Install the OpenCV library on Visual Studio">
+<meta itemprop="description" content="Compiling the libray There are many benefits of compiling the library from source instead of using the pre-compiled version:
+ Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0 (22/11/2015) is not compatible with Visual Studio 2015. Be able to customize the library, we can add several options to OpenCV, for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.  Down the source code for the Windows environment here.">
+<meta itemprop="datePublished" content="2016-10-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-10-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1011">
+
+
+
+<meta itemprop="keywords" content="programming,opencv,visual studio," />
+
+
+
+    <title>Install the OpenCV library on Visual Studio || Dang-Khoa&#39;s blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/en/post/2016/10/23/install-the-opencv-library-on-visual-studio/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Dang-Khoa&#39;s blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
-    
-    
-    <li><a href="http://dangkhoasdc.github.io/post/2016/10/23/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn-c%C3%A0i-%C4%91%E1%BA%B7t-opencv-tr%C3%AAn-windows/">vi</a></li>
-    
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
+</ul>
 
-    </ul>
-    <hr/>
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Install the OpenCV library on Visual Studio</span></h1>
-
-<h2 class="date">2016/10/23</h2>
-</div>
-
-
-
-<main>
-
-
-<h2 id="compiling-the-libray">Compiling the libray</h2>
-
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Install the OpenCV library on Visual Studio</h1>
+  <meta itemprop="headline" content="Install the OpenCV library on Visual Studio" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/en/tags/programming/">#programming</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/en/tags/opencv/">#opencv</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/en/tags/visual-studio/">#visual studio</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">October 23, 2016</span></div>
+      <meta itemprop="dateModified" content="October 23, 2016"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <h2 id="compiling-the-libray">Compiling the libray</h2>
 <p>There are many benefits of compiling the library from source instead of using
 the pre-compiled version:</p>
-
 <ol>
 <li>Supporting the latest IDE (Vision Studio). For example, pre-compiled OpenCV 3.0
 (22/11/2015) is not compatible with Visual Studio 2015.</li>
 <li>Be able to customize the library, we can add several options to OpenCV,
 for example, we can add APIs for Kinect SDK, OpenCL, Python, etc.</li>
 </ol>
-
 <p>Down the source code for the Windows environment <a href="http://downloads.sourceforge.net/project/opencvlibrary/opencv-win/3.0.0/opencv-3.0.0.exe?r=http%3A%2F%2Fopencv.org%2F&amp;ts=1448134045&amp;use_mirror=nchc">here</a>.</p>
-
 <p>Step 1: Extract the file into a folder, let say <code>C:\opencv</code>.</p>
-
 <figure>
     <img src="http://i.imgur.com/rwpgj0b.png"/> <figcaption>
             <h4>Extract the library</h4>
         </figcaption>
 </figure>
 
-
 <p>Folder <code>build</code> contains pre-compiled DLLs of the library, while filder <code>sources</code>
 are used for manully installing.</p>
-
 <figure>
     <img src="http://i.imgur.com/iFzMg6J.png"/> <figcaption>
             <h4>Folders in OpenCV</h4>
         </figcaption>
 </figure>
 
-
 <p>Step 2: Download and install <a href="https://cmake.org/files/v3.4/cmake-3.4.0-win32-x86.exe">CMake</a>.</p>
-
 <p>Step 3: Run CMake. <code>Where is the soruce code</code> points to folder <code>sources</code> of OpenCV
 as mentioned in the previous step. <code>Where to build the binaries</code>: where we put
 output of library, i.e, DLLs files. In this tutorial, I put it in <code>C:\opencv\sources\build</code>.</p>
-
 <figure>
     <img src="http://i.imgur.com/BGpSwUO.png"/> <figcaption>
             <h4>CMake interface</h4>
         </figcaption>
 </figure>
-
 
 <p>The next step is to press <code>Configure</code> and later select the generator for the
 project. In this section, we select the corresponding IDE/Compiler. In addition,
@@ -99,51 +166,39 @@ if the computer is <code>x86</code> architecture then we have to select the IDE 
 which is <code>x86</code> as well, i.e, <code>Visual Studio 14 2015</code>. If the computer is <code>x64</code>
 then we select IDE versions with postfix <code>Win64</code>. Select <code>Finish</code> to complete
 the configuration.</p>
-
 <p>After that, CMake enumerate all options we can customize. In this tutorial, however,
 I would skip this part since the goal of this post is to install the default setting
 and hence other setup will be discuss in other posts. Press <code>Generate</code> to
 continue.</p>
-
 <p>After generating the source code with selected compiler and IDE, folder <code>build</code>
 includes different Projects/Solutions.</p>
-
 <p>Step 4: Use Visual Studio to open solution <code>OPENCV</code>. Beware of the version of
 VS have to be the same of as configured in CMAKE.</p>
-
 <figure>
     <img src="http://i.imgur.com/nfvzGPb.png"/> <figcaption>
             <h4>Targets and Architectures of Visual Studio</h4>
         </figcaption>
 </figure>
 
-
 <p>Next, we compile the library (press <code>F7</code>):</p>
-
 <ol>
 <li>Build the solution with the <code>Debug</code> mode.</li>
 <li>Build the solution with the <code>Release</code> mode</li>
 </ol>
-
 <p>Each step takes about 10-15 minutes. The output maybe contains 50 successfully
 complied projects, 17 skipped and 2 fail projects. Visual Studio generates two
 particulars folders <code>lib\Debug</code> and <code>lib\Release</code> which contain all DLLs for
 Debug and Release modes, respectively.</p>
-
 <h2 id="setup-opencv-on-visual-studio">Setup OpenCV on Visual Studio</h2>
-
 <p>Step 1: Create a new empty project.</p>
-
 <figure>
     <img src="http://i.imgur.com/OR6H08N.png"/> <figcaption>
             <h4>Create a new project</h4>
         </figcaption>
 </figure>
 
-
 <p>Before configuring the project, we have to determine the following information
 for the project:</p>
-
 <ol>
 <li>Header files of OpenCV.</li>
 <li>Configurate for <strong>programming</strong> with OpenCV.</li>
@@ -151,34 +206,26 @@ for the project:</p>
 are 2 targets, namely <code>Debug</code> and <code>Release</code>, we have to seperately configurate
 each target.</li>
 </ol>
-
 <h3 id="header-files">Header files</h3>
-
 <p>Right click to the project <code>InstallOpencv</code>, select <code>Properties</code> (<code>Alt + F7</code>).</p>
-
 <figure>
     <img src="http://i.imgur.com/GB9Dd20.png"/> <figcaption>
             <h4>Config additional header file</h4>
         </figcaption>
 </figure>
 
-
 <p>In the sidebar, select <code>C/C++</code> -&gt; <code>General</code> -&gt; <code>Additional Include Directories</code>,
 we point to <code>opencv\build\include</code> (NOT <del><code>sources\build\include</code></del>). Press OK.</p>
-
-<h3 id="setup-the-library-for-programming">Setup the library for <strong>programming</strong></h3>
-
+<h3 id="setup-the-library-for-__programming__">Setup the library for <strong>programming</strong></h3>
 <p>Press <code>Alt + F7</code> to open dialog <code>Properties</code> of the Project. Select tab <code>Linker</code>,
 in <code>Additional Library Directories</code> we point to <code>lib\Debug</code>, i.e, <code>C:\opencv\sources\bild\lib\Debug</code>.
 Nhấn Alt + F7 để vào phần Properties của Project. Chọn Thẻ Linker, mục Additional Library Directories ta trỏ đến thư mục lib\Debug (trong ví dụ này là: <code>C:\oepncv\sources\build\lib\Debug</code>) since
 we are using the <code>Debug</code> target.</p>
-
 <figure>
     <img src="http://i.imgur.com/kAG7ftJ.png"/> <figcaption>
             <h4>Configuration</h4>
         </figcaption>
 </figure>
-
 
 <figure>
     <img src="http://i.imgur.com/QBpuB7C.png"/> <figcaption>
@@ -186,9 +233,7 @@ we are using the <code>Debug</code> target.</p>
         </figcaption>
 </figure>
 
-
 <p>Move to tab <code>Input</code>, select <code>Additional Dependencies</code>, we input these files:</p>
-
 <pre><code>opencv_calib3d300d.lib
 opencv_core300d.lib
 opencv_features2d300d.lib
@@ -207,13 +252,9 @@ opencv_ts300d.lib
 opencv_video300d.lib
 opencv_videoio300d.lib
 opencv_videostab300d.lib
-</code></pre>
-
-<p>Next, we move to the <code>Release</code> target and repeat previous steps. However,
+</code></pre><p>Next, we move to the <code>Release</code> target and repeat previous steps. However,
 the path now is <code>C:\opencv\sources\build\lib\Release</code>.</p>
-
 <p>Additional Dependencies are:</p>
-
 <pre><code>opencv_calib3d300.lib
 opencv_core300.lib
 opencv_features2d300.lib
@@ -232,43 +273,32 @@ opencv_ts300.lib
 opencv_video300.lib
 opencv_videoio300.lib
 opencv_videostab300.lib
-</code></pre>
-
-<h3 id="setup-the-library-for-running-the-code">Setup the library for <strong>running</strong> the code</h3>
-
+</code></pre><h3 id="setup-the-library-for-__running__-the-code">Setup the library for <strong>running</strong> the code</h3>
 <p>While building the project, Visual Studio creates two new folders of the solution:
 <code>\Debug</code> and <code>\Release</code> with the architecture name we are using. In this example,
 they are <code>x64\Debug</code> and <code>x64\Release</code>. We copy all files from <code>build\bin\Debug</code>
 to <code>x64\Debug</code>, also files in <code>build\bin\Release</code> to <code>x64\Release</code>.</p>
-
 <p>Create an example and run the program.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;opencv2/opencv.hpp&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> cv;
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
 
-<pre><code class="language-cpp">#include &lt;opencv2/opencv.hpp&gt;
-#include &lt;iostream&gt;
-using namespace cv;
-using namespace std;
-
-int main() {
-    Mat img = imread(&quot;demo.jpg&quot;);
-    imshow(&quot;show image&quot;, img);
-    waitKey(0);
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+    Mat img <span style="color:#f92672">=</span> imread(<span style="color:#e6db74">&#34;demo.jpg&#34;</span>);
+    imshow(<span style="color:#e6db74">&#34;show image&#34;</span>, img);
+    waitKey(<span style="color:#ae81ff">0</span>);
     destroyAllWindows();
 }
-</code></pre>
-
-<p>[Place <code>demo.jpg</code> in the project folder to run the code]</p>
-
+</code></pre></div><p>[Place <code>demo.jpg</code> in the project folder to run the code]</p>
 <figure>
     <img src="http://i.imgur.com/CtRS1r5.png"/> <figcaption>
             <h4>Demo</h4>
         </figcaption>
 </figure>
 
-
 <h2 id="however">However</h2>
-
 <p>There are many drawbacks here:</p>
-
 <ol>
 <li>Every time we create a project including OpenCV support, we have to follow
 these settings (Section 2). It is tedious. One mistake can cost us several hours
@@ -279,93 +309,86 @@ though the source code alone only cost several KBs.</li>
 <li>How we can get all file names of <code>Additional Dependencies</code> since each OpenCV
 version has different files.</li>
 </ol>
-
 <p>Let see how we can resolve these problems.</p>
-
 <h3 id="additional-dependencies">Additional Dependencies</h3>
-
 <p>Open the command line and point to <code>sources\build\lib</code>:</p>
-
 <p>Type these commands:</p>
-
 <pre><code>dir Debug\*d.lib /B &gt;..\DependenciesDebug.txt
 dir Release\*.lib /B &gt;..\DependenciesRelease.txt
 
-</code></pre>
-
-<p>All files are saved in <code>DependenciesDebug.txt</code> and <code>DependenciesRelease.txt</code>.
+</code></pre><p>All files are saved in <code>DependenciesDebug.txt</code> and <code>DependenciesRelease.txt</code>.
 We simply copy the content to <code>Additional Dependencies</code> when creating a new project.</p>
-
 <h3 id="library-configuration">Library Configuration</h3>
-
 <p>Open the Command Line with Admin permission, type these commands:</p>
-
 <pre><code> setx -m OPENCV_DIR C:\opencv
-</code></pre>
-
-<p><code>Windows + E</code> to open <code>File Explorer</code>
+</code></pre><p><code>Windows + E</code> to open <code>File Explorer</code>
 Nhấn Windows E để mở Windows Explore</p>
-
 <figure>
     <img src="http://i.imgur.com/8tTY60w.png"/> <figcaption>
             <h4>File Explorer</h4>
         </figcaption>
 </figure>
 
-
 <p>Right click on <code>Computer</code> and select <code>Properties</code>.</p>
-
 <figure>
     <img src="http://i.imgur.com/NKnfVzz.png"/> <figcaption>
             <h4>Advanced System Settings</h4>
         </figcaption>
 </figure>
 
-
 <p>Select <code>Advanced System Settings</code>. In tab <code>Advanced</code>, select <code>Environment Variables…</code></p>
-
 <figure>
     <img src="http://i.imgur.com/HdUETeV.png"/> <figcaption>
             <h4>Path Variable Configurate</h4>
         </figcaption>
 </figure>
 
-
 <p>Fill these values: <code>%OPENCV_DIR%\sources\build\bin\Debug;%OPENCV_DIR%\sources\build\bin\Release</code></p>
-
 <p>Done, henceforth, we do not have to copy files from <code>build\bin</code> to the project.</p>
-
 <h3 id="saving-configuration-of-the-project">Saving configuration of the project</h3>
-
 <p>In the sidebar <code>Property Manager</code>, we seethe list of all configs corresponding
 to target archtectures in the project.</p>
-
 <figure>
     <img src="http://i.imgur.com/UrkPyJs.png"/> <figcaption>
             <h4>Property Manager</h4>
         </figcaption>
 </figure>
 
-
 <p>We create a new Property Sheet by right clicking into each section and selecting
 <code>Add New Project Property Sheet</code>. Double click to the new sheet and configure
 as mentioned in Section 2. Visual Studio will create a new file with extension <code>props</code>
 in the project. Henceforth, while creating a new project, we only need to import the
 Property.</p>
-
 <p>Since we set the variable path being <code>OPENCV_DIR</code>, we can change the paths in
 the configuraton as following:</p>
-
 <pre><code>    %OPENCV_DIR%\build\include
     %OPENCV_DIR%\source\build\lib\Debug
     %OPENCV_DIR%\source\build\lib\Release
 </code></pre>
+  </div>
+</article>
 
-</main>
-
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+        <span class="flex-row v-center"></span>
+      
+      
+        <a href="http://dangkhoasdc.github.io/en/post/2017/09/26/why-ubuntu-on-windows/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Why Ubuntu on Windows?</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -376,46 +399,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

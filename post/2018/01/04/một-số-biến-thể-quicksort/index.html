@@ -1,173 +1,215 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
+    <meta charset="utf-8" />
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Một số biến thể Quicksort | My blog</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="programming,
+algorithms,
+">
+
+<meta property="og:title" content="Một số biến thể Quicksort" />
+<meta property="og:description" content="Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[&#43;&#43;i]&lt;=v) if (i == hi) break; while (v&lt;=a[--j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j&#43;1, hi); } Phân tích Độ phức tạp được đánh giá thông qua hàm:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/" />
+<meta property="article:published_time" content="2018-01-04T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-01-04T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Một số biến thể Quicksort"/>
+<meta name="twitter:description" content="Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[&#43;&#43;i]&lt;=v) if (i == hi) break; while (v&lt;=a[--j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j&#43;1, hi); } Phân tích Độ phức tạp được đánh giá thông qua hàm:"/>
+
+
+<meta itemprop="name" content="Một số biến thể Quicksort">
+<meta itemprop="description" content="Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:
+// quicksort implement template&lt;typename T&gt; int partition(vector&lt;T&gt;&amp; a, int lo, int hi) { int i = lo, j = hi; T v = a[lo]; while (true) { while (a[&#43;&#43;i]&lt;=v) if (i == hi) break; while (v&lt;=a[--j]) if (j == lo) break; if (i &gt;= j) break; swap(a[i], a[j]); } swap(a[lo], a[j]); return j; } template&lt;typename T&gt; void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) { if (lo &gt;= hi-1) return; int j = partition(a, lo, hi); quicksort(a, lo, j); quicksort(a, j&#43;1, hi); } Phân tích Độ phức tạp được đánh giá thông qua hàm:">
+<meta itemprop="datePublished" content="2018-01-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-01-04T00:00:00+00:00" />
+<meta itemprop="wordCount" content="928">
+
+
+
+<meta itemprop="keywords" content="programming,algorithms," />
+
+
+
+    <title>Một số biến thể Quicksort || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2018/01/04/m%E1%BB%99t-s%E1%BB%91-bi%E1%BA%BFn-th%E1%BB%83-quicksort/" />
+
     
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
 
-  <body>
-    <nav>
-    <ul class="menu">
-      
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/books/">Books</a></li>
-      
-      <li><a href="/about/">About</a></li>
-      
-      <li><a href="/categories/">Categories</a></li>
-      
-      <li><a href="/tags/">Tags</a></li>
-      
-      <li><a href="/index.xml">Subscribe</a></li>
-      
-      
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
 
-    </ul>
-    <hr/>
+</ul>
+
     </nav>
-
-<div class="article-meta">
-<h1><span class="title">Một số biến thể Quicksort</span></h1>
-
-<h2 class="date">2018/01/04</h2>
-</div>
-
-
-
-<main>
-
-
-<p>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:</p>
-
-<pre><code class="language-cpp">// quicksort implement
-template&lt;typename T&gt;
-int partition(vector&lt;T&gt;&amp; a, int lo, int hi) {
-    int i = lo, j = hi;
-    T v = a[lo];
-    while (true) {
-        while (a[++i]&lt;=v) if (i == hi) break;
-        while (v&lt;=a[--j]) if (j == lo) break;
-        if (i &gt;= j)  break;
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Một số biến thể Quicksort</h1>
+  <meta itemprop="headline" content="Một số biến thể Quicksort" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/programming/">#programming</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/algorithms/">#algorithms</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">January 4, 2018</span></div>
+      <meta itemprop="dateModified" content="January 4, 2018"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Trước tiên là ôn lại một chút về quicksort. Dưới đây là bản implement (đơn giản) của thuật toán nổi tiếng này:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">// quicksort implement
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">int</span> partition(vector<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;&amp;</span> a, <span style="color:#66d9ef">int</span> lo, <span style="color:#66d9ef">int</span> hi) {
+    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> lo, j <span style="color:#f92672">=</span> hi;
+    T v <span style="color:#f92672">=</span> a[lo];
+    <span style="color:#66d9ef">while</span> (true) {
+        <span style="color:#66d9ef">while</span> (a[<span style="color:#f92672">++</span>i]<span style="color:#f92672">&lt;=</span>v) <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">==</span> hi) <span style="color:#66d9ef">break</span>;
+        <span style="color:#66d9ef">while</span> (v<span style="color:#f92672">&lt;=</span>a[<span style="color:#f92672">--</span>j]) <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> lo) <span style="color:#66d9ef">break</span>;
+        <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">&gt;=</span> j)  <span style="color:#66d9ef">break</span>;
         swap(a[i], a[j]);
     }
     swap(a[lo], a[j]);
-    return j;
+    <span style="color:#66d9ef">return</span> j;
 }
 
-template&lt;typename T&gt;
-void quicksort(vector&lt;T&gt;&amp; a, int lo, int hi) {
-    if (lo &gt;= hi-1) return;
-    int j = partition(a, lo, hi);
+<span style="color:#66d9ef">template</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">void</span> quicksort(vector<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;&amp;</span> a, <span style="color:#66d9ef">int</span> lo, <span style="color:#66d9ef">int</span> hi) {
+    <span style="color:#66d9ef">if</span> (lo <span style="color:#f92672">&gt;=</span> hi<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span>;
+    <span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> partition(a, lo, hi);
 
     quicksort(a, lo, j);
-    quicksort(a, j+1, hi);
+    quicksort(a, j<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, hi);
 }
-</code></pre>
-
-<h3 id="phân-tích">Phân tích</h3>
-
+</code></pre></div><h3 id="phân-tích">Phân tích</h3>
 <p>Độ phức tạp được đánh giá thông qua hàm:</p>
-
 <p>$$ C(N) = n-1 + {1\over n}\sum_{i=0}^{n-1} ( C(i) + C(n-i-1)) $$</p>
-
 <p>Trong phần <code>partition</code> thực hiện $n-1$ phép so sánh, sau đó gọi 2 lần quicksort với kích thước lần lượt là $i$ và $n-i-1$, xác suất cho mỗi phần tử trong mảng theo phân phối đều là ${1\over n}$ vậy nên ta được biểu thức như trên.</p>
-
 <p>Cách giải được đề cập chi tiết trong các sách như Introduction to Algorithms, Concrete Mathematics, Introduction to Analysis of Algorithms. Sơ qua cách giải:</p>
-
 <ol>
 <li>Nhân hai vế cho $n$.</li>
 <li>Viết biểu thức cho $n-1$.</li>
 <li>Tính $C(n) - C(n-1)$ ta được 1 quan hệ đệ quy tuyến tính, giải một chút sẽ ra.</li>
 </ol>
-
 <h2 id="hạn-chế-trường-hợp-worst-case">Hạn chế trường hợp worst-case</h2>
-
 <p>Một trong những phương pháp chống worst-case nổi tiếng của quicksort là xáo trộn mảng input trước khi dùng quicksort. Dùng <a href="https://en.wikipedia.org/wiki/Fisher-Yates_shuffle">Knuth shuffle</a> với độ phức tạp $\mathcal{O}(N)$ ta có thể đảm bảo hiệu quả của thuật toán. Ngoài ra, việc xáo trộn mảng input khiến cải tiến này, thường được gọi với cái tên randomized quicksort, trở thành ví dự kinh điển trong việc phân tích các thuật toán ngẫu nhiên. Mình có một <a href="http://dkhoa.me/post/randalgs_ex/">bài viết</a> đề cập tới phân tích randomized quicksort.</p>
-
 <p>Ngoài cách xáo trộn mảng ra, còn có một số cách tiếp cận khác:</p>
-
 <ul>
 <li>Thay vì chọn pivot ở đầu hoặc cuối dãy, chọn giá trị median.</li>
 <li>Một trường hợp worst-case khác là khi tất cả các giá trị giống nhau, lúc nay ta dùng 3way-quicksort để giải quyết.</li>
 </ul>
-
 <h2 id="khử-đệ-quy-với-mảng-nhỏ">Khử đệ quy với mảng nhỏ</h2>
-
 <p>Đây là 1 chiêu có thể dùng được với mọi thuật toán sử dụng chia để trị: khi vòng đề quy đủ nhỏ khiến cho mảng input của hàm đó nhỏ hơn 1 ngưỡng cho phép (10-15 phần tử), sử dụng <code>insertion sort</code> sẽ cải thiện hiệu năng đáng kể. Chỉ cần thêm vào trong hàm quicksort</p>
-
-<pre><code class="language-cpp">///...
-if (hi-lo &lt; CUTOFF) {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">///...
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (hi<span style="color:#f92672">-</span>lo <span style="color:#f92672">&lt;</span> CUTOFF) {
 	insertion_sort(a, lo, hi);
-	return;
+	<span style="color:#66d9ef">return</span>;
 }
-///...
-</code></pre>
-
-<h2 id="khử-phép-so-sánh-giá-trị-2-đầu-dãy">Khử phép so sánh giá trị 2 đầu dãy</h2>
-
+<span style="color:#75715e">///...
+</span></code></pre></div><h2 id="khử-phép-so-sánh-giá-trị-2-đầu-dãy">Khử phép so sánh giá trị 2 đầu dãy</h2>
 <p>Với phiên bản được implement bên trên, ta có thể bỏ đi câu lệnh <code>if</code> trong  <code>while</code> như sau:</p>
-
 <ul>
 <li>Ta có thể bỏ <code>if</code> khi kiểm tra <code>j</code> bởi a[lo] &lt; a[lo] không bao giờ xảy ra.</li>
 <li>Để bỏ <code>if</code> trong <code>i</code>. Trước khi gọi quicksort, ta đặt 1 giá trị cờ là <code>MAX_INT</code> chẳng hạn. Như vậy luôn đảm bảo tồn tại 1 giá trị lớn hơn a[lo].</li>
 </ul>
-
 <h2 id="median-of-three-và-median-of-five">Median-of-three và median-of-five</h2>
-
 <p>Thủ thuật khá kinh điển để tránh worst-case: sample 3 hay 5 phần tử, lấy giá trị median và lấy median đó làm pivot.</p>
-
 <h3 id="tukey-ninther-quicksort">Tukey ninther quicksort.</h3>
-
-<p>Dùng 9 phần tử thay cho <sup>3</sup>&frasl;<sub>5</sub> phần tử.</p>
-
+<p>Dùng 9 phần tử thay cho 3/5 phần tử.</p>
 <h2 id="3way-quicksort">3way Quicksort</h2>
-
 <p>Đây là thuật toán nổi tiếng do Dijkstra đề xuất cùng với <a href="https://en.wikipedia.org/wiki/Dutch_national_flag_problem">Dutch flag problem</a>. Dùng để tránh trường hợp có quá nhiều giá trị trùng nhau trong dãy. Điểm thú vị là phiên bản quicksort này được chính mình là tối ưu về mặt entropy. Một chứng minh sơ lược có được đề cập trong Algorithms, R. Sedgewick.</p>
-
 <p>Nếu có ai đó hỏi vì sao trong post này nhắc đến Sedgewick nhiều quá vậy, thì đơn giản là luận văn tiến sĩ của ông có tiêu đề: &ldquo;<a href="http://searchworks.stanford.edu/view/870273">Quicksort</a>&rdquo;.</p>
-
 <p>Một phiên bản khá ảo diệu của Jon Bentley (tác giả Programming Pearls, cộng tác với Sedgewick để chứng minh phiên bản tối ưu entropy của quicksort):</p>
-
-<pre><code class="language-c">void quicksort(int l, int u){
-    int i, m;
-    if(l &gt;= u) return;
-    m = l;
-    for(i = l+1; i&lt;= u; i++)
-        if(x[i] &lt; x[l])
-            swap(++m, i); //this is where I'm lost. Why the heck does it preincrement?
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">quicksort</span>(<span style="color:#66d9ef">int</span> l, <span style="color:#66d9ef">int</span> u){
+    <span style="color:#66d9ef">int</span> i, m;
+    <span style="color:#66d9ef">if</span>(l <span style="color:#f92672">&gt;=</span> u) <span style="color:#66d9ef">return</span>;
+    m <span style="color:#f92672">=</span> l;
+    <span style="color:#66d9ef">for</span>(i <span style="color:#f92672">=</span> l<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>; i<span style="color:#f92672">&lt;=</span> u; i<span style="color:#f92672">++</span>)
+        <span style="color:#66d9ef">if</span>(x[i] <span style="color:#f92672">&lt;</span> x[l])
+            swap(<span style="color:#f92672">++</span>m, i); <span style="color:#75715e">//this is where I&#39;m lost. Why the heck does it preincrement?
+</span><span style="color:#75715e"></span>
     swap(l, m);
 
-    quicksort(l, m-1);
-    quicksort(m+1, u);
+    quicksort(l, m<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+    quicksort(m<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, u);
 }
-</code></pre>
-
-<h2 id="phiên-bản-khử-đệ-quy">Phiên bản khử đệ quy</h2>
-
+</code></pre></div><h2 id="phiên-bản-khử-đệ-quy">Phiên bản khử đệ quy</h2>
 <p>Cũng là một cải tiến được đề xuất bởi Sedgewick khi dùng stack thay cho gọi recursive. Một phiên bản cài đặt bằng C cực kì chi tiết được mô tả <a href="http://www.cs.columbia.edu/~hgs/teaching/isp/hw/qsort.c">đây</a>.  Trong phiên bản này gồm có các cải tiến được đề cập phía trên:</p>
-
 <ul>
 <li>CUTOFF</li>
 <li>Median-of-three</li>
 <li>Khử đệ quy đồng thời optimize kích thước stack.</li>
 </ul>
-
 <p>Phiên bản này cũng chính là phiên bản <code>qsort</code> trong GNU C.</p>
-
 <p>Phiên bản Java của Sedgewick cũng rất đáng để tìm hiểu: <a href="https://algs4.cs.princeton.edu/23quicksort/QuickX.java.html">source code QuickX</a>.</p>
-
 <h2 id="samplesort">Samplesort</h2>
-
 <p>Đây là một bản chế lại của quicksort để chạy được trong các thuật toán song song. Tư tưởng ở đây là sử dụng quicksort để tìm các pivot cho từng process. Rồi sau đó chạy quicksort trên từng pivot được phân phối đó. <a href="http://parallelcomp.uw.hu/ch09lev1sec5.html">Bài viết này</a> mô tả cụ thể và phân tích độ phức tạp của thuật toán.</p>
-
 <h1 id="tham-khảo">Tham khảo</h1>
-
 <ol>
 <li>Cormen, Thomas H. Introduction to algorithms. MIT press, 2009.</li>
 <li>Graham, Ronald L., et al. &ldquo;Concrete mathematics: a foundation for computer science.&rdquo; Computers in Physics 3.5 (1989): 106-107.</li>
@@ -176,11 +218,32 @@ if (hi-lo &lt; CUTOFF) {
 <li>Bentley, Jon. Programming pearls. ACM, 1986.</li>
 </ol>
 
-</main>
+  </div>
+</article>
 
-  <footer>
   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2018/01/03/c%C3%A0i-%C4%91%E1%BA%B7t-quan-h%E1%BB%87-th%E1%BB%A9-t%E1%BB%B1-trong-c-/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Cài đặt quan hệ thứ tự trong C&#43;&#43;</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2018/01/15/s%C3%A1ch-selected-papers-on-computer-science/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Sách: Selected Papers on Computer Science</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
 onload='renderMathInElement(document.body,{
@@ -191,46 +254,8 @@ onload='renderMathInElement(document.body,{
       {left: "\\(", right: "\\)", display: false}
   ]});'></script>
 
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-2381283-3', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "httpdangkhoasdcgithubio" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+  </html>
   
-  <hr/>
-  &copy; <a href="https://dkhoa.dev">Dang-Khoa</a> 2017 &ndash; 2019 | <a href="https://github.com/dangkhoasdc">Github</a> | <a href="https://twitter.com/dksdc">Twitter</a>
-  
-  </footer>
+
   </body>
 </html>
-

@@ -1,25 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>python on My blog</title>
+    <title>python on Blog</title>
     <link>http://dangkhoasdc.github.io/tags/python/</link>
-    <description>Recent content in python on My blog</description>
+    <description>Recent content in python on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Mon, 20 Jul 2015 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2015 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Lập Trình Hướng Đối Tượng Trong Python</title>
-      <link>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</link>
-      <pubDate>Mon, 20 Jul 2015 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2015/07/20/l%E1%BA%ADp-tr%C3%ACnh-h%C6%B0%E1%BB%9Bng-%C4%91%E1%BB%91i-t%C6%B0%E1%BB%A3ng-trong-python/</guid>
-      <description>Bài viết tập trung các thủ thuật khi sử dụng kỹ thuật Hướng Đối Tượng trong Python. Thực ra trong Python, các khái niệm về hướng đối tượng đã được giản lược nhiều. Thêm vào đó, lại không có những khái niệm phức tạp như access modifier, destructor, &amp;hellip; Việc xây dựng các class cũng vì thế đơn giản hơn.
-Enum trong python Sử dụng lớp được cài đặt trong thư viện cung cấp sẵn:</description>
-    </item>
     
     <item>
       <title>Kinh Nghiệm Viết Tài Liệu Khoa Học</title>
