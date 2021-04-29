@@ -6,10 +6,37 @@
     <description>Recent content in Categories on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Sat, 07 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>books</title>
+      <link>http://dangkhoasdc.github.io/categories/books/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cpp</title>
+      <link>http://dangkhoasdc.github.io/categories/cpp/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/cpp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dlang</title>
+      <link>http://dangkhoasdc.github.io/categories/dlang/</link>
+      <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/categories/dlang/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Du Lịch</title>

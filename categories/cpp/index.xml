@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cpp on Blog</title>
-    <link>http://dangkhoasdc.github.io/tags/cpp/</link>
+    <link>http://dangkhoasdc.github.io/categories/cpp/</link>
     <description>Recent content in cpp on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://dangkhoasdc.github.io/tags/cpp/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://dangkhoasdc.github.io/categories/cpp/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>http://dangkhoasdc.github.io/post/2020/09/26/m%E1%BB%99t-s%E1%BB%91-b%C3%A0i-talks-v%E1%BB%81-c-/</guid>
       <description>Dưới đây là cơ số các bài talks mà mình thấy hấp dẫn về C++. mình chủ yếu lấy từ CppCon, được tổ chức hẳng năm với sự quy tụ của các siêu sao trong C++. Một số nhân vật nổi tiếng mà chất lượng những bài talk của họ thuộc hàng khủng bao gồm:
 Một số diễn giả nổi tiếng  Andrei Alexandrescu: Andrei thì quá là nổi tiếng rồi.</description>
-    </item>
-    
-    <item>
-      <title>rand() is harmful</title>
-      <link>http://dangkhoasdc.github.io/post/2017/09/06/rand-is-harmful/</link>
-      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
-      
-      <guid>http://dangkhoasdc.github.io/post/2017/09/06/rand-is-harmful/</guid>
-      <description>rand() Bài talk khá hay về việc sinh số ngẫu nhiên (trong trường hợp này là ngôn ngữ C++). Làm mình nhớ đến 1 bài tập trong The Art of Computer Programming (TAOCP - Vol 2): &amp;ldquo;hãy thử thay đổi random generator trong máy tính bằng một thuật toán tốt hơn, và quan sát điều kì diệu sẽ xảy ra&amp;rdquo; Bài talk duy chỉ nói về việc dùng hàm rand() và đặc biệt sử dụng chung với % (mod) hay floating point scale là thực sự sai lầm và nghiêm trọng .</description>
     </item>
     
   </channel>

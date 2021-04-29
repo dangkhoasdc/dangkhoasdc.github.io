@@ -21,11 +21,11 @@
     </item>
     
     <item>
-      <title>[WIP] Libra R-CNN: Paper review and comments</title>
-      <link>http://dangkhoasdc.github.io/en/post/2019/06/03/wip-libra-r-cnn-paper-review-and-comments/</link>
+      <title>Libra R-CNN: Paper review and comments</title>
+      <link>http://dangkhoasdc.github.io/en/post/2019/06/03/libra-r-cnn-paper-review-and-comments/</link>
       <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://dangkhoasdc.github.io/en/post/2019/06/03/wip-libra-r-cnn-paper-review-and-comments/</guid>
+      <guid>http://dangkhoasdc.github.io/en/post/2019/06/03/libra-r-cnn-paper-review-and-comments/</guid>
       <description>Regarding the object detection problem, it seems like the community pays less attention to training pipeline than other tasks such as network design, inference improvement. This paper investigates the current problem of the CNN detection models. They consider the imbalance phenomenon, which is composed of 3 levels:
  Sample level. Feature level. Objective level.  They basically are 3 corresponding major components of a detection model: feature extraction, region proposals, and predictors.</description>
     </item>

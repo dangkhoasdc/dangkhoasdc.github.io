@@ -6,10 +6,20 @@
     <description>Recent content in books on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Wed, 07 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/books/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ray Tracing in a Weekend</title>
+      <link>http://dangkhoasdc.github.io/post/2020/09/26/ray-tracing-in-a-weekend/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2020/09/26/ray-tracing-in-a-weekend/</guid>
+      <description>Ray Tracing in a Weekend (RTW) như một ly cà phê sữa nóng dành cho một thằng coder vào dịp cuối tuần. Nếu bạn đã quen thuộc với những cuốn sách &amp;ldquo;nặng&amp;rdquo; (về nội dung và lẫn ký lô) của nó như Fundamentals of Computer Graphics hay Real-time Rendering thì RTW như thể là một tài liệu đi kèm cho bài tập lập trình.
+Mình mất nhiều hơn một cái cuối tuần để hoàn thành cuốn sách bởi mình đã code lại toàn bộ nội dung sử dụng Dlang thay cho C++.</description>
+    </item>
     
     <item>
       <title>Programming Pearls</title>

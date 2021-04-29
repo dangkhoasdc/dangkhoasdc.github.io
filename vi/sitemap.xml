@@ -4,7 +4,7 @@
   
   <url>
     <loc>http://dangkhoasdc.github.io/</loc>
-    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -19,13 +19,58 @@
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/tags/gaming/</loc>
-    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+    <loc>http://dangkhoasdc.github.io/tags/books/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/books/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/books/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/categories/books/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/categories/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/cpp/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/categories/cpp/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2020/09/26/m%E1%BB%99t-s%E1%BB%91-b%C3%A0i-talks-v%E1%BB%81-c-/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://dangkhoasdc.github.io/post/</loc>
-    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -39,8 +84,28 @@
   </url>
   
   <url>
+    <loc>http://dangkhoasdc.github.io/tags/programming/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://dangkhoasdc.github.io/en/tags/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="http://dangkhoasdc.github.io/tags/programming/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2020/09/26/ray-tracing-in-a-weekend/</loc>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://dangkhoasdc.github.io/tags/</loc>
-    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-26T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -51,6 +116,26 @@
                 hreflang="vi"
                 href="http://dangkhoasdc.github.io/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/dlang/</loc>
+    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/categories/dlang/</loc>
+    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/post/2020/09/06/m%E1%BA%A1n-%C4%91%C3%A0m-v%E1%BB%81-dlang-ph%E1%BA%A7n-1-c%E1%BB%A7a-n/</loc>
+    <lastmod>2020-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://dangkhoasdc.github.io/tags/gaming/</loc>
+    <lastmod>2019-02-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -91,21 +176,6 @@
   <url>
     <loc>http://dangkhoasdc.github.io/tags/machine-learning/</loc>
     <lastmod>2018-09-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/categories/</loc>
-    <lastmod>2018-07-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/categories/"
-                />
   </url>
   
   <url>
@@ -234,21 +304,6 @@
   </url>
   
   <url>
-    <loc>http://dangkhoasdc.github.io/tags/programming/</loc>
-    <lastmod>2018-02-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/en/tags/programming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/tags/programming/"
-                />
-  </url>
-  
-  <url>
     <loc>http://dangkhoasdc.github.io/tags/games/</loc>
     <lastmod>2018-02-13T00:00:00+00:00</lastmod>
   </url>
@@ -270,21 +325,6 @@
                 rel="alternate"
                 hreflang="vi"
                 href="http://dangkhoasdc.github.io/tags/algorithms/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/tags/books/</loc>
-    <lastmod>2018-02-07T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://dangkhoasdc.github.io/en/tags/books/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="http://dangkhoasdc.github.io/tags/books/"
                 />
   </url>
   
@@ -451,11 +491,6 @@
   <url>
     <loc>http://dangkhoasdc.github.io/post/2017/09/10/la-la-land/</loc>
     <lastmod>2017-09-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://dangkhoasdc.github.io/tags/cpp/</loc>
-    <lastmod>2017-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>

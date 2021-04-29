@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="books,
+">
+
+<meta property="og:title" content="Ray Tracing in a Weekend" />
+<meta property="og:description" content="Ray Tracing in a Weekend (RTW) như một ly cà phê sữa nóng dành cho một thằng coder vào dịp cuối tuần. Nếu bạn đã quen thuộc với những cuốn sách &ldquo;nặng&rdquo; (về nội dung và lẫn ký lô) của nó như Fundamentals of Computer Graphics hay Real-time Rendering thì RTW như thể là một tài liệu đi kèm cho bài tập lập trình.
+Mình mất nhiều hơn một cái cuối tuần để hoàn thành cuốn sách bởi mình đã code lại toàn bộ nội dung sử dụng Dlang thay cho C&#43;&#43;." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2020/09/26/ray-tracing-in-a-weekend/" />
+<meta property="article:published_time" content="2020-09-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-26T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ray Tracing in a Weekend"/>
+<meta name="twitter:description" content="Ray Tracing in a Weekend (RTW) như một ly cà phê sữa nóng dành cho một thằng coder vào dịp cuối tuần. Nếu bạn đã quen thuộc với những cuốn sách &ldquo;nặng&rdquo; (về nội dung và lẫn ký lô) của nó như Fundamentals of Computer Graphics hay Real-time Rendering thì RTW như thể là một tài liệu đi kèm cho bài tập lập trình.
+Mình mất nhiều hơn một cái cuối tuần để hoàn thành cuốn sách bởi mình đã code lại toàn bộ nội dung sử dụng Dlang thay cho C&#43;&#43;."/>
+
+
+<meta itemprop="name" content="Ray Tracing in a Weekend">
+<meta itemprop="description" content="Ray Tracing in a Weekend (RTW) như một ly cà phê sữa nóng dành cho một thằng coder vào dịp cuối tuần. Nếu bạn đã quen thuộc với những cuốn sách &ldquo;nặng&rdquo; (về nội dung và lẫn ký lô) của nó như Fundamentals of Computer Graphics hay Real-time Rendering thì RTW như thể là một tài liệu đi kèm cho bài tập lập trình.
+Mình mất nhiều hơn một cái cuối tuần để hoàn thành cuốn sách bởi mình đã code lại toàn bộ nội dung sử dụng Dlang thay cho C&#43;&#43;.">
+<meta itemprop="datePublished" content="2020-09-26T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-26T00:00:00+00:00" />
+<meta itemprop="wordCount" content="313">
+
+
+
+<meta itemprop="keywords" content="books," />
+
+
+
+    <title>Ray Tracing in a Weekend || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2020/09/26/ray-tracing-in-a-weekend/" />
+
+    
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
+
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
+
+</ul>
+
+    </nav>
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Ray Tracing in a Weekend</h1>
+  <meta itemprop="headline" content="Ray Tracing in a Weekend" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/books/">#books</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">September 26, 2020</span></div>
+      <meta itemprop="dateModified" content="September 26, 2020"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>Ray Tracing in a Weekend (RTW) như một ly cà phê sữa nóng dành cho một thằng coder vào dịp cuối tuần. Nếu bạn đã quen thuộc với những cuốn sách &ldquo;nặng&rdquo; (về nội dung và lẫn ký lô) của nó như Fundamentals of Computer Graphics hay Real-time Rendering thì RTW như thể là một tài liệu đi kèm cho bài tập lập trình.</p>
+<p>Mình mất nhiều hơn một cái cuối tuần để hoàn thành cuốn sách bởi mình đã code lại toàn bộ nội dung sử dụng Dlang thay cho C++. Mà nhân tiện đây, Dlang quả thực là một làn gió mới mẻ và thú vị. Nội dung cuốn sách xoay quanh Chương 4 của cuốn Fundamentals of Computer Graphics. Lúc trước mình khá ức chế bởi việc FCG dùng mã giả để miêu tả toàn bộ phần Ray Tracing khiến mình gặp rất nhiều trở ngại để tự code một demo Ray Tracing, thì thông qua RTM - mọi chuyện trở nên rõ ràng, cụ thể hơn.</p>
+<p>Điểm hay của cuốn sách chính là việc lược bỏ đi hoàn toàn những gì liên quan đến Graphics API như OpenGL hay Vulkan: output chương trình là text, được lưu dưới định dạng PPM và có thể xem bằng các trình xem ảnh. Ta chỉ việc ngồi xuống, tập trung vào thuật toán, và code cho ra kết quả. Không bận tâm gì về OpenGL và những thứ linh tinh khác khiến mình dễ dàng chú tâm vào thuật toán đồ họa hơn.</p>
+<p>Sách tương đối ngắn, tập trung vào code nhiều, và hard code nhiều thứ. Điều hiển nhiên là sách không cung cấp nhiều kiến thức về đồ họa và Ray Tracing nhiều. Như mình đã nói, đây giống như một tài liệu hướng dẫn thực hành cho những cuộc &ldquo;classic&rdquo; khác. Nhưng đó chính là điểm nhấn của sách.</p>
+
+  </div>
+</article>
+
+  
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2020/09/06/m%E1%BA%A1n-%C4%91%C3%A0m-v%E1%BB%81-dlang-ph%E1%BA%A7n-1-c%E1%BB%A7a-n/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Mạn đàm về dlang (phần 1 của N)</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2020/09/26/m%E1%BB%99t-s%E1%BB%91-b%C3%A0i-talks-v%E1%BB%81-c-/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Một số bài talks về C&#43;&#43;</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+  </html>
+  
+
+  </body>
+</html>

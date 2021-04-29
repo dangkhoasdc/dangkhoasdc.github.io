@@ -6,10 +6,29 @@
     <description>Recent content in programming on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Sun, 25 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Một số bài talks về C&#43;&#43;</title>
+      <link>http://dangkhoasdc.github.io/post/2020/09/26/m%E1%BB%99t-s%E1%BB%91-b%C3%A0i-talks-v%E1%BB%81-c-/</link>
+      <pubDate>Sat, 26 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2020/09/26/m%E1%BB%99t-s%E1%BB%91-b%C3%A0i-talks-v%E1%BB%81-c-/</guid>
+      <description>Dưới đây là cơ số các bài talks mà mình thấy hấp dẫn về C++. mình chủ yếu lấy từ CppCon, được tổ chức hẳng năm với sự quy tụ của các siêu sao trong C++. Một số nhân vật nổi tiếng mà chất lượng những bài talk của họ thuộc hàng khủng bao gồm:
+Một số diễn giả nổi tiếng  Andrei Alexandrescu: Andrei thì quá là nổi tiếng rồi.</description>
+    </item>
+    
+    <item>
+      <title>Mạn đàm về dlang (phần 1 của N)</title>
+      <link>http://dangkhoasdc.github.io/post/2020/09/06/m%E1%BA%A1n-%C4%91%C3%A0m-v%E1%BB%81-dlang-ph%E1%BA%A7n-1-c%E1%BB%A7a-n/</link>
+      <pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2020/09/06/m%E1%BA%A1n-%C4%91%C3%A0m-v%E1%BB%81-dlang-ph%E1%BA%A7n-1-c%E1%BB%A7a-n/</guid>
+      <description>Dlang là một trong những ngôn ngữ mà mình có hứng thú tìm hiểu và vọc vạch chơi. Có lẽ cảm giác thân thương về syntax (khá giống C++) cùng với những tính năng ưu việt (mà sau này C++ hiện đại dần dần mang sang phiên bản của họ) là những điều mà mình thực sự thích thú về dlang. Rất tiếc, ngôn ngữ này không có được một cộng đồng hỗ trợ mạnh mẽ và đông đảo như một số ngôn ngữ hiện đại khác như Rust hay Julia.</description>
+    </item>
     
     <item>
       <title>Cài đặt OpenCV trên Android Studio hỗ trợ lập trình NDK</title>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="dlang,
+programming,
+">
+
+<meta property="og:title" content="Mạn đàm về dlang (phần 1 của N)" />
+<meta property="og:description" content="Dlang là một trong những ngôn ngữ mà mình có hứng thú tìm hiểu và vọc vạch chơi. Có lẽ cảm giác thân thương về syntax (khá giống C&#43;&#43;) cùng với những tính năng ưu việt (mà sau này C&#43;&#43; hiện đại dần dần mang sang phiên bản của họ) là những điều mà mình thực sự thích thú về dlang. Rất tiếc, ngôn ngữ này không có được một cộng đồng hỗ trợ mạnh mẽ và đông đảo như một số ngôn ngữ hiện đại khác như Rust hay Julia." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2020/09/06/m%E1%BA%A1n-%C4%91%C3%A0m-v%E1%BB%81-dlang-ph%E1%BA%A7n-1-c%E1%BB%A7a-n/" />
+<meta property="article:published_time" content="2020-09-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-09-06T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mạn đàm về dlang (phần 1 của N)"/>
+<meta name="twitter:description" content="Dlang là một trong những ngôn ngữ mà mình có hứng thú tìm hiểu và vọc vạch chơi. Có lẽ cảm giác thân thương về syntax (khá giống C&#43;&#43;) cùng với những tính năng ưu việt (mà sau này C&#43;&#43; hiện đại dần dần mang sang phiên bản của họ) là những điều mà mình thực sự thích thú về dlang. Rất tiếc, ngôn ngữ này không có được một cộng đồng hỗ trợ mạnh mẽ và đông đảo như một số ngôn ngữ hiện đại khác như Rust hay Julia."/>
+
+
+<meta itemprop="name" content="Mạn đàm về dlang (phần 1 của N)">
+<meta itemprop="description" content="Dlang là một trong những ngôn ngữ mà mình có hứng thú tìm hiểu và vọc vạch chơi. Có lẽ cảm giác thân thương về syntax (khá giống C&#43;&#43;) cùng với những tính năng ưu việt (mà sau này C&#43;&#43; hiện đại dần dần mang sang phiên bản của họ) là những điều mà mình thực sự thích thú về dlang. Rất tiếc, ngôn ngữ này không có được một cộng đồng hỗ trợ mạnh mẽ và đông đảo như một số ngôn ngữ hiện đại khác như Rust hay Julia.">
+<meta itemprop="datePublished" content="2020-09-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-06T00:00:00+00:00" />
+<meta itemprop="wordCount" content="515">
+
+
+
+<meta itemprop="keywords" content="dlang,programming," />
+
+
+
+    <title>Mạn đàm về dlang (phần 1 của N) || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2020/09/06/m%E1%BA%A1n-%C4%91%C3%A0m-v%E1%BB%81-dlang-ph%E1%BA%A7n-1-c%E1%BB%A7a-n/" />
+
+    
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
+
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
+
+</ul>
+
+    </nav>
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Mạn đàm về dlang (phần 1 của N)</h1>
+  <meta itemprop="headline" content="Mạn đàm về dlang (phần 1 của N)" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/dlang/">#dlang</a>&nbsp;
+  
+    <a href="http://dangkhoasdc.github.io/tags/programming/">#programming</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">September 6, 2020</span></div>
+      <meta itemprop="dateModified" content="September 6, 2020"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p><strong>Dlang</strong> là một trong những ngôn ngữ mà mình có hứng thú tìm hiểu và vọc vạch chơi. Có lẽ cảm giác thân thương về syntax (khá giống C++) cùng với những tính năng ưu việt (mà sau này C++ hiện đại dần dần mang sang phiên bản của họ) là những điều mà mình thực sự thích thú về dlang. Rất tiếc, ngôn ngữ này không có được một cộng đồng hỗ trợ mạnh mẽ và đông đảo như một số ngôn ngữ hiện đại khác như Rust hay Julia. Tuy vậy, trên các forum và reddit mình thấy đội ngũ phát triển cũng khá tích cực. Tuy là bao, nhưng mình cũng hi vọng bài viết này sẽ giúp dlang có thêm vài người (Việt) ủng hộ khác.</p>
+<p>Khi sử dụng <code>dlang</code>, mình cảm nhận được sử thân thương từ 2 ngôn ngữ mà mình đã và đang gắng bó: C++ và Python. Gần như 80% syntax của Dlang là từ C++. Và những điểm khác, và thậm chí nổi bật của dlang lại khá giống với Python: ta có từ khóa <code>import</code> để sử dụng các module, ta có từ khóa <code>in</code> để kiểm tra 1 phần tử có tồn tại trong container hay không. Thậm chí, cách khai báo associated array rất giống cách khai báo Dict trong Python.</p>
+<h2 id="tính-năng">Tính năng</h2>
+<p>Mặc dù <a href="https://dlang.org/comparison.html">trang chủ</a> đã đề cập chi tiết những tính năng đáng chú ý của dlang. Nhưng cá nhân mình khá thích một số tính năng sau:</p>
+<h3 id="ngôn-ngữ">Ngôn ngữ</h3>
+<p>Biểu thức của <code>dlang</code> hỗ trợ khá nhiều tính năng hay ho mà nhiều người (hoặc chí ít là mình) mong muốn ở C++:</p>
+<ul>
+<li>Biểu thức <code>in</code>: mặc dù chỉ hỗ trở associated array, nhưng từ khóa này cực kì thuận tiện.</li>
+<li>Phép toán lũy thừa: <code>^^</code>: với những đứa làm về graphics và numerical problems như mình, đây là một điểm cộng nữa.</li>
+</ul>
+<p>Câu lệnh (statements) trong <code>dlang</code> là một sự cải tiến nhẹ nhàng từ C/C++. Và đây chính là điểm mà mình thấy rất ưng ý với <code>dlang</code>: mình không mất quá nhiều thời gian để học một ngôn ngữ mới bởi gần 90% những cú pháp cơ bản trong ngôn ngữ giống hệt 2 anh em C/C++, và một vài điểm cải tiến giúp đời sống người coder dễ thở hơn là một điều đáng hoan nghênh:</p>
+<ul>
+<li><code>static if</code>: vâng, C++ cũng bắt đầu được câu lệnh điều kiện lúc biên dịch vào trong các phiên bản mới của C++. Nhưng có lẽ <code>dlang</code> có thiết kế hoàn thiện hơn cả, một phần bởi vì <code>dlang</code> thiết kế tính năng này ngay từ những phiên bản đầu tiên của ngôn ngữ. Điều này giúp <code>static if</code> gắng bó tự nhiên với ngôn ngữ hơn.</li>
+<li></li>
+</ul>
+<h3 id="generic-programminghttpsdlangorgspectemplatehtml"><a href="https://dlang.org/spec/template.html">Generic Programming</a></h3>
+<p>Mình khá tiếc là phần document của dlang không thực sự chi tiết về Generic Programming xét về tính dễ đọc cho beginner. Nếu bạn đã từng thử generic programming trên C++ và cảm thấy nó quá đau thương, thì dlang thực sự giúp bạn xoay đi nỗi đau đó.</p>
+<h3 id="heading"></h3>
+
+  </div>
+</article>
+
+  
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2019/02/04/zeus-and-poseidon-k%C3%AD-%E1%BB%A9c-g%E1%BB%8Di-v%E1%BB%81/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Zeus and Poseidon: Kí ức gọi về</span>
+      </a>
+      
+      
+        <a href="http://dangkhoasdc.github.io/post/2020/09/26/ray-tracing-in-a-weekend/" class="flex-row v-center no-underline" style="max-width: 45%;">
+        <span class="re-underline">Next: Ray Tracing in a Weekend</span>&nbsp;<span class="text-1p5">→</span>
+        </a>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+  </html>
+  
+
+  </body>
+</html>
