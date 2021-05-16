@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html
+  lang="vi"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://dangkhoasdc.github.io//apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://dangkhoasdc.github.io//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://dangkhoasdc.github.io//favicon-16x16.png">
+<link rel="manifest" href="http://dangkhoasdc.github.io//site.webmanifest">
+<link rel="mask-icon" href="http://dangkhoasdc.github.io//safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta name="keywords" content="misc,
+">
+
+<meta property="og:title" content="Công cuộc nâng cấp SSD" />
+<meta property="og:description" content="(Trong quá trình viết bài này, mình không thể gõ tiếng việt (dùng Unikey) khi sử dụng với VsCodeVim, chuyển sang vscode-neovim thì fix được).
+Kinh nghiệm xương máu đó là việc mở ra thì dễ nhưng chỗ khoai nhất là con vít ngay chỗ slot SSD, nó cứng cực kì. Mà không chỉ mỗi mình mới vướng phải, có cả hàng tá đứa phàn nàn về con vít này [1, 2, 3]." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dangkhoasdc.github.io/post/2021/05/16/c%C3%B4ng-cu%E1%BB%99c-n%C3%A2ng-c%E1%BA%A5p-ssd/" />
+<meta property="article:published_time" content="2021-05-16T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-05-16T00:00:00+00:00" /><meta property="og:site_name" content="Blog" />
+
+<meta property="og:site_name" content="Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Công cuộc nâng cấp SSD"/>
+<meta name="twitter:description" content="(Trong quá trình viết bài này, mình không thể gõ tiếng việt (dùng Unikey) khi sử dụng với VsCodeVim, chuyển sang vscode-neovim thì fix được).
+Kinh nghiệm xương máu đó là việc mở ra thì dễ nhưng chỗ khoai nhất là con vít ngay chỗ slot SSD, nó cứng cực kì. Mà không chỉ mỗi mình mới vướng phải, có cả hàng tá đứa phàn nàn về con vít này [1, 2, 3]."/>
+
+
+<meta itemprop="name" content="Công cuộc nâng cấp SSD">
+<meta itemprop="description" content="(Trong quá trình viết bài này, mình không thể gõ tiếng việt (dùng Unikey) khi sử dụng với VsCodeVim, chuyển sang vscode-neovim thì fix được).
+Kinh nghiệm xương máu đó là việc mở ra thì dễ nhưng chỗ khoai nhất là con vít ngay chỗ slot SSD, nó cứng cực kì. Mà không chỉ mỗi mình mới vướng phải, có cả hàng tá đứa phàn nàn về con vít này [1, 2, 3].">
+<meta itemprop="datePublished" content="2021-05-16T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-05-16T00:00:00+00:00" />
+<meta itemprop="wordCount" content="201">
+
+
+
+<meta itemprop="keywords" content="misc," />
+
+
+
+    <title>Công cuộc nâng cấp SSD || Blog</title>
+    <link rel="canonical" href="http://dangkhoasdc.github.io/post/2021/05/16/c%C3%B4ng-cu%E1%BB%99c-n%C3%A2ng-c%E1%BA%A5p-ssd/" />
+
+    
+
+    <link rel="stylesheet" href="/css/reboot.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/css/syntax.css" />
+
+
+
+<script type="text/javascript" src="/js/main.js" defer></script>
+
+<link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body
+  class=" look-sheet-bkg"
+  lang="vi">
+  <div class="nav-bkg">
+    <nav class="content-container pagewide-bar-padding">
+      <span class="divider">/ </span>
+      <a href="http://dangkhoasdc.github.io/" >Blog</a>
+      <span class="divider">/ </span>
+  <a href="http://dangkhoasdc.github.io/post">Posts</a>
+      <ul class="list-unstyled right-links">
+
+          <li>
+            <a href="/en/post/">
+              <span class="post-title">English version</span>
+            </a>
+          </li>
+
+</ul>
+
+    </nav>
+  </div>
+  <article
+    id="main"
+    class="content-container look-sheet article-pad-v "
+    itemscope
+    itemtype="https://schema.org/Article" >
+  <meta itemprop="author" content="" />
+  <meta itemprop="publisher" content="" />
+  <meta itemprop="image" content="" />
+  <h1 itemprop="name" id="title">Công cuộc nâng cấp SSD</h1>
+  <meta itemprop="headline" content="Công cuộc nâng cấp SSD" />
+  
+  <div class="post-tags">
+  
+    <a href="http://dangkhoasdc.github.io/tags/misc/">#misc</a>&nbsp;
+  
+  </div>
+  
+  
+    
+      <div class="post-date"><span itemprop="datePublished">May 16, 2021</span></div>
+      <meta itemprop="dateModified" content="May 16, 2021"/>
+    
+  
+  
+  <div itemprop="articleBody" id="content" class="article-body margin-top-2em">
+    <p>(Trong quá trình viết bài này, mình không thể <a href="https://github.com/VSCodeVim/Vim/issues/3779">gõ tiếng việt</a> (dùng Unikey) khi sử dụng với VsCodeVim, chuyển sang vscode-neovim thì fix được).</p>
+<p>Kinh nghiệm xương máu đó là việc mở ra thì dễ nhưng chỗ khoai nhất là con vít
+ngay chỗ slot SSD, nó cứng cực kì. Mà không chỉ mỗi mình mới vướng phải, có cả
+hàng tá đứa phàn nàn về con vít này
+[<a href="https://www.reddit.com/r/thinkpad/comments/cxq63k/how_to_remove_tightened_nvme_ssd_screws_without/">1</a>, <a href="https://www.reddit.com/r/thinkpad/comments/5qwbcv/stripped_m2_screw/">2</a>, <a href="https://www.reddit.com/r/thinkpad/comments/aedjyb/x1e_secondary_ssd_screw/">3</a>]. Cuối cùng thì cách giải quyết của mình đó là đem tới tiệm để sửa, và bị charge 30 SGD (tốn thêm 8 SGD ngày hôm trước lơn tơn đi mua vít với kèm về để mở). Và mình phát hiện ra là thà đầu tư 1 bộ electric screwdriver để tự giải quyết còn đỡ ức chế hơn là mang ra tiệm.</p>
+<p>Một vấn đề nữa là chuyển dữ liệu. <a href="https://www.samsung.com/semiconductor/minisite/ssd/download/tools/">Samsung Data Migration</a> hoàn toàn làm mình thất vọng, thậm chí khiến mình không thể login được. Cuối cùng thì chỉ có tool duy nhất là <a href="https://www.partitionwizard.com/download.html">Minitool Partition Wizard</a> là có thể clone được disk. Tuy nhiên, để khởi động từ đống đĩa, mình phải vô BIOS setting và chỉnh lại trình tự thiết bị khởi động.</p>
+
+  </div>
+</article>
+
+  
+
+
+  
+    <div class="nav-bkg-50 content-container-narrow-pad bottom-links text-0p75">
+      <nav class="flex-row">
+      
+      <a href="http://dangkhoasdc.github.io/post/2020/09/26/m%E1%BB%99t-s%E1%BB%91-b%C3%A0i-talks-v%E1%BB%81-c-/" class="flex-row v-center no-underline"  style="max-width:45%;">
+        <span class="text-1p5">←</span>&nbsp;<span class="re-underline">Previous: Một số bài talks về C&#43;&#43;</span>
+      </a>
+      
+      
+        <span class="flex-row v-center"></span>
+      
+      </nav>
+    </div>
+  
+  <footer>
+    </footer>
+    </body>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+onload='renderMathInElement(document.body,{
+  delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\(", right: "\\)", display: false}
+  ]});'></script>
+
+  </html>
+  
+
+  </body>
+</html>

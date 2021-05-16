@@ -6,10 +6,20 @@
     <description>Recent content in Misc on Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Wed, 08 Nov 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://dangkhoasdc.github.io/categories/misc/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Công cuộc nâng cấp SSD</title>
+      <link>http://dangkhoasdc.github.io/post/2021/05/16/c%C3%B4ng-cu%E1%BB%99c-n%C3%A2ng-c%E1%BA%A5p-ssd/</link>
+      <pubDate>Sun, 16 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>http://dangkhoasdc.github.io/post/2021/05/16/c%C3%B4ng-cu%E1%BB%99c-n%C3%A2ng-c%E1%BA%A5p-ssd/</guid>
+      <description>(Trong quá trình viết bài này, mình không thể gõ tiếng việt (dùng Unikey) khi sử dụng với VsCodeVim, chuyển sang vscode-neovim thì fix được).
+Kinh nghiệm xương máu đó là việc mở ra thì dễ nhưng chỗ khoai nhất là con vít ngay chỗ slot SSD, nó cứng cực kì. Mà không chỉ mỗi mình mới vướng phải, có cả hàng tá đứa phàn nàn về con vít này [1, 2, 3].</description>
+    </item>
     
     <item>
       <title>Chính sách gửi trả hàng của Amazon</title>
